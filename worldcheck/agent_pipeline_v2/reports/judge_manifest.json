@@ -1,0 +1,12 @@
+{
+  "fixture_sha256": "df360a71454a45ebd38599873b867e5d57aa8d2f93bc1c0272f5620454712ea9",
+  "source_sha256": {
+    "agent_pipeline_v2/batch_llm.py": "8555f8088fd5624bb1ee631fe2c63af974fdbf77a17547b79ad72c5b4fdfe34e",
+    "agent_pipeline_v2/judge.py": "587fae9d94d3dc31a569382fc3f21216d62a094ec427b2012745916ff4956815",
+    "agent_pipeline_v2/benchmark.py": "a855437b2f61fb3961981c08b5e0b95609d5231751965fcd926082a540d217ac",
+    "agent_pipeline_v2/benchmark_worker.py": "1b9eab4343e96c0111bc90ec03b9e855a8fe358ee2f5c05e20ea90dbb0d92591",
+    "agent_pipeline_v2/prompts/judge_v1.txt": "fd414f903995e8951be13646b867b70a591c3fa64821116b0c9071271b8e7e7e",
+    "agent_pipeline_v2/model.py": "242a1680af9367fd37e888ebb717ebfa67d8964e3d00c3a08917aa5305d5aa6f",
+    "qwen_judge.py": "c04d43ae9627586381cc761a1b53d99d03f8072c08513da63ee2504a5f816b13"
+  }
+}
