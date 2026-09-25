@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Pipeline v2 batched Judge report",
+  "type": "object",
+  "required": ["schema_version", "stage", "status", "batch_size", "events", "items", "retrieval", "metrics"]
+}

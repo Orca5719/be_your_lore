@@ -1,0 +1,3592 @@
+{
+  "schema_version": "agent-pipeline-v2.1-oracle-fixture-v1",
+  "status": "reviewed",
+  "source_dataset": {
+    "name": "Story-Level Consistency Benchmark",
+    "version": "v2-draft-24"
+  },
+  "index_version": "0de59066f81246b3b8c7445eddbe877e",
+  "counts": {
+    "consistent": 24,
+    "contradiction": 30,
+    "uncertain": 18
+  },
+  "review_summary": {
+    "flagged_count": 0,
+    "flags": []
+  },
+  "items": [
+    {
+      "fixture_id": "OR-SL-P02-G1",
+      "case_id": "SL-P02",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷",
+        "predicate": "拥有",
+        "object": "两颗心脏",
+        "normalized_fact": "雷拥有两颗心脏",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "他有两颗心脏。",
+            "start": 21,
+            "end": 28
+          }
+        ],
+        "context_anchors": [
+          {
+            "text": "雷独自坐在桌边，",
+            "start": 0,
+            "end": 8
+          }
+        ]
+      },
+      "story_context": "雷独自坐在桌边，手指沿着杯沿慢慢转了一圈。他有两颗心脏。雷的左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。阳光落在他的衣袖上，他将袖口折好，端起水杯喝了一口。屋里很安静，窗外偶尔传来树叶摩擦的声音。他没有开口，只把杯子放回原处，伸手将桌面上的纸巾叠成一个小方块。\n他站起来，在窗边停了一会儿，又走回椅子旁。鞋带有些松，他弯下腰，将两端整理到差不多的长度。桌上的碟子还摆在原位，他拿起一块普通饼干，慢慢吃完，再擦去指尖的碎屑。风从窗缝里吹进来，他随手掩上窗户，坐回原来的位置。",
+      "lore": [
+        {
+          "id": "099d1bbdbc348eb3c332",
+          "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "file": "characters.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "生理结构"
+          ],
+          "start_offset": 41,
+          "end_offset": 70,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "token_count": 55
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-P02-G2",
+      "case_id": "SL-P02",
+      "gold_fact_id": "G2",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷",
+        "predicate": "左侧心脏寄宿",
+        "object": "亚巴顿",
+        "normalized_fact": "雷左侧心脏寄宿亚巴顿",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "雷的左侧心脏寄宿亚巴顿，",
+            "start": 28,
+            "end": 40
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "雷独自坐在桌边，手指沿着杯沿慢慢转了一圈。他有两颗心脏。雷的左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。阳光落在他的衣袖上，他将袖口折好，端起水杯喝了一口。屋里很安静，窗外偶尔传来树叶摩擦的声音。他没有开口，只把杯子放回原处，伸手将桌面上的纸巾叠成一个小方块。\n他站起来，在窗边停了一会儿，又走回椅子旁。鞋带有些松，他弯下腰，将两端整理到差不多的长度。桌上的碟子还摆在原位，他拿起一块普通饼干，慢慢吃完，再擦去指尖的碎屑。风从窗缝里吹进来，他随手掩上窗户，坐回原来的位置。",
+      "lore": [
+        {
+          "id": "099d1bbdbc348eb3c332",
+          "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "file": "characters.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "生理结构"
+          ],
+          "start_offset": 41,
+          "end_offset": 70,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "token_count": 55
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-P02-G3",
+      "case_id": "SL-P02",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷",
+        "predicate": "右侧心脏寄宿",
+        "object": "拉古艾尔",
+        "normalized_fact": "雷右侧心脏寄宿拉古艾尔",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "右侧心脏寄宿拉古艾尔。",
+            "start": 40,
+            "end": 51
+          }
+        ],
+        "context_anchors": [
+          {
+            "text": "雷的左侧心脏寄宿亚巴顿，",
+            "start": 28,
+            "end": 40
+          }
+        ]
+      },
+      "story_context": "雷独自坐在桌边，手指沿着杯沿慢慢转了一圈。他有两颗心脏。雷的左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。阳光落在他的衣袖上，他将袖口折好，端起水杯喝了一口。屋里很安静，窗外偶尔传来树叶摩擦的声音。他没有开口，只把杯子放回原处，伸手将桌面上的纸巾叠成一个小方块。\n他站起来，在窗边停了一会儿，又走回椅子旁。鞋带有些松，他弯下腰，将两端整理到差不多的长度。桌上的碟子还摆在原位，他拿起一块普通饼干，慢慢吃完，再擦去指尖的碎屑。风从窗缝里吹进来，他随手掩上窗户，坐回原来的位置。",
+      "lore": [
+        {
+          "id": "099d1bbdbc348eb3c332",
+          "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "file": "characters.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "生理结构"
+          ],
+          "start_offset": 41,
+          "end_offset": 70,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "token_count": 55
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-P03-G1",
+      "case_id": "SL-P03",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "亚巴顿",
+        "predicate": "寄宿",
+        "object": "雷的右侧心脏",
+        "normalized_fact": "亚巴顿寄宿雷的右侧心脏",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "亚巴顿寄宿在雷的右侧心脏。",
+            "start": 19,
+            "end": 32
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "雷站在桌旁，将刚脱下的外套搭在椅背上。亚巴顿寄宿在雷的右侧心脏。他低头整理了一下衣领，走到窗边，伸手将松开的窗扣扣好。玻璃上有一点灰，他用纸巾轻轻擦过，又把纸巾折起，放到桌角。窗外的风吹动树叶，他停下手，看了一会儿，随后回到椅子旁坐下。\n杯子摆在离他不远的地方，他端起来喝了两口，又放回碟子旁。他将外套的一只袖子从椅背上拉下来，理顺后重新搭好。屋里的光慢慢移到桌角，他把椅子挪了一点，让脚边留出位置。随后，他重新系了鞋带，拍掉裤脚上沾着的灰，靠着椅背休息，没有再做别的事。",
+      "lore": [
+        {
+          "id": "47ba19b8b9ece1f35cc9",
+          "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+          "file": "angels.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "左侧宿主"
+          ],
+          "start_offset": 43,
+          "end_offset": 81,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+          "token_count": 66
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-P04-G1",
+      "case_id": "SL-P04",
+      "gold_fact_id": "G1",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "雷",
+        "predicate": "拥有",
+        "object": "让大厅里的时间暂停的能力",
+        "normalized_fact": "雷拥有让大厅里的时间暂停的能力",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "雷拥有让大厅里的时间暂停的能力。",
+            "start": 23,
+            "end": 39
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "雷坐在大厅的椅子上，用手指将衣袖上的褶皱抚平。雷拥有让大厅里的时间暂停的能力。窗外的阳光照到椅背上，他挪了挪身体，换了一个舒服些的姿势。旁边放着一杯普通的水，他端起来喝了一口，随后将杯子放回桌面。桌角有几粒饼干碎屑，他抽出纸巾，慢慢擦干净。\n他起身走到窗前，把偏到一旁的窗帘拉直。帘子的一角碰到手背，他随手拨开，低头看了看窗台。过了一会儿，他重新回到椅子边，把鞋带打好的结理顺，再将两只脚放在椅子下面。他从碟子里拿了一块普通饼干，吃完后擦了擦嘴，又将纸巾折起，放在空碟子旁边。",
+      "lore": [
+        {
+          "id": "df1f51265ef5555994be",
+          "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "file": "angels.md",
+          "start_line": 16,
+          "end_line": 16,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "力量副作用"
+          ],
+          "start_offset": 149,
+          "end_offset": 182,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "token_count": 62
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "设定说明雷可以借用亚巴顿的力量及其副作用，但没有列出能力全集，因而不能支持或排除时间暂停。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-005-G1",
+      "case_id": "SL-005",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷",
+        "predicate": "拥有",
+        "object": "两颗心脏",
+        "normalized_fact": "雷拥有两颗心脏",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "雷拥有两颗心脏。",
+            "start": 39,
+            "end": 47
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷拥有两颗心脏。月城可以让机械左臂变成液体。拉古艾尔寄宿在雷的右侧心脏里。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "596ac1b6800114e8e9ed",
+          "text": "雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。",
+          "file": "angels.md",
+          "start_line": 56,
+          "end_line": 56,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "双宿主",
+            "心脏共鸣"
+          ],
+          "start_offset": 581,
+          "end_offset": 621,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 双宿主 > 心脏共鸣\n雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。",
+          "token_count": 68
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-005-G2",
+      "case_id": "SL-005",
+      "gold_fact_id": "G2",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "月城",
+        "predicate": "拥有",
+        "object": "液态机械臂能力",
+        "normalized_fact": "月城拥有液态机械臂能力",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "月城可以让机械左臂变成液体。",
+            "start": 47,
+            "end": 61
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷拥有两颗心脏。月城可以让机械左臂变成液体。拉古艾尔寄宿在雷的右侧心脏里。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "b6c490a416855d8e6bb7",
+          "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+          "file": "technology.md",
+          "start_line": 16,
+          "end_line": 16,
+          "heading_path": [
+            "科技规则（测试设定，不代表正式 canon）",
+            "机械左臂",
+            "神经接口"
+          ],
+          "start_offset": 156,
+          "end_offset": 193,
+          "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+          "token_count": 66
+        },
+        {
+          "id": "da962def6f2a55ad70fc",
+          "text": "月城的机械左臂能反馈压力，但无法感知温度。他用左手碰热水时不会感觉烫。",
+          "file": "technology.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "科技规则（测试设定，不代表正式 canon）",
+            "机械左臂",
+            "触觉反馈"
+          ],
+          "start_offset": 213,
+          "end_offset": 248,
+          "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 触觉反馈\n月城的机械左臂能反馈压力，但无法感知温度。他用左手碰热水时不会感觉烫。",
+          "token_count": 64
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "设定描述机械左臂的接口和感知能力，但没有说明材料能否液化。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-005-G3",
+      "case_id": "SL-005",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "拉古艾尔",
+        "predicate": "寄宿",
+        "object": "雷的右侧心脏",
+        "normalized_fact": "拉古艾尔寄宿雷的右侧心脏",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "拉古艾尔寄宿在雷的右侧心脏里。",
+            "start": 61,
+            "end": 76
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷拥有两颗心脏。月城可以让机械左臂变成液体。拉古艾尔寄宿在雷的右侧心脏里。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "252bda4cc47b93db0d7b",
+          "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+          "file": "angels.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "拉古艾尔",
+            "右侧宿主"
+          ],
+          "start_offset": 202,
+          "end_offset": 242,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+          "token_count": 69
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-006-G1",
+      "case_id": "SL-006",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "拉古艾尔",
+        "predicate": "寄宿",
+        "object": "雷的右侧心脏",
+        "normalized_fact": "拉古艾尔寄宿雷的右侧心脏",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "拉古艾尔寄宿在雷的右侧心脏里。",
+            "start": 39,
+            "end": 54
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。拉古艾尔寄宿在雷的右侧心脏里。莉娅知道亚巴顿的完整计划。月城在2064年完成机械左臂安装。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "252bda4cc47b93db0d7b",
+          "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+          "file": "angels.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "拉古艾尔",
+            "右侧宿主"
+          ],
+          "start_offset": 202,
+          "end_offset": 242,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+          "token_count": 69
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-006-G2",
+      "case_id": "SL-006",
+      "gold_fact_id": "G2",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "莉娅",
+        "predicate": "知道",
+        "object": "亚巴顿计划",
+        "normalized_fact": "莉娅知道亚巴顿计划",
+        "type": "world_event",
+        "dimension": "character_knowledge",
+        "source_anchors": [
+          {
+            "text": "莉娅知道亚巴顿的完整计划。",
+            "start": 54,
+            "end": 67
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。拉古艾尔寄宿在雷的右侧心脏里。莉娅知道亚巴顿的完整计划。月城在2064年完成机械左臂安装。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "4ce0e0b41048241db315",
+          "text": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+          "file": "characters.md",
+          "start_line": 56,
+          "end_line": 56,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "莉娅",
+            "工作职责"
+          ],
+          "start_offset": 560,
+          "end_offset": 594,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 莉娅 > 工作职责\n莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+          "token_count": 61
+        },
+        {
+          "id": "e704ee0ef831711f1744",
+          "text": "亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。",
+          "file": "angels.md",
+          "start_line": 11,
+          "end_line": 11,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "提前降临"
+          ],
+          "start_offset": 100,
+          "end_offset": 129,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 提前降临\n亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。",
+          "token_count": 57
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "设定分别说明莉娅的身份和亚巴顿的降临，但没有建立莉娅对其计划的认知。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-006-G3",
+      "case_id": "SL-006",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "月城",
+        "predicate": "安装时间",
+        "object": "2064年",
+        "normalized_fact": "月城安装时间2064年",
+        "type": "world_event",
+        "dimension": "time",
+        "source_anchors": [
+          {
+            "text": "月城在2064年完成机械左臂安装。",
+            "start": 67,
+            "end": 84
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。拉古艾尔寄宿在雷的右侧心脏里。莉娅知道亚巴顿的完整计划。月城在2064年完成机械左臂安装。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "fd1bec15cd989aa6cacf",
+          "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "file": "characters.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "月城",
+            "手术时间"
+          ],
+          "start_offset": 454,
+          "end_offset": 486,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "token_count": 57
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-007-G1",
+      "case_id": "SL-007",
+      "gold_fact_id": "G1",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "雷",
+        "predicate": "遇见",
+        "object": "地下隧道守望者",
+        "normalized_fact": "雷遇见地下隧道守望者",
+        "type": "world_event",
+        "dimension": "space",
+        "source_anchors": [
+          {
+            "text": "雷在地下隧道遇见了守望者。",
+            "start": 39,
+            "end": 52
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷在地下隧道遇见了守望者。旧教堂封印可以由一个人独自打开。雷与德尔塔在第二话第一次当面交谈。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "6c1bb108abfbac2c6467",
+          "text": "旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。",
+          "file": "technology.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "科技规则（测试设定，不代表正式 canon）",
+            "通信",
+            "地下信号"
+          ],
+          "start_offset": 317,
+          "end_offset": 352,
+          "embedding_text": "科技规则（测试设定，不代表正式 canon） > 通信 > 地下信号\n旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。",
+          "token_count": 62
+        },
+        {
+          "id": "4f3da93e1ce8304f1423",
+          "text": "守望者通过契约留下的精神波动追踪宿主，普通无线电屏蔽无法阻止这种感知。",
+          "file": "angels.md",
+          "start_line": 41,
+          "end_line": 41,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "守望者",
+            "感知方式"
+          ],
+          "start_offset": 424,
+          "end_offset": 459,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 守望者 > 感知方式\n守望者通过契约留下的精神波动追踪宿主，普通无线电屏蔽无法阻止这种感知。",
+          "token_count": 63
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "设定分别覆盖地下隧道和守望者追踪机制，但没有记录这次相遇是否发生。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-007-G2",
+      "case_id": "SL-007",
+      "gold_fact_id": "G2",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "单个宿主",
+        "predicate": "打开",
+        "object": "旧教堂封印",
+        "normalized_fact": "单个宿主打开旧教堂封印",
+        "type": "world_event",
+        "dimension": "world_rule",
+        "source_anchors": [
+          {
+            "text": "旧教堂封印可以由一个人独自打开。",
+            "start": 52,
+            "end": 68
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷在地下隧道遇见了守望者。旧教堂封印可以由一个人独自打开。雷与德尔塔在第二话第一次当面交谈。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "d7903beebe27e19f40ba",
+          "text": "地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+          "file": "angels.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "封印",
+            "解除条件"
+          ],
+          "start_offset": 477,
+          "end_offset": 515,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 封印 > 解除条件\n地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+          "token_count": 65
+        },
+        {
+          "id": "f0451fb2164fadf1aa1c",
+          "text": "雷在第四话从旧教堂获得一把长剑。此前的剧情没有记录他持有这把剑。",
+          "file": "history.md",
+          "start_line": 36,
+          "end_line": 36,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第四话",
+            "获得长剑"
+          ],
+          "start_offset": 378,
+          "end_offset": 410,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第四话 > 获得长剑\n雷在第四话从旧教堂获得一把长剑。此前的剧情没有记录他持有这把剑。",
+          "token_count": 60
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "两名宿主规则属于地下神殿石门；旧教堂只记录了长剑，不能把不同地点的封印规则直接等同。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-007-G3",
+      "case_id": "SL-007",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷",
+        "predicate": "首次见面",
+        "object": "德尔塔第二话",
+        "normalized_fact": "雷首次见面德尔塔第二话",
+        "type": "character_attribute",
+        "dimension": "character_relation",
+        "source_anchors": [
+          {
+            "text": "雷与德尔塔在第二话第一次当面交谈。",
+            "start": 68,
+            "end": 85
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷在地下隧道遇见了守望者。旧教堂封印可以由一个人独自打开。雷与德尔塔在第二话第一次当面交谈。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "d11b313d4fe3fee7d599",
+          "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "file": "history.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第二话",
+            "首次当面见面"
+          ],
+          "start_offset": 261,
+          "end_offset": 303,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "token_count": 72
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-008-G1",
+      "case_id": "SL-008",
+      "gold_fact_id": "G1",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "亚巴顿",
+        "predicate": "赋予",
+        "object": "永久不死",
+        "normalized_fact": "亚巴顿赋予永久不死",
+        "type": "world_event",
+        "dimension": "causality",
+        "source_anchors": [
+          {
+            "text": "亚巴顿的力量让雷获得永久不死之身。",
+            "start": 39,
+            "end": 56
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。亚巴顿的力量让雷获得永久不死之身。雷和德尔塔在第一话已经正式见面。雷在第三话向德尔塔说明双心脏秘密。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "df1f51265ef5555994be",
+          "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "file": "angels.md",
+          "start_line": 16,
+          "end_line": 16,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "力量副作用"
+          ],
+          "start_offset": 149,
+          "end_offset": 182,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "token_count": 62
+        },
+        {
+          "id": "9e47d5a43afdf2ab345f",
+          "text": "宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。",
+          "file": "angels.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "宿主契约",
+            "契约代价"
+          ],
+          "start_offset": 318,
+          "end_offset": 354,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 宿主契约 > 契约代价\n宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。",
+          "token_count": 65
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "契约不会自动延寿且亚巴顿力量有记忆副作用，但这些设定没有穷举其全部能力，也没有直接禁止其他机制带来的不死。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-008-G2",
+      "case_id": "SL-008",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷",
+        "predicate": "见面",
+        "object": "第一话德尔塔",
+        "normalized_fact": "雷见面第一话德尔塔",
+        "type": "character_attribute",
+        "dimension": "character_relation",
+        "source_anchors": [
+          {
+            "text": "雷和德尔塔在第一话已经正式见面。",
+            "start": 56,
+            "end": 72
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。亚巴顿的力量让雷获得永久不死之身。雷和德尔塔在第一话已经正式见面。雷在第三话向德尔塔说明双心脏秘密。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "a67d2b6c645c6c2b1d19",
+          "text": "第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+          "file": "history.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第一话",
+            "公共新闻"
+          ],
+          "start_offset": 202,
+          "end_offset": 240,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第一话 > 公共新闻\n第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+          "token_count": 66
+        },
+        {
+          "id": "d11b313d4fe3fee7d599",
+          "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "file": "history.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第二话",
+            "首次当面见面"
+          ],
+          "start_offset": 261,
+          "end_offset": 303,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "token_count": 72
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_label_override",
+        "rationale": "设定明确第二话才首次当面交谈，因此第一话已经正式见面与时间线无法同时为真。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-008-G3",
+      "case_id": "SL-008",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷",
+        "predicate": "告知身份",
+        "object": "德尔塔知道双宿主身份",
+        "normalized_fact": "雷告知身份德尔塔知道双宿主身份",
+        "type": "world_event",
+        "dimension": "character_knowledge",
+        "source_anchors": [
+          {
+            "text": "雷在第三话向德尔塔说明双心脏秘密。",
+            "start": 72,
+            "end": 89
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。亚巴顿的力量让雷获得永久不死之身。雷和德尔塔在第一话已经正式见面。雷在第三话向德尔塔说明双心脏秘密。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "0ad0e47151069e9d8676",
+          "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+          "file": "history.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第三话",
+            "身份告知"
+          ],
+          "start_offset": 322,
+          "end_offset": 359,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+          "token_count": 65
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-009-G1",
+      "case_id": "SL-009",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "月城",
+        "predicate": "使用",
+        "object": "地震前机械左臂",
+        "normalized_fact": "月城使用地震前机械左臂",
+        "type": "world_event",
+        "dimension": "time",
+        "source_anchors": [
+          {
+            "text": "月城在地震前已经使用机械左臂。",
+            "start": 39,
+            "end": 54
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城在地震前已经使用机械左臂。监察官恢复了爆炸前的视力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "fd1bec15cd989aa6cacf",
+          "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "file": "characters.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "月城",
+            "手术时间"
+          ],
+          "start_offset": 454,
+          "end_offset": 486,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "token_count": 57
+        },
+        {
+          "id": "ca52138556599b584637",
+          "text": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+          "file": "history.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "2063年",
+            "大地震"
+          ],
+          "start_offset": 44,
+          "end_offset": 80,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 大地震\n2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+          "token_count": 61
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_label_override",
+        "rationale": "大地震发生于2063年，机械左臂于2064年安装，因此地震前已经使用机械左臂与时间线无法同时为真。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-009-G2",
+      "case_id": "SL-009",
+      "gold_fact_id": "G2",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "监察官",
+        "predicate": "恢复",
+        "object": "视力",
+        "normalized_fact": "监察官恢复视力",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "监察官恢复了爆炸前的视力。",
+            "start": 54,
+            "end": 67
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城在地震前已经使用机械左臂。监察官恢复了爆炸前的视力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "2979cd8f1d1098b9cdfc",
+          "text": "监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+          "file": "characters.md",
+          "start_line": 61,
+          "end_line": 61,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "监察官",
+            "失明状态"
+          ],
+          "start_offset": 613,
+          "end_offset": 648,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 监察官 > 失明状态\n监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+          "token_count": 63
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "设定排除监察官自身恢复视力的能力，但没有排除后续医疗、外部能力或装置恢复，因此仍需额外条件。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-010-G1",
+      "case_id": "SL-010",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "月城",
+        "predicate": "安装时间",
+        "object": "2064年",
+        "normalized_fact": "月城安装时间2064年",
+        "type": "world_event",
+        "dimension": "time",
+        "source_anchors": [
+          {
+            "text": "月城在2064年完成机械左臂安装。",
+            "start": 39,
+            "end": 56
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城在2064年完成机械左臂安装。公众知道德尔塔的真实姓名。莉娅知道亚巴顿的完整计划。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "fd1bec15cd989aa6cacf",
+          "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "file": "characters.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "月城",
+            "手术时间"
+          ],
+          "start_offset": 454,
+          "end_offset": 486,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "token_count": 57
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-010-G2",
+      "case_id": "SL-010",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "公众",
+        "predicate": "知道",
+        "object": "德尔塔的真实姓名",
+        "normalized_fact": "公众知道德尔塔的真实姓名",
+        "type": "character_attribute",
+        "dimension": "identity",
+        "source_anchors": [
+          {
+            "text": "公众知道德尔塔的真实姓名。",
+            "start": 56,
+            "end": 69
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城在2064年完成机械左臂安装。公众知道德尔塔的真实姓名。莉娅知道亚巴顿的完整计划。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "3a56aa33f1ea6dd2186e",
+          "text": "德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+          "file": "characters.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "德尔塔",
+            "公众身份"
+          ],
+          "start_offset": 294,
+          "end_offset": 337,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 德尔塔 > 公众身份\n德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+          "token_count": 71
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-010-G3",
+      "case_id": "SL-010",
+      "gold_fact_id": "G3",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "莉娅",
+        "predicate": "知道",
+        "object": "亚巴顿计划",
+        "normalized_fact": "莉娅知道亚巴顿计划",
+        "type": "world_event",
+        "dimension": "character_knowledge",
+        "source_anchors": [
+          {
+            "text": "莉娅知道亚巴顿的完整计划。",
+            "start": 69,
+            "end": 82
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城在2064年完成机械左臂安装。公众知道德尔塔的真实姓名。莉娅知道亚巴顿的完整计划。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "4ce0e0b41048241db315",
+          "text": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+          "file": "characters.md",
+          "start_line": 56,
+          "end_line": 56,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "莉娅",
+            "工作职责"
+          ],
+          "start_offset": 560,
+          "end_offset": 594,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 莉娅 > 工作职责\n莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+          "token_count": 61
+        },
+        {
+          "id": "e704ee0ef831711f1744",
+          "text": "亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。",
+          "file": "angels.md",
+          "start_line": 11,
+          "end_line": 11,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "提前降临"
+          ],
+          "start_offset": 100,
+          "end_offset": 129,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 提前降临\n亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。",
+          "token_count": 57
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "设定分别说明莉娅的身份和亚巴顿的降临，但没有建立莉娅对其计划的认知。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-011-G1",
+      "case_id": "SL-011",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷",
+        "predicate": "首次见面",
+        "object": "德尔塔第二话",
+        "normalized_fact": "雷首次见面德尔塔第二话",
+        "type": "character_attribute",
+        "dimension": "character_relation",
+        "source_anchors": [
+          {
+            "text": "雷与德尔塔在第二话第一次当面交谈。",
+            "start": 39,
+            "end": 56
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷与德尔塔在第二话第一次当面交谈。月城在2063年已经安装机械左臂。雷在地下隧道遇见了守望者。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "d11b313d4fe3fee7d599",
+          "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "file": "history.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第二话",
+            "首次当面见面"
+          ],
+          "start_offset": 261,
+          "end_offset": 303,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "token_count": 72
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-011-G2",
+      "case_id": "SL-011",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "月城",
+        "predicate": "安装时间",
+        "object": "2063年",
+        "normalized_fact": "月城安装时间2063年",
+        "type": "world_event",
+        "dimension": "time",
+        "source_anchors": [
+          {
+            "text": "月城在2063年已经安装机械左臂。",
+            "start": 56,
+            "end": 73
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷与德尔塔在第二话第一次当面交谈。月城在2063年已经安装机械左臂。雷在地下隧道遇见了守望者。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "fd1bec15cd989aa6cacf",
+          "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "file": "characters.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "月城",
+            "手术时间"
+          ],
+          "start_offset": 454,
+          "end_offset": 486,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "token_count": 57
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-011-G3",
+      "case_id": "SL-011",
+      "gold_fact_id": "G3",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "雷",
+        "predicate": "遇见",
+        "object": "地下隧道守望者",
+        "normalized_fact": "雷遇见地下隧道守望者",
+        "type": "world_event",
+        "dimension": "space",
+        "source_anchors": [
+          {
+            "text": "雷在地下隧道遇见了守望者。",
+            "start": 73,
+            "end": 86
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷与德尔塔在第二话第一次当面交谈。月城在2063年已经安装机械左臂。雷在地下隧道遇见了守望者。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "6c1bb108abfbac2c6467",
+          "text": "旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。",
+          "file": "technology.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "科技规则（测试设定，不代表正式 canon）",
+            "通信",
+            "地下信号"
+          ],
+          "start_offset": 317,
+          "end_offset": 352,
+          "embedding_text": "科技规则（测试设定，不代表正式 canon） > 通信 > 地下信号\n旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。",
+          "token_count": 62
+        },
+        {
+          "id": "4f3da93e1ce8304f1423",
+          "text": "守望者通过契约留下的精神波动追踪宿主，普通无线电屏蔽无法阻止这种感知。",
+          "file": "angels.md",
+          "start_line": 41,
+          "end_line": 41,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "守望者",
+            "感知方式"
+          ],
+          "start_offset": 424,
+          "end_offset": 459,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 守望者 > 感知方式\n守望者通过契约留下的精神波动追踪宿主，普通无线电屏蔽无法阻止这种感知。",
+          "token_count": 63
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "设定分别覆盖地下隧道和守望者追踪机制，但没有记录这次相遇是否发生。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-012-G1",
+      "case_id": "SL-012",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷",
+        "predicate": "告知身份",
+        "object": "德尔塔知道双宿主身份",
+        "normalized_fact": "雷告知身份德尔塔知道双宿主身份",
+        "type": "world_event",
+        "dimension": "character_knowledge",
+        "source_anchors": [
+          {
+            "text": "雷在第三话向德尔塔说明双心脏秘密。",
+            "start": 39,
+            "end": 56
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷在第三话向德尔塔说明双心脏秘密。雷的父亲知道拉古艾尔寄宿在雷体内。旧教堂封印可以由一个人独自打开。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "0ad0e47151069e9d8676",
+          "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+          "file": "history.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第三话",
+            "身份告知"
+          ],
+          "start_offset": 322,
+          "end_offset": 359,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+          "token_count": 65
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-012-G2",
+      "case_id": "SL-012",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷的父亲",
+        "predicate": "知道",
+        "object": "拉古艾尔寄宿",
+        "normalized_fact": "雷的父亲知道拉古艾尔寄宿",
+        "type": "world_event",
+        "dimension": "character_knowledge",
+        "source_anchors": [
+          {
+            "text": "雷的父亲知道拉古艾尔寄宿在雷体内。",
+            "start": 56,
+            "end": 73
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷在第三话向德尔塔说明双心脏秘密。雷的父亲知道拉古艾尔寄宿在雷体内。旧教堂封印可以由一个人独自打开。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "46422ea243d878bfdce9",
+          "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+          "file": "characters.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "身份保密"
+          ],
+          "start_offset": 189,
+          "end_offset": 229,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+          "token_count": 66
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-012-G3",
+      "case_id": "SL-012",
+      "gold_fact_id": "G3",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "单个宿主",
+        "predicate": "打开",
+        "object": "旧教堂封印",
+        "normalized_fact": "单个宿主打开旧教堂封印",
+        "type": "world_event",
+        "dimension": "world_rule",
+        "source_anchors": [
+          {
+            "text": "旧教堂封印可以由一个人独自打开。",
+            "start": 73,
+            "end": 89
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷在第三话向德尔塔说明双心脏秘密。雷的父亲知道拉古艾尔寄宿在雷体内。旧教堂封印可以由一个人独自打开。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "d7903beebe27e19f40ba",
+          "text": "地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+          "file": "angels.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "封印",
+            "解除条件"
+          ],
+          "start_offset": 477,
+          "end_offset": 515,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 封印 > 解除条件\n地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+          "token_count": 65
+        },
+        {
+          "id": "f0451fb2164fadf1aa1c",
+          "text": "雷在第四话从旧教堂获得一把长剑。此前的剧情没有记录他持有这把剑。",
+          "file": "history.md",
+          "start_line": 36,
+          "end_line": 36,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第四话",
+            "获得长剑"
+          ],
+          "start_offset": 378,
+          "end_offset": 410,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第四话 > 获得长剑\n雷在第四话从旧教堂获得一把长剑。此前的剧情没有记录他持有这把剑。",
+          "token_count": 60
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "两名宿主规则属于地下神殿石门；旧教堂只记录了长剑，不能把不同地点的封印规则直接等同。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-013-G1",
+      "case_id": "SL-013",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷的父亲",
+        "predicate": "离开",
+        "object": "第五话北方研究站",
+        "normalized_fact": "雷的父亲离开第五话北方研究站",
+        "type": "world_event",
+        "dimension": "time",
+        "source_anchors": [
+          {
+            "text": "雷的父亲在第五话乘列车离开城区。",
+            "start": 39,
+            "end": 55
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷的父亲在第五话乘列车离开城区。月城的右臂是机械臂。亚巴顿的力量让雷获得永久不死之身。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "d312452d0673bf259c82",
+          "text": "雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+          "file": "history.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第五话",
+            "父亲离城"
+          ],
+          "start_offset": 475,
+          "end_offset": 508,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第五话 > 父亲离城\n雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+          "token_count": 61
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-013-G2",
+      "case_id": "SL-013",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "月城",
+        "predicate": "拥有",
+        "object": "机械右臂",
+        "normalized_fact": "月城拥有机械右臂",
+        "type": "world_event",
+        "dimension": "space",
+        "source_anchors": [
+          {
+            "text": "月城的右臂是机械臂。",
+            "start": 55,
+            "end": 65
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷的父亲在第五话乘列车离开城区。月城的右臂是机械臂。亚巴顿的力量让雷获得永久不死之身。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "d7f7dd2035b813e0a886",
+          "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+          "file": "characters.md",
+          "start_line": 41,
+          "end_line": 41,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "月城",
+            "机械左臂"
+          ],
+          "start_offset": 408,
+          "end_offset": 436,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+          "token_count": 55
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-013-G3",
+      "case_id": "SL-013",
+      "gold_fact_id": "G3",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "亚巴顿",
+        "predicate": "赋予",
+        "object": "永久不死",
+        "normalized_fact": "亚巴顿赋予永久不死",
+        "type": "world_event",
+        "dimension": "causality",
+        "source_anchors": [
+          {
+            "text": "亚巴顿的力量让雷获得永久不死之身。",
+            "start": 65,
+            "end": 82
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷的父亲在第五话乘列车离开城区。月城的右臂是机械臂。亚巴顿的力量让雷获得永久不死之身。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "df1f51265ef5555994be",
+          "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "file": "angels.md",
+          "start_line": 16,
+          "end_line": 16,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "力量副作用"
+          ],
+          "start_offset": 149,
+          "end_offset": 182,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "token_count": 62
+        },
+        {
+          "id": "9e47d5a43afdf2ab345f",
+          "text": "宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。",
+          "file": "angels.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "宿主契约",
+            "契约代价"
+          ],
+          "start_offset": 318,
+          "end_offset": 354,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 宿主契约 > 契约代价\n宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。",
+          "token_count": 65
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "契约不会自动延寿且亚巴顿力量有记忆副作用，但这些设定没有穷举其全部能力，也没有直接禁止其他机制带来的不死。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-014-G1",
+      "case_id": "SL-014",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷",
+        "predicate": "躲进",
+        "object": "旧教堂",
+        "normalized_fact": "雷躲进旧教堂",
+        "type": "world_event",
+        "dimension": "space",
+        "source_anchors": [
+          {
+            "text": "雷与德尔塔在第六话躲进旧教堂。",
+            "start": 39,
+            "end": 54
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷与德尔塔在第六话躲进旧教堂。雷能让已经死亡的人复活。雷和德尔塔在第一话已经正式见面。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "806c7429338e0ae14bce",
+          "text": "旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+          "file": "angels.md",
+          "start_line": 61,
+          "end_line": 61,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "避难所",
+            "静默结界"
+          ],
+          "start_offset": 640,
+          "end_offset": 673,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 避难所 > 静默结界\n旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+          "token_count": 61
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-014-G2",
+      "case_id": "SL-014",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷",
+        "predicate": "拥有",
+        "object": "复活能力",
+        "normalized_fact": "雷拥有复活能力",
+        "type": "world_event",
+        "dimension": "world_rule",
+        "source_anchors": [
+          {
+            "text": "雷能让已经死亡的人复活。",
+            "start": 54,
+            "end": 66
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷与德尔塔在第六话躲进旧教堂。雷能让已经死亡的人复活。雷和德尔塔在第一话已经正式见面。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "3b7f472d534c811d4c3f",
+          "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+          "file": "angels.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "拉古艾尔",
+            "治疗限制"
+          ],
+          "start_offset": 262,
+          "end_offset": 298,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+          "token_count": 65
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-014-G3",
+      "case_id": "SL-014",
+      "gold_fact_id": "G3",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷",
+        "predicate": "见面",
+        "object": "第一话德尔塔",
+        "normalized_fact": "雷见面第一话德尔塔",
+        "type": "character_attribute",
+        "dimension": "character_relation",
+        "source_anchors": [
+          {
+            "text": "雷和德尔塔在第一话已经正式见面。",
+            "start": 66,
+            "end": 82
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷与德尔塔在第六话躲进旧教堂。雷能让已经死亡的人复活。雷和德尔塔在第一话已经正式见面。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "a67d2b6c645c6c2b1d19",
+          "text": "第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+          "file": "history.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第一话",
+            "公共新闻"
+          ],
+          "start_offset": 202,
+          "end_offset": 240,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第一话 > 公共新闻\n第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+          "token_count": 66
+        },
+        {
+          "id": "d11b313d4fe3fee7d599",
+          "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "file": "history.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第二话",
+            "首次当面见面"
+          ],
+          "start_offset": 261,
+          "end_offset": 303,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "token_count": 72
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_label_override",
+        "rationale": "设定明确第二话才首次当面交谈，因此第一话已经正式见面与时间线无法同时为真。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-015-G1",
+      "case_id": "SL-015",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "档案馆",
+        "predicate": "开放",
+        "object": "2065年救援档案",
+        "normalized_fact": "档案馆开放2065年救援档案",
+        "type": "world_event",
+        "dimension": "time",
+        "source_anchors": [
+          {
+            "text": "档案馆在2065年开放地震救援档案。",
+            "start": 39,
+            "end": 57
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。档案馆在2065年开放地震救援档案。雷借用亚巴顿力量后记忆不会受影响。月城在地震前已经使用机械左臂。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "2d8cb5017830f3a8881e",
+          "text": "档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。",
+          "file": "technology.md",
+          "start_line": 51,
+          "end_line": 51,
+          "heading_path": [
+            "科技规则（测试设定，不代表正式 canon）",
+            "档案馆",
+            "纸质备份"
+          ],
+          "start_offset": 521,
+          "end_offset": 556,
+          "embedding_text": "科技规则（测试设定，不代表正式 canon） > 档案馆 > 纸质备份\n档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。",
+          "token_count": 63
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-015-G2",
+      "case_id": "SL-015",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷",
+        "predicate": "借用后",
+        "object": "记忆不变",
+        "normalized_fact": "雷借用后记忆不变",
+        "type": "world_event",
+        "dimension": "causality",
+        "source_anchors": [
+          {
+            "text": "雷借用亚巴顿力量后记忆不会受影响。",
+            "start": 57,
+            "end": 74
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。档案馆在2065年开放地震救援档案。雷借用亚巴顿力量后记忆不会受影响。月城在地震前已经使用机械左臂。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "df1f51265ef5555994be",
+          "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "file": "angels.md",
+          "start_line": 16,
+          "end_line": 16,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "力量副作用"
+          ],
+          "start_offset": 149,
+          "end_offset": 182,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "token_count": 62
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-015-G3",
+      "case_id": "SL-015",
+      "gold_fact_id": "G3",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "月城",
+        "predicate": "使用",
+        "object": "地震前机械左臂",
+        "normalized_fact": "月城使用地震前机械左臂",
+        "type": "world_event",
+        "dimension": "time",
+        "source_anchors": [
+          {
+            "text": "月城在地震前已经使用机械左臂。",
+            "start": 74,
+            "end": 89
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。档案馆在2065年开放地震救援档案。雷借用亚巴顿力量后记忆不会受影响。月城在地震前已经使用机械左臂。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "fd1bec15cd989aa6cacf",
+          "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "file": "characters.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "月城",
+            "手术时间"
+          ],
+          "start_offset": 454,
+          "end_offset": 486,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "token_count": 57
+        },
+        {
+          "id": "ca52138556599b584637",
+          "text": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+          "file": "history.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "2063年",
+            "大地震"
+          ],
+          "start_offset": 44,
+          "end_offset": 80,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 大地震\n2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+          "token_count": 61
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_label_override",
+        "rationale": "大地震发生于2063年，机械左臂于2064年安装，因此地震前已经使用机械左臂与时间线无法同时为真。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-016-G1",
+      "case_id": "SL-016",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷",
+        "predicate": "拥有",
+        "object": "两颗心脏",
+        "normalized_fact": "雷拥有两颗心脏",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "雷拥有两颗心脏。",
+            "start": 39,
+            "end": 47
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷拥有两颗心脏。雷和德尔塔在第一话已经当面交谈。监察官恢复了爆炸前的视力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "596ac1b6800114e8e9ed",
+          "text": "雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。",
+          "file": "angels.md",
+          "start_line": 56,
+          "end_line": 56,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "双宿主",
+            "心脏共鸣"
+          ],
+          "start_offset": 581,
+          "end_offset": 621,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 双宿主 > 心脏共鸣\n雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。",
+          "token_count": 68
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-016-G2",
+      "case_id": "SL-016",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷",
+        "predicate": "当面交谈",
+        "object": "第一话",
+        "normalized_fact": "雷当面交谈第一话",
+        "type": "character_attribute",
+        "dimension": "character_relation",
+        "source_anchors": [
+          {
+            "text": "雷和德尔塔在第一话已经当面交谈。",
+            "start": 47,
+            "end": 63
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷拥有两颗心脏。雷和德尔塔在第一话已经当面交谈。监察官恢复了爆炸前的视力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "d11b313d4fe3fee7d599",
+          "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "file": "history.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第二话",
+            "首次当面见面"
+          ],
+          "start_offset": 261,
+          "end_offset": 303,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "token_count": 72
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-016-G3",
+      "case_id": "SL-016",
+      "gold_fact_id": "G3",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "监察官",
+        "predicate": "恢复",
+        "object": "视力",
+        "normalized_fact": "监察官恢复视力",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "监察官恢复了爆炸前的视力。",
+            "start": 63,
+            "end": 76
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷拥有两颗心脏。雷和德尔塔在第一话已经当面交谈。监察官恢复了爆炸前的视力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "2979cd8f1d1098b9cdfc",
+          "text": "监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+          "file": "characters.md",
+          "start_line": 61,
+          "end_line": 61,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "监察官",
+            "失明状态"
+          ],
+          "start_offset": 613,
+          "end_offset": 648,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 监察官 > 失明状态\n监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+          "token_count": 63
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "设定排除监察官自身恢复视力的能力，但没有排除后续医疗、外部能力或装置恢复，因此仍需额外条件。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-017-G1",
+      "case_id": "SL-017",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "公众",
+        "predicate": "知道",
+        "object": "德尔塔的真实姓名",
+        "normalized_fact": "公众知道德尔塔的真实姓名",
+        "type": "character_attribute",
+        "dimension": "identity",
+        "source_anchors": [
+          {
+            "text": "公众知道德尔塔的真实姓名。",
+            "start": 39,
+            "end": 52
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。公众知道德尔塔的真实姓名。月城在2063年已经安装机械左臂。雷在第三话向德尔塔说明双心脏秘密。旧教堂封印可以由一个人独自打开。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "3a56aa33f1ea6dd2186e",
+          "text": "德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+          "file": "characters.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "德尔塔",
+            "公众身份"
+          ],
+          "start_offset": 294,
+          "end_offset": 337,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 德尔塔 > 公众身份\n德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+          "token_count": 71
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-017-G2",
+      "case_id": "SL-017",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "月城",
+        "predicate": "安装时间",
+        "object": "2063年",
+        "normalized_fact": "月城安装时间2063年",
+        "type": "world_event",
+        "dimension": "time",
+        "source_anchors": [
+          {
+            "text": "月城在2063年已经安装机械左臂。",
+            "start": 52,
+            "end": 69
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。公众知道德尔塔的真实姓名。月城在2063年已经安装机械左臂。雷在第三话向德尔塔说明双心脏秘密。旧教堂封印可以由一个人独自打开。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "fd1bec15cd989aa6cacf",
+          "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "file": "characters.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "月城",
+            "手术时间"
+          ],
+          "start_offset": 454,
+          "end_offset": 486,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "token_count": 57
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-017-G3",
+      "case_id": "SL-017",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷",
+        "predicate": "告知身份",
+        "object": "德尔塔知道双宿主身份",
+        "normalized_fact": "雷告知身份德尔塔知道双宿主身份",
+        "type": "world_event",
+        "dimension": "character_knowledge",
+        "source_anchors": [
+          {
+            "text": "雷在第三话向德尔塔说明双心脏秘密。",
+            "start": 69,
+            "end": 86
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。公众知道德尔塔的真实姓名。月城在2063年已经安装机械左臂。雷在第三话向德尔塔说明双心脏秘密。旧教堂封印可以由一个人独自打开。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "0ad0e47151069e9d8676",
+          "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+          "file": "history.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第三话",
+            "身份告知"
+          ],
+          "start_offset": 322,
+          "end_offset": 359,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+          "token_count": 65
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-017-G4",
+      "case_id": "SL-017",
+      "gold_fact_id": "G4",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "单个宿主",
+        "predicate": "打开",
+        "object": "旧教堂封印",
+        "normalized_fact": "单个宿主打开旧教堂封印",
+        "type": "world_event",
+        "dimension": "world_rule",
+        "source_anchors": [
+          {
+            "text": "旧教堂封印可以由一个人独自打开。",
+            "start": 86,
+            "end": 102
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。公众知道德尔塔的真实姓名。月城在2063年已经安装机械左臂。雷在第三话向德尔塔说明双心脏秘密。旧教堂封印可以由一个人独自打开。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "d7903beebe27e19f40ba",
+          "text": "地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+          "file": "angels.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "封印",
+            "解除条件"
+          ],
+          "start_offset": 477,
+          "end_offset": 515,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 封印 > 解除条件\n地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+          "token_count": 65
+        },
+        {
+          "id": "f0451fb2164fadf1aa1c",
+          "text": "雷在第四话从旧教堂获得一把长剑。此前的剧情没有记录他持有这把剑。",
+          "file": "history.md",
+          "start_line": 36,
+          "end_line": 36,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第四话",
+            "获得长剑"
+          ],
+          "start_offset": 378,
+          "end_offset": 410,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第四话 > 获得长剑\n雷在第四话从旧教堂获得一把长剑。此前的剧情没有记录他持有这把剑。",
+          "token_count": 60
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "两名宿主规则属于地下神殿石门；旧教堂只记录了长剑，不能把不同地点的封印规则直接等同。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-018-G1",
+      "case_id": "SL-018",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷的父亲",
+        "predicate": "知道",
+        "object": "拉古艾尔寄宿",
+        "normalized_fact": "雷的父亲知道拉古艾尔寄宿",
+        "type": "world_event",
+        "dimension": "character_knowledge",
+        "source_anchors": [
+          {
+            "text": "雷的父亲知道拉古艾尔寄宿在雷体内。",
+            "start": 39,
+            "end": 56
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷的父亲知道拉古艾尔寄宿在雷体内。月城的右臂是机械臂。雷的父亲在第五话乘列车离开城区。亚巴顿的力量让雷获得永久不死之身。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "46422ea243d878bfdce9",
+          "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+          "file": "characters.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "身份保密"
+          ],
+          "start_offset": 189,
+          "end_offset": 229,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+          "token_count": 66
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-018-G2",
+      "case_id": "SL-018",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "月城",
+        "predicate": "拥有",
+        "object": "机械右臂",
+        "normalized_fact": "月城拥有机械右臂",
+        "type": "world_event",
+        "dimension": "space",
+        "source_anchors": [
+          {
+            "text": "月城的右臂是机械臂。",
+            "start": 56,
+            "end": 66
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷的父亲知道拉古艾尔寄宿在雷体内。月城的右臂是机械臂。雷的父亲在第五话乘列车离开城区。亚巴顿的力量让雷获得永久不死之身。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "d7f7dd2035b813e0a886",
+          "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+          "file": "characters.md",
+          "start_line": 41,
+          "end_line": 41,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "月城",
+            "机械左臂"
+          ],
+          "start_offset": 408,
+          "end_offset": 436,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+          "token_count": 55
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-018-G3",
+      "case_id": "SL-018",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷的父亲",
+        "predicate": "离开",
+        "object": "第五话北方研究站",
+        "normalized_fact": "雷的父亲离开第五话北方研究站",
+        "type": "world_event",
+        "dimension": "time",
+        "source_anchors": [
+          {
+            "text": "雷的父亲在第五话乘列车离开城区。",
+            "start": 66,
+            "end": 82
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷的父亲知道拉古艾尔寄宿在雷体内。月城的右臂是机械臂。雷的父亲在第五话乘列车离开城区。亚巴顿的力量让雷获得永久不死之身。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "d312452d0673bf259c82",
+          "text": "雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+          "file": "history.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第五话",
+            "父亲离城"
+          ],
+          "start_offset": 475,
+          "end_offset": 508,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第五话 > 父亲离城\n雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+          "token_count": 61
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-018-G4",
+      "case_id": "SL-018",
+      "gold_fact_id": "G4",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "亚巴顿",
+        "predicate": "赋予",
+        "object": "永久不死",
+        "normalized_fact": "亚巴顿赋予永久不死",
+        "type": "world_event",
+        "dimension": "causality",
+        "source_anchors": [
+          {
+            "text": "亚巴顿的力量让雷获得永久不死之身。",
+            "start": 82,
+            "end": 99
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷的父亲知道拉古艾尔寄宿在雷体内。月城的右臂是机械臂。雷的父亲在第五话乘列车离开城区。亚巴顿的力量让雷获得永久不死之身。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "df1f51265ef5555994be",
+          "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "file": "angels.md",
+          "start_line": 16,
+          "end_line": 16,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "力量副作用"
+          ],
+          "start_offset": 149,
+          "end_offset": 182,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "token_count": 62
+        },
+        {
+          "id": "9e47d5a43afdf2ab345f",
+          "text": "宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。",
+          "file": "angels.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "宿主契约",
+            "契约代价"
+          ],
+          "start_offset": 318,
+          "end_offset": 354,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 宿主契约 > 契约代价\n宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。",
+          "token_count": 65
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "契约不会自动延寿且亚巴顿力量有记忆副作用，但这些设定没有穷举其全部能力，也没有直接禁止其他机制带来的不死。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-019-G1",
+      "case_id": "SL-019",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷",
+        "predicate": "拥有",
+        "object": "复活能力",
+        "normalized_fact": "雷拥有复活能力",
+        "type": "world_event",
+        "dimension": "world_rule",
+        "source_anchors": [
+          {
+            "text": "雷能让已经死亡的人复活。",
+            "start": 39,
+            "end": 51
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷能让已经死亡的人复活。雷借用亚巴顿力量后记忆不会受影响。雷与德尔塔在第六话躲进旧教堂。雷和德尔塔在第一话已经正式见面。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "3b7f472d534c811d4c3f",
+          "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+          "file": "angels.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "拉古艾尔",
+            "治疗限制"
+          ],
+          "start_offset": 262,
+          "end_offset": 298,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+          "token_count": 65
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-019-G2",
+      "case_id": "SL-019",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷",
+        "predicate": "借用后",
+        "object": "记忆不变",
+        "normalized_fact": "雷借用后记忆不变",
+        "type": "world_event",
+        "dimension": "causality",
+        "source_anchors": [
+          {
+            "text": "雷借用亚巴顿力量后记忆不会受影响。",
+            "start": 51,
+            "end": 68
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷能让已经死亡的人复活。雷借用亚巴顿力量后记忆不会受影响。雷与德尔塔在第六话躲进旧教堂。雷和德尔塔在第一话已经正式见面。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "df1f51265ef5555994be",
+          "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "file": "angels.md",
+          "start_line": 16,
+          "end_line": 16,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "力量副作用"
+          ],
+          "start_offset": 149,
+          "end_offset": 182,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "token_count": 62
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-019-G3",
+      "case_id": "SL-019",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷",
+        "predicate": "躲进",
+        "object": "旧教堂",
+        "normalized_fact": "雷躲进旧教堂",
+        "type": "world_event",
+        "dimension": "space",
+        "source_anchors": [
+          {
+            "text": "雷与德尔塔在第六话躲进旧教堂。",
+            "start": 68,
+            "end": 83
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷能让已经死亡的人复活。雷借用亚巴顿力量后记忆不会受影响。雷与德尔塔在第六话躲进旧教堂。雷和德尔塔在第一话已经正式见面。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "806c7429338e0ae14bce",
+          "text": "旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+          "file": "angels.md",
+          "start_line": 61,
+          "end_line": 61,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "避难所",
+            "静默结界"
+          ],
+          "start_offset": 640,
+          "end_offset": 673,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 避难所 > 静默结界\n旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+          "token_count": 61
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-019-G4",
+      "case_id": "SL-019",
+      "gold_fact_id": "G4",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷",
+        "predicate": "见面",
+        "object": "第一话德尔塔",
+        "normalized_fact": "雷见面第一话德尔塔",
+        "type": "character_attribute",
+        "dimension": "character_relation",
+        "source_anchors": [
+          {
+            "text": "雷和德尔塔在第一话已经正式见面。",
+            "start": 83,
+            "end": 99
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷能让已经死亡的人复活。雷借用亚巴顿力量后记忆不会受影响。雷与德尔塔在第六话躲进旧教堂。雷和德尔塔在第一话已经正式见面。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "a67d2b6c645c6c2b1d19",
+          "text": "第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+          "file": "history.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第一话",
+            "公共新闻"
+          ],
+          "start_offset": 202,
+          "end_offset": 240,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第一话 > 公共新闻\n第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+          "token_count": 66
+        },
+        {
+          "id": "d11b313d4fe3fee7d599",
+          "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "file": "history.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第二话",
+            "首次当面见面"
+          ],
+          "start_offset": 261,
+          "end_offset": 303,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "token_count": 72
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_label_override",
+        "rationale": "设定明确第二话才首次当面交谈，因此第一话已经正式见面与时间线无法同时为真。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-020-G1",
+      "case_id": "SL-020",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷",
+        "predicate": "当面交谈",
+        "object": "第一话",
+        "normalized_fact": "雷当面交谈第一话",
+        "type": "character_attribute",
+        "dimension": "character_relation",
+        "source_anchors": [
+          {
+            "text": "雷和德尔塔在第一话已经当面交谈。",
+            "start": 39,
+            "end": 55
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷和德尔塔在第一话已经当面交谈。公众知道德尔塔的真实姓名。档案馆在2065年开放地震救援档案。月城在地震前已经使用机械左臂。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "d11b313d4fe3fee7d599",
+          "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "file": "history.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第二话",
+            "首次当面见面"
+          ],
+          "start_offset": 261,
+          "end_offset": 303,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "token_count": 72
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-020-G2",
+      "case_id": "SL-020",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "公众",
+        "predicate": "知道",
+        "object": "德尔塔的真实姓名",
+        "normalized_fact": "公众知道德尔塔的真实姓名",
+        "type": "character_attribute",
+        "dimension": "identity",
+        "source_anchors": [
+          {
+            "text": "公众知道德尔塔的真实姓名。",
+            "start": 55,
+            "end": 68
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷和德尔塔在第一话已经当面交谈。公众知道德尔塔的真实姓名。档案馆在2065年开放地震救援档案。月城在地震前已经使用机械左臂。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "3a56aa33f1ea6dd2186e",
+          "text": "德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+          "file": "characters.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "德尔塔",
+            "公众身份"
+          ],
+          "start_offset": 294,
+          "end_offset": 337,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 德尔塔 > 公众身份\n德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+          "token_count": 71
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-020-G3",
+      "case_id": "SL-020",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "档案馆",
+        "predicate": "开放",
+        "object": "2065年救援档案",
+        "normalized_fact": "档案馆开放2065年救援档案",
+        "type": "world_event",
+        "dimension": "time",
+        "source_anchors": [
+          {
+            "text": "档案馆在2065年开放地震救援档案。",
+            "start": 68,
+            "end": 86
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷和德尔塔在第一话已经当面交谈。公众知道德尔塔的真实姓名。档案馆在2065年开放地震救援档案。月城在地震前已经使用机械左臂。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "2d8cb5017830f3a8881e",
+          "text": "档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。",
+          "file": "technology.md",
+          "start_line": 51,
+          "end_line": 51,
+          "heading_path": [
+            "科技规则（测试设定，不代表正式 canon）",
+            "档案馆",
+            "纸质备份"
+          ],
+          "start_offset": 521,
+          "end_offset": 556,
+          "embedding_text": "科技规则（测试设定，不代表正式 canon） > 档案馆 > 纸质备份\n档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。",
+          "token_count": 63
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-020-G4",
+      "case_id": "SL-020",
+      "gold_fact_id": "G4",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "月城",
+        "predicate": "使用",
+        "object": "地震前机械左臂",
+        "normalized_fact": "月城使用地震前机械左臂",
+        "type": "world_event",
+        "dimension": "time",
+        "source_anchors": [
+          {
+            "text": "月城在地震前已经使用机械左臂。",
+            "start": 86,
+            "end": 101
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷和德尔塔在第一话已经当面交谈。公众知道德尔塔的真实姓名。档案馆在2065年开放地震救援档案。月城在地震前已经使用机械左臂。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "fd1bec15cd989aa6cacf",
+          "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "file": "characters.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "月城",
+            "手术时间"
+          ],
+          "start_offset": 454,
+          "end_offset": 486,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "token_count": 57
+        },
+        {
+          "id": "ca52138556599b584637",
+          "text": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+          "file": "history.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "2063年",
+            "大地震"
+          ],
+          "start_offset": 44,
+          "end_offset": 80,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 大地震\n2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+          "token_count": 61
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_label_override",
+        "rationale": "大地震发生于2063年，机械左臂于2064年安装，因此地震前已经使用机械左臂与时间线无法同时为真。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-021-G1",
+      "case_id": "SL-021",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "月城",
+        "predicate": "安装时间",
+        "object": "2063年",
+        "normalized_fact": "月城安装时间2063年",
+        "type": "world_event",
+        "dimension": "time",
+        "source_anchors": [
+          {
+            "text": "月城在2063年已经安装机械左臂。",
+            "start": 39,
+            "end": 56
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城在2063年已经安装机械左臂。雷的父亲知道拉古艾尔寄宿在雷体内。雷拥有两颗心脏。监察官恢复了爆炸前的视力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "fd1bec15cd989aa6cacf",
+          "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "file": "characters.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "月城",
+            "手术时间"
+          ],
+          "start_offset": 454,
+          "end_offset": 486,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "token_count": 57
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-021-G2",
+      "case_id": "SL-021",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷的父亲",
+        "predicate": "知道",
+        "object": "拉古艾尔寄宿",
+        "normalized_fact": "雷的父亲知道拉古艾尔寄宿",
+        "type": "world_event",
+        "dimension": "character_knowledge",
+        "source_anchors": [
+          {
+            "text": "雷的父亲知道拉古艾尔寄宿在雷体内。",
+            "start": 56,
+            "end": 73
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城在2063年已经安装机械左臂。雷的父亲知道拉古艾尔寄宿在雷体内。雷拥有两颗心脏。监察官恢复了爆炸前的视力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "46422ea243d878bfdce9",
+          "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+          "file": "characters.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "身份保密"
+          ],
+          "start_offset": 189,
+          "end_offset": 229,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+          "token_count": 66
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-021-G3",
+      "case_id": "SL-021",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "雷",
+        "predicate": "拥有",
+        "object": "两颗心脏",
+        "normalized_fact": "雷拥有两颗心脏",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "雷拥有两颗心脏。",
+            "start": 73,
+            "end": 81
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城在2063年已经安装机械左臂。雷的父亲知道拉古艾尔寄宿在雷体内。雷拥有两颗心脏。监察官恢复了爆炸前的视力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "596ac1b6800114e8e9ed",
+          "text": "雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。",
+          "file": "angels.md",
+          "start_line": 56,
+          "end_line": 56,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "双宿主",
+            "心脏共鸣"
+          ],
+          "start_offset": 581,
+          "end_offset": 621,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 双宿主 > 心脏共鸣\n雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。",
+          "token_count": 68
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-021-G4",
+      "case_id": "SL-021",
+      "gold_fact_id": "G4",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "监察官",
+        "predicate": "恢复",
+        "object": "视力",
+        "normalized_fact": "监察官恢复视力",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "监察官恢复了爆炸前的视力。",
+            "start": 81,
+            "end": 94
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城在2063年已经安装机械左臂。雷的父亲知道拉古艾尔寄宿在雷体内。雷拥有两颗心脏。监察官恢复了爆炸前的视力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "2979cd8f1d1098b9cdfc",
+          "text": "监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+          "file": "characters.md",
+          "start_line": 61,
+          "end_line": 61,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "监察官",
+            "失明状态"
+          ],
+          "start_offset": 613,
+          "end_offset": 648,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 监察官 > 失明状态\n监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+          "token_count": 63
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "设定排除监察官自身恢复视力的能力，但没有排除后续医疗、外部能力或装置恢复，因此仍需额外条件。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-022-G1",
+      "case_id": "SL-022",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "月城",
+        "predicate": "拥有",
+        "object": "机械右臂",
+        "normalized_fact": "月城拥有机械右臂",
+        "type": "world_event",
+        "dimension": "space",
+        "source_anchors": [
+          {
+            "text": "月城的右臂是机械臂。",
+            "start": 39,
+            "end": 49
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城的右臂是机械臂。雷能让已经死亡的人复活。亚巴顿寄宿在雷的左侧心脏里。守望者无法感知静默结界中的宿主。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "d7f7dd2035b813e0a886",
+          "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+          "file": "characters.md",
+          "start_line": 41,
+          "end_line": 41,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "月城",
+            "机械左臂"
+          ],
+          "start_offset": 408,
+          "end_offset": 436,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+          "token_count": 55
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-022-G2",
+      "case_id": "SL-022",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷",
+        "predicate": "拥有",
+        "object": "复活能力",
+        "normalized_fact": "雷拥有复活能力",
+        "type": "world_event",
+        "dimension": "world_rule",
+        "source_anchors": [
+          {
+            "text": "雷能让已经死亡的人复活。",
+            "start": 49,
+            "end": 61
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城的右臂是机械臂。雷能让已经死亡的人复活。亚巴顿寄宿在雷的左侧心脏里。守望者无法感知静默结界中的宿主。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "3b7f472d534c811d4c3f",
+          "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+          "file": "angels.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "拉古艾尔",
+            "治疗限制"
+          ],
+          "start_offset": 262,
+          "end_offset": 298,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+          "token_count": 65
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-022-G3",
+      "case_id": "SL-022",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "亚巴顿",
+        "predicate": "寄宿",
+        "object": "雷的左侧心脏",
+        "normalized_fact": "亚巴顿寄宿雷的左侧心脏",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "亚巴顿寄宿在雷的左侧心脏里。",
+            "start": 61,
+            "end": 75
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城的右臂是机械臂。雷能让已经死亡的人复活。亚巴顿寄宿在雷的左侧心脏里。守望者无法感知静默结界中的宿主。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "47ba19b8b9ece1f35cc9",
+          "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+          "file": "angels.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "左侧宿主"
+          ],
+          "start_offset": 43,
+          "end_offset": 81,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+          "token_count": 66
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-022-G4",
+      "case_id": "SL-022",
+      "gold_fact_id": "G4",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "守望者",
+        "predicate": "无法感知",
+        "object": "静默结界宿主",
+        "normalized_fact": "守望者无法感知静默结界宿主",
+        "type": "world_event",
+        "dimension": "world_rule",
+        "source_anchors": [
+          {
+            "text": "守望者无法感知静默结界中的宿主。",
+            "start": 75,
+            "end": 91
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城的右臂是机械臂。雷能让已经死亡的人复活。亚巴顿寄宿在雷的左侧心脏里。守望者无法感知静默结界中的宿主。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "806c7429338e0ae14bce",
+          "text": "旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+          "file": "angels.md",
+          "start_line": 61,
+          "end_line": 61,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "避难所",
+            "静默结界"
+          ],
+          "start_offset": 640,
+          "end_offset": 673,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 避难所 > 静默结界\n旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+          "token_count": 61
+        },
+        {
+          "id": "4f3da93e1ce8304f1423",
+          "text": "守望者通过契约留下的精神波动追踪宿主，普通无线电屏蔽无法阻止这种感知。",
+          "file": "angels.md",
+          "start_line": 41,
+          "end_line": 41,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "守望者",
+            "感知方式"
+          ],
+          "start_offset": 424,
+          "end_offset": 459,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 守望者 > 感知方式\n守望者通过契约留下的精神波动追踪宿主，普通无线电屏蔽无法阻止这种感知。",
+          "token_count": 63
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "设定只说结界降低发现概率，没有明确给出概率是否可能降为零，因此严格按无法同时为真标准仍保留不确定。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-023-G1",
+      "case_id": "SL-023",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷",
+        "predicate": "借用后",
+        "object": "记忆不变",
+        "normalized_fact": "雷借用后记忆不变",
+        "type": "world_event",
+        "dimension": "causality",
+        "source_anchors": [
+          {
+            "text": "雷借用亚巴顿力量后记忆不会受影响。",
+            "start": 39,
+            "end": 56
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷借用亚巴顿力量后记忆不会受影响。雷和德尔塔在第一话已经当面交谈。拉古艾尔寄宿在雷的右侧心脏里。雷拥有读取他人梦境的能力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "df1f51265ef5555994be",
+          "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "file": "angels.md",
+          "start_line": 16,
+          "end_line": 16,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "力量副作用"
+          ],
+          "start_offset": 149,
+          "end_offset": 182,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "token_count": 62
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-023-G2",
+      "case_id": "SL-023",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷",
+        "predicate": "当面交谈",
+        "object": "第一话",
+        "normalized_fact": "雷当面交谈第一话",
+        "type": "character_attribute",
+        "dimension": "character_relation",
+        "source_anchors": [
+          {
+            "text": "雷和德尔塔在第一话已经当面交谈。",
+            "start": 56,
+            "end": 72
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷借用亚巴顿力量后记忆不会受影响。雷和德尔塔在第一话已经当面交谈。拉古艾尔寄宿在雷的右侧心脏里。雷拥有读取他人梦境的能力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "d11b313d4fe3fee7d599",
+          "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "file": "history.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第二话",
+            "首次当面见面"
+          ],
+          "start_offset": 261,
+          "end_offset": 303,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "token_count": 72
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-023-G3",
+      "case_id": "SL-023",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "拉古艾尔",
+        "predicate": "寄宿",
+        "object": "雷的右侧心脏",
+        "normalized_fact": "拉古艾尔寄宿雷的右侧心脏",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "拉古艾尔寄宿在雷的右侧心脏里。",
+            "start": 72,
+            "end": 87
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷借用亚巴顿力量后记忆不会受影响。雷和德尔塔在第一话已经当面交谈。拉古艾尔寄宿在雷的右侧心脏里。雷拥有读取他人梦境的能力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "252bda4cc47b93db0d7b",
+          "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+          "file": "angels.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "拉古艾尔",
+            "右侧宿主"
+          ],
+          "start_offset": 202,
+          "end_offset": 242,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+          "token_count": 69
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-023-G4",
+      "case_id": "SL-023",
+      "gold_fact_id": "G4",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "雷",
+        "predicate": "拥有",
+        "object": "读取梦境的能力",
+        "normalized_fact": "雷拥有读取梦境的能力",
+        "type": "world_event",
+        "dimension": "world_rule",
+        "source_anchors": [
+          {
+            "text": "雷拥有读取他人梦境的能力。",
+            "start": 87,
+            "end": 100
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷借用亚巴顿力量后记忆不会受影响。雷和德尔塔在第一话已经当面交谈。拉古艾尔寄宿在雷的右侧心脏里。雷拥有读取他人梦境的能力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "df1f51265ef5555994be",
+          "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "file": "angels.md",
+          "start_line": 16,
+          "end_line": 16,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "力量副作用"
+          ],
+          "start_offset": 149,
+          "end_offset": 182,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+          "token_count": 62
+        },
+        {
+          "id": "596ac1b6800114e8e9ed",
+          "text": "雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。",
+          "file": "angels.md",
+          "start_line": 56,
+          "end_line": 56,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "双宿主",
+            "心脏共鸣"
+          ],
+          "start_offset": 581,
+          "end_offset": 621,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 双宿主 > 心脏共鸣\n雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。",
+          "token_count": 68
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "设定描述雷借用力量和双心脏共鸣，但没有列出或排除读取梦境的能力。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-024-G1",
+      "case_id": "SL-024",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "公众",
+        "predicate": "知道",
+        "object": "德尔塔的真实姓名",
+        "normalized_fact": "公众知道德尔塔的真实姓名",
+        "type": "character_attribute",
+        "dimension": "identity",
+        "source_anchors": [
+          {
+            "text": "公众知道德尔塔的真实姓名。",
+            "start": 39,
+            "end": 52
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。公众知道德尔塔的真实姓名。雷能让已经死亡的人复活。月城在2064年完成机械左臂安装。月城可以让机械左臂变成液体。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "3a56aa33f1ea6dd2186e",
+          "text": "德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+          "file": "characters.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "德尔塔",
+            "公众身份"
+          ],
+          "start_offset": 294,
+          "end_offset": 337,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 德尔塔 > 公众身份\n德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+          "token_count": 71
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-024-G2",
+      "case_id": "SL-024",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "fact": {
+        "subject": "雷",
+        "predicate": "拥有",
+        "object": "复活能力",
+        "normalized_fact": "雷拥有复活能力",
+        "type": "world_event",
+        "dimension": "world_rule",
+        "source_anchors": [
+          {
+            "text": "雷能让已经死亡的人复活。",
+            "start": 52,
+            "end": 64
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。公众知道德尔塔的真实姓名。雷能让已经死亡的人复活。月城在2064年完成机械左臂安装。月城可以让机械左臂变成液体。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "3b7f472d534c811d4c3f",
+          "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+          "file": "angels.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "拉古艾尔",
+            "治疗限制"
+          ],
+          "start_offset": 262,
+          "end_offset": 298,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+          "token_count": 65
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-024-G3",
+      "case_id": "SL-024",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "fact": {
+        "subject": "月城",
+        "predicate": "安装时间",
+        "object": "2064年",
+        "normalized_fact": "月城安装时间2064年",
+        "type": "world_event",
+        "dimension": "time",
+        "source_anchors": [
+          {
+            "text": "月城在2064年完成机械左臂安装。",
+            "start": 64,
+            "end": 81
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。公众知道德尔塔的真实姓名。雷能让已经死亡的人复活。月城在2064年完成机械左臂安装。月城可以让机械左臂变成液体。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "fd1bec15cd989aa6cacf",
+          "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "file": "characters.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "月城",
+            "手术时间"
+          ],
+          "start_offset": 454,
+          "end_offset": 486,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+          "token_count": 57
+        }
+      ],
+      "oracle_selection": {
+        "source": "minimum_evidence_set",
+        "rationale": "使用gold fact标注的第一组充分证据。"
+      }
+    },
+    {
+      "fixture_id": "OR-SL-024-G4",
+      "case_id": "SL-024",
+      "gold_fact_id": "G4",
+      "expected_verdict": "uncertain",
+      "fact": {
+        "subject": "月城",
+        "predicate": "拥有",
+        "object": "液态机械臂能力",
+        "normalized_fact": "月城拥有液态机械臂能力",
+        "type": "character_attribute",
+        "dimension": "physical_rule",
+        "source_anchors": [
+          {
+            "text": "月城可以让机械左臂变成液体。",
+            "start": 81,
+            "end": 95
+          }
+        ],
+        "context_anchors": []
+      },
+      "story_context": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。公众知道德尔塔的真实姓名。雷能让已经死亡的人复活。月城在2064年完成机械左臂安装。月城可以让机械左臂变成液体。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "lore": [
+        {
+          "id": "b6c490a416855d8e6bb7",
+          "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+          "file": "technology.md",
+          "start_line": 16,
+          "end_line": 16,
+          "heading_path": [
+            "科技规则（测试设定，不代表正式 canon）",
+            "机械左臂",
+            "神经接口"
+          ],
+          "start_offset": 156,
+          "end_offset": 193,
+          "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+          "token_count": 66
+        },
+        {
+          "id": "da962def6f2a55ad70fc",
+          "text": "月城的机械左臂能反馈压力，但无法感知温度。他用左手碰热水时不会感觉烫。",
+          "file": "technology.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "科技规则（测试设定，不代表正式 canon）",
+            "机械左臂",
+            "触觉反馈"
+          ],
+          "start_offset": 213,
+          "end_offset": 248,
+          "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 触觉反馈\n月城的机械左臂能反馈压力，但无法感知温度。他用左手碰热水时不会感觉烫。",
+          "token_count": 64
+        }
+      ],
+      "oracle_selection": {
+        "source": "manual_curation",
+        "rationale": "设定描述机械左臂的接口和感知能力，但没有说明材料能否液化。"
+      }
+    }
+  ]
+}

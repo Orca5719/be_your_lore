@@ -1,16 +1,15 @@
 # Benchmark 2.1A — Oracle Retrieval
 
-**State:** reserved; not implemented and not run.
+**State:** executed; report status is partial.
 
-## Intended question
+## Question
 
-How accurately does Judge 2.1 classify the benchmark facts when it receives the required lore evidence directly, without retrieval error?
+How accurately does Judge 2.1 classify the 72 reviewed benchmark facts when it receives the required lore evidence directly, without retrieval error?
 
-## Planned controls
+## Included evidence
 
-- Hold the Judge 2.1 prompt, model, fixture set, batch size and repeat count fixed.
-- Supply each case's annotated minimum evidence set as the retrieval context.
-- Report three-class accuracy, macro-F1, per-class metrics, parsing/retry failures and batch performance.
-- Record fixture, prompt, lore and model identifiers before comparing with 2.1B or 2.1C.
+- Reviewed Oracle fixture: 24 consistent, 30 contradiction, and 18 uncertain cases.
+- Oracle runner, worker, prompt, fixture tests, and the latest reproducible report bundle.
+- Judge comparison reported accuracy 0.6528 to 0.6944 and macro-F1 0.5223 to 0.6845 (v1 to v2.1).
 
-No code, fixture, result, or numerical claim belongs to this branch yet.
+The report remains partial: it is an Oracle Judge evaluation, not an end-to-end retrieval result.

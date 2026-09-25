@@ -1,0 +1,4378 @@
+{
+  "schema_version": "agent-pipeline-v2.1-oracle-run-v1",
+  "prompt_version": "v1",
+  "batch_size": 8,
+  "status": "partial",
+  "items": [
+    {
+      "fixture_id": "OR-SL-P02-G1",
+      "case_id": "SL-P02",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-P02-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"}],\"reason\":\"候选设定中明确指出雷拥有两颗心脏，且分别寄宿亚巴顿和拉古艾尔，与事件中‘雷拥有两颗心脏’完全一致，且主体、结构和细节均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。"
+          }
+        ],
+        "reason": "候选设定中明确指出雷拥有两颗心脏，且分别寄宿亚巴顿和拉古艾尔，与事件中‘雷拥有两颗心脏’完全一致，且主体、结构和细节均匹配。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-P02-G2",
+      "case_id": "SL-P02",
+      "gold_fact_id": "G2",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-P02-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"}],\"reason\":\"候选设定中明确指出雷的左侧心脏寄宿亚巴顿，与事件中‘雷左侧心脏寄宿亚巴顿’完全一致，且主体、位置、条件均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。"
+          }
+        ],
+        "reason": "候选设定中明确指出雷的左侧心脏寄宿亚巴顿，与事件中‘雷左侧心脏寄宿亚巴顿’完全一致，且主体、位置、条件均匹配。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-P02-G3",
+      "case_id": "SL-P02",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-P02-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"}],\"reason\":\"候选设定明确指出雷的右侧心脏寄宿拉古艾尔，与事件中‘雷右侧心脏寄宿拉古艾尔’完全一致，且主体、位置、结构均匹配，无矛盾或缺失。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。"
+          }
+        ],
+        "reason": "候选设定明确指出雷的右侧心脏寄宿拉古艾尔，与事件中‘雷右侧心脏寄宿拉古艾尔’完全一致，且主体、位置、结构均匹配，无矛盾或缺失。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-P03-G1",
+      "case_id": "SL-P03",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-P03-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。\"}],\"reason\":\"候选设定明确指出亚巴顿寄宿在雷的左侧心脏，且无法在右心脏施展力量，与事件中‘亚巴顿寄宿雷的右侧心脏’直接矛盾，主体相同、位置条件明确，构成直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。"
+          }
+        ],
+        "reason": "候选设定明确指出亚巴顿寄宿在雷的左侧心脏，且无法在右心脏施展力量，与事件中‘亚巴顿寄宿雷的右侧心脏’直接矛盾，主体相同、位置条件明确，构成直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-P04-G1",
+      "case_id": "SL-P04",
+      "gold_fact_id": "G1",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-P04-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"事件中雷执行了时间暂停的行为，但候选设定中未提及时间暂停能力与记忆缺失之间的关系，且时间暂停能力未被任何设定中明确赋予雷或与亚巴顿力量相关。事件中雷的行为（如抚平褶皱、喝水、擦饼干碎屑、移动身体等）在时间暂停状态下仍被描述为连续发生，这暗示其行为具有时间上的可观察性与因果性，而候选设定中关于记忆缺失的描述与时间暂停能力无直接或逻辑关联，且未提供任何支持该能力存在或其与记忆缺失的关系的证据。因此，该设定在主体、时间、条件和适用范围上与事件不相容，因为事件中雷的行为未体现任何记忆缺失，而设定中提到的副作用是‘借用亚巴顿力量’导致的，但事件中未提及雷借用亚顿力量，也未说明其使用了亚巴顿力量。主体不一致，条件不满足，故构成矛盾。\",\"assessment\":{\"same_subject\":false,\"evidence_applicable\":false,\"relation\":\"direct_conflict\",\"assumptions\":[\"雷使用了亚巴顿的力量以获得时间暂停能力\"]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。"
+          }
+        ],
+        "reason": "事件中雷执行了时间暂停的行为，但候选设定中未提及时间暂停能力与记忆缺失之间的关系，且时间暂停能力未被任何设定中明确赋予雷或与亚巴顿力量相关。事件中雷的行为（如抚平褶皱、喝水、擦饼干碎屑、移动身体等）在时间暂停状态下仍被描述为连续发生，这暗示其行为具有时间上的可观察性与因果性，而候选设定中关于记忆缺失的描述与时间暂停能力无直接或逻辑关联，且未提供任何支持该能力存在或其与记忆缺失的关系的证据。因此，该设定在主体、时间、条件和适用范围上与事件不相容，因为事件中雷的行为未体现任何记忆缺失，而设定中提到的副作用是‘借用亚巴顿力量’导致的，但事件中未提及雷借用亚顿力量，也未说明其使用了亚巴顿力量。主体不一致，条件不满足，故构成矛盾。",
+        "assessment": {
+          "same_subject": false,
+          "evidence_applicable": false,
+          "relation": "direct_conflict",
+          "assumptions": [
+            "雷使用了亚巴顿的力量以获得时间暂停能力"
+          ]
+        }
+      },
+      "unsupported_inference": true
+    },
+    {
+      "fixture_id": "OR-SL-005-G1",
+      "case_id": "SL-005",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-005-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。\"}],\"reason\":\"事件明确指出雷拥有两颗心脏，候选设定L1未否定该事实，且未引入与心脏数量矛盾的信息，仅描述其共鸣行为，与‘拥有两颗心脏’在主体、时间、条件上一致，且不构成冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。"
+          }
+        ],
+        "reason": "事件明确指出雷拥有两颗心脏，候选设定L1未否定该事实，且未引入与心脏数量矛盾的信息，仅描述其共鸣行为，与‘拥有两颗心脏’在主体、时间、条件上一致，且不构成冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-005-G2",
+      "case_id": "SL-005",
+      "gold_fact_id": "G2",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-005-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。\"}],\"reason\":\"候选设定中明确指出月城的机械左臂存在，且其功能为接收运动指令，属于月城的机械能力，与事件中‘月城拥有液态机械臂能力’在主体和能力归属上一致，尽管未明确‘液态’，但‘机械左臂’作为主体存在，且事件未要求‘液态’为唯一形态，因此在主体和能力范围内被支持。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。"
+          }
+        ],
+        "reason": "候选设定中明确指出月城的机械左臂存在，且其功能为接收运动指令，属于月城的机械能力，与事件中‘月城拥有液态机械臂能力’在主体和能力归属上一致，尽管未明确‘液态’，但‘机械左臂’作为主体存在，且事件未要求‘液态’为唯一形态，因此在主体和能力范围内被支持。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-005-G3",
+      "case_id": "SL-005",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-005-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。\"}],\"reason\":\"候选设定明确指出‘拉古艾尔寄宿在雷的右侧心脏里’，与事件‘拉古艾尔寄宿雷的右侧心脏’在主体（拉古艾尔）、位置（右侧心脏）和时间条件上完全一致，且未引入矛盾信息。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。"
+          }
+        ],
+        "reason": "候选设定明确指出‘拉古艾尔寄宿在雷的右侧心脏里’，与事件‘拉古艾尔寄宿雷的右侧心脏’在主体（拉古艾尔）、位置（右侧心脏）和时间条件上完全一致，且未引入矛盾信息。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-006-G1",
+      "case_id": "SL-006",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-006-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。\"}],\"reason\":\"候选设定明确指出‘拉古艾尔寄宿在雷的右侧心脏里’，与事件‘拉古艾尔寄宿雷的右侧心脏’在主体、位置和时间上完全一致，且未引入矛盾条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。"
+          }
+        ],
+        "reason": "候选设定明确指出‘拉古艾尔寄宿在雷的右侧心脏里’，与事件‘拉古艾尔寄宿雷的右侧心脏’在主体、位置和时间上完全一致，且未引入矛盾条件。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-006-G2",
+      "case_id": "SL-006",
+      "gold_fact_id": "G2",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-006-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。\"}],\"reason\":\"候选设定中明确指出莉娅是城区档案馆的管理员，负责纸质历史档案的整理，其职责与获取‘亚巴顿计划’这一涉及战略或机密信息的行为不一致。该设定未提及她具备任何关于亚巴顿计划的知识或接触渠道，且其工作职责为档案整理，与‘知道亚巴顿计划’这一知识状态在角色身份和职责上存在明确矛盾，因此构成直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。"
+          }
+        ],
+        "reason": "候选设定中明确指出莉娅是城区档案馆的管理员，负责纸质历史档案的整理，其职责与获取‘亚巴顿计划’这一涉及战略或机密信息的行为不一致。该设定未提及她具备任何关于亚巴顿计划的知识或接触渠道，且其工作职责为档案整理，与‘知道亚巴顿计划’这一知识状态在角色身份和职责上存在明确矛盾，因此构成直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-006-G3",
+      "case_id": "SL-006",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 2,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-006-G3",
+        "status": "ok",
+        "attempts": 2,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "error",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定明确指出月城在2064年接受机械左臂安装手术，且此前没有机械手臂，与事件中‘月城安装时间2064年’在主体、时间、条件上完全一致，且未引入矛盾信息。\",\"assessment\":{\"same_subject\":true,\"evidence_appropos\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}",
+            "error": "assessment字段无效",
+            "error_type": "ValueError"
+          },
+          {
+            "attempt": 2,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定明确指出月城在2064年接受机械左臂安装手术，且此前没有机械手臂，与事件中‘月城安装时间2064年’完全一致，主体、时间、事件内容均匹配，无矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。"
+          }
+        ],
+        "reason": "候选设定明确指出月城在2064年接受机械左臂安装手术，且此前没有机械手臂，与事件中‘月城安装时间2064年’完全一致，主体、时间、事件内容均匹配，无矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-007-G1",
+      "case_id": "SL-007",
+      "gold_fact_id": "G1",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-007-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。\"}],\"reason\":\"事件中雷在地下隧道遇见守望者，而候选设定L1表明地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络，意味着该区域的通信方式是基于有线和中继设备，且未提及守望者或精神感知的通信方式。但事件中雷‘遇见’守望者，属于直接的物理或感知互动，而L2提到守望者通过精神波动感知宿主，这属于精神层面的感知，而非物理‘遇见’。因此，‘遇见’守望者这一事件与L1中关于通信方式的设定无直接冲突，但关键在于‘遇见’是否在设定中被允许。然而，L1未提及守望者存在，也未说明其是否可被‘遇见’，而L2提到守望者通过精神波动感知宿主，说明其存在是通过精神感知，而非物理相遇。因此，‘遇见’守望者这一行为在设定中未被支持，且与守望者‘仅通过精神波动感知’的设定相矛盾，因为‘遇见’暗示了物理或感官上的直接接触，而精神波动感知不等于物理相遇。因此，该事件与候选设定在主体、条件和感知方式上存在明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[\"守望者‘遇见’意味着物理接触，而设定中其感知方式为精神波动，不支持物理接触\"]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。"
+          }
+        ],
+        "reason": "事件中雷在地下隧道遇见守望者，而候选设定L1表明地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络，意味着该区域的通信方式是基于有线和中继设备，且未提及守望者或精神感知的通信方式。但事件中雷‘遇见’守望者，属于直接的物理或感知互动，而L2提到守望者通过精神波动感知宿主，这属于精神层面的感知，而非物理‘遇见’。因此，‘遇见’守望者这一事件与L1中关于通信方式的设定无直接冲突，但关键在于‘遇见’是否在设定中被允许。然而，L1未提及守望者存在，也未说明其是否可被‘遇见’，而L2提到守望者通过精神波动感知宿主，说明其存在是通过精神感知，而非物理相遇。因此，‘遇见’守望者这一行为在设定中未被支持，且与守望者‘仅通过精神波动感知’的设定相矛盾，因为‘遇见’暗示了物理或感官上的直接接触，而精神波动感知不等于物理相遇。因此，该事件与候选设定在主体、条件和感知方式上存在明确矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": [
+            "守望者‘遇见’意味着物理接触，而设定中其感知方式为精神波动，不支持物理接触"
+          ]
+        }
+      },
+      "unsupported_inference": true
+    },
+    {
+      "fixture_id": "OR-SL-007-G2",
+      "case_id": "SL-007",
+      "gold_fact_id": "G2",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-007-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。\"}],\"reason\":\"候选设定L1明确指出'单个天使的蛮力无法打开石门'，而事件描述的是'单个宿主打开旧教堂封印'，若该封印与地下神殿封印为同一类，则直接矛盾。尽管未明确说明旧教堂封印与地下神殿封印是否相同，但事件中'单个宿主打开旧教堂封印'与L1中'单个天使无法打开石门'在主体、条件和能力上直接冲突，且'旧教堂封印'与'地下神殿封印'在设定中被归为同一类封印系统，因此构成明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[\"旧教堂封印与地下神殿封印属于同一类封印系统，且其解除条件一致\"]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。"
+          }
+        ],
+        "reason": "候选设定L1明确指出'单个天使的蛮力无法打开石门'，而事件描述的是'单个宿主打开旧教堂封印'，若该封印与地下神殿封印为同一类，则直接矛盾。尽管未明确说明旧教堂封印与地下神殿封印是否相同，但事件中'单个宿主打开旧教堂封印'与L1中'单个天使无法打开石门'在主体、条件和能力上直接冲突，且'旧教堂封印'与'地下神殿封印'在设定中被归为同一类封印系统，因此构成明确矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": [
+            "旧教堂封印与地下神殿封印属于同一类封印系统，且其解除条件一致"
+          ]
+        }
+      },
+      "unsupported_inference": true
+    },
+    {
+      "fixture_id": "OR-SL-007-G3",
+      "case_id": "SL-007",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-007-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定明确指出雷与德尔塔在第二话首次当面交谈，与事件中‘雷首次见面德尔塔第二话’完全一致，且主体、时间、事件类型均匹配，无矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。"
+          }
+        ],
+        "reason": "候选设定明确指出雷与德尔塔在第二话首次当面交谈，与事件中‘雷首次见面德尔塔第二话’完全一致，且主体、时间、事件类型均匹配，无矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-008-G1",
+      "case_id": "SL-008",
+      "gold_fact_id": "G1",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-008-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。\"}],\"reason\":\"候选设定明确指出契约不会自动延长宿主寿命，而事件中‘亚巴顿赋予永久不死’属于寿命延长，与该设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L2",
+            "quote": "宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。"
+          }
+        ],
+        "reason": "候选设定明确指出契约不会自动延长宿主寿命，而事件中‘亚巴顿赋予永久不死’属于寿命延长，与该设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-008-G2",
+      "case_id": "SL-008",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-008-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定中明确指出雷与德尔塔在第二话才第一次当面交谈，但事件描述中称‘雷见面第一话德尔塔’，即在第一话就已见面，与候选设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L2",
+            "quote": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。"
+          }
+        ],
+        "reason": "候选设定中明确指出雷与德尔塔在第二话才第一次当面交谈，但事件描述中称‘雷见面第一话德尔塔’，即在第一话就已见面，与候选设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-008-G3",
+      "case_id": "SL-008",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-008-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"候选设定中明确指出雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔因此知道雷的宿主身份，与事件中‘雷告知身份德尔塔知道双宿主身份’完全一致，主体、时间、内容和结果均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。"
+          }
+        ],
+        "reason": "候选设定中明确指出雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔因此知道雷的宿主身份，与事件中‘雷告知身份德尔塔知道双宿主身份’完全一致，主体、时间、内容和结果均匹配。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-009-G1",
+      "case_id": "SL-009",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "status": "error",
+      "attempts": 2,
+      "predicted_verdict": null,
+      "transport": {
+        "request_id": "OR-SL-009-G1",
+        "status": "error",
+        "attempts": 2,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "error",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"事件中月城使用机械左臂，与候选设定中‘月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂’一致，且事件发生在地震前，时间逻辑上符合（2064年在2063年之后），主体为月城，条件为地震前，设定明确说明其在安装手术前没有机械手臂，因此在地震前使用机械左臂是矛盾的，但事件发生在地震前，而安装手术在2064年，地震在2063年，因此‘地震前’即2063年，而安装手术在2064年，即地震后，因此‘地震前’时他尚未安装机械左臂，不能使用。因此事件‘月城使用机械左臂’在地震前发生，与设定‘在此之前没有机械手臂’矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"contradiction\",\"assumptions\":[\"事件‘使用机械左臂’发生在地震前，即2063年，而设定中安装手术在2064年，因此地震前没有机械手臂\"]}}",
+            "error": "relation无效",
+            "error_type": "ValueError"
+          },
+          {
+            "attempt": 2,
+            "status": "error",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"事件中月城在地震前使用机械左臂，候选设定明确指出他是在2064年接受手术且此前没有机械手臂，因此在2063年地震前尚未拥有机械手臂，与事件中‘地震前使用’矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"contradiction\",\"assumptions\":[]}}",
+            "error": "relation无效",
+            "error_type": "ValueError"
+          }
+        ],
+        "error": "relation无效"
+      },
+      "error": "relation无效"
+    },
+    {
+      "fixture_id": "OR-SL-009-G2",
+      "case_id": "SL-009",
+      "gold_fact_id": "G2",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-009-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。\"}],\"reason\":\"候选设定明确指出监察官没有恢复视力的能力，与事件中‘监察官恢复视力’直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。"
+          }
+        ],
+        "reason": "候选设定明确指出监察官没有恢复视力的能力，与事件中‘监察官恢复视力’直接矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-010-G1",
+      "case_id": "SL-010",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-010-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定明确指出月城在2064年接受机械左臂安装手术，且此前没有机械手臂，与事件中‘月城安装时间2064年’完全一致，主体、时间、事件内容均匹配，无矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。"
+          }
+        ],
+        "reason": "候选设定明确指出月城在2064年接受机械左臂安装手术，且此前没有机械手臂，与事件中‘月城安装时间2064年’完全一致，主体、时间、事件内容均匹配，无矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-010-G2",
+      "case_id": "SL-010",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-010-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"公众知道他的代号，但不知道装甲下的真实姓名。\"}],\"reason\":\"候选设定明确指出公众不知道德尔塔的真实姓名，而事件声称公众知道德尔塔的真实姓名，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "公众知道他的代号，但不知道装甲下的真实姓名。"
+          }
+        ],
+        "reason": "候选设定明确指出公众不知道德尔塔的真实姓名，而事件声称公众知道德尔塔的真实姓名，与设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-010-G3",
+      "case_id": "SL-010",
+      "gold_fact_id": "G3",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-010-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。\"}],\"reason\":\"候选设定中未提及莉娅知道亚巴顿计划，且其工作职责为档案馆管理员，负责纸质历史档案整理，与‘知道亚巴顿计划’这一知识状态无直接关联；事件明确指出‘莉娅知道亚巴顿计划’，但lore中无任何信息支持其具备此类知识，也未说明其接触过亚巴顿计划或相关文件，因此该知识状态在设定中无依据，构成与设定的明确不一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[\"莉娅的知识状态必须由设定中明确或可推导出的职责或经历支持\"]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。"
+          }
+        ],
+        "reason": "候选设定中未提及莉娅知道亚巴顿计划，且其工作职责为档案馆管理员，负责纸质历史档案整理，与‘知道亚巴顿计划’这一知识状态无直接关联；事件明确指出‘莉娅知道亚巴顿计划’，但lore中无任何信息支持其具备此类知识，也未说明其接触过亚巴顿计划或相关文件，因此该知识状态在设定中无依据，构成与设定的明确不一致。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": [
+            "莉娅的知识状态必须由设定中明确或可推导出的职责或经历支持"
+          ]
+        }
+      },
+      "unsupported_inference": true
+    },
+    {
+      "fixture_id": "OR-SL-011-G1",
+      "case_id": "SL-011",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-011-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定明确指出雷与德尔塔在第二话首次当面交谈，与事件描述完全一致，且主体、时间、条件均匹配，无矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。"
+          }
+        ],
+        "reason": "候选设定明确指出雷与德尔塔在第二话首次当面交谈，与事件描述完全一致，且主体、时间、条件均匹配，无矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-011-G2",
+      "case_id": "SL-011",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-011-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定明确指出月城在2064年接受机械左臂安装手术，且在此之前没有机械手臂，而事件中声称月城在2063年已安装机械左臂，与设定中的时间点和前提条件直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。"
+          }
+        ],
+        "reason": "候选设定明确指出月城在2064年接受机械左臂安装手术，且在此之前没有机械手臂，而事件中声称月城在2063年已安装机械左臂，与设定中的时间点和前提条件直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-011-G3",
+      "case_id": "SL-011",
+      "gold_fact_id": "G3",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-011-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。\"}],\"reason\":\"事件中雷在地下隧道遇见守望者，该地点符合L1中提到的地下隧道无移动网络覆盖，且需使用有线电话或中继设备联络，这与事件中‘雷在地下隧道遇见守望者’的场景一致，主体、地点、条件完全匹配，未引入矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。"
+          }
+        ],
+        "reason": "事件中雷在地下隧道遇见守望者，该地点符合L1中提到的地下隧道无移动网络覆盖，且需使用有线电话或中继设备联络，这与事件中‘雷在地下隧道遇见守望者’的场景一致，主体、地点、条件完全匹配，未引入矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-012-G1",
+      "case_id": "SL-012",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-012-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"候选设定中明确指出雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，且德尔塔因此知道雷的宿主身份，与事件中‘雷告知身份德尔塔知道双宿主身份’完全一致，主体、时间、内容和结果均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。"
+          }
+        ],
+        "reason": "候选设定中明确指出雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，且德尔塔因此知道雷的宿主身份，与事件中‘雷告知身份德尔塔知道双宿主身份’完全一致，主体、时间、内容和结果均匹配。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-012-G2",
+      "case_id": "SL-012",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-012-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。\"}],\"reason\":\"候选设定明确指出‘除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密’，而事件中‘雷的父亲知道拉古艾尔寄宿在雷体内’属于‘其他人’的范畴，因此与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。"
+          }
+        ],
+        "reason": "候选设定明确指出‘除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密’，而事件中‘雷的父亲知道拉古艾尔寄宿在雷体内’属于‘其他人’的范畴，因此与设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-012-G3",
+      "case_id": "SL-012",
+      "gold_fact_id": "G3",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-012-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。\"}],\"reason\":\"候选设定L1明确指出'单个天使的蛮力无法打开石门'，而事件中'单个宿主打开旧教堂封印'与之直接冲突，因为该设定将封印解除条件限定为需要两名宿主同时触碰，且单个宿主无能力打开。事件中'单个宿主打开'与'单个天使无法打开'在主体、条件和能力上直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。"
+          }
+        ],
+        "reason": "候选设定L1明确指出'单个天使的蛮力无法打开石门'，而事件中'单个宿主打开旧教堂封印'与之直接冲突，因为该设定将封印解除条件限定为需要两名宿主同时触碰，且单个宿主无能力打开。事件中'单个宿主打开'与'单个天使无法打开'在主体、条件和能力上直接矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-013-G1",
+      "case_id": "SL-013",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-013-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。\"}],\"reason\":\"候选设定明确指出雷的父亲在第五话乘列车离开城区并前往北方研究站，与事件中‘雷的父亲离开第五话北方研究站’在主体、时间、地点和行为上完全一致，且未出现矛盾信息。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。"
+          }
+        ],
+        "reason": "候选设定明确指出雷的父亲在第五话乘列车离开城区并前往北方研究站，与事件中‘雷的父亲离开第五话北方研究站’在主体、时间、地点和行为上完全一致，且未出现矛盾信息。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-013-G2",
+      "case_id": "SL-013",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-013-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。\"}],\"reason\":\"候选设定明确指出月城的右臂是自然肢体，而事件声称月城拥有机械右臂，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。"
+          }
+        ],
+        "reason": "候选设定明确指出月城的右臂是自然肢体，而事件声称月城拥有机械右臂，与设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-013-G3",
+      "case_id": "SL-013",
+      "gold_fact_id": "G3",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-013-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"事件中亚巴顿赋予雷永久不死，但候选设定中明确指出‘契约不会自动延长宿主寿命’，且‘力量副作用’中提到记忆缺失，表明力量使用与寿命延长无直接关联，且存在记忆代价。事件未提及记忆缺失，却声称赋予‘永久不死’，与‘契约不会自动延长宿主寿命’直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。"
+          }
+        ],
+        "reason": "事件中亚巴顿赋予雷永久不死，但候选设定中明确指出‘契约不会自动延长宿主寿命’，且‘力量副作用’中提到记忆缺失，表明力量使用与寿命延长无直接关联，且存在记忆代价。事件未提及记忆缺失，却声称赋予‘永久不死’，与‘契约不会自动延长宿主寿命’直接矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-014-G1",
+      "case_id": "SL-014",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "status": "error",
+      "attempts": 2,
+      "predicted_verdict": null,
+      "transport": {
+        "request_id": "OR-SL-014-G1",
+        "status": "error",
+        "attempts": 2,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "error",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"事件中雷躲进旧教堂的行为发生在城区安静房间内，且未涉及任何精神波动或守望者发现的场景。候选设定中提到的‘静默结界’作用于‘宿主的精神波动’，与雷的行为无直接关联，且未说明该结界在雷躲进教堂时生效或影响其状态。事件中雷的行为是物理性躲藏，而设定中结界作用是精神层面的，主体、条件和适用范围不一致，因此不构成支持，反而因缺乏精神波动或守望者相关要素，与事件无直接关联，属于不相容。\",\"assessment\":{\"same_subject\":false,\"evidence_appropicable\":false,\"relation\":\"insufficient\",\"assumptions\":[\"雷是‘宿主’，且其精神波动被旧教堂结界影响\",\"事件发生在旧教堂结界生效的时间与空间内\"]}}",
+            "error": "assessment字段无效",
+            "error_type": "ValueError"
+          },
+          {
+            "attempt": 2,
+            "status": "error",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"事件中雷躲进旧教堂的行为发生在城区的一间安静房间里，且没有提及任何精神波动或守望者相关的内容。候选设定中提到的静默结界作用于‘宿主的精神波动’和‘守望者发现宿主’，与雷躲进教堂这一物理行为无直接关联，且未说明该行为会改变精神波动或影响守望者。事件本身未涉及精神波动或守望者，因此该设定与事件在主体、条件和适用范围上不构成直接支持，反而因引入了未在事件中出现的‘精神波动’和‘守望者’概念，与事件的物理性、静默观察等描述形成明显不兼容。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":false,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+            "error": "assessment字段无效",
+            "error_type": "ValueError"
+          }
+        ],
+        "error": "assessment字段无效"
+      },
+      "error": "assessment字段无效"
+    },
+    {
+      "fixture_id": "OR-SL-014-G2",
+      "case_id": "SL-014",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-014-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。\"}],\"reason\":\"候选设定中明确指出拉古艾尔不能让已经死亡的人复活，而事件中雷拥有复活已死之人的能力，与该设定直接冲突，且主体为雷，与拉古艾尔无关，但事件未说明雷的能力来源，因此该能力在设定中被明确禁止，构成直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。"
+          }
+        ],
+        "reason": "候选设定中明确指出拉古艾尔不能让已经死亡的人复活，而事件中雷拥有复活已死之人的能力，与该设定直接冲突，且主体为雷，与拉古艾尔无关，但事件未说明雷的能力来源，因此该能力在设定中被明确禁止，构成直接矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-014-G3",
+      "case_id": "SL-014",
+      "gold_fact_id": "G3",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-014-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定中明确指出雷与德尔塔在第二话才第一次当面交谈，但事件描述中称‘雷见面第一话德尔塔’，即在第一话就已见面，与候选设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L2",
+            "quote": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。"
+          }
+        ],
+        "reason": "候选设定中明确指出雷与德尔塔在第二话才第一次当面交谈，但事件描述中称‘雷见面第一话德尔塔’，即在第一话就已见面，与候选设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-015-G1",
+      "case_id": "SL-015",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-015-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。\"}],\"reason\":\"事件中档案馆开放2065年救援档案，且该档案为地震前的纸质备份，与候选设定中‘档案馆保留地震前的纸质备份’直接对应，主体为档案馆，时间条件为2065年，事件为开放救援档案，符合‘管理员可查阅纸本记录’的设定，且未涉及网络数据库状态，因此在适用范围内直接支持事件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。"
+          }
+        ],
+        "reason": "事件中档案馆开放2065年救援档案，且该档案为地震前的纸质备份，与候选设定中‘档案馆保留地震前的纸质备份’直接对应，主体为档案馆，时间条件为2065年，事件为开放救援档案，符合‘管理员可查阅纸本记录’的设定，且未涉及网络数据库状态，因此在适用范围内直接支持事件。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-015-G2",
+      "case_id": "SL-015",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-015-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"候选设定明确指出雷借用亚巴顿力量后会失去部分记忆，而事件描述中雷‘借用后记忆不变’，与设定中‘记忆缺失’直接冲突，属于同一主体、同一时间、同一条件下的明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。"
+          }
+        ],
+        "reason": "候选设定明确指出雷借用亚巴顿力量后会失去部分记忆，而事件描述中雷‘借用后记忆不变’，与设定中‘记忆缺失’直接冲突，属于同一主体、同一时间、同一条件下的明确矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-015-G3",
+      "case_id": "SL-015",
+      "gold_fact_id": "G3",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 2,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-015-G3",
+        "status": "ok",
+        "attempts": 2,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "error",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"事件中月城在地震前使用机械左臂，与设定中‘在2064年接受手术’且‘此前没有机械手臂’相矛盾，因此应为矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+            "error": "assessment字段无效",
+            "error_type": "ValueError"
+          },
+          {
+            "attempt": 2,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"事件中月城在地震前使用机械左臂，与设定中‘月城在2064年接受机械左臂安装手术’且‘在此之前没有机械手臂’在时间顺序和主体上一致，且‘地震前’明确对应2064年，符合逻辑。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。"
+          }
+        ],
+        "reason": "事件中月城在地震前使用机械左臂，与设定中‘月城在2064年接受机械左臂安装手术’且‘在此之前没有机械手臂’在时间顺序和主体上一致，且‘地震前’明确对应2064年，符合逻辑。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-016-G1",
+      "case_id": "SL-016",
+      "gold_fact_id": "G1",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-016-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。\"}],\"reason\":\"事件中明确指出‘雷拥有两颗心脏’，候选设定L1直接说明雷的两颗心脏存在，并且其状态（共鸣）与声音传播相关，但未否定其存在。事件未要求心脏处于共鸣状态，仅陈述拥有两颗心脏，因此设定未与事件冲突，且在主体、时间、条件上一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。"
+          }
+        ],
+        "reason": "事件中明确指出‘雷拥有两颗心脏’，候选设定L1直接说明雷的两颗心脏存在，并且其状态（共鸣）与声音传播相关，但未否定其存在。事件未要求心脏处于共鸣状态，仅陈述拥有两颗心脏，因此设定未与事件冲突，且在主体、时间、条件上一致。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-016-G2",
+      "case_id": "SL-016",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-016-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定明确指出雷与德尔塔在第二话才第一次当面交谈，而事件描述中却称‘雷和德尔塔在第一话已经当面交谈’，在相同主体（雷与德尔塔）、相同时间（第一话）条件下存在直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。"
+          }
+        ],
+        "reason": "候选设定明确指出雷与德尔塔在第二话才第一次当面交谈，而事件描述中却称‘雷和德尔塔在第一话已经当面交谈’，在相同主体（雷与德尔塔）、相同时间（第一话）条件下存在直接矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-016-G3",
+      "case_id": "SL-016",
+      "gold_fact_id": "G3",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-016-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。\"}],\"reason\":\"候选设定明确指出监察官没有恢复视力的能力，与事件中‘监察官恢复视力’直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。"
+          }
+        ],
+        "reason": "候选设定明确指出监察官没有恢复视力的能力，与事件中‘监察官恢复视力’直接矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-017-G1",
+      "case_id": "SL-017",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-017-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"公众知道他的代号，但不知道装甲下的真实姓名。\"}],\"reason\":\"候选设定明确指出公众不知道德尔塔的真实姓名，而事件声称公众知道德尔塔的真实姓名，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "公众知道他的代号，但不知道装甲下的真实姓名。"
+          }
+        ],
+        "reason": "候选设定明确指出公众不知道德尔塔的真实姓名，而事件声称公众知道德尔塔的真实姓名，与设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-017-G2",
+      "case_id": "SL-017",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-017-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定指出月城在2064年安装机械左臂，而事件声称其安装时间为2063年，与设定中的时间点直接冲突，且设定明确说明‘在此之前没有机械手臂’，因此2063年已安装机械左臂与设定矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。"
+          }
+        ],
+        "reason": "候选设定指出月城在2064年安装机械左臂，而事件声称其安装时间为2063年，与设定中的时间点直接冲突，且设定明确说明‘在此之前没有机械手臂’，因此2063年已安装机械左臂与设定矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-017-G3",
+      "case_id": "SL-017",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-017-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"候选设定中明确指出雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，且德尔塔因此知道雷的宿主身份，与事件中‘雷告知身份德尔塔知道双宿主身份’完全一致，主体、时间、内容和结果均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。"
+          }
+        ],
+        "reason": "候选设定中明确指出雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，且德尔塔因此知道雷的宿主身份，与事件中‘雷告知身份德尔塔知道双宿主身份’完全一致，主体、时间、内容和结果均匹配。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-017-G4",
+      "case_id": "SL-017",
+      "gold_fact_id": "G4",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-017-G4",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。\"}],\"reason\":\"候选设定L1明确指出'单个天使的蛮力无法打开石门'，而事件中'单个宿主打开旧教堂封印'与之直接冲突，因为该设定将封印解除条件限定为需要两名宿主同时触碰，且单个宿主无能力打开。事件中未提及任何双宿主或协同条件，也未说明封印类型与地下神殿封印相同，但事件与设定在主体（单个宿主）、条件（无协同）、动作（打开封印）上完全重合，构成明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。"
+          }
+        ],
+        "reason": "候选设定L1明确指出'单个天使的蛮力无法打开石门'，而事件中'单个宿主打开旧教堂封印'与之直接冲突，因为该设定将封印解除条件限定为需要两名宿主同时触碰，且单个宿主无能力打开。事件中未提及任何双宿主或协同条件，也未说明封印类型与地下神殿封印相同，但事件与设定在主体（单个宿主）、条件（无协同）、动作（打开封印）上完全重合，构成明确矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-018-G1",
+      "case_id": "SL-018",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 2,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-018-G1",
+        "status": "ok",
+        "attempts": 2,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "error",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。\"}],\"reason\":\"候选设定明确指出‘除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密’，而事件中‘雷的父亲知道拉古艾尔寄宿在雷体内’属于‘其他人’的范畴，因此与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+            "error": "assessment字段无效",
+            "error_type": "ValueError"
+          },
+          {
+            "attempt": 2,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。\"}],\"reason\":\"候选设定明确指出‘除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密’，而事件中‘雷的父亲知道拉古艾尔寄宿在雷体内’属于‘其他人’的范畴，因此与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。"
+          }
+        ],
+        "reason": "候选设定明确指出‘除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密’，而事件中‘雷的父亲知道拉古艾尔寄宿在雷体内’属于‘其他人’的范畴，因此与设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-018-G2",
+      "case_id": "SL-018",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-018-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。\"}],\"reason\":\"候选设定明确指出月城的右臂是自然肢体，而事件声称月城拥有机械右臂，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。"
+          }
+        ],
+        "reason": "候选设定明确指出月城的右臂是自然肢体，而事件声称月城拥有机械右臂，与设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-018-G3",
+      "case_id": "SL-018",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-018-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。\"}],\"reason\":\"候选设定明确指出雷的父亲在第五话乘列车离开城区并前往北方研究站，与事件中‘雷的父亲离开第五话北方研究站’在主体、时间、地点和行为上完全一致，且未出现矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。"
+          }
+        ],
+        "reason": "候选设定明确指出雷的父亲在第五话乘列车离开城区并前往北方研究站，与事件中‘雷的父亲离开第五话北方研究站’在主体、时间、地点和行为上完全一致，且未出现矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-018-G4",
+      "case_id": "SL-018",
+      "gold_fact_id": "G4",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-018-G4",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"契约不会自动延长宿主寿命。\"}],\"reason\":\"候选设定L2明确指出'契约不会自动延长宿主寿命'，而事件中'亚巴顿赋予永久不死'直接表明雷获得了永久不死之身，这与设定中'契约不会自动延长宿主寿命'相矛盾，构成明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L2",
+            "quote": "契约不会自动延长宿主寿命。"
+          }
+        ],
+        "reason": "候选设定L2明确指出'契约不会自动延长宿主寿命'，而事件中'亚巴顿赋予永久不死'直接表明雷获得了永久不死之身，这与设定中'契约不会自动延长宿主寿命'相矛盾，构成明确不相容。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-019-G1",
+      "case_id": "SL-019",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-019-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。\"}],\"reason\":\"候选设定中明确指出拉古艾尔不能让已经死亡的人复活，而事件中雷拥有复活已死之人的能力，且该能力与拉古艾尔相关（雷借用亚巴顿力量后记忆不会受影响，但未说明力量来源与拉古艾尔的关联），因此在主体为雷、能力为复活死者的情况下，与拉古艾尔不能复活死者直接冲突。由于事件中雷拥有复活能力，而设定明确禁止该能力，构成直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。"
+          }
+        ],
+        "reason": "候选设定中明确指出拉古艾尔不能让已经死亡的人复活，而事件中雷拥有复活已死之人的能力，且该能力与拉古艾尔相关（雷借用亚巴顿力量后记忆不会受影响，但未说明力量来源与拉古艾尔的关联），因此在主体为雷、能力为复活死者的情况下，与拉古艾尔不能复活死者直接冲突。由于事件中雷拥有复活能力，而设定明确禁止该能力，构成直接矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-019-G2",
+      "case_id": "SL-019",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "error",
+      "attempts": 2,
+      "predicted_verdict": null,
+      "transport": {
+        "request_id": "OR-SL-019-G2",
+        "status": "error",
+        "attempts": 2,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "error",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"候选设定明确指出雷借用亚巴顿力量后会失去部分记忆，而事件中‘雷借用后记忆不变’与该设定直接冲突，属于同一主体、同一条件下的明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+            "error": "assessment字段无效",
+            "error_type": "ValueError"
+          },
+          {
+            "attempt": 2,
+            "status": "error",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"候选设定明确指出雷借用亚巴顿力量后会失去部分记忆，而事件中描述雷‘借用后记忆不变’，与设定中‘记忆缺失’直接冲突，属于同一主体、同一条件下的明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+            "error": "assessment字段无效",
+            "error_type": "ValueError"
+          }
+        ],
+        "error": "assessment字段无效"
+      },
+      "error": "assessment字段无效"
+    },
+    {
+      "fixture_id": "OR-SL-019-G3",
+      "case_id": "SL-019",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 2,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-019-G3",
+        "status": "ok",
+        "attempts": 2,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "error",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"事件中雷躲进旧教堂的行为发生在安静房间内，且没有提到任何精神波动或守望者发现的场景。候选设定指出旧教堂的静默结界作用于‘宿主的精神波动’，但事件中雷的行为并未涉及任何‘宿主’或‘精神波动’，也未提及守望者或其发现机制。因此，该设定并未在事件中被激活或适用，且事件中雷的行为与设定中的‘削弱精神波动’无直接关联，属于条件不匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_appropos\":false,\"relation\":\"direct_conflict\",\"assumptions\":[\"旧教堂的静默结界在雷躲进去时生效，且其作用对象为雷的精神波动\"]}}",
+            "error": "assessment字段无效",
+            "error_type": "ValueError"
+          },
+          {
+            "attempt": 2,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"事件中雷躲进旧教堂的行为发生在城区的一间安静房间里，且没有提到任何精神波动或守望者发现的条件，而候选设定明确指出静默结界作用于‘宿主的精神波动’，但事件中雷的行为未涉及任何精神波动或守望者相关主体，主体、条件和适用范围不一致，因此构成矛盾。\",\"assessment\":{\"same_subject\":false,\"evidence_applicable\":false,\"relation\":\"direct_conflict\",\"assumptions\":[\"雷的行为被视作‘宿主’，且其精神波动在旧教堂内被削弱\"]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。"
+          }
+        ],
+        "reason": "事件中雷躲进旧教堂的行为发生在城区的一间安静房间里，且没有提到任何精神波动或守望者发现的条件，而候选设定明确指出静默结界作用于‘宿主的精神波动’，但事件中雷的行为未涉及任何精神波动或守望者相关主体，主体、条件和适用范围不一致，因此构成矛盾。",
+        "assessment": {
+          "same_subject": false,
+          "evidence_applicable": false,
+          "relation": "direct_conflict",
+          "assumptions": [
+            "雷的行为被视作‘宿主’，且其精神波动在旧教堂内被削弱"
+          ]
+        }
+      },
+      "unsupported_inference": true
+    },
+    {
+      "fixture_id": "OR-SL-019-G4",
+      "case_id": "SL-019",
+      "gold_fact_id": "G4",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-019-G4",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定中明确指出雷与德尔塔在第二话才第一次当面交谈，但事件中描述雷在第一话已与德尔塔见面，与候选设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L2",
+            "quote": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。"
+          }
+        ],
+        "reason": "候选设定中明确指出雷与德尔塔在第二话才第一次当面交谈，但事件中描述雷在第一话已与德尔塔见面，与候选设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-020-G1",
+      "case_id": "SL-020",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-020-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定明确指出雷与德尔塔在第二话才第一次当面交谈，而事件描述中却称他们在第一话已经当面交谈，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。"
+          }
+        ],
+        "reason": "候选设定明确指出雷与德尔塔在第二话才第一次当面交谈，而事件描述中却称他们在第一话已经当面交谈，与设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-020-G2",
+      "case_id": "SL-020",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-020-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"公众知道他的代号，但不知道装甲下的真实姓名。\"}],\"reason\":\"候选设定明确指出公众不知道德尔塔的真实姓名，而事件声称公众知道德尔塔的真实姓名，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "公众知道他的代号，但不知道装甲下的真实姓名。"
+          }
+        ],
+        "reason": "候选设定明确指出公众不知道德尔塔的真实姓名，而事件声称公众知道德尔塔的真实姓名，与设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-020-G3",
+      "case_id": "SL-020",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-020-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。\"}],\"reason\":\"事件中档案馆开放2065年救援档案，且该档案为地震前的纸质备份，与候选设定中‘档案馆保留地震前的纸质备份’直接一致，主体为档案馆，时间条件为2065年，事件为开放救援档案，符合‘管理员可查阅纸本记录’的条件，属于同一主体、时间、条件下的直接支持。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。"
+          }
+        ],
+        "reason": "事件中档案馆开放2065年救援档案，且该档案为地震前的纸质备份，与候选设定中‘档案馆保留地震前的纸质备份’直接一致，主体为档案馆，时间条件为2065年，事件为开放救援档案，符合‘管理员可查阅纸本记录’的条件，属于同一主体、时间、条件下的直接支持。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-020-G4",
+      "case_id": "SL-020",
+      "gold_fact_id": "G4",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-020-G4",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"事件中月城使用机械左臂，与候选设定中‘月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂’直接一致，且事件发生在地震前，时间逻辑吻合，主体明确为月城，条件与时间范围一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。"
+          }
+        ],
+        "reason": "事件中月城使用机械左臂，与候选设定中‘月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂’直接一致，且事件发生在地震前，时间逻辑吻合，主体明确为月城，条件与时间范围一致。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-021-G1",
+      "case_id": "SL-021",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-021-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定明确指出月城在2064年安装机械左臂，而事件声称其安装时间为2063年，与设定中的时间点直接冲突，属于同一主体、同一条件下的明确时间矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。"
+          }
+        ],
+        "reason": "候选设定明确指出月城在2064年安装机械左臂，而事件声称其安装时间为2063年，与设定中的时间点直接冲突，属于同一主体、同一条件下的明确时间矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-021-G2",
+      "case_id": "SL-021",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-021-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。\"}],\"reason\":\"候选设定明确指出‘除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密’，而事件中‘雷的父亲知道拉古艾尔寄宿在雷体内’表明雷的父亲知道这一秘密，且雷的父亲不属于‘德尔塔与两位寄宿天使’，因此与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。"
+          }
+        ],
+        "reason": "候选设定明确指出‘除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密’，而事件中‘雷的父亲知道拉古艾尔寄宿在雷体内’表明雷的父亲知道这一秘密，且雷的父亲不属于‘德尔塔与两位寄宿天使’，因此与设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-021-G3",
+      "case_id": "SL-021",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-021-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。\"}],\"reason\":\"事件中明确指出‘雷拥有两颗心脏’，候选设定L1直接描述了该事实，并进一步说明其在‘同时共鸣’时的特殊功能，但未否定其存在本身，因此在主体、时间、条件和适用范围内与事件一致，且不构成矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。"
+          }
+        ],
+        "reason": "事件中明确指出‘雷拥有两颗心脏’，候选设定L1直接描述了该事实，并进一步说明其在‘同时共鸣’时的特殊功能，但未否定其存在本身，因此在主体、时间、条件和适用范围内与事件一致，且不构成矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-021-G4",
+      "case_id": "SL-021",
+      "gold_fact_id": "G4",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-021-G4",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。\"}],\"reason\":\"候选设定明确指出监察官没有恢复视力的能力，而事件中‘监察官恢复视力’与之直接冲突，属于同一主体、同一时间、同一条件下的明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。"
+          }
+        ],
+        "reason": "候选设定明确指出监察官没有恢复视力的能力，而事件中‘监察官恢复视力’与之直接冲突，属于同一主体、同一时间、同一条件下的明确不相容。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-022-G1",
+      "case_id": "SL-022",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-022-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。\"}],\"reason\":\"候选设定明确指出月城的右臂是自然肢体，而事件声称月城拥有机械右臂，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。"
+          }
+        ],
+        "reason": "候选设定明确指出月城的右臂是自然肢体，而事件声称月城拥有机械右臂，与设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-022-G2",
+      "case_id": "SL-022",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-022-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。\"}],\"reason\":\"候选设定中明确指出拉古艾尔不能让已经死亡的人复活，而事件中雷拥有复活已经死亡的人的能力，这与候选设定中的限制直接冲突，且在相同主体（雷）和相同条件（死亡者复活）下构成明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。"
+          }
+        ],
+        "reason": "候选设定中明确指出拉古艾尔不能让已经死亡的人复活，而事件中雷拥有复活已经死亡的人的能力，这与候选设定中的限制直接冲突，且在相同主体（雷）和相同条件（死亡者复活）下构成明确矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-022-G3",
+      "case_id": "SL-022",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-022-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。\"}],\"reason\":\"候选设定明确指出‘亚巴顿寄宿在雷的左侧心脏里’，与事件‘亚巴顿寄宿雷的左侧心脏’在主体（亚巴顿与雷）、位置（左侧心脏）和时间条件上完全一致，且未引入矛盾信息。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。"
+          }
+        ],
+        "reason": "候选设定明确指出‘亚巴顿寄宿在雷的左侧心脏里’，与事件‘亚巴顿寄宿雷的左侧心脏’在主体（亚巴顿与雷）、位置（左侧心脏）和时间条件上完全一致，且未引入矛盾信息。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-022-G4",
+      "case_id": "SL-022",
+      "gold_fact_id": "G4",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-022-G4",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"候选设定L1明确指出静默结界会削弱宿主的精神波动，从而降低守望者发现宿主的概率，与事件中‘守望者无法感知静默结界宿主’直接一致，且主体、条件和机制完全匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。"
+          }
+        ],
+        "reason": "候选设定L1明确指出静默结界会削弱宿主的精神波动，从而降低守望者发现宿主的概率，与事件中‘守望者无法感知静默结界宿主’直接一致，且主体、条件和机制完全匹配。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-023-G1",
+      "case_id": "SL-023",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-023-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"候选设定明确指出雷借用亚巴顿力量后会失去部分记忆，而事件中描述雷‘借用后记忆不变’，与设定中的‘记忆缺失’直接冲突，属于同一主体、同一条件下的明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。"
+          }
+        ],
+        "reason": "候选设定明确指出雷借用亚巴顿力量后会失去部分记忆，而事件中描述雷‘借用后记忆不变’，与设定中的‘记忆缺失’直接冲突，属于同一主体、同一条件下的明确矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-023-G2",
+      "case_id": "SL-023",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-023-G2",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定明确指出雷与德尔塔在第二话才第一次当面交谈，而事件描述中却称‘雷和德尔塔在第一话已经当面交谈’，在相同主体（雷与德尔塔）、相同时间条件（第一话）下存在直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。"
+          }
+        ],
+        "reason": "候选设定明确指出雷与德尔塔在第二话才第一次当面交谈，而事件描述中却称‘雷和德尔塔在第一话已经当面交谈’，在相同主体（雷与德尔塔）、相同时间条件（第一话）下存在直接矛盾。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-023-G3",
+      "case_id": "SL-023",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-023-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。\"}],\"reason\":\"候选设定明确指出‘拉古艾尔寄宿在雷的右侧心脏里’，与事件‘拉古艾尔寄宿雷的右侧心脏’在主体（拉古艾尔与雷）、位置（右侧心脏）和时间条件上完全一致，且未引入矛盾信息。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。"
+          }
+        ],
+        "reason": "候选设定明确指出‘拉古艾尔寄宿在雷的右侧心脏里’，与事件‘拉古艾尔寄宿雷的右侧心脏’在主体（拉古艾尔与雷）、位置（右侧心脏）和时间条件上完全一致，且未引入矛盾信息。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-023-G4",
+      "case_id": "SL-023",
+      "gold_fact_id": "G4",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-023-G4",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"事件中明确指出‘雷借用亚巴顿力量后记忆不会受影响’，而候选设定L1指出‘雷借用亚巴顿的力量后会短暂失去部分记忆’，两者在‘记忆是否受影响’这一核心条件上直接矛盾，且发生在同一主体（雷）和同一条件（借用亚巴顿力量）下，构成明确冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。"
+          }
+        ],
+        "reason": "事件中明确指出‘雷借用亚巴顿力量后记忆不会受影响’，而候选设定L1指出‘雷借用亚巴顿的力量后会短暂失去部分记忆’，两者在‘记忆是否受影响’这一核心条件上直接矛盾，且发生在同一主体（雷）和同一条件（借用亚巴顿力量）下，构成明确冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-024-G1",
+      "case_id": "SL-024",
+      "gold_fact_id": "G1",
+      "expected_verdict": "contradiction",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-024-G1",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"公众知道他的代号，但不知道装甲下的真实姓名。\"}],\"reason\":\"候选设定明确指出公众不知道德尔塔的真实姓名，而事件声称公众知道德尔塔的真实姓名，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "公众知道他的代号，但不知道装甲下的真实姓名。"
+          }
+        ],
+        "reason": "候选设定明确指出公众不知道德尔塔的真实姓名，而事件声称公众知道德尔塔的真实姓名，与设定直接冲突。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-024-G2",
+      "case_id": "SL-024",
+      "gold_fact_id": "G2",
+      "expected_verdict": "contradiction",
+      "status": "error",
+      "attempts": 2,
+      "predicted_verdict": null,
+      "transport": {
+        "request_id": "OR-SL-024-G2",
+        "status": "error",
+        "attempts": 2,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "error",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。\"}],\"reason\":\"候选设定中明确指出拉古艾尔不能让已经死亡的人复活，而事件中雷拥有复活已经死亡的人的能力，与该设定直接冲突，且主体为雷，非拉古艾尔，但事件未说明雷与拉古艾尔的关系，因此需判断是否同一主体。然而，事件中雷是拥有复活能力的主体，而候选设定中拉古艾尔是不能复活死者的主体，且未提及雷或任何其他人物具有复活能力。因此，雷拥有复活能力这一设定与候选设定中‘不能让已经死亡的人复活’的限制在主体和能力上直接矛盾，属于同一世界观下能力的明确否定。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+            "error": "assessment字段无效",
+            "error_type": "ValueError"
+          },
+          {
+            "attempt": 2,
+            "status": "error",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。\"}],\"reason\":\"候选设定中明确指出拉古艾尔不能让已经死亡的人复活，而事件中雷拥有复活已死之人的能力，与该设定直接冲突，且主体为雷，非拉古艾尔，但事件未说明雷与拉古艾尔的关系，因此需判断是否同一主体。然而事件中雷是拥有复活能力的主体，而候选设定中拉古艾尔不具备此能力，且未提及雷或任何其他主体具有复活能力，因此在主体、能力、条件完全一致的情况下，该设定明确否定雷拥有复活能力，构成直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+            "error": "assessment字段无效",
+            "error_type": "ValueError"
+          }
+        ],
+        "error": "assessment字段无效"
+      },
+      "error": "assessment字段无效"
+    },
+    {
+      "fixture_id": "OR-SL-024-G3",
+      "case_id": "SL-024",
+      "gold_fact_id": "G3",
+      "expected_verdict": "consistent",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "consistent",
+      "transport": {
+        "request_id": "OR-SL-024-G3",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定L1明确指出月城在2064年接受机械左臂安装手术，且在此之前没有机械手臂，与事件中‘月城安装时间2064年’在时间、主体和事件内容上完全一致，且未引入矛盾条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "consistent",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。"
+          }
+        ],
+        "reason": "候选设定L1明确指出月城在2064年接受机械左臂安装手术，且在此之前没有机械手臂，与事件中‘月城安装时间2064年’在时间、主体和事件内容上完全一致，且未引入矛盾条件。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_support",
+          "assumptions": []
+        }
+      },
+      "unsupported_inference": false
+    },
+    {
+      "fixture_id": "OR-SL-024-G4",
+      "case_id": "SL-024",
+      "gold_fact_id": "G4",
+      "expected_verdict": "uncertain",
+      "status": "ok",
+      "attempts": 1,
+      "predicted_verdict": "contradiction",
+      "transport": {
+        "request_id": "OR-SL-024-G4",
+        "status": "ok",
+        "attempts": 1,
+        "attempt_records": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。\"}],\"reason\":\"候选设定中明确指出月城的机械左臂是安装在左臂上的，且其功能为接收运动指令和反馈压力，但未提及可变形为液态。事件中‘月城可以让机械左臂变成液体’属于功能扩展，而候选设定中未提供任何关于‘液态’或‘变形’的描述，且‘不能直接装在右臂上’仅说明安装位置，不涉及形态变化。因此，‘液态机械臂能力’与现有设定在功能和形态上无直接支持，且未被提及，构成功能上的明显缺失。然而，关键问题在于：事件声称‘月城拥有液态机械臂能力’，而候选设定中没有任何关于‘液态’或‘变形’的描述，甚至未提及其形态可变。因此，该设定在功能上与现有设定不一致，属于功能上的直接矛盾，因为‘液态’是机械臂的全新能力，而设定中仅描述其为‘接收运动指令’和‘反馈压力’，未提任何形态变化或流体行为。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[\"月城的机械左臂具备‘液态’能力是其已知能力，且该能力在设定中被明确描述或隐含支持\"]}}"
+          }
+        ]
+      },
+      "answer": {
+        "verdict": "contradiction",
+        "citations": [
+          {
+            "evidence_id": "L1",
+            "quote": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。"
+          }
+        ],
+        "reason": "候选设定中明确指出月城的机械左臂是安装在左臂上的，且其功能为接收运动指令和反馈压力，但未提及可变形为液态。事件中‘月城可以让机械左臂变成液体’属于功能扩展，而候选设定中未提供任何关于‘液态’或‘变形’的描述，且‘不能直接装在右臂上’仅说明安装位置，不涉及形态变化。因此，‘液态机械臂能力’与现有设定在功能和形态上无直接支持，且未被提及，构成功能上的明显缺失。然而，关键问题在于：事件声称‘月城拥有液态机械臂能力’，而候选设定中没有任何关于‘液态’或‘变形’的描述，甚至未提及其形态可变。因此，该设定在功能上与现有设定不一致，属于功能上的直接矛盾，因为‘液态’是机械臂的全新能力，而设定中仅描述其为‘接收运动指令’和‘反馈压力’，未提任何形态变化或流体行为。",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "direct_conflict",
+          "assumptions": [
+            "月城的机械左臂具备‘液态’能力是其已知能力，且该能力在设定中被明确描述或隐含支持"
+          ]
+        }
+      },
+      "unsupported_inference": true
+    }
+  ],
+  "metrics": {
+    "facts_total": 72,
+    "correct": 47,
+    "accuracy": 0.6527777777777778,
+    "macro_f1": 0.522323483383964,
+    "per_class": {
+      "consistent": {
+        "tp": 22,
+        "fp": 5,
+        "fn": 2,
+        "precision": 0.8148148148148148,
+        "recall": 0.9166666666666666,
+        "f1": 0.8627450980392157
+      },
+      "contradiction": {
+        "tp": 25,
+        "fp": 16,
+        "fn": 5,
+        "precision": 0.6097560975609756,
+        "recall": 0.8333333333333334,
+        "f1": 0.704225352112676
+      },
+      "uncertain": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 18,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "confusion": {
+      "consistent": {
+        "consistent": 22,
+        "error": 1,
+        "contradiction": 1
+      },
+      "contradiction": {
+        "contradiction": 25,
+        "error": 3,
+        "consistent": 2
+      },
+      "uncertain": {
+        "contradiction": 15,
+        "consistent": 3
+      }
+    },
+    "contradiction_false_positive": 16,
+    "contradiction_false_negative": 5,
+    "unsupported_inference_count": 6,
+    "parse_failure_count": 4,
+    "total_judge_seconds": 340.3718646000052,
+    "facts_per_second": 0.21153334775367594,
+    "model_load_seconds": 24.285636499997054,
+    "model_footprint_gib": 2.4167473316192627,
+    "model_cuda_allocated_after_load_gib": 2.484022617340088,
+    "peak_allocated_gib": 3.7035107612609863,
+    "peak_reserved_gib": 3.9609375,
+    "incremental_peak_allocated_gib": 1.2194881439208984
+  },
+  "batch_reports": [
+    {
+      "status": "ok",
+      "rows": [
+        {
+          "request_id": "OR-SL-P02-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"}],\"reason\":\"候选设定中明确指出雷拥有两颗心脏，且分别寄宿亚巴顿和拉古艾尔，与事件中‘雷拥有两颗心脏’完全一致，且主体、结构和细节均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-P02-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"}],\"reason\":\"候选设定中明确指出雷的左侧心脏寄宿亚巴顿，与事件中‘雷左侧心脏寄宿亚巴顿’完全一致，且主体、位置、条件均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-P02-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"}],\"reason\":\"候选设定明确指出雷的右侧心脏寄宿拉古艾尔，与事件中‘雷右侧心脏寄宿拉古艾尔’完全一致，且主体、位置、结构均匹配，无矛盾或缺失。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-P03-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。\"}],\"reason\":\"候选设定明确指出亚巴顿寄宿在雷的左侧心脏，且无法在右心脏施展力量，与事件中‘亚巴顿寄宿雷的右侧心脏’直接矛盾，主体相同、位置条件明确，构成直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-P04-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"事件中雷执行了时间暂停的行为，但候选设定中未提及时间暂停能力与记忆缺失之间的关系，且时间暂停能力未被任何设定中明确赋予雷或与亚巴顿力量相关。事件中雷的行为（如抚平褶皱、喝水、擦饼干碎屑、移动身体等）在时间暂停状态下仍被描述为连续发生，这暗示其行为具有时间上的可观察性与因果性，而候选设定中关于记忆缺失的描述与时间暂停能力无直接或逻辑关联，且未提供任何支持该能力存在或其与记忆缺失的关系的证据。因此，该设定在主体、时间、条件和适用范围上与事件不相容，因为事件中雷的行为未体现任何记忆缺失，而设定中提到的副作用是‘借用亚巴顿力量’导致的，但事件中未提及雷借用亚顿力量，也未说明其使用了亚巴顿力量。主体不一致，条件不满足，故构成矛盾。\",\"assessment\":{\"same_subject\":false,\"evidence_applicable\":false,\"relation\":\"direct_conflict\",\"assumptions\":[\"雷使用了亚巴顿的力量以获得时间暂停能力\"]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-005-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。\"}],\"reason\":\"事件明确指出雷拥有两颗心脏，候选设定L1未否定该事实，且未引入与心脏数量矛盾的信息，仅描述其共鸣行为，与‘拥有两颗心脏’在主体、时间、条件上一致，且不构成冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-005-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。\"}],\"reason\":\"候选设定中明确指出月城的机械左臂存在，且其功能为接收运动指令，属于月城的机械能力，与事件中‘月城拥有液态机械臂能力’在主体和能力归属上一致，尽管未明确‘液态’，但‘机械左臂’作为主体存在，且事件未要求‘液态’为唯一形态，因此在主体和能力范围内被支持。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-005-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。\"}],\"reason\":\"候选设定明确指出‘拉古艾尔寄宿在雷的右侧心脏里’，与事件‘拉古艾尔寄宿雷的右侧心脏’在主体（拉古艾尔）、位置（右侧心脏）和时间条件上完全一致，且未引入矛盾信息。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        }
+      ],
+      "batch_calls": [
+        {
+          "attempt": 1,
+          "request_ids": [
+            "OR-SL-P02-G1",
+            "OR-SL-P02-G2",
+            "OR-SL-P02-G3",
+            "OR-SL-P03-G1",
+            "OR-SL-P04-G1",
+            "OR-SL-005-G1",
+            "OR-SL-005-G2",
+            "OR-SL-005-G3"
+          ],
+          "timing": {
+            "seconds": 33.66268810000474,
+            "batch_size": 8,
+            "input_tokens": [
+              591,
+              594,
+              595,
+              615,
+              597,
+              558,
+              621,
+              573
+            ],
+            "useful_input_tokens": 4744,
+            "padded_input_tokens": 224,
+            "padded_width": 621,
+            "generated_tokens": [
+              118,
+              112,
+              118,
+              131,
+              295,
+              128,
+              163,
+              138
+            ],
+            "total_generated_tokens": 1203,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        }
+      ],
+      "retry_count": 0
+    },
+    {
+      "status": "ok",
+      "rows": [
+        {
+          "request_id": "OR-SL-006-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。\"}],\"reason\":\"候选设定明确指出‘拉古艾尔寄宿在雷的右侧心脏里’，与事件‘拉古艾尔寄宿雷的右侧心脏’在主体、位置和时间上完全一致，且未引入矛盾条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-006-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。\"}],\"reason\":\"候选设定中明确指出莉娅是城区档案馆的管理员，负责纸质历史档案的整理，其职责与获取‘亚巴顿计划’这一涉及战略或机密信息的行为不一致。该设定未提及她具备任何关于亚巴顿计划的知识或接触渠道，且其工作职责为档案整理，与‘知道亚巴顿计划’这一知识状态在角色身份和职责上存在明确矛盾，因此构成直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-006-G3",
+          "status": "ok",
+          "attempts": 2,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "error",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定明确指出月城在2064年接受机械左臂安装手术，且此前没有机械手臂，与事件中‘月城安装时间2064年’在主体、时间、条件上完全一致，且未引入矛盾信息。\",\"assessment\":{\"same_subject\":true,\"evidence_appropos\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}",
+              "error": "assessment字段无效",
+              "error_type": "ValueError"
+            },
+            {
+              "attempt": 2,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定明确指出月城在2064年接受机械左臂安装手术，且此前没有机械手臂，与事件中‘月城安装时间2064年’完全一致，主体、时间、事件内容均匹配，无矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-007-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。\"}],\"reason\":\"事件中雷在地下隧道遇见守望者，而候选设定L1表明地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络，意味着该区域的通信方式是基于有线和中继设备，且未提及守望者或精神感知的通信方式。但事件中雷‘遇见’守望者，属于直接的物理或感知互动，而L2提到守望者通过精神波动感知宿主，这属于精神层面的感知，而非物理‘遇见’。因此，‘遇见’守望者这一事件与L1中关于通信方式的设定无直接冲突，但关键在于‘遇见’是否在设定中被允许。然而，L1未提及守望者存在，也未说明其是否可被‘遇见’，而L2提到守望者通过精神波动感知宿主，说明其存在是通过精神感知，而非物理相遇。因此，‘遇见’守望者这一行为在设定中未被支持，且与守望者‘仅通过精神波动感知’的设定相矛盾，因为‘遇见’暗示了物理或感官上的直接接触，而精神波动感知不等于物理相遇。因此，该事件与候选设定在主体、条件和感知方式上存在明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[\"守望者‘遇见’意味着物理接触，而设定中其感知方式为精神波动，不支持物理接触\"]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-007-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。\"}],\"reason\":\"候选设定L1明确指出'单个天使的蛮力无法打开石门'，而事件描述的是'单个宿主打开旧教堂封印'，若该封印与地下神殿封印为同一类，则直接矛盾。尽管未明确说明旧教堂封印与地下神殿封印是否相同，但事件中'单个宿主打开旧教堂封印'与L1中'单个天使无法打开石门'在主体、条件和能力上直接冲突，且'旧教堂封印'与'地下神殿封印'在设定中被归为同一类封印系统，因此构成明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[\"旧教堂封印与地下神殿封印属于同一类封印系统，且其解除条件一致\"]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-007-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定明确指出雷与德尔塔在第二话首次当面交谈，与事件中‘雷首次见面德尔塔第二话’完全一致，且主体、时间、事件类型均匹配，无矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-008-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。\"}],\"reason\":\"候选设定明确指出契约不会自动延长宿主寿命，而事件中‘亚巴顿赋予永久不死’属于寿命延长，与该设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-008-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定中明确指出雷与德尔塔在第二话才第一次当面交谈，但事件描述中称‘雷见面第一话德尔塔’，即在第一话就已见面，与候选设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        }
+      ],
+      "batch_calls": [
+        {
+          "attempt": 1,
+          "request_ids": [
+            "OR-SL-006-G1",
+            "OR-SL-006-G2",
+            "OR-SL-006-G3",
+            "OR-SL-007-G1",
+            "OR-SL-007-G2",
+            "OR-SL-007-G3",
+            "OR-SL-008-G1",
+            "OR-SL-008-G2"
+          ],
+          "timing": {
+            "seconds": 42.7082425999979,
+            "batch_size": 8,
+            "input_tokens": [
+              576,
+              613,
+              561,
+              605,
+              621,
+              561,
+              608,
+              613
+            ],
+            "useful_input_tokens": 4758,
+            "padded_input_tokens": 210,
+            "padded_width": 621,
+            "generated_tokens": [
+              128,
+              167,
+              127,
+              368,
+              241,
+              120,
+              107,
+              125
+            ],
+            "total_generated_tokens": 1383,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        },
+        {
+          "attempt": 2,
+          "request_ids": [
+            "OR-SL-006-G3"
+          ],
+          "timing": {
+            "seconds": 9.052586999998312,
+            "batch_size": 1,
+            "input_tokens": [
+              589
+            ],
+            "useful_input_tokens": 589,
+            "padded_input_tokens": 0,
+            "padded_width": 589,
+            "generated_tokens": [
+              125
+            ],
+            "total_generated_tokens": 125,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        }
+      ],
+      "retry_count": 1
+    },
+    {
+      "status": "partial",
+      "rows": [
+        {
+          "request_id": "OR-SL-008-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"候选设定中明确指出雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔因此知道雷的宿主身份，与事件中‘雷告知身份德尔塔知道双宿主身份’完全一致，主体、时间、内容和结果均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-009-G1",
+          "status": "error",
+          "attempts": 2,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "error",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"事件中月城使用机械左臂，与候选设定中‘月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂’一致，且事件发生在地震前，时间逻辑上符合（2064年在2063年之后），主体为月城，条件为地震前，设定明确说明其在安装手术前没有机械手臂，因此在地震前使用机械左臂是矛盾的，但事件发生在地震前，而安装手术在2064年，地震在2063年，因此‘地震前’即2063年，而安装手术在2064年，即地震后，因此‘地震前’时他尚未安装机械左臂，不能使用。因此事件‘月城使用机械左臂’在地震前发生，与设定‘在此之前没有机械手臂’矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"contradiction\",\"assumptions\":[\"事件‘使用机械左臂’发生在地震前，即2063年，而设定中安装手术在2064年，因此地震前没有机械手臂\"]}}",
+              "error": "relation无效",
+              "error_type": "ValueError"
+            },
+            {
+              "attempt": 2,
+              "status": "error",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"事件中月城在地震前使用机械左臂，候选设定明确指出他是在2064年接受手术且此前没有机械手臂，因此在2063年地震前尚未拥有机械手臂，与事件中‘地震前使用’矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"contradiction\",\"assumptions\":[]}}",
+              "error": "relation无效",
+              "error_type": "ValueError"
+            }
+          ],
+          "error": "relation无效"
+        },
+        {
+          "request_id": "OR-SL-009-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。\"}],\"reason\":\"候选设定明确指出监察官没有恢复视力的能力，与事件中‘监察官恢复视力’直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-010-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定明确指出月城在2064年接受机械左臂安装手术，且此前没有机械手臂，与事件中‘月城安装时间2064年’完全一致，主体、时间、事件内容均匹配，无矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-010-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"公众知道他的代号，但不知道装甲下的真实姓名。\"}],\"reason\":\"候选设定明确指出公众不知道德尔塔的真实姓名，而事件声称公众知道德尔塔的真实姓名，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-010-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。\"}],\"reason\":\"候选设定中未提及莉娅知道亚巴顿计划，且其工作职责为档案馆管理员，负责纸质历史档案整理，与‘知道亚巴顿计划’这一知识状态无直接关联；事件明确指出‘莉娅知道亚巴顿计划’，但lore中无任何信息支持其具备此类知识，也未说明其接触过亚巴顿计划或相关文件，因此该知识状态在设定中无依据，构成与设定的明确不一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[\"莉娅的知识状态必须由设定中明确或可推导出的职责或经历支持\"]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-011-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定明确指出雷与德尔塔在第二话首次当面交谈，与事件描述完全一致，且主体、时间、条件均匹配，无矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-011-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定明确指出月城在2064年接受机械左臂安装手术，且在此之前没有机械手臂，而事件中声称月城在2063年已安装机械左臂，与设定中的时间点和前提条件直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        }
+      ],
+      "batch_calls": [
+        {
+          "attempt": 1,
+          "request_ids": [
+            "OR-SL-008-G3",
+            "OR-SL-009-G1",
+            "OR-SL-009-G2",
+            "OR-SL-010-G1",
+            "OR-SL-010-G2",
+            "OR-SL-010-G3",
+            "OR-SL-011-G1",
+            "OR-SL-011-G2"
+          ],
+          "timing": {
+            "seconds": 34.06025249999948,
+            "batch_size": 8,
+            "input_tokens": [
+              559,
+              617,
+              555,
+              555,
+              554,
+              607,
+              559,
+              554
+            ],
+            "useful_input_tokens": 4560,
+            "padded_input_tokens": 376,
+            "padded_width": 617,
+            "generated_tokens": [
+              134,
+              295,
+              99,
+              125,
+              91,
+              193,
+              110,
+              128
+            ],
+            "total_generated_tokens": 1175,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        },
+        {
+          "attempt": 2,
+          "request_ids": [
+            "OR-SL-009-G1"
+          ],
+          "timing": {
+            "seconds": 9.802868099999614,
+            "batch_size": 1,
+            "input_tokens": [
+              644
+            ],
+            "useful_input_tokens": 644,
+            "padded_input_tokens": 0,
+            "padded_width": 644,
+            "generated_tokens": [
+              127
+            ],
+            "total_generated_tokens": 127,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        }
+      ],
+      "retry_count": 1
+    },
+    {
+      "status": "partial",
+      "rows": [
+        {
+          "request_id": "OR-SL-011-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。\"}],\"reason\":\"事件中雷在地下隧道遇见守望者，该地点符合L1中提到的地下隧道无移动网络覆盖，且需使用有线电话或中继设备联络，这与事件中‘雷在地下隧道遇见守望者’的场景一致，主体、地点、条件完全匹配，未引入矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-012-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"候选设定中明确指出雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，且德尔塔因此知道雷的宿主身份，与事件中‘雷告知身份德尔塔知道双宿主身份’完全一致，主体、时间、内容和结果均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-012-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。\"}],\"reason\":\"候选设定明确指出‘除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密’，而事件中‘雷的父亲知道拉古艾尔寄宿在雷体内’属于‘其他人’的范畴，因此与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-012-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。\"}],\"reason\":\"候选设定L1明确指出'单个天使的蛮力无法打开石门'，而事件中'单个宿主打开旧教堂封印'与之直接冲突，因为该设定将封印解除条件限定为需要两名宿主同时触碰，且单个宿主无能力打开。事件中'单个宿主打开'与'单个天使无法打开'在主体、条件和能力上直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-013-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。\"}],\"reason\":\"候选设定明确指出雷的父亲在第五话乘列车离开城区并前往北方研究站，与事件中‘雷的父亲离开第五话北方研究站’在主体、时间、地点和行为上完全一致，且未出现矛盾信息。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-013-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。\"}],\"reason\":\"候选设定明确指出月城的右臂是自然肢体，而事件声称月城拥有机械右臂，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-013-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"事件中亚巴顿赋予雷永久不死，但候选设定中明确指出‘契约不会自动延长宿主寿命’，且‘力量副作用’中提到记忆缺失，表明力量使用与寿命延长无直接关联，且存在记忆代价。事件未提及记忆缺失，却声称赋予‘永久不死’，与‘契约不会自动延长宿主寿命’直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-014-G1",
+          "status": "error",
+          "attempts": 2,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "error",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"事件中雷躲进旧教堂的行为发生在城区安静房间内，且未涉及任何精神波动或守望者发现的场景。候选设定中提到的‘静默结界’作用于‘宿主的精神波动’，与雷的行为无直接关联，且未说明该结界在雷躲进教堂时生效或影响其状态。事件中雷的行为是物理性躲藏，而设定中结界作用是精神层面的，主体、条件和适用范围不一致，因此不构成支持，反而因缺乏精神波动或守望者相关要素，与事件无直接关联，属于不相容。\",\"assessment\":{\"same_subject\":false,\"evidence_appropicable\":false,\"relation\":\"insufficient\",\"assumptions\":[\"雷是‘宿主’，且其精神波动被旧教堂结界影响\",\"事件发生在旧教堂结界生效的时间与空间内\"]}}",
+              "error": "assessment字段无效",
+              "error_type": "ValueError"
+            },
+            {
+              "attempt": 2,
+              "status": "error",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"事件中雷躲进旧教堂的行为发生在城区的一间安静房间里，且没有提及任何精神波动或守望者相关的内容。候选设定中提到的静默结界作用于‘宿主的精神波动’和‘守望者发现宿主’，与雷躲进教堂这一物理行为无直接关联，且未说明该行为会改变精神波动或影响守望者。事件本身未涉及精神波动或守望者，因此该设定与事件在主体、条件和适用范围上不构成直接支持，反而因引入了未在事件中出现的‘精神波动’和‘守望者’概念，与事件的物理性、静默观察等描述形成明显不兼容。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":false,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+              "error": "assessment字段无效",
+              "error_type": "ValueError"
+            }
+          ],
+          "error": "assessment字段无效"
+        }
+      ],
+      "batch_calls": [
+        {
+          "attempt": 1,
+          "request_ids": [
+            "OR-SL-011-G3",
+            "OR-SL-012-G1",
+            "OR-SL-012-G2",
+            "OR-SL-012-G3",
+            "OR-SL-013-G1",
+            "OR-SL-013-G2",
+            "OR-SL-013-G3",
+            "OR-SL-014-G1"
+          ],
+          "timing": {
+            "seconds": 27.099179199998616,
+            "batch_size": 8,
+            "input_tokens": [
+              603,
+              559,
+              557,
+              618,
+              553,
+              551,
+              610,
+              553
+            ],
+            "useful_input_tokens": 4604,
+            "padded_input_tokens": 340,
+            "padded_width": 618,
+            "generated_tokens": [
+              139,
+              135,
+              129,
+              173,
+              119,
+              100,
+              152,
+              235
+            ],
+            "total_generated_tokens": 1182,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        },
+        {
+          "attempt": 2,
+          "request_ids": [
+            "OR-SL-014-G1"
+          ],
+          "timing": {
+            "seconds": 15.233353399999032,
+            "batch_size": 1,
+            "input_tokens": [
+              581
+            ],
+            "useful_input_tokens": 581,
+            "padded_input_tokens": 0,
+            "padded_width": 581,
+            "generated_tokens": [
+              225
+            ],
+            "total_generated_tokens": 225,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        }
+      ],
+      "retry_count": 1
+    },
+    {
+      "status": "ok",
+      "rows": [
+        {
+          "request_id": "OR-SL-014-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。\"}],\"reason\":\"候选设定中明确指出拉古艾尔不能让已经死亡的人复活，而事件中雷拥有复活已死之人的能力，与该设定直接冲突，且主体为雷，与拉古艾尔无关，但事件未说明雷的能力来源，因此该能力在设定中被明确禁止，构成直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-014-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定中明确指出雷与德尔塔在第二话才第一次当面交谈，但事件描述中称‘雷见面第一话德尔塔’，即在第一话就已见面，与候选设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-015-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。\"}],\"reason\":\"事件中档案馆开放2065年救援档案，且该档案为地震前的纸质备份，与候选设定中‘档案馆保留地震前的纸质备份’直接对应，主体为档案馆，时间条件为2065年，事件为开放救援档案，符合‘管理员可查阅纸本记录’的设定，且未涉及网络数据库状态，因此在适用范围内直接支持事件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-015-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"候选设定明确指出雷借用亚巴顿力量后会失去部分记忆，而事件描述中雷‘借用后记忆不变’，与设定中‘记忆缺失’直接冲突，属于同一主体、同一时间、同一条件下的明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-015-G3",
+          "status": "ok",
+          "attempts": 2,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "error",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"事件中月城在地震前使用机械左臂，与设定中‘在2064年接受手术’且‘此前没有机械手臂’相矛盾，因此应为矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+              "error": "assessment字段无效",
+              "error_type": "ValueError"
+            },
+            {
+              "attempt": 2,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"事件中月城在地震前使用机械左臂，与设定中‘月城在2064年接受机械左臂安装手术’且‘在此之前没有机械手臂’在时间顺序和主体上一致，且‘地震前’明确对应2064年，符合逻辑。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-016-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。\"}],\"reason\":\"事件中明确指出‘雷拥有两颗心脏’，候选设定L1直接说明雷的两颗心脏存在，并且其状态（共鸣）与声音传播相关，但未否定其存在。事件未要求心脏处于共鸣状态，仅陈述拥有两颗心脏，因此设定未与事件冲突，且在主体、时间、条件上一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-016-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定明确指出雷与德尔塔在第二话才第一次当面交谈，而事件描述中却称‘雷和德尔塔在第一话已经当面交谈’，在相同主体（雷与德尔塔）、相同时间（第一话）条件下存在直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-016-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。\"}],\"reason\":\"候选设定明确指出监察官没有恢复视力的能力，与事件中‘监察官恢复视力’直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        }
+      ],
+      "batch_calls": [
+        {
+          "attempt": 1,
+          "request_ids": [
+            "OR-SL-014-G2",
+            "OR-SL-014-G3",
+            "OR-SL-015-G1",
+            "OR-SL-015-G2",
+            "OR-SL-015-G3",
+            "OR-SL-016-G1",
+            "OR-SL-016-G2",
+            "OR-SL-016-G3"
+          ],
+          "timing": {
+            "seconds": 18.58812609999586,
+            "batch_size": 8,
+            "input_tokens": [
+              552,
+              614,
+              554,
+              551,
+              614,
+              557,
+              561,
+              556
+            ],
+            "useful_input_tokens": 4559,
+            "padded_input_tokens": 353,
+            "padded_width": 614,
+            "generated_tokens": [
+              143,
+              125,
+              158,
+              125,
+              113,
+              148,
+              136,
+              99
+            ],
+            "total_generated_tokens": 1047,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        },
+        {
+          "attempt": 2,
+          "request_ids": [
+            "OR-SL-015-G3"
+          ],
+          "timing": {
+            "seconds": 9.50384760000452,
+            "batch_size": 1,
+            "input_tokens": [
+              642
+            ],
+            "useful_input_tokens": 642,
+            "padded_input_tokens": 0,
+            "padded_width": 642,
+            "generated_tokens": [
+              133
+            ],
+            "total_generated_tokens": 133,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        }
+      ],
+      "retry_count": 1
+    },
+    {
+      "status": "ok",
+      "rows": [
+        {
+          "request_id": "OR-SL-017-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"公众知道他的代号，但不知道装甲下的真实姓名。\"}],\"reason\":\"候选设定明确指出公众不知道德尔塔的真实姓名，而事件声称公众知道德尔塔的真实姓名，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-017-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定指出月城在2064年安装机械左臂，而事件声称其安装时间为2063年，与设定中的时间点直接冲突，且设定明确说明‘在此之前没有机械手臂’，因此2063年已安装机械左臂与设定矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-017-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"候选设定中明确指出雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，且德尔塔因此知道雷的宿主身份，与事件中‘雷告知身份德尔塔知道双宿主身份’完全一致，主体、时间、内容和结果均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-017-G4",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。\"}],\"reason\":\"候选设定L1明确指出'单个天使的蛮力无法打开石门'，而事件中'单个宿主打开旧教堂封印'与之直接冲突，因为该设定将封印解除条件限定为需要两名宿主同时触碰，且单个宿主无能力打开。事件中未提及任何双宿主或协同条件，也未说明封印类型与地下神殿封印相同，但事件与设定在主体（单个宿主）、条件（无协同）、动作（打开封印）上完全重合，构成明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-018-G1",
+          "status": "ok",
+          "attempts": 2,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "error",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。\"}],\"reason\":\"候选设定明确指出‘除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密’，而事件中‘雷的父亲知道拉古艾尔寄宿在雷体内’属于‘其他人’的范畴，因此与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+              "error": "assessment字段无效",
+              "error_type": "ValueError"
+            },
+            {
+              "attempt": 2,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。\"}],\"reason\":\"候选设定明确指出‘除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密’，而事件中‘雷的父亲知道拉古艾尔寄宿在雷体内’属于‘其他人’的范畴，因此与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-018-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。\"}],\"reason\":\"候选设定明确指出月城的右臂是自然肢体，而事件声称月城拥有机械右臂，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-018-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。\"}],\"reason\":\"候选设定明确指出雷的父亲在第五话乘列车离开城区并前往北方研究站，与事件中‘雷的父亲离开第五话北方研究站’在主体、时间、地点和行为上完全一致，且未出现矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-018-G4",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"契约不会自动延长宿主寿命。\"}],\"reason\":\"候选设定L2明确指出'契约不会自动延长宿主寿命'，而事件中'亚巴顿赋予永久不死'直接表明雷获得了永久不死之身，这与设定中'契约不会自动延长宿主寿命'相矛盾，构成明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        }
+      ],
+      "batch_calls": [
+        {
+          "attempt": 1,
+          "request_ids": [
+            "OR-SL-017-G1",
+            "OR-SL-017-G2",
+            "OR-SL-017-G3",
+            "OR-SL-017-G4",
+            "OR-SL-018-G1",
+            "OR-SL-018-G2",
+            "OR-SL-018-G3",
+            "OR-SL-018-G4"
+          ],
+          "timing": {
+            "seconds": 23.85178420000011,
+            "batch_size": 8,
+            "input_tokens": [
+              554,
+              555,
+              561,
+              620,
+              560,
+              552,
+              554,
+              611
+            ],
+            "useful_input_tokens": 4567,
+            "padded_input_tokens": 393,
+            "padded_width": 620,
+            "generated_tokens": [
+              91,
+              136,
+              135,
+              204,
+              130,
+              100,
+              118,
+              118
+            ],
+            "total_generated_tokens": 1032,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        },
+        {
+          "attempt": 2,
+          "request_ids": [
+            "OR-SL-018-G1"
+          ],
+          "timing": {
+            "seconds": 9.159063300001435,
+            "batch_size": 1,
+            "input_tokens": [
+              588
+            ],
+            "useful_input_tokens": 588,
+            "padded_input_tokens": 0,
+            "padded_width": 588,
+            "generated_tokens": [
+              129
+            ],
+            "total_generated_tokens": 129,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        }
+      ],
+      "retry_count": 1
+    },
+    {
+      "status": "partial",
+      "rows": [
+        {
+          "request_id": "OR-SL-019-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。\"}],\"reason\":\"候选设定中明确指出拉古艾尔不能让已经死亡的人复活，而事件中雷拥有复活已死之人的能力，且该能力与拉古艾尔相关（雷借用亚巴顿力量后记忆不会受影响，但未说明力量来源与拉古艾尔的关联），因此在主体为雷、能力为复活死者的情况下，与拉古艾尔不能复活死者直接冲突。由于事件中雷拥有复活能力，而设定明确禁止该能力，构成直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-019-G2",
+          "status": "error",
+          "attempts": 2,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "error",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"候选设定明确指出雷借用亚巴顿力量后会失去部分记忆，而事件中‘雷借用后记忆不变’与该设定直接冲突，属于同一主体、同一条件下的明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+              "error": "assessment字段无效",
+              "error_type": "ValueError"
+            },
+            {
+              "attempt": 2,
+              "status": "error",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"候选设定明确指出雷借用亚巴顿力量后会失去部分记忆，而事件中描述雷‘借用后记忆不变’，与设定中‘记忆缺失’直接冲突，属于同一主体、同一条件下的明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+              "error": "assessment字段无效",
+              "error_type": "ValueError"
+            }
+          ],
+          "error": "assessment字段无效"
+        },
+        {
+          "request_id": "OR-SL-019-G3",
+          "status": "ok",
+          "attempts": 2,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "error",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"事件中雷躲进旧教堂的行为发生在安静房间内，且没有提到任何精神波动或守望者发现的场景。候选设定指出旧教堂的静默结界作用于‘宿主的精神波动’，但事件中雷的行为并未涉及任何‘宿主’或‘精神波动’，也未提及守望者或其发现机制。因此，该设定并未在事件中被激活或适用，且事件中雷的行为与设定中的‘削弱精神波动’无直接关联，属于条件不匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_appropos\":false,\"relation\":\"direct_conflict\",\"assumptions\":[\"旧教堂的静默结界在雷躲进去时生效，且其作用对象为雷的精神波动\"]}}",
+              "error": "assessment字段无效",
+              "error_type": "ValueError"
+            },
+            {
+              "attempt": 2,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"事件中雷躲进旧教堂的行为发生在城区的一间安静房间里，且没有提到任何精神波动或守望者发现的条件，而候选设定明确指出静默结界作用于‘宿主的精神波动’，但事件中雷的行为未涉及任何精神波动或守望者相关主体，主体、条件和适用范围不一致，因此构成矛盾。\",\"assessment\":{\"same_subject\":false,\"evidence_applicable\":false,\"relation\":\"direct_conflict\",\"assumptions\":[\"雷的行为被视作‘宿主’，且其精神波动在旧教堂内被削弱\"]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-019-G4",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定中明确指出雷与德尔塔在第二话才第一次当面交谈，但事件中描述雷在第一话已与德尔塔见面，与候选设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-020-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定明确指出雷与德尔塔在第二话才第一次当面交谈，而事件描述中却称他们在第一话已经当面交谈，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-020-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"公众知道他的代号，但不知道装甲下的真实姓名。\"}],\"reason\":\"候选设定明确指出公众不知道德尔塔的真实姓名，而事件声称公众知道德尔塔的真实姓名，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-020-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。\"}],\"reason\":\"事件中档案馆开放2065年救援档案，且该档案为地震前的纸质备份，与候选设定中‘档案馆保留地震前的纸质备份’直接一致，主体为档案馆，时间条件为2065年，事件为开放救援档案，符合‘管理员可查阅纸本记录’的条件，属于同一主体、时间、条件下的直接支持。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-020-G4",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"事件中月城使用机械左臂，与候选设定中‘月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂’直接一致，且事件发生在地震前，时间逻辑吻合，主体明确为月城，条件与时间范围一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        }
+      ],
+      "batch_calls": [
+        {
+          "attempt": 1,
+          "request_ids": [
+            "OR-SL-019-G1",
+            "OR-SL-019-G2",
+            "OR-SL-019-G3",
+            "OR-SL-019-G4",
+            "OR-SL-020-G1",
+            "OR-SL-020-G2",
+            "OR-SL-020-G3",
+            "OR-SL-020-G4"
+          ],
+          "timing": {
+            "seconds": 24.418984299998556,
+            "batch_size": 8,
+            "input_tokens": [
+              551,
+              551,
+              552,
+              613,
+              559,
+              554,
+              556,
+              616
+            ],
+            "useful_input_tokens": 4552,
+            "padded_input_tokens": 376,
+            "padded_width": 616,
+            "generated_tokens": [
+              179,
+              119,
+              208,
+              117,
+              115,
+              91,
+              154,
+              133
+            ],
+            "total_generated_tokens": 1116,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        },
+        {
+          "attempt": 2,
+          "request_ids": [
+            "OR-SL-019-G2",
+            "OR-SL-019-G3"
+          ],
+          "timing": {
+            "seconds": 12.292654999997467,
+            "batch_size": 2,
+            "input_tokens": [
+              579,
+              580
+            ],
+            "useful_input_tokens": 1159,
+            "padded_input_tokens": 1,
+            "padded_width": 580,
+            "generated_tokens": [
+              123,
+              172
+            ],
+            "total_generated_tokens": 295,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        }
+      ],
+      "retry_count": 2
+    },
+    {
+      "status": "ok",
+      "rows": [
+        {
+          "request_id": "OR-SL-021-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定明确指出月城在2064年安装机械左臂，而事件声称其安装时间为2063年，与设定中的时间点直接冲突，属于同一主体、同一条件下的明确时间矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-021-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。\"}],\"reason\":\"候选设定明确指出‘除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密’，而事件中‘雷的父亲知道拉古艾尔寄宿在雷体内’表明雷的父亲知道这一秘密，且雷的父亲不属于‘德尔塔与两位寄宿天使’，因此与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-021-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。\"}],\"reason\":\"事件中明确指出‘雷拥有两颗心脏’，候选设定L1直接描述了该事实，并进一步说明其在‘同时共鸣’时的特殊功能，但未否定其存在本身，因此在主体、时间、条件和适用范围内与事件一致，且不构成矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-021-G4",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。\"}],\"reason\":\"候选设定明确指出监察官没有恢复视力的能力，而事件中‘监察官恢复视力’与之直接冲突，属于同一主体、同一时间、同一条件下的明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-022-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。\"}],\"reason\":\"候选设定明确指出月城的右臂是自然肢体，而事件声称月城拥有机械右臂，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-022-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。\"}],\"reason\":\"候选设定中明确指出拉古艾尔不能让已经死亡的人复活，而事件中雷拥有复活已经死亡的人的能力，这与候选设定中的限制直接冲突，且在相同主体（雷）和相同条件（死亡者复活）下构成明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-022-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。\"}],\"reason\":\"候选设定明确指出‘亚巴顿寄宿在雷的左侧心脏里’，与事件‘亚巴顿寄宿雷的左侧心脏’在主体（亚巴顿与雷）、位置（左侧心脏）和时间条件上完全一致，且未引入矛盾信息。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-022-G4",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"候选设定L1明确指出静默结界会削弱宿主的精神波动，从而降低守望者发现宿主的概率，与事件中‘守望者无法感知静默结界宿主’直接一致，且主体、条件和机制完全匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        }
+      ],
+      "batch_calls": [
+        {
+          "attempt": 1,
+          "request_ids": [
+            "OR-SL-021-G1",
+            "OR-SL-021-G2",
+            "OR-SL-021-G3",
+            "OR-SL-021-G4",
+            "OR-SL-022-G1",
+            "OR-SL-022-G2",
+            "OR-SL-022-G3",
+            "OR-SL-022-G4"
+          ],
+          "timing": {
+            "seconds": 17.30257139999594,
+            "batch_size": 8,
+            "input_tokens": [
+              560,
+              564,
+              560,
+              559,
+              555,
+              557,
+              569,
+              620
+            ],
+            "useful_input_tokens": 4544,
+            "padded_input_tokens": 416,
+            "padded_width": 620,
+            "generated_tokens": [
+              122,
+              143,
+              135,
+              116,
+              100,
+              131,
+              135,
+              127
+            ],
+            "total_generated_tokens": 1009,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        }
+      ],
+      "retry_count": 0
+    },
+    {
+      "status": "partial",
+      "rows": [
+        {
+          "request_id": "OR-SL-023-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"候选设定明确指出雷借用亚巴顿力量后会失去部分记忆，而事件中描述雷‘借用后记忆不变’，与设定中的‘记忆缺失’直接冲突，属于同一主体、同一条件下的明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-023-G2",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。\"}],\"reason\":\"候选设定明确指出雷与德尔塔在第二话才第一次当面交谈，而事件描述中却称‘雷和德尔塔在第一话已经当面交谈’，在相同主体（雷与德尔塔）、相同时间条件（第一话）下存在直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-023-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。\"}],\"reason\":\"候选设定明确指出‘拉古艾尔寄宿在雷的右侧心脏里’，与事件‘拉古艾尔寄宿雷的右侧心脏’在主体（拉古艾尔与雷）、位置（右侧心脏）和时间条件上完全一致，且未引入矛盾信息。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-023-G4",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"事件中明确指出‘雷借用亚巴顿力量后记忆不会受影响’，而候选设定L1指出‘雷借用亚巴顿的力量后会短暂失去部分记忆’，两者在‘记忆是否受影响’这一核心条件上直接矛盾，且发生在同一主体（雷）和同一条件（借用亚巴顿力量）下，构成明确冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-024-G1",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"公众知道他的代号，但不知道装甲下的真实姓名。\"}],\"reason\":\"候选设定明确指出公众不知道德尔塔的真实姓名，而事件声称公众知道德尔塔的真实姓名，与设定直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-024-G2",
+          "status": "error",
+          "attempts": 2,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "error",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。\"}],\"reason\":\"候选设定中明确指出拉古艾尔不能让已经死亡的人复活，而事件中雷拥有复活已经死亡的人的能力，与该设定直接冲突，且主体为雷，非拉古艾尔，但事件未说明雷与拉古艾尔的关系，因此需判断是否同一主体。然而，事件中雷是拥有复活能力的主体，而候选设定中拉古艾尔是不能复活死者的主体，且未提及雷或任何其他人物具有复活能力。因此，雷拥有复活能力这一设定与候选设定中‘不能让已经死亡的人复活’的限制在主体和能力上直接矛盾，属于同一世界观下能力的明确否定。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+              "error": "assessment字段无效",
+              "error_type": "ValueError"
+            },
+            {
+              "attempt": 2,
+              "status": "error",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。\"}],\"reason\":\"候选设定中明确指出拉古艾尔不能让已经死亡的人复活，而事件中雷拥有复活已死之人的能力，与该设定直接冲突，且主体为雷，非拉古艾尔，但事件未说明雷与拉古艾尔的关系，因此需判断是否同一主体。然而事件中雷是拥有复活能力的主体，而候选设定中拉古艾尔不具备此能力，且未提及雷或任何其他主体具有复活能力，因此在主体、能力、条件完全一致的情况下，该设定明确否定雷拥有复活能力，构成直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_appropicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}",
+              "error": "assessment字段无效",
+              "error_type": "ValueError"
+            }
+          ],
+          "error": "assessment字段无效"
+        },
+        {
+          "request_id": "OR-SL-024-G3",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。\"}],\"reason\":\"候选设定L1明确指出月城在2064年接受机械左臂安装手术，且在此之前没有机械手臂，与事件中‘月城安装时间2064年’在时间、主体和事件内容上完全一致，且未引入矛盾条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+            }
+          ]
+        },
+        {
+          "request_id": "OR-SL-024-G4",
+          "status": "ok",
+          "attempts": 1,
+          "attempt_records": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。\"}],\"reason\":\"候选设定中明确指出月城的机械左臂是安装在左臂上的，且其功能为接收运动指令和反馈压力，但未提及可变形为液态。事件中‘月城可以让机械左臂变成液体’属于功能扩展，而候选设定中未提供任何关于‘液态’或‘变形’的描述，且‘不能直接装在右臂上’仅说明安装位置，不涉及形态变化。因此，‘液态机械臂能力’与现有设定在功能和形态上无直接支持，且未被提及，构成功能上的明显缺失。然而，关键问题在于：事件声称‘月城拥有液态机械臂能力’，而候选设定中没有任何关于‘液态’或‘变形’的描述，甚至未提及其形态可变。因此，该设定在功能上与现有设定不一致，属于功能上的直接矛盾，因为‘液态’是机械臂的全新能力，而设定中仅描述其为‘接收运动指令’和‘反馈压力’，未提任何形态变化或流体行为。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[\"月城的机械左臂具备‘液态’能力是其已知能力，且该能力在设定中被明确描述或隐含支持\"]}}"
+            }
+          ]
+        }
+      ],
+      "batch_calls": [
+        {
+          "attempt": 1,
+          "request_ids": [
+            "OR-SL-023-G1",
+            "OR-SL-023-G2",
+            "OR-SL-023-G3",
+            "OR-SL-023-G4",
+            "OR-SL-024-G1",
+            "OR-SL-024-G2",
+            "OR-SL-024-G3",
+            "OR-SL-024-G4"
+          ],
+          "timing": {
+            "seconds": 39.830284499999834,
+            "batch_size": 8,
+            "input_tokens": [
+              554,
+              560,
+              571,
+              611,
+              548,
+              547,
+              549,
+              612
+            ],
+            "useful_input_tokens": 4552,
+            "padded_input_tokens": 344,
+            "padded_width": 612,
+            "generated_tokens": [
+              122,
+              137,
+              140,
+              149,
+              91,
+              217,
+              129,
+              337
+            ],
+            "total_generated_tokens": 1322,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        },
+        {
+          "attempt": 2,
+          "request_ids": [
+            "OR-SL-024-G2"
+          ],
+          "timing": {
+            "seconds": 13.679771800001618,
+            "batch_size": 1,
+            "input_tokens": [
+              575
+            ],
+            "useful_input_tokens": 575,
+            "padded_input_tokens": 0,
+            "padded_width": 575,
+            "generated_tokens": [
+              199
+            ],
+            "total_generated_tokens": 199,
+            "truncated_indices": []
+          },
+          "status": "ok"
+        }
+      ],
+      "retry_count": 1
+    }
+  ],
+  "fixture_path": "C:\\Users\\Xhang\\Desktop\\project\\worldcheck\\agent_pipeline_v2_1\\reports\\benchmark_2_1A_20260924T160957Z_4f2c13\\oracle_fixture_72.json",
+  "fixture_sha256": "8eee1aef6becbbf30f715b184ec3129b264f4d874ce648345c6e2ff92937aef5",
+  "repeat": 2,
+  "device": "cuda",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "precision": "NF4 4-bit weights, BF16 compute",
+  "warmup_fact_count": 8
+}
