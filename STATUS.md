@@ -1,16 +1,15 @@
-# Benchmark 2.1C — BM25 / hybrid RRF retrieval
+# Benchmark 2.1C — BM25 / Hybrid RRF Retrieval
 
-**State:** reserved; not implemented and not run.
+**State:** implemented; no complete six-configuration or story-level run yet.
 
-## Intended question
+## Question
 
-How do lexical BM25, dense retrieval, and their reciprocal-rank fusion compare under the same 2.1 data and Judge protocol?
+How do lexical BM25, dense retrieval, and reciprocal-rank fusion compare under the same 2.1 corpus, fixture, and Judge protocol?
 
-## Planned controls
+## Included material
 
-- Use the same corpus, metadata policy, query inputs, top-K and gold evidence definitions for every retrieval mode.
-- Evaluate `bm25`, `dense`, and `hybrid` modes separately; record RRF configuration for hybrid runs.
-- Report retrieval quality/noise and all downstream Judge and finding-level detection metrics.
-- Do not compare performance or accuracy across runs whose corpus, fixture, prompt or model digest differs.
+- BM25, RRF, dense/BM25/hybrid retrieval implementations and workers.
+- Retrieval benchmark runner for six configurations and a story-pipeline diagnostic.
+- Focused BM25, RRF, retrieval-benchmark, and story-pipeline tests.
 
-No code, result, or numerical claim belongs to this branch yet.
+The executable benchmark structure is present, but this branch makes no completed performance or accuracy claim for the full retrieval matrix.

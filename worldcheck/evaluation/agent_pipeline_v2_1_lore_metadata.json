@@ -1,0 +1,1983 @@
+{
+  "schema_version": "agent-pipeline-v2.1-lore-metadata-v1",
+  "generator": {
+    "name": "deterministic_lore_metadata",
+    "version": "rules-v1",
+    "uses_llm": false
+  },
+  "index_version": "0de59066f81246b3b8c7445eddbe877e",
+  "chunk_count": 48,
+  "entity_vocabulary": [
+    "亚巴顿",
+    "交通",
+    "动力外骨骼",
+    "医疗",
+    "双宿主",
+    "天使",
+    "守望者",
+    "宿主契约",
+    "封印",
+    "德尔塔",
+    "拉古艾尔",
+    "月城",
+    "机械左臂",
+    "档案馆",
+    "武器",
+    "监察官",
+    "能源",
+    "莉娅",
+    "通信",
+    "避难所",
+    "雷",
+    "雷的父亲"
+  ],
+  "metadata_digest": "67b495eee42290eb9ff2b9ae9b0e508dc5d7e8eeec310bc3fc1af7c29b175bc6",
+  "summary": {
+    "domain_counts": {
+      "angel": 12,
+      "character": 12,
+      "history": 12,
+      "technology": 12
+    },
+    "dimension_counts": {
+      "causality": 2,
+      "character_knowledge": 4,
+      "character_relation": 15,
+      "identity": 4,
+      "physical_rule": 26,
+      "space": 14,
+      "time": 13,
+      "world_rule": 23
+    },
+    "coverage": {
+      "primary_scope": {
+        "count": 36,
+        "rate": 0.75
+      },
+      "entities": {
+        "count": 48,
+        "rate": 1.0
+      },
+      "time_markers": {
+        "count": 13,
+        "rate": 0.2708333333333333
+      },
+      "dimension_tags": {
+        "count": 46,
+        "rate": 0.9583333333333334
+      }
+    }
+  },
+  "items": [
+    {
+      "chunk_id": "0152bb5ec25607f1962f",
+      "source": {
+        "file": "technology.md",
+        "start_line": 56,
+        "end_line": 56,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "武器",
+          "电磁枪"
+        ]
+      },
+      "domain": "technology",
+      "primary_scope": "武器",
+      "category": "电磁枪",
+      "entities": [
+        "武器"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "02fd03669171b453c8d3",
+      "source": {
+        "file": "technology.md",
+        "start_line": 61,
+        "end_line": 61,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "医疗",
+          "义肢维护"
+        ]
+      },
+      "domain": "technology",
+      "primary_scope": "医疗",
+      "category": "义肢维护",
+      "entities": [
+        "医疗"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "099d1bbdbc348eb3c332",
+      "source": {
+        "file": "characters.md",
+        "start_line": 6,
+        "end_line": 6,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "雷",
+          "生理结构"
+        ]
+      },
+      "domain": "character",
+      "primary_scope": "雷",
+      "category": "生理结构",
+      "entities": [
+        "亚巴顿",
+        "拉古艾尔",
+        "雷"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "0ad0e47151069e9d8676",
+      "source": {
+        "file": "history.md",
+        "start_line": 31,
+        "end_line": 31,
+        "heading_path": [
+          "历史事件（测试设定，不代表正式 canon）",
+          "第三话",
+          "身份告知"
+        ]
+      },
+      "domain": "history",
+      "primary_scope": null,
+      "category": "身份告知",
+      "entities": [
+        "天使",
+        "德尔塔",
+        "雷"
+      ],
+      "time_markers": [
+        "第三话"
+      ],
+      "locations": [],
+      "dimension_tags": [
+        "character_knowledge",
+        "character_relation",
+        "identity",
+        "physical_rule",
+        "time"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "17af8f8e8b7ff81197e4",
+      "source": {
+        "file": "technology.md",
+        "start_line": 46,
+        "end_line": 46,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "医疗",
+          "心脏扫描"
+        ]
+      },
+      "domain": "technology",
+      "primary_scope": "医疗",
+      "category": "心脏扫描",
+      "entities": [
+        "医疗",
+        "天使",
+        "雷"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "21c3b00fcedf12c06dbe",
+      "source": {
+        "file": "technology.md",
+        "start_line": 6,
+        "end_line": 6,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "动力外骨骼",
+          "电池续航"
+        ]
+      },
+      "domain": "technology",
+      "primary_scope": "动力外骨骼",
+      "category": "电池续航",
+      "entities": [
+        "动力外骨骼",
+        "德尔塔"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "252bda4cc47b93db0d7b",
+      "source": {
+        "file": "angels.md",
+        "start_line": 21,
+        "end_line": 21,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "拉古艾尔",
+          "右侧宿主"
+        ]
+      },
+      "domain": "angel",
+      "primary_scope": "拉古艾尔",
+      "category": "右侧宿主",
+      "entities": [
+        "亚巴顿",
+        "拉古艾尔",
+        "雷"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "character_relation",
+        "physical_rule"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "269e80f1f85e9bf4cc4e",
+      "source": {
+        "file": "technology.md",
+        "start_line": 11,
+        "end_line": 11,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "动力外骨骼",
+          "推进器冷却"
+        ]
+      },
+      "domain": "technology",
+      "primary_scope": "动力外骨骼",
+      "category": "推进器冷却",
+      "entities": [
+        "动力外骨骼"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "2979cd8f1d1098b9cdfc",
+      "source": {
+        "file": "characters.md",
+        "start_line": 61,
+        "end_line": 61,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "监察官",
+          "失明状态"
+        ]
+      },
+      "domain": "character",
+      "primary_scope": "监察官",
+      "category": "失明状态",
+      "entities": [
+        "监察官"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "2d8cb5017830f3a8881e",
+      "source": {
+        "file": "technology.md",
+        "start_line": 51,
+        "end_line": 51,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "档案馆",
+          "纸质备份"
+        ]
+      },
+      "domain": "technology",
+      "primary_scope": "档案馆",
+      "category": "纸质备份",
+      "entities": [
+        "档案馆"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "space",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "347b69141392efe457ad",
+      "source": {
+        "file": "characters.md",
+        "start_line": 51,
+        "end_line": 51,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "雷的父亲",
+          "秘密认知"
+        ]
+      },
+      "domain": "character",
+      "primary_scope": "雷的父亲",
+      "category": "秘密认知",
+      "entities": [
+        "拉古艾尔",
+        "雷",
+        "雷的父亲"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "character_knowledge",
+        "character_relation",
+        "physical_rule"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "3a56aa33f1ea6dd2186e",
+      "source": {
+        "file": "characters.md",
+        "start_line": 31,
+        "end_line": 31,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "德尔塔",
+          "公众身份"
+        ]
+      },
+      "domain": "character",
+      "primary_scope": "德尔塔",
+      "category": "公众身份",
+      "entities": [
+        "德尔塔"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "character_knowledge",
+        "identity",
+        "physical_rule"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "3b7f472d534c811d4c3f",
+      "source": {
+        "file": "angels.md",
+        "start_line": 26,
+        "end_line": 26,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "拉古艾尔",
+          "治疗限制"
+        ]
+      },
+      "domain": "angel",
+      "primary_scope": "拉古艾尔",
+      "category": "治疗限制",
+      "entities": [
+        "拉古艾尔"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "46422ea243d878bfdce9",
+      "source": {
+        "file": "characters.md",
+        "start_line": 21,
+        "end_line": 21,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "雷",
+          "身份保密"
+        ]
+      },
+      "domain": "character",
+      "primary_scope": "雷",
+      "category": "身份保密",
+      "entities": [
+        "双宿主",
+        "天使",
+        "德尔塔",
+        "雷"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "character_knowledge",
+        "character_relation",
+        "identity",
+        "physical_rule"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "47ba19b8b9ece1f35cc9",
+      "source": {
+        "file": "angels.md",
+        "start_line": 6,
+        "end_line": 6,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "亚巴顿",
+          "左侧宿主"
+        ]
+      },
+      "domain": "angel",
+      "primary_scope": "亚巴顿",
+      "category": "左侧宿主",
+      "entities": [
+        "亚巴顿",
+        "雷"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "character_relation",
+        "physical_rule",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "4ce0e0b41048241db315",
+      "source": {
+        "file": "characters.md",
+        "start_line": 56,
+        "end_line": 56,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "莉娅",
+          "工作职责"
+        ]
+      },
+      "domain": "character",
+      "primary_scope": "莉娅",
+      "category": "工作职责",
+      "entities": [
+        "档案馆",
+        "莉娅"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "space"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "4f3da93e1ce8304f1423",
+      "source": {
+        "file": "angels.md",
+        "start_line": 41,
+        "end_line": 41,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "守望者",
+          "感知方式"
+        ]
+      },
+      "domain": "angel",
+      "primary_scope": "守望者",
+      "category": "感知方式",
+      "entities": [
+        "守望者"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "character_relation",
+        "physical_rule",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "596ac1b6800114e8e9ed",
+      "source": {
+        "file": "angels.md",
+        "start_line": 56,
+        "end_line": 56,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "双宿主",
+          "心脏共鸣"
+        ]
+      },
+      "domain": "angel",
+      "primary_scope": "双宿主",
+      "category": "心脏共鸣",
+      "entities": [
+        "双宿主",
+        "天使",
+        "雷"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "character_relation",
+        "physical_rule"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "5a6ae37cea08494abfc8",
+      "source": {
+        "file": "history.md",
+        "start_line": 56,
+        "end_line": 56,
+        "heading_path": [
+          "历史事件（测试设定，不代表正式 canon）",
+          "2062年",
+          "城区停电"
+        ]
+      },
+      "domain": "history",
+      "primary_scope": null,
+      "category": "城区停电",
+      "entities": [
+        "天使"
+      ],
+      "time_markers": [
+        "2062年"
+      ],
+      "locations": [],
+      "dimension_tags": [
+        "space",
+        "time"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "685d37adddbe625a62f6",
+      "source": {
+        "file": "history.md",
+        "start_line": 16,
+        "end_line": 16,
+        "heading_path": [
+          "历史事件（测试设定，不代表正式 canon）",
+          "2064年",
+          "机械臂安装"
+        ]
+      },
+      "domain": "history",
+      "primary_scope": null,
+      "category": "机械臂安装",
+      "entities": [
+        "月城",
+        "机械左臂"
+      ],
+      "time_markers": [
+        "2064年"
+      ],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule",
+        "time"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "6c1bb108abfbac2c6467",
+      "source": {
+        "file": "technology.md",
+        "start_line": 31,
+        "end_line": 31,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "通信",
+          "地下信号"
+        ]
+      },
+      "domain": "technology",
+      "primary_scope": "通信",
+      "category": "地下信号",
+      "entities": [
+        "通信"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "space",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "729af4a00bcdc76cf96e",
+      "source": {
+        "file": "technology.md",
+        "start_line": 26,
+        "end_line": 26,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "通信",
+          "无线电屏蔽"
+        ]
+      },
+      "domain": "technology",
+      "primary_scope": "通信",
+      "category": "无线电屏蔽",
+      "entities": [
+        "天使",
+        "通信"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "character_relation",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "7cb9af5fe25451106869",
+      "source": {
+        "file": "history.md",
+        "start_line": 11,
+        "end_line": 11,
+        "heading_path": [
+          "历史事件（测试设定，不代表正式 canon）",
+          "2063年",
+          "月城失臂"
+        ]
+      },
+      "domain": "history",
+      "primary_scope": null,
+      "category": "月城失臂",
+      "entities": [
+        "月城"
+      ],
+      "time_markers": [
+        "2063年"
+      ],
+      "locations": [],
+      "dimension_tags": [
+        "time",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "806c7429338e0ae14bce",
+      "source": {
+        "file": "angels.md",
+        "start_line": 61,
+        "end_line": 61,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "避难所",
+          "静默结界"
+        ]
+      },
+      "domain": "angel",
+      "primary_scope": "避难所",
+      "category": "静默结界",
+      "entities": [
+        "守望者",
+        "避难所"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "character_relation",
+        "space"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "852cb1cabe33eac25f92",
+      "source": {
+        "file": "characters.md",
+        "start_line": 26,
+        "end_line": 26,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "德尔塔",
+          "装备"
+        ]
+      },
+      "domain": "character",
+      "primary_scope": "德尔塔",
+      "category": "装备",
+      "entities": [
+        "动力外骨骼",
+        "德尔塔"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "96851d55424e747fb3fa",
+      "source": {
+        "file": "angels.md",
+        "start_line": 36,
+        "end_line": 36,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "宿主契约",
+          "离体限制"
+        ]
+      },
+      "domain": "angel",
+      "primary_scope": "宿主契约",
+      "category": "离体限制",
+      "entities": [
+        "天使",
+        "宿主契约"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "character_relation",
+        "physical_rule",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "9afbd18aaf57d4b3e7e2",
+      "source": {
+        "file": "characters.md",
+        "start_line": 36,
+        "end_line": 36,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "德尔塔",
+          "装甲限制"
+        ]
+      },
+      "domain": "character",
+      "primary_scope": "德尔塔",
+      "category": "装甲限制",
+      "entities": [
+        "德尔塔"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "9e47d5a43afdf2ab345f",
+      "source": {
+        "file": "angels.md",
+        "start_line": 31,
+        "end_line": 31,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "宿主契约",
+          "契约代价"
+        ]
+      },
+      "domain": "angel",
+      "primary_scope": "宿主契约",
+      "category": "契约代价",
+      "entities": [
+        "天使",
+        "宿主契约"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "causality",
+        "character_relation",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "a67d2b6c645c6c2b1d19",
+      "source": {
+        "file": "history.md",
+        "start_line": 21,
+        "end_line": 21,
+        "heading_path": [
+          "历史事件（测试设定，不代表正式 canon）",
+          "第一话",
+          "公共新闻"
+        ]
+      },
+      "domain": "history",
+      "primary_scope": null,
+      "category": "公共新闻",
+      "entities": [
+        "德尔塔",
+        "雷"
+      ],
+      "time_markers": [
+        "第一话"
+      ],
+      "locations": [],
+      "dimension_tags": [
+        "space",
+        "time"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "a739b6548c630e2c4d40",
+      "source": {
+        "file": "characters.md",
+        "start_line": 11,
+        "end_line": 11,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "雷",
+          "经历"
+        ]
+      },
+      "domain": "character",
+      "primary_scope": "雷",
+      "category": "经历",
+      "entities": [
+        "雷"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "b6c490a416855d8e6bb7",
+      "source": {
+        "file": "technology.md",
+        "start_line": 16,
+        "end_line": 16,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "机械左臂",
+          "神经接口"
+        ]
+      },
+      "domain": "technology",
+      "primary_scope": "机械左臂",
+      "category": "神经接口",
+      "entities": [
+        "月城",
+        "机械左臂"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "c9a9dcf37f67bf74b64c",
+      "source": {
+        "file": "history.md",
+        "start_line": 61,
+        "end_line": 61,
+        "heading_path": [
+          "历史事件（测试设定，不代表正式 canon）",
+          "2065年",
+          "档案开放"
+        ]
+      },
+      "domain": "history",
+      "primary_scope": null,
+      "category": "档案开放",
+      "entities": [
+        "档案馆",
+        "莉娅"
+      ],
+      "time_markers": [
+        "2065年"
+      ],
+      "locations": [],
+      "dimension_tags": [
+        "space",
+        "time"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "ca52138556599b584637",
+      "source": {
+        "file": "history.md",
+        "start_line": 6,
+        "end_line": 6,
+        "heading_path": [
+          "历史事件（测试设定，不代表正式 canon）",
+          "2063年",
+          "大地震"
+        ]
+      },
+      "domain": "history",
+      "primary_scope": null,
+      "category": "大地震",
+      "entities": [
+        "亚巴顿",
+        "雷"
+      ],
+      "time_markers": [
+        "2063年"
+      ],
+      "locations": [],
+      "dimension_tags": [
+        "space",
+        "time"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "ce0e16ac4d447576296f",
+      "source": {
+        "file": "technology.md",
+        "start_line": 41,
+        "end_line": 41,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "能源",
+          "太阳能限制"
+        ]
+      },
+      "domain": "technology",
+      "primary_scope": "能源",
+      "category": "太阳能限制",
+      "entities": [
+        "能源"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "space",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "d0b7ab82e703d7bb717c",
+      "source": {
+        "file": "angels.md",
+        "start_line": 51,
+        "end_line": 51,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "天使",
+          "身份伪装"
+        ]
+      },
+      "domain": "angel",
+      "primary_scope": "天使",
+      "category": "身份伪装",
+      "entities": [
+        "天使"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "character_relation",
+        "identity",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "d11b313d4fe3fee7d599",
+      "source": {
+        "file": "history.md",
+        "start_line": 26,
+        "end_line": 26,
+        "heading_path": [
+          "历史事件（测试设定，不代表正式 canon）",
+          "第二话",
+          "首次当面见面"
+        ]
+      },
+      "domain": "history",
+      "primary_scope": null,
+      "category": "首次当面见面",
+      "entities": [
+        "德尔塔",
+        "雷"
+      ],
+      "time_markers": [
+        "第一话",
+        "第二话"
+      ],
+      "locations": [],
+      "dimension_tags": [
+        "character_relation",
+        "physical_rule",
+        "time"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "d312452d0673bf259c82",
+      "source": {
+        "file": "history.md",
+        "start_line": 46,
+        "end_line": 46,
+        "heading_path": [
+          "历史事件（测试设定，不代表正式 canon）",
+          "第五话",
+          "父亲离城"
+        ]
+      },
+      "domain": "history",
+      "primary_scope": null,
+      "category": "父亲离城",
+      "entities": [
+        "雷",
+        "雷的父亲"
+      ],
+      "time_markers": [
+        "第五话"
+      ],
+      "locations": [],
+      "dimension_tags": [
+        "character_relation",
+        "space",
+        "time"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "d7903beebe27e19f40ba",
+      "source": {
+        "file": "angels.md",
+        "start_line": 46,
+        "end_line": 46,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "封印",
+          "解除条件"
+        ]
+      },
+      "domain": "angel",
+      "primary_scope": "封印",
+      "category": "解除条件",
+      "entities": [
+        "天使",
+        "封印"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "character_relation",
+        "space",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "d7f7dd2035b813e0a886",
+      "source": {
+        "file": "characters.md",
+        "start_line": 41,
+        "end_line": 41,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "月城",
+          "机械左臂"
+        ]
+      },
+      "domain": "character",
+      "primary_scope": "月城",
+      "category": "机械左臂",
+      "entities": [
+        "月城",
+        "机械左臂"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "da962def6f2a55ad70fc",
+      "source": {
+        "file": "technology.md",
+        "start_line": 21,
+        "end_line": 21,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "机械左臂",
+          "触觉反馈"
+        ]
+      },
+      "domain": "technology",
+      "primary_scope": "机械左臂",
+      "category": "触觉反馈",
+      "entities": [
+        "月城",
+        "机械左臂"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "df1f51265ef5555994be",
+      "source": {
+        "file": "angels.md",
+        "start_line": 16,
+        "end_line": 16,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "亚巴顿",
+          "力量副作用"
+        ]
+      },
+      "domain": "angel",
+      "primary_scope": "亚巴顿",
+      "category": "力量副作用",
+      "entities": [
+        "亚巴顿",
+        "雷"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "causality",
+        "physical_rule"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "e704ee0ef831711f1744",
+      "source": {
+        "file": "angels.md",
+        "start_line": 11,
+        "end_line": 11,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "亚巴顿",
+          "提前降临"
+        ]
+      },
+      "domain": "angel",
+      "primary_scope": "亚巴顿",
+      "category": "提前降临",
+      "entities": [
+        "亚巴顿",
+        "天使"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "e7b5fd0acbea6191a941",
+      "source": {
+        "file": "history.md",
+        "start_line": 41,
+        "end_line": 41,
+        "heading_path": [
+          "历史事件（测试设定，不代表正式 canon）",
+          "第八话",
+          "长剑毁坏"
+        ]
+      },
+      "domain": "history",
+      "primary_scope": null,
+      "category": "长剑毁坏",
+      "entities": [
+        "守望者",
+        "雷"
+      ],
+      "time_markers": [
+        "第八话"
+      ],
+      "locations": [],
+      "dimension_tags": [
+        "time",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "negative",
+        "restrictive"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "eb8934fb11d790995821",
+      "source": {
+        "file": "technology.md",
+        "start_line": 36,
+        "end_line": 36,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "交通",
+          "城区列车"
+        ]
+      },
+      "domain": "technology",
+      "primary_scope": "交通",
+      "category": "城区列车",
+      "entities": [
+        "交通"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "space",
+        "world_rule"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "f0451fb2164fadf1aa1c",
+      "source": {
+        "file": "history.md",
+        "start_line": 36,
+        "end_line": 36,
+        "heading_path": [
+          "历史事件（测试设定，不代表正式 canon）",
+          "第四话",
+          "获得长剑"
+        ]
+      },
+      "domain": "history",
+      "primary_scope": null,
+      "category": "获得长剑",
+      "entities": [
+        "雷"
+      ],
+      "time_markers": [
+        "第四话"
+      ],
+      "locations": [],
+      "dimension_tags": [
+        "space",
+        "time"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "f355504eef1bbb05f59a",
+      "source": {
+        "file": "characters.md",
+        "start_line": 16,
+        "end_line": 16,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "雷",
+          "右胸异感"
+        ]
+      },
+      "domain": "character",
+      "primary_scope": "雷",
+      "category": "右胸异感",
+      "entities": [
+        "拉古艾尔",
+        "雷"
+      ],
+      "time_markers": [],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "f6fa2986c882a112f9c0",
+      "source": {
+        "file": "history.md",
+        "start_line": 51,
+        "end_line": 51,
+        "heading_path": [
+          "历史事件（测试设定，不代表正式 canon）",
+          "第六话",
+          "教堂避难"
+        ]
+      },
+      "domain": "history",
+      "primary_scope": null,
+      "category": "教堂避难",
+      "entities": [
+        "守望者",
+        "德尔塔",
+        "雷"
+      ],
+      "time_markers": [
+        "第六话"
+      ],
+      "locations": [],
+      "dimension_tags": [
+        "space",
+        "time"
+      ],
+      "polarity_tags": [
+        "affirmative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    },
+    {
+      "chunk_id": "fd1bec15cd989aa6cacf",
+      "source": {
+        "file": "characters.md",
+        "start_line": 46,
+        "end_line": 46,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "月城",
+          "手术时间"
+        ]
+      },
+      "domain": "character",
+      "primary_scope": "月城",
+      "category": "手术时间",
+      "entities": [
+        "月城",
+        "机械左臂"
+      ],
+      "time_markers": [
+        "2064年"
+      ],
+      "locations": [],
+      "dimension_tags": [
+        "physical_rule",
+        "time"
+      ],
+      "polarity_tags": [
+        "negative"
+      ],
+      "provenance": {
+        "domain": "root_heading_or_file_rule",
+        "primary_scope": "heading_path_penultimate_non_time",
+        "category": "heading_path_last",
+        "entities": "heading_vocabulary_exact_match",
+        "time_markers": "explicit_regex_match",
+        "locations": "not_inferred",
+        "dimension_tags": "keyword_multilabel_rules",
+        "polarity_tags": "surface_marker_rules"
+      }
+    }
+  ]
+}
