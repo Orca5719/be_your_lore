@@ -36,7 +36,7 @@ def _support_is_proven(assessment: dict) -> bool:
     )
 
 
-def validate_answer(value: dict, evidence: list[dict]) -> None:
+def validate_model_answer(value: dict, evidence: list[dict]) -> None:
     if not isinstance(value, dict) or set(value) != {"verdict", "citations", "reason", "assessment"}:
         raise ValueError("判断字段必须为verdict/citations/reason/assessment")
     verdict = value["verdict"]
@@ -55,11 +55,6 @@ def validate_answer(value: dict, evidence: list[dict]) -> None:
     assumptions = assessment["assumptions"]
     if not isinstance(assumptions, list) or any(not isinstance(item, str) or not item.strip() for item in assumptions):
         raise ValueError("assumptions须为文字数组")
-    if verdict == "contradiction" and not _contradiction_is_proven(assessment):
-        raise ValueError("contradiction必须证明两个命题无法同时为真")
-    if verdict == "consistent" and not _support_is_proven(assessment):
-        raise ValueError("consistent必须由候选设定直接支持完整事件")
-
     citations = value["citations"]
     if not isinstance(citations, list) or len(citations) > len(evidence):
         raise ValueError("citations无效")
@@ -77,6 +72,16 @@ def validate_answer(value: dict, evidence: list[dict]) -> None:
         if not isinstance(quote, str) or not quote.strip() or quote not in aliases[alias]["text"]:
             raise ValueError("citation原文不属于对应设定")
         seen.add(alias)
+
+
+def validate_answer(value: dict, evidence: list[dict]) -> None:
+    validate_model_answer(value, evidence)
+    verdict = value["verdict"]
+    assessment = value["assessment"]
+    if verdict == "contradiction" and not _contradiction_is_proven(assessment):
+        raise ValueError("contradiction必须证明两个命题无法同时为真")
+    if verdict == "consistent" and not _support_is_proven(assessment):
+        raise ValueError("consistent必须由候选设定直接支持完整事件")
 
 
 def apply_scope_guard(value: dict) -> dict:

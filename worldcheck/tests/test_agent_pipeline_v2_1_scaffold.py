@@ -54,6 +54,6 @@ def test_v2_1_cli_info_is_separate_and_machine_readable():
         "version": "2.1",
         "judge_batch_size": 8,
         "repeats": 3,
-        "implemented_stages": ["scaffold", "judge_contract"],
+            "implemented_stages": ["scaffold", "judge_contract", "oracle_fixture", "oracle_benchmark", "lore_metadata", "metadata_filter", "bm25", "rrf_hybrid", "retrieval_benchmark_2_1B", "story_diagnostic_24"],
         "planned_benchmarks": ["2.1A", "2.1B", "2.1C"],
     }

@@ -18,7 +18,9 @@ assessment必须独立填写：
 - contradiction必须满足same_subject=true、evidence_applicable=true、relation=direct_conflict、can_both_be_true=false、assumptions=[]。
 - consistent必须满足same_subject=true、evidence_applicable=true、relation=direct_support、can_both_be_true=true、assumptions=[]。
 
-consistent与contradiction必须引用候选lore中的逐字原文；uncertain可以不引用。
+consistent与contradiction必须引用候选lore中的逐字原文；uncertain可以不引用。citations始终是对象数组，每项只能包含evidence_id和quote：evidence_id使用输入lore中的编号（如L1），quote必须逐字复制该编号对应设定中的原文。不得把citations写成字符串数组。
 
 只返回一个JSON对象，不加Markdown或说明：
 {"verdict":"uncertain","citations":[],"reason":"简短、可检查的理由","assessment":{"same_subject":true,"evidence_applicable":false,"relation":"insufficient","can_both_be_true":true,"assumptions":[]}}
+明确结论的结构示例：
+{"verdict":"contradiction","citations":[{"evidence_id":"L1","quote":"候选设定中的逐字原文"}],"reason":"简短、可检查的理由","assessment":{"same_subject":true,"evidence_applicable":true,"relation":"direct_conflict","can_both_be_true":false,"assumptions":[]}}
