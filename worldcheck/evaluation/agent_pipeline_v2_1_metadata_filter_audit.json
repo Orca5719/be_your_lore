@@ -1,0 +1,5511 @@
+{
+  "schema_version": "agent-pipeline-v2.1-metadata-filter-audit-v1",
+  "status": "ok",
+  "k": 5,
+  "min_candidates": null,
+  "facts_total": 72,
+  "oracle_lore_pool_hits": 67,
+  "oracle_lore_pool_recall": 0.9305555555555556,
+  "selected_level_counts": {
+    "all": 31,
+    "entity|dimension": 41
+  },
+  "candidate_count": {
+    "min": 20,
+    "max": 48,
+    "mean": 36.625
+  },
+  "rows": [
+    {
+      "fixture_id": "OR-SL-P02-G1",
+      "expected_lore_ids": [
+        "099d1bbdbc348eb3c332"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 33,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 11
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 33
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-P02-G2",
+      "expected_lore_ids": [
+        "099d1bbdbc348eb3c332"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 33,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 11
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 33
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-P02-G3",
+      "expected_lore_ids": [
+        "099d1bbdbc348eb3c332"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 33,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 11
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 33
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-P03-G1",
+      "expected_lore_ids": [
+        "47ba19b8b9ece1f35cc9"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "亚巴顿"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "d11b313d4fe3fee7d599",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "f355504eef1bbb05f59a",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 28,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 4
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 28
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-P04-G1",
+      "expected_lore_ids": [
+        "df1f51265ef5555994be"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 33,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 11
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 33
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-005-G1",
+      "expected_lore_ids": [
+        "596ac1b6800114e8e9ed"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 33,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 11
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 33
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-005-G2",
+      "expected_lore_ids": [
+        "b6c490a416855d8e6bb7",
+        "da962def6f2a55ad70fc"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "7cb9af5fe25451106869",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "b6c490a416855d8e6bb7",
+          "d11b313d4fe3fee7d599",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "f355504eef1bbb05f59a",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 27,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 5
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 27
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-005-G3",
+      "expected_lore_ids": [
+        "252bda4cc47b93db0d7b"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "拉古艾尔"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "b6c490a416855d8e6bb7",
+          "d11b313d4fe3fee7d599",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "f355504eef1bbb05f59a",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 26,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 5
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 26
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-006-G1",
+      "expected_lore_ids": [
+        "252bda4cc47b93db0d7b"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "拉古艾尔"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "b6c490a416855d8e6bb7",
+          "d11b313d4fe3fee7d599",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "f355504eef1bbb05f59a",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 26,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 5
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 26
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-006-G2",
+      "expected_lore_ids": [
+        "4ce0e0b41048241db315",
+        "e704ee0ef831711f1744"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "莉娅"
+          ],
+          "dimensions": [
+            "character_knowledge"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 0
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 6
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-006-G3",
+      "expected_lore_ids": [
+        "fd1bec15cd989aa6cacf"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "time"
+          ],
+          "times": [
+            "2064年"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 2
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 16
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-007-G1",
+      "expected_lore_ids": [
+        "4f3da93e1ce8304f1423",
+        "6c1bb108abfbac2c6467"
+      ],
+      "oracle_lore_retained": false,
+      "missing_lore_ids": [
+        "4f3da93e1ce8304f1423"
+      ],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "space"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "252bda4cc47b93db0d7b",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "6c1bb108abfbac2c6467",
+          "806c7429338e0ae14bce",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 27,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 5
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 27
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-007-G2",
+      "expected_lore_ids": [
+        "d7903beebe27e19f40ba",
+        "f0451fb2164fadf1aa1c"
+      ],
+      "oracle_lore_retained": false,
+      "missing_lore_ids": [
+        "f0451fb2164fadf1aa1c"
+      ],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "封印"
+          ],
+          "dimensions": [
+            "world_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "269e80f1f85e9bf4cc4e",
+          "2d8cb5017830f3a8881e",
+          "3b7f472d534c811d4c3f",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "b6c490a416855d8e6bb7",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d7903beebe27e19f40ba",
+          "da962def6f2a55ad70fc",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821"
+        ],
+        "candidate_count": 23,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 23
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-007-G3",
+      "expected_lore_ids": [
+        "d11b313d4fe3fee7d599"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "character_relation"
+          ],
+          "times": [
+            "第二话"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "252bda4cc47b93db0d7b",
+          "347b69141392efe457ad",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "729af4a00bcdc76cf96e",
+          "806c7429338e0ae14bce",
+          "96851d55424e747fb3fa",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "ca52138556599b584637",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 25,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 8
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 25
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-008-G1",
+      "expected_lore_ids": [
+        "9e47d5a43afdf2ab345f",
+        "df1f51265ef5555994be"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "亚巴顿"
+          ],
+          "dimensions": [
+            "causality"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 7
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-008-G2",
+      "expected_lore_ids": [
+        "a67d2b6c645c6c2b1d19",
+        "d11b313d4fe3fee7d599"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "character_relation"
+          ],
+          "times": [
+            "第一话"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "252bda4cc47b93db0d7b",
+          "347b69141392efe457ad",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "729af4a00bcdc76cf96e",
+          "806c7429338e0ae14bce",
+          "96851d55424e747fb3fa",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "ca52138556599b584637",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 25,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 8
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 25
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-008-G3",
+      "expected_lore_ids": [
+        "0ad0e47151069e9d8676"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "character_knowledge"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 19
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-009-G1",
+      "expected_lore_ids": [
+        "ca52138556599b584637",
+        "fd1bec15cd989aa6cacf"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "time"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 16
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-009-G2",
+      "expected_lore_ids": [
+        "2979cd8f1d1098b9cdfc"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "监察官"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "b6c490a416855d8e6bb7",
+          "d11b313d4fe3fee7d599",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "f355504eef1bbb05f59a",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 26,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 26
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-010-G1",
+      "expected_lore_ids": [
+        "fd1bec15cd989aa6cacf"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "time"
+          ],
+          "times": [
+            "2064年"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 2
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 16
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-010-G2",
+      "expected_lore_ids": [
+        "3a56aa33f1ea6dd2186e"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "德尔塔"
+          ],
+          "dimensions": [
+            "identity"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 10
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-010-G3",
+      "expected_lore_ids": [
+        "4ce0e0b41048241db315",
+        "e704ee0ef831711f1744"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "莉娅"
+          ],
+          "dimensions": [
+            "character_knowledge"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 0
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 6
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-011-G1",
+      "expected_lore_ids": [
+        "d11b313d4fe3fee7d599"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "character_relation"
+          ],
+          "times": [
+            "第二话"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "252bda4cc47b93db0d7b",
+          "347b69141392efe457ad",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "729af4a00bcdc76cf96e",
+          "806c7429338e0ae14bce",
+          "96851d55424e747fb3fa",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "ca52138556599b584637",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 25,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 8
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 25
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-011-G2",
+      "expected_lore_ids": [
+        "fd1bec15cd989aa6cacf"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "time"
+          ],
+          "times": [
+            "2063年"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 16
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-011-G3",
+      "expected_lore_ids": [
+        "4f3da93e1ce8304f1423",
+        "6c1bb108abfbac2c6467"
+      ],
+      "oracle_lore_retained": false,
+      "missing_lore_ids": [
+        "4f3da93e1ce8304f1423"
+      ],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "space"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "252bda4cc47b93db0d7b",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "6c1bb108abfbac2c6467",
+          "806c7429338e0ae14bce",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 27,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 5
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 27
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-012-G1",
+      "expected_lore_ids": [
+        "0ad0e47151069e9d8676"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "character_knowledge"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 19
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-012-G2",
+      "expected_lore_ids": [
+        "46422ea243d878bfdce9"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷的父亲"
+          ],
+          "dimensions": [
+            "character_knowledge"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 5
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-012-G3",
+      "expected_lore_ids": [
+        "d7903beebe27e19f40ba",
+        "f0451fb2164fadf1aa1c"
+      ],
+      "oracle_lore_retained": false,
+      "missing_lore_ids": [
+        "f0451fb2164fadf1aa1c"
+      ],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "封印"
+          ],
+          "dimensions": [
+            "world_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "269e80f1f85e9bf4cc4e",
+          "2d8cb5017830f3a8881e",
+          "3b7f472d534c811d4c3f",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "b6c490a416855d8e6bb7",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d7903beebe27e19f40ba",
+          "da962def6f2a55ad70fc",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821"
+        ],
+        "candidate_count": 23,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 23
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-013-G1",
+      "expected_lore_ids": [
+        "d312452d0673bf259c82"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷的父亲"
+          ],
+          "dimensions": [
+            "time"
+          ],
+          "times": [
+            "第五话"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 14
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-013-G2",
+      "expected_lore_ids": [
+        "d7f7dd2035b813e0a886"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "space"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "2d8cb5017830f3a8881e",
+          "4ce0e0b41048241db315",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "a67d2b6c645c6c2b1d19",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 20,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 0
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 20
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-013-G3",
+      "expected_lore_ids": [
+        "9e47d5a43afdf2ab345f",
+        "df1f51265ef5555994be"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "亚巴顿"
+          ],
+          "dimensions": [
+            "causality"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 7
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-014-G1",
+      "expected_lore_ids": [
+        "806c7429338e0ae14bce"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "space"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "252bda4cc47b93db0d7b",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "6c1bb108abfbac2c6467",
+          "806c7429338e0ae14bce",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 27,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 5
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 27
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-014-G2",
+      "expected_lore_ids": [
+        "3b7f472d534c811d4c3f"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "world_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 38,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 38
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-014-G3",
+      "expected_lore_ids": [
+        "a67d2b6c645c6c2b1d19",
+        "d11b313d4fe3fee7d599"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "character_relation"
+          ],
+          "times": [
+            "第一话"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "252bda4cc47b93db0d7b",
+          "347b69141392efe457ad",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "729af4a00bcdc76cf96e",
+          "806c7429338e0ae14bce",
+          "96851d55424e747fb3fa",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "ca52138556599b584637",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 25,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 8
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 25
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-015-G1",
+      "expected_lore_ids": [
+        "2d8cb5017830f3a8881e"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "档案馆"
+          ],
+          "dimensions": [
+            "time"
+          ],
+          "times": [
+            "2065年"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 15
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-015-G2",
+      "expected_lore_ids": [
+        "df1f51265ef5555994be"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "causality"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 19
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-015-G3",
+      "expected_lore_ids": [
+        "ca52138556599b584637",
+        "fd1bec15cd989aa6cacf"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "time"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 16
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-016-G1",
+      "expected_lore_ids": [
+        "596ac1b6800114e8e9ed"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 33,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 11
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 33
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-016-G2",
+      "expected_lore_ids": [
+        "d11b313d4fe3fee7d599"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "character_relation"
+          ],
+          "times": [
+            "第一话"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "252bda4cc47b93db0d7b",
+          "347b69141392efe457ad",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "729af4a00bcdc76cf96e",
+          "806c7429338e0ae14bce",
+          "96851d55424e747fb3fa",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "ca52138556599b584637",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 25,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 8
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 25
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-016-G3",
+      "expected_lore_ids": [
+        "2979cd8f1d1098b9cdfc"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "监察官"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "b6c490a416855d8e6bb7",
+          "d11b313d4fe3fee7d599",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "f355504eef1bbb05f59a",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 26,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 26
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-017-G1",
+      "expected_lore_ids": [
+        "3a56aa33f1ea6dd2186e"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "德尔塔"
+          ],
+          "dimensions": [
+            "identity"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 10
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-017-G2",
+      "expected_lore_ids": [
+        "fd1bec15cd989aa6cacf"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "time"
+          ],
+          "times": [
+            "2063年"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 16
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-017-G3",
+      "expected_lore_ids": [
+        "0ad0e47151069e9d8676"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "character_knowledge"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 19
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-017-G4",
+      "expected_lore_ids": [
+        "d7903beebe27e19f40ba",
+        "f0451fb2164fadf1aa1c"
+      ],
+      "oracle_lore_retained": false,
+      "missing_lore_ids": [
+        "f0451fb2164fadf1aa1c"
+      ],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "封印"
+          ],
+          "dimensions": [
+            "world_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "269e80f1f85e9bf4cc4e",
+          "2d8cb5017830f3a8881e",
+          "3b7f472d534c811d4c3f",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "b6c490a416855d8e6bb7",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d7903beebe27e19f40ba",
+          "da962def6f2a55ad70fc",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821"
+        ],
+        "candidate_count": 23,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 23
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-018-G1",
+      "expected_lore_ids": [
+        "46422ea243d878bfdce9"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷的父亲"
+          ],
+          "dimensions": [
+            "character_knowledge"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 5
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-018-G2",
+      "expected_lore_ids": [
+        "d7f7dd2035b813e0a886"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "space"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "2d8cb5017830f3a8881e",
+          "4ce0e0b41048241db315",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "a67d2b6c645c6c2b1d19",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 20,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 0
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 20
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-018-G3",
+      "expected_lore_ids": [
+        "d312452d0673bf259c82"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷的父亲"
+          ],
+          "dimensions": [
+            "time"
+          ],
+          "times": [
+            "第五话"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 14
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-018-G4",
+      "expected_lore_ids": [
+        "9e47d5a43afdf2ab345f",
+        "df1f51265ef5555994be"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "亚巴顿"
+          ],
+          "dimensions": [
+            "causality"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 7
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-019-G1",
+      "expected_lore_ids": [
+        "3b7f472d534c811d4c3f"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "world_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 38,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 38
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-019-G2",
+      "expected_lore_ids": [
+        "df1f51265ef5555994be"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "causality"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 19
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-019-G3",
+      "expected_lore_ids": [
+        "806c7429338e0ae14bce"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "space"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "252bda4cc47b93db0d7b",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "6c1bb108abfbac2c6467",
+          "806c7429338e0ae14bce",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 27,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 5
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 27
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-019-G4",
+      "expected_lore_ids": [
+        "a67d2b6c645c6c2b1d19",
+        "d11b313d4fe3fee7d599"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "character_relation"
+          ],
+          "times": [
+            "第一话"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "252bda4cc47b93db0d7b",
+          "347b69141392efe457ad",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "729af4a00bcdc76cf96e",
+          "806c7429338e0ae14bce",
+          "96851d55424e747fb3fa",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "ca52138556599b584637",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 25,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 8
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 25
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-020-G1",
+      "expected_lore_ids": [
+        "d11b313d4fe3fee7d599"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "character_relation"
+          ],
+          "times": [
+            "第一话"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "252bda4cc47b93db0d7b",
+          "347b69141392efe457ad",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "729af4a00bcdc76cf96e",
+          "806c7429338e0ae14bce",
+          "96851d55424e747fb3fa",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "ca52138556599b584637",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 25,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 8
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 25
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-020-G2",
+      "expected_lore_ids": [
+        "3a56aa33f1ea6dd2186e"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "德尔塔"
+          ],
+          "dimensions": [
+            "identity"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 10
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-020-G3",
+      "expected_lore_ids": [
+        "2d8cb5017830f3a8881e"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "档案馆"
+          ],
+          "dimensions": [
+            "time"
+          ],
+          "times": [
+            "2065年"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 15
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-020-G4",
+      "expected_lore_ids": [
+        "ca52138556599b584637",
+        "fd1bec15cd989aa6cacf"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "time"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 16
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-021-G1",
+      "expected_lore_ids": [
+        "fd1bec15cd989aa6cacf"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "time"
+          ],
+          "times": [
+            "2063年"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 16
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-021-G2",
+      "expected_lore_ids": [
+        "46422ea243d878bfdce9"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷的父亲"
+          ],
+          "dimensions": [
+            "character_knowledge"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 5
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-021-G3",
+      "expected_lore_ids": [
+        "596ac1b6800114e8e9ed"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 33,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 11
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 33
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-021-G4",
+      "expected_lore_ids": [
+        "2979cd8f1d1098b9cdfc"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "监察官"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "b6c490a416855d8e6bb7",
+          "d11b313d4fe3fee7d599",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "f355504eef1bbb05f59a",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 26,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 26
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-022-G1",
+      "expected_lore_ids": [
+        "d7f7dd2035b813e0a886"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "space"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "2d8cb5017830f3a8881e",
+          "4ce0e0b41048241db315",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "a67d2b6c645c6c2b1d19",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 20,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 0
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 20
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-022-G2",
+      "expected_lore_ids": [
+        "3b7f472d534c811d4c3f"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "world_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 38,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 38
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-022-G3",
+      "expected_lore_ids": [
+        "47ba19b8b9ece1f35cc9"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "亚巴顿"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "d11b313d4fe3fee7d599",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "f355504eef1bbb05f59a",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 28,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 4
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 28
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-022-G4",
+      "expected_lore_ids": [
+        "4f3da93e1ce8304f1423",
+        "806c7429338e0ae14bce"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "守望者"
+          ],
+          "dimensions": [
+            "world_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "269e80f1f85e9bf4cc4e",
+          "2d8cb5017830f3a8881e",
+          "3b7f472d534c811d4c3f",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "b6c490a416855d8e6bb7",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d7903beebe27e19f40ba",
+          "da962def6f2a55ad70fc",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 25,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 2
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 25
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-023-G1",
+      "expected_lore_ids": [
+        "df1f51265ef5555994be"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "causality"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 19
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-023-G2",
+      "expected_lore_ids": [
+        "d11b313d4fe3fee7d599"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "character_relation"
+          ],
+          "times": [
+            "第一话"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "252bda4cc47b93db0d7b",
+          "347b69141392efe457ad",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "729af4a00bcdc76cf96e",
+          "806c7429338e0ae14bce",
+          "96851d55424e747fb3fa",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "ca52138556599b584637",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 25,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 1
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 8
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 25
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-023-G3",
+      "expected_lore_ids": [
+        "252bda4cc47b93db0d7b"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "拉古艾尔"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "b6c490a416855d8e6bb7",
+          "d11b313d4fe3fee7d599",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "f355504eef1bbb05f59a",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 26,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 5
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 26
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-023-G4",
+      "expected_lore_ids": [
+        "596ac1b6800114e8e9ed",
+        "df1f51265ef5555994be"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "world_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 38,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 38
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-024-G1",
+      "expected_lore_ids": [
+        "3a56aa33f1ea6dd2186e"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "德尔塔"
+          ],
+          "dimensions": [
+            "identity"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 10
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-024-G2",
+      "expected_lore_ids": [
+        "3b7f472d534c811d4c3f"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "雷"
+          ],
+          "dimensions": [
+            "world_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0"
+        ],
+        "candidate_count": 38,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 38
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-024-G3",
+      "expected_lore_ids": [
+        "fd1bec15cd989aa6cacf"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "time"
+          ],
+          "times": [
+            "2064年"
+          ]
+        },
+        "target_candidate_count": 20,
+        "selected_level": "all",
+        "candidate_ids": [
+          "0152bb5ec25607f1962f",
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "2d8cb5017830f3a8881e",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4ce0e0b41048241db315",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "5a6ae37cea08494abfc8",
+          "685d37adddbe625a62f6",
+          "6c1bb108abfbac2c6467",
+          "729af4a00bcdc76cf96e",
+          "7cb9af5fe25451106869",
+          "806c7429338e0ae14bce",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "9e47d5a43afdf2ab345f",
+          "a67d2b6c645c6c2b1d19",
+          "a739b6548c630e2c4d40",
+          "b6c490a416855d8e6bb7",
+          "c9a9dcf37f67bf74b64c",
+          "ca52138556599b584637",
+          "ce0e16ac4d447576296f",
+          "d0b7ab82e703d7bb717c",
+          "d11b313d4fe3fee7d599",
+          "d312452d0673bf259c82",
+          "d7903beebe27e19f40ba",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "e704ee0ef831711f1744",
+          "e7b5fd0acbea6191a941",
+          "eb8934fb11d790995821",
+          "f0451fb2164fadf1aa1c",
+          "f355504eef1bbb05f59a",
+          "f6fa2986c882a112f9c0",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 48,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension+time",
+            "candidate_count": 2
+          },
+          {
+            "level": "entity+dimension",
+            "candidate_count": 3
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 16
+          },
+          {
+            "level": "all",
+            "candidate_count": 48
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "OR-SL-024-G4",
+      "expected_lore_ids": [
+        "b6c490a416855d8e6bb7",
+        "da962def6f2a55ad70fc"
+      ],
+      "oracle_lore_retained": true,
+      "missing_lore_ids": [],
+      "filter": {
+        "schema_version": "agent-pipeline-v2.1-metadata-filter-v1",
+        "hints": {
+          "entities": [
+            "月城"
+          ],
+          "dimensions": [
+            "physical_rule"
+          ],
+          "times": []
+        },
+        "target_candidate_count": 20,
+        "selected_level": "entity|dimension",
+        "candidate_ids": [
+          "02fd03669171b453c8d3",
+          "099d1bbdbc348eb3c332",
+          "0ad0e47151069e9d8676",
+          "17af8f8e8b7ff81197e4",
+          "21c3b00fcedf12c06dbe",
+          "252bda4cc47b93db0d7b",
+          "269e80f1f85e9bf4cc4e",
+          "2979cd8f1d1098b9cdfc",
+          "347b69141392efe457ad",
+          "3a56aa33f1ea6dd2186e",
+          "3b7f472d534c811d4c3f",
+          "46422ea243d878bfdce9",
+          "47ba19b8b9ece1f35cc9",
+          "4f3da93e1ce8304f1423",
+          "596ac1b6800114e8e9ed",
+          "685d37adddbe625a62f6",
+          "7cb9af5fe25451106869",
+          "852cb1cabe33eac25f92",
+          "96851d55424e747fb3fa",
+          "9afbd18aaf57d4b3e7e2",
+          "b6c490a416855d8e6bb7",
+          "d11b313d4fe3fee7d599",
+          "d7f7dd2035b813e0a886",
+          "da962def6f2a55ad70fc",
+          "df1f51265ef5555994be",
+          "f355504eef1bbb05f59a",
+          "fd1bec15cd989aa6cacf"
+        ],
+        "candidate_count": 27,
+        "fallback_used": true,
+        "trace": [
+          {
+            "level": "entity+dimension",
+            "candidate_count": 5
+          },
+          {
+            "level": "entity|dimension",
+            "candidate_count": 27
+          }
+        ]
+      }
+    }
+  ]
+}

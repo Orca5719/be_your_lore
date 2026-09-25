@@ -1,16 +1,15 @@
-# Benchmark 2.1B — Metadata-aware retrieval
+# Benchmark 2.1B — Metadata-Aware Retrieval
 
-**State:** reserved; not implemented and not run.
+**State:** implemented; structural audit complete, no full model benchmark run.
 
-## Intended question
+## Question
 
-Does filtering dense-retrieval candidates by compatible metadata improve evidence quality and downstream Judge 2.1 decisions relative to the unfiltered dense baseline?
+Can structured source metadata remove irrelevant lore before retrieval without excluding evidence required to judge a fact?
 
-## Planned controls
+## Included material
 
-- Keep the corpus, dense encoder, query formation, top-K, Judge protocol and dataset fixed.
-- Compare metadata filtering on/off using the same cases and gold evidence requirements.
-- Report retrieval Recall@K, MRR, Precision@K, noise, missing retrievals and downstream classification/detection outcomes.
-- Preserve a per-case retrieval trace and configuration digest.
+- Versioned lore metadata snapshot and metadata-filter implementation.
+- Audit over the 72 Oracle cases: the filtered candidate pool preserves required lore for 67 cases (93.06%).
+- Dedicated metadata and filter tests.
 
-No code, result, or numerical claim belongs to this branch yet.
+This branch does not claim a completed model or timing comparison. It is the retrieval-filter layer that precedes 2.1C's BM25/RRF experiments.
