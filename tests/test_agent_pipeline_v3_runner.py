@@ -30,3 +30,19 @@ def test_resume_skips_completed_and_rejects_duplicates(tmp_path):
     path.write_text(path.read_text(encoding="utf-8") * 2, encoding="utf-8")
     with pytest.raises(ValueError, match="duplicate"):
         load_jsonl(path)
+
+
+def test_progress_callbacks_receive_case_and_stage(tmp_path):
+    starts, stages = [], []
+    config = SimpleNamespace(name="baseline")
+    def process(system, case_id, text, progress=None):
+        progress({"purpose": "extraction", "window_id": 1})
+        metrics = {name: {"seconds": 0.0} for name in ("extraction", "retrieval", "judge", "report", "total")}
+        return {"case_id": case_id, "system": "baseline", "status": "ok", "result": {}, "stage_metrics": metrics}
+    run_resumable(
+        [{"id": "C1", "story": "x"}], [SimpleNamespace(config=config)], tmp_path / "rows.jsonl", process,
+        on_start=lambda case, system, completed, total: starts.append((case["id"], completed, total)),
+        progress_factory=lambda case, system: stages.append,
+    )
+    assert starts == [("C1", 0, 1)]
+    assert stages == [{"purpose": "extraction", "window_id": 1}]

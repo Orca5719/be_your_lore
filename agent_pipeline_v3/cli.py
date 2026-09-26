@@ -98,8 +98,17 @@ def run_end_to_end(args, runtime=None) -> int:
     if not target_dataset.exists(): shutil.copy2(DATASET, target_dataset)
     manifest = _manifest(data, args)
     ensure_manifest(directory / "manifest.json", manifest)
+    print("RESULT_DIR=" + str(directory), flush=True)
+    print("端到端轨道：已完成的案例将自动跳过。", flush=True)
     _, _, _, baseline, candidate = runtime or _load_runtime(args.device)
-    rows = run_resumable(data["cases"], [baseline, candidate], directory / "end_to_end.jsonl", process_story)
+    def on_start(case, system, completed, total):
+        print(f"[E2E {completed + 1}/{total}] {case['id']} / {system.config.name}", flush=True)
+    def progress_factory(case, system):
+        return lambda step: print(f"  [{system.config.name}] {step.get('purpose', 'stage')} {step.get('window_id', '')}", flush=True)
+    rows = run_resumable(
+        data["cases"], [baseline, candidate], directory / "end_to_end.jsonl", process_story,
+        on_start=on_start, progress_factory=progress_factory,
+    )
     if not (directory / "review.json").exists():
         atomic_write_json(directory / "review.json", build_review_template(data, rows))
     print("RESULT_DIR=" + str(directory), flush=True)
@@ -128,19 +137,25 @@ def run_paired(args, runtime=None) -> int:
     llm, dense, hybrid, _, _ = runtime or _load_runtime(args.device)
     from agent_pipeline_v2.judge import judge_events
     from agent_pipeline_v2_1.story_pipeline import judge_story_events
-    rows = []
+    paired_path = directory / "paired.jsonl"
+    rows = load_jsonl(paired_path) if paired_path.exists() else []
+    done = {row["case_id"] for row in rows}
     for case in data["cases"]:
+        if case["id"] in done:
+            continue
+        print(f"[PAIRED {len(rows) + 1}/{len(data['cases'])}] {case['id']}", flush=True)
         extraction = baseline[case["id"]]["result"]["benchmark_stages"]["extraction"]
-        cached = _canonical_retrievals(extraction, dense, hybrid, args.top_k)
+        progress = lambda step: print(f"  [paired] {step.get('purpose', 'stage')} {step.get('window_id', '')}", flush=True)
+        cached = _canonical_retrievals(extraction, dense, hybrid, args.top_k, progress)
         matrix = run_paired_matrix(
             extraction["events"],
             lambda extraction, top_k: cached["dense"], lambda extraction, top_k: cached["hybrid"],
-            lambda value, batch_size: judge_events(value["v1"], batch_size=batch_size, llm=llm),
-            lambda value, batch_size: judge_story_events(value["v21"], llm, batch_size),
+            lambda value, batch_size: judge_events(value["v1"], batch_size=batch_size, llm=llm, progress=progress),
+            lambda value, batch_size: judge_story_events(value["v21"], llm, batch_size, progress),
             top_k=args.top_k, batch_size=args.judge_batch_size,
         )
         rows.append({"case_id": case["id"], "matrix": matrix})
-        write_jsonl_atomic(directory / "paired.jsonl", rows)
+        write_jsonl_atomic(paired_path, rows)
     print("RESULT_DIR=" + str(directory), flush=True)
     return 2 if any(row["matrix"]["status"] != "ok" for row in rows) else 0
 
@@ -184,24 +199,41 @@ def summary(args) -> int:
 def run_all(args) -> int:
     if args.output is None:
         args.output = _result_dir(None)
+    print("RESULT_DIR=" + str(args.output.resolve()), flush=True)
     runtime = _load_runtime(args.device)
     code = run_end_to_end(args, runtime)
     paired_args = argparse.Namespace(**vars(args), result_dir=args.output or Path())
     paired = run_paired(paired_args, runtime)
     data = _read((args.output / "story_dataset.json").resolve())
     _, _, _, baseline, candidate = runtime
+    if args.repeats < 1 or args.warmup < 0:
+        raise ValueError("repeats must be positive and warmup cannot be negative")
+    quality_rows = load_jsonl(args.output.resolve() / "end_to_end.jsonl")
     by_system = defaultdict(list)
-    for repeat in range(args.warmup + args.repeats):
-        label = "warmup" if repeat < args.warmup else f"repeat_{repeat - args.warmup + 1}"
+    # Warm-up establishes stable kernels/caches; one fixed story per system is sufficient and excluded.
+    for warmup in range(1, args.warmup + 1):
         for system in (baseline, candidate):
-            path = args.output.resolve() / f"performance_{system.config.name}_{label}.jsonl"
+            path = args.output.resolve() / f"performance_{system.config.name}_warmup_{warmup}.jsonl"
+            rows = load_jsonl(path)
+            if not rows:
+                case = data["cases"][0]
+                print(f"[PERF warmup {warmup}/{args.warmup}] {system.config.name} / {case['id']}", flush=True)
+                rows.append(process_story(system, case["id"], case["story"], progress=lambda step: print(f"  [{system.config.name}] {step.get('purpose', 'stage')} {step.get('window_id', '')}", flush=True)))
+                write_jsonl_atomic(path, rows)
+            by_system[system.config.name].append(rows)
+    # The deterministic quality run is also measured repeat 1; do not execute it twice.
+    for system in (baseline, candidate):
+        by_system[system.config.name].append([row for row in quality_rows if row["system"] == system.config.name])
+    for repeat in range(2, args.repeats + 1):
+        for system in (baseline, candidate):
+            path = args.output.resolve() / f"performance_{system.config.name}_repeat_{repeat}.jsonl"
             rows = load_jsonl(path)
             done = {row["case_id"] for row in rows}
-            for case in data["cases"]:
+            for number, case in enumerate(data["cases"], 1):
                 if case["id"] in done:
                     continue
-                print(f"Performance {label} {system.config.name}: {case['id']}", flush=True)
-                rows.append(process_story(system, case["id"], case["story"]))
+                print(f"[PERF repeat {repeat}/{args.repeats} {number}/{len(data['cases'])}] {system.config.name} / {case['id']}", flush=True)
+                rows.append(process_story(system, case["id"], case["story"], progress=lambda step, name=system.config.name: print(f"  [{name}] {step.get('purpose', 'stage')} {step.get('window_id', '')}", flush=True)))
                 write_jsonl_atomic(path, rows)
             by_system[system.config.name].append(rows)
     performance = {name: aggregate_performance(runs, args.warmup) for name, runs in by_system.items()}

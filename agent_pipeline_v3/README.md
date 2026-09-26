@@ -22,6 +22,7 @@ It also runs a paired matrix over byte-identical extracted events: Dense/Hybrid 
 ```
 
 `run-all` is resumable. It rejects reuse when the dataset, prompts, index, source adapters, fixed configuration, repeat count, or warm-up count changes.
+The result directory is printed before model loading. Progress is printed per story, system, and LLM stage. The quality run is reused as measured repeat 1; each warm-up touches one fixed story per system and is excluded from medians.
 
 After the run, review `review.json`. Set `provenance` honestly to `assistant-reviewed` or `user-reviewed`; every emitted event, finding, and reasoning-support entry must have a non-pending label. Then run:
 

@@ -54,7 +54,7 @@ def ensure_manifest(path: Path, manifest: dict) -> None:
         atomic_write_json(path, manifest)
 
 
-def run_resumable(cases: list[dict], systems: list, output: Path, process) -> list[dict]:
+def run_resumable(cases: list[dict], systems: list, output: Path, process, *, on_start=None, progress_factory=None) -> list[dict]:
     rows = load_jsonl(output)
     done = {(row["case_id"], row["system"]) for row in rows}
     for case in cases:
@@ -62,7 +62,12 @@ def run_resumable(cases: list[dict], systems: list, output: Path, process) -> li
             key = (case["id"], system.config.name)
             if key in done:
                 continue
-            row = process(system, case["id"], case["story"])
+            if on_start:
+                on_start(case, system, len(rows), len(cases) * len(systems))
+            if progress_factory:
+                row = process(system, case["id"], case["story"], progress=progress_factory(case, system))
+            else:
+                row = process(system, case["id"], case["story"])
             validate_run_row(row)
             rows.append(row)
             done.add(key)

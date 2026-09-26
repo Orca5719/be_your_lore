@@ -22,4 +22,5 @@ Task 6: complete (exact-signature review reuse, exhaustive event/finding/reasoni
 Task 7: implementation complete (deterministic JSON/Markdown, docs, no-model two-track smoke; official CUDA run pending user execution by design).
 Verification: Benchmark 3 26/26; related v2 review/attribution/v2.1 story tests 11/11; full suite 438/438; compile/validate ok; prior freezes 260 files unchanged and archive_ok=true.
 Ruling: pytest is absent from project venv and Anaconda lacks torch/transformers; full suite used the project interpreter after preloading its model dependencies and then importing the existing Anaconda pytest package. Initial default-temp failures were environment permission errors; rerun with a project-local basetemp passed 438/438.
+Runtime correction: `run-all` now prints its result directory before model loading, forwards case/stage progress, resumes the paired JSONL track, reuses the quality run as measured repeat 1, and warms up one fixed story per system. The interrupted official directory has 41/48 end-to-end rows and an identity hash matching the corrected runner, so it can resume without discarding completed work.
 
