@@ -1,0 +1,23 @@
+{
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "parameters": "4B (nominal)",
+  "precision": "NF4 4-bit weights, BF16 compute",
+  "model_footprint_gib": 2.4167473316192627,
+  "model_cuda_allocated_gib": 2.484022617340088,
+  "peak_allocated_gib": 4.213778972625732,
+  "peak_reserved_gib": 6.76953125,
+  "ttft_median_ms": 344.0303000024869,
+  "decode_tokens_per_second": 13.130027773289472,
+  "avg_input_tokens": 956.0555555555555,
+  "warm_total_latency_median_seconds": 11.09180209999613,
+  "total_latency_median_seconds": 11.09180209999613,
+  "total_latency_p95_seconds": 58.98761700000614,
+  "story_throughput_per_second": 0.04802711987720599,
+  "generation_calls": 18,
+  "ttft_samples": 18,
+  "decode_samples": 18,
+  "input_token_samples": 18,
+  "first_request_seconds": null,
+  "accuracy": null,
+  "measurement": "Explicit full-pipeline warm-up excluded from measured rows; all measured failures and retries included. TTFT starts after tokenization. Decode excludes first token, includes EOS. VRAM PyTorch process counters, GiB, includes Qwen+BGE; reserved may include warm-up cache. First-request latency is not measured; model/encoder load reported separately. Accuracy pending reviewed semantic matches."
+}

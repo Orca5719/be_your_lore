@@ -1,0 +1,854 @@
+[
+  {
+    "seconds": 22.831092700002046,
+    "result": {
+      "schema_version": "agent-pipeline-report-v2",
+      "stage": "report",
+      "status": "ok",
+      "report": {
+        "overview": "已核对1项重要事实：0项明确矛盾、0项证据不足或无法明确判定、1项明确吻合。结论仅覆盖已提取并核对的事实，未保存设定。段内事件检查另发现0项矛盾、0项待确认。",
+        "scope": "checked_events",
+        "contradictions": [],
+        "uncertainties": [],
+        "confirmations": [
+          {
+            "finding_ids": [
+              "R1"
+            ],
+            "event_ids": [
+              "E1"
+            ],
+            "actors": [
+              "雷"
+            ],
+            "fact": "雷拥有两颗心脏",
+            "reasons": [
+              "原文事件明确断言雷拥有两颗心脏，设定L1直接支持该事实，且未提出任何矛盾或排除条件。"
+            ],
+            "citations": [
+              {
+                "chunk_id": "099d1bbdbc348eb3c332",
+                "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。"
+              }
+            ],
+            "reason_origin": null,
+            "uncertainty_code": null
+          }
+        ],
+        "possible_additions": [],
+        "confirmation_topics": [],
+        "excluded_details": [],
+        "processing_issues": [],
+        "story_consistency": {
+          "status": "ok",
+          "scope": "current_story_observed_events",
+          "pair_count": 0,
+          "unprocessed_pair_count": 0,
+          "contradictions": [],
+          "uncertainties": []
+        }
+      },
+      "summary": {
+        "verdict": "consistent",
+        "label": "已核对事实明确吻合",
+        "scope": "checked_events",
+        "counts": {
+          "consistent": 1,
+          "contradiction": 0,
+          "uncertain": 0,
+          "failed": 0,
+          "pending": 0,
+          "ignored": 0,
+          "support_only": 0,
+          "unprocessed": 0
+        },
+        "checked_event_count": 1,
+        "finding_count": 1
+      },
+      "findings": [
+        {
+          "id": "R1",
+          "event_ids": [
+            "E1"
+          ],
+          "actors": [
+            "雷"
+          ],
+          "event": "雷拥有两颗心脏",
+          "verdict": "consistent",
+          "label": "明确吻合",
+          "reasons": [
+            "原文事件明确断言雷拥有两颗心脏，设定L1直接支持该事实，且未提出任何矛盾或排除条件。"
+          ],
+          "citations": [
+            {
+              "chunk_id": "099d1bbdbc348eb3c332",
+              "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。"
+            }
+          ],
+          "sources": [
+            {
+              "id": "S1",
+              "text": "雷拥有两颗心脏。",
+              "start": 0,
+              "end": 8
+            }
+          ],
+          "contexts": [],
+          "origin": "model",
+          "assessment": {
+            "same_subject": true,
+            "evidence_applicable": true,
+            "relation": "direct_support",
+            "assumptions": []
+          },
+          "reason_origin": null,
+          "uncertainty_code": null
+        }
+      ],
+      "evidence": [
+        {
+          "id": "099d1bbdbc348eb3c332",
+          "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "file": "characters.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "生理结构"
+          ]
+        }
+      ],
+      "failed_items": [],
+      "pending_events": [],
+      "ignored_events": [],
+      "support_events": [],
+      "unprocessed_events": [],
+      "review_items": [
+        {
+          "event_id": "E1",
+          "reasons": [
+            "optional_fields_defaulted"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "actors": [
+            "雷"
+          ],
+          "event": "雷拥有两颗心脏",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S1"
+          ],
+          "context_ids": [],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S1",
+              "text": "雷拥有两颗心脏。",
+              "start": 0,
+              "end": 8
+            }
+          ],
+          "contexts": [],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E1",
+          "review_required": true,
+          "review_reasons": [
+            "optional_fields_defaulted"
+          ]
+        }
+      ],
+      "judge": {
+        "schema_version": "agent-pipeline-judge-v1",
+        "prompt_version": "judge-v6",
+        "stage": "judge",
+        "status": "ok",
+        "events": [
+          {
+            "actors": [
+              "雷"
+            ],
+            "event": "雷拥有两颗心脏",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "雷拥有两颗心脏。",
+                "start": 0,
+                "end": 8
+              }
+            ],
+            "contexts": [],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E1",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          }
+        ],
+        "items": [
+          {
+            "event_id": "E1",
+            "event": {
+              "actors": [
+                "雷"
+              ],
+              "event": "雷拥有两颗心脏",
+              "explicit": true,
+              "modality": "observed",
+              "source_ids": [
+                "S1"
+              ],
+              "context_ids": [],
+              "mental_state": null,
+              "conditions": [],
+              "sources": [
+                {
+                  "id": "S1",
+                  "text": "雷拥有两颗心脏。",
+                  "start": 0,
+                  "end": 8
+                }
+              ],
+              "contexts": [],
+              "defaulted_fields": [
+                "mental_state",
+                "conditions"
+              ],
+              "id": "E1",
+              "review_required": true,
+              "review_reasons": [
+                "optional_fields_defaulted"
+              ]
+            },
+            "evidence": [
+              {
+                "id": "099d1bbdbc348eb3c332",
+                "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+                "file": "characters.md",
+                "start_line": 6,
+                "end_line": 6,
+                "heading_path": [
+                  "人物设定（测试设定，不代表正式 canon）",
+                  "雷",
+                  "生理结构"
+                ],
+                "start_offset": 41,
+                "end_offset": 70,
+                "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+                "token_count": 55,
+                "score": 0.7252553701400757
+              },
+              {
+                "id": "0ad0e47151069e9d8676",
+                "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+                "file": "history.md",
+                "start_line": 31,
+                "end_line": 31,
+                "heading_path": [
+                  "历史事件（测试设定，不代表正式 canon）",
+                  "第三话",
+                  "身份告知"
+                ],
+                "start_offset": 322,
+                "end_offset": 359,
+                "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+                "token_count": 65,
+                "score": 0.6500575542449951
+              },
+              {
+                "id": "46422ea243d878bfdce9",
+                "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+                "file": "characters.md",
+                "start_line": 21,
+                "end_line": 21,
+                "heading_path": [
+                  "人物设定（测试设定，不代表正式 canon）",
+                  "雷",
+                  "身份保密"
+                ],
+                "start_offset": 189,
+                "end_offset": 229,
+                "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+                "token_count": 66,
+                "score": 0.6370701193809509
+              },
+              {
+                "id": "a739b6548c630e2c4d40",
+                "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+                "file": "characters.md",
+                "start_line": 11,
+                "end_line": 11,
+                "heading_path": [
+                  "人物设定（测试设定，不代表正式 canon）",
+                  "雷",
+                  "经历"
+                ],
+                "start_offset": 85,
+                "end_offset": 116,
+                "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+                "token_count": 55,
+                "score": 0.6290508508682251
+              },
+              {
+                "id": "17af8f8e8b7ff81197e4",
+                "text": "普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+                "file": "technology.md",
+                "start_line": 46,
+                "end_line": 46,
+                "heading_path": [
+                  "科技规则（测试设定，不代表正式 canon）",
+                  "医疗",
+                  "心脏扫描"
+                ],
+                "start_offset": 472,
+                "end_offset": 502,
+                "embedding_text": "科技规则（测试设定，不代表正式 canon） > 医疗 > 心脏扫描\n普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+                "token_count": 57,
+                "score": 0.6264145374298096
+              }
+            ],
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+                "chunk_id": "099d1bbdbc348eb3c332"
+              }
+            ],
+            "call": {
+              "status": "ok",
+              "attempts": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": true,\n    \"evidence_applicable\": true,\n    \"relation\": \"direct_support\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"consistent\",\n  \"citations\": [\n    {\n      \"evidence_id\": \"L1\",\n      \"quote\": \"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"\n    }\n  ],\n  \"reason\": \"原文事件明确断言雷拥有两颗心脏，设定L1直接支持该事实，且未提出任何矛盾或排除条件。\",\n  \"uncertainty_code\": null\n}",
+                  "input_tokens": 1912,
+                  "max_new_tokens": 768,
+                  "timing": {
+                    "seconds": 13.483105500003148,
+                    "input_tokens": 1912,
+                    "generated_tokens": 141,
+                    "ttft_ms": 1749.5424000007915,
+                    "decode_seconds": 11.73265050000191,
+                    "decode_tokens": 140,
+                    "decode_tokens_per_second": 11.932512606591086
+                  }
+                }
+              ]
+            },
+            "status": "ok",
+            "verdict": "consistent",
+            "label": "明确吻合",
+            "reason": "原文事件明确断言雷拥有两颗心脏，设定L1直接支持该事实，且未提出任何矛盾或排除条件。",
+            "origin": "model",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        ],
+        "retrieval": {
+          "schema_version": "agent-pipeline-retrieval-v1",
+          "stage": "retrieval",
+          "status": "ok",
+          "filtering": {
+            "schema_version": "agent-pipeline-filtering-v1",
+            "prompt_version": "filtering-v7",
+            "stage": "filtering",
+            "status": "ok",
+            "failure_reasons": {
+              "upstream_status": "ok",
+              "pending_event_ids": [],
+              "rejected_count": 0,
+              "failed_window_ids": []
+            },
+            "events": [
+              {
+                "actors": [
+                  "雷"
+                ],
+                "event": "雷拥有两颗心脏",
+                "explicit": true,
+                "modality": "observed",
+                "source_ids": [
+                  "S1"
+                ],
+                "context_ids": [],
+                "mental_state": null,
+                "conditions": [],
+                "sources": [
+                  {
+                    "id": "S1",
+                    "text": "雷拥有两颗心脏。",
+                    "start": 0,
+                    "end": 8
+                  }
+                ],
+                "contexts": [],
+                "defaulted_fields": [
+                  "mental_state",
+                  "conditions"
+                ],
+                "id": "E1",
+                "review_required": true,
+                "review_reasons": [
+                  "optional_fields_defaulted"
+                ]
+              }
+            ],
+            "decisions": [
+              {
+                "event_id": "E1",
+                "decision": "keep",
+                "reason": "特殊机制或异常状态，需核对设定约束",
+                "reason_code": "mechanism"
+              }
+            ],
+            "selected_events": [
+              {
+                "actors": [
+                  "雷"
+                ],
+                "event": "雷拥有两颗心脏",
+                "explicit": true,
+                "modality": "observed",
+                "source_ids": [
+                  "S1"
+                ],
+                "context_ids": [],
+                "mental_state": null,
+                "conditions": [],
+                "sources": [
+                  {
+                    "id": "S1",
+                    "text": "雷拥有两颗心脏。",
+                    "start": 0,
+                    "end": 8
+                  }
+                ],
+                "contexts": [],
+                "defaulted_fields": [
+                  "mental_state",
+                  "conditions"
+                ],
+                "id": "E1",
+                "review_required": true,
+                "review_reasons": [
+                  "optional_fields_defaulted"
+                ]
+              }
+            ],
+            "ignored_events": [],
+            "pending_events": [],
+            "understanding": {
+              "schema_version": "agent-pipeline-understanding-v1",
+              "prompt_version": "understanding-v7",
+              "stage": "understanding",
+              "status": "ok",
+              "text": "雷拥有两颗心脏。",
+              "events": [
+                {
+                  "actors": [
+                    "雷"
+                  ],
+                  "event": "雷拥有两颗心脏",
+                  "explicit": true,
+                  "modality": "observed",
+                  "source_ids": [
+                    "S1"
+                  ],
+                  "context_ids": [],
+                  "mental_state": null,
+                  "conditions": [],
+                  "sources": [
+                    {
+                      "id": "S1",
+                      "text": "雷拥有两颗心脏。",
+                      "start": 0,
+                      "end": 8
+                    }
+                  ],
+                  "contexts": [],
+                  "defaulted_fields": [
+                    "mental_state",
+                    "conditions"
+                  ],
+                  "id": "E1",
+                  "review_required": true,
+                  "review_reasons": [
+                    "optional_fields_defaulted"
+                  ]
+                }
+              ],
+              "rejected": [],
+              "calls": [
+                {
+                  "status": "ok",
+                  "attempts": [
+                    {
+                      "attempt": 1,
+                      "status": "ok",
+                      "raw_output": "{\"events\":[{\"actors\":[\"雷\"],\"event\":\"雷拥有两颗心脏\",\"explicit\":true,\"modality\":\"observed\",\"source_ids\":[\"S1\"],\"context_ids\":[]}]}",
+                      "input_tokens": 768,
+                      "max_new_tokens": 1536,
+                      "timing": {
+                        "seconds": 5.992661500000395,
+                        "input_tokens": 768,
+                        "generated_tokens": 38,
+                        "ttft_ms": 1818.2811999977275,
+                        "decode_seconds": 4.172542000000249,
+                        "decode_tokens": 37,
+                        "decode_tokens_per_second": 8.867496121069074
+                      }
+                    }
+                  ],
+                  "window_id": 1,
+                  "purpose": "initial_understanding",
+                  "target_ids": [
+                    "S1"
+                  ],
+                  "context_ids": []
+                }
+              ],
+              "duplicate_candidates": 0,
+              "unrecovered_failed_source_ids": [],
+              "failure_reasons": {
+                "unresolved_candidates": [],
+                "missing_source_ids": [],
+                "failed_source_ids": []
+              },
+              "processing_complete": true,
+              "semantic_verification": "not_verified",
+              "review_required": true,
+              "request_seconds": 6.13104039999962,
+              "model_loaded_this_request": false,
+              "coverage": {
+                "source_spans": {
+                  "S1": {
+                    "text": "雷拥有两颗心脏。",
+                    "start": 0,
+                    "end": 8
+                  }
+                },
+                "covered_source_ids": [
+                  "S1"
+                ],
+                "primary_source_ids": [
+                  "S1"
+                ],
+                "context_only_source_ids": [],
+                "missing_source_ids": [],
+                "note": "包括事件/条件/主体上下文引用；被引用不保证全部语义提取正确，仅作上下文的片段仍需检查是否漏事件"
+              },
+              "device": "cuda",
+              "model_load_seconds": 13.98871859999781,
+              "notice": "仅语义理解：未筛选重要性、未检索、未判断、未保存设定"
+            },
+            "upstream_status": "ok",
+            "calls": [
+              {
+                "status": "ok",
+                "attempts": [
+                  {
+                    "attempt": 1,
+                    "status": "ok",
+                    "raw_output": "{\"decisions\":[{\"event_id\":\"E1\",\"decision\":\"keep\",\"reason_code\":\"mechanism\"}]}",
+                    "input_tokens": 671,
+                    "max_new_tokens": 1024,
+                    "timing": {
+                      "seconds": 2.8870222000005015,
+                      "input_tokens": 671,
+                      "generated_tokens": 23,
+                      "ttft_ms": 444.40839999879245,
+                      "decode_seconds": 2.441916499999934,
+                      "decode_tokens": 22,
+                      "decode_tokens_per_second": 9.009317067148118
+                    }
+                  }
+                ],
+                "window_id": 1,
+                "target_ids": [
+                  "E1"
+                ],
+                "context_event_ids": []
+              }
+            ],
+            "rejected": [],
+            "filtering_complete": true,
+            "processing_complete": true,
+            "semantic_verification": "not_verified",
+            "request_seconds": 2.9411904999979015,
+            "model_loaded_this_request": false,
+            "device": "cuda",
+            "model_load_seconds": 13.98871859999781,
+            "notice": "仅筛选建议；事件原样保留，待复核不等于忽略；未检索、未判断矛盾、未保存设定。"
+          },
+          "events": [
+            {
+              "actors": [
+                "雷"
+              ],
+              "event": "雷拥有两颗心脏",
+              "explicit": true,
+              "modality": "observed",
+              "source_ids": [
+                "S1"
+              ],
+              "context_ids": [],
+              "mental_state": null,
+              "conditions": [],
+              "sources": [
+                {
+                  "id": "S1",
+                  "text": "雷拥有两颗心脏。",
+                  "start": 0,
+                  "end": 8
+                }
+              ],
+              "contexts": [],
+              "defaulted_fields": [
+                "mental_state",
+                "conditions"
+              ],
+              "id": "E1",
+              "review_required": true,
+              "review_reasons": [
+                "optional_fields_defaulted"
+              ]
+            }
+          ],
+          "items": [
+            {
+              "event_id": "E1",
+              "event": {
+                "actors": [
+                  "雷"
+                ],
+                "event": "雷拥有两颗心脏",
+                "explicit": true,
+                "modality": "observed",
+                "source_ids": [
+                  "S1"
+                ],
+                "context_ids": [],
+                "mental_state": null,
+                "conditions": [],
+                "sources": [
+                  {
+                    "id": "S1",
+                    "text": "雷拥有两颗心脏。",
+                    "start": 0,
+                    "end": 8
+                  }
+                ],
+                "contexts": [],
+                "defaulted_fields": [
+                  "mental_state",
+                  "conditions"
+                ],
+                "id": "E1",
+                "review_required": true,
+                "review_reasons": [
+                  "optional_fields_defaulted"
+                ]
+              },
+              "query": "主体：雷\n叙述性质：observed\n事件：雷拥有两颗心脏\n局部原文：雷拥有两颗心脏。",
+              "evidence": [
+                {
+                  "id": "099d1bbdbc348eb3c332",
+                  "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+                  "file": "characters.md",
+                  "start_line": 6,
+                  "end_line": 6,
+                  "heading_path": [
+                    "人物设定（测试设定，不代表正式 canon）",
+                    "雷",
+                    "生理结构"
+                  ],
+                  "start_offset": 41,
+                  "end_offset": 70,
+                  "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+                  "token_count": 55,
+                  "score": 0.7252553701400757
+                },
+                {
+                  "id": "0ad0e47151069e9d8676",
+                  "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+                  "file": "history.md",
+                  "start_line": 31,
+                  "end_line": 31,
+                  "heading_path": [
+                    "历史事件（测试设定，不代表正式 canon）",
+                    "第三话",
+                    "身份告知"
+                  ],
+                  "start_offset": 322,
+                  "end_offset": 359,
+                  "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+                  "token_count": 65,
+                  "score": 0.6500575542449951
+                },
+                {
+                  "id": "46422ea243d878bfdce9",
+                  "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+                  "file": "characters.md",
+                  "start_line": 21,
+                  "end_line": 21,
+                  "heading_path": [
+                    "人物设定（测试设定，不代表正式 canon）",
+                    "雷",
+                    "身份保密"
+                  ],
+                  "start_offset": 189,
+                  "end_offset": 229,
+                  "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+                  "token_count": 66,
+                  "score": 0.6370701193809509
+                },
+                {
+                  "id": "a739b6548c630e2c4d40",
+                  "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+                  "file": "characters.md",
+                  "start_line": 11,
+                  "end_line": 11,
+                  "heading_path": [
+                    "人物设定（测试设定，不代表正式 canon）",
+                    "雷",
+                    "经历"
+                  ],
+                  "start_offset": 85,
+                  "end_offset": 116,
+                  "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+                  "token_count": 55,
+                  "score": 0.6290508508682251
+                },
+                {
+                  "id": "17af8f8e8b7ff81197e4",
+                  "text": "普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+                  "file": "technology.md",
+                  "start_line": 46,
+                  "end_line": 46,
+                  "heading_path": [
+                    "科技规则（测试设定，不代表正式 canon）",
+                    "医疗",
+                    "心脏扫描"
+                  ],
+                  "start_offset": 472,
+                  "end_offset": 502,
+                  "embedding_text": "科技规则（测试设定，不代表正式 canon） > 医疗 > 心脏扫描\n普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+                  "token_count": 57,
+                  "score": 0.6264145374298096
+                }
+              ],
+              "cache_hit": false,
+              "status": "ok",
+              "retrieval_seconds": 0.16136700000060955
+            }
+          ],
+          "top_k": 5,
+          "pending_event_ids": [],
+          "ignored_event_ids": [],
+          "upstream_status": "ok",
+          "retrieval_complete": true,
+          "processing_complete": true,
+          "semantic_verification": "not_verified",
+          "failure_reasons": {
+            "upstream_status": "ok",
+            "failed_event_ids": [],
+            "load_error": null
+          },
+          "encoder_loaded_this_request": false,
+          "index": {
+            "config": {
+              "model": "BAAI/bge-small-zh-v1.5",
+              "revision": "7999e1d3359715c523056ef9478215996d62a620",
+              "pooling": "cls",
+              "normalization": "l2",
+              "query_prompt": "为这个句子生成表示以用于检索相关文章：",
+              "dimension": 512,
+              "inference_dtype": "float32",
+              "chunker": {
+                "version": 1,
+                "max_tokens": 512,
+                "overlap": "last_sentence_when_fits"
+              }
+            },
+            "sources": {
+              "angels.md": "3a74db800a715d8b392db37ccc38026b0e71219fffa684d8e2d429314ef9b7e2",
+              "characters.md": "e5741e3a36fe3ef0a286a7c2f1f85089b9908cc99869563dd5d040348d40d3e8",
+              "history.md": "4f0105823cc8d513a4d32cfc094736458db594351000de074acd313cee06d601",
+              "technology.md": "b88690cae568b05032d2c078646bfea50ff304a291b7fbadf0af17eeb4c6cfae"
+            },
+            "lore_directory": "C:\\Users\\Xhang\\Desktop\\project\\worldcheck\\lore"
+          },
+          "device": "cuda",
+          "request_seconds": 0.16158220000215806,
+          "notice": "仅检索相关设定，未判断矛盾、未保存。相似度表示相对相关性，不是事实正确率或矛盾置信度；无关事件也可能返回片段。"
+        },
+        "pending_event_ids": [],
+        "ignored_event_ids": [],
+        "upstream_status": "ok",
+        "failure_reasons": {
+          "upstream_status": "ok",
+          "failed_event_ids": [],
+          "upstream_stages": {}
+        },
+        "judge_complete": true,
+        "processing_complete": true,
+        "semantic_verification": "not_verified",
+        "model_loaded_this_request": false,
+        "device": "cuda",
+        "model_load_seconds": 13.98871859999781,
+        "request_seconds": 13.545183300000645,
+        "notice": "逐事件一致性建议，未汇总整段、未保存设定。有效引用不保证判断正确；未提取/待复核内容不代表无矛盾。",
+        "story_check": {
+          "stage": "story_check",
+          "schema_version": "agent-pipeline-story-check-v1",
+          "status": "ok",
+          "scope": "filtered_world_relevant_observed_events",
+          "candidate_event_ids": [
+            "E1"
+          ],
+          "total_observed_event_count": 1,
+          "filtered_out_event_count": 0,
+          "pair_count": 0,
+          "unprocessed_pair_count": 0,
+          "items": [],
+          "calls": [],
+          "semantic_verification": "not_verified"
+        }
+      },
+      "processing_complete": true,
+      "review_required": true,
+      "failure_reasons": {
+        "upstream_status": "ok",
+        "failed_event_ids": [],
+        "upstream_stages": {}
+      },
+      "semantic_verification": "not_verified",
+      "notice": "仅汇总已核对事件，不证明整段故事无矛盾；不确定不是处理失败。保留上游建议，未保存设定。相似度不是事实正确率或矛盾置信度。"
+    }
+  }
+]

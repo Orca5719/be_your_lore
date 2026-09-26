@@ -1,0 +1,292 @@
+{
+  "name": "Story-Level Consistency Benchmark",
+  "version": "pilot-4-v1",
+  "status": "annotation_draft_not_final_benchmark",
+  "notice": "测试故事和测试设定，不代表正式canon；未运行模型；标注为草案，未宣称用户已审核。",
+  "target_distribution": {
+    "total": 24,
+    "zero_conflict": 8,
+    "one_conflict": 8,
+    "multi_conflict": 8
+  },
+  "corpus_snapshot": {
+    "files_sha256": {
+      "angels.md": "3a74db800a715d8b392db37ccc38026b0e71219fffa684d8e2d429314ef9b7e2",
+      "characters.md": "e5741e3a36fe3ef0a286a7c2f1f85089b9908cc99869563dd5d040348d40d3e8",
+      "history.md": "4f0105823cc8d513a4d32cfc094736458db594351000de074acd313cee06d601",
+      "technology.md": "b88690cae568b05032d2c078646bfea50ff304a291b7fbadf0af17eeb4c6cfae"
+    },
+    "index_version": "0de59066f81246b3b8c7445eddbe877e",
+    "chunk_count": 48
+  },
+  "cases": [
+    {
+      "id": "SL-P01",
+      "title": "日常动作",
+      "group": "zero_conflict",
+      "subgroup": "daily",
+      "story": "雷从椅子上站起来，把桌边的水杯拿到面前。他喝了两口水，又把杯子放回原处。窗帘被风吹得轻轻晃动，阳光在桌面上留下一条窄窄的亮边。他伸了个懒腰，走到窗旁，随手将帘子拉开一点。窗外没有什么特别的动静，他看了一会儿，便回到椅子边坐下。\n他从碟子里拿起一块普通饼干，慢慢吃完，然后用纸巾擦掉桌上的碎屑。杯里的水还剩一些，他没有继续喝，只将杯子挪到不容易碰倒的位置。随后，他整理了一下衣袖，低头看了看鞋带，俯身把松开的那一端重新系紧。做完这些，他靠着椅背歇了一会儿，听着窗帘摩擦窗框的轻响。",
+      "character_count": 239,
+      "gold_facts": [],
+      "gold_conflict_ids": [],
+      "expected_summary": null,
+      "ignored_examples": [
+        {
+          "anchor": {
+            "text": "他喝了两口水，",
+            "start": 20,
+            "end": 27
+          },
+          "reason": "普通日常动作，未明示重要后果、能力或永久状态变化；不因邻近重要设定而升级为重要事实。"
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-P02",
+      "title": "双心脏与正确宿主",
+      "group": "zero_conflict",
+      "subgroup": "supported",
+      "story": "雷独自坐在桌边，手指沿着杯沿慢慢转了一圈。他有两颗心脏。雷的左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。阳光落在他的衣袖上，他将袖口折好，端起水杯喝了一口。屋里很安静，窗外偶尔传来树叶摩擦的声音。他没有开口，只把杯子放回原处，伸手将桌面上的纸巾叠成一个小方块。\n他站起来，在窗边停了一会儿，又走回椅子旁。鞋带有些松，他弯下腰，将两端整理到差不多的长度。桌上的碟子还摆在原位，他拿起一块普通饼干，慢慢吃完，再擦去指尖的碎屑。风从窗缝里吹进来，他随手掩上窗户，坐回原来的位置。",
+      "character_count": 235,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷",
+          "predicate": "拥有",
+          "object": "两颗心脏",
+          "type": "character_attribute",
+          "source_anchor": {
+            "text": "他有两颗心脏。",
+            "start": 21,
+            "end": 28
+          },
+          "context_anchors": [
+            {
+              "text": "雷独自坐在桌边，",
+              "start": 0,
+              "end": 8
+            }
+          ],
+          "expected_verdict": "一致",
+          "canonical_evidence": [
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ]
+            }
+          ],
+          "acceptable_evidence_sets": [
+            [
+              "099d1bbdbc348eb3c332"
+            ]
+          ]
+        },
+        {
+          "id": "G2",
+          "subject": "雷",
+          "predicate": "左侧心脏寄宿",
+          "object": "亚巴顿",
+          "type": "character_attribute",
+          "source_anchor": {
+            "text": "雷的左侧心脏寄宿亚巴顿，",
+            "start": 28,
+            "end": 40
+          },
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "canonical_evidence": [
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ]
+            }
+          ],
+          "acceptable_evidence_sets": [
+            [
+              "099d1bbdbc348eb3c332"
+            ]
+          ]
+        },
+        {
+          "id": "G3",
+          "subject": "雷",
+          "predicate": "右侧心脏寄宿",
+          "object": "拉古艾尔",
+          "type": "character_attribute",
+          "source_anchor": {
+            "text": "右侧心脏寄宿拉古艾尔。",
+            "start": 40,
+            "end": 51
+          },
+          "context_anchors": [
+            {
+              "text": "雷的左侧心脏寄宿亚巴顿，",
+              "start": 28,
+              "end": 40
+            }
+          ],
+          "expected_verdict": "一致",
+          "canonical_evidence": [
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ]
+            }
+          ],
+          "acceptable_evidence_sets": [
+            [
+              "099d1bbdbc348eb3c332"
+            ]
+          ]
+        }
+      ],
+      "gold_conflict_ids": [],
+      "expected_summary": "一致",
+      "ignored_examples": [
+        {
+          "anchor": {
+            "text": "端起水杯喝了一口。",
+            "start": 68,
+            "end": 77
+          },
+          "reason": "普通日常动作，未明示重要后果、能力或永久状态变化；不因邻近重要设定而升级为重要事实。"
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-P03",
+      "title": "宿主左右位置冲突",
+      "group": "one_conflict",
+      "subgroup": "host_location",
+      "story": "雷站在桌旁，将刚脱下的外套搭在椅背上。亚巴顿寄宿在雷的右侧心脏。他低头整理了一下衣领，走到窗边，伸手将松开的窗扣扣好。玻璃上有一点灰，他用纸巾轻轻擦过，又把纸巾折起，放到桌角。窗外的风吹动树叶，他停下手，看了一会儿，随后回到椅子旁坐下。\n杯子摆在离他不远的地方，他端起来喝了两口，又放回碟子旁。他将外套的一只袖子从椅背上拉下来，理顺后重新搭好。屋里的光慢慢移到桌角，他把椅子挪了一点，让脚边留出位置。随后，他重新系了鞋带，拍掉裤脚上沾着的灰，靠着椅背休息，没有再做别的事。",
+      "character_count": 236,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "亚巴顿",
+          "predicate": "寄宿",
+          "object": "雷的右侧心脏",
+          "type": "character_attribute",
+          "source_anchor": {
+            "text": "亚巴顿寄宿在雷的右侧心脏。",
+            "start": 19,
+            "end": 32
+          },
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "canonical_evidence": [
+            {
+              "id": "47ba19b8b9ece1f35cc9",
+              "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "file": "angels.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "亚巴顿",
+                "左侧宿主"
+              ]
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ]
+            }
+          ],
+          "acceptable_evidence_sets": [
+            [
+              "47ba19b8b9ece1f35cc9"
+            ],
+            [
+              "099d1bbdbc348eb3c332"
+            ]
+          ]
+        }
+      ],
+      "gold_conflict_ids": [
+        "G1"
+      ],
+      "expected_summary": "矛盾",
+      "ignored_examples": [
+        {
+          "anchor": {
+            "text": "他低头整理了一下衣领，",
+            "start": 32,
+            "end": 43
+          },
+          "reason": "普通日常动作，未明示重要后果、能力或永久状态变化；不因邻近重要设定而升级为重要事实。"
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-P04",
+      "title": "新增时间能力证据不足",
+      "group": "zero_conflict",
+      "subgroup": "new_concept",
+      "story": "雷坐在大厅的椅子上，用手指将衣袖上的褶皱抚平。雷拥有让大厅里的时间暂停的能力。窗外的阳光照到椅背上，他挪了挪身体，换了一个舒服些的姿势。旁边放着一杯普通的水，他端起来喝了一口，随后将杯子放回桌面。桌角有几粒饼干碎屑，他抽出纸巾，慢慢擦干净。\n他起身走到窗前，把偏到一旁的窗帘拉直。帘子的一角碰到手背，他随手拨开，低头看了看窗台。过了一会儿，他重新回到椅子边，把鞋带打好的结理顺，再将两只脚放在椅子下面。他从碟子里拿了一块普通饼干，吃完后擦了擦嘴，又将纸巾折起，放在空碟子旁边。",
+      "character_count": 238,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷",
+          "predicate": "拥有",
+          "object": "让大厅里的时间暂停的能力",
+          "type": "character_attribute",
+          "source_anchor": {
+            "text": "雷拥有让大厅里的时间暂停的能力。",
+            "start": 23,
+            "end": 39
+          },
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "canonical_evidence": [],
+          "acceptable_evidence_sets": []
+        }
+      ],
+      "gold_conflict_ids": [],
+      "expected_summary": "不确定",
+      "ignored_examples": [
+        {
+          "anchor": {
+            "text": "他端起来喝了一口，",
+            "start": 79,
+            "end": 88
+          },
+          "reason": "普通日常动作，未明示重要后果、能力或永久状态变化；不因邻近重要设定而升级为重要事实。"
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "d405c178cf9fe2dd64de",
+    "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+    "file": "characters.md",
+    "start_line": 5,
+    "end_line": 5,
+    "heading_path": [
+      "人物设定（测试设定，不代表正式 canon）",
+      "雷",
+      "生理结构"
+    ],
+    "start_offset": 40,
+    "end_offset": 69,
+    "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+    "token_count": 55
+  },
+  {
+    "id": "63894ba3bb79ea718ad8",
+    "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+    "file": "characters.md",
+    "start_line": 9,
+    "end_line": 9,
+    "heading_path": [
+      "人物设定（测试设定，不代表正式 canon）",
+      "雷",
+      "经历"
+    ],
+    "start_offset": 79,
+    "end_offset": 110,
+    "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+    "token_count": 55
+  },
+  {
+    "id": "5c4ea43262e5b8e73156",
+    "text": "德尔塔使用动力外骨骼。装甲依靠独立电池供电，无法无限运行。",
+    "file": "characters.md",
+    "start_line": 14,
+    "end_line": 14,
+    "heading_path": [
+      "人物设定（测试设定，不代表正式 canon）",
+      "德尔塔",
+      "装备"
+    ],
+    "start_offset": 127,
+    "end_offset": 156,
+    "embedding_text": "人物设定（测试设定，不代表正式 canon） > 德尔塔 > 装备\n德尔塔使用动力外骨骼。装甲依靠独立电池供电，无法无限运行。",
+    "token_count": 55
+  }
+]

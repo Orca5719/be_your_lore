@@ -1,0 +1,1526 @@
+{
+  "schema_version": "agent-pipeline-report-v2",
+  "stage": "report",
+  "status": "partial",
+  "report": {
+    "overview": "已核对1项重要事实：0项明确矛盾、1项证据不足或无法明确判定、0项明确吻合。本次处理未完整完成，见processing_issues。另有1项已过滤、0项仅保留为上下文，不独立核对。结论仅覆盖已提取并核对的事实，未保存设定。段内事件检查另发现0项矛盾、0项待确认。",
+    "scope": "checked_events",
+    "contradictions": [],
+    "uncertainties": [
+      {
+        "finding_ids": [
+          "R1"
+        ],
+        "event_ids": [
+          "E1"
+        ],
+        "actors": [
+          "林舟"
+        ],
+        "fact": "林舟独自留在封闭的实验室里",
+        "reasons": [
+          "这项事实与候选设定的对象或指代尚未明确对应，不能自行补入左右、身份等属性。"
+        ],
+        "citations": [],
+        "reason_origin": "program_uncertainty_code",
+        "uncertainty_code": "ambiguous_reference"
+      }
+    ],
+    "confirmations": [],
+    "possible_additions": [],
+    "confirmation_topics": [
+      {
+        "finding_ids": [
+          "R1"
+        ],
+        "event_ids": [
+          "E1"
+        ],
+        "fact": "林舟独自留在封闭的实验室里",
+        "question": "请核实适用设定及检索/判断结果，再决定是否建立新设定；不确定不等于新增设定。",
+        "saved": false
+      }
+    ],
+    "excluded_details": [
+      {
+        "event_id": "E2",
+        "actors": [
+          "林舟"
+        ],
+        "fact": "林舟此刻不在实验室，而在远方的车站",
+        "reason": "呈现或操作过程细节，无独立核对价值",
+        "role": "ignored",
+        "required_by_event_ids": []
+      }
+    ],
+    "processing_issues": [
+      {
+        "kind": "upstream_incomplete",
+        "details": {
+          "upstream_status": "ok",
+          "failed_event_ids": [],
+          "upstream_stages": {},
+          "story_check": "段内检查失败或未完整完成，详见story_check"
+        }
+      },
+      {
+        "kind": "story_check_failure",
+        "fact": "林舟独自留在封闭的实验室里 / 林舟此刻不在实验室，而在远方的车站",
+        "detail": "故事引用不是对应原文"
+      }
+    ],
+    "story_consistency": {
+      "status": "partial",
+      "scope": "current_story_observed_events",
+      "pair_count": 1,
+      "unprocessed_pair_count": 0,
+      "contradictions": [],
+      "uncertainties": []
+    }
+  },
+  "summary": {
+    "verdict": "uncertain",
+    "label": "尚不能对已核对事实给出完整明确结论",
+    "scope": "checked_events",
+    "counts": {
+      "consistent": 0,
+      "contradiction": 0,
+      "uncertain": 1,
+      "failed": 0,
+      "pending": 0,
+      "ignored": 1,
+      "support_only": 0,
+      "unprocessed": 0
+    },
+    "checked_event_count": 1,
+    "finding_count": 1
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "event_ids": [
+        "E1"
+      ],
+      "actors": [
+        "林舟"
+      ],
+      "event": "林舟独自留在封闭的实验室里",
+      "verdict": "uncertain",
+      "label": "不确定",
+      "reasons": [
+        "这项事实与候选设定的对象或指代尚未明确对应，不能自行补入左右、身份等属性。"
+      ],
+      "citations": [],
+      "sources": [
+        {
+          "id": "S1",
+          "text": "同一时刻，",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "id": "S2",
+          "text": "林舟独自留在封闭的实验室里。",
+          "start": 5,
+          "end": 19
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S2",
+          "text": "林舟独自留在封闭的实验室里。",
+          "start": 5,
+          "end": 19
+        }
+      ],
+      "origin": "model",
+      "assessment": {
+        "same_subject": false,
+        "evidence_applicable": null,
+        "relation": "insufficient",
+        "assumptions": []
+      },
+      "reason_origin": "program_uncertainty_code",
+      "uncertainty_code": "ambiguous_reference"
+    }
+  ],
+  "evidence": [],
+  "failed_items": [],
+  "pending_events": [],
+  "ignored_events": [
+    {
+      "actors": [
+        "林舟"
+      ],
+      "event": "林舟此刻不在实验室，而在远方的车站",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S3",
+        "S4"
+      ],
+      "context_ids": [
+        "S4"
+      ],
+      "mental_state": null,
+      "conditions": [],
+      "sources": [
+        {
+          "id": "S3",
+          "text": "林舟此刻不在实验室，",
+          "start": 19,
+          "end": 29
+        },
+        {
+          "id": "S4",
+          "text": "而在远方的车站。",
+          "start": 29,
+          "end": 37
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S4",
+          "text": "而在远方的车站。",
+          "start": 29,
+          "end": 37
+        }
+      ],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions"
+      ],
+      "id": "E2",
+      "review_required": true,
+      "review_reasons": [
+        "optional_fields_defaulted"
+      ]
+    }
+  ],
+  "support_events": [],
+  "unprocessed_events": [],
+  "review_items": [
+    {
+      "event_id": "E1",
+      "reasons": [
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "event_id": "E2",
+      "reasons": [
+        "optional_fields_defaulted"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "actors": [
+        "林舟"
+      ],
+      "event": "林舟独自留在封闭的实验室里",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "context_ids": [
+        "S2"
+      ],
+      "mental_state": null,
+      "conditions": [],
+      "sources": [
+        {
+          "id": "S1",
+          "text": "同一时刻，",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "id": "S2",
+          "text": "林舟独自留在封闭的实验室里。",
+          "start": 5,
+          "end": 19
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S2",
+          "text": "林舟独自留在封闭的实验室里。",
+          "start": 5,
+          "end": 19
+        }
+      ],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions"
+      ],
+      "id": "E1",
+      "review_required": true,
+      "review_reasons": [
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "actors": [
+        "林舟"
+      ],
+      "event": "林舟此刻不在实验室，而在远方的车站",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S3",
+        "S4"
+      ],
+      "context_ids": [
+        "S4"
+      ],
+      "mental_state": null,
+      "conditions": [],
+      "sources": [
+        {
+          "id": "S3",
+          "text": "林舟此刻不在实验室，",
+          "start": 19,
+          "end": 29
+        },
+        {
+          "id": "S4",
+          "text": "而在远方的车站。",
+          "start": 29,
+          "end": 37
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S4",
+          "text": "而在远方的车站。",
+          "start": 29,
+          "end": 37
+        }
+      ],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions"
+      ],
+      "id": "E2",
+      "review_required": true,
+      "review_reasons": [
+        "optional_fields_defaulted"
+      ]
+    }
+  ],
+  "judge": {
+    "schema_version": "agent-pipeline-judge-v1",
+    "prompt_version": "judge-v6",
+    "stage": "judge",
+    "status": "partial",
+    "events": [
+      {
+        "actors": [
+          "林舟"
+        ],
+        "event": "林舟独自留在封闭的实验室里",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "context_ids": [
+          "S2"
+        ],
+        "mental_state": null,
+        "conditions": [],
+        "sources": [
+          {
+            "id": "S1",
+            "text": "同一时刻，",
+            "start": 0,
+            "end": 5
+          },
+          {
+            "id": "S2",
+            "text": "林舟独自留在封闭的实验室里。",
+            "start": 5,
+            "end": 19
+          }
+        ],
+        "contexts": [
+          {
+            "id": "S2",
+            "text": "林舟独自留在封闭的实验室里。",
+            "start": 5,
+            "end": 19
+          }
+        ],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions"
+        ],
+        "id": "E1",
+        "review_required": true,
+        "review_reasons": [
+          "optional_fields_defaulted"
+        ]
+      },
+      {
+        "actors": [
+          "林舟"
+        ],
+        "event": "林舟此刻不在实验室，而在远方的车站",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S3",
+          "S4"
+        ],
+        "context_ids": [
+          "S4"
+        ],
+        "mental_state": null,
+        "conditions": [],
+        "sources": [
+          {
+            "id": "S3",
+            "text": "林舟此刻不在实验室，",
+            "start": 19,
+            "end": 29
+          },
+          {
+            "id": "S4",
+            "text": "而在远方的车站。",
+            "start": 29,
+            "end": 37
+          }
+        ],
+        "contexts": [
+          {
+            "id": "S4",
+            "text": "而在远方的车站。",
+            "start": 29,
+            "end": 37
+          }
+        ],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions"
+        ],
+        "id": "E2",
+        "review_required": true,
+        "review_reasons": [
+          "optional_fields_defaulted"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "event_id": "E1",
+        "event": {
+          "actors": [
+            "林舟"
+          ],
+          "event": "林舟独自留在封闭的实验室里",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S1",
+            "S2"
+          ],
+          "context_ids": [
+            "S2"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S1",
+              "text": "同一时刻，",
+              "start": 0,
+              "end": 5
+            },
+            {
+              "id": "S2",
+              "text": "林舟独自留在封闭的实验室里。",
+              "start": 5,
+              "end": 19
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S2",
+              "text": "林舟独自留在封闭的实验室里。",
+              "start": 5,
+              "end": 19
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E1",
+          "review_required": true,
+          "review_reasons": [
+            "optional_fields_defaulted"
+          ]
+        },
+        "evidence": [
+          {
+            "id": "0ad0e47151069e9d8676",
+            "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "file": "history.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第三话",
+              "身份告知"
+            ],
+            "start_offset": 322,
+            "end_offset": 359,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "token_count": 65,
+            "score": 0.49175843596458435
+          },
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.48767805099487305
+          },
+          {
+            "id": "46422ea243d878bfdce9",
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "file": "characters.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "身份保密"
+            ],
+            "start_offset": 189,
+            "end_offset": 229,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "token_count": 66,
+            "score": 0.48660585284233093
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.47278767824172974
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.467215359210968
+          }
+        ],
+        "citations": [],
+        "call": {
+          "status": "ok",
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": false,\n    \"evidence_applicable\": null,\n    \"relation\": \"insufficient\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"uncertain\",\n  \"citations\": [],\n  \"reason\": \"事件中林舟被观察留在实验室，但设定中未提及林舟的生理结构、宿主身份或与任何心脏/天使的关联，且故事上下文明确指出其实际在车站，与实验室位置矛盾，对象与场景不一致，无法建立事实对应。\",\n  \"uncertainty_code\": \"ambiguous_reference\"\n}",
+              "input_tokens": 1987,
+              "max_new_tokens": 768,
+              "timing": {
+                "seconds": 9.984139200001664,
+                "input_tokens": 1987,
+                "generated_tokens": 130,
+                "ttft_ms": 1781.0601000019233,
+                "decode_seconds": 8.202216599995154,
+                "decode_tokens": 129,
+                "decode_tokens_per_second": 15.727455917230499
+              }
+            }
+          ]
+        },
+        "status": "ok",
+        "verdict": "uncertain",
+        "label": "不确定",
+        "reason": "这项事实与候选设定的对象或指代尚未明确对应，不能自行补入左右、身份等属性。",
+        "origin": "model",
+        "assessment": {
+          "same_subject": false,
+          "evidence_applicable": null,
+          "relation": "insufficient",
+          "assumptions": []
+        },
+        "model_reason": "事件中林舟被观察留在实验室，但设定中未提及林舟的生理结构、宿主身份或与任何心脏/天使的关联，且故事上下文明确指出其实际在车站，与实验室位置矛盾，对象与场景不一致，无法建立事实对应。",
+        "uncertainty_code": "ambiguous_reference",
+        "reason_origin": "program_uncertainty_code"
+      }
+    ],
+    "retrieval": {
+      "schema_version": "agent-pipeline-retrieval-v1",
+      "stage": "retrieval",
+      "status": "ok",
+      "filtering": {
+        "schema_version": "agent-pipeline-filtering-v1",
+        "prompt_version": "filtering-v6",
+        "stage": "filtering",
+        "status": "ok",
+        "failure_reasons": {
+          "upstream_status": "ok",
+          "pending_event_ids": [],
+          "rejected_count": 0,
+          "failed_window_ids": []
+        },
+        "events": [
+          {
+            "actors": [
+              "林舟"
+            ],
+            "event": "林舟独自留在封闭的实验室里",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S1",
+              "S2"
+            ],
+            "context_ids": [
+              "S2"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "同一时刻，",
+                "start": 0,
+                "end": 5
+              },
+              {
+                "id": "S2",
+                "text": "林舟独自留在封闭的实验室里。",
+                "start": 5,
+                "end": 19
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S2",
+                "text": "林舟独自留在封闭的实验室里。",
+                "start": 5,
+                "end": 19
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E1",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          },
+          {
+            "actors": [
+              "林舟"
+            ],
+            "event": "林舟此刻不在实验室，而在远方的车站",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S3",
+              "S4"
+            ],
+            "context_ids": [
+              "S4"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S3",
+                "text": "林舟此刻不在实验室，",
+                "start": 19,
+                "end": 29
+              },
+              {
+                "id": "S4",
+                "text": "而在远方的车站。",
+                "start": 29,
+                "end": 37
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S4",
+                "text": "而在远方的车站。",
+                "start": 29,
+                "end": 37
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E2",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          }
+        ],
+        "decisions": [
+          {
+            "event_id": "E1",
+            "decision": "keep",
+            "reason": "涉及重要状态、时间或空间约束",
+            "reason_code": "state_time_space"
+          },
+          {
+            "event_id": "E2",
+            "decision": "ignore",
+            "reason": "呈现或操作过程细节，无独立核对价值",
+            "reason_code": "process_detail"
+          }
+        ],
+        "selected_events": [
+          {
+            "actors": [
+              "林舟"
+            ],
+            "event": "林舟独自留在封闭的实验室里",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S1",
+              "S2"
+            ],
+            "context_ids": [
+              "S2"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "同一时刻，",
+                "start": 0,
+                "end": 5
+              },
+              {
+                "id": "S2",
+                "text": "林舟独自留在封闭的实验室里。",
+                "start": 5,
+                "end": 19
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S2",
+                "text": "林舟独自留在封闭的实验室里。",
+                "start": 5,
+                "end": 19
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E1",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          }
+        ],
+        "ignored_events": [
+          {
+            "actors": [
+              "林舟"
+            ],
+            "event": "林舟此刻不在实验室，而在远方的车站",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S3",
+              "S4"
+            ],
+            "context_ids": [
+              "S4"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S3",
+                "text": "林舟此刻不在实验室，",
+                "start": 19,
+                "end": 29
+              },
+              {
+                "id": "S4",
+                "text": "而在远方的车站。",
+                "start": 29,
+                "end": 37
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S4",
+                "text": "而在远方的车站。",
+                "start": 29,
+                "end": 37
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E2",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          }
+        ],
+        "pending_events": [],
+        "understanding": {
+          "schema_version": "agent-pipeline-understanding-v1",
+          "prompt_version": "understanding-v6",
+          "stage": "understanding",
+          "status": "ok",
+          "text": "同一时刻，林舟独自留在封闭的实验室里。林舟此刻不在实验室，而在远方的车站。",
+          "events": [
+            {
+              "actors": [
+                "林舟"
+              ],
+              "event": "林舟独自留在封闭的实验室里",
+              "explicit": true,
+              "modality": "observed",
+              "source_ids": [
+                "S1",
+                "S2"
+              ],
+              "context_ids": [
+                "S2"
+              ],
+              "mental_state": null,
+              "conditions": [],
+              "sources": [
+                {
+                  "id": "S1",
+                  "text": "同一时刻，",
+                  "start": 0,
+                  "end": 5
+                },
+                {
+                  "id": "S2",
+                  "text": "林舟独自留在封闭的实验室里。",
+                  "start": 5,
+                  "end": 19
+                }
+              ],
+              "contexts": [
+                {
+                  "id": "S2",
+                  "text": "林舟独自留在封闭的实验室里。",
+                  "start": 5,
+                  "end": 19
+                }
+              ],
+              "defaulted_fields": [
+                "mental_state",
+                "conditions"
+              ],
+              "id": "E1",
+              "review_required": true,
+              "review_reasons": [
+                "optional_fields_defaulted"
+              ]
+            },
+            {
+              "actors": [
+                "林舟"
+              ],
+              "event": "林舟此刻不在实验室，而在远方的车站",
+              "explicit": true,
+              "modality": "observed",
+              "source_ids": [
+                "S3",
+                "S4"
+              ],
+              "context_ids": [
+                "S4"
+              ],
+              "mental_state": null,
+              "conditions": [],
+              "sources": [
+                {
+                  "id": "S3",
+                  "text": "林舟此刻不在实验室，",
+                  "start": 19,
+                  "end": 29
+                },
+                {
+                  "id": "S4",
+                  "text": "而在远方的车站。",
+                  "start": 29,
+                  "end": 37
+                }
+              ],
+              "contexts": [
+                {
+                  "id": "S4",
+                  "text": "而在远方的车站。",
+                  "start": 29,
+                  "end": 37
+                }
+              ],
+              "defaulted_fields": [
+                "mental_state",
+                "conditions"
+              ],
+              "id": "E2",
+              "review_required": true,
+              "review_reasons": [
+                "optional_fields_defaulted"
+              ]
+            }
+          ],
+          "rejected": [],
+          "calls": [
+            {
+              "status": "ok",
+              "attempts": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"events\":[\n  {\n    \"actors\":[\"林舟\"],\n    \"event\":\"林舟独自留在封闭的实验室里\",\n    \"explicit\":true,\n    \"modality\":\"observed\",\n    \"source_ids\":[\"S1\",\"S2\"],\n    \"context_ids\":[\"S2\"]\n  },\n  {\n    \"actors\":[\"林舟\"],\n    \"event\":\"林舟此刻不在实验室，而在远方的车站\",\n    \"explicit\":true,\n    \"modality\":\"observed\",\n    \"source_ids\":[\"S3\",\"S4\"],\n    \"context_ids\":[\"S4\"]\n  }\n]}",
+                  "input_tokens": 765,
+                  "max_new_tokens": 1536,
+                  "timing": {
+                    "seconds": 8.83610690000205,
+                    "input_tokens": 765,
+                    "generated_tokens": 122,
+                    "ttft_ms": 1410.8789000019897,
+                    "decode_seconds": 7.42460420000134,
+                    "decode_tokens": 121,
+                    "decode_tokens_per_second": 16.297165039447915
+                  }
+                }
+              ],
+              "window_id": 1,
+              "purpose": "initial_understanding",
+              "target_ids": [
+                "S1",
+                "S2",
+                "S3",
+                "S4"
+              ],
+              "context_ids": []
+            }
+          ],
+          "duplicate_candidates": 0,
+          "unrecovered_failed_source_ids": [],
+          "failure_reasons": {
+            "unresolved_candidates": [],
+            "missing_source_ids": [],
+            "failed_source_ids": []
+          },
+          "processing_complete": true,
+          "semantic_verification": "not_verified",
+          "review_required": true,
+          "request_seconds": 8.872614899999462,
+          "model_loaded_this_request": false,
+          "coverage": {
+            "source_spans": {
+              "S1": {
+                "text": "同一时刻，",
+                "start": 0,
+                "end": 5
+              },
+              "S2": {
+                "text": "林舟独自留在封闭的实验室里。",
+                "start": 5,
+                "end": 19
+              },
+              "S3": {
+                "text": "林舟此刻不在实验室，",
+                "start": 19,
+                "end": 29
+              },
+              "S4": {
+                "text": "而在远方的车站。",
+                "start": 29,
+                "end": 37
+              }
+            },
+            "covered_source_ids": [
+              "S1",
+              "S2",
+              "S3",
+              "S4"
+            ],
+            "primary_source_ids": [
+              "S1",
+              "S2",
+              "S3",
+              "S4"
+            ],
+            "context_only_source_ids": [],
+            "missing_source_ids": [],
+            "note": "包括事件/条件/主体上下文引用；被引用不保证全部语义提取正确，仅作上下文的片段仍需检查是否漏事件"
+          },
+          "device": "cuda",
+          "model_load_seconds": 17.963794999996026,
+          "notice": "仅语义理解：未筛选重要性、未检索、未判断、未保存设定"
+        },
+        "upstream_status": "ok",
+        "calls": [
+          {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"decisions\":[{\"event_id\":\"E1\",\"decision\":\"keep\",\"reason_code\":\"state_time_space\"},{\"event_id\":\"E2\",\"decision\":\"ignore\",\"reason_code\":\"process_detail\"}]}",
+                "input_tokens": 882,
+                "max_new_tokens": 1024,
+                "timing": {
+                  "seconds": 2.741167799998948,
+                  "input_tokens": 882,
+                  "generated_tokens": 39,
+                  "ttft_ms": 517.7707000038936,
+                  "decode_seconds": 2.2227872000003117,
+                  "decode_tokens": 38,
+                  "decode_tokens_per_second": 17.095653601026076
+                }
+              }
+            ],
+            "window_id": 1,
+            "target_ids": [
+              "E1",
+              "E2"
+            ]
+          }
+        ],
+        "rejected": [],
+        "filtering_complete": true,
+        "processing_complete": true,
+        "semantic_verification": "not_verified",
+        "request_seconds": 2.755575900002441,
+        "model_loaded_this_request": true,
+        "device": "cuda",
+        "model_load_seconds": 17.963794999996026,
+        "notice": "仅筛选建议；事件原样保留，待复核不等于忽略；未检索、未判断矛盾、未保存设定。"
+      },
+      "events": [
+        {
+          "actors": [
+            "林舟"
+          ],
+          "event": "林舟独自留在封闭的实验室里",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S1",
+            "S2"
+          ],
+          "context_ids": [
+            "S2"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S1",
+              "text": "同一时刻，",
+              "start": 0,
+              "end": 5
+            },
+            {
+              "id": "S2",
+              "text": "林舟独自留在封闭的实验室里。",
+              "start": 5,
+              "end": 19
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S2",
+              "text": "林舟独自留在封闭的实验室里。",
+              "start": 5,
+              "end": 19
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E1",
+          "review_required": true,
+          "review_reasons": [
+            "optional_fields_defaulted"
+          ]
+        },
+        {
+          "actors": [
+            "林舟"
+          ],
+          "event": "林舟此刻不在实验室，而在远方的车站",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S3",
+            "S4"
+          ],
+          "context_ids": [
+            "S4"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S3",
+              "text": "林舟此刻不在实验室，",
+              "start": 19,
+              "end": 29
+            },
+            {
+              "id": "S4",
+              "text": "而在远方的车站。",
+              "start": 29,
+              "end": 37
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S4",
+              "text": "而在远方的车站。",
+              "start": 29,
+              "end": 37
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E2",
+          "review_required": true,
+          "review_reasons": [
+            "optional_fields_defaulted"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "event_id": "E1",
+          "event": {
+            "actors": [
+              "林舟"
+            ],
+            "event": "林舟独自留在封闭的实验室里",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S1",
+              "S2"
+            ],
+            "context_ids": [
+              "S2"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "同一时刻，",
+                "start": 0,
+                "end": 5
+              },
+              {
+                "id": "S2",
+                "text": "林舟独自留在封闭的实验室里。",
+                "start": 5,
+                "end": 19
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S2",
+                "text": "林舟独自留在封闭的实验室里。",
+                "start": 5,
+                "end": 19
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E1",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          },
+          "query": "主体：林舟\n叙述性质：observed\n事件：林舟独自留在封闭的实验室里\n局部原文：同一时刻，林舟独自留在封闭的实验室里。",
+          "evidence": [
+            {
+              "id": "0ad0e47151069e9d8676",
+              "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "file": "history.md",
+              "start_line": 31,
+              "end_line": 31,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第三话",
+                "身份告知"
+              ],
+              "start_offset": 322,
+              "end_offset": 359,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "token_count": 65,
+              "score": 0.49175843596458435
+            },
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.48767805099487305
+            },
+            {
+              "id": "46422ea243d878bfdce9",
+              "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+              "file": "characters.md",
+              "start_line": 21,
+              "end_line": 21,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "身份保密"
+              ],
+              "start_offset": 189,
+              "end_offset": 229,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+              "token_count": 66,
+              "score": 0.48660585284233093
+            },
+            {
+              "id": "347b69141392efe457ad",
+              "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+              "file": "characters.md",
+              "start_line": 51,
+              "end_line": 51,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷的父亲",
+                "秘密认知"
+              ],
+              "start_offset": 506,
+              "end_offset": 542,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+              "token_count": 65,
+              "score": 0.47278767824172974
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.467215359210968
+            }
+          ],
+          "cache_hit": false,
+          "status": "ok",
+          "retrieval_seconds": 0.11415739999938523
+        }
+      ],
+      "top_k": 5,
+      "pending_event_ids": [],
+      "ignored_event_ids": [
+        "E2"
+      ],
+      "upstream_status": "ok",
+      "retrieval_complete": true,
+      "processing_complete": true,
+      "semantic_verification": "not_verified",
+      "failure_reasons": {
+        "upstream_status": "ok",
+        "failed_event_ids": [],
+        "load_error": null
+      },
+      "encoder_loaded_this_request": true,
+      "index": {
+        "config": {
+          "model": "BAAI/bge-small-zh-v1.5",
+          "revision": "7999e1d3359715c523056ef9478215996d62a620",
+          "pooling": "cls",
+          "normalization": "l2",
+          "query_prompt": "为这个句子生成表示以用于检索相关文章：",
+          "dimension": 512,
+          "inference_dtype": "float32",
+          "chunker": {
+            "version": 1,
+            "max_tokens": 512,
+            "overlap": "last_sentence_when_fits"
+          }
+        },
+        "sources": {
+          "angels.md": "3a74db800a715d8b392db37ccc38026b0e71219fffa684d8e2d429314ef9b7e2",
+          "characters.md": "e5741e3a36fe3ef0a286a7c2f1f85089b9908cc99869563dd5d040348d40d3e8",
+          "history.md": "4f0105823cc8d513a4d32cfc094736458db594351000de074acd313cee06d601",
+          "technology.md": "b88690cae568b05032d2c078646bfea50ff304a291b7fbadf0af17eeb4c6cfae"
+        },
+        "lore_directory": "C:\\Users\\Xhang\\Desktop\\project\\worldcheck\\lore"
+      },
+      "device": "cuda",
+      "request_seconds": 0.456189100004849,
+      "notice": "仅检索相关设定，未判断矛盾、未保存。相似度表示相对相关性，不是事实正确率或矛盾置信度；无关事件也可能返回片段。"
+    },
+    "pending_event_ids": [],
+    "ignored_event_ids": [
+      "E2"
+    ],
+    "upstream_status": "ok",
+    "failure_reasons": {
+      "upstream_status": "ok",
+      "failed_event_ids": [],
+      "upstream_stages": {},
+      "story_check": "段内检查失败或未完整完成，详见story_check"
+    },
+    "judge_complete": true,
+    "processing_complete": false,
+    "semantic_verification": "not_verified",
+    "model_loaded_this_request": false,
+    "device": "cuda",
+    "model_load_seconds": 17.963794999996026,
+    "request_seconds": 10.006344200002786,
+    "notice": "逐事件一致性建议，未汇总整段、未保存设定。有效引用不保证判断正确；未提取/待复核内容不代表无矛盾。",
+    "story_check": {
+      "stage": "story_check",
+      "schema_version": "agent-pipeline-story-check-v1",
+      "status": "partial",
+      "scope": "current_story_observed_events",
+      "pair_count": 1,
+      "unprocessed_pair_count": 0,
+      "items": [
+        {
+          "pair_id": "P1",
+          "event_ids": [
+            "E1",
+            "E2"
+          ],
+          "events": [
+            {
+              "actors": [
+                "林舟"
+              ],
+              "event": "林舟独自留在封闭的实验室里",
+              "explicit": true,
+              "modality": "observed",
+              "source_ids": [
+                "S1",
+                "S2"
+              ],
+              "context_ids": [
+                "S2"
+              ],
+              "mental_state": null,
+              "conditions": [],
+              "sources": [
+                {
+                  "id": "S1",
+                  "text": "同一时刻，",
+                  "start": 0,
+                  "end": 5
+                },
+                {
+                  "id": "S2",
+                  "text": "林舟独自留在封闭的实验室里。",
+                  "start": 5,
+                  "end": 19
+                }
+              ],
+              "contexts": [
+                {
+                  "id": "S2",
+                  "text": "林舟独自留在封闭的实验室里。",
+                  "start": 5,
+                  "end": 19
+                }
+              ],
+              "defaulted_fields": [
+                "mental_state",
+                "conditions"
+              ],
+              "id": "E1",
+              "review_required": true,
+              "review_reasons": [
+                "optional_fields_defaulted"
+              ]
+            },
+            {
+              "actors": [
+                "林舟"
+              ],
+              "event": "林舟此刻不在实验室，而在远方的车站",
+              "explicit": true,
+              "modality": "observed",
+              "source_ids": [
+                "S3",
+                "S4"
+              ],
+              "context_ids": [
+                "S4"
+              ],
+              "mental_state": null,
+              "conditions": [],
+              "sources": [
+                {
+                  "id": "S3",
+                  "text": "林舟此刻不在实验室，",
+                  "start": 19,
+                  "end": 29
+                },
+                {
+                  "id": "S4",
+                  "text": "而在远方的车站。",
+                  "start": 29,
+                  "end": 37
+                }
+              ],
+              "contexts": [
+                {
+                  "id": "S4",
+                  "text": "而在远方的车站。",
+                  "start": 29,
+                  "end": 37
+                }
+              ],
+              "defaulted_fields": [
+                "mental_state",
+                "conditions"
+              ],
+              "id": "E2",
+              "review_required": true,
+              "review_reasons": [
+                "optional_fields_defaulted"
+              ]
+            }
+          ],
+          "status": "error",
+          "verdict": "uncertain",
+          "reason": "故事内检查失败",
+          "error": "故事引用不是对应原文",
+          "citations": []
+        }
+      ],
+      "calls": [
+        {
+          "status": "error",
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": "error",
+              "raw_output": "{\"checks\":[{\"pair_id\":\"P1\",\"verdict\":\"contradiction\",\"same_subject\":true,\"same_scope\":true,\"assumptions\":[],\"reason\":\"两事件均描述林舟在同一时刻的所在位置，'独自留在封闭的实验室里' 与 '此刻不在实验室，而在远方的车站' 明确互斥，无法同时为真，且无任何时间或条件重叠的可能，构成直接矛盾\",\"citations\":[{\"event_id\":\"E1\",\"quote\":\"同一时刻，林舟独自留在封闭的实验室里。\"},{\"event_id\":\"E2\",\"quote\":\"林舟此刻不在实验室，而在远方的车站。\"}]}]}",
+              "error": "故事引用不是对应原文",
+              "error_type": "ValueError",
+              "timing": {
+                "seconds": 8.671632799996587,
+                "input_tokens": 635,
+                "generated_tokens": 138,
+                "ttft_ms": 344.470399999409,
+                "decode_seconds": 8.326741999997466,
+                "decode_tokens": 137,
+                "decode_tokens_per_second": 16.453013675701936
+              }
+            },
+            {
+              "attempt": 2,
+              "status": "error",
+              "raw_output": "{\"checks\":[{\"pair_id\":\"P1\",\"verdict\":\"contradiction\",\"same_subject\":true,\"same_scope\":true,\"assumptions\":[],\"reason\":\"同一时刻林舟既独自留在封闭的实验室里，又不在实验室而在远方的车站，两个事件对同一对象（林舟）在同一时间点（同一时刻）的地点状态形成直接矛盾，无法同时成立\",\"citations\":[{\"event_id\":\"E1\",\"quote\":\"同一时刻，林舟独自留在封闭的实验室里。\"},{\"event_id\":\"E2\",\"quote\":\"林舟此刻不在实验室，而在远方的车站。\"}]}]}",
+              "error": "故事引用不是对应原文",
+              "error_type": "ValueError",
+              "timing": {
+                "seconds": 8.199071400005778,
+                "input_tokens": 665,
+                "generated_tokens": 127,
+                "ttft_ms": 393.86709999962477,
+                "decode_seconds": 7.804803000006359,
+                "decode_tokens": 126,
+                "decode_tokens_per_second": 16.143905233725608
+              }
+            }
+          ]
+        }
+      ],
+      "semantic_verification": "not_verified"
+    }
+  },
+  "processing_complete": false,
+  "review_required": true,
+  "failure_reasons": {
+    "upstream_status": "ok",
+    "failed_event_ids": [],
+    "upstream_stages": {},
+    "story_check": "段内检查失败或未完整完成，详见story_check"
+  },
+  "semantic_verification": "not_verified",
+  "notice": "仅汇总已核对事件，不证明整段故事无矛盾；不确定不是处理失败。保留上游建议，未保存设定。相似度不是事实正确率或矛盾置信度。"
+}

@@ -1,0 +1,162 @@
+{
+  "kind": "module_observation_not_frozen_benchmark",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "device": "cuda",
+  "model_load_seconds": 18.10264450000068,
+  "source_sha256": {
+    "filtering.py": "b76072d85719ece873c7d2a29b6aa7914cb5650b2d5349700495c88ea8efd50b",
+    "llm.py": "58b2b847fe1ff1843e0d94e59912b70afabd4e91fc1bbe83eef3004f944e5d7a",
+    "prompts/filtering_v2.txt": "6ea3790dccdb8a1cbb62dea1a05c0ca03daa6cfb6f8cd34d40b69af686669062"
+  },
+  "dataset_sha256": "8bd141187a501e12e0cafce5aa04cbe16f143cbcb4ac3a525790cd46647dadc9",
+  "cases": [
+    {
+      "id": "F01",
+      "status": "ok",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "ignore",
+          "reason": "普通日常，无特殊关联"
+        },
+        {
+          "event_id": "E2",
+          "decision": "ignore",
+          "reason": "普通日常，无特殊关联"
+        },
+        {
+          "event_id": "E3",
+          "decision": "ignore",
+          "reason": "普通日常，无特殊关联"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "status": "ok",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "ignore",
+          "reason": "普通日常动作，无特殊关联或后果"
+        },
+        {
+          "event_id": "E2",
+          "decision": "keep",
+          "reason": "涉及关键认知变化和因果后果，毒发与死亡直接相关"
+        },
+        {
+          "event_id": "E3",
+          "decision": "keep",
+          "reason": "涉及关键身份或能力变化，心脏寄宿亚巴顿属于关键设定"
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "review",
+          "reason": "拉古艾尔寄宿在雷体内属于未知设定，缺乏明确后果或认知影响，需进一步判断其重要性"
+        },
+        {
+          "event_id": "E2",
+          "decision": "keep",
+          "reason": "涉及关键认知变化，影响对真相和信任的认知，属于关键信息"
+        },
+        {
+          "event_id": "E3",
+          "decision": "keep",
+          "reason": "盟友关系结束属于关键关系变化，可能影响后续剧情发展"
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "status": "ok",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "keep",
+          "reason": "涉及关键行动和未知区域，可能影响后续剧情发展"
+        },
+        {
+          "event_id": "E2",
+          "decision": "keep",
+          "reason": "涉及关键时间点前的状态变化，可能影响事件因果链"
+        },
+        {
+          "event_id": "E3",
+          "decision": "keep",
+          "reason": "涉及特殊生理条件与治疗行为，可能影响角色能力或关系"
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "keep",
+          "reason": "涉及关键设备状态，可能影响后续行动或通讯能力"
+        },
+        {
+          "event_id": "E2",
+          "decision": "ignore",
+          "reason": "普通日常行为，无特殊后果或认知变化"
+        },
+        {
+          "event_id": "E3",
+          "decision": "review",
+          "reason": "梦境内容指代不明，未明确与现实或关键事件关联"
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "review",
+          "reason": "上游主体/推断依据待复核，暂不自动忽略",
+          "model_decision": "ignore",
+          "model_reason": "普通日常动作，无特殊关联或后果",
+          "origin": "program_guard"
+        },
+        {
+          "event_id": "E2",
+          "decision": "review",
+          "reason": "能力获取未明确证据，无法确认其真实性或影响"
+        }
+      ]
+    },
+    {
+      "id": "F07",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "ignore",
+          "reason": "普通日常，无特殊关联"
+        },
+        {
+          "event_id": "E2",
+          "decision": "keep",
+          "reason": "涉及关键认知变化，与身份或记忆相关"
+        },
+        {
+          "event_id": "E3",
+          "decision": "review",
+          "reason": "mental_state与事件关联不明，无法确定是否关键"
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "snapshot_stable": true
+}

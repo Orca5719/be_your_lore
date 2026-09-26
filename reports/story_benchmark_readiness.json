@@ -1,0 +1,42 @@
+{
+  "name": "Story-Level Consistency Benchmark",
+  "scope": "4-case pilot, not full 24-case benchmark",
+  "validation": {
+    "cases": 4,
+    "gold_facts": 5,
+    "index_chunks": 48,
+    "dataset_status": "annotation_draft_not_final_benchmark",
+    "groups": {
+      "zero_conflict": 3,
+      "one_conflict": 1
+    }
+  },
+  "runner_ready": true,
+  "scorer_ready": true,
+  "semantic_review_required": true,
+  "full_dataset_ready": false,
+  "full_target_cases": 24,
+  "missing_cases": 20,
+  "regression_tests_passed": 112,
+  "real_model_benchmark_run_this_turn": false,
+  "frozen_files_unchanged": 38,
+  "detection_metrics": [
+    "extraction P/R/F1",
+    "fact conflict P/R/F1",
+    "story conflict P/R/F1",
+    "fact verdict accuracy/confusion",
+    "core evidence Recall@K",
+    "clean empty extraction rate"
+  ],
+  "performance_metrics": [
+    "model footprint/VRAM",
+    "peak allocated/reserved VRAM",
+    "generation TTFT",
+    "weighted decode tok/s",
+    "story latency median/P95",
+    "story throughput",
+    "avg input tokens",
+    "load time",
+    "failure/retry/normalization counts"
+  ]
+}

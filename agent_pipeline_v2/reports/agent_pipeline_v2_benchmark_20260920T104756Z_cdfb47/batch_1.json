@@ -1,0 +1,3852 @@
+{
+  "schema_version": "agent-pipeline-v2-judge-benchmark-aggregate-v1",
+  "batch_size": 1,
+  "repeat_count": 1,
+  "status": "ok",
+  "oom": false,
+  "metrics": {
+    "batch_size_requested": 1,
+    "confusion": {
+      "consistent": {
+        "consistent": 16
+      },
+      "contradiction": {
+        "contradiction": 14,
+        "consistent": 2
+      },
+      "uncertain": {
+        "uncertain": 8,
+        "consistent": 8
+      }
+    },
+    "correct": 38,
+    "facts_per_second": 0.0797077776703155,
+    "facts_total": 48,
+    "generated_tokens": 6782,
+    "generation_seconds": 602.057871200006,
+    "incremental_peak_allocated_gib": 0.29654598236083984,
+    "judge_accuracy": 0.7916666666666666,
+    "main_batch_count": 48,
+    "model_cuda_allocated_after_load_gib": 2.484022617340088,
+    "model_footprint_gib": 2.4167473316192627,
+    "model_load_seconds": 20.222299199998815,
+    "padded_input_tokens": 0,
+    "padding_ratio": 0.0,
+    "parse_failure_count": 0,
+    "parse_failure_rate": 0.0,
+    "peak_allocated_gib": 2.7805685997009277,
+    "peak_reserved_gib": 2.9296875,
+    "per_class_accuracy": {
+      "consistent": {
+        "correct": 16,
+        "total": 16,
+        "accuracy": 1.0
+      },
+      "contradiction": {
+        "correct": 14,
+        "total": 16,
+        "accuracy": 0.875
+      },
+      "uncertain": {
+        "correct": 8,
+        "total": 16,
+        "accuracy": 0.5
+      }
+    },
+    "retry_batch_count": 0,
+    "retry_fact_count": 0,
+    "retry_rate": 0.0,
+    "total_judge_seconds": 602.1997024999982,
+    "useful_input_tokens": 31201
+  },
+  "runs": [
+    {
+      "schema_version": "agent-pipeline-v2-judge-benchmark-result-v1",
+      "batch_size": 1,
+      "status": "ok",
+      "oom": false,
+      "items": [
+        {
+          "fixture_id": "wb029-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb029-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"契约不会自动延长宿主寿命。\"}],\"reason\":\"候选设定L1明确指出‘契约不会自动延长宿主寿命’，与事件‘天使契约不会自动延长宿主寿命’在主体（宿主与天使契约）、时间（契约建立时）、条件（无额外说明）和适用范围（契约本身）上完全一致，且为逐字原文支持。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "契约不会自动延长宿主寿命。"
+              }
+            ],
+            "reason": "候选设定L1明确指出‘契约不会自动延长宿主寿命’，与事件‘天使契约不会自动延长宿主寿命’在主体（宿主与天使契约）、时间（契约建立时）、条件（无额外说明）和适用范围（契约本身）上完全一致，且为逐字原文支持。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb028-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb028-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。\"}],\"reason\":\"候选设定与事件完全对应，主体为宿主与天使建立契约时，条件为自愿付出重要记忆，且原文明确指出‘必须自愿付出一段重要记忆’，与事件描述一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。"
+              }
+            ],
+            "reason": "候选设定与事件完全对应，主体为宿主与天使建立契约时，条件为自愿付出重要记忆，且原文明确指出‘必须自愿付出一段重要记忆’，与事件描述一致。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb001-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb001-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"候选设定L1明确指出在第三话中，雷向德尔塔说明双心脏与寄宿天使的秘密，且德尔塔因此知道雷的宿主身份，与事件完全一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。"
+              }
+            ],
+            "reason": "候选设定L1明确指出在第三话中，雷向德尔塔说明双心脏与寄宿天使的秘密，且德尔塔因此知道雷的宿主身份，与事件完全一致。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb024-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb024-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"候选设定L1直接陈述了雷借用亚巴顿力量后会短暂失去部分记忆，与事件完全一致，且未引入矛盾条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。"
+              }
+            ],
+            "reason": "候选设定L1直接陈述了雷借用亚巴顿力量后会短暂失去部分记忆，与事件完全一致，且未引入矛盾条件。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb030-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb030-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"寄宿天使离开宿主体内最多三十秒。超过时限会失去凝聚形体的能力。\"}],\"reason\":\"候选设定L1直接陈述了‘寄宿天使离开宿主体内最多三十秒’这一事件，并明确将其作为基础条件，与事件完全一致，且未引入矛盾条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "寄宿天使离开宿主体内最多三十秒。超过时限会失去凝聚形体的能力。"
+              }
+            ],
+            "reason": "候选设定L1直接陈述了‘寄宿天使离开宿主体内最多三十秒’这一事件，并明确将其作为基础条件，与事件完全一致，且未引入矛盾条件。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb055-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb055-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"德尔塔的外骨骼采用可更换独立电池。正常行走可运行两小时，高功率推进会迅速耗电。\"}],\"reason\":\"候选设定中明确指出德尔塔外骨骼采用可更换独立电池，与事件'德尔塔装甲使用可更换独立电池'在主体、时间、条件和适用范围内完全一致，且无矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "德尔塔的外骨骼采用可更换独立电池。正常行走可运行两小时，高功率推进会迅速耗电。"
+              }
+            ],
+            "reason": "候选设定中明确指出德尔塔外骨骼采用可更换独立电池，与事件'德尔塔装甲使用可更换独立电池'在主体、时间、条件和适用范围内完全一致，且无矛盾。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb023-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb023-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。\"}],\"reason\":\"候选设定L1明确指出拉古艾尔施展治疗时雷的右胸会变暖，且该现象与右侧心脏相关，与事件描述完全一致，主体、时间、条件和反应均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。"
+              }
+            ],
+            "reason": "候选设定L1明确指出拉古艾尔施展治疗时雷的右胸会变暖，且该现象与右侧心脏相关，与事件描述完全一致，主体、时间、条件和反应均匹配。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb047-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb047-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。\"}],\"reason\":\"候选设定L1明确指出档案馆保留地震前的纸质备份，且在网络数据库损坏时管理员仍可查阅纸本记录，与事件‘档案馆保留地震前的纸质备份’完全一致，主体、时间、条件和适用范围均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。"
+              }
+            ],
+            "reason": "候选设定L1明确指出档案馆保留地震前的纸质备份，且在网络数据库损坏时管理员仍可查阅纸本记录，与事件‘档案馆保留地震前的纸质备份’完全一致，主体、时间、条件和适用范围均匹配。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb032-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb032-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"天使可以隐藏羽翼并改变外表，但伪装不能消除契约的精神波动。\"}],\"reason\":\"候选设定L1明确指出，尽管天使可以伪装外表，但这种伪装无法消除契约精神波动，与事件‘天使的外表伪装不能消除契约精神波动’在主体（天使）、条件（伪装外表）和内容（精神波动不可消除）上完全一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "天使可以隐藏羽翼并改变外表，但伪装不能消除契约的精神波动。"
+              }
+            ],
+            "reason": "候选设定L1明确指出，尽管天使可以伪装外表，但这种伪装无法消除契约精神波动，与事件‘天使的外表伪装不能消除契约精神波动’在主体（天使）、条件（伪装外表）和内容（精神波动不可消除）上完全一致。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb034-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb034-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。\"}],\"reason\":\"候选设定L1明确指出当雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音，与事件描述完全一致，且限定在‘共鸣’这一特定条件下，符合事件中的‘心脏共鸣时’这一触发条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。"
+              }
+            ],
+            "reason": "候选设定L1明确指出当雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音，与事件描述完全一致，且限定在‘共鸣’这一特定条件下，符合事件中的‘心脏共鸣时’这一触发条件。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb067-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb067-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"公众知道他的代号，但不知道装甲下的真实姓名。\"}],\"reason\":\"候选设定L1明确指出‘公众知道德尔塔的代号’，且该信息与事件‘公众知道德尔塔的代号’完全一致，主体为公众，事件为知道代号，符合同一主体、时间与条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "公众知道他的代号，但不知道装甲下的真实姓名。"
+              }
+            ],
+            "reason": "候选设定L1明确指出‘公众知道德尔塔的代号’，且该信息与事件‘公众知道德尔塔的代号’完全一致，主体为公众，事件为知道代号，符合同一主体、时间与条件。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb112-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb112-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"候选设定L1明确指出静默结界能削弱宿主的精神波动，与事件‘旧教堂的静默结界可以削弱精神波动’在主体（宿主）、机制和效果上完全一致，且未引入矛盾条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。"
+              }
+            ],
+            "reason": "候选设定L1明确指出静默结界能削弱宿主的精神波动，与事件‘旧教堂的静默结界可以削弱精神波动’在主体（宿主）、机制和效果上完全一致，且未引入矛盾条件。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb025-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb025-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。\"}],\"reason\":\"候选设定L1明确指出亚巴顿的降临时间比天使议会计划早了三年，且发生在大地震期间，与事件描述完全一致，主体、时间、条件均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。"
+              }
+            ],
+            "reason": "候选设定L1明确指出亚巴顿的降临时间比天使议会计划早了三年，且发生在大地震期间，与事件描述完全一致，主体、时间、条件均匹配。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb055-C2",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb055-C2",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"外骨骼推进器产生大量热量，连续高功率运行十分钟必须停止散热。\"}],\"reason\":\"候选设定中'外骨骼推进器产生大量热量，连续高功率运行十分钟必须停止散热'与事件'德尔塔装甲连续高功率运行十分钟必须停止散热'在主体（外骨骼推进器）、时间（连续高功率运行十分钟）、条件（必须停止散热）上完全一致，且直接支持事件发生。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "外骨骼推进器产生大量热量，连续高功率运行十分钟必须停止散热。"
+              }
+            ],
+            "reason": "候选设定中'外骨骼推进器产生大量热量，连续高功率运行十分钟必须停止散热'与事件'德尔塔装甲连续高功率运行十分钟必须停止散热'在主体（外骨骼推进器）、时间（连续高功率运行十分钟）、条件（必须停止散热）上完全一致，且直接支持事件发生。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb003-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb003-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。\"}],\"reason\":\"候选设定中明确指出‘北方研究站位于终点站附近’，与事件‘北方研究站位于城区列车的终点站附近’在主体、位置和条件上完全一致，且无矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。"
+              }
+            ],
+            "reason": "候选设定中明确指出‘北方研究站位于终点站附近’，与事件‘北方研究站位于城区列车的终点站附近’在主体、位置和条件上完全一致，且无矛盾。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb050-C1",
+          "expected_verdict": "consistent",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb050-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。\"}],\"reason\":\"候选设定与事件'月城的左臂是机械臂'在主体（月城）、时间（失去左臂后安装）、条件（右臂为自然肢体）上完全一致，且L1明确说明左臂被失去后安装了机械臂，与事件描述直接对应。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。"
+              }
+            ],
+            "reason": "候选设定与事件'月城的左臂是机械臂'在主体（月城）、时间（失去左臂后安装）、条件（右臂为自然肢体）上完全一致，且L1明确说明左臂被失去后安装了机械臂，与事件描述直接对应。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb104-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb104-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"寄宿天使离开宿主体内最多三十秒。超过时限会失去凝聚形体的能力。\"}],\"reason\":\"候选事件声称寄宿天使离开宿主后可以无限期维持凝聚形体，而候选设定L1明确指出离开宿主体内最多三十秒，超过时限会失去凝聚形体的能力，二者在时间条件和能力维持上直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "寄宿天使离开宿主体内最多三十秒。超过时限会失去凝聚形体的能力。"
+              }
+            ],
+            "reason": "候选事件声称寄宿天使离开宿主后可以无限期维持凝聚形体，而候选设定L1明确指出离开宿主体内最多三十秒，超过时限会失去凝聚形体的能力，二者在时间条件和能力维持上直接矛盾。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb088-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb088-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。\"}],\"reason\":\"候选设定声称‘宿主契约里的重要记忆由天使付出而不是宿主’，与L1中‘宿主与天使建立契约时必须自愿付出一段重要记忆’直接矛盾，主体（宿主）在契约中付出记忆，而非天使，因此属于明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。"
+              }
+            ],
+            "reason": "候选设定声称‘宿主契约里的重要记忆由天使付出而不是宿主’，与L1中‘宿主与天使建立契约时必须自愿付出一段重要记忆’直接矛盾，主体（宿主）在契约中付出记忆，而非天使，因此属于明确不相容。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb068-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb068-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"候选设定L1明确指出雷在第三话向德尔塔说明宿主身份，德尔塔因此得知，这与事件中'德尔塔仍不知道雷是宿主'直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。"
+              }
+            ],
+            "reason": "候选设定L1明确指出雷在第三话向德尔塔说明宿主身份，德尔塔因此得知，这与事件中'德尔塔仍不知道雷是宿主'直接矛盾。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb112-C2",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb112-C2",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"候选设定声称雷借用亚巴顿力量后'从来不会失去任何记忆'，与L1中'会短暂失去部分记忆'直接冲突，且L1明确指出记忆缺失与力量强度正相关，因此该设定在主体、条件和时间范围内与事件明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。"
+              }
+            ],
+            "reason": "候选设定声称雷借用亚巴顿力量后'从来不会失去任何记忆'，与L1中'会短暂失去部分记忆'直接冲突，且L1明确指出记忆缺失与力量强度正相关，因此该设定在主体、条件和时间范围内与事件明确不相容。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb065-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb065-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"寄宿天使离开宿主体内最多三十秒。超过时限会失去凝聚形体的能力。\"}],\"reason\":\"候选设定明确指出寄宿天使离体最多维持三十秒，而事件声称可稳定维持三分钟，超过三十秒，与L1中的‘超过时限会失去凝聚形体的能力’直接冲突，构成明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "寄宿天使离开宿主体内最多三十秒。超过时限会失去凝聚形体的能力。"
+              }
+            ],
+            "reason": "候选设定明确指出寄宿天使离体最多维持三十秒，而事件声称可稳定维持三分钟，超过三十秒，与L1中的‘超过时限会失去凝聚形体的能力’直接冲突，构成明确不相容。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb095-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb095-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"德尔塔的装甲连续高功率运行十分钟后必须冷却。冷却期间无法使用推进器。\"}],\"reason\":\"候选事件声称装甲可连续高功率运行二十分钟而无需冷却，与候选设定L1中‘连续高功率运行十分钟后必须冷却’直接冲突，且在相同主体（德尔塔）、相同条件（高功率运行）下明确否定其运行二十分钟的可能性。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "德尔塔的装甲连续高功率运行十分钟后必须冷却。冷却期间无法使用推进器。"
+              }
+            ],
+            "reason": "候选事件声称装甲可连续高功率运行二十分钟而无需冷却，与候选设定L1中‘连续高功率运行十分钟后必须冷却’直接冲突，且在相同主体（德尔塔）、相同条件（高功率运行）下明确否定其运行二十分钟的可能性。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb079-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb079-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。\"}],\"reason\":\"候选事件声称雷的父亲前往南方研究站，而候选设定L1明确指出其前往的是北方研究站，且该信息在相同主体、时间、条件和适用范围内直接对立。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。"
+              }
+            ],
+            "reason": "候选事件声称雷的父亲前往南方研究站，而候选设定L1明确指出其前往的是北方研究站，且该信息在相同主体、时间、条件和适用范围内直接对立。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb122-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb122-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。\"}],\"reason\":\"候选设定明确指出右臂始终是自然肢体，且事件描述为‘月城在现有状态下两条手臂都是自然肢体’，与L1中‘右臂始终是自然肢体’直接一致，且未提及右臂被替换或改变，因此在主体、时间、条件上完全一致，构成直接支持。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。"
+              }
+            ],
+            "reason": "候选设定明确指出右臂始终是自然肢体，且事件描述为‘月城在现有状态下两条手臂都是自然肢体’，与L1中‘右臂始终是自然肢体’直接一致，且未提及右臂被替换或改变，因此在主体、时间、条件上完全一致，构成直接支持。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb106-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb106-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"宿主与天使建立契约时必须自愿付出一段重要记忆。\"}],\"reason\":\"候选事件声称‘宿主不需要自愿也能建立契约’，而候选设定L1明确指出‘建立契约时必须自愿付出一段重要记忆’，即建立契约的前提是自愿，因此‘不需要自愿’与‘必须自愿’直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "宿主与天使建立契约时必须自愿付出一段重要记忆。"
+              }
+            ],
+            "reason": "候选事件声称‘宿主不需要自愿也能建立契约’，而候选设定L1明确指出‘建立契约时必须自愿付出一段重要记忆’，即建立契约的前提是自愿，因此‘不需要自愿’与‘必须自愿’直接矛盾。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb087-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb087-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"德尔塔使用动力外骨骼。装甲依靠独立电池供电，无法无限运行。\"}],\"reason\":\"候选设定声称德尔塔的既定行动装备是月城的机械左臂，但候选设定中明确指出德尔塔使用的是动力外骨骼，且该装备由独立电池供电，与机械左臂无直接关联。机械左臂属于月城本人，而非德尔塔的装备，因此在主体（德尔塔）和装备类型上存在明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "德尔塔使用动力外骨骼。装甲依靠独立电池供电，无法无限运行。"
+              }
+            ],
+            "reason": "候选设定声称德尔塔的既定行动装备是月城的机械左臂，但候选设定中明确指出德尔塔使用的是动力外骨骼，且该装备由独立电池供电，与机械左臂无直接关联。机械左臂属于月城本人，而非德尔塔的装备，因此在主体（德尔塔）和装备类型上存在明确矛盾。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb073-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb073-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"事件中德尔塔在第三话听完身份说明后仍不知道雷拥有两颗心脏，与L1中‘德尔塔从此知道雷的宿主身份’形成明确时间与条件对应，说明在该事件发生时，德尔塔确实是在第三话之后才得知，因此‘仍不知道’是符合设定的。L1明确指出‘说明’后德尔塔才得知，因此在说明前‘不知道’是直接支持的。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。"
+              }
+            ],
+            "reason": "事件中德尔塔在第三话听完身份说明后仍不知道雷拥有两颗心脏，与L1中‘德尔塔从此知道雷的宿主身份’形成明确时间与条件对应，说明在该事件发生时，德尔塔确实是在第三话之后才得知，因此‘仍不知道’是符合设定的。L1明确指出‘说明’后德尔塔才得知，因此在说明前‘不知道’是直接支持的。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb119-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb119-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"候选设定声称静默结界会增强精神波动并提高守望者发现宿主的概率，与L1中‘静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率’直接矛盾，两者在作用机制和结果上完全相反。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。"
+              }
+            ],
+            "reason": "候选设定声称静默结界会增强精神波动并提高守望者发现宿主的概率，与L1中‘静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率’直接矛盾，两者在作用机制和结果上完全相反。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb064-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb064-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。\"}],\"reason\":\"候选设定中明确指出亚巴顿的降临比天使议会计划早了三年，而事件描述为‘亚巴顿的降临比天使议会计划晚了三年’，与设定文本直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。"
+              }
+            ],
+            "reason": "候选设定中明确指出亚巴顿的降临比天使议会计划早了三年，而事件描述为‘亚巴顿的降临比天使议会计划晚了三年’，与设定文本直接冲突。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb097-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb097-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"德尔塔的装甲连续高功率运行十分钟后必须冷却。冷却期间无法使用推进器。\"}],\"reason\":\"候选事件声称‘德尔塔的现有装甲冷却期间仍能使用推进器’，与候选设定L1中‘冷却期间无法使用推进器’直接冲突，主体、时间、条件完全一致，属于明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "德尔塔的装甲连续高功率运行十分钟后必须冷却。冷却期间无法使用推进器。"
+              }
+            ],
+            "reason": "候选事件声称‘德尔塔的现有装甲冷却期间仍能使用推进器’，与候选设定L1中‘冷却期间无法使用推进器’直接冲突，主体、时间、条件完全一致，属于明确不相容。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb080-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb080-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。\"}],\"reason\":\"候选事件声称机械左臂可直接装在右臂上，而候选设定L1明确指出‘不能直接装在右臂上’，在相同主体（月城）、相同时间条件（机械左臂安装后）下构成直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。"
+              }
+            ],
+            "reason": "候选事件声称机械左臂可直接装在右臂上，而候选设定L1明确指出‘不能直接装在右臂上’，在相同主体（月城）、相同时间条件（机械左臂安装后）下构成直接冲突。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb124-C1",
+          "expected_verdict": "contradiction",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "contradiction",
+          "transport": {
+            "request_id": "wb124-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。\"}],\"reason\":\"候选设定明确指出监察官没有恢复视力的能力，与事件中‘监察官已经拥有恢复视力的能力’直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。"
+              }
+            ],
+            "reason": "候选设定明确指出监察官没有恢复视力的能力，与事件中‘监察官已经拥有恢复视力的能力’直接矛盾。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb131-C1",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "uncertain",
+          "transport": {
+            "request_id": "wb131-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"uncertain\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"候选设定未提及德尔塔与莉娅订婚，也未提供任何关于莉娅或订婚关系的信息，事件主体为德尔塔与莉娅，但lore中无莉娅相关描述，也无订婚行为或关系的任何线索。虽然德尔塔与雷有互动，但未涉及莉娅或婚姻/订婚行为。\",\"assessment\":{\"same_subject\":false,\"evidence_applicable\":false,\"relation\":\"insufficient\",\"assumptions\":[\"存在莉娅这一角色且与德尔塔有订婚关系，且该关系在lore中被隐含或可推导\"]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "uncertain",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。"
+              }
+            ],
+            "reason": "候选设定未提及德尔塔与莉娅订婚，也未提供任何关于莉娅或订婚关系的信息，事件主体为德尔塔与莉娅，但lore中无莉娅相关描述，也无订婚行为或关系的任何线索。虽然德尔塔与雷有互动，但未涉及莉娅或婚姻/订婚行为。",
+            "assessment": {
+              "same_subject": false,
+              "evidence_applicable": false,
+              "relation": "insufficient",
+              "assumptions": [
+                "存在莉娅这一角色且与德尔塔有订婚关系，且该关系在lore中被隐含或可推导"
+              ]
+            }
+          }
+        },
+        {
+          "fixture_id": "wb129-C1",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "uncertain",
+          "transport": {
+            "request_id": "wb129-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。\"}],\"reason\":\"候选设定中雷能够直接读懂陌生人的思想，与雷的生理结构和认知能力设定矛盾，因为所有相关设定均未提及雷具备读心能力，且其认知能力仅与胸痛、心脏寄宿等生理与心理反应相关，无任何支持其读心能力的证据，且其身份保密与认知限制表明其能力受限于双心脏与天使寄宿，未涉及思想读取。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[\"雷的读心能力被默认为一种独立认知能力，且未被任何设定支持或解释\"]}}"
+              }
+            ]
+          },
+          "scope_guard_applied": true,
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。"
+              }
+            ],
+            "reason": "候选设定中雷能够直接读懂陌生人的思想，与雷的生理结构和认知能力设定矛盾，因为所有相关设定均未提及雷具备读心能力，且其认知能力仅与胸痛、心脏寄宿等生理与心理反应相关，无任何支持其读心能力的证据，且其身份保密与认知限制表明其能力受限于双心脏与天使寄宿，未涉及思想读取。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": [
+                "雷的读心能力被默认为一种独立认知能力，且未被任何设定支持或解释"
+              ]
+            }
+          }
+        },
+        {
+          "fixture_id": "wb016-C1",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb016-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。\"}],\"reason\":\"候选设定L1明确指出‘亚巴顿于同一时期提前降临’，与事件‘2063年的大地震是亚巴顿降临造成的’在时间、主体和因果关系上一致，且‘同一时期’与‘大地震’直接对应，构成直接支持。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。"
+              }
+            ],
+            "reason": "候选设定L1明确指出‘亚巴顿于同一时期提前降临’，与事件‘2063年的大地震是亚巴顿降临造成的’在时间、主体和因果关系上一致，且‘同一时期’与‘大地震’直接对应，构成直接支持。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb145-C1",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "uncertain",
+          "transport": {
+            "request_id": "wb145-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。\"}],\"reason\":\"事件中提到‘卡拉是黄昏群岛的祭司’，但候选设定中未提及‘卡拉’或与‘黄昏群岛’相关的任何信息，且所有设定均围绕‘雷’、‘拉古艾尔’、‘亚巴顿’等角色及其心脏宿主关系展开，与卡拉或黄昏群岛无直接或间接关联。因此，该事件在主体、地点、身份和上下文上均未被支持，且与设定内容无任何逻辑或事实连接，构成明显不一致。\",\"assessment\":{\"same_subject\":false,\"evidence_applicable\":false,\"relation\":\"insufficient\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "scope_guard_applied": true,
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。"
+              }
+            ],
+            "reason": "事件中提到‘卡拉是黄昏群岛的祭司’，但候选设定中未提及‘卡拉’或与‘黄昏群岛’相关的任何信息，且所有设定均围绕‘雷’、‘拉古艾尔’、‘亚巴顿’等角色及其心脏宿主关系展开，与卡拉或黄昏群岛无直接或间接关联。因此，该事件在主体、地点、身份和上下文上均未被支持，且与设定内容无任何逻辑或事实连接，构成明显不一致。",
+            "assessment": {
+              "same_subject": false,
+              "evidence_applicable": false,
+              "relation": "insufficient",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb136-C1",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb136-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。\"}],\"reason\":\"雷的长剑在第八话断裂后无法继续使用，因此在第九话将其送到研究站修复是对其状态的合理延续，符合事件逻辑。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。"
+              }
+            ],
+            "reason": "雷的长剑在第八话断裂后无法继续使用，因此在第九话将其送到研究站修复是对其状态的合理延续，符合事件逻辑。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb143-C2",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb143-C2",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。\"}],\"reason\":\"候选设定中‘城区储能电池采用液态金属制造’与L1中‘夜间照明依靠白天充电的储能电池’在主体（城区）、时间（夜间）、条件（太阳能板夜间不发电）下一致，且储能电池的存在是夜间照明的前提，未引入矛盾信息，符合事件描述。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。"
+              }
+            ],
+            "reason": "候选设定中‘城区储能电池采用液态金属制造’与L1中‘夜间照明依靠白天充电的储能电池’在主体（城区）、时间（夜间）、条件（太阳能板夜间不发电）下一致，且储能电池的存在是夜间照明的前提，未引入矛盾信息，符合事件描述。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb141-C2",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb141-C2",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。\"}],\"reason\":\"候选设定中明确指出雷的父亲不知道拉古艾尔寄宿在雷体内，且其误以为胸痛是普通心脏疾病，这与事件‘雷的父亲精通古天使语言’在主体（雷的父亲）、时间（未指定但一致）、条件（不知道寄宿）下不冲突，且未引入矛盾信息。事件本身未涉及语言能力，但‘精通古天使语言’作为雷父亲的属性，未被任何设定否定或矛盾，且未被设定中其他信息排除。因此，该设定在逻辑上与事件不冲突，且未被明确否定。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。"
+              }
+            ],
+            "reason": "候选设定中明确指出雷的父亲不知道拉古艾尔寄宿在雷体内，且其误以为胸痛是普通心脏疾病，这与事件‘雷的父亲精通古天使语言’在主体（雷的父亲）、时间（未指定但一致）、条件（不知道寄宿）下不冲突，且未引入矛盾信息。事件本身未涉及语言能力，但‘精通古天使语言’作为雷父亲的属性，未被任何设定否定或矛盾，且未被设定中其他信息排除。因此，该设定在逻辑上与事件不冲突，且未被明确否定。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb013-C1",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "uncertain",
+          "transport": {
+            "request_id": "wb013-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。\"}],\"reason\":\"候选设定中未提及莉娅与雷的亲属关系，且所有关于雷的设定均未涉及其家庭成员或血缘关系，特别是未提及莉娅的存在或其与雷的亲属关系。事件声称‘莉娅是雷的姐姐’属于新增身份信息，但无任何设定支持该亲属关系，且与‘其他人不知道两颗心脏的秘密’等设定无直接关联，也未说明莉娅是否属于‘其他人’或其认知状态。因此，该设定在主体、条件和适用范围内与现有lore不相容，构成明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":false,\"relation\":\"direct_conflict\",\"assumptions\":[\"莉娅是雷的姐姐这一身份在lore中被默认为事实或可推导\"]}}"
+              }
+            ]
+          },
+          "scope_guard_applied": true,
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。"
+              }
+            ],
+            "reason": "候选设定中未提及莉娅与雷的亲属关系，且所有关于雷的设定均未涉及其家庭成员或血缘关系，特别是未提及莉娅的存在或其与雷的亲属关系。事件声称‘莉娅是雷的姐姐’属于新增身份信息，但无任何设定支持该亲属关系，且与‘其他人不知道两颗心脏的秘密’等设定无直接关联，也未说明莉娅是否属于‘其他人’或其认知状态。因此，该设定在主体、条件和适用范围内与现有lore不相容，构成明确矛盾。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": false,
+              "relation": "direct_conflict",
+              "assumptions": [
+                "莉娅是雷的姐姐这一身份在lore中被默认为事实或可推导"
+              ]
+            }
+          }
+        },
+        {
+          "fixture_id": "wb140-C2",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "uncertain",
+          "transport": {
+            "request_id": "wb140-C2",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"uncertain\",\"citations\":[{\"evidence_id\":\"L5\",\"quote\":\"莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。\"}],\"reason\":\"候选设定未提及德尔塔知道莉娅生日的任何信息，也未提供德尔塔与莉娅之间互动或莉娅生日相关的情节或背景。虽然莉娅的工作职责被明确，但没有任何证据表明德尔塔知晓其生日，或该信息在故事中被建立或传递。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":false,\"relation\":\"insufficient\",\"assumptions\":[\"德尔塔与莉娅之间存在直接互动或信息交换，且该互动涉及生日信息的传递\"]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "uncertain",
+            "citations": [
+              {
+                "evidence_id": "L5",
+                "quote": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。"
+              }
+            ],
+            "reason": "候选设定未提及德尔塔知道莉娅生日的任何信息，也未提供德尔塔与莉娅之间互动或莉娅生日相关的情节或背景。虽然莉娅的工作职责被明确，但没有任何证据表明德尔塔知晓其生日，或该信息在故事中被建立或传递。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": false,
+              "relation": "insufficient",
+              "assumptions": [
+                "德尔塔与莉娅之间存在直接互动或信息交换，且该互动涉及生日信息的传递"
+              ]
+            }
+          }
+        },
+        {
+          "fixture_id": "wb134-C1",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "uncertain",
+          "transport": {
+            "request_id": "wb134-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"地震前一年，城区曾因发电厂事故发生大停电。当时没有天使降临的记录。\"}],\"reason\":\"候选设定声称大地震是发电厂事故造成的，但L2明确指出发电厂事故发生在地震前一年，且当时没有天使降临的记录。然而，事件本身并未提及天使降临，因此该设定与L2在因果关系上存在矛盾：发电厂事故导致停电，但并未说明其导致地震；而事件声称发电厂事故直接导致地震，这与L2中‘事故导致停电’但未提地震的表述构成因果关系上的不一致，且L1明确将地震归为独立历史事件，未将其与发电厂事故建立因果联系。因此，该设定在时间与因果上与现有证据直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[\"发电厂事故与大地震之间存在直接因果关系是事件设定的必要前提，但L2未提供此因果关系，且L1将地震作为独立事件，未将其归因于发电厂事故\"]}}"
+              }
+            ]
+          },
+          "scope_guard_applied": true,
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L2",
+                "quote": "地震前一年，城区曾因发电厂事故发生大停电。当时没有天使降临的记录。"
+              }
+            ],
+            "reason": "候选设定声称大地震是发电厂事故造成的，但L2明确指出发电厂事故发生在地震前一年，且当时没有天使降临的记录。然而，事件本身并未提及天使降临，因此该设定与L2在因果关系上存在矛盾：发电厂事故导致停电，但并未说明其导致地震；而事件声称发电厂事故直接导致地震，这与L2中‘事故导致停电’但未提地震的表述构成因果关系上的不一致，且L1明确将地震归为独立历史事件，未将其与发电厂事故建立因果联系。因此，该设定在时间与因果上与现有证据直接冲突。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_conflict",
+              "assumptions": [
+                "发电厂事故与大地震之间存在直接因果关系是事件设定的必要前提，但L2未提供此因果关系，且L1将地震作为独立事件，未将其归因于发电厂事故"
+              ]
+            }
+          }
+        },
+        {
+          "fixture_id": "wb146-C1",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "uncertain",
+          "transport": {
+            "request_id": "wb146-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。\"}],\"reason\":\"候选设定提到‘蓝雾城所有街道都由巨龙铺设’，但候选lore中未提及任何关于街道、巨龙或城市基础设施的设定，且所有相关证据均涉及列车、医院、机械臂、人物行动等与交通或医疗相关的内容，未涉及街道材质或建造者。此外，‘巨龙铺设街道’这一设定在时间、主体、条件上与现有lore中的任何内容均无交集，且未被任何事件或背景信息支持，属于完全脱离上下文的虚构。因此，该设定与现有lore在主体、地点、时间、条件上均无直接关联，构成明确矛盾。\",\"assessment\":{\"same_subject\":false,\"evidence_applicable\":false,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "scope_guard_applied": true,
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。"
+              }
+            ],
+            "reason": "候选设定提到‘蓝雾城所有街道都由巨龙铺设’，但候选lore中未提及任何关于街道、巨龙或城市基础设施的设定，且所有相关证据均涉及列车、医院、机械臂、人物行动等与交通或医疗相关的内容，未涉及街道材质或建造者。此外，‘巨龙铺设街道’这一设定在时间、主体、条件上与现有lore中的任何内容均无交集，且未被任何事件或背景信息支持，属于完全脱离上下文的虚构。因此，该设定与现有lore在主体、地点、时间、条件上均无直接关联，构成明确矛盾。",
+            "assessment": {
+              "same_subject": false,
+              "evidence_applicable": false,
+              "relation": "direct_conflict",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb137-C2",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb137-C2",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"}],\"reason\":\"雷拥有两颗心脏，且其生理结构中右侧心脏与拉古艾尔相关，而拉古艾尔施展治疗时会引发右胸温暖反应，表明其与体温控制有关，因此雷操控气温的能力可被理解为与右侧心脏或拉古艾尔的活动相关，符合其生理结构与已知反应，属于同一主体、同一条件下的直接支持。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L2",
+                "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。"
+              }
+            ],
+            "reason": "雷拥有两颗心脏，且其生理结构中右侧心脏与拉古艾尔相关，而拉古艾尔施展治疗时会引发右胸温暖反应，表明其与体温控制有关，因此雷操控气温的能力可被理解为与右侧心脏或拉古艾尔的活动相关，符合其生理结构与已知反应，属于同一主体、同一条件下的直接支持。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb132-C1",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb132-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。\"}],\"reason\":\"候选设定‘雷的父亲名叫维克多’与故事上下文‘雷的父亲名叫维克多’在主体（雷的父亲）、时间（未指定但一致）、条件（未指定）下直接对应，且未与任何其他设定冲突。lore中未提供父亲姓名的任何矛盾信息，也未提及姓名缺失或错误，因此该设定在主体和语义上与事件一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。"
+              }
+            ],
+            "reason": "候选设定‘雷的父亲名叫维克多’与故事上下文‘雷的父亲名叫维克多’在主体（雷的父亲）、时间（未指定但一致）、条件（未指定）下直接对应，且未与任何其他设定冲突。lore中未提供父亲姓名的任何矛盾信息，也未提及姓名缺失或错误，因此该设定在主体和语义上与事件一致。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb139-C2",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb139-C2",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。\"}],\"reason\":\"候选设定明确指出月城安装了机械左臂，且失去的是左臂，与事件中‘月城能用机械左臂读取他人思想’的主体和装置一致，且未引入矛盾条件。事件未涉及读取思想的功能，但该功能属于机械左臂的使用场景，而lore中未禁止或限制该功能，因此在主体、时间、条件上与事件一致，且无直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。"
+              }
+            ],
+            "reason": "候选设定明确指出月城安装了机械左臂，且失去的是左臂，与事件中‘月城能用机械左臂读取他人思想’的主体和装置一致，且未引入矛盾条件。事件未涉及读取思想的功能，但该功能属于机械左臂的使用场景，而lore中未禁止或限制该功能，因此在主体、时间、条件上与事件一致，且无直接冲突。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb144-C2",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "consistent",
+          "transport": {
+            "request_id": "wb144-C2",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。\"}],\"reason\":\"候选设定L1明确指出亚巴顿的提前降临发生在大地震期间，且比天使议会计划早三年，与事件中‘亚巴顿提前降临是雷主动召唤造成的’在时间（提前三年）和主体（亚巴顿）上一致，且事件中‘提前降临’与‘雷主动召唤’的因果关系未被设定直接否定，而L2提到雷在废墟中昏迷、亚巴顿同时降临，暗示雷的意识状态与亚巴顿降临相关，支持雷主动召唤的因果逻辑。尽管‘主动召唤’未被直接提及，但事件与L1、L2在时间、主体和事件核心（提前降临）上完全一致，且无矛盾信息，因此视为一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+              }
+            ]
+          },
+          "answer": {
+            "verdict": "consistent",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。"
+              }
+            ],
+            "reason": "候选设定L1明确指出亚巴顿的提前降临发生在大地震期间，且比天使议会计划早三年，与事件中‘亚巴顿提前降临是雷主动召唤造成的’在时间（提前三年）和主体（亚巴顿）上一致，且事件中‘提前降临’与‘雷主动召唤’的因果关系未被设定直接否定，而L2提到雷在废墟中昏迷、亚巴顿同时降临，暗示雷的意识状态与亚巴顿降临相关，支持雷主动召唤的因果逻辑。尽管‘主动召唤’未被直接提及，但事件与L1、L2在时间、主体和事件核心（提前降临）上完全一致，且无矛盾信息，因此视为一致。",
+            "assessment": {
+              "same_subject": true,
+              "evidence_applicable": true,
+              "relation": "direct_support",
+              "assumptions": []
+            }
+          }
+        },
+        {
+          "fixture_id": "wb147-C1",
+          "expected_verdict": "uncertain",
+          "status": "ok",
+          "attempts": 1,
+          "predicted_verdict": "uncertain",
+          "transport": {
+            "request_id": "wb147-C1",
+            "status": "ok",
+            "attempts": 1,
+            "attempt_records": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第四话从旧教堂获得一把长剑。此前的剧情没有记录他持有这把剑。\"}],\"reason\":\"候选设定中未提及托林或羽帆公会，也未涉及云海或任何与该事件相关的主体、地点或时间，且事件主体为托林，而所有lore均围绕雷、月城、德尔塔等人物展开，无任何关于托林或羽帆公会的提及，因此在主体、地点和时间上均不一致。\",\"assessment\":{\"same_subject\":false,\"evidence_applicable\":false,\"relation\":\"insufficient\",\"assumptions\":[\"事件主体托林与lore中所有人物为同一主体\",\"羽帆公会与lore中任何设定存在直接关联\"]}}"
+              }
+            ]
+          },
+          "scope_guard_applied": true,
+          "answer": {
+            "verdict": "contradiction",
+            "citations": [
+              {
+                "evidence_id": "L1",
+                "quote": "雷在第四话从旧教堂获得一把长剑。此前的剧情没有记录他持有这把剑。"
+              }
+            ],
+            "reason": "候选设定中未提及托林或羽帆公会，也未涉及云海或任何与该事件相关的主体、地点或时间，且事件主体为托林，而所有lore均围绕雷、月城、德尔塔等人物展开，无任何关于托林或羽帆公会的提及，因此在主体、地点和时间上均不一致。",
+            "assessment": {
+              "same_subject": false,
+              "evidence_applicable": false,
+              "relation": "insufficient",
+              "assumptions": [
+                "事件主体托林与lore中所有人物为同一主体",
+                "羽帆公会与lore中任何设定存在直接关联"
+              ]
+            }
+          }
+        }
+      ],
+      "batch_reports": [
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb029-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"契约不会自动延长宿主寿命。\"}],\"reason\":\"候选设定L1明确指出‘契约不会自动延长宿主寿命’，与事件‘天使契约不会自动延长宿主寿命’在主体（宿主与天使契约）、时间（契约建立时）、条件（无额外说明）和适用范围（契约本身）上完全一致，且为逐字原文支持。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb029-C1"
+              ],
+              "timing": {
+                "seconds": 11.150131499998679,
+                "batch_size": 1,
+                "input_tokens": [
+                  638
+                ],
+                "useful_input_tokens": 638,
+                "padded_input_tokens": 0,
+                "padded_width": 638,
+                "generated_tokens": [
+                  124
+                ],
+                "total_generated_tokens": 124,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb028-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。\"}],\"reason\":\"候选设定与事件完全对应，主体为宿主与天使建立契约时，条件为自愿付出重要记忆，且原文明确指出‘必须自愿付出一段重要记忆’，与事件描述一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb028-C1"
+              ],
+              "timing": {
+                "seconds": 9.831350100001146,
+                "batch_size": 1,
+                "input_tokens": [
+                  642
+                ],
+                "useful_input_tokens": 642,
+                "padded_input_tokens": 0,
+                "padded_width": 642,
+                "generated_tokens": [
+                  113
+                ],
+                "total_generated_tokens": 113,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb001-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"候选设定L1明确指出在第三话中，雷向德尔塔说明双心脏与寄宿天使的秘密，且德尔塔因此知道雷的宿主身份，与事件完全一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb001-C1"
+              ],
+              "timing": {
+                "seconds": 10.166032399996766,
+                "batch_size": 1,
+                "input_tokens": [
+                  655
+                ],
+                "useful_input_tokens": 655,
+                "padded_input_tokens": 0,
+                "padded_width": 655,
+                "generated_tokens": [
+                  115
+                ],
+                "total_generated_tokens": 115,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb024-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"候选设定L1直接陈述了雷借用亚巴顿力量后会短暂失去部分记忆，与事件完全一致，且未引入矛盾条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb024-C1"
+              ],
+              "timing": {
+                "seconds": 9.040713399997912,
+                "batch_size": 1,
+                "input_tokens": [
+                  653
+                ],
+                "useful_input_tokens": 653,
+                "padded_input_tokens": 0,
+                "padded_width": 653,
+                "generated_tokens": [
+                  102
+                ],
+                "total_generated_tokens": 102,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb030-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"寄宿天使离开宿主体内最多三十秒。超过时限会失去凝聚形体的能力。\"}],\"reason\":\"候选设定L1直接陈述了‘寄宿天使离开宿主体内最多三十秒’这一事件，并明确将其作为基础条件，与事件完全一致，且未引入矛盾条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb030-C1"
+              ],
+              "timing": {
+                "seconds": 10.021607299997413,
+                "batch_size": 1,
+                "input_tokens": [
+                  664
+                ],
+                "useful_input_tokens": 664,
+                "padded_input_tokens": 0,
+                "padded_width": 664,
+                "generated_tokens": [
+                  108
+                ],
+                "total_generated_tokens": 108,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb055-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"德尔塔的外骨骼采用可更换独立电池。正常行走可运行两小时，高功率推进会迅速耗电。\"}],\"reason\":\"候选设定中明确指出德尔塔外骨骼采用可更换独立电池，与事件'德尔塔装甲使用可更换独立电池'在主体、时间、条件和适用范围内完全一致，且无矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb055-C1"
+              ],
+              "timing": {
+                "seconds": 10.72937500000262,
+                "batch_size": 1,
+                "input_tokens": [
+                  649
+                ],
+                "useful_input_tokens": 649,
+                "padded_input_tokens": 0,
+                "padded_width": 649,
+                "generated_tokens": [
+                  118
+                ],
+                "total_generated_tokens": 118,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb023-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。\"}],\"reason\":\"候选设定L1明确指出拉古艾尔施展治疗时雷的右胸会变暖，且该现象与右侧心脏相关，与事件描述完全一致，主体、时间、条件和反应均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb023-C1"
+              ],
+              "timing": {
+                "seconds": 10.951147600000695,
+                "batch_size": 1,
+                "input_tokens": [
+                  663
+                ],
+                "useful_input_tokens": 663,
+                "padded_input_tokens": 0,
+                "padded_width": 663,
+                "generated_tokens": [
+                  122
+                ],
+                "total_generated_tokens": 122,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb047-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。\"}],\"reason\":\"候选设定L1明确指出档案馆保留地震前的纸质备份，且在网络数据库损坏时管理员仍可查阅纸本记录，与事件‘档案馆保留地震前的纸质备份’完全一致，主体、时间、条件和适用范围均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb047-C1"
+              ],
+              "timing": {
+                "seconds": 11.484489500002383,
+                "batch_size": 1,
+                "input_tokens": [
+                  644
+                ],
+                "useful_input_tokens": 644,
+                "padded_input_tokens": 0,
+                "padded_width": 644,
+                "generated_tokens": [
+                  126
+                ],
+                "total_generated_tokens": 126,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb032-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"天使可以隐藏羽翼并改变外表，但伪装不能消除契约的精神波动。\"}],\"reason\":\"候选设定L1明确指出，尽管天使可以伪装外表，但这种伪装无法消除契约精神波动，与事件‘天使的外表伪装不能消除契约精神波动’在主体（天使）、条件（伪装外表）和内容（精神波动不可消除）上完全一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb032-C1"
+              ],
+              "timing": {
+                "seconds": 11.064249200000631,
+                "batch_size": 1,
+                "input_tokens": [
+                  631
+                ],
+                "useful_input_tokens": 631,
+                "padded_input_tokens": 0,
+                "padded_width": 631,
+                "generated_tokens": [
+                  123
+                ],
+                "total_generated_tokens": 123,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb034-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。\"}],\"reason\":\"候选设定L1明确指出当雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音，与事件描述完全一致，且限定在‘共鸣’这一特定条件下，符合事件中的‘心脏共鸣时’这一触发条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb034-C1"
+              ],
+              "timing": {
+                "seconds": 11.348908899999515,
+                "batch_size": 1,
+                "input_tokens": [
+                  648
+                ],
+                "useful_input_tokens": 648,
+                "padded_input_tokens": 0,
+                "padded_width": 648,
+                "generated_tokens": [
+                  127
+                ],
+                "total_generated_tokens": 127,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb067-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"公众知道他的代号，但不知道装甲下的真实姓名。\"}],\"reason\":\"候选设定L1明确指出‘公众知道德尔塔的代号’，且该信息与事件‘公众知道德尔塔的代号’完全一致，主体为公众，事件为知道代号，符合同一主体、时间与条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb067-C1"
+              ],
+              "timing": {
+                "seconds": 9.543250399998215,
+                "batch_size": 1,
+                "input_tokens": [
+                  665
+                ],
+                "useful_input_tokens": 665,
+                "padded_input_tokens": 0,
+                "padded_width": 665,
+                "generated_tokens": [
+                  113
+                ],
+                "total_generated_tokens": 113,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb112-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"候选设定L1明确指出静默结界能削弱宿主的精神波动，与事件‘旧教堂的静默结界可以削弱精神波动’在主体（宿主）、机制和效果上完全一致，且未引入矛盾条件。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb112-C1"
+              ],
+              "timing": {
+                "seconds": 10.599951500000316,
+                "batch_size": 1,
+                "input_tokens": [
+                  665
+                ],
+                "useful_input_tokens": 665,
+                "padded_input_tokens": 0,
+                "padded_width": 665,
+                "generated_tokens": [
+                  123
+                ],
+                "total_generated_tokens": 123,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb025-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。\"}],\"reason\":\"候选设定L1明确指出亚巴顿的降临时间比天使议会计划早了三年，且发生在大地震期间，与事件描述完全一致，主体、时间、条件均匹配。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb025-C1"
+              ],
+              "timing": {
+                "seconds": 9.43646009999793,
+                "batch_size": 1,
+                "input_tokens": [
+                  666
+                ],
+                "useful_input_tokens": 666,
+                "padded_input_tokens": 0,
+                "padded_width": 666,
+                "generated_tokens": [
+                  109
+                ],
+                "total_generated_tokens": 109,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb055-C2",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"外骨骼推进器产生大量热量，连续高功率运行十分钟必须停止散热。\"}],\"reason\":\"候选设定中'外骨骼推进器产生大量热量，连续高功率运行十分钟必须停止散热'与事件'德尔塔装甲连续高功率运行十分钟必须停止散热'在主体（外骨骼推进器）、时间（连续高功率运行十分钟）、条件（必须停止散热）上完全一致，且直接支持事件发生。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb055-C2"
+              ],
+              "timing": {
+                "seconds": 12.294526000001497,
+                "batch_size": 1,
+                "input_tokens": [
+                  642
+                ],
+                "useful_input_tokens": 642,
+                "padded_input_tokens": 0,
+                "padded_width": 642,
+                "generated_tokens": [
+                  134
+                ],
+                "total_generated_tokens": 134,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb003-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。\"}],\"reason\":\"候选设定中明确指出‘北方研究站位于终点站附近’，与事件‘北方研究站位于城区列车的终点站附近’在主体、位置和条件上完全一致，且无矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb003-C1"
+              ],
+              "timing": {
+                "seconds": 10.222866899999644,
+                "batch_size": 1,
+                "input_tokens": [
+                  634
+                ],
+                "useful_input_tokens": 634,
+                "padded_input_tokens": 0,
+                "padded_width": 634,
+                "generated_tokens": [
+                  114
+                ],
+                "total_generated_tokens": 114,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb050-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。\"}],\"reason\":\"候选设定与事件'月城的左臂是机械臂'在主体（月城）、时间（失去左臂后安装）、条件（右臂为自然肢体）上完全一致，且L1明确说明左臂被失去后安装了机械臂，与事件描述直接对应。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb050-C1"
+              ],
+              "timing": {
+                "seconds": 11.772378800000297,
+                "batch_size": 1,
+                "input_tokens": [
+                  652
+                ],
+                "useful_input_tokens": 652,
+                "padded_input_tokens": 0,
+                "padded_width": 652,
+                "generated_tokens": [
+                  130
+                ],
+                "total_generated_tokens": 130,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb104-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"寄宿天使离开宿主体内最多三十秒。超过时限会失去凝聚形体的能力。\"}],\"reason\":\"候选事件声称寄宿天使离开宿主后可以无限期维持凝聚形体，而候选设定L1明确指出离开宿主体内最多三十秒，超过时限会失去凝聚形体的能力，二者在时间条件和能力维持上直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb104-C1"
+              ],
+              "timing": {
+                "seconds": 10.123939499997505,
+                "batch_size": 1,
+                "input_tokens": [
+                  666
+                ],
+                "useful_input_tokens": 666,
+                "padded_input_tokens": 0,
+                "padded_width": 666,
+                "generated_tokens": [
+                  125
+                ],
+                "total_generated_tokens": 125,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb088-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"宿主与天使建立契约时必须自愿付出一段重要记忆。契约不会自动延长宿主寿命。\"}],\"reason\":\"候选设定声称‘宿主契约里的重要记忆由天使付出而不是宿主’，与L1中‘宿主与天使建立契约时必须自愿付出一段重要记忆’直接矛盾，主体（宿主）在契约中付出记忆，而非天使，因此属于明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb088-C1"
+              ],
+              "timing": {
+                "seconds": 10.38452049999978,
+                "batch_size": 1,
+                "input_tokens": [
+                  644
+                ],
+                "useful_input_tokens": 644,
+                "padded_input_tokens": 0,
+                "padded_width": 644,
+                "generated_tokens": [
+                  135
+                ],
+                "total_generated_tokens": 135,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb068-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"候选设定L1明确指出雷在第三话向德尔塔说明宿主身份，德尔塔因此得知，这与事件中'德尔塔仍不知道雷是宿主'直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb068-C1"
+              ],
+              "timing": {
+                "seconds": 10.64144750000196,
+                "batch_size": 1,
+                "input_tokens": [
+                  659
+                ],
+                "useful_input_tokens": 659,
+                "padded_input_tokens": 0,
+                "padded_width": 659,
+                "generated_tokens": [
+                  118
+                ],
+                "total_generated_tokens": 118,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb112-C2",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。\"}],\"reason\":\"候选设定声称雷借用亚巴顿力量后'从来不会失去任何记忆'，与L1中'会短暂失去部分记忆'直接冲突，且L1明确指出记忆缺失与力量强度正相关，因此该设定在主体、条件和时间范围内与事件明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb112-C2"
+              ],
+              "timing": {
+                "seconds": 12.2263049999965,
+                "batch_size": 1,
+                "input_tokens": [
+                  665
+                ],
+                "useful_input_tokens": 665,
+                "padded_input_tokens": 0,
+                "padded_width": 665,
+                "generated_tokens": [
+                  136
+                ],
+                "total_generated_tokens": 136,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb065-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"寄宿天使离开宿主体内最多三十秒。超过时限会失去凝聚形体的能力。\"}],\"reason\":\"候选设定明确指出寄宿天使离体最多维持三十秒，而事件声称可稳定维持三分钟，超过三十秒，与L1中的‘超过时限会失去凝聚形体的能力’直接冲突，构成明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb065-C1"
+              ],
+              "timing": {
+                "seconds": 10.75440190000154,
+                "batch_size": 1,
+                "input_tokens": [
+                  661
+                ],
+                "useful_input_tokens": 661,
+                "padded_input_tokens": 0,
+                "padded_width": 661,
+                "generated_tokens": [
+                  122
+                ],
+                "total_generated_tokens": 122,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb095-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"德尔塔的装甲连续高功率运行十分钟后必须冷却。冷却期间无法使用推进器。\"}],\"reason\":\"候选事件声称装甲可连续高功率运行二十分钟而无需冷却，与候选设定L1中‘连续高功率运行十分钟后必须冷却’直接冲突，且在相同主体（德尔塔）、相同条件（高功率运行）下明确否定其运行二十分钟的可能性。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb095-C1"
+              ],
+              "timing": {
+                "seconds": 11.2556869,
+                "batch_size": 1,
+                "input_tokens": [
+                  639
+                ],
+                "useful_input_tokens": 639,
+                "padded_input_tokens": 0,
+                "padded_width": 639,
+                "generated_tokens": [
+                  130
+                ],
+                "total_generated_tokens": 130,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb079-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。\"}],\"reason\":\"候选事件声称雷的父亲前往南方研究站，而候选设定L1明确指出其前往的是北方研究站，且该信息在相同主体、时间、条件和适用范围内直接对立。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb079-C1"
+              ],
+              "timing": {
+                "seconds": 9.949742500000866,
+                "batch_size": 1,
+                "input_tokens": [
+                  660
+                ],
+                "useful_input_tokens": 660,
+                "padded_input_tokens": 0,
+                "padded_width": 660,
+                "generated_tokens": [
+                  112
+                ],
+                "total_generated_tokens": 112,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb122-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。\"}],\"reason\":\"候选设定明确指出右臂始终是自然肢体，且事件描述为‘月城在现有状态下两条手臂都是自然肢体’，与L1中‘右臂始终是自然肢体’直接一致，且未提及右臂被替换或改变，因此在主体、时间、条件上完全一致，构成直接支持。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb122-C1"
+              ],
+              "timing": {
+                "seconds": 12.785777100001724,
+                "batch_size": 1,
+                "input_tokens": [
+                  647
+                ],
+                "useful_input_tokens": 647,
+                "padded_input_tokens": 0,
+                "padded_width": 647,
+                "generated_tokens": [
+                  137
+                ],
+                "total_generated_tokens": 137,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb106-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"宿主与天使建立契约时必须自愿付出一段重要记忆。\"}],\"reason\":\"候选事件声称‘宿主不需要自愿也能建立契约’，而候选设定L1明确指出‘建立契约时必须自愿付出一段重要记忆’，即建立契约的前提是自愿，因此‘不需要自愿’与‘必须自愿’直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb106-C1"
+              ],
+              "timing": {
+                "seconds": 10.25177370000165,
+                "batch_size": 1,
+                "input_tokens": [
+                  637
+                ],
+                "useful_input_tokens": 637,
+                "padded_input_tokens": 0,
+                "padded_width": 637,
+                "generated_tokens": [
+                  118
+                ],
+                "total_generated_tokens": 118,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb087-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"德尔塔使用动力外骨骼。装甲依靠独立电池供电，无法无限运行。\"}],\"reason\":\"候选设定声称德尔塔的既定行动装备是月城的机械左臂，但候选设定中明确指出德尔塔使用的是动力外骨骼，且该装备由独立电池供电，与机械左臂无直接关联。机械左臂属于月城本人，而非德尔塔的装备，因此在主体（德尔塔）和装备类型上存在明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb087-C1"
+              ],
+              "timing": {
+                "seconds": 13.078079800001433,
+                "batch_size": 1,
+                "input_tokens": [
+                  653
+                ],
+                "useful_input_tokens": 653,
+                "padded_input_tokens": 0,
+                "padded_width": 653,
+                "generated_tokens": [
+                  146
+                ],
+                "total_generated_tokens": 146,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb073-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"事件中德尔塔在第三话听完身份说明后仍不知道雷拥有两颗心脏，与L1中‘德尔塔从此知道雷的宿主身份’形成明确时间与条件对应，说明在该事件发生时，德尔塔确实是在第三话之后才得知，因此‘仍不知道’是符合设定的。L1明确指出‘说明’后德尔塔才得知，因此在说明前‘不知道’是直接支持的。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb073-C1"
+              ],
+              "timing": {
+                "seconds": 15.386305100000754,
+                "batch_size": 1,
+                "input_tokens": [
+                  662
+                ],
+                "useful_input_tokens": 662,
+                "padded_input_tokens": 0,
+                "padded_width": 662,
+                "generated_tokens": [
+                  168
+                ],
+                "total_generated_tokens": 168,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb119-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。\"}],\"reason\":\"候选设定声称静默结界会增强精神波动并提高守望者发现宿主的概率，与L1中‘静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率’直接矛盾，两者在作用机制和结果上完全相反。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb119-C1"
+              ],
+              "timing": {
+                "seconds": 12.038211799997953,
+                "batch_size": 1,
+                "input_tokens": [
+                  672
+                ],
+                "useful_input_tokens": 672,
+                "padded_input_tokens": 0,
+                "padded_width": 672,
+                "generated_tokens": [
+                  134
+                ],
+                "total_generated_tokens": 134,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb064-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。\"}],\"reason\":\"候选设定中明确指出亚巴顿的降临比天使议会计划早了三年，而事件描述为‘亚巴顿的降临比天使议会计划晚了三年’，与设定文本直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb064-C1"
+              ],
+              "timing": {
+                "seconds": 10.000455699999293,
+                "batch_size": 1,
+                "input_tokens": [
+                  666
+                ],
+                "useful_input_tokens": 666,
+                "padded_input_tokens": 0,
+                "padded_width": 666,
+                "generated_tokens": [
+                  115
+                ],
+                "total_generated_tokens": 115,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb097-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"德尔塔的装甲连续高功率运行十分钟后必须冷却。冷却期间无法使用推进器。\"}],\"reason\":\"候选事件声称‘德尔塔的现有装甲冷却期间仍能使用推进器’，与候选设定L1中‘冷却期间无法使用推进器’直接冲突，主体、时间、条件完全一致，属于明确不相容。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb097-C1"
+              ],
+              "timing": {
+                "seconds": 11.156416000001627,
+                "batch_size": 1,
+                "input_tokens": [
+                  635
+                ],
+                "useful_input_tokens": 635,
+                "padded_input_tokens": 0,
+                "padded_width": 635,
+                "generated_tokens": [
+                  121
+                ],
+                "total_generated_tokens": 121,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb080-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。\"}],\"reason\":\"候选事件声称机械左臂可直接装在右臂上，而候选设定L1明确指出‘不能直接装在右臂上’，在相同主体（月城）、相同时间条件（机械左臂安装后）下构成直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb080-C1"
+              ],
+              "timing": {
+                "seconds": 12.047719000001962,
+                "batch_size": 1,
+                "input_tokens": [
+                  654
+                ],
+                "useful_input_tokens": 654,
+                "padded_input_tokens": 0,
+                "padded_width": 654,
+                "generated_tokens": [
+                  131
+                ],
+                "total_generated_tokens": 131,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb124-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。\"}],\"reason\":\"候选设定明确指出监察官没有恢复视力的能力，与事件中‘监察官已经拥有恢复视力的能力’直接矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb124-C1"
+              ],
+              "timing": {
+                "seconds": 9.303029300001072,
+                "batch_size": 1,
+                "input_tokens": [
+                  630
+                ],
+                "useful_input_tokens": 630,
+                "padded_input_tokens": 0,
+                "padded_width": 630,
+                "generated_tokens": [
+                  102
+                ],
+                "total_generated_tokens": 102,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb131-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"uncertain\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。\"}],\"reason\":\"候选设定未提及德尔塔与莉娅订婚，也未提供任何关于莉娅或订婚关系的信息，事件主体为德尔塔与莉娅，但lore中无莉娅相关描述，也无订婚行为或关系的任何线索。虽然德尔塔与雷有互动，但未涉及莉娅或婚姻/订婚行为。\",\"assessment\":{\"same_subject\":false,\"evidence_applicable\":false,\"relation\":\"insufficient\",\"assumptions\":[\"存在莉娅这一角色且与德尔塔有订婚关系，且该关系在lore中被隐含或可推导\"]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb131-C1"
+              ],
+              "timing": {
+                "seconds": 15.514858800001093,
+                "batch_size": 1,
+                "input_tokens": [
+                  648
+                ],
+                "useful_input_tokens": 648,
+                "padded_input_tokens": 0,
+                "padded_width": 648,
+                "generated_tokens": [
+                  177
+                ],
+                "total_generated_tokens": 177,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb129-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。\"}],\"reason\":\"候选设定中雷能够直接读懂陌生人的思想，与雷的生理结构和认知能力设定矛盾，因为所有相关设定均未提及雷具备读心能力，且其认知能力仅与胸痛、心脏寄宿等生理与心理反应相关，无任何支持其读心能力的证据，且其身份保密与认知限制表明其能力受限于双心脏与天使寄宿，未涉及思想读取。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[\"雷的读心能力被默认为一种独立认知能力，且未被任何设定支持或解释\"]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb129-C1"
+              ],
+              "timing": {
+                "seconds": 15.997301999999763,
+                "batch_size": 1,
+                "input_tokens": [
+                  634
+                ],
+                "useful_input_tokens": 634,
+                "padded_input_tokens": 0,
+                "padded_width": 634,
+                "generated_tokens": [
+                  183
+                ],
+                "total_generated_tokens": 183,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb016-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。\"}],\"reason\":\"候选设定L1明确指出‘亚巴顿于同一时期提前降临’，与事件‘2063年的大地震是亚巴顿降临造成的’在时间、主体和因果关系上一致，且‘同一时期’与‘大地震’直接对应，构成直接支持。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb016-C1"
+              ],
+              "timing": {
+                "seconds": 11.947753000000375,
+                "batch_size": 1,
+                "input_tokens": [
+                  660
+                ],
+                "useful_input_tokens": 660,
+                "padded_input_tokens": 0,
+                "padded_width": 660,
+                "generated_tokens": [
+                  138
+                ],
+                "total_generated_tokens": 138,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb145-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。\"}],\"reason\":\"事件中提到‘卡拉是黄昏群岛的祭司’，但候选设定中未提及‘卡拉’或与‘黄昏群岛’相关的任何信息，且所有设定均围绕‘雷’、‘拉古艾尔’、‘亚巴顿’等角色及其心脏宿主关系展开，与卡拉或黄昏群岛无直接或间接关联。因此，该事件在主体、地点、身份和上下文上均未被支持，且与设定内容无任何逻辑或事实连接，构成明显不一致。\",\"assessment\":{\"same_subject\":false,\"evidence_applicable\":false,\"relation\":\"insufficient\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb145-C1"
+              ],
+              "timing": {
+                "seconds": 16.46160410000084,
+                "batch_size": 1,
+                "input_tokens": [
+                  654
+                ],
+                "useful_input_tokens": 654,
+                "padded_input_tokens": 0,
+                "padded_width": 654,
+                "generated_tokens": [
+                  189
+                ],
+                "total_generated_tokens": 189,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb136-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。\"}],\"reason\":\"雷的长剑在第八话断裂后无法继续使用，因此在第九话将其送到研究站修复是对其状态的合理延续，符合事件逻辑。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb136-C1"
+              ],
+              "timing": {
+                "seconds": 8.679862799999682,
+                "batch_size": 1,
+                "input_tokens": [
+                  641
+                ],
+                "useful_input_tokens": 641,
+                "padded_input_tokens": 0,
+                "padded_width": 641,
+                "generated_tokens": [
+                  103
+                ],
+                "total_generated_tokens": 103,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb143-C2",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。\"}],\"reason\":\"候选设定中‘城区储能电池采用液态金属制造’与L1中‘夜间照明依靠白天充电的储能电池’在主体（城区）、时间（夜间）、条件（太阳能板夜间不发电）下一致，且储能电池的存在是夜间照明的前提，未引入矛盾信息，符合事件描述。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb143-C2"
+              ],
+              "timing": {
+                "seconds": 11.586050400001113,
+                "batch_size": 1,
+                "input_tokens": [
+                  643
+                ],
+                "useful_input_tokens": 643,
+                "padded_input_tokens": 0,
+                "padded_width": 643,
+                "generated_tokens": [
+                  131
+                ],
+                "total_generated_tokens": 131,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb141-C2",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。\"}],\"reason\":\"候选设定中明确指出雷的父亲不知道拉古艾尔寄宿在雷体内，且其误以为胸痛是普通心脏疾病，这与事件‘雷的父亲精通古天使语言’在主体（雷的父亲）、时间（未指定但一致）、条件（不知道寄宿）下不冲突，且未引入矛盾信息。事件本身未涉及语言能力，但‘精通古天使语言’作为雷父亲的属性，未被任何设定否定或矛盾，且未被设定中其他信息排除。因此，该设定在逻辑上与事件不冲突，且未被明确否定。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb141-C2"
+              ],
+              "timing": {
+                "seconds": 17.71784729999854,
+                "batch_size": 1,
+                "input_tokens": [
+                  645
+                ],
+                "useful_input_tokens": 645,
+                "padded_input_tokens": 0,
+                "padded_width": 645,
+                "generated_tokens": [
+                  198
+                ],
+                "total_generated_tokens": 198,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb013-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。\"}],\"reason\":\"候选设定中未提及莉娅与雷的亲属关系，且所有关于雷的设定均未涉及其家庭成员或血缘关系，特别是未提及莉娅的存在或其与雷的亲属关系。事件声称‘莉娅是雷的姐姐’属于新增身份信息，但无任何设定支持该亲属关系，且与‘其他人不知道两颗心脏的秘密’等设定无直接关联，也未说明莉娅是否属于‘其他人’或其认知状态。因此，该设定在主体、条件和适用范围内与现有lore不相容，构成明确矛盾。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":false,\"relation\":\"direct_conflict\",\"assumptions\":[\"莉娅是雷的姐姐这一身份在lore中被默认为事实或可推导\"]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb013-C1"
+              ],
+              "timing": {
+                "seconds": 19.223937300001126,
+                "batch_size": 1,
+                "input_tokens": [
+                  632
+                ],
+                "useful_input_tokens": 632,
+                "padded_input_tokens": 0,
+                "padded_width": 632,
+                "generated_tokens": [
+                  217
+                ],
+                "total_generated_tokens": 217,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb140-C2",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"uncertain\",\"citations\":[{\"evidence_id\":\"L5\",\"quote\":\"莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。\"}],\"reason\":\"候选设定未提及德尔塔知道莉娅生日的任何信息，也未提供德尔塔与莉娅之间互动或莉娅生日相关的情节或背景。虽然莉娅的工作职责被明确，但没有任何证据表明德尔塔知晓其生日，或该信息在故事中被建立或传递。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":false,\"relation\":\"insufficient\",\"assumptions\":[\"德尔塔与莉娅之间存在直接互动或信息交换，且该互动涉及生日信息的传递\"]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb140-C2"
+              ],
+              "timing": {
+                "seconds": 14.289399699999194,
+                "batch_size": 1,
+                "input_tokens": [
+                  651
+                ],
+                "useful_input_tokens": 651,
+                "padded_input_tokens": 0,
+                "padded_width": 651,
+                "generated_tokens": [
+                  156
+                ],
+                "total_generated_tokens": 156,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb134-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"地震前一年，城区曾因发电厂事故发生大停电。当时没有天使降临的记录。\"}],\"reason\":\"候选设定声称大地震是发电厂事故造成的，但L2明确指出发电厂事故发生在地震前一年，且当时没有天使降临的记录。然而，事件本身并未提及天使降临，因此该设定与L2在因果关系上存在矛盾：发电厂事故导致停电，但并未说明其导致地震；而事件声称发电厂事故直接导致地震，这与L2中‘事故导致停电’但未提地震的表述构成因果关系上的不一致，且L1明确将地震归为独立历史事件，未将其与发电厂事故建立因果联系。因此，该设定在时间与因果上与现有证据直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_conflict\",\"assumptions\":[\"发电厂事故与大地震之间存在直接因果关系是事件设定的必要前提，但L2未提供此因果关系，且L1将地震作为独立事件，未将其归因于发电厂事故\"]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb134-C1"
+              ],
+              "timing": {
+                "seconds": 22.700140400000237,
+                "batch_size": 1,
+                "input_tokens": [
+                  659
+                ],
+                "useful_input_tokens": 659,
+                "padded_input_tokens": 0,
+                "padded_width": 659,
+                "generated_tokens": [
+                  253
+                ],
+                "total_generated_tokens": 253,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb146-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。\"}],\"reason\":\"候选设定提到‘蓝雾城所有街道都由巨龙铺设’，但候选lore中未提及任何关于街道、巨龙或城市基础设施的设定，且所有相关证据均涉及列车、医院、机械臂、人物行动等与交通或医疗相关的内容，未涉及街道材质或建造者。此外，‘巨龙铺设街道’这一设定在时间、主体、条件上与现有lore中的任何内容均无交集，且未被任何事件或背景信息支持，属于完全脱离上下文的虚构。因此，该设定与现有lore在主体、地点、时间、条件上均无直接关联，构成明确矛盾。\",\"assessment\":{\"same_subject\":false,\"evidence_applicable\":false,\"relation\":\"direct_conflict\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb146-C1"
+              ],
+              "timing": {
+                "seconds": 18.27225019999969,
+                "batch_size": 1,
+                "input_tokens": [
+                  638
+                ],
+                "useful_input_tokens": 638,
+                "padded_input_tokens": 0,
+                "padded_width": 638,
+                "generated_tokens": [
+                  210
+                ],
+                "total_generated_tokens": 210,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb137-C2",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L2\",\"quote\":\"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"}],\"reason\":\"雷拥有两颗心脏，且其生理结构中右侧心脏与拉古艾尔相关，而拉古艾尔施展治疗时会引发右胸温暖反应，表明其与体温控制有关，因此雷操控气温的能力可被理解为与右侧心脏或拉古艾尔的活动相关，符合其生理结构与已知反应，属于同一主体、同一条件下的直接支持。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb137-C2"
+              ],
+              "timing": {
+                "seconds": 14.301022300001932,
+                "batch_size": 1,
+                "input_tokens": [
+                  639
+                ],
+                "useful_input_tokens": 639,
+                "padded_input_tokens": 0,
+                "padded_width": 639,
+                "generated_tokens": [
+                  154
+                ],
+                "total_generated_tokens": 154,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb132-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。\"}],\"reason\":\"候选设定‘雷的父亲名叫维克多’与故事上下文‘雷的父亲名叫维克多’在主体（雷的父亲）、时间（未指定但一致）、条件（未指定）下直接对应，且未与任何其他设定冲突。lore中未提供父亲姓名的任何矛盾信息，也未提及姓名缺失或错误，因此该设定在主体和语义上与事件一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb132-C1"
+              ],
+              "timing": {
+                "seconds": 14.443022800001927,
+                "batch_size": 1,
+                "input_tokens": [
+                  627
+                ],
+                "useful_input_tokens": 627,
+                "padded_input_tokens": 0,
+                "padded_width": 627,
+                "generated_tokens": [
+                  158
+                ],
+                "total_generated_tokens": 158,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb139-C2",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。\"}],\"reason\":\"候选设定明确指出月城安装了机械左臂，且失去的是左臂，与事件中‘月城能用机械左臂读取他人思想’的主体和装置一致，且未引入矛盾条件。事件未涉及读取思想的功能，但该功能属于机械左臂的使用场景，而lore中未禁止或限制该功能，因此在主体、时间、条件上与事件一致，且无直接冲突。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb139-C2"
+              ],
+              "timing": {
+                "seconds": 14.019054699998378,
+                "batch_size": 1,
+                "input_tokens": [
+                  652
+                ],
+                "useful_input_tokens": 652,
+                "padded_input_tokens": 0,
+                "padded_width": 652,
+                "generated_tokens": [
+                  161
+                ],
+                "total_generated_tokens": 161,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb144-C2",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"consistent\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。\"}],\"reason\":\"候选设定L1明确指出亚巴顿的提前降临发生在大地震期间，且比天使议会计划早三年，与事件中‘亚巴顿提前降临是雷主动召唤造成的’在时间（提前三年）和主体（亚巴顿）上一致，且事件中‘提前降临’与‘雷主动召唤’的因果关系未被设定直接否定，而L2提到雷在废墟中昏迷、亚巴顿同时降临，暗示雷的意识状态与亚巴顿降临相关，支持雷主动召唤的因果逻辑。尽管‘主动召唤’未被直接提及，但事件与L1、L2在时间、主体和事件核心（提前降临）上完全一致，且无矛盾信息，因此视为一致。\",\"assessment\":{\"same_subject\":true,\"evidence_applicable\":true,\"relation\":\"direct_support\",\"assumptions\":[]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb144-C2"
+              ],
+              "timing": {
+                "seconds": 20.018997400002263,
+                "batch_size": 1,
+                "input_tokens": [
+                  657
+                ],
+                "useful_input_tokens": 657,
+                "padded_input_tokens": 0,
+                "padded_width": 657,
+                "generated_tokens": [
+                  226
+                ],
+                "total_generated_tokens": 226,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        },
+        {
+          "status": "ok",
+          "rows": [
+            {
+              "request_id": "wb147-C1",
+              "status": "ok",
+              "attempts": 1,
+              "attempt_records": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"verdict\":\"contradiction\",\"citations\":[{\"evidence_id\":\"L1\",\"quote\":\"雷在第四话从旧教堂获得一把长剑。此前的剧情没有记录他持有这把剑。\"}],\"reason\":\"候选设定中未提及托林或羽帆公会，也未涉及云海或任何与该事件相关的主体、地点或时间，且事件主体为托林，而所有lore均围绕雷、月城、德尔塔等人物展开，无任何关于托林或羽帆公会的提及，因此在主体、地点和时间上均不一致。\",\"assessment\":{\"same_subject\":false,\"evidence_applicable\":false,\"relation\":\"insufficient\",\"assumptions\":[\"事件主体托林与lore中所有人物为同一主体\",\"羽帆公会与lore中任何设定存在直接关联\"]}}"
+                }
+              ]
+            }
+          ],
+          "batch_calls": [
+            {
+              "attempt": 1,
+              "request_ids": [
+                "wb147-C1"
+              ],
+              "timing": {
+                "seconds": 15.843518099998619,
+                "batch_size": 1,
+                "input_tokens": [
+                  660
+                ],
+                "useful_input_tokens": 660,
+                "padded_input_tokens": 0,
+                "padded_width": 660,
+                "generated_tokens": [
+                  177
+                ],
+                "total_generated_tokens": 177,
+                "truncated_indices": []
+              },
+              "status": "ok"
+            }
+          ],
+          "retry_count": 0
+        }
+      ],
+      "metrics": {
+        "correct": 38,
+        "facts_total": 48,
+        "judge_accuracy": 0.7916666666666666,
+        "per_class_accuracy": {
+          "consistent": {
+            "correct": 16,
+            "total": 16,
+            "accuracy": 1.0
+          },
+          "contradiction": {
+            "correct": 14,
+            "total": 16,
+            "accuracy": 0.875
+          },
+          "uncertain": {
+            "correct": 8,
+            "total": 16,
+            "accuracy": 0.5
+          }
+        },
+        "confusion": {
+          "consistent": {
+            "consistent": 16
+          },
+          "contradiction": {
+            "contradiction": 14,
+            "consistent": 2
+          },
+          "uncertain": {
+            "uncertain": 8,
+            "consistent": 8
+          }
+        },
+        "parse_failure_count": 0,
+        "parse_failure_rate": 0.0,
+        "retry_fact_count": 0,
+        "retry_rate": 0.0,
+        "main_batch_count": 48,
+        "retry_batch_count": 0,
+        "generation_seconds": 602.057871200006,
+        "useful_input_tokens": 31201,
+        "padded_input_tokens": 0,
+        "padding_ratio": 0.0,
+        "generated_tokens": 6782,
+        "total_judge_seconds": 602.1997024999982,
+        "facts_per_second": 0.0797077776703155,
+        "batch_size_requested": 1,
+        "model_load_seconds": 20.222299199998815,
+        "model_footprint_gib": 2.4167473316192627,
+        "model_cuda_allocated_after_load_gib": 2.484022617340088,
+        "peak_allocated_gib": 2.7805685997009277,
+        "peak_reserved_gib": 2.9296875,
+        "incremental_peak_allocated_gib": 0.29654598236083984
+      },
+      "fixture_path": "C:\\Users\\Xhang\\Desktop\\project\\worldcheck\\agent_pipeline_v2\\reports\\agent_pipeline_v2_benchmark_20260920T104756Z_cdfb47\\judge_fixture.json",
+      "fixture_items_digest": "af2fdfc6520aeed42564a835be3dec5d33b6d2ae3783e6933afbca0d2783a2de",
+      "repeat": 1,
+      "device": "cuda",
+      "model": "Qwen/Qwen3-4B-Instruct-2507",
+      "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "precision": "NF4 4-bit weights, BF16 compute",
+      "warmup_fact_count": 1
+    }
+  ]
+}

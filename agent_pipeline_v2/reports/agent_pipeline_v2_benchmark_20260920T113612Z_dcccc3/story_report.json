@@ -1,0 +1,17 @@
+{
+  "schema_version": "agent-pipeline-v2-story-run-v1",
+  "created_at": "2026-09-20T11:41:08.111291+00:00",
+  "status": "pending_human_review",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "device": "cuda",
+  "judge_batch_size": 4,
+  "top_k": 5,
+  "model_load_seconds": 12.327602499997738,
+  "encoder_index_load_seconds": 0.2576130000015837,
+  "case_count": 4,
+  "case_status_counts": {
+    "ok": 3,
+    "partial": 1
+  }
+}

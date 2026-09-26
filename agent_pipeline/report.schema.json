@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Complete checked-event feedback report v2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "stage",
+    "status",
+    "summary",
+    "findings",
+    "evidence",
+    "failed_items",
+    "pending_events",
+    "ignored_events",
+    "support_events",
+    "unprocessed_events",
+    "review_items",
+    "events",
+    "judge",
+    "processing_complete",
+    "review_required",
+    "failure_reasons",
+    "semantic_verification",
+    "notice",
+    "report"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "agent-pipeline-report-v2"
+    },
+    "stage": {
+      "const": "report"
+    },
+    "status": {
+      "enum": [
+        "ok",
+        "partial",
+        "error"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "verdict",
+        "label",
+        "scope",
+        "counts",
+        "checked_event_count",
+        "finding_count"
+      ],
+      "properties": {
+        "verdict": {
+          "enum": [
+            "consistent",
+            "contradiction",
+            "uncertain"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "scope": {
+          "const": "checked_events"
+        },
+        "counts": {
+          "type": "object",
+          "required": [
+            "consistent",
+            "contradiction",
+            "uncertain",
+            "failed",
+            "pending",
+            "ignored",
+            "support_only",
+            "unprocessed"
+          ],
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "checked_event_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "finding_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "event_ids",
+          "event",
+          "verdict",
+          "reasons",
+          "citations",
+          "sources",
+          "contexts"
+        ]
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "text"
+        ]
+      }
+    },
+    "failed_items": {
+      "type": "array"
+    },
+    "pending_events": {
+      "type": "array"
+    },
+    "ignored_events": {
+      "type": "array"
+    },
+    "support_events": {
+      "type": "array"
+    },
+    "unprocessed_events": {
+      "type": "array"
+    },
+    "review_items": {
+      "type": "array"
+    },
+    "events": {
+      "type": "array"
+    },
+    "judge": {
+      "type": "object"
+    },
+    "processing_complete": {
+      "type": "boolean"
+    },
+    "review_required": {
+      "type": "boolean"
+    },
+    "failure_reasons": {
+      "type": "object"
+    },
+    "semantic_verification": {
+      "const": "not_verified"
+    },
+    "notice": {
+      "type": "string"
+    },
+    "report": {
+      "type": "object",
+      "required": [
+        "overview",
+        "scope",
+        "contradictions",
+        "uncertainties",
+        "confirmations",
+        "confirmation_topics",
+        "excluded_details",
+        "processing_issues",
+        "possible_additions",
+        "story_consistency"
+      ],
+      "properties": {
+        "overview": {
+          "type": "string"
+        },
+        "scope": {
+          "const": "checked_events"
+        },
+        "contradictions": {
+          "type": "array"
+        },
+        "uncertainties": {
+          "type": "array"
+        },
+        "confirmations": {
+          "type": "array"
+        },
+        "confirmation_topics": {
+          "type": "array"
+        },
+        "excluded_details": {
+          "type": "array"
+        },
+        "processing_issues": {
+          "type": "array"
+        },
+        "possible_additions": {
+          "type": "array",
+          "description": "仅待作者确认的可能新增设定或剧情事实，非已确认canon。"
+        },
+        "story_consistency": {
+          "type": "object",
+          "description": "同段已提取客观事件互检，历史记录可not_run，不充当canon证据。"
+        }
+      }
+    }
+  }
+}

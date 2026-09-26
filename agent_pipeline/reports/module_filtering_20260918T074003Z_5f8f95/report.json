@@ -1,0 +1,161 @@
+{
+  "kind": "module_observation_not_frozen_benchmark",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "device": "cuda",
+  "model_load_seconds": 19.271734599999036,
+  "source_sha256": {
+    "filtering.py": "3e9be5916dc8cb90d4f6e984a773a8659c45afcc86ab5cb9857b569b86617df7",
+    "llm.py": "58b2b847fe1ff1843e0d94e59912b70afabd4e91fc1bbe83eef3004f944e5d7a",
+    "prompts/filtering_v1.txt": "134585472a64a298a72fd766c2781b41c7152d44e8080f747bd6074b62256ac7"
+  },
+  "dataset_sha256": "8bd141187a501e12e0cafce5aa04cbe16f143cbcb4ac3a525790cd46647dadc9",
+  "cases": [
+    {
+      "id": "F01",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "review",
+          "reason": "事件内容为普通日常动作，缺乏与能力、关系、世界规则或后续事件的明确关联"
+        },
+        {
+          "event_id": "E2",
+          "decision": "review",
+          "reason": "缺少有效且唯一的筛选决定",
+          "origin": "program_fallback"
+        },
+        {
+          "event_id": "E3",
+          "decision": "review",
+          "reason": "缺少有效且唯一的筛选决定",
+          "origin": "program_fallback"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "status": "ok",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "keep",
+          "reason": "喝水是毒发的前因，构成关键因果链"
+        },
+        {
+          "event_id": "E2",
+          "decision": "keep",
+          "reason": "毒发导致倒地，涉及生死与关键生理变化"
+        },
+        {
+          "event_id": "E3",
+          "decision": "keep",
+          "reason": "左心脏寄宿亚巴顿是核心设定，影响人物身份与能力"
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "status": "ok",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "keep",
+          "reason": "拉古艾尔寄宿在雷体内涉及身份与能力的核心设定，可能影响后续剧情发展和角色力量来源"
+        },
+        {
+          "event_id": "E2",
+          "decision": "keep",
+          "reason": "得知地震真相涉及关键信息与认知变化，可能引发后续行动或关系转折"
+        },
+        {
+          "event_id": "E3",
+          "decision": "keep",
+          "reason": "结束盟友关系涉及人物关系重大变化，可能影响后续情节走向与阵营格局"
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "status": "ok",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "keep",
+          "reason": "涉及关键行动和世界规则（禁止人类进入的地下实验室），可能影响后续剧情发展和角色身份"
+        },
+        {
+          "event_id": "E2",
+          "decision": "ignore",
+          "reason": "仅为设备状态描述，无特殊机制、后果或人物关系变化"
+        },
+        {
+          "event_id": "E3",
+          "decision": "keep",
+          "reason": "设定明确的条件关系，影响角色能力与治疗行为，具有重要认知和生理意义"
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "keep",
+          "reason": "声称通讯器修好可能影响后续行动或信任关系，属于关键信息陈述"
+        },
+        {
+          "event_id": "E2",
+          "decision": "ignore",
+          "reason": "未检查通讯器为日常行为，无特殊后果或因果关联"
+        },
+        {
+          "event_id": "E3",
+          "decision": "review",
+          "reason": "梦到亚巴顿离开心脏指代不明，与事件其他部分关联性不足，需进一步判断"
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "keep",
+          "reason": "握杯是后续能力获取或身体状态变化的可能前提动作，需保留以理解因果链"
+        },
+        {
+          "event_id": "E2",
+          "decision": "review",
+          "reason": "能力获取缺乏直接证据，指代不明，需结合其他事件判断其重要性"
+        }
+      ]
+    },
+    {
+      "id": "F07",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "ignore",
+          "reason": "喝水为日常动作，无特殊机制、后果或关联"
+        },
+        {
+          "event_id": "E2",
+          "decision": "keep",
+          "reason": "看到德尔塔名字涉及身份认知与记忆，可能影响后续关系或秘密展开"
+        },
+        {
+          "event_id": "E3",
+          "decision": "review",
+          "reason": "模糊的熟悉指代不明，缺乏与设定或事件的明确关联"
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "snapshot_stable": true
+}

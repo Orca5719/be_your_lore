@@ -1,0 +1,31 @@
+{
+  "run_id": "story_benchmark_20260917T155642Z_1ecbef",
+  "dataset_sha256": "619d34f54c4e4b432ddd37db9df82cc87cc553a3072272a1b9ccf9d1f301dce5",
+  "raw_sha256": "7d378e1f5f71a7b61a934098046ebcccbdb9d109a7bca2ddd3e583dafd327e84",
+  "cases": [
+    {
+      "case_id": "SL-P01",
+      "reviewed": false,
+      "matches": [],
+      "notes": ""
+    },
+    {
+      "case_id": "SL-P02",
+      "reviewed": false,
+      "matches": [],
+      "notes": ""
+    },
+    {
+      "case_id": "SL-P03",
+      "reviewed": false,
+      "matches": [],
+      "notes": ""
+    },
+    {
+      "case_id": "SL-P04",
+      "reviewed": false,
+      "matches": [],
+      "notes": ""
+    }
+  ]
+}

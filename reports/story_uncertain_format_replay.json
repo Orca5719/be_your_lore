@@ -1,0 +1,14 @@
+{
+  "scope": "Replay of saved actual model response, not new inference",
+  "raw_output": "{\"verdict\":\"不确定\",\"reason\":\"证据未提及控制时间的能力或其施展时间\",\"evidence_ids\"}",
+  "answer": {
+    "status": "ok",
+    "verdict": "不确定",
+    "reason": "证据未提及控制时间的能力或其施展时间",
+    "evidence_ids": [],
+    "evidence": [],
+    "format_normalizations": [
+      "missing_empty_uncertain_evidence_array"
+    ]
+  }
+}

@@ -1,0 +1,1205 @@
+{
+  "passed": true,
+  "preview": {
+    "status": "pending_confirmation",
+    "store_revision": "empty",
+    "source_input": "第九话，雷加入晨星议会，并获得控制时间的能力。",
+    "items": [
+      {
+        "proposed": {
+          "kind": "entity",
+          "entity": "晨星议会",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "晨星议会",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        "existing": [],
+        "entity_presence": {
+          "status": "not_found_in_catalog",
+          "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+          "sources": []
+        },
+        "target_presence": null,
+        "time_presence": null,
+        "review": {
+          "status": "ok",
+          "verdict": "不确定",
+          "reason": "实体/时间节点的归档建议需作者确认；名称已提及不等于类型或结构已建立",
+          "evidence": []
+        }
+      },
+      {
+        "proposed": {
+          "kind": "timepoint",
+          "entity": "第九话",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "第九话",
+          "target": null,
+          "time": "第九话",
+          "valid_from": null,
+          "valid_until": null
+        },
+        "existing": [],
+        "entity_presence": {
+          "status": "not_found_in_catalog",
+          "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+          "sources": []
+        },
+        "target_presence": null,
+        "time_presence": {
+          "status": "not_found_in_catalog",
+          "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+          "sources": []
+        },
+        "review": {
+          "status": "ok",
+          "verdict": "不确定",
+          "reason": "实体/时间节点的归档建议需作者确认；名称已提及不等于类型或结构已建立",
+          "evidence": []
+        }
+      },
+      {
+        "proposed": {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "隶属",
+          "text": "雷加入晨星议会",
+          "target": "晨星议会",
+          "time": "第九话",
+          "valid_from": "第九话",
+          "valid_until": null
+        },
+        "existing": [],
+        "entity_presence": {
+          "status": "mentioned",
+          "message": "完整资料中已提及，是否为同一实体/节点仍需核对",
+          "sources": [
+            {
+              "id": "47ba19b8b9ece1f35cc9",
+              "file": "angels.md",
+              "start_line": 6,
+              "end_line": 6
+            },
+            {
+              "id": "df1f51265ef5555994be",
+              "file": "angels.md",
+              "start_line": 16,
+              "end_line": 16
+            },
+            {
+              "id": "252bda4cc47b93db0d7b",
+              "file": "angels.md",
+              "start_line": 21,
+              "end_line": 21
+            },
+            {
+              "id": "596ac1b6800114e8e9ed",
+              "file": "angels.md",
+              "start_line": 56,
+              "end_line": 56
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6
+            },
+            {
+              "id": "a739b6548c630e2c4d40",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11
+            },
+            {
+              "id": "f355504eef1bbb05f59a",
+              "file": "characters.md",
+              "start_line": 16,
+              "end_line": 16
+            },
+            {
+              "id": "46422ea243d878bfdce9",
+              "file": "characters.md",
+              "start_line": 21,
+              "end_line": 21
+            },
+            {
+              "id": "347b69141392efe457ad",
+              "file": "characters.md",
+              "start_line": 51,
+              "end_line": 51
+            },
+            {
+              "id": "ca52138556599b584637",
+              "file": "history.md",
+              "start_line": 6,
+              "end_line": 6
+            },
+            {
+              "id": "a67d2b6c645c6c2b1d19",
+              "file": "history.md",
+              "start_line": 21,
+              "end_line": 21
+            },
+            {
+              "id": "d11b313d4fe3fee7d599",
+              "file": "history.md",
+              "start_line": 26,
+              "end_line": 26
+            },
+            {
+              "id": "0ad0e47151069e9d8676",
+              "file": "history.md",
+              "start_line": 31,
+              "end_line": 31
+            },
+            {
+              "id": "f0451fb2164fadf1aa1c",
+              "file": "history.md",
+              "start_line": 36,
+              "end_line": 36
+            },
+            {
+              "id": "e7b5fd0acbea6191a941",
+              "file": "history.md",
+              "start_line": 41,
+              "end_line": 41
+            },
+            {
+              "id": "d312452d0673bf259c82",
+              "file": "history.md",
+              "start_line": 46,
+              "end_line": 46
+            },
+            {
+              "id": "f6fa2986c882a112f9c0",
+              "file": "history.md",
+              "start_line": 51,
+              "end_line": 51
+            },
+            {
+              "id": "17af8f8e8b7ff81197e4",
+              "file": "technology.md",
+              "start_line": 46,
+              "end_line": 46
+            }
+          ]
+        },
+        "target_presence": {
+          "status": "not_found_in_catalog",
+          "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+          "sources": []
+        },
+        "time_presence": {
+          "status": "not_found_in_catalog",
+          "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+          "sources": []
+        },
+        "review": {
+          "status": "ok",
+          "verdict": "不确定",
+          "reason": "证据未提及雷加入晨星议会",
+          "evidence": []
+        }
+      },
+      {
+        "proposed": {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "能力",
+          "text": "获得控制时间的能力",
+          "target": null,
+          "time": "第九话",
+          "valid_from": "第九话",
+          "valid_until": null
+        },
+        "existing": [],
+        "entity_presence": {
+          "status": "mentioned",
+          "message": "完整资料中已提及，是否为同一实体/节点仍需核对",
+          "sources": [
+            {
+              "id": "47ba19b8b9ece1f35cc9",
+              "file": "angels.md",
+              "start_line": 6,
+              "end_line": 6
+            },
+            {
+              "id": "df1f51265ef5555994be",
+              "file": "angels.md",
+              "start_line": 16,
+              "end_line": 16
+            },
+            {
+              "id": "252bda4cc47b93db0d7b",
+              "file": "angels.md",
+              "start_line": 21,
+              "end_line": 21
+            },
+            {
+              "id": "596ac1b6800114e8e9ed",
+              "file": "angels.md",
+              "start_line": 56,
+              "end_line": 56
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6
+            },
+            {
+              "id": "a739b6548c630e2c4d40",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11
+            },
+            {
+              "id": "f355504eef1bbb05f59a",
+              "file": "characters.md",
+              "start_line": 16,
+              "end_line": 16
+            },
+            {
+              "id": "46422ea243d878bfdce9",
+              "file": "characters.md",
+              "start_line": 21,
+              "end_line": 21
+            },
+            {
+              "id": "347b69141392efe457ad",
+              "file": "characters.md",
+              "start_line": 51,
+              "end_line": 51
+            },
+            {
+              "id": "ca52138556599b584637",
+              "file": "history.md",
+              "start_line": 6,
+              "end_line": 6
+            },
+            {
+              "id": "a67d2b6c645c6c2b1d19",
+              "file": "history.md",
+              "start_line": 21,
+              "end_line": 21
+            },
+            {
+              "id": "d11b313d4fe3fee7d599",
+              "file": "history.md",
+              "start_line": 26,
+              "end_line": 26
+            },
+            {
+              "id": "0ad0e47151069e9d8676",
+              "file": "history.md",
+              "start_line": 31,
+              "end_line": 31
+            },
+            {
+              "id": "f0451fb2164fadf1aa1c",
+              "file": "history.md",
+              "start_line": 36,
+              "end_line": 36
+            },
+            {
+              "id": "e7b5fd0acbea6191a941",
+              "file": "history.md",
+              "start_line": 41,
+              "end_line": 41
+            },
+            {
+              "id": "d312452d0673bf259c82",
+              "file": "history.md",
+              "start_line": 46,
+              "end_line": 46
+            },
+            {
+              "id": "f6fa2986c882a112f9c0",
+              "file": "history.md",
+              "start_line": 51,
+              "end_line": 51
+            },
+            {
+              "id": "17af8f8e8b7ff81197e4",
+              "file": "technology.md",
+              "start_line": 46,
+              "end_line": 46
+            }
+          ]
+        },
+        "target_presence": null,
+        "time_presence": {
+          "status": "not_found_in_catalog",
+          "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+          "sources": []
+        },
+        "review": {
+          "status": "ok",
+          "verdict": "不确定",
+          "reason": "证据未提及时间控制能力",
+          "evidence": []
+        }
+      }
+    ],
+    "extraction": {
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "晨星议会",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "晨星议会",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "timepoint",
+          "entity": "第九话",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "第九话",
+          "target": null,
+          "time": "第九话",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "隶属",
+          "text": "雷加入晨星议会",
+          "target": "晨星议会",
+          "time": "第九话",
+          "valid_from": "第九话",
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "能力",
+          "text": "获得控制时间的能力",
+          "target": null,
+          "time": "第九话",
+          "valid_from": "第九话",
+          "valid_until": null
+        }
+      ],
+      "raw_output": "{\"records\":[{\"kind\":\"entity\",\"entity\":\"晨星议会\",\"entity_type\":\"组织\",\"category\":\"组织\",\"text\":\"晨星议会\"},{\"kind\":\"timepoint\",\"entity\":\"第九话\",\"category\":\"时间节点\",\"text\":\"第九话\",\"time\":\"第九话\"},{\"kind\":\"relation\",\"entity\":\"雷\",\"target\":\"晨星议会\",\"category\":\"隶属\",\"text\":\"雷加入晨星议会\",\"time\":\"第九话\",\"valid_from\":\"第九话\"},{\"kind\":\"attribute\",\"entity\":\"雷\",\"category\":\"能力\",\"text\":\"获得控制时间的能力\",\"time\":\"第九话\",\"valid_from\":\"第九话\"}]}",
+      "prompt_version": "world-extraction-v3",
+      "timing": {
+        "seconds": 12.07932840000285,
+        "input_tokens": 1124,
+        "generated_tokens": 121
+      }
+    },
+    "checks": [
+      {
+        "text": "雷加入晨星议会",
+        "result": {
+          "status": "ok",
+          "overall_verdict": "不确定",
+          "findings": [
+            {
+              "input_quote": "雷加入晨星议会",
+              "verdict": "不确定",
+              "evidence": [],
+              "reason": "证据未提及雷加入晨星议会",
+              "new_candidates": []
+            }
+          ],
+          "review_candidates": [
+            "雷加入晨星议会"
+          ],
+          "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"证据未提及雷加入晨星议会\"}",
+          "evidence": [
+            {
+              "id": "0ad0e47151069e9d8676",
+              "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "file": "history.md",
+              "start_line": 31,
+              "end_line": 31,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第三话",
+                "身份告知"
+              ],
+              "start_offset": 322,
+              "end_offset": 359,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "token_count": 65,
+              "score": 0.4734898507595062
+            },
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.4259076714515686
+            },
+            {
+              "id": "d11b313d4fe3fee7d599",
+              "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+              "file": "history.md",
+              "start_line": 26,
+              "end_line": 26,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第二话",
+                "首次当面见面"
+              ],
+              "start_offset": 261,
+              "end_offset": 303,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+              "token_count": 72,
+              "score": 0.4245925843715668
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.4090642035007477
+            },
+            {
+              "id": "46422ea243d878bfdce9",
+              "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+              "file": "characters.md",
+              "start_line": 21,
+              "end_line": 21,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "身份保密"
+              ],
+              "start_offset": 189,
+              "end_offset": 229,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+              "token_count": 66,
+              "score": 0.3963467478752136
+            }
+          ],
+          "prompt_version": "world-review-v2",
+          "timing": {
+            "seconds": 1.6684356999976444,
+            "input_tokens": 491,
+            "generated_tokens": 22
+          }
+        }
+      },
+      {
+        "text": "获得控制时间的能力",
+        "result": {
+          "status": "ok",
+          "overall_verdict": "不确定",
+          "findings": [
+            {
+              "input_quote": "获得控制时间的能力",
+              "verdict": "不确定",
+              "evidence": [],
+              "reason": "证据未提及时间控制能力",
+              "new_candidates": []
+            }
+          ],
+          "review_candidates": [
+            "获得控制时间的能力"
+          ],
+          "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"证据未提及时间控制能力\"}",
+          "evidence": [
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.5100402235984802
+            },
+            {
+              "id": "0ad0e47151069e9d8676",
+              "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "file": "history.md",
+              "start_line": 31,
+              "end_line": 31,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第三话",
+                "身份告知"
+              ],
+              "start_offset": 322,
+              "end_offset": 359,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "token_count": 65,
+              "score": 0.4995869994163513
+            },
+            {
+              "id": "e7b5fd0acbea6191a941",
+              "text": "雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+              "file": "history.md",
+              "start_line": 41,
+              "end_line": 41,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第八话",
+                "长剑毁坏"
+              ],
+              "start_offset": 429,
+              "end_offset": 456,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第八话 > 长剑毁坏\n雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+              "token_count": 55,
+              "score": 0.4691391587257385
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.4515666961669922
+            },
+            {
+              "id": "347b69141392efe457ad",
+              "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+              "file": "characters.md",
+              "start_line": 51,
+              "end_line": 51,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷的父亲",
+                "秘密认知"
+              ],
+              "start_offset": 506,
+              "end_offset": 542,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+              "token_count": 65,
+              "score": 0.44884219765663147
+            }
+          ],
+          "prompt_version": "world-review-v2",
+          "timing": {
+            "seconds": 1.5798500000018976,
+            "input_tokens": 480,
+            "generated_tokens": 20
+          }
+        }
+      }
+    ],
+    "judgment": {
+      "evidence": [
+        {
+          "id": "0ad0e47151069e9d8676",
+          "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+          "file": "history.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第三话",
+            "身份告知"
+          ],
+          "start_offset": 322,
+          "end_offset": 359,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+          "token_count": 65,
+          "score": 0.4734898507595062
+        },
+        {
+          "id": "a739b6548c630e2c4d40",
+          "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+          "file": "characters.md",
+          "start_line": 11,
+          "end_line": 11,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "经历"
+          ],
+          "start_offset": 85,
+          "end_offset": 116,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+          "token_count": 55,
+          "score": 0.4259076714515686
+        },
+        {
+          "id": "d11b313d4fe3fee7d599",
+          "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "file": "history.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第二话",
+            "首次当面见面"
+          ],
+          "start_offset": 261,
+          "end_offset": 303,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "token_count": 72,
+          "score": 0.4245925843715668
+        },
+        {
+          "id": "099d1bbdbc348eb3c332",
+          "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "file": "characters.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "生理结构"
+          ],
+          "start_offset": 41,
+          "end_offset": 70,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "token_count": 55,
+          "score": 0.4090642035007477
+        },
+        {
+          "id": "46422ea243d878bfdce9",
+          "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+          "file": "characters.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "身份保密"
+          ],
+          "start_offset": 189,
+          "end_offset": 229,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+          "token_count": 66,
+          "score": 0.3963467478752136
+        },
+        {
+          "id": "e7b5fd0acbea6191a941",
+          "text": "雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+          "file": "history.md",
+          "start_line": 41,
+          "end_line": 41,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第八话",
+            "长剑毁坏"
+          ],
+          "start_offset": 429,
+          "end_offset": 456,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第八话 > 长剑毁坏\n雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+          "token_count": 55,
+          "score": 0.4691391587257385
+        },
+        {
+          "id": "347b69141392efe457ad",
+          "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+          "file": "characters.md",
+          "start_line": 51,
+          "end_line": 51,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷的父亲",
+            "秘密认知"
+          ],
+          "start_offset": 506,
+          "end_offset": 542,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+          "token_count": 65,
+          "score": 0.44884219765663147
+        }
+      ]
+    },
+    "session": {
+      "models_reused": false
+    }
+  },
+  "broad_preview": {
+    "status": "pending_confirmation",
+    "store_revision": "61db385fb13e632ebf6b3f0c04dbfc822e5b852999abc7a587e3291fb6195522",
+    "source_input": "黎明城位于北方。灵能只能在月光下使用。",
+    "items": [
+      {
+        "proposed": {
+          "kind": "entity",
+          "entity": "黎明城",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "黎明城位于北方",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        "existing": [],
+        "entity_presence": {
+          "status": "not_found_in_catalog",
+          "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+          "sources": []
+        },
+        "target_presence": null,
+        "time_presence": null,
+        "review": {
+          "status": "ok",
+          "verdict": "不确定",
+          "reason": "实体/时间节点的归档建议需作者确认；名称已提及不等于类型或结构已建立",
+          "evidence": []
+        }
+      },
+      {
+        "proposed": {
+          "kind": "rule",
+          "entity": null,
+          "entity_type": null,
+          "category": "使用条件",
+          "text": "灵能只能在月光下使用",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        "existing": [],
+        "entity_presence": null,
+        "target_presence": null,
+        "time_presence": null,
+        "review": {
+          "status": "ok",
+          "verdict": "不确定",
+          "reason": "无证据提及灵能与月光关系",
+          "evidence": []
+        }
+      }
+    ],
+    "extraction": {
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "黎明城",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "黎明城位于北方",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "rule",
+          "entity": null,
+          "entity_type": null,
+          "category": "使用条件",
+          "text": "灵能只能在月光下使用",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "raw_output": "{\"records\":[{\"kind\":\"entity\",\"entity\":\"黎明城\",\"entity_type\":\"地点\",\"category\":\"地点\",\"text\":\"黎明城位于北方\"},{\"kind\":\"rule\",\"entity\":null,\"category\":\"使用条件\",\"text\":\"灵能只能在月光下使用\"}]}",
+      "prompt_version": "world-extraction-v3",
+      "timing": {
+        "seconds": 4.306438599996909,
+        "input_tokens": 1135,
+        "generated_tokens": 54
+      }
+    },
+    "checks": [
+      {
+        "text": "灵能只能在月光下使用",
+        "result": {
+          "status": "ok",
+          "overall_verdict": "不确定",
+          "findings": [
+            {
+              "input_quote": "灵能只能在月光下使用",
+              "verdict": "不确定",
+              "evidence": [],
+              "reason": "无证据提及灵能与月光关系",
+              "new_candidates": []
+            }
+          ],
+          "review_candidates": [
+            "灵能只能在月光下使用"
+          ],
+          "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据提及灵能与月光关系\"}",
+          "evidence": [
+            {
+              "id": "3b7f472d534c811d4c3f",
+              "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+              "file": "angels.md",
+              "start_line": 26,
+              "end_line": 26,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "拉古艾尔",
+                "治疗限制"
+              ],
+              "start_offset": 262,
+              "end_offset": 298,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+              "token_count": 65,
+              "score": 0.4656588137149811
+            },
+            {
+              "id": "d7903beebe27e19f40ba",
+              "text": "地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+              "file": "angels.md",
+              "start_line": 46,
+              "end_line": 46,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "封印",
+                "解除条件"
+              ],
+              "start_offset": 477,
+              "end_offset": 515,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 封印 > 解除条件\n地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+              "token_count": 65,
+              "score": 0.4309651851654053
+            },
+            {
+              "id": "806c7429338e0ae14bce",
+              "text": "旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+              "file": "angels.md",
+              "start_line": 61,
+              "end_line": 61,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "避难所",
+                "静默结界"
+              ],
+              "start_offset": 640,
+              "end_offset": 673,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 避难所 > 静默结界\n旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+              "token_count": 61,
+              "score": 0.4308347702026367
+            },
+            {
+              "id": "b6c490a416855d8e6bb7",
+              "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+              "file": "technology.md",
+              "start_line": 16,
+              "end_line": 16,
+              "heading_path": [
+                "科技规则（测试设定，不代表正式 canon）",
+                "机械左臂",
+                "神经接口"
+              ],
+              "start_offset": 156,
+              "end_offset": 193,
+              "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+              "token_count": 66,
+              "score": 0.430830717086792
+            },
+            {
+              "id": "ce0e16ac4d447576296f",
+              "text": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+              "file": "technology.md",
+              "start_line": 41,
+              "end_line": 41,
+              "heading_path": [
+                "科技规则（测试设定，不代表正式 canon）",
+                "能源",
+                "太阳能限制"
+              ],
+              "start_offset": 424,
+              "end_offset": 454,
+              "embedding_text": "科技规则（测试设定，不代表正式 canon） > 能源 > 太阳能限制\n城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+              "token_count": 58,
+              "score": 0.4289207458496094
+            }
+          ],
+          "prompt_version": "world-review-v2",
+          "timing": {
+            "seconds": 1.7861308999999892,
+            "input_tokens": 486,
+            "generated_tokens": 23
+          }
+        }
+      }
+    ],
+    "judgment": {
+      "evidence": [
+        {
+          "id": "3b7f472d534c811d4c3f",
+          "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+          "file": "angels.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "拉古艾尔",
+            "治疗限制"
+          ],
+          "start_offset": 262,
+          "end_offset": 298,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+          "token_count": 65,
+          "score": 0.4656588137149811
+        },
+        {
+          "id": "d7903beebe27e19f40ba",
+          "text": "地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+          "file": "angels.md",
+          "start_line": 46,
+          "end_line": 46,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "封印",
+            "解除条件"
+          ],
+          "start_offset": 477,
+          "end_offset": 515,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 封印 > 解除条件\n地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+          "token_count": 65,
+          "score": 0.4309651851654053
+        },
+        {
+          "id": "806c7429338e0ae14bce",
+          "text": "旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+          "file": "angels.md",
+          "start_line": 61,
+          "end_line": 61,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "避难所",
+            "静默结界"
+          ],
+          "start_offset": 640,
+          "end_offset": 673,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 避难所 > 静默结界\n旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+          "token_count": 61,
+          "score": 0.4308347702026367
+        },
+        {
+          "id": "b6c490a416855d8e6bb7",
+          "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+          "file": "technology.md",
+          "start_line": 16,
+          "end_line": 16,
+          "heading_path": [
+            "科技规则（测试设定，不代表正式 canon）",
+            "机械左臂",
+            "神经接口"
+          ],
+          "start_offset": 156,
+          "end_offset": 193,
+          "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+          "token_count": 66,
+          "score": 0.430830717086792
+        },
+        {
+          "id": "ce0e16ac4d447576296f",
+          "text": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+          "file": "technology.md",
+          "start_line": 41,
+          "end_line": 41,
+          "heading_path": [
+            "科技规则（测试设定，不代表正式 canon）",
+            "能源",
+            "太阳能限制"
+          ],
+          "start_offset": 424,
+          "end_offset": 454,
+          "embedding_text": "科技规则（测试设定，不代表正式 canon） > 能源 > 太阳能限制\n城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+          "token_count": 58,
+          "score": 0.4289207458496094
+        }
+      ]
+    },
+    "session": {
+      "models_reused": true
+    }
+  },
+  "saved": [
+    {
+      "kind": "entity",
+      "entity": "晨星议会",
+      "entity_type": "组织",
+      "category": "组织",
+      "text": "晨星议会",
+      "target": null,
+      "time": null,
+      "valid_from": null,
+      "valid_until": null,
+      "id": "dd4e6c0e2e044c7f97ff4593df05e690",
+      "created_at": "2026-09-16T16:47:27.335641+00:00",
+      "source_input": "第九话，雷加入晨星议会，并获得控制时间的能力。"
+    },
+    {
+      "kind": "timepoint",
+      "entity": "第九话",
+      "entity_type": null,
+      "category": "时间节点",
+      "text": "第九话",
+      "target": null,
+      "time": "第九话",
+      "valid_from": null,
+      "valid_until": null,
+      "id": "225523e969ee494897ca250fffea2f74",
+      "created_at": "2026-09-16T16:47:27.335641+00:00",
+      "source_input": "第九话，雷加入晨星议会，并获得控制时间的能力。"
+    },
+    {
+      "kind": "relation",
+      "entity": "雷",
+      "entity_type": null,
+      "category": "隶属",
+      "text": "雷加入晨星议会",
+      "target": "晨星议会",
+      "time": "第九话",
+      "valid_from": "第九话",
+      "valid_until": null,
+      "id": "127af6c44a1e481b9268e5f7dfd40fe1",
+      "created_at": "2026-09-16T16:47:27.335641+00:00",
+      "source_input": "第九话，雷加入晨星议会，并获得控制时间的能力。"
+    },
+    {
+      "kind": "attribute",
+      "entity": "雷",
+      "entity_type": null,
+      "category": "能力",
+      "text": "获得控制时间的能力",
+      "target": null,
+      "time": "第九话",
+      "valid_from": "第九话",
+      "valid_until": null,
+      "id": "ba33c748b02743aeabfa0cb320672235",
+      "created_at": "2026-09-16T16:47:27.335641+00:00",
+      "source_input": "第九话，雷加入晨星议会，并获得控制时间的能力。"
+    }
+  ],
+  "retrieved": [
+    {
+      "id": "9e0a2d5b454e83afe3b0",
+      "text": "    条目类型：attribute\n    事件时间：第九话\n    生效起点：第九话\n    主体：雷\n    获得控制时间的能力",
+      "file": "_world_records.md",
+      "start_line": 32,
+      "end_line": 36,
+      "heading_path": [
+        "用户确认的通用世界观条目（由 world_records.json 生成，请勿直接编辑）",
+        "雷",
+        "能力"
+      ],
+      "start_offset": 289,
+      "end_offset": 356,
+      "embedding_text": "用户确认的通用世界观条目（由 world_records.json 生成，请勿直接编辑） > 雷 > 能力\n    条目类型：attribute\n    事件时间：第九话\n    生效起点：第九话\n    主体：雷\n    获得控制时间的能力",
+      "token_count": 77,
+      "score": 0.6250640153884888
+    },
+    {
+      "id": "a739b6548c630e2c4d40",
+      "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+      "file": "characters.md",
+      "start_line": 11,
+      "end_line": 11,
+      "heading_path": [
+        "人物设定（测试设定，不代表正式 canon）",
+        "雷",
+        "经历"
+      ],
+      "start_offset": 85,
+      "end_offset": 116,
+      "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+      "token_count": 55,
+      "score": 0.5742629766464233
+    },
+    {
+      "id": "099d1bbdbc348eb3c332",
+      "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+      "file": "characters.md",
+      "start_line": 6,
+      "end_line": 6,
+      "heading_path": [
+        "人物设定（测试设定，不代表正式 canon）",
+        "雷",
+        "生理结构"
+      ],
+      "start_offset": 41,
+      "end_offset": 70,
+      "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+      "token_count": 55,
+      "score": 0.5167413353919983
+    },
+    {
+      "id": "347b69141392efe457ad",
+      "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+      "file": "characters.md",
+      "start_line": 51,
+      "end_line": 51,
+      "heading_path": [
+        "人物设定（测试设定，不代表正式 canon）",
+        "雷的父亲",
+        "秘密认知"
+      ],
+      "start_offset": 506,
+      "end_offset": 542,
+      "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+      "token_count": 65,
+      "score": 0.4991016089916229
+    },
+    {
+      "id": "f355504eef1bbb05f59a",
+      "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+      "file": "characters.md",
+      "start_line": 16,
+      "end_line": 16,
+      "heading_path": [
+        "人物设定（测试设定，不代表正式 canon）",
+        "雷",
+        "右胸异感"
+      ],
+      "start_offset": 133,
+      "end_offset": 172,
+      "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+      "token_count": 65,
+      "score": 0.47947612404823303
+    }
+  ],
+  "original_index_unchanged": true,
+  "note": "隔离开发验证，真实模型输出；当前资料未添加测试组织/能力/规则。"
+}

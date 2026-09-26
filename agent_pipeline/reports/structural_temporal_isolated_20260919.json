@@ -1,0 +1,96 @@
+{
+  "stage": "story_check",
+  "schema_version": "agent-pipeline-story-check-v1",
+  "status": "ok",
+  "scope": "current_story_observed_events",
+  "pair_count": 1,
+  "unprocessed_pair_count": 0,
+  "items": [
+    {
+      "pair_id": "P1",
+      "event_ids": [
+        "E1",
+        "E2"
+      ],
+      "events": [
+        {
+          "id": "E1",
+          "actors": [
+            "林舟"
+          ],
+          "event": "上午林舟在实验室",
+          "mental_state": null,
+          "explicit": true,
+          "modality": "observed",
+          "conditions": [],
+          "source_ids": [
+            "S1"
+          ],
+          "context_ids": [],
+          "sources": [
+            {
+              "text": "上午林舟在实验室。",
+              "start": 0,
+              "end": 9
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "id": "E2",
+          "actors": [
+            "林舟"
+          ],
+          "event": "下午林舟到车站",
+          "mental_state": null,
+          "explicit": true,
+          "modality": "observed",
+          "conditions": [],
+          "source_ids": [
+            "S2"
+          ],
+          "context_ids": [],
+          "sources": [
+            {
+              "text": "下午林舟乘车到车站。",
+              "start": 9,
+              "end": 19
+            }
+          ],
+          "contexts": []
+        }
+      ],
+      "verdict": "uncertain",
+      "same_subject": null,
+      "same_scope": null,
+      "assumptions": [],
+      "reason": "时间条件未明确",
+      "citations": [],
+      "status": "ok"
+    }
+  ],
+  "calls": [
+    {
+      "status": "ok",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "ok",
+          "raw_output": "{\"checks\":[{\"pair_id\":\"P1\",\"verdict\":\"uncertain\",\"same_subject\":null,\"same_scope\":null,\"assumptions\":[],\"reason\":\"时间条件未明确\",\"citations\":[]}]}",
+          "input_tokens": 456,
+          "max_new_tokens": 1536,
+          "timing": {
+            "seconds": 2.9246685999969486,
+            "input_tokens": 456,
+            "generated_tokens": 43,
+            "ttft_ms": 251.73489999724552,
+            "decode_seconds": 2.672503699999652,
+            "decode_tokens": 42,
+            "decode_tokens_per_second": 15.715600318908995
+          }
+        }
+      ]
+    }
+  ],
+  "semantic_verification": "not_verified"
+}

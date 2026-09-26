@@ -1,0 +1,297 @@
+{
+  "status": "pending_confirmation",
+  "store_revision": "61db385fb13e632ebf6b3f0c04dbfc822e5b852999abc7a587e3291fb6195522",
+  "source_input": "黎明城位于北方。灵能只能在月光下使用。",
+  "items": [
+    {
+      "proposed": {
+        "kind": "entity",
+        "entity": "黎明城",
+        "entity_type": "地点",
+        "category": "地点",
+        "text": "黎明城位于北方",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "existing": [],
+      "entity_presence": {
+        "status": "not_found_in_catalog",
+        "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+        "sources": []
+      },
+      "target_presence": null,
+      "time_presence": null,
+      "review": {
+        "status": "ok",
+        "verdict": "不确定",
+        "reason": "实体/时间节点的归档建议需作者确认；名称已提及不等于类型或结构已建立",
+        "evidence": []
+      }
+    },
+    {
+      "proposed": {
+        "kind": "rule",
+        "entity": null,
+        "entity_type": null,
+        "category": "使用条件",
+        "text": "灵能只能在月光下使用",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "existing": [],
+      "entity_presence": null,
+      "target_presence": null,
+      "time_presence": null,
+      "review": {
+        "status": "ok",
+        "verdict": "不确定",
+        "reason": "无证据提及灵能与月光关系",
+        "evidence": []
+      }
+    }
+  ],
+  "extraction": {
+    "records": [
+      {
+        "kind": "entity",
+        "entity": "黎明城",
+        "entity_type": "地点",
+        "category": "地点",
+        "text": "黎明城位于北方",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      {
+        "kind": "rule",
+        "entity": null,
+        "entity_type": null,
+        "category": "使用条件",
+        "text": "灵能只能在月光下使用",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      }
+    ],
+    "raw_output": "{\"records\":[{\"kind\":\"entity\",\"entity\":\"黎明城\",\"entity_type\":\"地点\",\"category\":\"地点\",\"text\":\"黎明城位于北方\"},{\"kind\":\"rule\",\"entity\":null,\"category\":\"使用条件\",\"text\":\"灵能只能在月光下使用\"}]}",
+    "prompt_version": "world-extraction-v3",
+    "timing": {
+      "seconds": 4.306438599996909,
+      "input_tokens": 1135,
+      "generated_tokens": 54
+    }
+  },
+  "checks": [
+    {
+      "text": "灵能只能在月光下使用",
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "灵能只能在月光下使用",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "无证据提及灵能与月光关系",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "灵能只能在月光下使用"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据提及灵能与月光关系\"}",
+        "evidence": [
+          {
+            "id": "3b7f472d534c811d4c3f",
+            "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "file": "angels.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "治疗限制"
+            ],
+            "start_offset": 262,
+            "end_offset": 298,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "token_count": 65,
+            "score": 0.4656588137149811
+          },
+          {
+            "id": "d7903beebe27e19f40ba",
+            "text": "地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+            "file": "angels.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "封印",
+              "解除条件"
+            ],
+            "start_offset": 477,
+            "end_offset": 515,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 封印 > 解除条件\n地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+            "token_count": 65,
+            "score": 0.4309651851654053
+          },
+          {
+            "id": "806c7429338e0ae14bce",
+            "text": "旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+            "file": "angels.md",
+            "start_line": 61,
+            "end_line": 61,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "避难所",
+              "静默结界"
+            ],
+            "start_offset": 640,
+            "end_offset": 673,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 避难所 > 静默结界\n旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+            "token_count": 61,
+            "score": 0.4308347702026367
+          },
+          {
+            "id": "b6c490a416855d8e6bb7",
+            "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "file": "technology.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "机械左臂",
+              "神经接口"
+            ],
+            "start_offset": 156,
+            "end_offset": 193,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "token_count": 66,
+            "score": 0.430830717086792
+          },
+          {
+            "id": "ce0e16ac4d447576296f",
+            "text": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+            "file": "technology.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "能源",
+              "太阳能限制"
+            ],
+            "start_offset": 424,
+            "end_offset": 454,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 能源 > 太阳能限制\n城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+            "token_count": 58,
+            "score": 0.4289207458496094
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.7861308999999892,
+          "input_tokens": 486,
+          "generated_tokens": 23
+        }
+      }
+    }
+  ],
+  "judgment": {
+    "evidence": [
+      {
+        "id": "3b7f472d534c811d4c3f",
+        "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+        "file": "angels.md",
+        "start_line": 26,
+        "end_line": 26,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "拉古艾尔",
+          "治疗限制"
+        ],
+        "start_offset": 262,
+        "end_offset": 298,
+        "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+        "token_count": 65,
+        "score": 0.4656588137149811
+      },
+      {
+        "id": "d7903beebe27e19f40ba",
+        "text": "地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+        "file": "angels.md",
+        "start_line": 46,
+        "end_line": 46,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "封印",
+          "解除条件"
+        ],
+        "start_offset": 477,
+        "end_offset": 515,
+        "embedding_text": "天使设定（测试设定，不代表正式 canon） > 封印 > 解除条件\n地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+        "token_count": 65,
+        "score": 0.4309651851654053
+      },
+      {
+        "id": "806c7429338e0ae14bce",
+        "text": "旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+        "file": "angels.md",
+        "start_line": 61,
+        "end_line": 61,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "避难所",
+          "静默结界"
+        ],
+        "start_offset": 640,
+        "end_offset": 673,
+        "embedding_text": "天使设定（测试设定，不代表正式 canon） > 避难所 > 静默结界\n旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+        "token_count": 61,
+        "score": 0.4308347702026367
+      },
+      {
+        "id": "b6c490a416855d8e6bb7",
+        "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+        "file": "technology.md",
+        "start_line": 16,
+        "end_line": 16,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "机械左臂",
+          "神经接口"
+        ],
+        "start_offset": 156,
+        "end_offset": 193,
+        "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+        "token_count": 66,
+        "score": 0.430830717086792
+      },
+      {
+        "id": "ce0e16ac4d447576296f",
+        "text": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+        "file": "technology.md",
+        "start_line": 41,
+        "end_line": 41,
+        "heading_path": [
+          "科技规则（测试设定，不代表正式 canon）",
+          "能源",
+          "太阳能限制"
+        ],
+        "start_offset": 424,
+        "end_offset": 454,
+        "embedding_text": "科技规则（测试设定，不代表正式 canon） > 能源 > 太阳能限制\n城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+        "token_count": 58,
+        "score": 0.4289207458496094
+      }
+    ]
+  },
+  "session": {
+    "models_reused": true
+  }
+}

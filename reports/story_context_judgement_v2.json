@@ -1,0 +1,1028 @@
+[
+  {
+    "name": "user_right_context",
+    "scope": "Full live extraction/retrieval/judgement",
+    "result": {
+      "status": "ok",
+      "extraction": {
+        "status": "ok",
+        "facts": [
+          {
+            "subject": "雷",
+            "predicate": "感到",
+            "type": "character_attribute",
+            "object": "寄宿其中的亚巴顿开始躁动",
+            "source_text": "感到寄宿其中的亚巴顿开始躁动。",
+            "source_start": 6,
+            "source_end": 21,
+            "source_ids": [
+              "S2"
+            ],
+            "grounding_added_context_ids": [],
+            "context_ids": [
+              "S1"
+            ],
+            "context_text": "雷捂住右胸，",
+            "time": null,
+            "id": "F2"
+          }
+        ],
+        "rejected": [],
+        "duplicates": [],
+        "unselected_spans": {},
+        "candidates": [
+          {
+            "subject": "雷",
+            "predicate": "捂住",
+            "type": "character_attribute",
+            "object": "右胸",
+            "source_text": "雷捂住右胸，",
+            "source_start": 0,
+            "source_end": 6,
+            "source_ids": [
+              "S1"
+            ],
+            "grounding_added_context_ids": [],
+            "context_ids": [
+              "S1"
+            ],
+            "context_text": "雷捂住右胸，",
+            "time": null,
+            "id": "F1"
+          },
+          {
+            "subject": "雷",
+            "predicate": "感到",
+            "type": "character_attribute",
+            "object": "寄宿其中的亚巴顿开始躁动",
+            "source_text": "感到寄宿其中的亚巴顿开始躁动。",
+            "source_start": 6,
+            "source_end": 21,
+            "source_ids": [
+              "S2"
+            ],
+            "grounding_added_context_ids": [],
+            "context_ids": [
+              "S1"
+            ],
+            "context_text": "雷捂住右胸，",
+            "time": null,
+            "id": "F2"
+          }
+        ],
+        "discarded": [
+          {
+            "id": "F1",
+            "reason": "普通动作，无特殊能力、生理机制、重要后果或关系改变体现"
+          }
+        ],
+        "pending_facts": [],
+        "review_issues": [],
+        "story": "雷捂住右胸，感到寄宿其中的亚巴顿开始躁动。",
+        "raw_output": "{\"facts\":[{\"subject\":\"雷\",\"predicate\":\"捂住\",\"object\":\"右胸\",\"type\":\"character_attribute\",\"source_ids\":[\"S1\"],\"context_ids\":[\"S1\"]},{\"subject\":\"雷\",\"predicate\":\"感到\",\"object\":\"寄宿其中的亚巴顿开始躁动\",\"type\":\"character_attribute\",\"source_ids\":[\"S2\"],\"context_ids\":[\"S1\"]}]}",
+        "prompt_version": "story-extraction-v2",
+        "timing": {
+          "seconds": 12.713317299996561,
+          "calls": [
+            {
+              "stage": "candidate_extraction",
+              "seconds": 7.0947213000035845,
+              "input_tokens": 1617,
+              "generated_tokens": 75,
+              "ttft_ms": 2480.4597000038484,
+              "decode_seconds": 4.613628300001437,
+              "decode_tokens": 74,
+              "decode_tokens_per_second": 16.03943690044925
+            },
+            {
+              "stage": "importance_review_F1",
+              "seconds": 1.8466572999968776,
+              "input_tokens": 516,
+              "generated_tokens": 25,
+              "ttft_ms": 306.2368999962928,
+              "decode_seconds": 1.5398554999992484,
+              "decode_tokens": 24,
+              "decode_tokens_per_second": 15.58587802557559
+            },
+            {
+              "stage": "importance_review_F2",
+              "seconds": 3.771938699996099,
+              "input_tokens": 530,
+              "generated_tokens": 54,
+              "ttft_ms": 310.28139999398263,
+              "decode_seconds": 3.4611758000028203,
+              "decode_tokens": 53,
+              "decode_tokens_per_second": 15.312715407277727
+            }
+          ]
+        },
+        "importance_raw_output": "{\"F1\": \"{\\\"decision\\\":\\\"discard\\\",\\\"reason\\\":\\\"普通动作，无特殊能力、生理机制、重要后果或关系改变体现\\\"}\", \"F2\": \"{\\\"decision\\\":\\\"keep\\\",\\\"reason\\\":\\\"该事实揭示雷体内寄宿的亚巴顿开始躁动，明确显示了角色内部存在超自然实体且其状态发生变化，属于关键生理机制与身份特征的体现，符合重要性保留标准。\\\"}\"}",
+        "importance_prompt_version": "story-importance-v2",
+        "device": "cuda",
+        "notice": "只筛选事实建议；未检索、未判断矛盾、未保存。原文引用有效不保证事实理解正确。"
+      },
+      "items": [
+        {
+          "status": "ok",
+          "fact": {
+            "subject": "雷",
+            "predicate": "感到",
+            "type": "character_attribute",
+            "object": "寄宿其中的亚巴顿开始躁动",
+            "source_text": "感到寄宿其中的亚巴顿开始躁动。",
+            "source_start": 6,
+            "source_end": 21,
+            "source_ids": [
+              "S2"
+            ],
+            "grounding_added_context_ids": [],
+            "context_ids": [
+              "S1"
+            ],
+            "context_text": "雷捂住右胸，",
+            "time": null,
+            "id": "F2"
+          },
+          "query": "雷 感到 寄宿其中的亚巴顿开始躁动\n感到寄宿其中的亚巴顿开始躁动。\n雷捂住右胸，",
+          "evidence": [
+            {
+              "id": "47ba19b8b9ece1f35cc9",
+              "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "file": "angels.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "亚巴顿",
+                "左侧宿主"
+              ],
+              "start_offset": 43,
+              "end_offset": 81,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "token_count": 66,
+              "score": 0.6683510541915894
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.637549638748169
+            },
+            {
+              "id": "f355504eef1bbb05f59a",
+              "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+              "file": "characters.md",
+              "start_line": 16,
+              "end_line": 16,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "右胸异感"
+              ],
+              "start_offset": 133,
+              "end_offset": 172,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+              "token_count": 65,
+              "score": 0.6172118186950684
+            },
+            {
+              "id": "252bda4cc47b93db0d7b",
+              "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+              "file": "angels.md",
+              "start_line": 21,
+              "end_line": 21,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "拉古艾尔",
+                "右侧宿主"
+              ],
+              "start_offset": 202,
+              "end_offset": 242,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+              "token_count": 69,
+              "score": 0.6112762093544006
+            },
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.5953826904296875
+            }
+          ],
+          "retrieval_seconds": 0.11569679999956861,
+          "judgement": {
+            "status": "ok",
+            "verdict": "矛盾",
+            "reason": "亚巴顿在左心寄宿，右胸无其躁动依据",
+            "evidence_ids": [
+              "47ba19b8b9ece1f35cc9",
+              "099d1bbdbc348eb3c332"
+            ],
+            "evidence": [
+              {
+                "id": "47ba19b8b9ece1f35cc9",
+                "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+                "file": "angels.md",
+                "start_line": 6,
+                "end_line": 6,
+                "heading_path": [
+                  "天使设定（测试设定，不代表正式 canon）",
+                  "亚巴顿",
+                  "左侧宿主"
+                ],
+                "start_offset": 43,
+                "end_offset": 81,
+                "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+                "token_count": 66,
+                "score": 0.6683510541915894
+              },
+              {
+                "id": "099d1bbdbc348eb3c332",
+                "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+                "file": "characters.md",
+                "start_line": 6,
+                "end_line": 6,
+                "heading_path": [
+                  "人物设定（测试设定，不代表正式 canon）",
+                  "雷",
+                  "生理结构"
+                ],
+                "start_offset": 41,
+                "end_offset": 70,
+                "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+                "token_count": 55,
+                "score": 0.637549638748169
+              }
+            ],
+            "raw_output": "{\"verdict\":\"矛盾\",\"reason\":\"亚巴顿在左心寄宿，右胸无其躁动依据\",\"evidence_ids\":[\"47ba19b8b9ece1f35cc9\",\"099d1bbdbc348eb3c332\"]}",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"矛盾\",\"reason\":\"亚巴顿在左心寄宿，右胸无其躁动依据\",\"evidence_ids\":[\"47ba19b8b9ece1f35cc9\",\"099d1bbdbc348eb3c332\"]}"
+              }
+            ],
+            "wall_seconds": 4.5356585000045015
+          }
+        }
+      ],
+      "top_k": 5,
+      "notice": "本地逐事实一致性建议，未保存。判断可能出错；检索相似度不是事实正确率或矛盾置信度。",
+      "retrieval_seconds": 0.11569679999956861,
+      "prompt_version": "story-consistency-v2",
+      "judgement_calls": [
+        {
+          "fact_id": "F2",
+          "attempt": 1,
+          "seconds": 4.532069299995783,
+          "input_tokens": 943,
+          "generated_tokens": 64,
+          "ttft_ms": 600.6510000006529,
+          "decode_seconds": 3.9308677000008174,
+          "decode_tokens": 63,
+          "decode_tokens_per_second": 16.026995769912812
+        }
+      ],
+      "summary": {
+        "verdict": "矛盾",
+        "counts": {
+          "一致": 0,
+          "矛盾": 1,
+          "不确定": 0
+        },
+        "errors": 0,
+        "checked_facts": 1,
+        "complete": true,
+        "display": "矛盾",
+        "scope": "仅已提取并检索的事实；不证明整段故事无矛盾。"
+      },
+      "pipeline_seconds": 17.397794699994847,
+      "model_load_seconds": 11.981388699998206
+    }
+  },
+  {
+    "name": "left_context_control",
+    "scope": "Full live extraction/retrieval/judgement",
+    "result": {
+      "status": "ok",
+      "extraction": {
+        "status": "ok",
+        "facts": [
+          {
+            "subject": "雷",
+            "predicate": "捂住",
+            "type": "character_attribute",
+            "object": "左胸",
+            "source_text": "雷捂住左胸，",
+            "source_start": 0,
+            "source_end": 6,
+            "source_ids": [
+              "S1"
+            ],
+            "grounding_added_context_ids": [],
+            "context_ids": [
+              "S1"
+            ],
+            "context_text": "雷捂住左胸，",
+            "time": null,
+            "id": "F1"
+          },
+          {
+            "subject": "雷",
+            "predicate": "感到",
+            "type": "character_attribute",
+            "object": "寄宿其中的亚巴顿开始躁动",
+            "source_text": "感到寄宿其中的亚巴顿开始躁动。",
+            "source_start": 6,
+            "source_end": 21,
+            "source_ids": [
+              "S2"
+            ],
+            "grounding_added_context_ids": [],
+            "context_ids": [
+              "S1"
+            ],
+            "context_text": "雷捂住左胸，",
+            "time": null,
+            "id": "F2"
+          }
+        ],
+        "rejected": [],
+        "duplicates": [],
+        "unselected_spans": {},
+        "candidates": [
+          {
+            "subject": "雷",
+            "predicate": "捂住",
+            "type": "character_attribute",
+            "object": "左胸",
+            "source_text": "雷捂住左胸，",
+            "source_start": 0,
+            "source_end": 6,
+            "source_ids": [
+              "S1"
+            ],
+            "grounding_added_context_ids": [],
+            "context_ids": [
+              "S1"
+            ],
+            "context_text": "雷捂住左胸，",
+            "time": null,
+            "id": "F1"
+          },
+          {
+            "subject": "雷",
+            "predicate": "感到",
+            "type": "character_attribute",
+            "object": "寄宿其中的亚巴顿开始躁动",
+            "source_text": "感到寄宿其中的亚巴顿开始躁动。",
+            "source_start": 6,
+            "source_end": 21,
+            "source_ids": [
+              "S2"
+            ],
+            "grounding_added_context_ids": [],
+            "context_ids": [
+              "S1"
+            ],
+            "context_text": "雷捂住左胸，",
+            "time": null,
+            "id": "F2"
+          }
+        ],
+        "discarded": [],
+        "pending_facts": [],
+        "review_issues": [],
+        "story": "雷捂住左胸，感到寄宿其中的亚巴顿开始躁动。",
+        "raw_output": "{\"facts\":[{\"subject\":\"雷\",\"predicate\":\"捂住\",\"object\":\"左胸\",\"type\":\"character_attribute\",\"source_ids\":[\"S1\"],\"context_ids\":[\"S1\"]},{\"subject\":\"雷\",\"predicate\":\"感到\",\"object\":\"寄宿其中的亚巴顿开始躁动\",\"type\":\"character_attribute\",\"source_ids\":[\"S2\"],\"context_ids\":[\"S1\"]}]}",
+        "prompt_version": "story-extraction-v2",
+        "timing": {
+          "seconds": 12.823998399995617,
+          "calls": [
+            {
+              "stage": "candidate_extraction",
+              "seconds": 5.871245999995153,
+              "input_tokens": 1617,
+              "generated_tokens": 75,
+              "ttft_ms": 1257.0150999963516,
+              "decode_seconds": 4.61381160000019,
+              "decode_tokens": 74,
+              "decode_tokens_per_second": 16.0387996770386
+            },
+            {
+              "stage": "importance_review_F1",
+              "seconds": 3.250130699998408,
+              "input_tokens": 516,
+              "generated_tokens": 47,
+              "ttft_ms": 306.10810000507627,
+              "decode_seconds": 2.9434708999979193,
+              "decode_tokens": 46,
+              "decode_tokens_per_second": 15.62780865271422
+            },
+            {
+              "stage": "importance_review_F2",
+              "seconds": 3.702621700002055,
+              "input_tokens": 530,
+              "generated_tokens": 54,
+              "ttft_ms": 317.13570000283653,
+              "decode_seconds": 3.384831099996518,
+              "decode_tokens": 53,
+              "decode_tokens_per_second": 15.658092954787175
+            }
+          ]
+        },
+        "importance_raw_output": "{\"F1\": \"{\\\"decision\\\":\\\"keep\\\",\\\"reason\\\":\\\"捂住左胸的动作揭示雷有身体不适或伤痛，可能暗示其生理机制、隐藏伤情或关键身份特征，属于明确的生理状态表现，应保留。\\\"}\", \"F2\": \"{\\\"decision\\\":\\\"keep\\\",\\\"reason\\\":\\\"该事实揭示雷体内寄宿的亚巴顿开始躁动，明确显示了角色内部存在超自然实体且其状态发生变化，属于关键生理机制与身份特征的体现，符合重要性保留标准。\\\"}\"}",
+        "importance_prompt_version": "story-importance-v2",
+        "device": "cuda",
+        "notice": "只筛选事实建议；未检索、未判断矛盾、未保存。原文引用有效不保证事实理解正确。"
+      },
+      "items": [
+        {
+          "status": "ok",
+          "fact": {
+            "subject": "雷",
+            "predicate": "捂住",
+            "type": "character_attribute",
+            "object": "左胸",
+            "source_text": "雷捂住左胸，",
+            "source_start": 0,
+            "source_end": 6,
+            "source_ids": [
+              "S1"
+            ],
+            "grounding_added_context_ids": [],
+            "context_ids": [
+              "S1"
+            ],
+            "context_text": "雷捂住左胸，",
+            "time": null,
+            "id": "F1"
+          },
+          "query": "雷 捂住 左胸\n雷捂住左胸，",
+          "evidence": [
+            {
+              "id": "f355504eef1bbb05f59a",
+              "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+              "file": "characters.md",
+              "start_line": 16,
+              "end_line": 16,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "右胸异感"
+              ],
+              "start_offset": 133,
+              "end_offset": 172,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+              "token_count": 65,
+              "score": 0.6485642194747925
+            },
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.6024991273880005
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.5390327572822571
+            },
+            {
+              "id": "347b69141392efe457ad",
+              "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+              "file": "characters.md",
+              "start_line": 51,
+              "end_line": 51,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷的父亲",
+                "秘密认知"
+              ],
+              "start_offset": 506,
+              "end_offset": 542,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+              "token_count": 65,
+              "score": 0.5204873085021973
+            },
+            {
+              "id": "47ba19b8b9ece1f35cc9",
+              "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "file": "angels.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "亚巴顿",
+                "左侧宿主"
+              ],
+              "start_offset": 43,
+              "end_offset": 81,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "token_count": 66,
+              "score": 0.5169742107391357
+            }
+          ],
+          "retrieval_seconds": 0.004279300002963282,
+          "judgement": {
+            "status": "ok",
+            "verdict": "一致",
+            "reason": "左胸疼痛与左胸动作在设定中被明确关联",
+            "evidence_ids": [
+              "a739b6548c630e2c4d40"
+            ],
+            "evidence": [
+              {
+                "id": "a739b6548c630e2c4d40",
+                "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+                "file": "characters.md",
+                "start_line": 11,
+                "end_line": 11,
+                "heading_path": [
+                  "人物设定（测试设定，不代表正式 canon）",
+                  "雷",
+                  "经历"
+                ],
+                "start_offset": 85,
+                "end_offset": 116,
+                "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+                "token_count": 55,
+                "score": 0.6024991273880005
+              }
+            ],
+            "raw_output": "{\"verdict\":\"一致\",\"reason\":\"左胸疼痛与左胸动作在设定中被明确关联\",\"evidence_ids\":[\"a739b6548c630e2c4d40\"]}",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"一致\",\"reason\":\"左胸疼痛与左胸动作在设定中被明确关联\",\"evidence_ids\":[\"a739b6548c630e2c4d40\"]}"
+              }
+            ],
+            "wall_seconds": 3.503664399999252
+          }
+        },
+        {
+          "status": "ok",
+          "fact": {
+            "subject": "雷",
+            "predicate": "感到",
+            "type": "character_attribute",
+            "object": "寄宿其中的亚巴顿开始躁动",
+            "source_text": "感到寄宿其中的亚巴顿开始躁动。",
+            "source_start": 6,
+            "source_end": 21,
+            "source_ids": [
+              "S2"
+            ],
+            "grounding_added_context_ids": [],
+            "context_ids": [
+              "S1"
+            ],
+            "context_text": "雷捂住左胸，",
+            "time": null,
+            "id": "F2"
+          },
+          "query": "雷 感到 寄宿其中的亚巴顿开始躁动\n感到寄宿其中的亚巴顿开始躁动。\n雷捂住左胸，",
+          "evidence": [
+            {
+              "id": "47ba19b8b9ece1f35cc9",
+              "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "file": "angels.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "亚巴顿",
+                "左侧宿主"
+              ],
+              "start_offset": 43,
+              "end_offset": 81,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "token_count": 66,
+              "score": 0.6694916486740112
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.6349115967750549
+            },
+            {
+              "id": "f355504eef1bbb05f59a",
+              "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+              "file": "characters.md",
+              "start_line": 16,
+              "end_line": 16,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "右胸异感"
+              ],
+              "start_offset": 133,
+              "end_offset": 172,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+              "token_count": 65,
+              "score": 0.6124510765075684
+            },
+            {
+              "id": "252bda4cc47b93db0d7b",
+              "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+              "file": "angels.md",
+              "start_line": 21,
+              "end_line": 21,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "拉古艾尔",
+                "右侧宿主"
+              ],
+              "start_offset": 202,
+              "end_offset": 242,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+              "token_count": 69,
+              "score": 0.6055075526237488
+            },
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.5956411361694336
+            }
+          ],
+          "retrieval_seconds": 0.010382200001913588,
+          "judgement": {
+            "status": "ok",
+            "verdict": "一致",
+            "reason": "左胸疼痛与亚巴顿苏醒直接关联，证据支持",
+            "evidence_ids": [
+              "47ba19b8b9ece1f35cc9",
+              "099d1bbdbc348eb3c332"
+            ],
+            "evidence": [
+              {
+                "id": "47ba19b8b9ece1f35cc9",
+                "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+                "file": "angels.md",
+                "start_line": 6,
+                "end_line": 6,
+                "heading_path": [
+                  "天使设定（测试设定，不代表正式 canon）",
+                  "亚巴顿",
+                  "左侧宿主"
+                ],
+                "start_offset": 43,
+                "end_offset": 81,
+                "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+                "token_count": 66,
+                "score": 0.6694916486740112
+              },
+              {
+                "id": "099d1bbdbc348eb3c332",
+                "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+                "file": "characters.md",
+                "start_line": 6,
+                "end_line": 6,
+                "heading_path": [
+                  "人物设定（测试设定，不代表正式 canon）",
+                  "雷",
+                  "生理结构"
+                ],
+                "start_offset": 41,
+                "end_offset": 70,
+                "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+                "token_count": 55,
+                "score": 0.6349115967750549
+              }
+            ],
+            "raw_output": "{\"verdict\":\"一致\",\"reason\":\"左胸疼痛与亚巴顿苏醒直接关联，证据支持\",\"evidence_ids\":[\"47ba19b8b9ece1f35cc9\",\"099d1bbdbc348eb3c332\"]}",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"verdict\":\"一致\",\"reason\":\"左胸疼痛与亚巴顿苏醒直接关联，证据支持\",\"evidence_ids\":[\"47ba19b8b9ece1f35cc9\",\"099d1bbdbc348eb3c332\"]}"
+              }
+            ],
+            "wall_seconds": 4.430466600002546
+          }
+        }
+      ],
+      "top_k": 5,
+      "notice": "本地逐事实一致性建议，未保存。判断可能出错；检索相似度不是事实正确率或矛盾置信度。",
+      "retrieval_seconds": 0.01466150000487687,
+      "prompt_version": "story-consistency-v2",
+      "judgement_calls": [
+        {
+          "fact_id": "F1",
+          "attempt": 1,
+          "seconds": 3.5014426999987336,
+          "input_tokens": 921,
+          "generated_tokens": 48,
+          "ttft_ms": 577.7328999974998,
+          "decode_seconds": 2.9232637000022805,
+          "decode_tokens": 47,
+          "decode_tokens_per_second": 16.077920031628803
+        },
+        {
+          "fact_id": "F2",
+          "attempt": 1,
+          "seconds": 4.427836800001387,
+          "input_tokens": 943,
+          "generated_tokens": 62,
+          "ttft_ms": 584.6468000017921,
+          "decode_seconds": 3.8426362999962294,
+          "decode_tokens": 61,
+          "decode_tokens_per_second": 15.874518231158087
+        }
+      ],
+      "summary": {
+        "verdict": "一致",
+        "counts": {
+          "一致": 2,
+          "矛盾": 0,
+          "不确定": 0
+        },
+        "errors": 0,
+        "checked_facts": 2,
+        "complete": true,
+        "display": "一致",
+        "scope": "仅已提取并检索的事实；不证明整段故事无矛盾。"
+      },
+      "pipeline_seconds": 20.782062399994174,
+      "model_load_seconds": 11.981388699998206
+    }
+  },
+  {
+    "name": "unknown_ability_component",
+    "scope": "Manual validated fact -> live BGE/Qwen; no LLM extraction",
+    "result": {
+      "status": "partial",
+      "extraction": {
+        "status": "ok",
+        "facts": [
+          {
+            "subject": "雷",
+            "predicate": "第一次施展",
+            "type": "character_attribute",
+            "object": "控制时间的能力",
+            "source_text": "雷第一次施展了控制时间的能力。",
+            "source_start": 0,
+            "source_end": 15,
+            "source_ids": [
+              "S1"
+            ],
+            "grounding_added_context_ids": [],
+            "context_ids": [],
+            "context_text": "",
+            "time": null,
+            "id": "F1"
+          }
+        ],
+        "rejected": [],
+        "duplicates": [],
+        "unselected_spans": {}
+      },
+      "items": [
+        {
+          "status": "ok",
+          "fact": {
+            "subject": "雷",
+            "predicate": "第一次施展",
+            "type": "character_attribute",
+            "object": "控制时间的能力",
+            "source_text": "雷第一次施展了控制时间的能力。",
+            "source_start": 0,
+            "source_end": 15,
+            "source_ids": [
+              "S1"
+            ],
+            "grounding_added_context_ids": [],
+            "context_ids": [],
+            "context_text": "",
+            "time": null,
+            "id": "F1"
+          },
+          "query": "雷 第一次施展 控制时间的能力\n雷第一次施展了控制时间的能力。",
+          "evidence": [
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.5517241358757019
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.4958305358886719
+            },
+            {
+              "id": "d11b313d4fe3fee7d599",
+              "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+              "file": "history.md",
+              "start_line": 26,
+              "end_line": 26,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第二话",
+                "首次当面见面"
+              ],
+              "start_offset": 261,
+              "end_offset": 303,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+              "token_count": 72,
+              "score": 0.48788827657699585
+            },
+            {
+              "id": "f355504eef1bbb05f59a",
+              "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+              "file": "characters.md",
+              "start_line": 16,
+              "end_line": 16,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "右胸异感"
+              ],
+              "start_offset": 133,
+              "end_offset": 172,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+              "token_count": 65,
+              "score": 0.4849289655685425
+            },
+            {
+              "id": "347b69141392efe457ad",
+              "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+              "file": "characters.md",
+              "start_line": 51,
+              "end_line": 51,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷的父亲",
+                "秘密认知"
+              ],
+              "start_offset": 506,
+              "end_offset": 542,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+              "token_count": 65,
+              "score": 0.4667067229747772
+            }
+          ],
+          "retrieval_seconds": 0.004763600001751911,
+          "judgement": {
+            "status": "error",
+            "verdict": null,
+            "reason": "",
+            "evidence_ids": [],
+            "evidence": [],
+            "error": "Expecting ':' delimiter: line 1 column 60 (char 59)",
+            "raw_output": "{\"verdict\":\"不确定\",\"reason\":\"证据未提及控制时间的能力或其施展\",\"evidence_ids\"}",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "error",
+                "raw_output": "{\"verdict\":\"不确定\",\"reason\":\"证据未提及控制时间的能力或其施展时间\",\"evidence_ids\"}",
+                "error": "Expecting ':' delimiter: line 1 column 62 (char 61)"
+              },
+              {
+                "attempt": 2,
+                "status": "error",
+                "raw_output": "{\"verdict\":\"不确定\",\"reason\":\"证据未提及控制时间的能力或其施展\",\"evidence_ids\"}",
+                "error": "Expecting ':' delimiter: line 1 column 60 (char 59)"
+              }
+            ],
+            "wall_seconds": 4.019479499998852
+          }
+        }
+      ],
+      "top_k": 5,
+      "notice": "本地逐事实一致性建议，未保存。判断可能出错；检索相似度不是事实正确率或矛盾置信度。",
+      "retrieval_seconds": 0.004763600001751911,
+      "prompt_version": "story-consistency-v2",
+      "judgement_calls": [
+        {
+          "fact_id": "F1",
+          "attempt": 1,
+          "seconds": 2.015636000003724,
+          "input_tokens": 918,
+          "generated_tokens": 24,
+          "ttft_ms": 571.5934999971068,
+          "decode_seconds": 1.4433922000025632,
+          "decode_tokens": 23,
+          "decode_tokens_per_second": 15.934684973328217
+        },
+        {
+          "fact_id": "F1",
+          "attempt": 2,
+          "seconds": 1.9979476000007708,
+          "input_tokens": 950,
+          "generated_tokens": 23,
+          "ttft_ms": 587.7787999997963,
+          "decode_seconds": 1.4096080000017537,
+          "decode_tokens": 22,
+          "decode_tokens_per_second": 15.607175895690597
+        }
+      ],
+      "summary": {
+        "verdict": "不确定",
+        "counts": {
+          "一致": 0,
+          "矛盾": 0,
+          "不确定": 0
+        },
+        "errors": 1,
+        "checked_facts": 1,
+        "complete": false,
+        "display": "检查未完成，不能给出完整结论",
+        "scope": "仅已提取并检索的事实；不证明整段故事无矛盾。"
+      }
+    }
+  }
+]

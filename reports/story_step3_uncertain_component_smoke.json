@@ -1,0 +1,181 @@
+{
+  "scope": "Manual validated fact -> real BGE -> real Qwen judgement; not end-to-end story extraction",
+  "result": {
+    "status": "partial",
+    "extraction": {
+      "status": "ok",
+      "facts": [
+        {
+          "subject": "雷",
+          "predicate": "第一次施展",
+          "type": "character_attribute",
+          "object": "控制时间的能力",
+          "source_text": "雷第一次施展了控制时间的能力。",
+          "source_start": 0,
+          "source_end": 15,
+          "source_ids": [
+            "S1"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [],
+          "context_text": "",
+          "time": null,
+          "id": "F1"
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "unselected_spans": {},
+      "story": "雷第一次施展了控制时间的能力。",
+      "origin": "manual_validated_fixture_not_llm_extraction"
+    },
+    "items": [
+      {
+        "status": "ok",
+        "fact": {
+          "subject": "雷",
+          "predicate": "第一次施展",
+          "type": "character_attribute",
+          "object": "控制时间的能力",
+          "source_text": "雷第一次施展了控制时间的能力。",
+          "source_start": 0,
+          "source_end": 15,
+          "source_ids": [
+            "S1"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [],
+          "context_text": "",
+          "time": null,
+          "id": "F1"
+        },
+        "query": "雷 第一次施展 控制时间的能力\n雷第一次施展了控制时间的能力。",
+        "evidence": [
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.5517241358757019
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.4958305358886719
+          },
+          {
+            "id": "d11b313d4fe3fee7d599",
+            "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+            "file": "history.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第二话",
+              "首次当面见面"
+            ],
+            "start_offset": 261,
+            "end_offset": 303,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+            "token_count": 72,
+            "score": 0.48788827657699585
+          },
+          {
+            "id": "f355504eef1bbb05f59a",
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "file": "characters.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "右胸异感"
+            ],
+            "start_offset": 133,
+            "end_offset": 172,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "token_count": 65,
+            "score": 0.4849289655685425
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.4667067229747772
+          }
+        ],
+        "retrieval_seconds": 0.48075409999728436,
+        "judgement": {
+          "status": "error",
+          "verdict": null,
+          "reason": "",
+          "evidence_ids": [],
+          "evidence": [],
+          "error": "Expecting ':' delimiter: line 1 column 149 (char 148)",
+          "raw_output": "{\"verdict\":\"矛盾\",\"reason\":\"原文中明确指出'雷第一次施展了控制时间的能力'，但所有证据均未提及任何关于控制时间能力的内容，也未涉及雷的任何能力施展，尤其是与时间控制相关的行为。该事实属于无依据的新增信息，与现有证据完全不匹配，因此构成矛盾。\",\"evidence_ids\"}",
+          "wall_seconds": 6.297377800001414
+        }
+      }
+    ],
+    "top_k": 5,
+    "notice": "本地逐事实一致性建议，未保存。判断可能出错；检索相似度不是事实正确率或矛盾置信度。",
+    "retrieval_seconds": 0.48075409999728436,
+    "prompt_version": "story-consistency-v1",
+    "judgement_calls": [
+      {
+        "fact_id": "F1",
+        "seconds": 6.275078400001803,
+        "input_tokens": 992,
+        "generated_tokens": 77,
+        "ttft_ms": 1422.470899997279,
+        "decode_seconds": 4.852041099999042,
+        "decode_tokens": 76,
+        "decode_tokens_per_second": 15.663511176773628
+      }
+    ],
+    "summary": {
+      "verdict": "不确定",
+      "counts": {
+        "一致": 0,
+        "矛盾": 0,
+        "不确定": 0
+      },
+      "errors": 1,
+      "checked_facts": 1,
+      "scope": "仅已提取并检索的事实；不证明整段故事无矛盾。"
+    }
+  }
+}

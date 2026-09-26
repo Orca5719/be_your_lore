@@ -1,0 +1,18 @@
+{
+  "status": "reviewed",
+  "mapping": {
+    "SL-P01": {},
+    "SL-P02": {
+      "G1": ["E1"],
+      "G2": ["E2"],
+      "G3": ["E3"]
+    },
+    "SL-P03": {
+      "G1": ["E1"]
+    },
+    "SL-P04": {
+      "G1": ["E1"]
+    }
+  },
+  "instruction": "为每个gold fact填写语义上对应的v2 event ID；允许一个event覆盖多个gold。审核后将status改为reviewed再运行score-stories。"
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "agent-pipeline-v2.1-oracle-manifest-v1",
+  "benchmark": "2.1A",
+  "created_at": "2026-09-24T16:50:54.691791+00:00",
+  "fixture_sha256": "8eee1aef6becbbf30f715b184ec3129b264f4d874ce648345c6e2ff92937aef5",
+  "batch_size": 8,
+  "repeats": 3,
+  "prompt_versions": [
+    "v1",
+    "v2.1"
+  ],
+  "device_requested": "cuda",
+  "files": {
+    "judge_v1_prompt": "fd414f903995e8951be13646b867b70a591c3fa64821116b0c9071271b8e7e7e",
+    "judge_v2_1_prompt": "59db227c39e0c5c6e7cf3603453ce986449e7e9ec5cc056521837ef6595fd70f",
+    "oracle_benchmark": "102c0d04eee969fe7215427122c2270878358a82618a74cbf1d6211acdfa158c",
+    "oracle_worker": "c82808afa7702e70f5cf60cd4a1e6946a15b1309feb84f6b1e070642061a6fab"
+  },
+  "worker_failures": [
+    {
+      "prompt_version": "v1",
+      "repeat": 1,
+      "exit_code": 2
+    },
+    {
+      "prompt_version": "v1",
+      "repeat": 2,
+      "exit_code": 2
+    },
+    {
+      "prompt_version": "v1",
+      "repeat": 3,
+      "exit_code": 2
+    },
+    {
+      "prompt_version": "v2.1",
+      "repeat": 1,
+      "exit_code": 2
+    },
+    {
+      "prompt_version": "v2.1",
+      "repeat": 2,
+      "exit_code": 2
+    },
+    {
+      "prompt_version": "v2.1",
+      "repeat": 3,
+      "exit_code": 2
+    }
+  ]
+}

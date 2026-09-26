@@ -1,0 +1,290 @@
+{
+  "index_summary": {
+    "version": "46a2404a45a743fda75d63738a76c02b",
+    "index": "C:\\Users\\Xhang\\AppData\\Local\\Temp\\tmpk0tk8p0b\\index",
+    "shape": [
+      48,
+      512
+    ],
+    "device": "cuda",
+    "source_files": 4
+  },
+  "single_search": {
+    "query": "雷感觉左胸里的亚巴顿开始躁动。",
+    "notice": "相似度表示相对相关性，不是事实正确率或矛盾置信度；无关查询也可能返回片段。",
+    "results": [
+      {
+        "id": "47ba19b8b9ece1f35cc9",
+        "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+        "file": "angels.md",
+        "start_line": 6,
+        "end_line": 6,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "亚巴顿",
+          "左侧宿主"
+        ],
+        "start_offset": 43,
+        "end_offset": 81,
+        "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+        "token_count": 66,
+        "score": 0.6363239288330078
+      },
+      {
+        "id": "f355504eef1bbb05f59a",
+        "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+        "file": "characters.md",
+        "start_line": 16,
+        "end_line": 16,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "雷",
+          "右胸异感"
+        ],
+        "start_offset": 133,
+        "end_offset": 172,
+        "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+        "token_count": 65,
+        "score": 0.6232447028160095
+      },
+      {
+        "id": "a739b6548c630e2c4d40",
+        "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+        "file": "characters.md",
+        "start_line": 11,
+        "end_line": 11,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "雷",
+          "经历"
+        ],
+        "start_offset": 85,
+        "end_offset": 116,
+        "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+        "token_count": 55,
+        "score": 0.5873653888702393
+      },
+      {
+        "id": "252bda4cc47b93db0d7b",
+        "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+        "file": "angels.md",
+        "start_line": 21,
+        "end_line": 21,
+        "heading_path": [
+          "天使设定（测试设定，不代表正式 canon）",
+          "拉古艾尔",
+          "右侧宿主"
+        ],
+        "start_offset": 202,
+        "end_offset": 242,
+        "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+        "token_count": 69,
+        "score": 0.5653122663497925
+      },
+      {
+        "id": "099d1bbdbc348eb3c332",
+        "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+        "file": "characters.md",
+        "start_line": 6,
+        "end_line": 6,
+        "heading_path": [
+          "人物设定（测试设定，不代表正式 canon）",
+          "雷",
+          "生理结构"
+        ],
+        "start_offset": 41,
+        "end_offset": 70,
+        "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+        "token_count": 55,
+        "score": 0.5601202845573425
+      }
+    ]
+  },
+  "interactive_results": [
+    {
+      "query": "雷感觉左胸里的亚巴顿开始躁动。",
+      "notice": "相似度表示相对相关性，不是事实正确率或矛盾置信度；无关查询也可能返回片段。",
+      "results": [
+        {
+          "id": "47ba19b8b9ece1f35cc9",
+          "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+          "file": "angels.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "左侧宿主"
+          ],
+          "start_offset": 43,
+          "end_offset": 81,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+          "token_count": 66,
+          "score": 0.6363239288330078
+        },
+        {
+          "id": "f355504eef1bbb05f59a",
+          "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+          "file": "characters.md",
+          "start_line": 16,
+          "end_line": 16,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "右胸异感"
+          ],
+          "start_offset": 133,
+          "end_offset": 172,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+          "token_count": 65,
+          "score": 0.6232447028160095
+        },
+        {
+          "id": "a739b6548c630e2c4d40",
+          "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+          "file": "characters.md",
+          "start_line": 11,
+          "end_line": 11,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "经历"
+          ],
+          "start_offset": 85,
+          "end_offset": 116,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+          "token_count": 55,
+          "score": 0.5873653888702393
+        },
+        {
+          "id": "252bda4cc47b93db0d7b",
+          "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+          "file": "angels.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "拉古艾尔",
+            "右侧宿主"
+          ],
+          "start_offset": 202,
+          "end_offset": 242,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+          "token_count": 69,
+          "score": 0.5653122663497925
+        },
+        {
+          "id": "099d1bbdbc348eb3c332",
+          "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "file": "characters.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "生理结构"
+          ],
+          "start_offset": 41,
+          "end_offset": 70,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "token_count": 55,
+          "score": 0.5601202845573425
+        }
+      ]
+    },
+    {
+      "query": "德尔塔装甲靠什么供电？",
+      "notice": "相似度表示相对相关性，不是事实正确率或矛盾置信度；无关查询也可能返回片段。",
+      "results": [
+        {
+          "id": "852cb1cabe33eac25f92",
+          "text": "德尔塔使用动力外骨骼。装甲依靠独立电池供电，无法无限运行。",
+          "file": "characters.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "德尔塔",
+            "装备"
+          ],
+          "start_offset": 246,
+          "end_offset": 275,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 德尔塔 > 装备\n德尔塔使用动力外骨骼。装甲依靠独立电池供电，无法无限运行。",
+          "token_count": 55,
+          "score": 0.6380351781845093
+        },
+        {
+          "id": "9afbd18aaf57d4b3e7e2",
+          "text": "德尔塔的装甲连续高功率运行十分钟后必须冷却。冷却期间无法使用推进器。",
+          "file": "characters.md",
+          "start_line": 36,
+          "end_line": 36,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "德尔塔",
+            "装甲限制"
+          ],
+          "start_offset": 356,
+          "end_offset": 390,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 德尔塔 > 装甲限制\n德尔塔的装甲连续高功率运行十分钟后必须冷却。冷却期间无法使用推进器。",
+          "token_count": 62,
+          "score": 0.5653821229934692
+        },
+        {
+          "id": "21c3b00fcedf12c06dbe",
+          "text": "德尔塔的外骨骼采用可更换独立电池。正常行走可运行两小时，高功率推进会迅速耗电。",
+          "file": "technology.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "科技规则（测试设定，不代表正式 canon）",
+            "动力外骨骼",
+            "电池续航"
+          ],
+          "start_offset": 45,
+          "end_offset": 84,
+          "embedding_text": "科技规则（测试设定，不代表正式 canon） > 动力外骨骼 > 电池续航\n德尔塔的外骨骼采用可更换独立电池。正常行走可运行两小时，高功率推进会迅速耗电。",
+          "token_count": 69,
+          "score": 0.5377589464187622
+        },
+        {
+          "id": "3a56aa33f1ea6dd2186e",
+          "text": "德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+          "file": "characters.md",
+          "start_line": 31,
+          "end_line": 31,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "德尔塔",
+            "公众身份"
+          ],
+          "start_offset": 294,
+          "end_offset": 337,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 德尔塔 > 公众身份\n德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+          "token_count": 71,
+          "score": 0.5243051052093506
+        },
+        {
+          "id": "d11b313d4fe3fee7d599",
+          "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "file": "history.md",
+          "start_line": 26,
+          "end_line": 26,
+          "heading_path": [
+            "历史事件（测试设定，不代表正式 canon）",
+            "第二话",
+            "首次当面见面"
+          ],
+          "start_offset": 261,
+          "end_offset": 303,
+          "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+          "token_count": 72,
+          "score": 0.4430108964443207
+        }
+      ]
+    }
+  ],
+  "empty_query_error": "错误：查询不能为空",
+  "eof_exit_code": 0,
+  "checks": "real index, JSON parse, two queries, recovery after blank input, /quit, EOF: passed"
+}

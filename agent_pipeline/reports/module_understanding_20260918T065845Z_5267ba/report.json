@@ -1,0 +1,90 @@
+{
+  "kind": "module_observation_not_frozen_benchmark",
+  "dataset_sha256": "876a47310bb12c936f51756a5366cc0b349ab1dd567416e8993b51e0c4564671",
+  "planned_cases": 12,
+  "source_sha256": {
+    "understanding.py": "1ebd04cacfaf2c1b4a5fbde53d4d9f3db9c35d933314f432f99fb0b428931aff",
+    "llm.py": "58b2b847fe1ff1843e0d94e59912b70afabd4e91fc1bbe83eef3004f944e5d7a",
+    "prompts/understanding_v3.txt": "62104a9f5393aeb8edeb813e832c117dc309b93661ecdaea30df0ea0d4ba5cff"
+  },
+  "cases": [
+    {
+      "id": "U01",
+      "status": "partial",
+      "events": 2,
+      "seconds": 12.739180200000192
+    },
+    {
+      "id": "U02",
+      "status": "ok",
+      "events": 3,
+      "seconds": 18.10768139999891
+    },
+    {
+      "id": "U03",
+      "status": "ok",
+      "events": 2,
+      "seconds": 14.474417899999025
+    },
+    {
+      "id": "U04",
+      "status": "partial",
+      "events": 1,
+      "seconds": 12.748754899999767
+    },
+    {
+      "id": "U05",
+      "status": "ok",
+      "events": 3,
+      "seconds": 13.281896999998935
+    },
+    {
+      "id": "U06",
+      "status": "ok",
+      "events": 3,
+      "seconds": 11.798313999999664
+    },
+    {
+      "id": "U07",
+      "status": "partial",
+      "events": 2,
+      "seconds": 10.32728600000155
+    },
+    {
+      "id": "U08",
+      "status": "partial",
+      "events": 0,
+      "seconds": 6.968947199999093
+    },
+    {
+      "id": "U09",
+      "status": "ok",
+      "events": 2,
+      "seconds": 14.754541399999653
+    },
+    {
+      "id": "U10",
+      "status": "ok",
+      "events": 2,
+      "seconds": 7.784085200000845
+    },
+    {
+      "id": "U11",
+      "status": "ok",
+      "events": 3,
+      "seconds": 12.925649499999054
+    },
+    {
+      "id": "U12",
+      "status": "partial",
+      "events": 17,
+      "seconds": 107.61803390000023
+    }
+  ],
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "device": "cuda",
+  "model_load_seconds": 21.52821969999968,
+  "snapshot_stable": true,
+  "status": "completed"
+}

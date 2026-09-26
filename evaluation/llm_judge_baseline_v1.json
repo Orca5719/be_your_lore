@@ -1,0 +1,692 @@
+{
+  "note": "运行前人工指定正确拆分和主体/时间，不包含提取。用于定位端到端失败，不能冒充应用整体准确率。沿用相同28例的34条核心事实，不是新增独立测试。",
+  "cases": [
+    {
+      "id": "c01-1",
+      "parent": "c01",
+      "group": "fresh",
+      "source_input": "雷的左心脏寄宿亚巴顿。",
+      "record": {
+        "kind": "relation",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "寄宿",
+        "text": "雷的左心脏寄宿亚巴顿",
+        "target": "亚巴顿",
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "左侧心脏寄宿亚巴顿",
+        "雷的左侧心脏"
+      ]
+    },
+    {
+      "id": "c02-1",
+      "parent": "c02",
+      "group": "fresh",
+      "source_input": "拉古艾尔寄宿在雷的右侧心脏里。",
+      "record": {
+        "kind": "relation",
+        "entity": "拉古艾尔",
+        "entity_type": null,
+        "category": "寄宿",
+        "text": "拉古艾尔寄宿在雷的右侧心脏里",
+        "target": "雷",
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "雷的右侧心脏",
+        "右侧心脏寄宿拉古艾尔"
+      ]
+    },
+    {
+      "id": "c03-1",
+      "parent": "c03",
+      "group": "fresh",
+      "source_input": "月城的右臂是自然肢体。",
+      "record": {
+        "kind": "attribute",
+        "entity": "月城",
+        "entity_type": null,
+        "category": "生理结构",
+        "text": "月城的右臂是自然肢体",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "右臂始终是自然肢体"
+      ]
+    },
+    {
+      "id": "c04-1",
+      "parent": "c04",
+      "group": "fresh",
+      "source_input": "莉娅负责整理城区档案馆的纸质历史档案。",
+      "record": {
+        "kind": "attribute",
+        "entity": "莉娅",
+        "entity_type": null,
+        "category": "工作职责",
+        "text": "莉娅负责整理城区档案馆的纸质历史档案",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "纸质历史档案的整理"
+      ]
+    },
+    {
+      "id": "c05-1",
+      "parent": "c05",
+      "group": "fresh",
+      "source_input": "电磁枪每次射击后必须重新充电。",
+      "record": {
+        "kind": "rule",
+        "entity": "电磁枪",
+        "entity_type": null,
+        "category": "充电条件",
+        "text": "电磁枪每次射击后必须重新充电",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "每次射击后必须重新充电"
+      ]
+    },
+    {
+      "id": "c06-1",
+      "parent": "c06",
+      "group": "fresh",
+      "source_input": "月城在2064年安装机械左臂。",
+      "record": {
+        "kind": "event",
+        "entity": "月城",
+        "entity_type": null,
+        "category": "机械臂安装",
+        "text": "月城在2064年安装机械左臂",
+        "target": null,
+        "time": "2064年",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "2064年接受机械左臂安装手术",
+        "地震一年后"
+      ]
+    },
+    {
+      "id": "x01-1",
+      "parent": "x01",
+      "group": "fresh",
+      "source_input": "雷的右心脏寄宿亚巴顿。",
+      "record": {
+        "kind": "relation",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "寄宿",
+        "text": "雷的右心脏寄宿亚巴顿",
+        "target": "亚巴顿",
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "左侧心脏寄宿亚巴顿",
+        "无法在右心脏施展力量"
+      ]
+    },
+    {
+      "id": "x02-1",
+      "parent": "x02",
+      "group": "fresh",
+      "source_input": "月城的右臂是一条机械臂。",
+      "record": {
+        "kind": "attribute",
+        "entity": "月城",
+        "entity_type": null,
+        "category": "生理结构",
+        "text": "月城的右臂是一条机械臂",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "右臂始终是自然肢体"
+      ]
+    },
+    {
+      "id": "x03-1",
+      "parent": "x03",
+      "group": "fresh",
+      "source_input": "莉娅是医院的医生。",
+      "record": {
+        "kind": "attribute",
+        "entity": "莉娅",
+        "entity_type": null,
+        "category": "职业",
+        "text": "莉娅是医院的医生",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "她不是医院的医生"
+      ]
+    },
+    {
+      "id": "x04-1",
+      "parent": "x04",
+      "group": "fresh",
+      "source_input": "城区太阳能板在夜间仍能发电。",
+      "record": {
+        "kind": "rule",
+        "entity": "城区太阳能板",
+        "entity_type": null,
+        "category": "发电条件",
+        "text": "城区太阳能板在夜间仍能发电",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "夜间不能发电"
+      ]
+    },
+    {
+      "id": "x05-1",
+      "parent": "x05",
+      "group": "fresh",
+      "source_input": "拉古艾尔能够让已经死亡的人复活。",
+      "record": {
+        "kind": "attribute",
+        "entity": "拉古艾尔",
+        "entity_type": null,
+        "category": "能力",
+        "text": "拉古艾尔能够让已经死亡的人复活",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "不能让已经死亡的人复活"
+      ]
+    },
+    {
+      "id": "x06-1",
+      "parent": "x06",
+      "group": "fresh",
+      "source_input": "月城在2062年就安装了机械左臂。",
+      "record": {
+        "kind": "event",
+        "entity": "月城",
+        "entity_type": null,
+        "category": "机械臂安装",
+        "text": "月城在2062年就安装了机械左臂",
+        "target": null,
+        "time": "2062年",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "2064年接受机械左臂安装手术",
+        "在此之前"
+      ]
+    },
+    {
+      "id": "u01-1",
+      "parent": "u01",
+      "group": "fresh",
+      "source_input": "雷能读懂陌生人的梦境。",
+      "record": {
+        "kind": "attribute",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "能力",
+        "text": "雷能读懂陌生人的梦境",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "u02-1",
+      "parent": "u02",
+      "group": "fresh",
+      "source_input": "莉娅曾经在海外留学。",
+      "record": {
+        "kind": "event",
+        "entity": "莉娅",
+        "entity_type": null,
+        "category": "经历",
+        "text": "莉娅曾经在海外留学",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "u03-1",
+      "parent": "u03",
+      "group": "fresh",
+      "source_input": "德尔塔的装甲可以变成潜水艇。",
+      "record": {
+        "kind": "attribute",
+        "entity": "德尔塔的装甲",
+        "entity_type": null,
+        "category": "装甲能力",
+        "text": "德尔塔的装甲可以变成潜水艇",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "u04-1",
+      "parent": "u04",
+      "group": "fresh",
+      "source_input": "月城的机械左臂能感知气味。",
+      "record": {
+        "kind": "attribute",
+        "entity": "月城的机械左臂",
+        "entity_type": null,
+        "category": "感知能力",
+        "text": "月城的机械左臂能感知气味",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "u05-1",
+      "parent": "u05",
+      "group": "fresh",
+      "source_input": "雷在第十话搬到海边居住。",
+      "record": {
+        "kind": "event",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "居住变化",
+        "text": "雷在第十话搬到海边居住",
+        "target": null,
+        "time": "第十话",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "u06-1",
+      "parent": "u06",
+      "group": "fresh",
+      "source_input": "城区列车提供免费的早餐。",
+      "record": {
+        "kind": "attribute",
+        "entity": "城区列车",
+        "entity_type": null,
+        "category": "服务",
+        "text": "城区列车提供免费的早餐",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "m01-1",
+      "parent": "m01",
+      "group": "fresh",
+      "source_input": "月城的左臂是机械臂，右臂也是机械臂。",
+      "record": {
+        "kind": "attribute",
+        "entity": "月城",
+        "entity_type": null,
+        "category": "生理结构",
+        "text": "月城的左臂是机械臂",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "安装机械左臂"
+      ]
+    },
+    {
+      "id": "m01-2",
+      "parent": "m01",
+      "group": "fresh",
+      "source_input": "月城的左臂是机械臂，右臂也是机械臂。",
+      "record": {
+        "kind": "attribute",
+        "entity": "月城",
+        "entity_type": null,
+        "category": "生理结构",
+        "text": "右臂也是机械臂",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "右臂始终是自然肢体"
+      ]
+    },
+    {
+      "id": "m02-1",
+      "parent": "m02",
+      "group": "fresh",
+      "source_input": "雷拥有两颗心脏，并能让时间停止。",
+      "record": {
+        "kind": "attribute",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "生理结构",
+        "text": "雷拥有两颗心脏",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "雷拥有两颗心脏"
+      ]
+    },
+    {
+      "id": "m02-2",
+      "parent": "m02",
+      "group": "fresh",
+      "source_input": "雷拥有两颗心脏，并能让时间停止。",
+      "record": {
+        "kind": "attribute",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "能力",
+        "text": "并能让时间停止",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "m03-1",
+      "parent": "m03",
+      "group": "fresh",
+      "source_input": "莉娅是档案馆管理员，并能再生完整肢体。",
+      "record": {
+        "kind": "attribute",
+        "entity": "莉娅",
+        "entity_type": null,
+        "category": "职业",
+        "text": "莉娅是档案馆管理员",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "城区档案馆的管理员"
+      ]
+    },
+    {
+      "id": "m03-2",
+      "parent": "m03",
+      "group": "fresh",
+      "source_input": "莉娅是档案馆管理员，并能再生完整肢体。",
+      "record": {
+        "kind": "attribute",
+        "entity": "莉娅",
+        "entity_type": null,
+        "category": "能力",
+        "text": "并能再生完整肢体",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "m04-1",
+      "parent": "m04",
+      "group": "fresh",
+      "source_input": "拉古艾尔可以加速伤口愈合，也能让死人复活。",
+      "record": {
+        "kind": "attribute",
+        "entity": "拉古艾尔",
+        "entity_type": null,
+        "category": "能力",
+        "text": "拉古艾尔可以加速伤口愈合",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "可以加速伤口愈合"
+      ]
+    },
+    {
+      "id": "m04-2",
+      "parent": "m04",
+      "group": "fresh",
+      "source_input": "拉古艾尔可以加速伤口愈合，也能让死人复活。",
+      "record": {
+        "kind": "attribute",
+        "entity": "拉古艾尔",
+        "entity_type": null,
+        "category": "能力",
+        "text": "也能让死人复活",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "不能让已经死亡的人复活"
+      ]
+    },
+    {
+      "id": "b01-1",
+      "parent": "b01",
+      "group": "fresh",
+      "source_input": "第十二话，诺拉加入白塔协会。",
+      "record": {
+        "kind": "relation",
+        "entity": "诺拉",
+        "entity_type": null,
+        "category": "隶属",
+        "text": "诺拉加入白塔协会",
+        "target": "白塔协会",
+        "time": "第十二话",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "b02-1",
+      "parent": "b02",
+      "group": "fresh",
+      "source_input": "霜港位于南方。",
+      "record": {
+        "kind": "relation",
+        "entity": "霜港",
+        "entity_type": null,
+        "category": "位于",
+        "text": "霜港位于南方",
+        "target": "南方",
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "b03-1",
+      "parent": "b03",
+      "group": "fresh",
+      "source_input": "世界规则：重力在日落时反向。",
+      "record": {
+        "kind": "rule",
+        "entity": null,
+        "entity_type": null,
+        "category": "物理规则",
+        "text": "世界规则：重力在日落时反向",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "b04-1",
+      "parent": "b04",
+      "group": "fresh",
+      "source_input": "第十三话，雷获得青铜钥匙，并将青铜钥匙交给莉娅。",
+      "record": {
+        "kind": "event",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "物品转交",
+        "text": "雷获得青铜钥匙",
+        "target": null,
+        "time": "第十三话",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "b04-2",
+      "parent": "b04",
+      "group": "fresh",
+      "source_input": "第十三话，雷获得青铜钥匙，并将青铜钥匙交给莉娅。",
+      "record": {
+        "kind": "event",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "物品转交",
+        "text": "并将青铜钥匙交给莉娅",
+        "target": null,
+        "time": "第十三话",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "r01-1",
+      "parent": "r01",
+      "group": "development_regression",
+      "source_input": "雷的左胸会周期性疼痛。",
+      "record": {
+        "kind": "attribute",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "生理结构",
+        "text": "雷的左胸会周期性疼痛",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "r02-1",
+      "parent": "r02",
+      "group": "development_regression",
+      "source_input": "第18话，茱莉亚入职星球日报，并结识克拉克。",
+      "record": {
+        "kind": "relation",
+        "entity": "茱莉亚",
+        "entity_type": null,
+        "category": "入职",
+        "text": "茱莉亚入职星球日报",
+        "target": "星球日报",
+        "time": "第18话",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    },
+    {
+      "id": "r02-2",
+      "parent": "r02",
+      "group": "development_regression",
+      "source_input": "第18话，茱莉亚入职星球日报，并结识克拉克。",
+      "record": {
+        "kind": "relation",
+        "entity": "茱莉亚",
+        "entity_type": null,
+        "category": "结识",
+        "text": "并结识克拉克",
+        "target": "克拉克",
+        "time": "第18话",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": []
+    }
+  ]
+}

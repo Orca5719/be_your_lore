@@ -1,0 +1,28 @@
+{
+  "version": "6ceadf62e4d7440e87383661cb23c4d6",
+  "shape": [
+    3,
+    512
+  ],
+  "device": "cuda",
+  "norms": [
+    0.9999999403953552,
+    0.9999999403953552,
+    1.0
+  ],
+  "reload_equals_reencode": true,
+  "config": {
+    "model": "BAAI/bge-small-zh-v1.5",
+    "revision": "7999e1d3359715c523056ef9478215996d62a620",
+    "pooling": "cls",
+    "normalization": "l2",
+    "query_prompt": "为这个句子生成表示以用于检索相关文章：",
+    "dimension": 512,
+    "inference_dtype": "float32",
+    "chunker": {
+      "version": 1,
+      "max_tokens": 512,
+      "overlap": "last_sentence_when_fits"
+    }
+  }
+}

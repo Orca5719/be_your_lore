@@ -1,0 +1,447 @@
+[
+  {
+    "seconds": 10.490744200000336,
+    "result": {
+      "schema_version": "agent-pipeline-report-v2",
+      "stage": "report",
+      "status": "partial",
+      "report": {
+        "overview": "没有成功核对的实质事实，不能据此认定故事一致。本次处理未完整完成，见processing_issues。结论仅覆盖已提取并核对的事实，未保存设定。段内事件检查另发现0项矛盾、0项待确认。",
+        "scope": "checked_events",
+        "contradictions": [],
+        "uncertainties": [],
+        "confirmations": [],
+        "possible_additions": [],
+        "confirmation_topics": [],
+        "excluded_details": [],
+        "processing_issues": [
+          {
+            "kind": "upstream_incomplete",
+            "details": {
+              "upstream_status": "partial",
+              "failed_event_ids": [],
+              "upstream_stages": {
+                "understanding": {
+                  "unresolved_candidates": [
+                    {
+                      "candidate_id": "W1C1",
+                      "error": "叙述性质无效",
+                      "source_ids": [
+                        "S1"
+                      ]
+                    },
+                    {
+                      "candidate_id": "W2C1",
+                      "error": "叙述性质无效",
+                      "source_ids": [
+                        "S1"
+                      ]
+                    }
+                  ],
+                  "missing_source_ids": [
+                    "S1"
+                  ],
+                  "failed_source_ids": []
+                },
+                "filtering": {
+                  "upstream_status": "partial",
+                  "pending_event_ids": [],
+                  "rejected_count": 0,
+                  "failed_window_ids": []
+                },
+                "retrieval": {
+                  "upstream_status": "partial",
+                  "failed_event_ids": [],
+                  "load_error": null
+                }
+              },
+              "story_check": "段内检查未完整完成"
+            }
+          }
+        ],
+        "story_consistency": {
+          "status": "partial",
+          "scope": "current_story_observed_events",
+          "pair_count": 0,
+          "unprocessed_pair_count": 0,
+          "contradictions": [],
+          "uncertainties": []
+        }
+      },
+      "summary": {
+        "verdict": "uncertain",
+        "label": "尚不能对已核对事实给出完整明确结论",
+        "scope": "checked_events",
+        "counts": {
+          "consistent": 0,
+          "contradiction": 0,
+          "uncertain": 0,
+          "failed": 0,
+          "pending": 0,
+          "ignored": 0,
+          "support_only": 0,
+          "unprocessed": 0
+        },
+        "checked_event_count": 0,
+        "finding_count": 0
+      },
+      "findings": [],
+      "evidence": [],
+      "failed_items": [],
+      "pending_events": [],
+      "ignored_events": [],
+      "support_events": [],
+      "unprocessed_events": [],
+      "review_items": [],
+      "events": [],
+      "judge": {
+        "schema_version": "agent-pipeline-judge-v1",
+        "prompt_version": "judge-v6",
+        "stage": "judge",
+        "status": "partial",
+        "events": [],
+        "items": [],
+        "retrieval": {
+          "schema_version": "agent-pipeline-retrieval-v1",
+          "stage": "retrieval",
+          "status": "partial",
+          "filtering": {
+            "schema_version": "agent-pipeline-filtering-v1",
+            "prompt_version": "filtering-v6",
+            "stage": "filtering",
+            "status": "partial",
+            "failure_reasons": {
+              "upstream_status": "partial",
+              "pending_event_ids": [],
+              "rejected_count": 0,
+              "failed_window_ids": []
+            },
+            "events": [],
+            "decisions": [],
+            "selected_events": [],
+            "ignored_events": [],
+            "pending_events": [],
+            "understanding": {
+              "schema_version": "agent-pipeline-understanding-v1",
+              "prompt_version": "understanding-v6",
+              "stage": "understanding",
+              "status": "partial",
+              "text": "雷拥有两颗心脏。",
+              "events": [],
+              "rejected": [
+                {
+                  "window_id": 1,
+                  "candidate_index": 1,
+                  "candidate_id": "W1C1",
+                  "error": "叙述性质无效",
+                  "raw_event": {
+                    "actors": [
+                      "雷"
+                    ],
+                    "event": "雷拥有两颗心脏",
+                    "explicit": true,
+                    "modality": "explicit",
+                    "source_ids": [
+                      "S1"
+                    ],
+                    "context_ids": []
+                  },
+                  "recovered_event_ids": []
+                },
+                {
+                  "window_id": 2,
+                  "candidate_index": 1,
+                  "candidate_id": "W2C1",
+                  "error": "叙述性质无效",
+                  "raw_event": {
+                    "actors": [
+                      "雷"
+                    ],
+                    "event": "雷拥有两颗心脏",
+                    "explicit": true,
+                    "modality": "explicit",
+                    "source_ids": [
+                      "S1"
+                    ],
+                    "context_ids": [],
+                    "mental_state": null,
+                    "conditions": [],
+                    "replaces": [
+                      "W1C1"
+                    ]
+                  },
+                  "recovered_event_ids": []
+                }
+              ],
+              "calls": [
+                {
+                  "status": "ok",
+                  "attempts": [
+                    {
+                      "attempt": 1,
+                      "status": "ok",
+                      "raw_output": "{\"events\":[{\"actors\":[\"雷\"],\"event\":\"雷拥有两颗心脏\",\"explicit\":true,\"modality\":\"explicit\",\"source_ids\":[\"S1\"],\"context_ids\":[]}]}",
+                      "input_tokens": 719,
+                      "max_new_tokens": 1536,
+                      "timing": {
+                        "seconds": 4.809842200000276,
+                        "input_tokens": 719,
+                        "generated_tokens": 36,
+                        "ttft_ms": 1697.889999999461,
+                        "decode_seconds": 3.110574899999847,
+                        "decode_tokens": 35,
+                        "decode_tokens_per_second": 11.251939311926462
+                      }
+                    }
+                  ],
+                  "window_id": 1,
+                  "purpose": "initial_understanding",
+                  "target_ids": [
+                    "S1"
+                  ],
+                  "context_ids": []
+                },
+                {
+                  "status": "ok",
+                  "attempts": [
+                    {
+                      "attempt": 1,
+                      "status": "ok",
+                      "raw_output": "{\"events\":[{\"actors\":[\"雷\"],\"event\":\"雷拥有两颗心脏\",\"explicit\":true,\"modality\":\"explicit\",\"source_ids\":[\"S1\"],\"context_ids\":[],\"mental_state\":null,\"conditions\":[],\"replaces\":[\"W1C1\"]}]}",
+                      "input_tokens": 982,
+                      "max_new_tokens": 1536,
+                      "timing": {
+                        "seconds": 5.491737100001046,
+                        "input_tokens": 982,
+                        "generated_tokens": 52,
+                        "ttft_ms": 631.7693000000872,
+                        "decode_seconds": 4.859051100000215,
+                        "decode_tokens": 51,
+                        "decode_tokens_per_second": 10.49587644797515
+                      }
+                    }
+                  ],
+                  "window_id": 2,
+                  "purpose": "coverage_recovery",
+                  "target_ids": [
+                    "S1"
+                  ],
+                  "context_ids": []
+                }
+              ],
+              "duplicate_candidates": 0,
+              "unrecovered_failed_source_ids": [],
+              "failure_reasons": {
+                "unresolved_candidates": [
+                  {
+                    "candidate_id": "W1C1",
+                    "error": "叙述性质无效",
+                    "source_ids": [
+                      "S1"
+                    ]
+                  },
+                  {
+                    "candidate_id": "W2C1",
+                    "error": "叙述性质无效",
+                    "source_ids": [
+                      "S1"
+                    ]
+                  }
+                ],
+                "missing_source_ids": [
+                  "S1"
+                ],
+                "failed_source_ids": []
+              },
+              "processing_complete": false,
+              "semantic_verification": "not_verified",
+              "review_required": true,
+              "request_seconds": 10.459624299999632,
+              "model_loaded_this_request": false,
+              "coverage": {
+                "source_spans": {
+                  "S1": {
+                    "text": "雷拥有两颗心脏。",
+                    "start": 0,
+                    "end": 8
+                  }
+                },
+                "covered_source_ids": [],
+                "primary_source_ids": [],
+                "context_only_source_ids": [],
+                "missing_source_ids": [
+                  "S1"
+                ],
+                "note": "包括事件/条件/主体上下文引用；被引用不保证全部语义提取正确，仅作上下文的片段仍需检查是否漏事件"
+              },
+              "device": "cuda",
+              "model_load_seconds": 14.255697599999621,
+              "notice": "仅语义理解：未筛选重要性、未检索、未判断、未保存设定"
+            },
+            "upstream_status": "partial",
+            "calls": [],
+            "rejected": [],
+            "filtering_complete": true,
+            "processing_complete": false,
+            "semantic_verification": "not_verified",
+            "request_seconds": 0.0001283999990846496,
+            "model_loaded_this_request": false,
+            "device": "cuda",
+            "model_load_seconds": 14.255697599999621,
+            "notice": "仅筛选建议；事件原样保留，待复核不等于忽略；未检索、未判断矛盾、未保存设定。"
+          },
+          "events": [],
+          "items": [],
+          "top_k": 5,
+          "pending_event_ids": [],
+          "ignored_event_ids": [],
+          "upstream_status": "partial",
+          "retrieval_complete": true,
+          "processing_complete": false,
+          "semantic_verification": "not_verified",
+          "failure_reasons": {
+            "upstream_status": "partial",
+            "failed_event_ids": [],
+            "load_error": null
+          },
+          "encoder_loaded_this_request": false,
+          "index": {
+            "config": {
+              "model": "BAAI/bge-small-zh-v1.5",
+              "revision": "7999e1d3359715c523056ef9478215996d62a620",
+              "pooling": "cls",
+              "normalization": "l2",
+              "query_prompt": "为这个句子生成表示以用于检索相关文章：",
+              "dimension": 512,
+              "inference_dtype": "float32",
+              "chunker": {
+                "version": 1,
+                "max_tokens": 512,
+                "overlap": "last_sentence_when_fits"
+              }
+            },
+            "sources": {
+              "angels.md": "3a74db800a715d8b392db37ccc38026b0e71219fffa684d8e2d429314ef9b7e2",
+              "characters.md": "e5741e3a36fe3ef0a286a7c2f1f85089b9908cc99869563dd5d040348d40d3e8",
+              "history.md": "4f0105823cc8d513a4d32cfc094736458db594351000de074acd313cee06d601",
+              "technology.md": "b88690cae568b05032d2c078646bfea50ff304a291b7fbadf0af17eeb4c6cfae"
+            },
+            "lore_directory": "C:\\Users\\Xhang\\Desktop\\project\\worldcheck\\lore"
+          },
+          "device": "cuda",
+          "request_seconds": 0.00015969999913068023,
+          "notice": "仅检索相关设定，未判断矛盾、未保存。相似度表示相对相关性，不是事实正确率或矛盾置信度；无关事件也可能返回片段。"
+        },
+        "pending_event_ids": [],
+        "ignored_event_ids": [],
+        "upstream_status": "partial",
+        "failure_reasons": {
+          "upstream_status": "partial",
+          "failed_event_ids": [],
+          "upstream_stages": {
+            "understanding": {
+              "unresolved_candidates": [
+                {
+                  "candidate_id": "W1C1",
+                  "error": "叙述性质无效",
+                  "source_ids": [
+                    "S1"
+                  ]
+                },
+                {
+                  "candidate_id": "W2C1",
+                  "error": "叙述性质无效",
+                  "source_ids": [
+                    "S1"
+                  ]
+                }
+              ],
+              "missing_source_ids": [
+                "S1"
+              ],
+              "failed_source_ids": []
+            },
+            "filtering": {
+              "upstream_status": "partial",
+              "pending_event_ids": [],
+              "rejected_count": 0,
+              "failed_window_ids": []
+            },
+            "retrieval": {
+              "upstream_status": "partial",
+              "failed_event_ids": [],
+              "load_error": null
+            }
+          },
+          "story_check": "段内检查未完整完成"
+        },
+        "judge_complete": true,
+        "processing_complete": false,
+        "semantic_verification": "not_verified",
+        "model_loaded_this_request": false,
+        "device": "cuda",
+        "model_load_seconds": 14.255697599999621,
+        "request_seconds": 0.0009974000004149275,
+        "notice": "逐事件一致性建议，未汇总整段、未保存设定。有效引用不保证判断正确；未提取/待复核内容不代表无矛盾。",
+        "story_check": {
+          "stage": "story_check",
+          "schema_version": "agent-pipeline-story-check-v1",
+          "status": "partial",
+          "scope": "filtered_world_relevant_observed_events",
+          "candidate_event_ids": [],
+          "total_observed_event_count": 0,
+          "filtered_out_event_count": 0,
+          "pair_count": 0,
+          "unprocessed_pair_count": 0,
+          "items": [],
+          "calls": [],
+          "semantic_verification": "not_verified"
+        }
+      },
+      "processing_complete": false,
+      "review_required": true,
+      "failure_reasons": {
+        "upstream_status": "partial",
+        "failed_event_ids": [],
+        "upstream_stages": {
+          "understanding": {
+            "unresolved_candidates": [
+              {
+                "candidate_id": "W1C1",
+                "error": "叙述性质无效",
+                "source_ids": [
+                  "S1"
+                ]
+              },
+              {
+                "candidate_id": "W2C1",
+                "error": "叙述性质无效",
+                "source_ids": [
+                  "S1"
+                ]
+              }
+            ],
+            "missing_source_ids": [
+              "S1"
+            ],
+            "failed_source_ids": []
+          },
+          "filtering": {
+            "upstream_status": "partial",
+            "pending_event_ids": [],
+            "rejected_count": 0,
+            "failed_window_ids": []
+          },
+          "retrieval": {
+            "upstream_status": "partial",
+            "failed_event_ids": [],
+            "load_error": null
+          }
+        },
+        "story_check": "段内检查未完整完成"
+      },
+      "semantic_verification": "not_verified",
+      "notice": "仅汇总已核对事件，不证明整段故事无矛盾；不确定不是处理失败。保留上游建议，未保存设定。相似度不是事实正确率或矛盾置信度。"
+    }
+  }
+]

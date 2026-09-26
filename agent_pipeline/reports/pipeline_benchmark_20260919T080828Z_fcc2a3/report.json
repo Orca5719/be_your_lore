@@ -1,0 +1,90 @@
+{
+  "name": "Agent Pipeline Quality Benchmark",
+  "status": "completed",
+  "dataset_status": "annotation_draft_not_final_benchmark",
+  "validation": {
+    "cases": 4,
+    "gold_facts": 5,
+    "index_chunks": 48,
+    "dataset_status": "annotation_draft_not_final_benchmark",
+    "groups": {
+      "zero_conflict": 3,
+      "one_conflict": 1
+    }
+  },
+  "top_k": 5,
+  "device": "cuda",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "model_load_seconds": 14.255697599999621,
+  "encoder_index_load_seconds": 0.41982500000085565,
+  "cases": 4,
+  "case_status_counts": {
+    "partial": 1,
+    "error": 3
+  },
+  "latency_end_to_end": {
+    "median_seconds": 411.4077869500006,
+    "p95_seconds": 560.2270258999997,
+    "mean_seconds": 411.8417654250002,
+    "per_case_seconds": {
+      "SL-P01": 560.2270258999997,
+      "SL-P02": 367.42883059999986,
+      "SL-P03": 264.32446189999973,
+      "SL-P04": 455.3867433000014
+    }
+  },
+  "peak_allocated_gib": 7.264947414398193,
+  "peak_reserved_gib": 7.53125,
+  "source_sha256": {
+    "agent_pipeline/understanding.py": "5c18ef8263eb0088ecf2bbacfa228e34c0926ec49741e91a6475eeef9e1242ca",
+    "agent_pipeline/filtering.py": "3f922a8b441648b8b1e757b6dccb461974c1525aecb49db8504fb8cd4e1594b4",
+    "agent_pipeline/retrieval.py": "b3cc36d5edf2885caab5e9fce975c76c7e4345fa60acd7facc59d761ae002a07",
+    "agent_pipeline/judge.py": "516b6804af761535b39575f3eb26e47f9fe613b8a11e6ec1bebbfd80cfe2a7f1",
+    "agent_pipeline/story_check.py": "fd787c198217a3fe6417d91d9cbb0c15fa52895eea34e02496704c80b59fd94e",
+    "agent_pipeline/report.py": "32e3a4a4bb6848fd97a49842abaf33dbd4cc754a3b8d6de5352dbd403bd50557",
+    "agent_pipeline_benchmark.py": "b1de0579586b40051c06bced756aacb590b7d23f1f8bf38a138c71d4447c2b67",
+    "agent_pipeline/prompts/understanding_v6.txt": "34ce4202728e5ffe8a7f6b607d31d4f6e63d3cdb1cf670124158b103ab41c82e",
+    "agent_pipeline/prompts/filtering_v6.txt": "d37a1ed6a80031abffc44b3dd7e14fc21ed6ab63f827156c3d3c84d3a615a907",
+    "agent_pipeline/prompts/judge_v6.txt": "5bfc3ea04e32086f078e88352cf36b68bec271f5a07d540420710cafcef18551",
+    "agent_pipeline/prompts/story_check_v1.txt": "d24c088a7db793fd07c0d26f74cec97d617b1d84e35b16b40e8239c3edc623fc"
+  },
+  "snapshot_stable": true,
+  "raw_sha256": "06183be2329c5f3560c348fe8b543e1257927fb0957141349e06e7bf26a3793a",
+  "scoring_status": "scored_provisional",
+  "quality": {
+    "recall_extraction": {
+      "hits": 5,
+      "gold_total": 5,
+      "recall": 1.0
+    },
+    "recall_retrieval_at_k": {
+      "hits": 0,
+      "gold_total": 4,
+      "k": 5,
+      "recall": 0.0
+    },
+    "accuracy_judge": {
+      "correct": 0,
+      "eligible": 0,
+      "accuracy": null,
+      "denominator": "Gold facts with a semantic event match whose matched event completed retrieval; evidence-bearing gold additionally requires an acceptable evidence set within Top-K.",
+      "confusion": {}
+    },
+    "end_to_end_conflict": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "scope": "Provisional 4-story draft gold and assistant-reviewed semantic coverage. Missing extraction/retrieval/judgement remains FN end-to-end.",
+    "scoring_provenance": {
+      "dataset_sha256": "619d34f54c4e4b432ddd37db9df82cc87cc553a3072272a1b9ccf9d1f301dce5",
+      "raw_sha256": "06183be2329c5f3560c348fe8b543e1257927fb0957141349e06e7bf26a3793a",
+      "review_sha256": "8d727ffceb41adae7c3b1d54f4d97a1e263c913e1a38e60e806f76acde74ed2d",
+      "scorer_sha256": "fff796e575cfdaeb5ff80a18cbdd7c6a0470a10b6c67a9806a6b870b0afb8c2c"
+    }
+  }
+}

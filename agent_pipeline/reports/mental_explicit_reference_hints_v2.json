@@ -1,0 +1,156 @@
+{
+  "schema_version": "agent-pipeline-understanding-v1",
+  "prompt_version": "understanding-v2",
+  "stage": "understanding",
+  "status": "partial",
+  "text": "雷喝了口水，看到德尔塔的名字时，他感到模糊的熟悉。",
+  "events": [
+    {
+      "actors": [
+        "雷"
+      ],
+      "event": "喝了口水",
+      "mental_state": null,
+      "explicit": true,
+      "modality": "observed",
+      "conditions": [],
+      "source_ids": [
+        "S1"
+      ],
+      "context_ids": [],
+      "sources": [
+        {
+          "id": "S1",
+          "text": "雷喝了口水，",
+          "start": 0,
+          "end": 6
+        }
+      ],
+      "contexts": [],
+      "id": "E1"
+    }
+  ],
+  "rejected": [
+    {
+      "window_id": 1,
+      "candidate_index": 2,
+      "error": "主体缺少原文依据：请选择含主体名称的source_ids/context_ids；指代不明则保留原文指代",
+      "raw_event": {
+        "actors": [
+          "雷"
+        ],
+        "event": "看到德尔塔的名字",
+        "mental_state": null,
+        "explicit": true,
+        "modality": "observed",
+        "conditions": [],
+        "source_ids": [
+          "S2"
+        ],
+        "context_ids": []
+      },
+      "repair_error": "主体缺少原文依据：请选择含主体名称的source_ids/context_ids；指代不明则保留原文指代"
+    },
+    {
+      "window_id": 1,
+      "candidate_index": 3,
+      "error": "主体缺少原文依据：请选择含主体名称的source_ids/context_ids；指代不明则保留原文指代",
+      "raw_event": {
+        "actors": [
+          "雷"
+        ],
+        "event": "感到模糊的熟悉",
+        "mental_state": "模糊的熟悉",
+        "explicit": true,
+        "modality": "observed",
+        "conditions": [],
+        "source_ids": [
+          "S3"
+        ],
+        "context_ids": []
+      },
+      "repair_error": "主体缺少原文依据：请选择含主体名称的source_ids/context_ids；指代不明则保留原文指代"
+    }
+  ],
+  "calls": [
+    {
+      "status": "ok",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "ok",
+          "raw_output": "{\"events\": [\n  {\n    \"actors\": [\"雷\"],\n    \"event\": \"喝了口水\",\n    \"mental_state\": null,\n    \"explicit\": true,\n    \"modality\": \"observed\",\n    \"conditions\": [],\n    \"source_ids\": [ \"S1\" ],\n    \"context_ids\": []\n  },\n  {\n    \"actors\": [\"雷\"],\n    \"event\": \"看到德尔塔的名字\",\n    \"mental_state\": null,\n    \"explicit\": true,\n    \"modality\": \"observed\",\n    \"conditions\": [],\n    \"source_ids\": [ \"S2\" ],\n    \"context_ids\": []\n  },\n  {\n    \"actors\": [\"雷\"],\n    \"event\": \"感到模糊的熟悉\",\n    \"mental_state\": \"模糊的熟悉\",\n    \"explicit\": true,\n    \"modality\": \"observed\",\n    \"conditions\": [],\n    \"source_ids\": [ \"S3\" ],\n    \"context_ids\": []\n  }\n]}",
+          "input_tokens": 642,
+          "max_new_tokens": 1536,
+          "timing": {
+            "seconds": 14.083460300000297,
+            "input_tokens": 642,
+            "generated_tokens": 202,
+            "ttft_ms": 1236.6210000000137,
+            "decode_seconds": 12.846303199999966,
+            "decode_tokens": 201,
+            "decode_tokens_per_second": 15.646524674896396
+          }
+        }
+      ],
+      "window_id": 1,
+      "target_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "context_ids": [],
+      "reference_repair": {
+        "status": "ok",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"repairs\":[{\"candidate_index\":2,\"context_ids\":[\"S2\"]},{\"candidate_index\":3,\"context_ids\":[\"S3\"]}]}",
+            "input_tokens": 329,
+            "max_new_tokens": 512,
+            "timing": {
+              "seconds": 2.151197499999398,
+              "input_tokens": 329,
+              "generated_tokens": 29,
+              "ttft_ms": 185.0100999999995,
+              "decode_seconds": 1.9656983999993827,
+              "decode_tokens": 28,
+              "decode_tokens_per_second": 14.244301160345247
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "coverage": {
+    "source_spans": {
+      "S1": {
+        "text": "雷喝了口水，",
+        "start": 0,
+        "end": 6
+      },
+      "S2": {
+        "text": "看到德尔塔的名字时，",
+        "start": 6,
+        "end": 16
+      },
+      "S3": {
+        "text": "他感到模糊的熟悉。",
+        "start": 16,
+        "end": 25
+      }
+    },
+    "covered_source_ids": [
+      "S1"
+    ],
+    "missing_source_ids": [
+      "S2",
+      "S3"
+    ],
+    "note": "片段被引用不保证其全部语义已提取或理解正确"
+  },
+  "device": "cuda",
+  "model_load_seconds": 18.701712999998563,
+  "notice": "仅语义理解：未筛选重要性、未检索、未判断、未保存设定"
+}

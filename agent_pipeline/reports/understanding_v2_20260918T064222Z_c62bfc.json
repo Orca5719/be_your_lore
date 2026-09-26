@@ -1,0 +1,484 @@
+{
+  "kind": "small_learning_experiment_not_benchmark",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "source_sha256": {
+    "understanding.py": "874bc2c412d3c32ad591b4c55e52280862029bb2f467d1b8e8a3f4560999e3ad",
+    "llm.py": "70dec2df1da63b55b5b852f81a6149c971ccdd5258ceabe41504528b72013734",
+    "prompts\\understanding_v2.txt": "12c33d5b0e6edbae859754a13d8b2f9f798def31399dafd678da9f26cc933f14"
+  },
+  "cases": [
+    {
+      "id": "mental_explicit",
+      "result": {
+        "schema_version": "agent-pipeline-understanding-v1",
+        "prompt_version": "understanding-v2",
+        "stage": "understanding",
+        "status": "partial",
+        "text": "雷喝了口水，看到德尔塔的名字时，他感到模糊的熟悉。",
+        "events": [
+          {
+            "actors": [
+              "雷"
+            ],
+            "event": "喝了口水",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "雷喝了口水，",
+                "start": 0,
+                "end": 6
+              }
+            ],
+            "contexts": [],
+            "id": "E1"
+          }
+        ],
+        "rejected": [
+          {
+            "window_id": 1,
+            "candidate_index": 2,
+            "error": "主体缺少原文依据：请选择含主体名称的source_ids/context_ids；指代不明则保留原文指代",
+            "raw_event": {
+              "actors": [
+                "雷"
+              ],
+              "event": "看到德尔塔的名字",
+              "mental_state": null,
+              "explicit": true,
+              "modality": "observed",
+              "conditions": [],
+              "source_ids": [
+                "S2"
+              ],
+              "context_ids": []
+            },
+            "repair_error": "主体缺少原文依据：请选择含主体名称的source_ids/context_ids；指代不明则保留原文指代"
+          },
+          {
+            "window_id": 1,
+            "candidate_index": 3,
+            "error": "主体缺少原文依据：请选择含主体名称的source_ids/context_ids；指代不明则保留原文指代",
+            "raw_event": {
+              "actors": [
+                "雷"
+              ],
+              "event": "感到模糊的熟悉",
+              "mental_state": "模糊的熟悉",
+              "explicit": true,
+              "modality": "observed",
+              "conditions": [],
+              "source_ids": [
+                "S3"
+              ],
+              "context_ids": []
+            },
+            "repair_error": "主体缺少原文依据：请选择含主体名称的source_ids/context_ids；指代不明则保留原文指代"
+          }
+        ],
+        "calls": [
+          {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"events\": [\n  {\n    \"actors\": [\"雷\"],\n    \"event\": \"喝了口水\",\n    \"mental_state\": null,\n    \"explicit\": true,\n    \"modality\": \"observed\",\n    \"conditions\": [],\n    \"source_ids\": [ \"S1\" ],\n    \"context_ids\": []\n  },\n  {\n    \"actors\": [\"雷\"],\n    \"event\": \"看到德尔塔的名字\",\n    \"mental_state\": null,\n    \"explicit\": true,\n    \"modality\": \"observed\",\n    \"conditions\": [],\n    \"source_ids\": [ \"S2\" ],\n    \"context_ids\": []\n  },\n  {\n    \"actors\": [\"雷\"],\n    \"event\": \"感到模糊的熟悉\",\n    \"mental_state\": \"模糊的熟悉\",\n    \"explicit\": true,\n    \"modality\": \"observed\",\n    \"conditions\": [],\n    \"source_ids\": [ \"S3\" ],\n    \"context_ids\": []\n  }\n]}",
+                "input_tokens": 642,
+                "max_new_tokens": 1536,
+                "timing": {
+                  "seconds": 14.80529690000003,
+                  "input_tokens": 642,
+                  "generated_tokens": 202,
+                  "ttft_ms": 1315.2706000000762,
+                  "decode_seconds": 13.489373899999919,
+                  "decode_tokens": 201,
+                  "decode_tokens_per_second": 14.900617440814003
+                }
+              }
+            ],
+            "window_id": 1,
+            "target_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ],
+            "context_ids": [],
+            "reference_repair": {
+              "status": "ok",
+              "attempts": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"repairs\":[{\"candidate_index\":2,\"context_ids\":[\"S2\"]},{\"candidate_index\":3,\"context_ids\":[\"S3\"]}]}",
+                  "input_tokens": 270,
+                  "max_new_tokens": 512,
+                  "timing": {
+                    "seconds": 1.9752175000012357,
+                    "input_tokens": 270,
+                    "generated_tokens": 29,
+                    "ttft_ms": 174.2340000000695,
+                    "decode_seconds": 1.8005539000005228,
+                    "decode_tokens": 28,
+                    "decode_tokens_per_second": 15.550770237976142
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "coverage": {
+          "source_spans": {
+            "S1": {
+              "text": "雷喝了口水，",
+              "start": 0,
+              "end": 6
+            },
+            "S2": {
+              "text": "看到德尔塔的名字时，",
+              "start": 6,
+              "end": 16
+            },
+            "S3": {
+              "text": "他感到模糊的熟悉。",
+              "start": 16,
+              "end": 25
+            }
+          },
+          "covered_source_ids": [
+            "S1"
+          ],
+          "missing_source_ids": [
+            "S2",
+            "S3"
+          ],
+          "note": "片段被引用不保证其全部语义已提取或理解正确"
+        },
+        "device": "cuda",
+        "model_load_seconds": 19.942639299999428,
+        "notice": "仅语义理解：未筛选重要性、未检索、未判断、未保存设定"
+      }
+    },
+    {
+      "id": "belief_and_plan",
+      "result": {
+        "schema_version": "agent-pipeline-understanding-v1",
+        "prompt_version": "understanding-v2",
+        "stage": "understanding",
+        "status": "partial",
+        "text": "苏晴觉得那人很危险，但她并不认识他。她打算明天离开。",
+        "events": [
+          {
+            "actors": [
+              "苏晴"
+            ],
+            "event": "觉得那人很危险",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "belief",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "苏晴觉得那人很危险，",
+                "start": 0,
+                "end": 10
+              }
+            ],
+            "contexts": [],
+            "id": "E1"
+          }
+        ],
+        "rejected": [
+          {
+            "window_id": 1,
+            "candidate_index": 2,
+            "error": "主体缺少原文依据：请选择含主体名称的source_ids/context_ids；指代不明则保留原文指代",
+            "raw_event": {
+              "actors": [
+                "苏晴"
+              ],
+              "event": "并不认识他",
+              "mental_state": null,
+              "explicit": true,
+              "modality": "belief",
+              "conditions": [],
+              "source_ids": [
+                "S2"
+              ],
+              "context_ids": []
+            },
+            "repair_error": "主体缺少原文依据：请选择含主体名称的source_ids/context_ids；指代不明则保留原文指代"
+          },
+          {
+            "window_id": 1,
+            "candidate_index": 3,
+            "error": "主体缺少原文依据：请选择含主体名称的source_ids/context_ids；指代不明则保留原文指代",
+            "raw_event": {
+              "actors": [
+                "苏晴"
+              ],
+              "event": "打算明天离开",
+              "mental_state": null,
+              "explicit": true,
+              "modality": "plan",
+              "conditions": [],
+              "source_ids": [
+                "S3"
+              ],
+              "context_ids": []
+            },
+            "repair_error": "主体缺少原文依据：请选择含主体名称的source_ids/context_ids；指代不明则保留原文指代"
+          }
+        ],
+        "calls": [
+          {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"events\": [\n  {\n    \"actors\": [\"苏晴\"],\n    \"event\": \"觉得那人很危险\",\n    \"mental_state\": null,\n    \"explicit\": true,\n    \"modality\": \"belief\",\n    \"conditions\": [],\n    \"source_ids\": [ \"S1\" ],\n    \"context_ids\": []\n  },\n  {\n    \"actors\": [\"苏晴\"],\n    \"event\": \"并不认识他\",\n    \"mental_state\": null,\n    \"explicit\": true,\n    \"modality\": \"belief\",\n    \"conditions\": [],\n    \"source_ids\": [ \"S2\" ],\n    \"context_ids\": []\n  },\n  {\n    \"actors\": [\"苏晴\"],\n    \"event\": \"打算明天离开\",\n    \"mental_state\": null,\n    \"explicit\": true,\n    \"modality\": \"plan\",\n    \"conditions\": [],\n    \"source_ids\": [ \"S3\" ],\n    \"context_ids\": []\n  }\n]}",
+                "input_tokens": 643,
+                "max_new_tokens": 1536,
+                "timing": {
+                  "seconds": 13.083859000000302,
+                  "input_tokens": 643,
+                  "generated_tokens": 199,
+                  "ttft_ms": 380.0922999998875,
+                  "decode_seconds": 12.703228299998955,
+                  "decode_tokens": 198,
+                  "decode_tokens_per_second": 15.586589119241154
+                }
+              }
+            ],
+            "window_id": 1,
+            "target_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ],
+            "context_ids": [],
+            "reference_repair": {
+              "status": "ok",
+              "attempts": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"repairs\":[{\"candidate_index\":2,\"context_ids\":[\"S2\"]},{\"candidate_index\":3,\"context_ids\":[\"S3\"]}]}",
+                  "input_tokens": 267,
+                  "max_new_tokens": 512,
+                  "timing": {
+                    "seconds": 1.9690293999992718,
+                    "input_tokens": 267,
+                    "generated_tokens": 29,
+                    "ttft_ms": 167.45549999905052,
+                    "decode_seconds": 1.8010828000005858,
+                    "decode_tokens": 28,
+                    "decode_tokens_per_second": 15.546203650376814
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "coverage": {
+          "source_spans": {
+            "S1": {
+              "text": "苏晴觉得那人很危险，",
+              "start": 0,
+              "end": 10
+            },
+            "S2": {
+              "text": "但她并不认识他。",
+              "start": 10,
+              "end": 18
+            },
+            "S3": {
+              "text": "她打算明天离开。",
+              "start": 18,
+              "end": 26
+            }
+          },
+          "covered_source_ids": [
+            "S1"
+          ],
+          "missing_source_ids": [
+            "S2",
+            "S3"
+          ],
+          "note": "片段被引用不保证其全部语义已提取或理解正确"
+        },
+        "device": "cuda",
+        "model_load_seconds": 19.942639299999428,
+        "notice": "仅语义理解：未筛选重要性、未检索、未判断、未保存设定"
+      }
+    },
+    {
+      "id": "literary_transformation",
+      "result": {
+        "schema_version": "agent-pipeline-understanding-v1",
+        "prompt_version": "understanding-v2",
+        "stage": "understanding",
+        "status": "ok",
+        "text": "月城的银色手臂如液体一般化开，渗透进实验室的主机中。",
+        "events": [
+          {
+            "actors": [
+              "月城"
+            ],
+            "event": "银色手臂如液体一般化开",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "月城的银色手臂如液体一般化开，",
+                "start": 0,
+                "end": 15
+              }
+            ],
+            "contexts": [],
+            "id": "E1"
+          },
+          {
+            "actors": [
+              "月城"
+            ],
+            "event": "银色手臂渗透进实验室的主机中",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S2"
+            ],
+            "context_ids": [
+              "S1",
+              "S2"
+            ],
+            "sources": [
+              {
+                "id": "S2",
+                "text": "渗透进实验室的主机中。",
+                "start": 15,
+                "end": 26
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S1",
+                "text": "月城的银色手臂如液体一般化开，",
+                "start": 0,
+                "end": 15
+              },
+              {
+                "id": "S2",
+                "text": "渗透进实验室的主机中。",
+                "start": 15,
+                "end": 26
+              }
+            ],
+            "id": "E2",
+            "reference_repairs": [
+              "missing_actor_context_added"
+            ],
+            "original_context_ids": []
+          }
+        ],
+        "rejected": [],
+        "calls": [
+          {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"events\": [\n  {\n    \"actors\": [\"月城\"],\n    \"event\": \"银色手臂如液体一般化开\",\n    \"mental_state\": null,\n    \"explicit\": true,\n    \"modality\": \"observed\",\n    \"conditions\": [],\n    \"source_ids\": [\"S1\"],\n    \"context_ids\": []\n  },\n  {\n    \"actors\": [\"月城\"],\n    \"event\": \"银色手臂渗透进实验室的主机中\",\n    \"mental_state\": null,\n    \"explicit\": true,\n    \"modality\": \"observed\",\n    \"conditions\": [],\n    \"source_ids\": [\"S2\"],\n    \"context_ids\": []\n  }\n]}",
+                "input_tokens": 641,
+                "max_new_tokens": 1536,
+                "timing": {
+                  "seconds": 9.357705899999928,
+                  "input_tokens": 641,
+                  "generated_tokens": 143,
+                  "ttft_ms": 380.78090000090015,
+                  "decode_seconds": 8.976301999999123,
+                  "decode_tokens": 142,
+                  "decode_tokens_per_second": 15.819432100213861
+                }
+              }
+            ],
+            "window_id": 1,
+            "target_ids": [
+              "S1",
+              "S2"
+            ],
+            "context_ids": [],
+            "reference_repair": {
+              "status": "ok",
+              "attempts": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\"repairs\":[{\"candidate_index\":2,\"context_ids\":[\"S1\",\"S2\"]}]}",
+                  "input_tokens": 226,
+                  "max_new_tokens": 512,
+                  "timing": {
+                    "seconds": 1.3631941999992705,
+                    "input_tokens": 226,
+                    "generated_tokens": 20,
+                    "ttft_ms": 141.3854000002175,
+                    "decode_seconds": 1.22134030000052,
+                    "decode_tokens": 19,
+                    "decode_tokens_per_second": 15.556679821333914
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "coverage": {
+          "source_spans": {
+            "S1": {
+              "text": "月城的银色手臂如液体一般化开，",
+              "start": 0,
+              "end": 15
+            },
+            "S2": {
+              "text": "渗透进实验室的主机中。",
+              "start": 15,
+              "end": 26
+            }
+          },
+          "covered_source_ids": [
+            "S1",
+            "S2"
+          ],
+          "missing_source_ids": [],
+          "note": "片段被引用不保证其全部语义已提取或理解正确"
+        },
+        "device": "cuda",
+        "model_load_seconds": 19.942639299999428,
+        "notice": "仅语义理解：未筛选重要性、未检索、未判断、未保存设定"
+      }
+    }
+  ]
+}

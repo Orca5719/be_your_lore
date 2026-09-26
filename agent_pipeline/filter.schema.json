@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Filtering model wire response (not the enriched report)",
+  "type": "object",
+  "required": [
+    "decisions"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "maxItems": 40,
+      "items": {
+        "type": "object",
+        "required": [
+          "event_id",
+          "decision",
+          "reason_code"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "decision": {
+            "enum": [
+              "keep",
+              "ignore",
+              "review"
+            ]
+          },
+          "reason_code": {
+            "enum": [
+              "routine",
+              "mechanism",
+              "knowledge_relation",
+              "state_time_space",
+              "consequence_support",
+              "unclear",
+              "process_detail"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

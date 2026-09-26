@@ -1,0 +1,45 @@
+{
+  "recall_extraction": {
+    "hits": 5,
+    "gold_total": 5,
+    "recall": 1.0
+  },
+  "recall_retrieval_at_k": {
+    "hits": 4,
+    "gold_total": 4,
+    "k": 5,
+    "recall": 1.0
+  },
+  "accuracy_judge": {
+    "correct": 5,
+    "eligible": 5,
+    "accuracy": 1.0,
+    "denominator": "Gold facts with a semantic event match whose matched event completed retrieval; evidence-bearing gold additionally requires an acceptable evidence set within Top-K.",
+    "confusion": {
+      "consistent": {
+        "consistent": 3
+      },
+      "contradiction": {
+        "contradiction": 1
+      },
+      "uncertain": {
+        "uncertain": 1
+      }
+    }
+  },
+  "end_to_end_conflict": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "scope": "Provisional 4-story draft gold and assistant-reviewed semantic coverage. Missing extraction/retrieval/judgement remains FN end-to-end.",
+  "scoring_provenance": {
+    "dataset_sha256": "619d34f54c4e4b432ddd37db9df82cc87cc553a3072272a1b9ccf9d1f301dce5",
+    "raw_sha256": "eeabfd028fd1d7857251c9a858bdceced01cb84ecd8edd6ec0061dc0213a1f13",
+    "review_sha256": "0b463b8e5a1d7dacf39ab948129e71009317639f7edbff6bad684864c14fe8a1",
+    "scorer_sha256": "fff796e575cfdaeb5ff80a18cbdd7c6a0470a10b6c67a9806a6b870b0afb8c2c"
+  }
+}

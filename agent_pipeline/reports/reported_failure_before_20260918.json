@@ -1,0 +1,662 @@
+{
+  "schema_version": "agent-pipeline-filtering-v1",
+  "prompt_version": "filtering-v2",
+  "stage": "filtering",
+  "status": "partial",
+  "events": [
+    {
+      "actors": [
+        "雷"
+      ],
+      "event": "雷喝下杯里的水",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S1"
+      ],
+      "mental_state": null,
+      "conditions": [],
+      "context_ids": [],
+      "sources": [
+        {
+          "id": "S1",
+          "text": "雷喝下杯里的水，",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "contexts": [],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions",
+        "context_ids"
+      ],
+      "id": "E1",
+      "review_required": true,
+      "review_reasons": [
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "actors": [
+        "雷"
+      ],
+      "event": "雷中毒倒地",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S2"
+      ],
+      "conditions": [
+        "雷喝下杯里的水"
+      ],
+      "mental_state": null,
+      "context_ids": [
+        "S1"
+      ],
+      "sources": [
+        {
+          "id": "S2",
+          "text": "随即毒发倒地。",
+          "start": 8,
+          "end": 15
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S1",
+          "text": "雷喝下杯里的水，",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "defaulted_fields": [
+        "mental_state",
+        "context_ids"
+      ],
+      "reference_repairs": [
+        "unique_prior_name_anchor_added"
+      ],
+      "original_context_ids": [],
+      "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+      "id": "E2",
+      "review_required": true,
+      "review_reasons": [
+        "actor_resolution_proposed_by_model",
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "actors": [
+        "雷"
+      ],
+      "event": "雷的左心脏中中毒",
+      "explicit": false,
+      "modality": "inferred",
+      "source_ids": [
+        "S3"
+      ],
+      "conditions": [
+        "雷喝下杯里的下水"
+      ],
+      "mental_state": null,
+      "context_ids": [
+        "S1"
+      ],
+      "sources": [
+        {
+          "id": "S3",
+          "text": "他的左心脏中，",
+          "start": 15,
+          "end": 22
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S1",
+          "text": "雷喝下杯里的水，",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "defaulted_fields": [
+        "mental_state",
+        "context_ids"
+      ],
+      "reference_repairs": [
+        "unique_prior_name_anchor_added"
+      ],
+      "original_context_ids": [],
+      "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+      "id": "E3",
+      "review_required": true,
+      "review_reasons": [
+        "inferred_content",
+        "actor_resolution_proposed_by_model",
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "actors": [
+        "亚巴顿"
+      ],
+      "event": "亚巴顿开始躁动",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S4"
+      ],
+      "mental_state": null,
+      "conditions": [],
+      "context_ids": [],
+      "sources": [
+        {
+          "id": "S4",
+          "text": "亚巴顿开始躁动。",
+          "start": 22,
+          "end": 30
+        }
+      ],
+      "contexts": [],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions",
+        "context_ids"
+      ],
+      "id": "E4",
+      "review_required": true,
+      "review_reasons": [
+        "optional_fields_defaulted"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "event_id": "E1",
+      "decision": "ignore",
+      "reason": "普通日常动作，无特殊后果或关联"
+    },
+    {
+      "event_id": "E2",
+      "decision": "keep",
+      "reason": "涉及关键认知变化，与中毒直接相关，影响后续情节"
+    },
+    {
+      "event_id": "E3",
+      "decision": "review",
+      "reason": "基于推理，但条件表述错误（'杯里的下水'应为'杯里的水'），因果关系不明确，无法确认"
+    },
+    {
+      "event_id": "E4",
+      "decision": "ignore",
+      "reason": "无明确关联或影响，亚巴顿躁动未与雷中毒建立因果或认知联系"
+    }
+  ],
+  "selected_events": [
+    {
+      "actors": [
+        "雷"
+      ],
+      "event": "雷中毒倒地",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S2"
+      ],
+      "conditions": [
+        "雷喝下杯里的水"
+      ],
+      "mental_state": null,
+      "context_ids": [
+        "S1"
+      ],
+      "sources": [
+        {
+          "id": "S2",
+          "text": "随即毒发倒地。",
+          "start": 8,
+          "end": 15
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S1",
+          "text": "雷喝下杯里的水，",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "defaulted_fields": [
+        "mental_state",
+        "context_ids"
+      ],
+      "reference_repairs": [
+        "unique_prior_name_anchor_added"
+      ],
+      "original_context_ids": [],
+      "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+      "id": "E2",
+      "review_required": true,
+      "review_reasons": [
+        "actor_resolution_proposed_by_model",
+        "optional_fields_defaulted"
+      ]
+    }
+  ],
+  "ignored_events": [
+    {
+      "actors": [
+        "雷"
+      ],
+      "event": "雷喝下杯里的水",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S1"
+      ],
+      "mental_state": null,
+      "conditions": [],
+      "context_ids": [],
+      "sources": [
+        {
+          "id": "S1",
+          "text": "雷喝下杯里的水，",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "contexts": [],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions",
+        "context_ids"
+      ],
+      "id": "E1",
+      "review_required": true,
+      "review_reasons": [
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "actors": [
+        "亚巴顿"
+      ],
+      "event": "亚巴顿开始躁动",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S4"
+      ],
+      "mental_state": null,
+      "conditions": [],
+      "context_ids": [],
+      "sources": [
+        {
+          "id": "S4",
+          "text": "亚巴顿开始躁动。",
+          "start": 22,
+          "end": 30
+        }
+      ],
+      "contexts": [],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions",
+        "context_ids"
+      ],
+      "id": "E4",
+      "review_required": true,
+      "review_reasons": [
+        "optional_fields_defaulted"
+      ]
+    }
+  ],
+  "pending_events": [
+    {
+      "actors": [
+        "雷"
+      ],
+      "event": "雷的左心脏中中毒",
+      "explicit": false,
+      "modality": "inferred",
+      "source_ids": [
+        "S3"
+      ],
+      "conditions": [
+        "雷喝下杯里的下水"
+      ],
+      "mental_state": null,
+      "context_ids": [
+        "S1"
+      ],
+      "sources": [
+        {
+          "id": "S3",
+          "text": "他的左心脏中，",
+          "start": 15,
+          "end": 22
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S1",
+          "text": "雷喝下杯里的水，",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "defaulted_fields": [
+        "mental_state",
+        "context_ids"
+      ],
+      "reference_repairs": [
+        "unique_prior_name_anchor_added"
+      ],
+      "original_context_ids": [],
+      "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+      "id": "E3",
+      "review_required": true,
+      "review_reasons": [
+        "inferred_content",
+        "actor_resolution_proposed_by_model",
+        "optional_fields_defaulted"
+      ]
+    }
+  ],
+  "understanding": {
+    "schema_version": "agent-pipeline-understanding-v1",
+    "prompt_version": "understanding-v4",
+    "stage": "understanding",
+    "status": "ok",
+    "text": "雷喝下杯里的水，随即毒发倒地。他的左心脏中，亚巴顿开始躁动。",
+    "events": [
+      {
+        "actors": [
+          "雷"
+        ],
+        "event": "雷喝下杯里的水",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S1"
+        ],
+        "mental_state": null,
+        "conditions": [],
+        "context_ids": [],
+        "sources": [
+          {
+            "id": "S1",
+            "text": "雷喝下杯里的水，",
+            "start": 0,
+            "end": 8
+          }
+        ],
+        "contexts": [],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions",
+          "context_ids"
+        ],
+        "id": "E1",
+        "review_required": true,
+        "review_reasons": [
+          "optional_fields_defaulted"
+        ]
+      },
+      {
+        "actors": [
+          "雷"
+        ],
+        "event": "雷中毒倒地",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S2"
+        ],
+        "conditions": [
+          "雷喝下杯里的水"
+        ],
+        "mental_state": null,
+        "context_ids": [
+          "S1"
+        ],
+        "sources": [
+          {
+            "id": "S2",
+            "text": "随即毒发倒地。",
+            "start": 8,
+            "end": 15
+          }
+        ],
+        "contexts": [
+          {
+            "id": "S1",
+            "text": "雷喝下杯里的水，",
+            "start": 0,
+            "end": 8
+          }
+        ],
+        "defaulted_fields": [
+          "mental_state",
+          "context_ids"
+        ],
+        "reference_repairs": [
+          "unique_prior_name_anchor_added"
+        ],
+        "original_context_ids": [],
+        "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+        "id": "E2",
+        "review_required": true,
+        "review_reasons": [
+          "actor_resolution_proposed_by_model",
+          "optional_fields_defaulted"
+        ]
+      },
+      {
+        "actors": [
+          "雷"
+        ],
+        "event": "雷的左心脏中中毒",
+        "explicit": false,
+        "modality": "inferred",
+        "source_ids": [
+          "S3"
+        ],
+        "conditions": [
+          "雷喝下杯里的下水"
+        ],
+        "mental_state": null,
+        "context_ids": [
+          "S1"
+        ],
+        "sources": [
+          {
+            "id": "S3",
+            "text": "他的左心脏中，",
+            "start": 15,
+            "end": 22
+          }
+        ],
+        "contexts": [
+          {
+            "id": "S1",
+            "text": "雷喝下杯里的水，",
+            "start": 0,
+            "end": 8
+          }
+        ],
+        "defaulted_fields": [
+          "mental_state",
+          "context_ids"
+        ],
+        "reference_repairs": [
+          "unique_prior_name_anchor_added"
+        ],
+        "original_context_ids": [],
+        "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+        "id": "E3",
+        "review_required": true,
+        "review_reasons": [
+          "inferred_content",
+          "actor_resolution_proposed_by_model",
+          "optional_fields_defaulted"
+        ]
+      },
+      {
+        "actors": [
+          "亚巴顿"
+        ],
+        "event": "亚巴顿开始躁动",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S4"
+        ],
+        "mental_state": null,
+        "conditions": [],
+        "context_ids": [],
+        "sources": [
+          {
+            "id": "S4",
+            "text": "亚巴顿开始躁动。",
+            "start": 22,
+            "end": 30
+          }
+        ],
+        "contexts": [],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions",
+          "context_ids"
+        ],
+        "id": "E4",
+        "review_required": true,
+        "review_reasons": [
+          "optional_fields_defaulted"
+        ]
+      }
+    ],
+    "rejected": [],
+    "calls": [
+      {
+        "status": "ok",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\"events\":[\n  {\n    \"actors\":[\"雷\"],\n    \"event\":\"雷喝下杯里的水\",\n    \"explicit\":true,\n    \"modality\":\"observed\",\n    \"source_ids\":[\"S1\"]\n  },\n  {\n    \"actors\":[\"雷\"],\n    \"event\":\"雷中毒倒地\",\n    \"explicit\":true,\n    \"modality\":\"observed\",\n    \"source_ids\":[\"S2\"],\n    \"conditions\":[\"雷喝下杯里的水\"]\n  },\n  {\n    \"actors\":[\"雷\"],\n    \"event\":\"雷的左心脏中中毒\",\n    \"explicit\":false,\n    \"modality\":\"inferred\",\n    \"source_ids\":[\"S3\"],\n    \"conditions\":[\"雷喝下杯里的下水\"]\n  },\n  {\n    \"actors\":[\"亚巴顿\"],\n    \"event\":\"亚巴顿开始躁动\",\n    \"explicit\":true,\n    \"modality\":\"observed\",\n    \"source_ids\":[\"S4\"]\n  }\n]}",
+            "input_tokens": 666,
+            "max_new_tokens": 1536,
+            "timing": {
+              "seconds": 13.716916100000162,
+              "input_tokens": 666,
+              "generated_tokens": 201,
+              "ttft_ms": 1225.7943000004161,
+              "decode_seconds": 12.490616900000532,
+              "decode_tokens": 200,
+              "decode_tokens_per_second": 16.012019390330632
+            }
+          }
+        ],
+        "window_id": 1,
+        "purpose": "initial_understanding",
+        "target_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "context_ids": []
+      }
+    ],
+    "duplicate_candidates": 0,
+    "unrecovered_failed_source_ids": [],
+    "processing_complete": true,
+    "semantic_verification": "not_verified",
+    "review_required": true,
+    "request_seconds": 13.743843899999774,
+    "model_loaded_this_request": false,
+    "coverage": {
+      "source_spans": {
+        "S1": {
+          "text": "雷喝下杯里的水，",
+          "start": 0,
+          "end": 8
+        },
+        "S2": {
+          "text": "随即毒发倒地。",
+          "start": 8,
+          "end": 15
+        },
+        "S3": {
+          "text": "他的左心脏中，",
+          "start": 15,
+          "end": 22
+        },
+        "S4": {
+          "text": "亚巴顿开始躁动。",
+          "start": 22,
+          "end": 30
+        }
+      },
+      "covered_source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "primary_source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "context_only_source_ids": [],
+      "missing_source_ids": [],
+      "note": "包括事件/条件/主体上下文引用；被引用不保证全部语义提取正确，仅作上下文的片段仍需检查是否漏事件"
+    },
+    "device": "cuda",
+    "model_load_seconds": 20.307591000000684,
+    "notice": "仅语义理解：未筛选重要性、未检索、未判断、未保存设定"
+  },
+  "upstream_status": "ok",
+  "calls": [
+    {
+      "status": "ok",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "ok",
+          "raw_output": "{\"decisions\":[{\"event_id\":\"E1\",\"decision\":\"ignore\",\"reason\":\"普通日常动作，无特殊后果或关联\"},{\"event_id\":\"E2\",\"decision\":\"keep\",\"reason\":\"涉及关键认知变化，与中毒直接相关，影响后续情节\"},{\"event_id\":\"E3\",\"decision\":\"review\",\"reason\":\"基于推理，但条件表述错误（'杯里的下水'应为'杯里的水'），因果关系不明确，无法确认\"},{\"event_id\":\"E4\",\"decision\":\"ignore\",\"reason\":\"无明确关联或影响，亚巴顿躁动未与雷中毒建立因果或认知联系\"}]}",
+          "input_tokens": 707,
+          "max_new_tokens": 1024,
+          "timing": {
+            "seconds": 8.441651600000114,
+            "input_tokens": 707,
+            "generated_tokens": 129,
+            "ttft_ms": 397.1273999995901,
+            "decode_seconds": 8.043966300001557,
+            "decode_tokens": 128,
+            "decode_tokens_per_second": 15.912548017509126
+          }
+        }
+      ],
+      "window_id": 1,
+      "target_ids": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ]
+    }
+  ],
+  "rejected": [],
+  "filtering_complete": false,
+  "processing_complete": false,
+  "semantic_verification": "not_verified",
+  "request_seconds": 8.447460800000044,
+  "model_loaded_this_request": true,
+  "device": "cuda",
+  "model_load_seconds": 20.307591000000684,
+  "notice": "仅筛选建议；事件原样保留，待复核不等于忽略；未检索、未判断矛盾、未保存设定。"
+}

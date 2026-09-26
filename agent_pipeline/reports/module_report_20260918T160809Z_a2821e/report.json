@@ -1,0 +1,142 @@
+{
+  "kind": "offline_presentation_observations_not_accuracy_benchmark",
+  "sources_sha256": {
+    "report.py": "1e80b42c0e67e19c468d351f837d6bbc8a8508d4589023dcbf2d56e6b5eabeaa",
+    "__main__.py": "b26fc4414fb5694ceef74ab404d1bbb3cf1dbff16e6bedc86106e55025140da0",
+    "report.schema.json": "c090afa48b6f98e26dd67e6217ca677ae9b3e654f2ffc790d8ce5454987f39c6",
+    "evaluation/check_report.py": "7408ad261b0382e6d6e866d93d85e0d0d22f94461d3893c1a6e5e9793cba08c0",
+    "filtering.py": "3f922a8b441648b8b1e757b6dccb461974c1525aecb49db8504fb8cd4e1594b4",
+    "prompts/filtering_v6.txt": "d37a1ed6a80031abffc44b3dd7e14fc21ed6ab63f827156c3d3c84d3a615a907",
+    "judge.py": "fde3caa267b95cac3df0e4f03dddb2af0624767055b16f8bac463c047935888b",
+    "prompts/judge_v6.txt": "5bfc3ea04e32086f078e88352cf36b68bec271f5a07d540420710cafcef18551"
+  },
+  "cases": [
+    {
+      "id": "R01_full_pipeline",
+      "status": "ok",
+      "summary": {
+        "verdict": "contradiction",
+        "label": "已核对事实中发现明确矛盾",
+        "scope": "checked_events",
+        "counts": {
+          "consistent": 0,
+          "contradiction": 1,
+          "uncertain": 0,
+          "failed": 0,
+          "pending": 0,
+          "ignored": 0,
+          "support_only": 1,
+          "unprocessed": 0
+        },
+        "checked_event_count": 1,
+        "finding_count": 1
+      }
+    },
+    {
+      "id": "R02_right_host",
+      "status": "ok",
+      "summary": {
+        "verdict": "contradiction",
+        "label": "已核对事实中发现明确矛盾",
+        "scope": "checked_events",
+        "counts": {
+          "consistent": 0,
+          "contradiction": 1,
+          "uncertain": 0,
+          "failed": 0,
+          "pending": 0,
+          "ignored": 0,
+          "support_only": 1,
+          "unprocessed": 0
+        },
+        "checked_event_count": 1,
+        "finding_count": 1
+      }
+    },
+    {
+      "id": "R03_mooncity",
+      "status": "ok",
+      "summary": {
+        "verdict": "uncertain",
+        "label": "尚不能对已核对事实给出完整明确结论",
+        "scope": "checked_events",
+        "counts": {
+          "consistent": 0,
+          "contradiction": 0,
+          "uncertain": 5,
+          "failed": 0,
+          "pending": 0,
+          "ignored": 0,
+          "support_only": 0,
+          "unprocessed": 0
+        },
+        "checked_event_count": 5,
+        "finding_count": 5
+      }
+    },
+    {
+      "id": "R04_partial_upstream",
+      "status": "partial",
+      "summary": {
+        "verdict": "uncertain",
+        "label": "尚不能对已核对事实给出完整明确结论",
+        "scope": "checked_events",
+        "counts": {
+          "consistent": 0,
+          "contradiction": 0,
+          "uncertain": 1,
+          "failed": 0,
+          "pending": 0,
+          "ignored": 0,
+          "support_only": 0,
+          "unprocessed": 0
+        },
+        "checked_event_count": 1,
+        "finding_count": 1
+      }
+    },
+    {
+      "id": "R05_feedback_mooncity",
+      "status": "ok",
+      "summary": {
+        "verdict": "uncertain",
+        "label": "尚不能对已核对事实给出完整明确结论",
+        "scope": "checked_events",
+        "counts": {
+          "consistent": 0,
+          "contradiction": 0,
+          "uncertain": 3,
+          "failed": 0,
+          "pending": 0,
+          "ignored": 0,
+          "support_only": 2,
+          "unprocessed": 0
+        },
+        "checked_event_count": 3,
+        "finding_count": 3
+      }
+    },
+    {
+      "id": "R06_feedback_right",
+      "status": "ok",
+      "summary": {
+        "verdict": "contradiction",
+        "label": "已核对事实中发现明确矛盾",
+        "scope": "checked_events",
+        "counts": {
+          "consistent": 0,
+          "contradiction": 1,
+          "uncertain": 0,
+          "failed": 0,
+          "pending": 0,
+          "ignored": 0,
+          "support_only": 1,
+          "unprocessed": 0
+        },
+        "checked_event_count": 1,
+        "finding_count": 1
+      }
+    }
+  ],
+  "snapshot_stable": true
+}

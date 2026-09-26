@@ -1,0 +1,2856 @@
+{
+  "schema_version": "agent-pipeline-v2-story-dataset-v2",
+  "name": "Story-Level Consistency Benchmark",
+  "version": "v2-draft-24",
+  "status": "annotation_draft_not_final_benchmark",
+  "notice": "测试故事和测试设定，不代表正式canon；24篇均为助手草案，尚未完成用户语义审核。",
+  "corpus_snapshot": {
+    "files_sha256": {
+      "angels.md": "3a74db800a715d8b392db37ccc38026b0e71219fffa684d8e2d429314ef9b7e2",
+      "characters.md": "e5741e3a36fe3ef0a286a7c2f1f85089b9908cc99869563dd5d040348d40d3e8",
+      "history.md": "4f0105823cc8d513a4d32cfc094736458db594351000de074acd313cee06d601",
+      "technology.md": "b88690cae568b05032d2c078646bfea50ff304a291b7fbadf0af17eeb4c6cfae"
+    },
+    "index_version": "0de59066f81246b3b8c7445eddbe877e",
+    "chunk_count": 48
+  },
+  "cases": [
+    {
+      "id": "SL-P01",
+      "title": "日常动作",
+      "group": "zero_conflict",
+      "dimensions": [],
+      "story": "雷从椅子上站起来，把桌边的水杯拿到面前。他喝了两口水，又把杯子放回原处。窗帘被风吹得轻轻晃动，阳光在桌面上留下一条窄窄的亮边。他伸了个懒腰，走到窗旁，随手将帘子拉开一点。窗外没有什么特别的动静，他看了一会儿，便回到椅子边坐下。\n他从碟子里拿起一块普通饼干，慢慢吃完，然后用纸巾擦掉桌上的碎屑。杯里的水还剩一些，他没有继续喝，只将杯子挪到不容易碰倒的位置。随后，他整理了一下衣袖，低头看了看鞋带，俯身把松开的那一端重新系紧。做完这些，他靠着椅背歇了一会儿，听着窗帘摩擦窗框的轻响。",
+      "character_count": 239,
+      "gold_facts": [],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他喝了两口水，",
+            "start": 20,
+            "end": 27
+          },
+          "normalized_proposition": "他喝了两口水，",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-P02",
+      "title": "双心脏与正确宿主",
+      "group": "zero_conflict",
+      "dimensions": [
+        "physical_rule"
+      ],
+      "story": "雷独自坐在桌边，手指沿着杯沿慢慢转了一圈。他有两颗心脏。雷的左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。阳光落在他的衣袖上，他将袖口折好，端起水杯喝了一口。屋里很安静，窗外偶尔传来树叶摩擦的声音。他没有开口，只把杯子放回原处，伸手将桌面上的纸巾叠成一个小方块。\n他站起来，在窗边停了一会儿，又走回椅子旁。鞋带有些松，他弯下腰，将两端整理到差不多的长度。桌上的碟子还摆在原位，他拿起一块普通饼干，慢慢吃完，再擦去指尖的碎屑。风从窗缝里吹进来，他随手掩上窗户，坐回原来的位置。",
+      "character_count": 235,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷",
+          "predicate": "拥有",
+          "object": "两颗心脏",
+          "normalized_fact": "雷拥有两颗心脏",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "他有两颗心脏。",
+              "start": 21,
+              "end": 28
+            }
+          ],
+          "context_anchors": [
+            {
+              "text": "雷独自坐在桌边，",
+              "start": 0,
+              "end": 8
+            }
+          ],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "099d1bbdbc348eb3c332"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "099d1bbdbc348eb3c332"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G2",
+          "subject": "雷",
+          "predicate": "左侧心脏寄宿",
+          "object": "亚巴顿",
+          "normalized_fact": "雷左侧心脏寄宿亚巴顿",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "雷的左侧心脏寄宿亚巴顿，",
+              "start": 28,
+              "end": 40
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "099d1bbdbc348eb3c332"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "099d1bbdbc348eb3c332"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G3",
+          "subject": "雷",
+          "predicate": "右侧心脏寄宿",
+          "object": "拉古艾尔",
+          "normalized_fact": "雷右侧心脏寄宿拉古艾尔",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "右侧心脏寄宿拉古艾尔。",
+              "start": 40,
+              "end": 51
+            }
+          ],
+          "context_anchors": [
+            {
+              "text": "雷的左侧心脏寄宿亚巴顿，",
+              "start": 28,
+              "end": 40
+            }
+          ],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "099d1bbdbc348eb3c332"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "099d1bbdbc348eb3c332"
+            ]
+          ],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "端起水杯喝了一口。",
+            "start": 68,
+            "end": 77
+          },
+          "normalized_proposition": "端起水杯喝了一口。",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-P03",
+      "title": "宿主左右位置冲突",
+      "group": "one_conflict",
+      "dimensions": [
+        "physical_rule"
+      ],
+      "story": "雷站在桌旁，将刚脱下的外套搭在椅背上。亚巴顿寄宿在雷的右侧心脏。他低头整理了一下衣领，走到窗边，伸手将松开的窗扣扣好。玻璃上有一点灰，他用纸巾轻轻擦过，又把纸巾折起，放到桌角。窗外的风吹动树叶，他停下手，看了一会儿，随后回到椅子旁坐下。\n杯子摆在离他不远的地方，他端起来喝了两口，又放回碟子旁。他将外套的一只袖子从椅背上拉下来，理顺后重新搭好。屋里的光慢慢移到桌角，他把椅子挪了一点，让脚边留出位置。随后，他重新系了鞋带，拍掉裤脚上沾着的灰，靠着椅背休息，没有再做别的事。",
+      "character_count": 236,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "亚巴顿",
+          "predicate": "寄宿",
+          "object": "雷的右侧心脏",
+          "normalized_fact": "亚巴顿寄宿雷的右侧心脏",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "亚巴顿寄宿在雷的右侧心脏。",
+              "start": 19,
+              "end": 32
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "47ba19b8b9ece1f35cc9",
+            "099d1bbdbc348eb3c332"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "47ba19b8b9ece1f35cc9"
+            ],
+            [
+              "099d1bbdbc348eb3c332"
+            ]
+          ],
+          "reportable": true
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他低头整理了一下衣领，",
+            "start": 32,
+            "end": 43
+          },
+          "normalized_proposition": "他低头整理了一下衣领，",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F1",
+          "gold_fact_ids": [
+            "G1"
+          ],
+          "expected_type": "conflict",
+          "dimension": "physical_rule",
+          "minimum_evidence_sets": [
+            [
+              "47ba19b8b9ece1f35cc9"
+            ],
+            [
+              "099d1bbdbc348eb3c332"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-P04",
+      "title": "新增时间能力证据不足",
+      "group": "zero_conflict",
+      "dimensions": [
+        "physical_rule"
+      ],
+      "story": "雷坐在大厅的椅子上，用手指将衣袖上的褶皱抚平。雷拥有让大厅里的时间暂停的能力。窗外的阳光照到椅背上，他挪了挪身体，换了一个舒服些的姿势。旁边放着一杯普通的水，他端起来喝了一口，随后将杯子放回桌面。桌角有几粒饼干碎屑，他抽出纸巾，慢慢擦干净。\n他起身走到窗前，把偏到一旁的窗帘拉直。帘子的一角碰到手背，他随手拨开，低头看了看窗台。过了一会儿，他重新回到椅子边，把鞋带打好的结理顺，再将两只脚放在椅子下面。他从碟子里拿了一块普通饼干，吃完后擦了擦嘴，又将纸巾折起，放在空碟子旁边。",
+      "character_count": 238,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷",
+          "predicate": "拥有",
+          "object": "让大厅里的时间暂停的能力",
+          "normalized_fact": "雷拥有让大厅里的时间暂停的能力",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "雷拥有让大厅里的时间暂停的能力。",
+              "start": 23,
+              "end": 39
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他端起来喝了一口，",
+            "start": 79,
+            "end": 88
+          },
+          "normalized_proposition": "他端起来喝了一口，",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-005",
+      "title": "新增无冲突样例1",
+      "group": "zero_conflict",
+      "dimensions": [
+        "physical_rule"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷拥有两颗心脏。月城可以让机械左臂变成液体。拉古艾尔寄宿在雷的右侧心脏里。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 213,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷",
+          "predicate": "拥有",
+          "object": "两颗心脏",
+          "normalized_fact": "雷拥有两颗心脏",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "雷拥有两颗心脏。",
+              "start": 39,
+              "end": 47
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "596ac1b6800114e8e9ed"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "596ac1b6800114e8e9ed"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G2",
+          "subject": "月城",
+          "predicate": "拥有",
+          "object": "液态机械臂能力",
+          "normalized_fact": "月城拥有液态机械臂能力",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "月城可以让机械左臂变成液体。",
+              "start": 47,
+              "end": 61
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        },
+        {
+          "id": "G3",
+          "subject": "拉古艾尔",
+          "predicate": "寄宿",
+          "object": "雷的右侧心脏",
+          "normalized_fact": "拉古艾尔寄宿雷的右侧心脏",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "拉古艾尔寄宿在雷的右侧心脏里。",
+              "start": 61,
+              "end": 76
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "252bda4cc47b93db0d7b"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "252bda4cc47b93db0d7b"
+            ]
+          ],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 76,
+            "end": 87
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-006",
+      "title": "新增无冲突样例2",
+      "group": "zero_conflict",
+      "dimensions": [
+        "character_knowledge",
+        "physical_rule",
+        "time"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。拉古艾尔寄宿在雷的右侧心脏里。莉娅知道亚巴顿的完整计划。月城在2064年完成机械左臂安装。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 212,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "拉古艾尔",
+          "predicate": "寄宿",
+          "object": "雷的右侧心脏",
+          "normalized_fact": "拉古艾尔寄宿雷的右侧心脏",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "拉古艾尔寄宿在雷的右侧心脏里。",
+              "start": 39,
+              "end": 54
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "252bda4cc47b93db0d7b"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "252bda4cc47b93db0d7b"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G2",
+          "subject": "莉娅",
+          "predicate": "知道",
+          "object": "亚巴顿计划",
+          "normalized_fact": "莉娅知道亚巴顿计划",
+          "type": "world_event",
+          "dimension": "character_knowledge",
+          "source_anchors": [
+            {
+              "text": "莉娅知道亚巴顿的完整计划。",
+              "start": 54,
+              "end": 67
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        },
+        {
+          "id": "G3",
+          "subject": "月城",
+          "predicate": "安装时间",
+          "object": "2064年",
+          "normalized_fact": "月城安装时间2064年",
+          "type": "world_event",
+          "dimension": "time",
+          "source_anchors": [
+            {
+              "text": "月城在2064年完成机械左臂安装。",
+              "start": 67,
+              "end": 84
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "fd1bec15cd989aa6cacf"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "fd1bec15cd989aa6cacf"
+            ]
+          ],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 84,
+            "end": 95
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-007",
+      "title": "新增无冲突样例3",
+      "group": "zero_conflict",
+      "dimensions": [
+        "character_relation",
+        "space",
+        "world_rule"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷在地下隧道遇见了守望者。旧教堂封印可以由一个人独自打开。雷与德尔塔在第二话第一次当面交谈。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 213,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷",
+          "predicate": "遇见",
+          "object": "地下隧道守望者",
+          "normalized_fact": "雷遇见地下隧道守望者",
+          "type": "world_event",
+          "dimension": "space",
+          "source_anchors": [
+            {
+              "text": "雷在地下隧道遇见了守望者。",
+              "start": 39,
+              "end": 52
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        },
+        {
+          "id": "G2",
+          "subject": "单个宿主",
+          "predicate": "打开",
+          "object": "旧教堂封印",
+          "normalized_fact": "单个宿主打开旧教堂封印",
+          "type": "world_event",
+          "dimension": "world_rule",
+          "source_anchors": [
+            {
+              "text": "旧教堂封印可以由一个人独自打开。",
+              "start": 52,
+              "end": 68
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        },
+        {
+          "id": "G3",
+          "subject": "雷",
+          "predicate": "首次见面",
+          "object": "德尔塔第二话",
+          "normalized_fact": "雷首次见面德尔塔第二话",
+          "type": "character_attribute",
+          "dimension": "character_relation",
+          "source_anchors": [
+            {
+              "text": "雷与德尔塔在第二话第一次当面交谈。",
+              "start": 68,
+              "end": 85
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "d11b313d4fe3fee7d599"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "d11b313d4fe3fee7d599"
+            ]
+          ],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 85,
+            "end": 96
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-008",
+      "title": "新增无冲突样例4",
+      "group": "zero_conflict",
+      "dimensions": [
+        "causality",
+        "character_knowledge",
+        "character_relation"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。亚巴顿的力量让雷获得永久不死之身。雷和德尔塔在第一话已经正式见面。雷在第三话向德尔塔说明双心脏秘密。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 208,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "亚巴顿",
+          "predicate": "赋予",
+          "object": "永久不死",
+          "normalized_fact": "亚巴顿赋予永久不死",
+          "type": "world_event",
+          "dimension": "causality",
+          "source_anchors": [
+            {
+              "text": "亚巴顿的力量让雷获得永久不死之身。",
+              "start": 39,
+              "end": 56
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        },
+        {
+          "id": "G2",
+          "subject": "雷",
+          "predicate": "见面",
+          "object": "第一话德尔塔",
+          "normalized_fact": "雷见面第一话德尔塔",
+          "type": "character_attribute",
+          "dimension": "character_relation",
+          "source_anchors": [
+            {
+              "text": "雷和德尔塔在第一话已经正式见面。",
+              "start": 56,
+              "end": 72
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        },
+        {
+          "id": "G3",
+          "subject": "雷",
+          "predicate": "告知身份",
+          "object": "德尔塔知道双宿主身份",
+          "normalized_fact": "雷告知身份德尔塔知道双宿主身份",
+          "type": "world_event",
+          "dimension": "character_knowledge",
+          "source_anchors": [
+            {
+              "text": "雷在第三话向德尔塔说明双心脏秘密。",
+              "start": 72,
+              "end": 89
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "0ad0e47151069e9d8676"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "0ad0e47151069e9d8676"
+            ]
+          ],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 89,
+            "end": 100
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-009",
+      "title": "新增无冲突样例5",
+      "group": "zero_conflict",
+      "dimensions": [
+        "physical_rule",
+        "time"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城在地震前已经使用机械左臂。监察官恢复了爆炸前的视力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 213,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "月城",
+          "predicate": "使用",
+          "object": "地震前机械左臂",
+          "normalized_fact": "月城使用地震前机械左臂",
+          "type": "world_event",
+          "dimension": "time",
+          "source_anchors": [
+            {
+              "text": "月城在地震前已经使用机械左臂。",
+              "start": 39,
+              "end": 54
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        },
+        {
+          "id": "G2",
+          "subject": "监察官",
+          "predicate": "恢复",
+          "object": "视力",
+          "normalized_fact": "监察官恢复视力",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "监察官恢复了爆炸前的视力。",
+              "start": 54,
+              "end": 67
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 67,
+            "end": 78
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-010",
+      "title": "单冲突样例1",
+      "group": "one_conflict",
+      "dimensions": [
+        "character_knowledge",
+        "identity",
+        "time"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城在2064年完成机械左臂安装。公众知道德尔塔的真实姓名。莉娅知道亚巴顿的完整计划。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 210,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "月城",
+          "predicate": "安装时间",
+          "object": "2064年",
+          "normalized_fact": "月城安装时间2064年",
+          "type": "world_event",
+          "dimension": "time",
+          "source_anchors": [
+            {
+              "text": "月城在2064年完成机械左臂安装。",
+              "start": 39,
+              "end": 56
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "fd1bec15cd989aa6cacf"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "fd1bec15cd989aa6cacf"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G2",
+          "subject": "公众",
+          "predicate": "知道",
+          "object": "德尔塔的真实姓名",
+          "normalized_fact": "公众知道德尔塔的真实姓名",
+          "type": "character_attribute",
+          "dimension": "identity",
+          "source_anchors": [
+            {
+              "text": "公众知道德尔塔的真实姓名。",
+              "start": 56,
+              "end": 69
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "3a56aa33f1ea6dd2186e"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "3a56aa33f1ea6dd2186e"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "莉娅",
+          "predicate": "知道",
+          "object": "亚巴顿计划",
+          "normalized_fact": "莉娅知道亚巴顿计划",
+          "type": "world_event",
+          "dimension": "character_knowledge",
+          "source_anchors": [
+            {
+              "text": "莉娅知道亚巴顿的完整计划。",
+              "start": 69,
+              "end": 82
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 82,
+            "end": 93
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "identity",
+          "minimum_evidence_sets": [
+            [
+              "3a56aa33f1ea6dd2186e"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-011",
+      "title": "单冲突样例2",
+      "group": "one_conflict",
+      "dimensions": [
+        "character_relation",
+        "space",
+        "time"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷与德尔塔在第二话第一次当面交谈。月城在2063年已经安装机械左臂。雷在地下隧道遇见了守望者。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 205,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷",
+          "predicate": "首次见面",
+          "object": "德尔塔第二话",
+          "normalized_fact": "雷首次见面德尔塔第二话",
+          "type": "character_attribute",
+          "dimension": "character_relation",
+          "source_anchors": [
+            {
+              "text": "雷与德尔塔在第二话第一次当面交谈。",
+              "start": 39,
+              "end": 56
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "d11b313d4fe3fee7d599"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "d11b313d4fe3fee7d599"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G2",
+          "subject": "月城",
+          "predicate": "安装时间",
+          "object": "2063年",
+          "normalized_fact": "月城安装时间2063年",
+          "type": "world_event",
+          "dimension": "time",
+          "source_anchors": [
+            {
+              "text": "月城在2063年已经安装机械左臂。",
+              "start": 56,
+              "end": 73
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "fd1bec15cd989aa6cacf"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "fd1bec15cd989aa6cacf"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "雷",
+          "predicate": "遇见",
+          "object": "地下隧道守望者",
+          "normalized_fact": "雷遇见地下隧道守望者",
+          "type": "world_event",
+          "dimension": "space",
+          "source_anchors": [
+            {
+              "text": "雷在地下隧道遇见了守望者。",
+              "start": 73,
+              "end": 86
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 86,
+            "end": 97
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "time",
+          "minimum_evidence_sets": [
+            [
+              "fd1bec15cd989aa6cacf"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-012",
+      "title": "单冲突样例3",
+      "group": "one_conflict",
+      "dimensions": [
+        "character_knowledge",
+        "world_rule"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷在第三话向德尔塔说明双心脏秘密。雷的父亲知道拉古艾尔寄宿在雷体内。旧教堂封印可以由一个人独自打开。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 208,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷",
+          "predicate": "告知身份",
+          "object": "德尔塔知道双宿主身份",
+          "normalized_fact": "雷告知身份德尔塔知道双宿主身份",
+          "type": "world_event",
+          "dimension": "character_knowledge",
+          "source_anchors": [
+            {
+              "text": "雷在第三话向德尔塔说明双心脏秘密。",
+              "start": 39,
+              "end": 56
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "0ad0e47151069e9d8676"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "0ad0e47151069e9d8676"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G2",
+          "subject": "雷的父亲",
+          "predicate": "知道",
+          "object": "拉古艾尔寄宿",
+          "normalized_fact": "雷的父亲知道拉古艾尔寄宿",
+          "type": "world_event",
+          "dimension": "character_knowledge",
+          "source_anchors": [
+            {
+              "text": "雷的父亲知道拉古艾尔寄宿在雷体内。",
+              "start": 56,
+              "end": 73
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "46422ea243d878bfdce9"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "46422ea243d878bfdce9"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "单个宿主",
+          "predicate": "打开",
+          "object": "旧教堂封印",
+          "normalized_fact": "单个宿主打开旧教堂封印",
+          "type": "world_event",
+          "dimension": "world_rule",
+          "source_anchors": [
+            {
+              "text": "旧教堂封印可以由一个人独自打开。",
+              "start": 73,
+              "end": 89
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 89,
+            "end": 100
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "character_knowledge",
+          "minimum_evidence_sets": [
+            [
+              "46422ea243d878bfdce9"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-013",
+      "title": "单冲突样例4",
+      "group": "one_conflict",
+      "dimensions": [
+        "causality",
+        "space",
+        "time"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷的父亲在第五话乘列车离开城区。月城的右臂是机械臂。亚巴顿的力量让雷获得永久不死之身。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 210,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷的父亲",
+          "predicate": "离开",
+          "object": "第五话北方研究站",
+          "normalized_fact": "雷的父亲离开第五话北方研究站",
+          "type": "world_event",
+          "dimension": "time",
+          "source_anchors": [
+            {
+              "text": "雷的父亲在第五话乘列车离开城区。",
+              "start": 39,
+              "end": 55
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "d312452d0673bf259c82"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "d312452d0673bf259c82"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G2",
+          "subject": "月城",
+          "predicate": "拥有",
+          "object": "机械右臂",
+          "normalized_fact": "月城拥有机械右臂",
+          "type": "world_event",
+          "dimension": "space",
+          "source_anchors": [
+            {
+              "text": "月城的右臂是机械臂。",
+              "start": 55,
+              "end": 65
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "d7f7dd2035b813e0a886"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "d7f7dd2035b813e0a886"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "亚巴顿",
+          "predicate": "赋予",
+          "object": "永久不死",
+          "normalized_fact": "亚巴顿赋予永久不死",
+          "type": "world_event",
+          "dimension": "causality",
+          "source_anchors": [
+            {
+              "text": "亚巴顿的力量让雷获得永久不死之身。",
+              "start": 65,
+              "end": 82
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 82,
+            "end": 93
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "space",
+          "minimum_evidence_sets": [
+            [
+              "d7f7dd2035b813e0a886"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-014",
+      "title": "单冲突样例5",
+      "group": "one_conflict",
+      "dimensions": [
+        "character_relation",
+        "space",
+        "world_rule"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷与德尔塔在第六话躲进旧教堂。雷能让已经死亡的人复活。雷和德尔塔在第一话已经正式见面。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 210,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷",
+          "predicate": "躲进",
+          "object": "旧教堂",
+          "normalized_fact": "雷躲进旧教堂",
+          "type": "world_event",
+          "dimension": "space",
+          "source_anchors": [
+            {
+              "text": "雷与德尔塔在第六话躲进旧教堂。",
+              "start": 39,
+              "end": 54
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "806c7429338e0ae14bce"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "806c7429338e0ae14bce"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G2",
+          "subject": "雷",
+          "predicate": "拥有",
+          "object": "复活能力",
+          "normalized_fact": "雷拥有复活能力",
+          "type": "world_event",
+          "dimension": "world_rule",
+          "source_anchors": [
+            {
+              "text": "雷能让已经死亡的人复活。",
+              "start": 54,
+              "end": 66
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "3b7f472d534c811d4c3f"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "3b7f472d534c811d4c3f"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "雷",
+          "predicate": "见面",
+          "object": "第一话德尔塔",
+          "normalized_fact": "雷见面第一话德尔塔",
+          "type": "character_attribute",
+          "dimension": "character_relation",
+          "source_anchors": [
+            {
+              "text": "雷和德尔塔在第一话已经正式见面。",
+              "start": 66,
+              "end": 82
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 82,
+            "end": 93
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "world_rule",
+          "minimum_evidence_sets": [
+            [
+              "3b7f472d534c811d4c3f"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-015",
+      "title": "单冲突样例6",
+      "group": "one_conflict",
+      "dimensions": [
+        "causality",
+        "time"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。档案馆在2065年开放地震救援档案。雷借用亚巴顿力量后记忆不会受影响。月城在地震前已经使用机械左臂。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 208,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "档案馆",
+          "predicate": "开放",
+          "object": "2065年救援档案",
+          "normalized_fact": "档案馆开放2065年救援档案",
+          "type": "world_event",
+          "dimension": "time",
+          "source_anchors": [
+            {
+              "text": "档案馆在2065年开放地震救援档案。",
+              "start": 39,
+              "end": 57
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "2d8cb5017830f3a8881e"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "2d8cb5017830f3a8881e"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G2",
+          "subject": "雷",
+          "predicate": "借用后",
+          "object": "记忆不变",
+          "normalized_fact": "雷借用后记忆不变",
+          "type": "world_event",
+          "dimension": "causality",
+          "source_anchors": [
+            {
+              "text": "雷借用亚巴顿力量后记忆不会受影响。",
+              "start": 57,
+              "end": 74
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "df1f51265ef5555994be"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "df1f51265ef5555994be"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "月城",
+          "predicate": "使用",
+          "object": "地震前机械左臂",
+          "normalized_fact": "月城使用地震前机械左臂",
+          "type": "world_event",
+          "dimension": "time",
+          "source_anchors": [
+            {
+              "text": "月城在地震前已经使用机械左臂。",
+              "start": 74,
+              "end": 89
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 89,
+            "end": 100
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "causality",
+          "minimum_evidence_sets": [
+            [
+              "df1f51265ef5555994be"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-016",
+      "title": "单冲突样例7",
+      "group": "one_conflict",
+      "dimensions": [
+        "character_relation",
+        "physical_rule"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷拥有两颗心脏。雷和德尔塔在第一话已经当面交谈。监察官恢复了爆炸前的视力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 213,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷",
+          "predicate": "拥有",
+          "object": "两颗心脏",
+          "normalized_fact": "雷拥有两颗心脏",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "雷拥有两颗心脏。",
+              "start": 39,
+              "end": 47
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "596ac1b6800114e8e9ed"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "596ac1b6800114e8e9ed"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G2",
+          "subject": "雷",
+          "predicate": "当面交谈",
+          "object": "第一话",
+          "normalized_fact": "雷当面交谈第一话",
+          "type": "character_attribute",
+          "dimension": "character_relation",
+          "source_anchors": [
+            {
+              "text": "雷和德尔塔在第一话已经当面交谈。",
+              "start": 47,
+              "end": 63
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "d11b313d4fe3fee7d599"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "d11b313d4fe3fee7d599"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "监察官",
+          "predicate": "恢复",
+          "object": "视力",
+          "normalized_fact": "监察官恢复视力",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "监察官恢复了爆炸前的视力。",
+              "start": 63,
+              "end": 76
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 76,
+            "end": 87
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "character_relation",
+          "minimum_evidence_sets": [
+            [
+              "d11b313d4fe3fee7d599"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-017",
+      "title": "多冲突样例1",
+      "group": "multi_conflict",
+      "dimensions": [
+        "character_knowledge",
+        "identity",
+        "time",
+        "world_rule"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。公众知道德尔塔的真实姓名。月城在2063年已经安装机械左臂。雷在第三话向德尔塔说明双心脏秘密。旧教堂封印可以由一个人独自打开。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 212,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "公众",
+          "predicate": "知道",
+          "object": "德尔塔的真实姓名",
+          "normalized_fact": "公众知道德尔塔的真实姓名",
+          "type": "character_attribute",
+          "dimension": "identity",
+          "source_anchors": [
+            {
+              "text": "公众知道德尔塔的真实姓名。",
+              "start": 39,
+              "end": 52
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "3a56aa33f1ea6dd2186e"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "3a56aa33f1ea6dd2186e"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G2",
+          "subject": "月城",
+          "predicate": "安装时间",
+          "object": "2063年",
+          "normalized_fact": "月城安装时间2063年",
+          "type": "world_event",
+          "dimension": "time",
+          "source_anchors": [
+            {
+              "text": "月城在2063年已经安装机械左臂。",
+              "start": 52,
+              "end": 69
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "fd1bec15cd989aa6cacf"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "fd1bec15cd989aa6cacf"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "雷",
+          "predicate": "告知身份",
+          "object": "德尔塔知道双宿主身份",
+          "normalized_fact": "雷告知身份德尔塔知道双宿主身份",
+          "type": "world_event",
+          "dimension": "character_knowledge",
+          "source_anchors": [
+            {
+              "text": "雷在第三话向德尔塔说明双心脏秘密。",
+              "start": 69,
+              "end": 86
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "0ad0e47151069e9d8676"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "0ad0e47151069e9d8676"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G4",
+          "subject": "单个宿主",
+          "predicate": "打开",
+          "object": "旧教堂封印",
+          "normalized_fact": "单个宿主打开旧教堂封印",
+          "type": "world_event",
+          "dimension": "world_rule",
+          "source_anchors": [
+            {
+              "text": "旧教堂封印可以由一个人独自打开。",
+              "start": 86,
+              "end": 102
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 102,
+            "end": 113
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F1",
+          "gold_fact_ids": [
+            "G1"
+          ],
+          "expected_type": "conflict",
+          "dimension": "identity",
+          "minimum_evidence_sets": [
+            [
+              "3a56aa33f1ea6dd2186e"
+            ]
+          ],
+          "merge": false
+        },
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "time",
+          "minimum_evidence_sets": [
+            [
+              "fd1bec15cd989aa6cacf"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-018",
+      "title": "多冲突样例2",
+      "group": "multi_conflict",
+      "dimensions": [
+        "causality",
+        "character_knowledge",
+        "space",
+        "time"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷的父亲知道拉古艾尔寄宿在雷体内。月城的右臂是机械臂。雷的父亲在第五话乘列车离开城区。亚巴顿的力量让雷获得永久不死之身。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 209,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷的父亲",
+          "predicate": "知道",
+          "object": "拉古艾尔寄宿",
+          "normalized_fact": "雷的父亲知道拉古艾尔寄宿",
+          "type": "world_event",
+          "dimension": "character_knowledge",
+          "source_anchors": [
+            {
+              "text": "雷的父亲知道拉古艾尔寄宿在雷体内。",
+              "start": 39,
+              "end": 56
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "46422ea243d878bfdce9"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "46422ea243d878bfdce9"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G2",
+          "subject": "月城",
+          "predicate": "拥有",
+          "object": "机械右臂",
+          "normalized_fact": "月城拥有机械右臂",
+          "type": "world_event",
+          "dimension": "space",
+          "source_anchors": [
+            {
+              "text": "月城的右臂是机械臂。",
+              "start": 56,
+              "end": 66
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "d7f7dd2035b813e0a886"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "d7f7dd2035b813e0a886"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "雷的父亲",
+          "predicate": "离开",
+          "object": "第五话北方研究站",
+          "normalized_fact": "雷的父亲离开第五话北方研究站",
+          "type": "world_event",
+          "dimension": "time",
+          "source_anchors": [
+            {
+              "text": "雷的父亲在第五话乘列车离开城区。",
+              "start": 66,
+              "end": 82
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "d312452d0673bf259c82"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "d312452d0673bf259c82"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G4",
+          "subject": "亚巴顿",
+          "predicate": "赋予",
+          "object": "永久不死",
+          "normalized_fact": "亚巴顿赋予永久不死",
+          "type": "world_event",
+          "dimension": "causality",
+          "source_anchors": [
+            {
+              "text": "亚巴顿的力量让雷获得永久不死之身。",
+              "start": 82,
+              "end": 99
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 99,
+            "end": 110
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F1",
+          "gold_fact_ids": [
+            "G1"
+          ],
+          "expected_type": "conflict",
+          "dimension": "character_knowledge",
+          "minimum_evidence_sets": [
+            [
+              "46422ea243d878bfdce9"
+            ]
+          ],
+          "merge": false
+        },
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "space",
+          "minimum_evidence_sets": [
+            [
+              "d7f7dd2035b813e0a886"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-019",
+      "title": "多冲突样例3",
+      "group": "multi_conflict",
+      "dimensions": [
+        "causality",
+        "character_relation",
+        "space",
+        "world_rule"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷能让已经死亡的人复活。雷借用亚巴顿力量后记忆不会受影响。雷与德尔塔在第六话躲进旧教堂。雷和德尔塔在第一话已经正式见面。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 209,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷",
+          "predicate": "拥有",
+          "object": "复活能力",
+          "normalized_fact": "雷拥有复活能力",
+          "type": "world_event",
+          "dimension": "world_rule",
+          "source_anchors": [
+            {
+              "text": "雷能让已经死亡的人复活。",
+              "start": 39,
+              "end": 51
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "3b7f472d534c811d4c3f"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "3b7f472d534c811d4c3f"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G2",
+          "subject": "雷",
+          "predicate": "借用后",
+          "object": "记忆不变",
+          "normalized_fact": "雷借用后记忆不变",
+          "type": "world_event",
+          "dimension": "causality",
+          "source_anchors": [
+            {
+              "text": "雷借用亚巴顿力量后记忆不会受影响。",
+              "start": 51,
+              "end": 68
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "df1f51265ef5555994be"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "df1f51265ef5555994be"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "雷",
+          "predicate": "躲进",
+          "object": "旧教堂",
+          "normalized_fact": "雷躲进旧教堂",
+          "type": "world_event",
+          "dimension": "space",
+          "source_anchors": [
+            {
+              "text": "雷与德尔塔在第六话躲进旧教堂。",
+              "start": 68,
+              "end": 83
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "806c7429338e0ae14bce"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "806c7429338e0ae14bce"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G4",
+          "subject": "雷",
+          "predicate": "见面",
+          "object": "第一话德尔塔",
+          "normalized_fact": "雷见面第一话德尔塔",
+          "type": "character_attribute",
+          "dimension": "character_relation",
+          "source_anchors": [
+            {
+              "text": "雷和德尔塔在第一话已经正式见面。",
+              "start": 83,
+              "end": 99
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 99,
+            "end": 110
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F1",
+          "gold_fact_ids": [
+            "G1"
+          ],
+          "expected_type": "conflict",
+          "dimension": "world_rule",
+          "minimum_evidence_sets": [
+            [
+              "3b7f472d534c811d4c3f"
+            ]
+          ],
+          "merge": false
+        },
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "causality",
+          "minimum_evidence_sets": [
+            [
+              "df1f51265ef5555994be"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-020",
+      "title": "多冲突样例4",
+      "group": "multi_conflict",
+      "dimensions": [
+        "character_relation",
+        "identity",
+        "time"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷和德尔塔在第一话已经当面交谈。公众知道德尔塔的真实姓名。档案馆在2065年开放地震救援档案。月城在地震前已经使用机械左臂。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 211,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷",
+          "predicate": "当面交谈",
+          "object": "第一话",
+          "normalized_fact": "雷当面交谈第一话",
+          "type": "character_attribute",
+          "dimension": "character_relation",
+          "source_anchors": [
+            {
+              "text": "雷和德尔塔在第一话已经当面交谈。",
+              "start": 39,
+              "end": 55
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "d11b313d4fe3fee7d599"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "d11b313d4fe3fee7d599"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G2",
+          "subject": "公众",
+          "predicate": "知道",
+          "object": "德尔塔的真实姓名",
+          "normalized_fact": "公众知道德尔塔的真实姓名",
+          "type": "character_attribute",
+          "dimension": "identity",
+          "source_anchors": [
+            {
+              "text": "公众知道德尔塔的真实姓名。",
+              "start": 55,
+              "end": 68
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "3a56aa33f1ea6dd2186e"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "3a56aa33f1ea6dd2186e"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "档案馆",
+          "predicate": "开放",
+          "object": "2065年救援档案",
+          "normalized_fact": "档案馆开放2065年救援档案",
+          "type": "world_event",
+          "dimension": "time",
+          "source_anchors": [
+            {
+              "text": "档案馆在2065年开放地震救援档案。",
+              "start": 68,
+              "end": 86
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "2d8cb5017830f3a8881e"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "2d8cb5017830f3a8881e"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G4",
+          "subject": "月城",
+          "predicate": "使用",
+          "object": "地震前机械左臂",
+          "normalized_fact": "月城使用地震前机械左臂",
+          "type": "world_event",
+          "dimension": "time",
+          "source_anchors": [
+            {
+              "text": "月城在地震前已经使用机械左臂。",
+              "start": 86,
+              "end": 101
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 101,
+            "end": 112
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F1",
+          "gold_fact_ids": [
+            "G1"
+          ],
+          "expected_type": "conflict",
+          "dimension": "character_relation",
+          "minimum_evidence_sets": [
+            [
+              "d11b313d4fe3fee7d599"
+            ]
+          ],
+          "merge": false
+        },
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "identity",
+          "minimum_evidence_sets": [
+            [
+              "3a56aa33f1ea6dd2186e"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-021",
+      "title": "多冲突样例5",
+      "group": "multi_conflict",
+      "dimensions": [
+        "character_knowledge",
+        "physical_rule",
+        "time"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城在2063年已经安装机械左臂。雷的父亲知道拉古艾尔寄宿在雷体内。雷拥有两颗心脏。监察官恢复了爆炸前的视力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 213,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "月城",
+          "predicate": "安装时间",
+          "object": "2063年",
+          "normalized_fact": "月城安装时间2063年",
+          "type": "world_event",
+          "dimension": "time",
+          "source_anchors": [
+            {
+              "text": "月城在2063年已经安装机械左臂。",
+              "start": 39,
+              "end": 56
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "fd1bec15cd989aa6cacf"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "fd1bec15cd989aa6cacf"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G2",
+          "subject": "雷的父亲",
+          "predicate": "知道",
+          "object": "拉古艾尔寄宿",
+          "normalized_fact": "雷的父亲知道拉古艾尔寄宿",
+          "type": "world_event",
+          "dimension": "character_knowledge",
+          "source_anchors": [
+            {
+              "text": "雷的父亲知道拉古艾尔寄宿在雷体内。",
+              "start": 56,
+              "end": 73
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "46422ea243d878bfdce9"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "46422ea243d878bfdce9"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "雷",
+          "predicate": "拥有",
+          "object": "两颗心脏",
+          "normalized_fact": "雷拥有两颗心脏",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "雷拥有两颗心脏。",
+              "start": 73,
+              "end": 81
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "596ac1b6800114e8e9ed"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "596ac1b6800114e8e9ed"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G4",
+          "subject": "监察官",
+          "predicate": "恢复",
+          "object": "视力",
+          "normalized_fact": "监察官恢复视力",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "监察官恢复了爆炸前的视力。",
+              "start": 81,
+              "end": 94
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 94,
+            "end": 105
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F1",
+          "gold_fact_ids": [
+            "G1"
+          ],
+          "expected_type": "conflict",
+          "dimension": "time",
+          "minimum_evidence_sets": [
+            [
+              "fd1bec15cd989aa6cacf"
+            ]
+          ],
+          "merge": false
+        },
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "character_knowledge",
+          "minimum_evidence_sets": [
+            [
+              "46422ea243d878bfdce9"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-022",
+      "title": "多冲突样例6",
+      "group": "multi_conflict",
+      "dimensions": [
+        "physical_rule",
+        "space",
+        "world_rule"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。月城的右臂是机械臂。雷能让已经死亡的人复活。亚巴顿寄宿在雷的左侧心脏里。守望者无法感知静默结界中的宿主。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 210,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "月城",
+          "predicate": "拥有",
+          "object": "机械右臂",
+          "normalized_fact": "月城拥有机械右臂",
+          "type": "world_event",
+          "dimension": "space",
+          "source_anchors": [
+            {
+              "text": "月城的右臂是机械臂。",
+              "start": 39,
+              "end": 49
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "d7f7dd2035b813e0a886"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "d7f7dd2035b813e0a886"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G2",
+          "subject": "雷",
+          "predicate": "拥有",
+          "object": "复活能力",
+          "normalized_fact": "雷拥有复活能力",
+          "type": "world_event",
+          "dimension": "world_rule",
+          "source_anchors": [
+            {
+              "text": "雷能让已经死亡的人复活。",
+              "start": 49,
+              "end": 61
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "3b7f472d534c811d4c3f"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "3b7f472d534c811d4c3f"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "亚巴顿",
+          "predicate": "寄宿",
+          "object": "雷的左侧心脏",
+          "normalized_fact": "亚巴顿寄宿雷的左侧心脏",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "亚巴顿寄宿在雷的左侧心脏里。",
+              "start": 61,
+              "end": 75
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "47ba19b8b9ece1f35cc9"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "47ba19b8b9ece1f35cc9"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G4",
+          "subject": "守望者",
+          "predicate": "无法感知",
+          "object": "静默结界宿主",
+          "normalized_fact": "守望者无法感知静默结界宿主",
+          "type": "world_event",
+          "dimension": "world_rule",
+          "source_anchors": [
+            {
+              "text": "守望者无法感知静默结界中的宿主。",
+              "start": 75,
+              "end": 91
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 91,
+            "end": 102
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F1",
+          "gold_fact_ids": [
+            "G1"
+          ],
+          "expected_type": "conflict",
+          "dimension": "space",
+          "minimum_evidence_sets": [
+            [
+              "d7f7dd2035b813e0a886"
+            ]
+          ],
+          "merge": false
+        },
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "world_rule",
+          "minimum_evidence_sets": [
+            [
+              "3b7f472d534c811d4c3f"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-023",
+      "title": "多冲突样例7",
+      "group": "multi_conflict",
+      "dimensions": [
+        "causality",
+        "character_relation",
+        "physical_rule",
+        "world_rule"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。雷借用亚巴顿力量后记忆不会受影响。雷和德尔塔在第一话已经当面交谈。拉古艾尔寄宿在雷的右侧心脏里。雷拥有读取他人梦境的能力。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 210,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "雷",
+          "predicate": "借用后",
+          "object": "记忆不变",
+          "normalized_fact": "雷借用后记忆不变",
+          "type": "world_event",
+          "dimension": "causality",
+          "source_anchors": [
+            {
+              "text": "雷借用亚巴顿力量后记忆不会受影响。",
+              "start": 39,
+              "end": 56
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "df1f51265ef5555994be"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "df1f51265ef5555994be"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G2",
+          "subject": "雷",
+          "predicate": "当面交谈",
+          "object": "第一话",
+          "normalized_fact": "雷当面交谈第一话",
+          "type": "character_attribute",
+          "dimension": "character_relation",
+          "source_anchors": [
+            {
+              "text": "雷和德尔塔在第一话已经当面交谈。",
+              "start": 56,
+              "end": 72
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "d11b313d4fe3fee7d599"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "d11b313d4fe3fee7d599"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "拉古艾尔",
+          "predicate": "寄宿",
+          "object": "雷的右侧心脏",
+          "normalized_fact": "拉古艾尔寄宿雷的右侧心脏",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "拉古艾尔寄宿在雷的右侧心脏里。",
+              "start": 72,
+              "end": 87
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "252bda4cc47b93db0d7b"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "252bda4cc47b93db0d7b"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G4",
+          "subject": "雷",
+          "predicate": "拥有",
+          "object": "读取梦境的能力",
+          "normalized_fact": "雷拥有读取梦境的能力",
+          "type": "world_event",
+          "dimension": "world_rule",
+          "source_anchors": [
+            {
+              "text": "雷拥有读取他人梦境的能力。",
+              "start": 87,
+              "end": 100
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 100,
+            "end": 111
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F1",
+          "gold_fact_ids": [
+            "G1"
+          ],
+          "expected_type": "conflict",
+          "dimension": "causality",
+          "minimum_evidence_sets": [
+            [
+              "df1f51265ef5555994be"
+            ]
+          ],
+          "merge": false
+        },
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "character_relation",
+          "minimum_evidence_sets": [
+            [
+              "d11b313d4fe3fee7d599"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    },
+    {
+      "id": "SL-024",
+      "title": "多冲突样例8",
+      "group": "multi_conflict",
+      "dimensions": [
+        "identity",
+        "physical_rule",
+        "time",
+        "world_rule"
+      ],
+      "story": "故事发生在城区的一间安静房间里。人物先观察周围环境，再按照当时的情况继续行动。公众知道德尔塔的真实姓名。雷能让已经死亡的人复活。月城在2064年完成机械左臂安装。月城可以让机械左臂变成液体。他把杯子移到桌子中央，整理衣袖，检查门窗，又在椅子旁停了一会儿。随后房间里的光线慢慢移动，风吹过窗帘，桌上的纸张仍留在原处。人物确认没有新的动静，便继续等待后续安排。他安静地观察四周。他安静地观察四周。他安静地观察四周。",
+      "character_count": 205,
+      "gold_facts": [
+        {
+          "id": "G1",
+          "subject": "公众",
+          "predicate": "知道",
+          "object": "德尔塔的真实姓名",
+          "normalized_fact": "公众知道德尔塔的真实姓名",
+          "type": "character_attribute",
+          "dimension": "identity",
+          "source_anchors": [
+            {
+              "text": "公众知道德尔塔的真实姓名。",
+              "start": 39,
+              "end": 52
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "3a56aa33f1ea6dd2186e"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "3a56aa33f1ea6dd2186e"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G2",
+          "subject": "雷",
+          "predicate": "拥有",
+          "object": "复活能力",
+          "normalized_fact": "雷拥有复活能力",
+          "type": "world_event",
+          "dimension": "world_rule",
+          "source_anchors": [
+            {
+              "text": "雷能让已经死亡的人复活。",
+              "start": 52,
+              "end": 64
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "矛盾",
+          "relevant_lore_ids": [
+            "3b7f472d534c811d4c3f"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "3b7f472d534c811d4c3f"
+            ]
+          ],
+          "reportable": true
+        },
+        {
+          "id": "G3",
+          "subject": "月城",
+          "predicate": "安装时间",
+          "object": "2064年",
+          "normalized_fact": "月城安装时间2064年",
+          "type": "world_event",
+          "dimension": "time",
+          "source_anchors": [
+            {
+              "text": "月城在2064年完成机械左臂安装。",
+              "start": 64,
+              "end": 81
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "一致",
+          "relevant_lore_ids": [
+            "fd1bec15cd989aa6cacf"
+          ],
+          "minimum_evidence_sets": [
+            [
+              "fd1bec15cd989aa6cacf"
+            ]
+          ],
+          "reportable": false
+        },
+        {
+          "id": "G4",
+          "subject": "月城",
+          "predicate": "拥有",
+          "object": "液态机械臂能力",
+          "normalized_fact": "月城拥有液态机械臂能力",
+          "type": "character_attribute",
+          "dimension": "physical_rule",
+          "source_anchors": [
+            {
+              "text": "月城可以让机械左臂变成液体。",
+              "start": 81,
+              "end": 95
+            }
+          ],
+          "context_anchors": [],
+          "expected_verdict": "不确定",
+          "relevant_lore_ids": [],
+          "minimum_evidence_sets": [],
+          "reportable": false
+        }
+      ],
+      "ignored_events": [
+        {
+          "anchor": {
+            "text": "他把杯子移到桌子中央，",
+            "start": 95,
+            "end": 106
+          },
+          "normalized_proposition": "人物移动杯子",
+          "reason": "routine"
+        }
+      ],
+      "non_events": [],
+      "gold_findings": [
+        {
+          "id": "F1",
+          "gold_fact_ids": [
+            "G1"
+          ],
+          "expected_type": "conflict",
+          "dimension": "identity",
+          "minimum_evidence_sets": [
+            [
+              "3a56aa33f1ea6dd2186e"
+            ]
+          ],
+          "merge": false
+        },
+        {
+          "id": "F2",
+          "gold_fact_ids": [
+            "G2"
+          ],
+          "expected_type": "conflict",
+          "dimension": "world_rule",
+          "minimum_evidence_sets": [
+            [
+              "3b7f472d534c811d4c3f"
+            ]
+          ],
+          "merge": false
+        }
+      ],
+      "annotation_status": "assistant_authored_draft_pending_human_review"
+    }
+  ],
+  "target_distribution": {
+    "total": 24,
+    "zero_conflict": 8,
+    "one_conflict": 8,
+    "multi_conflict": 8
+  }
+}

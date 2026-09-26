@@ -1,0 +1,6270 @@
+{
+  "method": "Saved raw extraction JSON replay only; no model inference, retrieval, verdict or accuracy evaluation.",
+  "inputs": 160,
+  "counts": {
+    "complete": 139,
+    "rejected_records": 18,
+    "previous_errors_recovered": 87,
+    "partial": 16,
+    "failed": 5
+  },
+  "cases": [
+    {
+      "id": "wb001",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "timepoint",
+          "entity": "第三话",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "第三话",
+          "target": null,
+          "time": "第三话",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "知道",
+          "text": "德尔塔知道雷的宿主身份",
+          "target": "雷的宿主身份",
+          "time": "第三话",
+          "valid_from": "第三话",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb002",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "机械左臂",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "机械左臂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "timepoint",
+          "entity": "2064年",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "2064年",
+          "target": null,
+          "time": "2064年",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "event",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "接受手术",
+          "text": "月城在2064年接受了机械左臂安装手术",
+          "target": "机械左臂安装",
+          "time": "2064年",
+          "valid_from": "2064年",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb003",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "北方研究站",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "北方研究站",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "北方研究站",
+          "entity_type": null,
+          "category": "位于",
+          "text": "北方研究站位于城区列车的终点站附近",
+          "target": "城区列车的终点站附近",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb004",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "rule",
+          "entity": "档案馆管理员",
+          "entity_type": null,
+          "category": "在网络数据库损坏时仍能查阅纸本记录",
+          "text": "档案馆管理员仍能查阅纸本记录",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb005",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "与",
+          "text": "雷与德尔塔第一次当面交谈发生在第一话",
+          "target": "德尔塔",
+          "time": "第一话",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "timepoint",
+          "entity": "第一话",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "第一话",
+          "target": null,
+          "time": "第一话",
+          "valid_from": "第一话",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb006",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "雷的父亲",
+          "entity_type": null,
+          "category": "知道",
+          "text": "雷的父亲一直知道拉古艾尔寄宿在雷体内",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷的父亲",
+          "entity_type": null,
+          "category": "知道",
+          "text": "雷的父亲一直知道拉古艾尔寄宿在雷体内",
+          "target": "拉古艾尔寄宿在雷体内",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb007",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "timepoint",
+          "entity": "第一话",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "第一话",
+          "target": null,
+          "time": "第一话",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "德尔塔",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "德尔塔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "位置",
+          "text": "雷没有在广场",
+          "target": "广场",
+          "time": "第一话",
+          "valid_from": "第一话",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb008",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "拉古艾尔",
+          "entity_type": null,
+          "category": "宿主关系",
+          "text": "拉古艾尔在既定寄宿关系中的宿主是德尔塔",
+          "target": "德尔塔",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb009",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "机械左臂",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "机械左臂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 2,
+          "error": "名称或时间不在原输入中：time",
+          "raw_record": {
+            "k": "attribute",
+            "e": "机械左臂",
+            "c": "感知能力",
+            "s": "S1",
+            "t": "2062年",
+            "f": "2062年"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb010",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "地下神殿",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "地下神殿",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "封印",
+          "entity_type": "制度",
+          "category": "制度",
+          "text": "封印",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "天使",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "天使",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "封印",
+          "entity_type": null,
+          "category": "被",
+          "text": "地下神殿的封印允许一个天使仅凭蛮力打开石门",
+          "target": "地下神殿",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "天使",
+          "entity_type": null,
+          "category": "可凭蛮力打开石门",
+          "text": "地下神殿的封印允许一个天使仅凭蛮力打开石门",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "rule",
+          "entity": "封印",
+          "entity_type": null,
+          "category": "仅允许天使打开",
+          "text": "地下神殿的封印允许一个天使仅凭蛮力打开石门",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb011",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "档案馆",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "档案馆",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "档案馆",
+          "entity_type": null,
+          "category": "保留",
+          "text": "网络数据库损坏直接导致档案馆保留的纸本记录也无法查阅",
+          "target": "纸本记录",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 1,
+          "error": "名称或时间不在原输入中：target",
+          "raw_record": {
+            "k": "relation",
+            "e": "网络数据库",
+            "c": "导致",
+            "x": "纸本记录无法查阅",
+            "s": "S1"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb012",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "莉娅",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "莉娅",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "医院",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "医院",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "莉娅",
+          "entity_type": null,
+          "category": "职业",
+          "text": "莉娅是医院的医生",
+          "target": null,
+          "time": "现有身份设定",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb013",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "莉娅",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "莉娅",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "莉娅",
+          "entity_type": null,
+          "category": "是",
+          "text": "莉娅是雷的姐姐",
+          "target": "雷的姐姐",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb014",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "雷的父亲",
+          "entity_type": null,
+          "category": "知道",
+          "text": "雷的父亲知道雷曾经在第一话看过德尔塔的新闻",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷的父亲",
+          "entity_type": null,
+          "category": "知道",
+          "text": "雷的父亲知道雷曾经在第一话看过德尔塔的新闻",
+          "target": "雷曾经在第一话看过德尔塔的新闻",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb015",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "机械左臂",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "机械左臂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "timepoint",
+          "entity": "2066年",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "2066年",
+          "target": null,
+          "time": "2066年",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "为",
+          "text": "月城在2066年为机械左臂加装了温度传感器",
+          "target": "机械左臂",
+          "time": "2066年",
+          "valid_from": "2066年",
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "机械左臂",
+          "entity_type": null,
+          "category": "具备温度传感器",
+          "text": "月城在2066年为机械左臂加装了温度传感器",
+          "target": null,
+          "time": "2066年",
+          "valid_from": "2066年",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb016",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "timepoint",
+          "entity": "2063年",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "2063年",
+          "target": null,
+          "time": "2063年",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "event",
+          "entity": "大地震",
+          "entity_type": null,
+          "category": "原因",
+          "text": "2063年的大地震是亚巴顿降临造成的",
+          "target": null,
+          "time": "2063年",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "亚巴顿",
+          "entity_type": null,
+          "category": "造成",
+          "text": "2063年的大地震是亚巴顿降临造成的",
+          "target": "大地震",
+          "time": "2063年",
+          "valid_from": "2063年",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb017",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "艾琳",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "艾琳",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "海雾学院",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "海雾学院",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 3,
+          "error": "名称或时间不在原输入中：target",
+          "raw_record": {
+            "k": "relation",
+            "e": "艾琳",
+            "c": "担任",
+            "x": "海雾学院校长",
+            "s": "S1"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb018",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "黄金会",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "黄金会",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "赤砂王国",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "赤砂王国",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "黄金会",
+          "entity_type": null,
+          "category": "位于",
+          "text": "在赤砂王国",
+          "target": "赤砂王国",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "rule",
+          "entity": "黄金会",
+          "entity_type": null,
+          "category": "物理变化",
+          "text": "黄金会在雨天变成玻璃",
+          "target": "雨天",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb019",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "风帆公会",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "风帆公会",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "timepoint",
+          "entity": "第27章",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "第27章",
+          "target": null,
+          "time": "第27章",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "泽恩",
+          "entity_type": null,
+          "category": "建立",
+          "text": "泽恩在琥珀岛建立了风帆公会",
+          "target": "风帆公会",
+          "time": "第27章",
+          "valid_from": "第27章",
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "泽恩",
+          "entity_type": null,
+          "category": "位于",
+          "text": "泽恩在琥珀岛建立了风帆公会",
+          "target": "琥珀岛",
+          "time": "第27章",
+          "valid_from": "第27章",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb020",
+      "error": "所有归档条目均未通过校验：实体/时间节点原文由名称生成，不接受片段编号"
+    },
+    {
+      "id": "wb021",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "身体特征",
+          "text": "雷拥有两颗心脏",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb022",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "亚巴顿",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "亚巴顿",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "亚巴",
+          "entity_type": null,
+          "category": "寄宿于",
+          "text": "亚巴顿寄宿在雷的左侧心脏",
+          "target": "雷的左侧心脏",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb023",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "身体反应",
+          "text": "拉古艾尔施展治疗时雷的右胸会变暖",
+          "target": null,
+          "time": "拉古艾尔施展治疗时",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 1,
+          "error": "名称或时间不在原输入中：target",
+          "raw_record": {
+            "k": "relation",
+            "e": "拉古艾尔",
+            "c": "施展治疗时",
+            "x": "雷的右胸变暖",
+            "s": "S1"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb024",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "借用亚巴顿力量后会短暂失去部分记忆",
+          "text": "雷借用亚巴顿的力量后会短暂失去部分记忆",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb025",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "timepoint",
+          "entity": "亚巴顿的降临比天使议会计划早了三年",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "亚巴顿的降临比天使议会计划早了三年",
+          "target": null,
+          "time": "亚巴顿的降临比天使议会计划早了三年",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "rule",
+          "entity": "天使议会计划",
+          "entity_type": null,
+          "category": "时间起点",
+          "text": "亚巴顿的降临比天使议会计划早了三年",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 2,
+          "error": "名称或时间不在原输入中：target",
+          "raw_record": {
+            "k": "relation",
+            "e": "亚巴顿",
+            "c": "降临时间",
+            "x": "比天使议会计划早三年",
+            "s": "S1"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb026",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "拉古艾尔",
+          "entity_type": null,
+          "category": "效果",
+          "text": "拉古艾尔可以加速伤口愈合",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb027",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "拉古艾尔",
+          "entity_type": null,
+          "category": "再生能力",
+          "text": "拉古艾尔不能再生完整肢体",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb028",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "rule",
+          "entity": "天使契约",
+          "entity_type": null,
+          "category": "建立条件",
+          "text": "宿主建立天使契约时必须自愿付出重要记忆",
+          "target": null,
+          "time": "建立天使契约时必须自愿付出重要记忆",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb029",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "rule",
+          "entity": "天使契约",
+          "entity_type": null,
+          "category": "寿命影响",
+          "text": "天使契约不会自动延长宿主寿命",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb030",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "rule",
+          "entity": "寄宿天使",
+          "entity_type": null,
+          "category": "离开宿主体内的时间限制",
+          "text": "寄宿天使离开宿主体内最多三十秒",
+          "target": null,
+          "time": "最多三十秒",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb031",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "解除地下神殿封印",
+          "entity_type": null,
+          "category": "需要",
+          "text": "解除地下神殿封印需要两名宿主同时触碰石门",
+          "target": "两名宿主同时触碰石门",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb032",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "天使",
+          "entity_type": null,
+          "category": "外表伪装",
+          "text": "天使的外表伪装不能消除契约精神波动",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "天使",
+          "entity_type": null,
+          "category": "契约精神波动",
+          "text": "天使的外表伪装不能消除契约精神波动",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "rule",
+          "entity": "外表伪装",
+          "entity_type": null,
+          "category": "不能消除契约精神波动",
+          "text": "天使的外表伪装不能消除契约精神波动",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb033",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "旧教堂",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "旧教堂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "静默结界",
+          "entity_type": "技术",
+          "category": "技术",
+          "text": "静默结界",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "旧教堂",
+          "entity_type": null,
+          "category": "拥有",
+          "text": "旧教堂静默结界能降低守望者发现宿主的概率",
+          "target": "静默结界",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "静默结界",
+          "entity_type": null,
+          "category": "功能",
+          "text": "旧教堂静默结界能降低守望者发现宿主的概率",
+          "target": null,
+          "time": "旧教堂静默结界能降低守望者发现宿主的概率",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb034",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "双心脏共鸣",
+          "text": "雷双心脏共鸣时两名寄宿天使都能听到对方的声音",
+          "target": "两名寄宿天使都能听到对方的声音",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "心脏共鸣时的特性",
+          "text": "雷双心脏共鸣时两名寄宿天使都能听到对方的声音",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb035",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "德尔塔的装甲",
+          "entity_type": null,
+          "category": "供电方式",
+          "text": "德尔塔的装甲依靠独立电池供电",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb036",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "德尔塔",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "德尔塔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "外骨骼",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "外骨骼",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "使用外骨骼",
+          "text": "德尔塔的外骨骼正常行走可运行两小时",
+          "target": null,
+          "time": "正常行走",
+          "valid_from": "正常行走",
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "外骨骼",
+          "entity_type": null,
+          "category": "运行时间",
+          "text": "德尔塔的外骨骼正常行走可运行两小时",
+          "target": null,
+          "time": "正常行走",
+          "valid_from": "正常行走",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb037",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "德尔塔装甲",
+          "entity_type": null,
+          "category": "冷却机制",
+          "text": "德尔塔装甲连续高功率运行十分钟后必须冷却",
+          "target": null,
+          "time": "十分钟后",
+          "valid_from": "十分钟后",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb038",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "推进器使用限制",
+          "text": "德尔塔的装甲冷却期间无法使用推进器",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb039",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "机械左臂",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "机械左臂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "机械左臂",
+          "entity_type": null,
+          "category": "能反馈压力",
+          "text": "月城的机械左臂能反馈压力",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb040",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "月城机械左臂",
+          "entity_type": null,
+          "category": "神经接口",
+          "text": "月城机械左臂的神经接口需要定期校准",
+          "target": null,
+          "time": "定期校准",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb041",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "金属屏蔽室",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "金属屏蔽室",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "金属屏蔽室",
+          "entity_type": null,
+          "category": "功能",
+          "text": "金属屏蔽室可以阻挡普通无线电信号",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "金属屏蔽",
+          "entity_type": null,
+          "category": "阻挡",
+          "text": "金属屏蔽室可以阻挡普通无线电信号",
+          "target": "普通无线电信号",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb042",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "金属屏蔽室",
+          "entity_type": null,
+          "category": "无法屏蔽",
+          "text": "金属屏蔽室不能屏蔽天使契约的精神波动",
+          "target": "天使契约的精神波动",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb043",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "旧城区地下隧道",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "旧城区地下隧道",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "旧城区地下隧道",
+          "entity_type": null,
+          "category": "无移动网络覆盖",
+          "text": "旧城区地下隧道没有移动网络覆盖",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb044",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "城区列车",
+          "entity_type": "交通工具",
+          "category": "交通工具",
+          "text": "城区列车",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "timepoint",
+          "entity": "早晨六点",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "早晨六点",
+          "target": null,
+          "time": "早晨六点",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "城区列车",
+          "entity_type": null,
+          "category": "运行时间",
+          "text": "城区列车每天早晨六点开始运行",
+          "target": "早晨六点",
+          "time": "早晨六点",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb045",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "城区夜间照明",
+          "entity_type": null,
+          "category": "依靠",
+          "text": "城区夜间照明依靠白天充电的储能电池",
+          "target": "白天充电的储能电池",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "储能电池",
+          "entity_type": null,
+          "category": "充电时间",
+          "text": "城区夜间照明依靠白天充电的储能电池",
+          "target": null,
+          "time": "白天",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "储能电池",
+          "entity_type": null,
+          "category": "使用时间",
+          "text": "城区夜间照明依靠白天充电的储能电池",
+          "target": null,
+          "time": "夜间",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb046",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "普通心脏扫描",
+          "entity_type": null,
+          "category": "无法显示",
+          "text": "普通心脏扫描无法显示寄宿天使的形体",
+          "target": "寄宿天使的形体",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb047",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "档案馆",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "档案馆",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "档案馆",
+          "entity_type": null,
+          "category": "保留",
+          "text": "档案馆保留地震前的纸质备份",
+          "target": null,
+          "time": "地震前",
+          "valid_from": "地震前",
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "档案馆",
+          "entity_type": null,
+          "category": "保留",
+          "text": "档案馆保留地震前的纸质备份",
+          "target": "地震前的纸质备份",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb048",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "电磁枪",
+          "entity_type": "武器",
+          "category": "武器",
+          "text": "电磁枪",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "电磁枪",
+          "entity_type": null,
+          "category": "发射物",
+          "text": "电磁枪发射的是金属弹丸",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "电磁枪",
+          "entity_type": null,
+          "category": "发射",
+          "text": "电磁枪发射的是金属弹丸",
+          "target": "金属弹丸",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb049",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "亚巴顿",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "亚巴顿",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "拉古艾尔",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "拉古艾尔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "左侧心脏寄宿",
+          "text": "雷的左侧心脏寄宿亚巴顿",
+          "target": "亚巴顿",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "右侧心脏寄宿",
+          "text": "雷的右侧心脏寄宿拉古艾尔",
+          "target": "拉古艾尔",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb050",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "左臂",
+          "text": "月城的左臂是机械臂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "右臂",
+          "text": "月城的右臂是自然肢体",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb051",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "德尔塔",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "德尔塔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "装甲形象",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "装甲形象",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "见过",
+          "text": "雷在第一话新闻中见过德尔塔的装甲形象",
+          "target": "德尔塔的装甲形象",
+          "time": "第一话",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "与",
+          "text": "雷与德尔塔在第二话第一次当面交谈",
+          "target": "德尔塔",
+          "time": "第二话",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 5,
+          "error": "名称或时间不在原输入中：entity",
+          "raw_record": {
+            "k": "event",
+            "e": "雷与德尔塔第一次当面交谈",
+            "c": "首次见面",
+            "s": "S2",
+            "t": "第二话"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb052",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "event",
+          "entity": "摧毁旧城区的大地震",
+          "entity_type": null,
+          "category": "时间点",
+          "text": "摧毁旧城区的大地震发生于2063年",
+          "target": null,
+          "time": "2063年",
+          "valid_from": "2063年",
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "机械左臂",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "机械左臂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "拥有",
+          "text": "月城的机械左臂安装于2064年",
+          "target": "机械左臂",
+          "time": "2064年",
+          "valid_from": "2064年",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb053",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "莉娅",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "莉娅",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "城区档案馆",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "城区档案馆",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "莉娅",
+          "entity_type": null,
+          "category": "担任",
+          "text": "莉娅是城区档案馆管理员",
+          "target": "城区档案馆管理员",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "地震救援档案",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "地震救援档案",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "城区档案馆",
+          "entity_type": null,
+          "category": "开放",
+          "text": "城区档案馆在2065年开放地震救援档案",
+          "target": "地震救援档案",
+          "time": "2065年",
+          "valid_from": "2065年",
+          "valid_until": null
+        },
+        {
+          "kind": "timepoint",
+          "entity": "2065年",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "2065年",
+          "target": null,
+          "time": "2065年",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb054",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "守望者",
+          "entity_type": null,
+          "category": "通过",
+          "text": "守望者通过契约精神波动追踪宿主",
+          "target": "契约精神波动",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "守望",
+          "entity_type": null,
+          "category": "追踪方式",
+          "text": "守望者通过契约精神波动追踪宿主",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "旧教堂静默结界",
+          "entity_type": null,
+          "category": "可以削弱",
+          "text": "旧教堂静默结界可以削弱宿主精神波动",
+          "target": "宿主精神波动",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb055",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "德尔塔装甲",
+          "entity_type": "技术",
+          "category": "技术",
+          "text": "德尔塔装甲",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "德尔塔装甲",
+          "entity_type": null,
+          "category": "能源类型",
+          "text": "德尔塔装甲使用可更换独立电池",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "德尔塔装甲",
+          "entity_type": null,
+          "category": "运行限制",
+          "text": "德尔塔装甲连续高功率运行十分钟必须停止散热",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb056",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "监察官",
+          "entity_type": null,
+          "category": "视觉状态",
+          "text": "监察官在爆炸后双眼失明",
+          "target": null,
+          "time": "爆炸后",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "监察官",
+          "entity_type": null,
+          "category": "感知方式",
+          "text": "监察官依靠听觉和手杖定位",
+          "target": null,
+          "time": "爆炸后",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "监察官",
+          "entity_type": null,
+          "category": "使用",
+          "text": "监察官依靠听觉和手杖定位",
+          "target": "手杖",
+          "time": "爆炸后",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb057",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "机械左臂",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "机械左臂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "装备",
+          "text": "月城在2064年安装机械左臂",
+          "target": null,
+          "time": "2064年",
+          "valid_from": "2064年",
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "装备",
+          "text": "月城在2063年已经安装了机械左臂",
+          "target": null,
+          "time": "2063年",
+          "valid_from": "2063年",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb058",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "装备",
+          "text": "月城在2064年安装机械左臂",
+          "target": null,
+          "time": "2064年",
+          "valid_from": "2064年",
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "经历",
+          "text": "摧毁旧城区并让雷昏迷的那次大地震发生在2064年",
+          "target": "大地震",
+          "time": "2064年",
+          "valid_from": "2064年",
+          "valid_until": null
+        },
+        {
+          "kind": "event",
+          "entity": "大地震",
+          "entity_type": null,
+          "category": "影响",
+          "text": "摧毁旧城区并让雷昏迷的那次大地震发生在2064年",
+          "target": "雷",
+          "time": "2064年",
+          "valid_from": "2064年",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb059",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "与",
+          "text": "雷与德尔塔第一次当面交谈发生在第三话",
+          "target": "德尔塔",
+          "time": "第三话",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "timepoint",
+          "entity": "第三话",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "第三话",
+          "target": null,
+          "time": "第三话",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb060",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "event",
+          "entity": "雷说明双心脏秘密的既有告知事件发生在第二话而非第三话",
+          "entity_type": null,
+          "category": "事件说明",
+          "text": "雷说明双心脏秘密的既有告知事件发生在第二话而非第三话",
+          "target": null,
+          "time": "第二话",
+          "valid_from": "第二话",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb061",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "event",
+          "entity": "雷从旧教堂获得长剑的既有事件",
+          "entity_type": null,
+          "category": "发生时间",
+          "text": "雷从旧教堂获得长剑的既有事件发生在第八话",
+          "target": null,
+          "time": "第八话",
+          "valid_from": "第八话",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb062",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "event",
+          "entity": "雷的长剑断裂的既有交战事件",
+          "entity_type": null,
+          "category": "发生时间",
+          "text": "雷的长剑断裂的既有交战事件发生在第四话",
+          "target": null,
+          "time": "第四话",
+          "valid_from": "第四话",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb063",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "event",
+          "entity": "雷的父亲乘列车离城",
+          "entity_type": null,
+          "category": "发生时间",
+          "text": "雷的父亲乘列车离城的既有事件发生在第六话",
+          "target": null,
+          "time": "第六话",
+          "valid_from": "第六话",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb064",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "timepoint",
+          "entity": "亚巴顿的降临比天使议会计划晚了三年",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "亚巴顿的降临比天使议会计划晚了三年",
+          "target": null,
+          "time": "亚巴顿的降临比天使议会计划晚了三年",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "亚巴顿",
+          "entity_type": null,
+          "category": "降临时间",
+          "text": "亚巴顿的降临比天使议会计划晚了三年",
+          "target": "天使议会计划",
+          "time": "亚巴顿的降临比天使议会计划晚了三年",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb065",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "寄宿天使",
+          "entity_type": null,
+          "category": "离体维持时间",
+          "text": "寄宿天使离体可以稳定维持三分钟",
+          "target": null,
+          "time": "三分钟",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb066",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "代号",
+          "text": "公众知道德尔塔的代号",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "真实姓名",
+          "text": "现有公众已经知道德尔塔装甲下的真实姓名",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb067",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "代号",
+          "text": "公众知道德尔塔的代号",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "秘密",
+          "text": "除了德尔塔与两位寄宿天使之外所有人也都知道雷的双心脏秘密",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "公众",
+          "entity_type": null,
+          "category": "知道",
+          "text": "公众知道德尔塔的代号",
+          "target": "德尔塔的代号",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "公众",
+          "entity_type": null,
+          "category": "知道",
+          "text": "除了德尔塔与两位寄宿天使之外所有人也都知道雷的双心脏秘密",
+          "target": "雷的双心脏秘密",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb068",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "event",
+          "entity": "雷告知宿主身份",
+          "entity_type": null,
+          "category": "事件",
+          "text": "第三话雷告知宿主身份之后德尔塔仍不知道雷是宿主",
+          "target": null,
+          "time": "第三话",
+          "valid_from": "第三话",
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "不知道",
+          "text": "第三话雷告知宿主身份之后德尔塔仍不知道雷是宿主",
+          "target": "雷是宿主",
+          "time": "第三话",
+          "valid_from": "第三话",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb069",
+      "error": "所有归档条目均未通过校验：名称或时间不在原输入中：target"
+    },
+    {
+      "id": "wb070",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "拉古艾尔",
+          "entity_type": "生物",
+          "category": "生物",
+          "text": "拉古艾尔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷的父亲",
+          "entity_type": null,
+          "category": "确认出",
+          "text": "雷的父亲明确认出了寄宿在儿子体内的拉古艾尔",
+          "target": "拉古艾尔",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "拉古艾尔",
+          "entity_type": null,
+          "category": "寄宿状态",
+          "text": "雷的父亲明确认出了寄宿在儿子体内的拉古艾尔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb071",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "雷",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "雷",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "德尔塔",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "德尔塔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "未见过",
+          "text": "雷在第二话当面交谈之前从未见过德尔塔的装甲形象",
+          "target": "德尔塔的装甲形象",
+          "time": "第二话",
+          "valid_from": "第二话",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb072",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "身份",
+          "text": "现有普通公众都已经知道雷是双宿主",
+          "target": null,
+          "time": "现有普通公众都已经知道雷是双宿主",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb073",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "德尔塔",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "德尔塔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "雷",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "雷",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "timepoint",
+          "entity": "第三话",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "第三话",
+          "target": null,
+          "time": "第三话",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "在",
+          "text": "德尔塔在第三话听完身份说明后仍不知道雷拥有两颗心脏",
+          "target": "第三话",
+          "time": "第三话",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "拥有两颗心脏",
+          "text": "德尔塔在第三话听完身份说明后仍不知道雷拥有两颗心脏",
+          "target": null,
+          "time": "第三话",
+          "valid_from": "第三话",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb074",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "公众",
+          "entity_type": null,
+          "category": "不知道",
+          "text": "公众连德尔塔的代号都不知道",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb075",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "肢体",
+          "text": "月城的右臂始终是自然肢体",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "亚巴顿",
+          "entity_type": null,
+          "category": "寄宿位置",
+          "text": "亚巴顿的既定寄宿位置是雷的右侧心脏",
+          "target": "雷的右侧心脏",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "雷",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "雷",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb076",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "肢体",
+          "text": "月城的右臂始终是自然肢体",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "拉古艾尔",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "拉古艾尔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "拉古艾尔",
+          "entity_type": null,
+          "category": "寄宿位置",
+          "text": "拉古艾尔的既定寄宿位置是雷的左侧心脏",
+          "target": "雷的左侧心脏",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb077",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "北方研究站",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "北方研究站",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "北方研究站",
+          "entity_type": null,
+          "category": "位于",
+          "text": "北方研究站远离城区列车终点站",
+          "target": "城区列车终点站",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb078",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "雷",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "雷",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "德尔塔",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "德尔塔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "北方研究站",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "北方研究站",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "身处",
+          "text": "第一话雷观看德尔塔救援新闻时身处北方研究站而非广场",
+          "target": "北方研究站",
+          "time": "第一话",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "身处",
+          "text": "第一话雷观看德尔塔救援新闻时身处北方研究站而非广场",
+          "target": "广场",
+          "time": "第一话",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb079",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "雷的父亲",
+          "entity_type": null,
+          "category": "前往",
+          "text": "第五话既有离城事件中雷的父亲前往的是南方研究站而非北方研究站",
+          "target": "南方研究站",
+          "time": "第五话",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷的父亲",
+          "entity_type": null,
+          "category": "前往",
+          "text": "第五话既有离城事件中雷的父亲前往的是南方研究站而非北方研究站",
+          "target": "北方研究站",
+          "time": "第五话",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb080",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "机械左臂",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "机械左臂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "拥有",
+          "text": "月城的机械左臂无需改造接口就能直接装在右臂上",
+          "target": "机械左臂",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "机械左臂",
+          "entity_type": null,
+          "category": "安装方式",
+          "text": "月城的机械左臂无需改造接口就能直接装在右臂上",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb081",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "宿主",
+          "entity_type": null,
+          "category": "可解除封印",
+          "text": "两名宿主无需触碰地下神殿石门也能按既定仪式解除封印",
+          "target": "地下神殿石门",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 2,
+          "error": "名称或时间不在原输入中：time",
+          "raw_record": {
+            "k": "attribute",
+            "e": "宿主",
+            "c": "解除封印方式",
+            "s": "S1",
+            "t": "2062年",
+            "f": "2062年"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb082",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "寄宿天使",
+          "entity_type": "天使",
+          "category": "天使",
+          "text": "寄宿天使",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "右侧心脏",
+          "entity_type": "器官",
+          "category": "器官",
+          "text": "右侧心脏",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "寄宿天使",
+          "entity_type": null,
+          "category": "居住于",
+          "text": "雷的两名寄宿天使都住在同一颗右侧心脏中",
+          "target": "右侧心脏",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "两名寄宿天使",
+          "entity_type": null,
+          "category": "居住于",
+          "text": "雷的两名寄宿天使都住在同一颗右侧心脏中",
+          "target": "右侧心脏",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb083",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "拉古艾尔治疗",
+          "entity_type": null,
+          "category": "引起的发热位置",
+          "text": "拉古艾尔治疗引起的既定发热位置是雷的左胸而非右胸",
+          "target": "雷的左胸",
+          "time": "拉古艾尔治疗引起的既定发热位置是雷的左胸而非右胸",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb084",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "雷",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "雷",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "亚巴顿",
+          "entity_type": "天使",
+          "category": "天使",
+          "text": "亚巴顿",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "德尔塔",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "德尔塔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "拥有",
+          "text": "雷有两位寄宿天使",
+          "target": "两位寄宿天使",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "亚巴顿",
+          "entity_type": null,
+          "category": "宿主",
+          "text": "亚巴顿在现有寄宿关系中的宿主是德尔塔",
+          "target": "德尔塔",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb085",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "雷",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "雷",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "拉古艾尔",
+          "entity_type": "天使",
+          "category": "天使",
+          "text": "拉古艾尔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "寄宿天使数量",
+          "text": "雷有两位寄宿天使",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "拥有",
+          "text": "雷有两位寄宿天使",
+          "target": "两位寄宿天使",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "拉古艾尔",
+          "entity_type": null,
+          "category": "宿主",
+          "text": "拉古艾尔在现有寄宿关系中的宿主是月城",
+          "target": "月城",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb086",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "德尔塔",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "德尔塔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "持有",
+          "text": "第四话从旧教堂获得长剑的持有人是德尔塔而不是雷",
+          "target": "长剑",
+          "time": "第四话",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "未持有",
+          "text": "第四话从旧教堂获得长剑的持有人是德尔塔而不是雷",
+          "target": "长剑",
+          "time": "第四话",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb087",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "德尔塔",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "德尔塔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "机械左臂",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "机械左臂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "动力外骨骼",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "动力外骨骼",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "装备",
+          "text": "德尔塔的既定行动装备是月城的机械左臂而不是动力外骨骼",
+          "target": "月城的机械左臂",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "装备",
+          "text": "德尔塔的既定行动装备是月城的机械左臂而不是动力外骨骼",
+          "target": "动力外骨骼",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb088",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "宿主契约",
+          "entity_type": null,
+          "category": "重要记忆来源",
+          "text": "宿主契约里的重要记忆由天使付出而不是宿主",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "天使",
+          "entity_type": null,
+          "category": "付出",
+          "text": "宿主契约里的重要记忆由天使付出而不是宿主",
+          "target": "重要记忆",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "宿主契约",
+          "entity_type": null,
+          "category": "记忆归属",
+          "text": "宿主契约里的重要记忆由天使付出而不是宿主",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb089",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "能听到伙伴声音的寄宿天使",
+          "text": "雷双心脏共鸣时能听到伙伴声音的寄宿天使只有亚巴顿而不包括拉古艾尔",
+          "target": "亚巴顿",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "不能听到伙伴声音的寄宿天使",
+          "text": "雷双心脏共鸣时能听到伙伴声音的寄宿天使只有亚巴顿而不包括拉古艾尔",
+          "target": "拉古艾尔",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 1,
+          "error": "名称或时间不在原输入中：time",
+          "raw_record": {
+            "k": "attribute",
+            "e": "雷",
+            "c": "双心脏共鸣时能听到伙伴声音的寄宿天使",
+            "s": "S1",
+            "x": "亚巴顿",
+            "t": "仅亚巴顿",
+            "f": "未知"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb090",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "守望者",
+          "entity_type": null,
+          "category": "追踪",
+          "text": "守望者追踪的是普通无线电信号而非宿主契约精神波动",
+          "target": "普通无线电信号",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 2,
+          "error": "名称或时间不在原输入中：time",
+          "raw_record": {
+            "k": "attribute",
+            "e": "守望者",
+            "c": "追踪对象",
+            "s": "S1",
+            "t": "2062年",
+            "f": "2062年"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb091",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "动力外骨骼使用情况",
+          "text": "德尔塔并不使用任何动力外骨骼",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb092",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "亚巴顿",
+          "entity_type": "天使",
+          "category": "天使",
+          "text": "亚巴顿",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "守望者",
+          "entity_type": "天使",
+          "category": "天使",
+          "text": "守望者",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "寄宿",
+          "text": "雷体内的两位寄宿天使是亚巴顿和守望者",
+          "target": "亚巴顿",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "寄宿",
+          "text": "雷体内的两位寄宿天使是亚巴顿和守望者",
+          "target": "守望者",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb093",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "电磁枪",
+          "entity_type": "武器",
+          "category": "武器",
+          "text": "电磁枪",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "电磁枪",
+          "entity_type": null,
+          "category": "发射",
+          "text": "电磁枪发射金属弹丸",
+          "target": "金属弹丸",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "城区太阳能板",
+          "entity_type": "设施",
+          "category": "设施",
+          "text": "城区太阳能板",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "城区太阳能板",
+          "entity_type": null,
+          "category": "发电能力",
+          "text": "城区太阳能板在夜间仍能发电",
+          "target": null,
+          "time": "夜间",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 4,
+          "error": "名称或时间不在原输入中：target",
+          "raw_record": {
+            "k": "relation",
+            "e": "城区太阳能板",
+            "c": "发电",
+            "x": "能源",
+            "s": "S2"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb094",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "电磁枪",
+          "entity_type": "武器",
+          "category": "武器",
+          "text": "电磁枪",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "电磁枪",
+          "entity_type": null,
+          "category": "发射",
+          "text": "电磁枪发射金属弹丸",
+          "target": "金属弹丸",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "电磁枪",
+          "entity_type": null,
+          "category": "无需充电",
+          "text": "电磁枪不必充电就能连续无限射击",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "电磁枪",
+          "entity_type": null,
+          "category": "可连续无限射击",
+          "text": "电磁枪不必充电就能连续无限射击",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb095",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "装甲",
+          "text": "德尔塔现有装甲可连续高功率运行二十分钟而无需冷却",
+          "target": null,
+          "time": "二十分钟",
+          "valid_from": "二十分钟",
+          "valid_until": "二十分钟"
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb096",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "机械左臂",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "机械左臂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "机械左臂",
+          "entity_type": null,
+          "category": "无法反馈压力",
+          "text": "月城的机械左臂连压力也无法反馈",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "拥有",
+          "text": "月城的机械左臂连压力也无法反馈",
+          "target": "机械左臂",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb097",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "推进器使用能力",
+          "text": "德尔塔的现有装甲冷却期间仍能使用推进器",
+          "target": null,
+          "time": "德尔塔的现有装甲冷却期间仍能使用推进器",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb098",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "德尔塔外骨骼",
+          "entity_type": "技术",
+          "category": "技术",
+          "text": "德尔塔外骨骼",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "德尔塔外骨骼",
+          "entity_type": null,
+          "category": "电池续航",
+          "text": "德尔塔外骨骼的独立电池在正常行走时可以持续供电两天",
+          "target": null,
+          "time": "正常行走",
+          "valid_from": "正常行走",
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "德尔塔外骨骼",
+          "entity_type": null,
+          "category": "供电时长",
+          "text": "德尔塔外骨骼的独立电池在正常行走时可以持续供电两天",
+          "target": null,
+          "time": "正常行走",
+          "valid_from": "正常行走",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb099",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "德尔塔外骨骼",
+          "entity_type": "技术",
+          "category": "技术",
+          "text": "德尔塔外骨骼",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 2,
+          "error": "名称或时间不在原输入中：time",
+          "raw_record": {
+            "k": "attribute",
+            "e": "德尔塔外骨骼",
+            "c": "推进系统",
+            "s": "S1",
+            "t": "2062年",
+            "f": "2062年"
+          }
+        },
+        {
+          "record_index": 3,
+          "error": "名称或时间不在原输入中：time",
+          "raw_record": {
+            "k": "attribute",
+            "e": "德尔塔外骨骼",
+            "c": "能源消耗",
+            "s": "S1",
+            "t": "2062年",
+            "f": "2062年"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb100",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "金属屏蔽室",
+          "entity_type": null,
+          "category": "特性",
+          "text": "金属屏蔽室无法阻挡任何普通无线电信号",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb101",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "使用",
+          "text": "月城现有机械左臂的运动指令通过普通无线电而非神经接口传递",
+          "target": "普通无线电",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "机械左臂",
+          "entity_type": null,
+          "category": "指令传输方式",
+          "text": "月城现有机械左臂的运动指令通过普通无线电而非神经接口传递",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "机械左臂",
+          "entity_type": null,
+          "category": "通信方式",
+          "text": "月城现有机械左臂的运动指令通过普通无线电而非神经接口传递",
+          "target": "普通无线电",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb102",
+      "error": "所有归档条目均未通过校验：名称或时间不在原输入中：time；名称或时间不在原输入中：time"
+    },
+    {
+      "id": "wb103",
+      "error": "所有归档条目均未通过校验：名称或时间不在原输入中：time；名称或时间不在原输入中：time"
+    },
+    {
+      "id": "wb104",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "寄宿天使",
+          "entity_type": null,
+          "category": "形体维持能力",
+          "text": "寄宿天使离开宿主后可以无限期维持凝聚形体",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb105",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "石门",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "石门",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "地下神殿",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "地下神殿",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "宿主",
+          "entity_type": null,
+          "category": "能力",
+          "text": "一名宿主独自触碰石门就能解除地下神殿封印",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "宿主",
+          "entity_type": null,
+          "category": "能解除",
+          "text": "一名宿主独自触碰石门就能解除地下神殿封印",
+          "target": "地下神殿封印",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb106",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "rule",
+          "entity": "天使契约",
+          "entity_type": null,
+          "category": "建立条件",
+          "text": "宿主不需要自愿也能按既定规则建立天使契约",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb107",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "rule",
+          "entity": "建立天使契约",
+          "entity_type": null,
+          "category": "效果",
+          "text": "建立天使契约会自动延长宿主寿命",
+          "target": null,
+          "time": "建立天使契约",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "天使契约",
+          "entity_type": null,
+          "category": "功能",
+          "text": "建立天使契约会自动延长宿主寿命",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb108",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "普通无线电屏蔽",
+          "entity_type": null,
+          "category": "功能",
+          "text": "普通无线电屏蔽可以阻止守望者对契约波动的感知",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "普通无线电屏蔽",
+          "entity_type": null,
+          "category": "阻止",
+          "text": "普通无线电屏蔽可以阻止守望者对契约波动的感知",
+          "target": "守望者对契约波动的感知",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb109",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "天使",
+          "entity_type": null,
+          "category": "可消除契约精神波动",
+          "text": "天使隐藏羽翼和改变外表就能消除契约精神波动",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "隐藏羽翼",
+          "entity_type": null,
+          "category": "行为",
+          "text": "天使隐藏羽翼和改变外表就能消除契约精神波动",
+          "target": "天使",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "改变外表",
+          "entity_type": null,
+          "category": "行为",
+          "text": "天使隐藏羽翼和改变外表就能消除契约精神波动",
+          "target": "天使",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb110",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "生理反应",
+          "text": "雷只要普通心跳加速就必定进入双心脏共鸣",
+          "target": null,
+          "time": "普通心跳加速",
+          "valid_from": "普通心跳加速",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb111",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "旧教堂",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "旧教堂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "旧教堂",
+          "entity_type": null,
+          "category": "特性",
+          "text": "旧教堂的静默结界可以削弱精神波动",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "旧教堂",
+          "entity_type": null,
+          "category": "具备",
+          "text": "旧教堂的静默结界可以削弱精神波动",
+          "target": "静默结界",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "静默结界",
+          "entity_type": null,
+          "category": "功能",
+          "text": "旧教堂的静默结界可以削弱精神波动",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "借用",
+          "text": "雷借用亚巴顿的力量越强造成的记忆缺失就越轻",
+          "target": "亚巴顿的力量",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "记忆缺失程度",
+          "text": "雷借用亚巴顿的力量越强造成的记忆缺失就越轻",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb112",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "旧教堂",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "旧教堂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "旧教堂",
+          "entity_type": null,
+          "category": "具备",
+          "text": "旧教堂的静默结界可以削弱精神波动",
+          "target": "静默结界",
+          "time": "旧教堂的静默结界可以削弱精神波动",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "借用",
+          "text": "雷借用亚巴顿力量后从来不会失去任何记忆",
+          "target": "亚巴顿力量",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "记忆保持",
+          "text": "雷借用亚巴顿力量后从来不会失去任何记忆",
+          "target": null,
+          "time": "雷借用亚巴顿力量后从来不会失去任何记忆",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb113",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "拉古艾尔",
+          "entity_type": null,
+          "category": "施展治疗",
+          "text": "拉古艾尔施展治疗会让亚巴顿转移到右侧心脏",
+          "target": "亚巴顿",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "治疗",
+          "entity_type": null,
+          "category": "效果",
+          "text": "拉古艾尔施展治疗会让亚巴顿转移到右侧心脏",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "亚巴顿",
+          "entity_type": null,
+          "category": "位置转移",
+          "text": "拉古艾尔施展治疗会让亚巴顿转移到右侧心脏",
+          "target": "右侧心脏",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb114",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "rule",
+          "entity": "屏蔽普通无线电",
+          "entity_type": null,
+          "category": "导致",
+          "text": "屏蔽普通无线电就会让守望者无法感知宿主精神波动",
+          "target": "守望者无法感知宿主精神波动",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb115",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "rule",
+          "entity": "天使",
+          "entity_type": null,
+          "category": "伪装外表",
+          "text": "天使伪装外表会使契约的精神波动消失",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "天使",
+          "entity_type": null,
+          "category": "精神波动",
+          "text": "天使伪装外表会使契约的精神波动消失",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb116",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "太阳能板",
+          "entity_type": "技术",
+          "category": "技术",
+          "text": "太阳能板",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "太阳能板",
+          "entity_type": null,
+          "category": "用于",
+          "text": "城区夜间照明依靠太阳能板当夜发电而非白天充电的储能电池",
+          "target": "城区夜间照明",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "太阳能板",
+          "entity_type": null,
+          "category": "发电时间",
+          "text": "城区夜间照明依靠太阳能板当夜发电而非白天充电的储能电池",
+          "target": null,
+          "time": "夜间",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "太阳能板",
+          "entity_type": null,
+          "category": "发电方式",
+          "text": "城区夜间照明依靠太阳能板当夜发电而非白天充电的储能电池",
+          "target": null,
+          "time": "当夜发电",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "太阳能",
+          "entity_type": null,
+          "category": "不依赖储能电池",
+          "text": "城区夜间照明依靠太阳能板当夜发电而非白天充电的储能电池",
+          "target": null,
+          "time": "夜间",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb117",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "忽略机械义肢接口维护",
+          "entity_type": null,
+          "category": "效果",
+          "text": "忽略机械义肢接口维护会保证连接更稳定并杜绝运动延迟",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "忽略机械义肢接口维护",
+          "entity_type": null,
+          "category": "导致",
+          "text": "忽略机械义肢接口维护会保证连接更稳定并杜绝运动延迟",
+          "target": "连接更稳定",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 3,
+          "error": "名称或时间不在原输入中：entity",
+          "raw_record": {
+            "k": "relation",
+            "e": "忽略机械义掌接口维护",
+            "c": "导致",
+            "x": "杜绝运动延迟",
+            "s": "S1"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb118",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "天使",
+          "entity_type": null,
+          "category": "能力",
+          "text": "单个天使只要加大蛮力就能打开地下神殿石门",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "天使",
+          "entity_type": null,
+          "category": "能够",
+          "text": "单个天使只要加大蛮力就能打开地下神殿石门",
+          "target": "打开地下神殿石门",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb119",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "旧教堂",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "旧教堂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "静默结界",
+          "entity_type": null,
+          "category": "功能",
+          "text": "旧教堂的静默结界会增强精神波动并提高守望者发现宿主的概率",
+          "target": null,
+          "time": "旧教堂的静默结界会增强精神波动并提高守望者发现宿主的概率",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "静默结界",
+          "entity_type": null,
+          "category": "增强",
+          "text": "旧教堂的静默结界会增强精神波动并提高守望者发现宿主的概率",
+          "target": "精神波动",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "静默结界",
+          "entity_type": null,
+          "category": "提高",
+          "text": "旧教堂的静默结界会增强精神波动并提高守望者发现宿主的概率",
+          "target": "守望者发现宿主的概率",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb120",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "莉娅",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "莉娅",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "纸质历史档案",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "纸质历史档案",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "莉娅",
+          "entity_type": null,
+          "category": "负责",
+          "text": "莉娅负责纸质历史档案整理",
+          "target": "纸质历史档案整理",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "德尔塔",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "德尔塔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "身份",
+          "text": "德尔塔的装甲行动者身份从未出现在公共新闻中",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "德尔",
+          "entity_type": null,
+          "category": "身份",
+          "text": "德尔塔的装甲行动者身份从未出现在公共新闻中",
+          "target": "装甲行动者",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb121",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "莉娅",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "莉娅",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "纸质历史档案",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "纸质历史档案",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "莉娅",
+          "entity_type": null,
+          "category": "负责",
+          "text": "莉娅负责纸质历史档案整理",
+          "target": "纸质历史档案整理",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "雷",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "雷",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "生理设定",
+          "text": "雷在现有生理设定中只拥有一颗心脏",
+          "target": null,
+          "time": "现有生理设定",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb122",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "肢体特征",
+          "text": "月城在现有状态下两条手臂都是自然肢体",
+          "target": null,
+          "time": "现有状态下",
+          "valid_from": "现有状态下",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb123",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "监察官",
+          "entity_type": null,
+          "category": "视觉状态",
+          "text": "监察官在既有爆炸事件之后并未失明",
+          "target": null,
+          "time": "既有爆炸事件之后",
+          "valid_from": "既有爆炸事件之后",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb124",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "监察官",
+          "entity_type": null,
+          "category": "能力",
+          "text": "监察官已经拥有恢复视力的能力",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb125",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "莉娅",
+          "entity_type": null,
+          "category": "职位",
+          "text": "莉娅并不是城区档案馆管理员",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb126",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "拉古艾尔",
+          "entity_type": "天使",
+          "category": "天使",
+          "text": "拉古艾尔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "拉古艾尔",
+          "entity_type": null,
+          "category": "寄宿于",
+          "text": "拉古艾尔是雷左心脏里的那名寄宿天使",
+          "target": "雷左心脏",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb127",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "亚巴顿",
+          "entity_type": "天使",
+          "category": "天使",
+          "text": "亚巴顿",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "亚巴",
+          "entity_type": null,
+          "category": "寄宿于",
+          "text": "亚巴顿是雷右心脏里的那名寄宿天使",
+          "target": "雷右心脏",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "亚巴顿",
+          "entity_type": null,
+          "category": "身份",
+          "text": "亚巴顿是雷右心脏里的那名寄宿天使",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb128",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "身份设定",
+          "text": "雷在现有身份设定中并不是双宿主",
+          "target": null,
+          "time": "现有身份设定",
+          "valid_from": "现有身份设定",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb129",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "能力",
+          "text": "雷能够直接读懂陌生人的思想",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb130",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "timepoint",
+          "entity": "2067年",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "2067年",
+          "target": null,
+          "time": "2067年",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "机械左臂",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "机械左臂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "为",
+          "text": "月城在2067年为机械左臂增加了温度传感器",
+          "target": "机械左臂",
+          "time": "2067年",
+          "valid_from": "2067年",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb131",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "relation",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "订婚对象",
+          "text": "德尔塔已经与莉娅订婚",
+          "target": "莉娅",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "莉娅",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "莉娅",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb132",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "维克多",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "维克多",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "父亲",
+          "text": "雷的父亲名叫维克多",
+          "target": "维克多",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb133",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "德尔塔",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "德尔塔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "装甲形态",
+          "text": "德尔塔的装甲能够变形成潜水艇",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "拥有",
+          "text": "德尔塔的装甲能够变形成潜水艇",
+          "target": "装甲",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb134",
+      "error": "所有归档条目均未通过校验：名称或时间不在原输入中：time；名称或时间不在原输入中：time"
+    },
+    {
+      "id": "wb135",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "机械左臂",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "机械左臂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "机械左臂",
+          "entity_type": null,
+          "category": "感知能力",
+          "text": "月城的机械左臂能感知气味",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "拥有",
+          "text": "月城的机械左臂能感知气味",
+          "target": "机械左臂",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb136",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "长剑",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "长剑",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "研究站",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "研究站",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "运送",
+          "text": "第九话雷将断裂的长剑送到研究站修复",
+          "target": "长剑",
+          "time": "第九话",
+          "valid_from": "第九话",
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "送达",
+          "text": "第九话雷将断裂的长剑送到研究站修复",
+          "target": "研究站",
+          "time": "第九话",
+          "valid_from": "第九话",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb137",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "身体特征",
+          "text": "雷拥有两颗心脏",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "能力",
+          "text": "雷可以操控周围气温",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb138",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "莉娅",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "莉娅",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "城区档案馆",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "城区档案馆",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "莉娅",
+          "entity_type": null,
+          "category": "任职",
+          "text": "莉娅是城区档案馆管理员",
+          "target": "城区档案馆",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "莉娅",
+          "entity_type": null,
+          "category": "职业",
+          "text": "莉娅是城区档案馆管理员",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "莉",
+          "entity_type": null,
+          "category": "曾留学",
+          "text": "莉娅曾经在海外留学",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb139",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "月城",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "月城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "机械左臂",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "机械左臂",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "安装",
+          "text": "月城安装了机械左臂",
+          "target": "机械左臂",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "月城",
+          "entity_type": null,
+          "category": "能力",
+          "text": "月城能用机械左臂读取他人思想",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb140",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "德尔塔",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "德尔塔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "动力外骨骼",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "动力外骨骼",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "使用",
+          "text": "德尔塔使用动力外骨骼",
+          "target": "动力外骨骼",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "德尔塔",
+          "entity_type": null,
+          "category": "知道",
+          "text": "德尔塔知道莉娅的生日",
+          "target": "莉娅的生日",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb141",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "拉古艾尔",
+          "entity_type": "天使",
+          "category": "天使",
+          "text": "拉古艾尔",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "雷的父亲",
+          "entity_type": null,
+          "category": "不知道",
+          "text": "雷的父亲不知道拉古艾尔寄宿在儿子体内",
+          "target": "拉古艾尔寄宿在儿子体内",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "雷的父亲",
+          "entity_type": null,
+          "category": "语言能力",
+          "text": "雷的父亲精通古天使语言",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb142",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "守望者",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "守望者",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "守望者",
+          "entity_type": null,
+          "category": "追踪",
+          "text": "守望者追踪契约精神波动",
+          "target": "契约精神波动",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "守望者",
+          "entity_type": null,
+          "category": "由",
+          "text": "守望者由北方研究站制造",
+          "target": "北方研究站制造",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb143",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "城区太阳能板",
+          "entity_type": null,
+          "category": "夜间不能发电",
+          "text": "城区太阳能板夜间不能发电",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "城区储能电池",
+          "entity_type": null,
+          "category": "制造材料",
+          "text": "城区储能电池采用液态金属制造",
+          "target": "液态金属",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb144",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "行为",
+          "text": "亚巴顿提前降临是雷主动召唤造成的",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "rule",
+          "entity": "雷",
+          "entity_type": null,
+          "category": "因果关系",
+          "text": "亚巴顿提前降临是雷主动召唤造成的",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 1,
+          "error": "名称或时间不在原输入中：target",
+          "raw_record": {
+            "k": "relation",
+            "e": "亚巴顿",
+            "c": "降临时间",
+            "x": "比计划早三年",
+            "s": "S1"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb145",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "卡拉",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "卡拉",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "黄昏群岛",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "黄昏群岛",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 3,
+          "error": "名称或时间不在原输入中：target",
+          "raw_record": {
+            "k": "relation",
+            "e": "卡拉",
+            "c": "职位",
+            "x": "黄昏群岛祭司",
+            "s": "S1"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb146",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "蓝雾城",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "蓝雾城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "巨龙",
+          "entity_type": "生物",
+          "category": "生物",
+          "text": "巨龙",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "蓝雾城",
+          "entity_type": null,
+          "category": "街道由",
+          "text": "蓝雾城所有街道都由巨龙铺设",
+          "target": "巨龙",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb147",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "羽帆公会",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "羽帆公会",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "timepoint",
+          "entity": "第42章",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "第42章",
+          "target": null,
+          "time": "第42章",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "托林",
+          "entity_type": null,
+          "category": "建立",
+          "text": "第42章托林在云海建立了羽帆公会",
+          "target": "羽帆公会",
+          "time": "第42章",
+          "valid_from": "第42章",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb148",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "烛鸟",
+          "entity_type": "精灵",
+          "category": "精灵",
+          "text": "烛鸟",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "伊莎",
+          "entity_type": null,
+          "category": "左眼居住",
+          "text": "伊莎的左眼里住着名为烛鸟的精灵",
+          "target": "烛鸟",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb149",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "翡翠帝国",
+          "entity_type": "国家",
+          "category": "国家",
+          "text": "翡翠帝国",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "飞鱼",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "飞鱼",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "翡翠帝国",
+          "entity_type": null,
+          "category": "君主选举机制",
+          "text": "翡翠帝国的国王由飞鱼投票选出",
+          "target": "飞鱼投票",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "rule",
+          "entity": "飞鱼",
+          "entity_type": null,
+          "category": "选举权",
+          "text": "翡翠帝国的国王由飞鱼投票选出",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb150",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "玻璃星球",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "玻璃星球",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "玻璃星球上的居民",
+          "entity_type": null,
+          "category": "饮食方式",
+          "text": "玻璃星球上的居民以音乐代替食物",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "玻璃星球上的居民",
+          "entity_type": null,
+          "category": "以",
+          "text": "玻璃星球上的居民以音乐代替食物",
+          "target": "音乐",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb151",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "安德鲁",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "安德鲁",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 2,
+          "error": "名称或时间不在原输入中：target",
+          "raw_record": {
+            "k": "relation",
+            "e": "安德鲁",
+            "c": "担任",
+            "x": "远帆公司董事长",
+            "s": "S1"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb152",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "rule",
+          "entity": "影子",
+          "entity_type": null,
+          "category": "行为机制",
+          "text": "在雾钟世界所有影子都会在正午开口说话",
+          "target": null,
+          "time": "正午",
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb153",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "凯文",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "凯文",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "月亮城",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "月亮城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "timepoint",
+          "entity": "2088年",
+          "entity_type": null,
+          "category": "时间节点",
+          "text": "2088年",
+          "target": null,
+          "time": "2088年",
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "凯文",
+          "entity_type": null,
+          "category": "担任",
+          "text": "凯文于2088年在月亮城成为市长",
+          "target": "市长",
+          "time": "2088年",
+          "valid_from": "2088年",
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb154",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "黑沙海盗团",
+          "entity_type": "组织",
+          "category": "组织",
+          "text": "黑沙海盗团",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "黑沙海盗团",
+          "entity_type": null,
+          "category": "交通工具",
+          "text": "黑沙海盗团只使用木制飞船",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb155",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "露西",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "露西",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "宠物",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "宠物",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "宠物",
+          "entity_type": null,
+          "category": "能力",
+          "text": "露西的宠物能将石头变成糖果",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "宠物",
+          "entity_type": null,
+          "category": "能将",
+          "text": "露西的宠物能将石头变成糖果",
+          "target": "石头",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb156",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "东方航线",
+          "entity_type": "航线",
+          "category": "航线",
+          "text": "东方航线",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "飞船",
+          "entity_type": "交通工具",
+          "category": "交通工具",
+          "text": "飞船",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "东方航线",
+          "entity_type": null,
+          "category": "使用",
+          "text": "东方航线的飞船通过折叠梦境航行",
+          "target": "飞船",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "attribute",
+          "entity": "飞船",
+          "entity_type": null,
+          "category": "航行方式",
+          "text": "东方航线的飞船通过折叠梦境航行",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "飞船",
+          "entity_type": null,
+          "category": "通过",
+          "text": "东方航线的飞船通过折叠梦境航行",
+          "target": "折叠梦境",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb157",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "attribute",
+          "entity": "石眠族的孩子",
+          "entity_type": null,
+          "category": "语言能力",
+          "text": "石眠族的孩子出生时就会七种语言",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb158",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "钟摆城",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "钟摆城",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "钟摆城的居民",
+          "entity_type": null,
+          "category": "将",
+          "text": "钟摆城的居民每天将时间存入银行",
+          "target": "时间",
+          "time": "每天",
+          "valid_from": "每天",
+          "valid_until": null
+        }
+      ],
+      "rejected": [
+        {
+          "record_index": 2,
+          "error": "条目原文必须逐字来自输入，类别不能为空",
+          "raw_record": {
+            "k": "entity",
+            "e": "时间银行",
+            "y": "组织"
+          }
+        },
+        {
+          "record_index": 4,
+          "error": "名称或时间不在原输入中：target",
+          "raw_record": {
+            "k": "relation",
+            "e": "钟摆城的居民",
+            "c": "存入",
+            "x": "时间银行",
+            "s": "S1",
+            "t": "每天",
+            "f": "每天"
+          }
+        }
+      ],
+      "duplicates": [],
+      "status": "partial",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb159",
+      "previous_code": 0,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "莉娜",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "莉娜",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "阿尔诺",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "阿尔诺",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "莉娜",
+          "entity_type": null,
+          "category": "嫁给了",
+          "text": "小说中的莉娜嫁给了阿尔诺",
+          "target": "阿尔诺",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    },
+    {
+      "id": "wb160",
+      "previous_code": 2,
+      "records": [
+        {
+          "kind": "entity",
+          "entity": "玛丽",
+          "entity_type": "人物",
+          "category": "人物",
+          "text": "玛丽",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "巴黎",
+          "entity_type": "地点",
+          "category": "地点",
+          "text": "巴黎",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "entity",
+          "entity": "面包店",
+          "entity_type": "物品",
+          "category": "物品",
+          "text": "面包店",
+          "target": null,
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "玛丽",
+          "entity_type": null,
+          "category": "经营",
+          "text": "玛丽在巴黎经营一家面包店",
+          "target": "面包店",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        },
+        {
+          "kind": "relation",
+          "entity": "玛丽",
+          "entity_type": null,
+          "category": "位于",
+          "text": "玛丽在巴黎经营一家面包店",
+          "target": "巴黎",
+          "time": null,
+          "valid_from": null,
+          "valid_until": null
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "status": "complete",
+      "protocol_version": "world-extraction-decoder-v2"
+    }
+  ]
+}

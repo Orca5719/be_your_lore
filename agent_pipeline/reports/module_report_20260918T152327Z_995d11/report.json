@@ -1,0 +1,96 @@
+{
+  "kind": "offline_presentation_observations_not_accuracy_benchmark",
+  "sources_sha256": {
+    "report.py": "9794de7cb459dd4a8dec2ac8d9f9c62d2492884f734d747df0c07e93b36ad612",
+    "__main__.py": "d42424397cc27b1753e6b4ad783c1f05bfd734bfbd5cea8bf235ba5f4a6d4e20",
+    "report.schema.json": "31d6a6b3444d56e92a7c9efe4ec8e99424456dedf971cd34914d9c2eed2e059d",
+    "evaluation/check_report.py": "c317ae75e80d5f1ee532721ecb8910cb6de861f287691324a789978987966eb8"
+  },
+  "cases": [
+    {
+      "id": "R01_full_pipeline",
+      "status": "ok",
+      "summary": {
+        "verdict": "contradiction",
+        "label": "已核对事实中发现明确矛盾",
+        "scope": "checked_events",
+        "counts": {
+          "consistent": 0,
+          "contradiction": 1,
+          "uncertain": 0,
+          "failed": 0,
+          "pending": 0,
+          "ignored": 0,
+          "support_only": 1,
+          "unprocessed": 0
+        },
+        "checked_event_count": 1,
+        "finding_count": 1
+      }
+    },
+    {
+      "id": "R02_right_host",
+      "status": "ok",
+      "summary": {
+        "verdict": "contradiction",
+        "label": "已核对事实中发现明确矛盾",
+        "scope": "checked_events",
+        "counts": {
+          "consistent": 0,
+          "contradiction": 1,
+          "uncertain": 0,
+          "failed": 0,
+          "pending": 0,
+          "ignored": 0,
+          "support_only": 1,
+          "unprocessed": 0
+        },
+        "checked_event_count": 1,
+        "finding_count": 1
+      }
+    },
+    {
+      "id": "R03_mooncity",
+      "status": "ok",
+      "summary": {
+        "verdict": "uncertain",
+        "label": "尚不能对已核对事实给出完整明确结论",
+        "scope": "checked_events",
+        "counts": {
+          "consistent": 0,
+          "contradiction": 0,
+          "uncertain": 5,
+          "failed": 0,
+          "pending": 0,
+          "ignored": 0,
+          "support_only": 0,
+          "unprocessed": 0
+        },
+        "checked_event_count": 5,
+        "finding_count": 5
+      }
+    },
+    {
+      "id": "R04_partial_upstream",
+      "status": "partial",
+      "summary": {
+        "verdict": "uncertain",
+        "label": "尚不能对已核对事实给出完整明确结论",
+        "scope": "checked_events",
+        "counts": {
+          "consistent": 0,
+          "contradiction": 0,
+          "uncertain": 1,
+          "failed": 0,
+          "pending": 0,
+          "ignored": 0,
+          "support_only": 0,
+          "unprocessed": 0
+        },
+        "checked_event_count": 1,
+        "finding_count": 1
+      }
+    }
+  ],
+  "snapshot_stable": true
+}
