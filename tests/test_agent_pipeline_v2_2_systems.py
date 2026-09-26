@@ -1,6 +1,6 @@
 import unittest
 
-from agent_pipeline_v3.systems import build_baseline_system, build_candidate_system
+from agent_pipeline_v2_2.systems import build_baseline_system, build_candidate_system
 
 
 class BenchmarkV3SystemTests(unittest.TestCase):

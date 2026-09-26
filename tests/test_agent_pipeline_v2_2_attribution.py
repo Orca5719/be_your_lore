@@ -1,7 +1,7 @@
 import unittest
 
-from agent_pipeline_v3.attribution import attribute_first_failures
-from tests.test_agent_pipeline_v3_scoring import fixture
+from agent_pipeline_v2_2.attribution import attribute_first_failures
+from tests.test_agent_pipeline_v2_2_scoring import fixture
 
 
 class BenchmarkV3AttributionTests(unittest.TestCase):

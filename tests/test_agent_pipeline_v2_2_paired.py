@@ -1,4 +1,4 @@
-from agent_pipeline_v3.paired import run_paired_matrix
+from agent_pipeline_v2_2.paired import run_paired_matrix
 
 
 def test_paired_reuses_events_and_retrieval_per_method():

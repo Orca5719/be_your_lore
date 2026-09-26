@@ -38,7 +38,7 @@ def load_jsonl(path: Path) -> list[dict]:
 def build_manifest(*, dataset: dict, configs: list[dict], inputs: dict[str, str], repeats: int, warmup: int) -> dict:
     identity = {"dataset": stable_digest(dataset), "configs": configs, "inputs": inputs, "repeats": repeats, "warmup": warmup}
     return {
-        "schema_version": "agent-pipeline-v3-manifest-v1",
+        "schema_version": "agent-pipeline-v2-2-manifest-v1",
         "created_at": datetime.now(timezone.utc).isoformat(),
         "identity": identity,
         "identity_sha256": stable_digest(identity),

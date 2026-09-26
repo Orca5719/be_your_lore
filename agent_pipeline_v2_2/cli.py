@@ -23,7 +23,7 @@ from .story_pipeline import process_story
 ROOT = Path(__file__).resolve().parent.parent
 DATASET = ROOT / "evaluation" / "story_benchmark_24_v2.json"
 INDEX = ROOT / "data" / "index"
-REPORT_ROOT = ROOT / "agent_pipeline_v3" / "reports"
+REPORT_ROOT = ROOT / "agent_pipeline_v2_2" / "reports"
 
 
 def _read(path: Path):
@@ -39,7 +39,7 @@ def _result_dir(output: Path | None) -> Path:
         path = output.resolve()
     else:
         stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-        path = REPORT_ROOT / f"benchmark_3_{stamp}_{uuid.uuid4().hex[:6]}"
+        path = REPORT_ROOT / f"benchmark_2_2_{stamp}_{uuid.uuid4().hex[:6]}"
     path.mkdir(parents=True, exist_ok=True)
     return path
 
@@ -48,7 +48,7 @@ def _input_hashes() -> dict[str, str]:
     paths = [
         DATASET, ROOT / "agent_pipeline_v2/prompts/extractor_v1.txt",
         ROOT / "agent_pipeline_v2/prompts/judge_v1.txt", ROOT / "agent_pipeline_v2_1/prompts/judge_v2_1.txt",
-        ROOT / "agent_pipeline_v3/systems.py", ROOT / "agent_pipeline_v3/paired.py",
+        ROOT / "agent_pipeline_v2_2/systems.py", ROOT / "agent_pipeline_v2_2/paired.py",
         ROOT / "agent_pipeline_v2/extractor.py", ROOT / "agent_pipeline_v2/retrieval.py", ROOT / "agent_pipeline_v2/judge.py",
         ROOT / "agent_pipeline_v2_1/extractor.py", ROOT / "agent_pipeline_v2_1/retrieval.py", ROOT / "agent_pipeline_v2_1/story_pipeline.py",
         INDEX / "CURRENT",
@@ -67,7 +67,7 @@ def validate_inputs() -> dict:
     cases = data.get("cases", [])
     ids = [case.get("id") for case in cases]
     if len(cases) != 24 or len(ids) != len(set(ids)) or any(not value for value in ids):
-        raise ValueError("Benchmark 3 requires the fixed 24-story dataset with unique IDs")
+        raise ValueError("Benchmark 2.2 requires the fixed 24-story dataset with unique IDs")
     if not (INDEX / "CURRENT").exists():
         raise ValueError("index is missing")
     return {"status": "ok", "cases": len(cases), "gold_facts": sum(len(case.get("gold_facts", [])) for case in cases), "baseline": SystemConfig.baseline().to_dict(), "candidate": SystemConfig.candidate().to_dict(), "inputs": _input_hashes()}
@@ -192,7 +192,7 @@ def summary(args) -> int:
     performance = _read(directory / "performance.json") if (directory / "performance.json").exists() else {}
     report = build_summary(quality["baseline"], quality["candidate"], performance=performance, attribution=attribution, manifest=_read(directory / "manifest.json"))
     write_summary(directory, report)
-    print("SUMMARY=" + str(directory / "benchmark_3_summary.md"), flush=True)
+    print("SUMMARY=" + str(directory / "benchmark_2_2_summary.md"), flush=True)
     return 0
 
 
@@ -243,7 +243,7 @@ def run_all(args) -> int:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Agent Pipeline Benchmark 3")
+    parser = argparse.ArgumentParser(description="Agent Pipeline Benchmark 2.2")
     subs = parser.add_subparsers(dest="command", required=True)
     subs.add_parser("validate")
     def common(p):

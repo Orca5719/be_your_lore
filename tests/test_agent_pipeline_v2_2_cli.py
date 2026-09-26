@@ -1,4 +1,4 @@
-from agent_pipeline_v3.cli import build_parser
+from agent_pipeline_v2_2.cli import build_parser
 
 
 def test_cli_commands_and_defaults(tmp_path):

@@ -1,4 +1,4 @@
-# Agent Pipeline Benchmark 3
+# Agent Pipeline Benchmark 2.2
 
 ## Question
 

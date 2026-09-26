@@ -8,7 +8,7 @@ __pycache__/
 # Local application and model caches
 .cache/
 .codegraph/
-agent_pipeline_v3/reports/
+agent_pipeline_v2_2/reports/
 models/
 model_cache/
 hf_cache/

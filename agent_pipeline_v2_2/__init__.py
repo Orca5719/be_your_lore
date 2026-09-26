@@ -1,4 +1,4 @@
-"""Benchmark 3: frozen v2 versus Hybrid RRF plus Judge v2.1."""
+"""Benchmark 2.2: frozen v2 versus Hybrid RRF plus Judge v2.1."""
 
 from .schema import RunIdentity, SystemConfig
 

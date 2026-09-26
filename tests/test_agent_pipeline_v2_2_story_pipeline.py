@@ -1,7 +1,7 @@
 import unittest
 
-from agent_pipeline_v3.schema import SystemConfig, validate_run_row
-from agent_pipeline_v3.story_pipeline import PipelineSystem, process_story
+from agent_pipeline_v2_2.schema import SystemConfig, validate_run_row
+from agent_pipeline_v2_2.story_pipeline import PipelineSystem, process_story
 
 
 class BenchmarkV3StoryPipelineTests(unittest.TestCase):

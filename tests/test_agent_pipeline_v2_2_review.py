@@ -1,6 +1,6 @@
 import pytest
 
-from agent_pipeline_v3.review import build_review_template, reuse_exact_reviews, validate_review
+from agent_pipeline_v2_2.review import build_review_template, reuse_exact_reviews, validate_review
 
 
 DATASET = {"cases": [{"id": "C1", "gold_facts": [{"id": "G1"}], "gold_findings": [{"id": "GF1"}]}]}

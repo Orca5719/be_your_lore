@@ -997,88 +997,94 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 综合2.1A确认Judge v2.1减少矛盾误报16→4、解析失败4→0，但矛盾漏报5→11；综合2.1B确认Hybrid RRF metadata-off召回最佳，metadata filter当前损害召回。
 - 生成reports/BENCHMARK_2_1_SUMMARY.md/json，并冻结到benchmark_freezes/agent_pipeline_v2_1；快照含A/B/24篇完整结果及SHA256 manifest。2.1C的50+故事扩容未纳入。
 - 复核旧冻结：Agent Pipeline v1与Story-Level共232文件status=ok、changed=[]、archive_ok=true。
-## Step 78 — 2026-09-26 Benchmark 3 设计冻结前评审稿
+## Step 78 — 2026-09-26 Benchmark 2.2 设计冻结前评审稿
 
 - 用户确认以冻结 Agent Pipeline v2（一步提取、Dense Top-5、Judge v1、batch=8）作为 Baseline；Candidate 使用 Hybrid RRF Top-5（metadata filter关闭）与 Judge v2.1。
 - 采用双轨评测：端到端轨道比较真实用户流程、总耗时与显存；配对归因轨道共享同一提取事件，以 Dense/Hybrid × Judge v1/v2.1 四格矩阵隔离 Retrieval 与 Judge 的贡献。
 - 指标固定为 Precision、Recall、F1、Extraction Miss、Retrieval Miss、Judge FP/FN、Unsupported Reasoning，并补充执行失败、分阶段耗时、facts/s、峰值 allocated/reserved VRAM。
 - 明确首次失败互斥归因顺序：execution failure → extraction miss → retrieval miss → judge FN → report miss；检索造成的证据缺失不冒充纯 Judge FN。
 - 设计文档写入 `docs/superpowers/specs/2026-09-26-agent-pipeline-benchmark-3-design.md`。本步未修改运行代码、旧数据、旧报告或任何冻结快照；等待用户审阅后再编写实施计划。
-## Step 79 — 2026-09-26 Benchmark 3 实施计划
+## Step 79 — 2026-09-26 Benchmark 2.2 实施计划
 
-- 用户审阅并批准 Benchmark 3 规格。实施计划写入 `docs/superpowers/plans/2026-09-26-agent-pipeline-benchmark-3.md`。
+- 用户审阅并批准 Benchmark 2.2 规格。实施计划写入 `docs/superpowers/plans/2026-09-26-agent-pipeline-benchmark-3.md`。
 - 计划分为7个可独立验收任务：协议与不变量、质量/首次失败归因、双系统适配、四格配对归因、可恢复运行器与CLI、审核账本、最终报告与冻结前校验。
 - 计划明确先以TDD锁定指标和归因，再接模型运行；正式24篇CUDA评测仍交由用户运行，避免开发阶段占用GPU和重复长跑。
 - 自检通过：无TBD/TODO占位，接口名称前后一致，五项高风险输入均映射到具体测试任务。本步仍未修改运行代码或旧冻结。
-## Step 80 — 2026-09-26 Benchmark 3 Task 1：协议与不变量
+## Step 80 — 2026-09-26 Benchmark 2.2 Task 1：协议与不变量
 
-- 新增 `agent_pipeline_v3/schema.py`，固定 Baseline=Dense/v1、Candidate=Hybrid/v2.1且metadata关闭、Top-K=5、batch=8；提供稳定JSON摘要、运行身份和统一run-row校验。
-- TDD证据：新测试先因 `agent_pipeline_v3.schema` 不存在失败；实现后 `tests.test_agent_pipeline_v3_schema` 5/5通过。
+- 新增 `agent_pipeline_v2_2/schema.py`，固定 Baseline=Dense/v1、Candidate=Hybrid/v2.1且metadata关闭、Top-K=5、batch=8；提供稳定JSON摘要、运行身份和统一run-row校验。
+- TDD证据：新测试先因 `agent_pipeline_v2_2.schema` 不存在失败；实现后 `tests.test_agent_pipeline_v2_2_schema` 5/5通过。
 - 项目不是Git仓库，无法按计划建立worktree或提交；裁定记录在本计划独立进度账本，继续以独立目录、逐任务RED/GREEN和冻结校验保证隔离。
-## Step 81 — 2026-09-26 Benchmark 3 Task 2：质量计分与首次失败归因
+## Step 81 — 2026-09-26 Benchmark 2.2 Task 2：质量计分与首次失败归因
 
 - 新增纯函数 `score_system`：输出Extraction命中/遗漏、Retrieval Recall@5与遗漏、Judge Accuracy/FP/FN、完整证据下FN、Unsupported Reasoning和端到端P/R/F1，所有比例保留分子分母并安全处理零分母。
 - 新增 `attribute_first_failures`，按 execution→extraction→retrieval→judge→report 顺序为每条漏报冲突分配唯一主因。
 - 补充RED/GREEN边界：Judge已判矛盾但报告缺finding时必须归为report_miss，不能算端到端完成。Task 2最终7/7测试通过。
-## Step 82 — 2026-09-26 Benchmark 3 Task 3：双系统端到端适配
+## Step 82 — 2026-09-26 Benchmark 2.2 Task 3：双系统端到端适配
 
-- 新增 `agent_pipeline_v3/systems.py` 与 `story_pipeline.py`。Baseline明确委托冻结v2 extractor→Dense retrieval→Judge v1→report；Candidate委托相同提取器及v2.1修复层→Hybrid RRF（metadata off）→Judge v2.1→report。
+- 新增 `agent_pipeline_v2_2/systems.py` 与 `story_pipeline.py`。Baseline明确委托冻结v2 extractor→Dense retrieval→Judge v1→report；Candidate委托相同提取器及v2.1修复层→Hybrid RRF（metadata off）→Judge v2.1→report。
 - 两套系统统一输出case/system/status/result/stage_metrics，记录extraction/retrieval/judge/report/total耗时、检索方法来源；CUDA正式运行时记录peak allocated/reserved bytes。阶段异常保留类型与原因并输出error行。
-- TDD：Task 3测试先因systems/story_pipeline模块不存在失败，实现后5/5通过。本块Benchmark 3测试17/17；连同相关v2/v2.1回归共51/51通过。
+- TDD：Task 3测试先因systems/story_pipeline模块不存在失败，实现后5/5通过。本块Benchmark 2.2测试17/17；连同相关v2/v2.1回归共51/51通过。
 - 当前项目`.venv`未包含pytest，旧pytest风格回归使用本机D:\anaconda pytest 7.4.4运行；这些测试不加载torch/transformers。项目`.venv`完成compileall。统一冻结校验3套、260文件均status=ok、changed=[]、archive_ok=true。
 - 按用户分块要求，本轮只完成Task 1–3；Task 4配对矩阵、Task 5 CLI/恢复、Task 6审核、Task 7报告均未提前实现，也未运行24篇GPU benchmark。
 ## Step 83 — 2026-09-26 Git 仓库位置校正
 
 - 核对任务“梳理 benchmark 并预留分支”后确认：桌面开发目录 `C:\Users\Xhang\Desktop\project\worldcheck` 本身没有 `.git`，但 Benchmark 的正式 Git 仓库位于 `C:\Users\Xhang\Documents\Codex\2026-09-23\github-plugin-github-openai-curated-remote\work\be_your_lore`。
 - 正式仓库远端为 `ssh://git@ssh.github.com:443/Orca5719/be_your_lore.git`；Fact-Level、Story-Level、Agent Pipeline v1/v2、2.1 foundation/A/B/C 分支均已存在并跟踪同名 origin 分支。
-- Benchmark 3 应以 `benchmark/2.1c-bm25-hybrid-rrf` 的已推送提交 `71e141a` 为承接基线；该分支历史已包含 Agent Pipeline v2 与 2.1 Judge/Hybrid 相关成果。
-- 更正此前“项目不是Git仓库”的表述：它只适用于桌面开发副本，不适用于正式发布仓库。Task 1–3 当前仍只存在桌面开发副本，尚未迁入或提交到 Benchmark 3 分支。
+- Benchmark 2.2 应以 `benchmark/2.1c-bm25-hybrid-rrf` 的已推送提交 `71e141a` 为承接基线；该分支历史已包含 Agent Pipeline v2 与 2.1 Judge/Hybrid 相关成果。
+- 更正此前“项目不是Git仓库”的表述：它只适用于桌面开发副本，不适用于正式发布仓库。Task 1–3 当前仍只存在桌面开发副本，尚未迁入或提交到 Benchmark 2.2 分支。
 ## Step 84 — 2026-09-26 桌面开发目录整合为正式 Git 工作区
 
 - 在当前目录初始化 Git，并从既有本地克隆导入全部远端分支历史；`origin` 保持为 `ssh://git@ssh.github.com:443/Orca5719/be_your_lore.git`。
-- 从 `origin/benchmark/2.1c-bm25-hybrid-rrf` (`71e141a`) 建立本地 `benchmark/3-end-to-end`，并把原先仓库的 `worldcheck/` 包装目录扁平化为当前项目根目录。
-- 保留当前开发副本的源码、评测证据、冻结快照和 Benchmark 3 Task 1–3；扩充 `.gitignore`，排除虚拟环境、缓存、CodeGraph数据库、Hugging Face缓存及常见模型权重格式。
-- 暂存检查未发现超过20MB的单文件，未发现模型权重或缓存被暂存。Benchmark 3定向测试17/17通过；三套冻结共260文件均未改变且归档校验通过。
+- 从 `origin/benchmark/2.1c-bm25-hybrid-rrf` (`71e141a`) 建立本地 `benchmark/2.2-end-to-end`，并把原先仓库的 `worldcheck/` 包装目录扁平化为当前项目根目录。
+- 保留当前开发副本的源码、评测证据、冻结快照和 Benchmark 2.2 Task 1–3；扩充 `.gitignore`，排除虚拟环境、缓存、CodeGraph数据库、Hugging Face缓存及常见模型权重格式。
+- 暂存检查未发现超过20MB的单文件，未发现模型权重或缓存被暂存。Benchmark 2.2定向测试17/17通过；三套冻结共260文件均未改变且归档校验通过。
 - 本步建立本地整合提交；暂不推送，等待用户审阅后再发布远端分支。
 
-## Step 85 — 2026-09-26 Benchmark 3 Task 4：四格配对归因
+## Step 85 — 2026-09-26 Benchmark 2.2 Task 4：四格配对归因
 
-- 新增 `agent_pipeline_v3/paired.py`，固定 Dense/Hybrid × Judge v1/v2.1 四格；直接消费已有提取事件，不再次调用提取器。
+- 新增 `agent_pipeline_v2_2/paired.py`，固定 Dense/Hybrid × Judge v1/v2.1 四格；直接消费已有提取事件，不再次调用提取器。
 - 所有格记录同一事件摘要；Dense与Hybrid各检索一次并供两个Judge复用。单格异常仅标记该格，矩阵状态变为partial，其他格继续完成。
 - 输出检索单变量、Judge单变量及组合对照定义；Task 4测试2/2通过。
 
-## Step 86 — 2026-09-26 Benchmark 3 Task 5：可恢复运行器与CLI
+## Step 86 — 2026-09-26 Benchmark 2.2 Task 5：可恢复运行器与CLI
 
 - 新增原子JSON/JSONL写入、重复行拒绝、已完成案例复用，以及dataset/config/prompt/index/source/model revision统一身份摘要；恢复时任一摘要变化即拒绝续跑。
 - 新增 `validate`、`run-end-to-end`、`run-paired`、`score`、`summary`、`run-all` 六个命令。正式参数固定默认CUDA、Top-5、Judge batch=8、warmup=1、repeats=3。
 - `run-all`全程共享一次Qwen与检索模型加载；自动执行端到端、四格归因、一次预热和三次性能测量，记录总耗时、stories/s、facts/s、输入/生成token及CUDA峰值显存。
 
-## Step 87 — 2026-09-26 Benchmark 3 Task 6：审核账本
+## Step 87 — 2026-09-26 Benchmark 2.2 Task 6：审核账本
 
 - 新增按track/system/case区分的v3审核账本；事件签名覆盖actors、event、心理、模态、条件、source/context IDs，finding签名覆盖结论、原因和引用。
 - 只有完整签名相同才复用旧审核；主体、事件文字、来源、故事或系统变化均回到pending。每个事件、finding和reasoning support决定必须显式审核。
 - provenance仅允许unreviewed、assistant-reviewed、user-reviewed，避免把助手逐案核对表述为作者确认。
 
-## Step 88 — 2026-09-26 Benchmark 3 Task 7：报告与交接
+## Step 88 — 2026-09-26 Benchmark 2.2 Task 7：报告与交接
 
 - 新增确定性JSON/Markdown报告，包含Extraction Recall、Retrieval Recall@5、Judge Accuracy、Unsupported Reasoning、端到端P/R/F1、绝对/相对差、混淆矩阵、首次失败归因、性能和对账文件。
-- 新增运行说明与Benchmark协议文档；无模型双轨冒烟测试通过。Benchmark 3测试26/26通过，关联旧回归11/11通过；完整项目438/438通过。
+- 新增运行说明与Benchmark协议文档；无模型双轨冒烟测试通过。Benchmark 2.2测试26/26通过，关联旧回归11/11通过；完整项目438/438通过。
 - 编译检查及输入验证通过：24篇、72个gold facts，模型固定Qwen/Qwen3-4B-Instruct-2507 revision cdbee75f17c01a7cc42f958dc650907174af0554。旧冻结3套260文件changed=[]且archive_ok=true。
-- 尚未运行正式CUDA Benchmark 3，也未把未审核结果标成完成；正式得分将在用户运行并完成审核账本后生成。
+- 尚未运行正式CUDA Benchmark 2.2，也未把未审核结果标成完成；正式得分将在用户运行并完成审核账本后生成。
 
-## Step 89 — 2026-09-26 Benchmark 3 运行反馈与调度修复
+## Step 89 — 2026-09-26 Benchmark 2.2 运行反馈与调度修复
 
 - 首次正式运行在模型加载后长期无输出；诊断确认并非加载卡死，而是CLI未转发逐案例/逐阶段进度。中断目录已保存41/48条端到端结果。
 - `RESULT_DIR`现在于模型加载前打印；端到端、四格和性能轨道均显示案例、系统、阶段及当前进度。四格轨道增加JSONL断点续跑。
 - 降低重复计算：确定性质量运行直接作为性能测量repeat 1；每个系统的预热从完整24篇改为固定1篇且不计入中位数；只额外执行repeat 2和3。仍保持三轮完整测量的统计定义。
 - 正式输出目录加入Git忽略，防止原始运行结果误提交。原中断目录manifest与修复后身份摘要一致，可安全续跑并只补剩余7条端到端结果。
-- 修复后Benchmark 3测试27/27、编译和输入校验通过；旧冻结3套260文件仍为changed=[]、archive_ok=true。
+- 修复后Benchmark 2.2测试27/27、编译和输入校验通过；旧冻结3套260文件仍为changed=[]、archive_ok=true。
 
-## Step 90 — 2026-09-26 Benchmark 3 正式结果审核
+## Step 90 — 2026-09-26 Benchmark 2.2 正式结果审核
 
-- 正式结果目录 `agent_pipeline_v3/reports/benchmark_3_20260926T122502Z_ecbff6` 完成24篇双系统端到端、24篇四格配对和两套系统各3轮性能测量；端到端共48行，Baseline 19 ok/5 partial，Candidate 24 ok，配对96格全部ok。
+- 正式结果目录 `agent_pipeline_v2_2/reports/benchmark_2_2_20260926T122502Z_ecbff6` 完成24篇双系统端到端、24篇四格配对和两套系统各3轮性能测量；端到端共48行，Baseline 19 ok/5 partial，Candidate 24 ok，配对96格全部ok。
 - 修正首次失败归因口径：已完成但状态为partial的案例继续进入阶段归因，不再误算为execution failure；真实error仍优先归为execution failure。回归测试覆盖该边界。
 - Candidate相对Baseline：Extraction Recall 75.00%→98.61%，Retrieval Recall@5 72.22%→89.36%，Judge Accuracy 63.64%→72.73%，Unsupported Reasoning 35.19%→26.76%，端到端Precision/Recall/F1 52.38%/45.83%/48.89%→66.67%/75.00%/70.59%。
 - 漏报首次失败归因从Baseline的extraction 7、retrieval 4、judge 3，变为Candidate的retrieval 3、judge 5；Candidate已消除本轮冲突事实的抽取层漏报，剩余瓶颈主要转移到Judge与少量检索。
 - 性能中位数：Baseline 1603.24秒，Candidate 1513.32秒，缩短89.92秒（5.61%）；峰值allocated约3.75→3.73 GiB，reserved均约4.13 GiB。Candidate输入token中位数91828→79517，生成token 19806→13158。
-- 审核来源为assistant-reviewed，用于逐案评测复核，不代表作者确认。报告已重生成到结果目录的 `benchmark_3_summary.md/json`；本步尚未冻结Benchmark 3。
+- 审核来源为assistant-reviewed，用于逐案评测复核，不代表作者确认。报告已重生成到结果目录的 `benchmark_2_2_summary.md/json`；本步尚未冻结Benchmark 2.2。
+
+## Step 91 — 2026-09-27 Benchmark 2.2 命名校正
+
+- 用户确认上一轮端到端对比属于Benchmark 2.2，下一轮使用新的主版本编号；代码包、入口、测试、schema、报告、设计文档和实施计划统一采用v2_2/Benchmark 2.2命名。
+- 正式结果迁移为 `agent_pipeline_v2_2/reports/benchmark_2_2_20260926T122502Z_ecbff6`，数值、逐案输出和assistant-reviewed审核决定保持不变；汇总文件改为 `benchmark_2_2_summary.md/json`。
+- Git开发分支同步改为 `benchmark/2.2-end-to-end`，为下一轮释放完整的主版本命名空间。

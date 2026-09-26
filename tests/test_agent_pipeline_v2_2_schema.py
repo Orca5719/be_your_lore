@@ -1,6 +1,6 @@
 import unittest
 
-from agent_pipeline_v3.schema import (
+from agent_pipeline_v2_2.schema import (
     RunIdentity,
     SystemConfig,
     stable_digest,

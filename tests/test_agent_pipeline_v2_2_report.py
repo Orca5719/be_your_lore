@@ -1,4 +1,4 @@
-from agent_pipeline_v3.report import build_summary, render_markdown
+from agent_pipeline_v2_2.report import build_summary, render_markdown
 
 
 def score(value):

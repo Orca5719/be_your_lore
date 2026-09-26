@@ -32,7 +32,7 @@ def build_review_template(dataset: dict, run_rows: list[dict], *, track: str = "
     cases = {case["id"]: case for case in dataset["cases"]}
     systems = sorted({row["system"] for row in run_rows})
     ledger = {
-        "schema_version": "agent-pipeline-v3-review-v1", "status": "pending_review",
+        "schema_version": "agent-pipeline-v2-2-review-v1", "status": "pending_review",
         "provenance": "unreviewed", "track": track, "dataset_sha256": stable_digest(dataset),
         "systems": systems, "event_mapping": {}, "finding_mapping": {},
         "system_event_labels": {}, "system_finding_labels": {}, "reasoning_support_labels": {},
@@ -74,7 +74,7 @@ def reuse_exact_reviews(template: dict, previous: dict) -> dict:
 
 
 def validate_review(dataset: dict, run_rows: list[dict], review: dict, *, require_complete: bool = True) -> dict:
-    if review.get("schema_version") != "agent-pipeline-v3-review-v1":
+    if review.get("schema_version") != "agent-pipeline-v2-2-review-v1":
         raise ValueError("invalid review schema")
     if require_complete and review.get("status") != "reviewed":
         raise ValueError("review is not complete")

@@ -1,6 +1,6 @@
 import unittest
 
-from agent_pipeline_v3.scoring import score_system
+from agent_pipeline_v2_2.scoring import score_system
 
 
 def fixture():

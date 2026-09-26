@@ -1,5 +1,5 @@
-from agent_pipeline_v3.paired import run_paired_matrix
-from agent_pipeline_v3.report import build_summary, render_markdown
+from agent_pipeline_v2_2.paired import run_paired_matrix
+from agent_pipeline_v2_2.report import build_summary, render_markdown
 
 
 def test_no_model_fixture_covers_paired_and_report_tracks():
@@ -13,4 +13,4 @@ def test_no_model_fixture_covers_paired_and_report_tracks():
         "end_to_end_conflict": {"precision": 1.0, "recall": 1.0, "f1": 1.0},
     }
     summary = build_summary(score, score, performance={}, attribution={}, manifest={"identity": {"paired_event_digest": matrix["event_digest"]}})
-    assert "Agent Pipeline Benchmark 3" in render_markdown(summary)
+    assert "Agent Pipeline Benchmark 2.2" in render_markdown(summary)

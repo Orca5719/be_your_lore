@@ -53,7 +53,7 @@ def render_markdown(summary: dict) -> str:
         ("End-to-End Recall", b["end_to_end_conflict"]["recall"], c["end_to_end_conflict"]["recall"]),
         ("End-to-End F1", b["end_to_end_conflict"]["f1"], c["end_to_end_conflict"]["f1"]),
     ]
-    lines = ["# Agent Pipeline Benchmark 3", "", "## Configuration", "", "```json", json.dumps(summary["configuration"], ensure_ascii=False, indent=2), "```", "", "## Quality", "", "| Metric | Baseline | Candidate |", "|---|---:|---:|"]
+    lines = ["# Agent Pipeline Benchmark 2.2", "", "## Configuration", "", "```json", json.dumps(summary["configuration"], ensure_ascii=False, indent=2), "```", "", "## Quality", "", "| Metric | Baseline | Candidate |", "|---|---:|---:|"]
     lines += [f"| {name} | {pct(left)} | {pct(right)} |" for name, left, right in rows]
     lines += ["", "## Judge confusion matrices", "", "```json", json.dumps({"baseline": b["judge"].get("confusion", {}), "candidate": c["judge"].get("confusion", {})}, ensure_ascii=False, indent=2), "```", "", "## Error attribution", "", "```json", json.dumps(summary["first_failure_attribution"], ensure_ascii=False, indent=2), "```", "", "## Performance", "", "```json", json.dumps(summary["performance"], ensure_ascii=False, indent=2), "```", "", "## Reconciliation", "", "```json", json.dumps(summary["reconciliation"], ensure_ascii=False, indent=2), "```", "", "## Limitations", ""]
     lines += [f"- {item}" for item in summary["limitations"]]
@@ -62,5 +62,5 @@ def render_markdown(summary: dict) -> str:
 
 def write_summary(directory: Path, summary: dict) -> None:
     directory.mkdir(parents=True, exist_ok=True)
-    (directory / "benchmark_3_summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (directory / "benchmark_3_summary.md").write_text(render_markdown(summary), encoding="utf-8")
+    (directory / "benchmark_2_2_summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (directory / "benchmark_2_2_summary.md").write_text(render_markdown(summary), encoding="utf-8")

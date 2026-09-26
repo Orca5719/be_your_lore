@@ -48,7 +48,7 @@ def run_paired_matrix(
     batch_size: int = 8,
 ) -> dict:
     if top_k != 5 or batch_size != 8:
-        raise ValueError("Benchmark 3 requires Top-K=5 and Judge batch=8")
+        raise ValueError("Benchmark 2.2 requires Top-K=5 and Judge batch=8")
     event_digest = stable_digest(extraction_rows)
     extraction = {"events": extraction_rows}
     retrievals = {}
@@ -78,7 +78,7 @@ def run_paired_matrix(
     status = "ok" if status_counts["ok"] == 4 else "error" if status_counts["error"] == 4 else "partial"
     summaries = {name: _cell_summary(cell) for name, cell in cells.items()}
     return {
-        "schema_version": "agent-pipeline-v3-paired-v1",
+        "schema_version": "agent-pipeline-v2-2-paired-v1",
         "status": status,
         "event_digest": event_digest,
         "cells": cells,

@@ -1,13 +1,13 @@
-# Agent Pipeline Benchmark 3 Design
+# Agent Pipeline Benchmark 2.2 Design
 
 ## 1. Goal
 
-Benchmark 3 compares the frozen Agent Pipeline v2 end to end against a candidate pipeline that adds the two changes validated separately in Benchmark 2.1:
+Benchmark 2.2 compares the frozen Agent Pipeline v2 end to end against a candidate pipeline that adds the two changes validated separately in Benchmark 2.1:
 
 - retrieval changes from Dense Top-5 to Hybrid RRF Top-5;
 - Judge changes from frozen Judge v1 to Judge v2.1, where contradiction requires that the story fact and applicable lore cannot both be true.
 
-The benchmark keeps the existing 24-story dataset. Dataset expansion is outside Benchmark 3.
+The benchmark keeps the existing 24-story dataset. Dataset expansion is outside Benchmark 2.2.
 
 ## 2. Compared systems
 
@@ -21,7 +21,7 @@ The benchmark keeps the existing 24-story dataset. Dataset expansion is outside 
 
 ### Candidate
 
-- Extraction: the same extractor version and extraction-repair policy used by the Benchmark 3 implementation.
+- Extraction: the same extractor version and extraction-repair policy used by the Benchmark 2.2 implementation.
 - Retrieval: Hybrid RRF Top-5, combining Dense and Chinese BM25.
 - Metadata filter: disabled.
 - Judge: Judge v2.1 coexistence rule.
@@ -161,7 +161,7 @@ Headline timing values are medians of three measured runs after warm-up. Quality
 
 ## 9. Architecture and isolation
 
-Create an independent `agent_pipeline_v3` package and `agent_pipeline_v3_benchmark.py` entry point.
+Create an independent `agent_pipeline_v2_2` package and `agent_pipeline_v2_2_benchmark.py` entry point.
 
 The package contains:
 
@@ -169,14 +169,14 @@ The package contains:
 - a Baseline adapter that calls frozen v2 behavior without modifying it;
 - a paired-matrix runner;
 - a review-ledger generator and validator;
-- a Benchmark 3 scorer with first-failure attribution;
+- a Benchmark 2.2 scorer with first-failure attribution;
 - a report generator for JSON and Markdown comparison tables.
 
 Frozen v2, v2.1, previous datasets, prompts, reports, and freeze manifests must not be modified.
 
 ## 10. CLI and outputs
 
-The Benchmark 3 CLI provides independently resumable commands:
+The Benchmark 2.2 CLI provides independently resumable commands:
 
 - `validate`
 - `run-end-to-end`
@@ -185,7 +185,7 @@ The Benchmark 3 CLI provides independently resumable commands:
 - `summary`
 - `run-all`
 
-Official output is written to a unique directory under `agent_pipeline_v3/reports/`. It includes:
+Official output is written to a unique directory under `agent_pipeline_v2_2/reports/`. It includes:
 
 - copied dataset and configuration manifest;
 - Baseline and Candidate raw JSONL;
@@ -219,13 +219,13 @@ Before the official GPU run:
 - resume tests reject mismatched data or configuration;
 - freeze verification confirms all previous benchmark snapshots are unchanged.
 
-Benchmark 3 is complete when:
+Benchmark 2.2 is complete when:
 
 - both end-to-end variants finish the same 24 stories;
 - the four paired cells finish the same reviewed facts;
 - all requested quality, attribution, latency, throughput, and VRAM metrics are present;
 - raw rows reconcile exactly with aggregate counts;
 - the final report clearly separates structural failures, retrieval failures, Judge errors, and model-quality limitations;
-- the complete Benchmark 3 result is frozen only after review and scoring succeed.
+- the complete Benchmark 2.2 result is frozen only after review and scoring succeed.
 
-Benchmark 3 does not claim generalization beyond the existing 24-story fixture. Dataset expansion remains the next separate benchmark step.
+Benchmark 2.2 does not claim generalization beyond the existing 24-story fixture. Dataset expansion remains the next separate benchmark step.

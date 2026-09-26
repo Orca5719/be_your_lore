@@ -4,7 +4,7 @@ from types import SimpleNamespace
 
 import pytest
 
-from agent_pipeline_v3.runner import build_manifest, ensure_manifest, load_jsonl, run_resumable
+from agent_pipeline_v2_2.runner import build_manifest, ensure_manifest, load_jsonl, run_resumable
 
 
 def test_manifest_rejects_changed_identity(tmp_path):

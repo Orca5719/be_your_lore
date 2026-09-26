@@ -1,10 +1,10 @@
-# Agent Pipeline Benchmark 3 Implementation Plan
+# Agent Pipeline Benchmark 2.2 Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build an isolated Benchmark 3 that compares frozen Pipeline v2 against Hybrid RRF plus Judge v2.1 end to end and in a paired attribution matrix on the existing 24 stories.
+**Goal:** Build an isolated Benchmark 2.2 that compares frozen Pipeline v2 against Hybrid RRF plus Judge v2.1 end to end and in a paired attribution matrix on the existing 24 stories.
 
-**Architecture:** A new `agent_pipeline_v3` package adapts frozen v2 and tested v2.1 components without modifying them. It emits one normalized run-row schema, validates reviewed mappings, assigns one first-failure cause to each missed conflict, and renders auditable quality/performance comparisons.
+**Architecture:** A new `agent_pipeline_v2_2` package adapts frozen v2 and tested v2.1 components without modifying them. It emits one normalized run-row schema, validates reviewed mappings, assigns one first-failure cause to each missed conflict, and renders auditable quality/performance comparisons.
 
 **Tech Stack:** Python 3.12, PyTorch, Transformers, NumPy, existing BGE/Qwen runtimes, unittest/pytest-compatible tests.
 
@@ -30,12 +30,12 @@
 
 ---
 
-### Task 1: Benchmark 3 schemas and invariant validation
+### Task 1: Benchmark 2.2 schemas and invariant validation
 
 **Files:**
-- Create: `agent_pipeline_v3/__init__.py`
-- Create: `agent_pipeline_v3/schema.py`
-- Create: `tests/test_agent_pipeline_v3_schema.py`
+- Create: `agent_pipeline_v2_2/__init__.py`
+- Create: `agent_pipeline_v2_2/schema.py`
+- Create: `tests/test_agent_pipeline_v2_2_schema.py`
 
 **Interfaces:**
 - Produces: `SystemConfig`, `RunIdentity`, `validate_system_config(value)`, `validate_run_row(value)`, and `stable_digest(value)`.
@@ -50,7 +50,7 @@ def test_candidate_requires_hybrid_without_metadata():
         validate_system_config(value)
 ```
 
-- [ ] **Step 2: Run `pytest -q tests/test_agent_pipeline_v3_schema.py`** and confirm import/test failures.
+- [ ] **Step 2: Run `pytest -q tests/test_agent_pipeline_v2_2_schema.py`** and confirm import/test failures.
 - [ ] **Step 3: Implement frozen dataclasses/validators** with explicit enum values and canonical JSON hashing; no model imports.
 - [ ] **Step 4: Re-run the Task 1 test file** and confirm all tests pass.
 - [ ] **Step 5: Append Task 1 implementation and test evidence to `LOG.md`.**
@@ -58,10 +58,10 @@ def test_candidate_requires_hybrid_without_metadata():
 ### Task 2: Quality scorer and mutually exclusive failure attribution
 
 **Files:**
-- Create: `agent_pipeline_v3/scoring.py`
-- Create: `agent_pipeline_v3/attribution.py`
-- Create: `tests/test_agent_pipeline_v3_scoring.py`
-- Create: `tests/test_agent_pipeline_v3_attribution.py`
+- Create: `agent_pipeline_v2_2/scoring.py`
+- Create: `agent_pipeline_v2_2/attribution.py`
+- Create: `tests/test_agent_pipeline_v2_2_scoring.py`
+- Create: `tests/test_agent_pipeline_v2_2_attribution.py`
 
 **Interfaces:**
 - Consumes: `score_system(cases, run_rows, review, k=5)` inputs compatible with reviewed v2 rows.
@@ -86,10 +86,10 @@ assert score["end_to_end_conflict"] == {
 ### Task 3: Baseline and Candidate end-to-end adapters
 
 **Files:**
-- Create: `agent_pipeline_v3/systems.py`
-- Create: `agent_pipeline_v3/story_pipeline.py`
-- Create: `tests/test_agent_pipeline_v3_systems.py`
-- Create: `tests/test_agent_pipeline_v3_story_pipeline.py`
+- Create: `agent_pipeline_v2_2/systems.py`
+- Create: `agent_pipeline_v2_2/story_pipeline.py`
+- Create: `tests/test_agent_pipeline_v2_2_systems.py`
+- Create: `tests/test_agent_pipeline_v2_2_story_pipeline.py`
 
 **Interfaces:**
 - Produces: `build_baseline_system(...)`, `build_candidate_system(...)`, and `process_story(system, text, progress=None) -> dict`.
@@ -107,8 +107,8 @@ assert score["end_to_end_conflict"] == {
 ### Task 4: Paired two-by-two attribution runner
 
 **Files:**
-- Create: `agent_pipeline_v3/paired.py`
-- Create: `tests/test_agent_pipeline_v3_paired.py`
+- Create: `agent_pipeline_v2_2/paired.py`
+- Create: `tests/test_agent_pipeline_v2_2_paired.py`
 
 **Interfaces:**
 - Produces: `run_paired_matrix(extraction_rows, dense, hybrid, judge_v1, judge_v21, top_k=5, batch_size=8)`.
@@ -125,16 +125,16 @@ assert score["end_to_end_conflict"] == {
 ### Task 5: Resumable benchmark runner and CLI
 
 **Files:**
-- Create: `agent_pipeline_v3/runner.py`
-- Create: `agent_pipeline_v3/cli.py`
-- Create: `agent_pipeline_v3/__main__.py`
-- Create: `agent_pipeline_v3_benchmark.py`
-- Create: `tests/test_agent_pipeline_v3_runner.py`
-- Create: `tests/test_agent_pipeline_v3_cli.py`
+- Create: `agent_pipeline_v2_2/runner.py`
+- Create: `agent_pipeline_v2_2/cli.py`
+- Create: `agent_pipeline_v2_2/__main__.py`
+- Create: `agent_pipeline_v2_2_benchmark.py`
+- Create: `tests/test_agent_pipeline_v2_2_runner.py`
+- Create: `tests/test_agent_pipeline_v2_2_cli.py`
 
 **Interfaces:**
 - CLI commands: `validate`, `run-end-to-end`, `run-paired`, `score`, `summary`, `run-all`.
-- Produces unique directories under `agent_pipeline_v3/reports/` and prints `RESULT_DIR=<absolute path>`.
+- Produces unique directories under `agent_pipeline_v2_2/reports/` and prints `RESULT_DIR=<absolute path>`.
 
 - [ ] **Step 1: Write failing parser tests** for defaults CUDA/Top-5/batch-8/repeats-3/warmup-1 and all six subcommands.
 - [ ] **Step 2: Write failing resume tests** for atomic JSONL rows, completed-case reuse, duplicate rejection, and hash mismatch rejection.
@@ -142,14 +142,14 @@ assert score["end_to_end_conflict"] == {
 - [ ] **Step 4: Run Task 5 tests** and confirm missing CLI/runner failures.
 - [ ] **Step 5: Implement commands and manifests** including dataset, lore, index, model, prompt, source, and configuration hashes.
 - [ ] **Step 6: Implement performance repeats** with warm-up excluded, median stage/total times, stories/s, facts/s, input/generated tokens, and CUDA peaks.
-- [ ] **Step 7: Run Task 5 tests and `python -m agent_pipeline_v3 validate`.**
+- [ ] **Step 7: Run Task 5 tests and `python -m agent_pipeline_v2_2 validate`.**
 - [ ] **Step 8: Update `LOG.md`.**
 
 ### Task 6: Review ledger compatibility and complete scoring workflow
 
 **Files:**
-- Create: `agent_pipeline_v3/review.py`
-- Create: `tests/test_agent_pipeline_v3_review.py`
+- Create: `agent_pipeline_v2_2/review.py`
+- Create: `tests/test_agent_pipeline_v2_2_review.py`
 
 **Interfaces:**
 - Produces: `build_review_template`, `propose_review`, `reuse_exact_reviews`, and `validate_review`.
@@ -166,22 +166,22 @@ assert score["end_to_end_conflict"] == {
 ### Task 7: Final reports, regression verification, and user-run handoff
 
 **Files:**
-- Create: `agent_pipeline_v3/report.py`
-- Create: `agent_pipeline_v3/README.md`
-- Create: `docs/benchmarks/AGENT_PIPELINE_BENCHMARK_3.md`
-- Create: `tests/test_agent_pipeline_v3_report.py`
+- Create: `agent_pipeline_v2_2/report.py`
+- Create: `agent_pipeline_v2_2/README.md`
+- Create: `docs/benchmarks/AGENT_PIPELINE_BENCHMARK_2_2.md`
+- Create: `tests/test_agent_pipeline_v2_2_report.py`
 - Modify: `LOG.md`
 
 **Interfaces:**
-- Produces: `benchmark_3_summary.json`, `benchmark_3_summary.md`, per-case delta tables, and a freeze-ready manifest.
+- Produces: `benchmark_2_2_summary.json`, `benchmark_2_2_summary.md`, per-case delta tables, and a freeze-ready manifest.
 
 - [ ] **Step 1: Write failing report tests** requiring all requested metrics, absolute/relative deltas, configuration table, confusion matrices, first-failure totals, performance medians, limitations, and exact reconciliation links.
 - [ ] **Step 2: Run Task 7 tests** and confirm the missing renderer failure.
 - [ ] **Step 3: Implement deterministic JSON and Markdown renderers** that label model limitations separately from structural/execution failures.
-- [ ] **Step 4: Run all Benchmark 3 tests, then the complete project test suite and compile check.**
+- [ ] **Step 4: Run all Benchmark 2.2 tests, then the complete project test suite and compile check.**
 - [ ] **Step 5: Run `python -m agent_pipeline.verify_freeze`** and require all prior freezes to report `changed=[]` and `archive_ok=true`.
 - [ ] **Step 6: Run a no-model fixture smoke test** covering both tracks and report generation.
 - [ ] **Step 7: Give the user one official CUDA `run-all` command.** Do not run the expensive official benchmark inside implementation unless the user asks.
-- [ ] **Step 8: After the user run, review changed outputs, complete/reuse the ledger, run `score` and `summary`, then freeze Benchmark 3 only if all acceptance conditions pass.**
+- [ ] **Step 8: After the user run, review changed outputs, complete/reuse the ledger, run `score` and `summary`, then freeze Benchmark 2.2 only if all acceptance conditions pass.**
 - [ ] **Step 9: Record commands, test counts, freeze verification, and remaining limitations in `LOG.md`.**
 
