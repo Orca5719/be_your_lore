@@ -1073,3 +1073,12 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 降低重复计算：确定性质量运行直接作为性能测量repeat 1；每个系统的预热从完整24篇改为固定1篇且不计入中位数；只额外执行repeat 2和3。仍保持三轮完整测量的统计定义。
 - 正式输出目录加入Git忽略，防止原始运行结果误提交。原中断目录manifest与修复后身份摘要一致，可安全续跑并只补剩余7条端到端结果。
 - 修复后Benchmark 3测试27/27、编译和输入校验通过；旧冻结3套260文件仍为changed=[]、archive_ok=true。
+
+## Step 90 — 2026-09-26 Benchmark 3 正式结果审核
+
+- 正式结果目录 `agent_pipeline_v3/reports/benchmark_3_20260926T122502Z_ecbff6` 完成24篇双系统端到端、24篇四格配对和两套系统各3轮性能测量；端到端共48行，Baseline 19 ok/5 partial，Candidate 24 ok，配对96格全部ok。
+- 修正首次失败归因口径：已完成但状态为partial的案例继续进入阶段归因，不再误算为execution failure；真实error仍优先归为execution failure。回归测试覆盖该边界。
+- Candidate相对Baseline：Extraction Recall 75.00%→98.61%，Retrieval Recall@5 72.22%→89.36%，Judge Accuracy 63.64%→72.73%，Unsupported Reasoning 35.19%→26.76%，端到端Precision/Recall/F1 52.38%/45.83%/48.89%→66.67%/75.00%/70.59%。
+- 漏报首次失败归因从Baseline的extraction 7、retrieval 4、judge 3，变为Candidate的retrieval 3、judge 5；Candidate已消除本轮冲突事实的抽取层漏报，剩余瓶颈主要转移到Judge与少量检索。
+- 性能中位数：Baseline 1603.24秒，Candidate 1513.32秒，缩短89.92秒（5.61%）；峰值allocated约3.75→3.73 GiB，reserved均约4.13 GiB。Candidate输入token中位数91828→79517，生成token 19806→13158。
+- 审核来源为assistant-reviewed，用于逐案评测复核，不代表作者确认。报告已重生成到结果目录的 `benchmark_3_summary.md/json`；本步尚未冻结Benchmark 3。

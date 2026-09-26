@@ -12,7 +12,7 @@ def attribute_first_failures(cases: list[dict], run_rows: list[dict], review: di
         case_id = case["id"]
         row = by_case.get(case_id)
         conflict_facts = [x for x in case.get("gold_facts", []) if x.get("expected_verdict") == "矛盾"]
-        if row is None or row.get("status") not in {"ok", "pending_review"}:
+        if row is None or row.get("status") == "error":
             for gold in conflict_facts:
                 details.append({"case_id": case_id, "gold_fact_id": gold["id"], "primary_cause": "execution_failure", "event_ids": [], "evidence_ids": []})
             continue

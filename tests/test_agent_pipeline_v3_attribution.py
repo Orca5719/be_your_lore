@@ -27,6 +27,17 @@ class BenchmarkV3AttributionTests(unittest.TestCase):
         self.assertTrue(result["items"])
         self.assertEqual({x["primary_cause"] for x in result["items"]}, {"execution_failure"})
 
+    def test_partial_completed_row_can_be_an_extraction_miss(self):
+        cases, rows, review = fixture()
+        rows[0]["status"] = "partial"
+        rows[0]["result"]["events"] = []
+        review["event_mapping"]["C1"] = {"G1": [], "G2": [], "G3": []}
+        result = attribute_first_failures(cases, rows, review)
+        self.assertEqual(
+            {x["primary_cause"] for x in result["items"]},
+            {"extraction_miss"},
+        )
+
     def test_correct_judge_without_report_finding_is_report_miss(self):
         cases, rows, review = fixture()
         cases[0]["gold_findings"] = [{"id": "F1", "gold_fact_ids": ["G1"]}]
