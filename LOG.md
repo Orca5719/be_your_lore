@@ -1040,3 +1040,28 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 保留当前开发副本的源码、评测证据、冻结快照和 Benchmark 3 Task 1–3；扩充 `.gitignore`，排除虚拟环境、缓存、CodeGraph数据库、Hugging Face缓存及常见模型权重格式。
 - 暂存检查未发现超过20MB的单文件，未发现模型权重或缓存被暂存。Benchmark 3定向测试17/17通过；三套冻结共260文件均未改变且归档校验通过。
 - 本步建立本地整合提交；暂不推送，等待用户审阅后再发布远端分支。
+
+## Step 85 — 2026-09-26 Benchmark 3 Task 4：四格配对归因
+
+- 新增 `agent_pipeline_v3/paired.py`，固定 Dense/Hybrid × Judge v1/v2.1 四格；直接消费已有提取事件，不再次调用提取器。
+- 所有格记录同一事件摘要；Dense与Hybrid各检索一次并供两个Judge复用。单格异常仅标记该格，矩阵状态变为partial，其他格继续完成。
+- 输出检索单变量、Judge单变量及组合对照定义；Task 4测试2/2通过。
+
+## Step 86 — 2026-09-26 Benchmark 3 Task 5：可恢复运行器与CLI
+
+- 新增原子JSON/JSONL写入、重复行拒绝、已完成案例复用，以及dataset/config/prompt/index/source/model revision统一身份摘要；恢复时任一摘要变化即拒绝续跑。
+- 新增 `validate`、`run-end-to-end`、`run-paired`、`score`、`summary`、`run-all` 六个命令。正式参数固定默认CUDA、Top-5、Judge batch=8、warmup=1、repeats=3。
+- `run-all`全程共享一次Qwen与检索模型加载；自动执行端到端、四格归因、一次预热和三次性能测量，记录总耗时、stories/s、facts/s、输入/生成token及CUDA峰值显存。
+
+## Step 87 — 2026-09-26 Benchmark 3 Task 6：审核账本
+
+- 新增按track/system/case区分的v3审核账本；事件签名覆盖actors、event、心理、模态、条件、source/context IDs，finding签名覆盖结论、原因和引用。
+- 只有完整签名相同才复用旧审核；主体、事件文字、来源、故事或系统变化均回到pending。每个事件、finding和reasoning support决定必须显式审核。
+- provenance仅允许unreviewed、assistant-reviewed、user-reviewed，避免把助手逐案核对表述为作者确认。
+
+## Step 88 — 2026-09-26 Benchmark 3 Task 7：报告与交接
+
+- 新增确定性JSON/Markdown报告，包含Extraction Recall、Retrieval Recall@5、Judge Accuracy、Unsupported Reasoning、端到端P/R/F1、绝对/相对差、混淆矩阵、首次失败归因、性能和对账文件。
+- 新增运行说明与Benchmark协议文档；无模型双轨冒烟测试通过。Benchmark 3测试26/26通过，关联旧回归11/11通过；完整项目438/438通过。
+- 编译检查及输入验证通过：24篇、72个gold facts，模型固定Qwen/Qwen3-4B-Instruct-2507 revision cdbee75f17c01a7cc42f958dc650907174af0554。旧冻结3套260文件changed=[]且archive_ok=true。
+- 尚未运行正式CUDA Benchmark 3，也未把未审核结果标成完成；正式得分将在用户运行并完成审核账本后生成。

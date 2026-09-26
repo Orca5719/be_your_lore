@@ -16,3 +16,10 @@ Task 3: complete (无Git提交；Benchmark 3自身17/17，关联v2/v2.1合计51/
 
 Final review: self-review（多代理未获本任务授权）；未发现Critical/Important/Minor项。Task 4–7按用户要求暂不实现。
 
+Task 4: complete (paired matrix shares one event digest; Dense/Hybrid cached once; cell failures isolated; tests 2/2 pass).
+Task 5: complete (atomic resume, identity hashes, six CLI commands, shared-runtime warmup/repeats performance path; runner/CLI tests pass).
+Task 6: complete (exact-signature review reuse, exhaustive event/finding/reasoning labels, explicit assistant-reviewed provenance; tests pass).
+Task 7: implementation complete (deterministic JSON/Markdown, docs, no-model two-track smoke; official CUDA run pending user execution by design).
+Verification: Benchmark 3 26/26; related v2 review/attribution/v2.1 story tests 11/11; full suite 438/438; compile/validate ok; prior freezes 260 files unchanged and archive_ok=true.
+Ruling: pytest is absent from project venv and Anaconda lacks torch/transformers; full suite used the project interpreter after preloading its model dependencies and then importing the existing Anaconda pytest package. Initial default-temp failures were environment permission errors; rerun with a project-local basetemp passed 438/438.
+
