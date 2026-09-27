@@ -1111,3 +1111,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 逐层对照确认新旧运行的状态、80个抽取事件、Judge状态、逐事件verdict、引用和report summary全部一致；Judge输入79517 tokens与输出13158 tokens也与Benchmark 2.2 Candidate一致。
 - 根因是语义摘要错误包含Dense/BM25浮点诊断分数；不同运行约1e-14的末位数值噪声被误判为质量变化。参考协议升级为v2：保留证据ID、内容、来源、顺序和rank，排除不参与语义判断的数值分数。
 - 回归测试规定浮点分数漂移必须通过、证据ID变化必须失败；重新规范化后正式运行24/24精确匹配，无需重跑模型。原始story和逐调用trace未改动。
+
+## Step 95 — 2026-09-28 Benchmark 3.1 第一部分：Retry Audit
+
+- 从Benchmark 3正式分支建立 `benchmark/3.1-generation-audit` 独立worktree；本部分只读取正式结果，不修改Extractor、Judge、prompt、schema、检索或判决逻辑，也不加载4B模型。
+- 新增24篇/130调用/24对24质量护栏的严格对账，逐一连接story、窗口、attempt与call_id；输出全部调用审计JSONL、重试taxonomy JSON及CSV，原始触发错误完整保留。
+- 固定8类taxonomy，并区分覆盖恢复、其他失败后的Extractor重试和Judge单行重试；Judge主类保留BATCH_ROW_RETRY，同时单列底层citation校验与截断原因。
+- 正式审计确认31次retry共消耗24609 input tokens、3414 output tokens和289.815秒；其中20次覆盖恢复、7次其他Extractor重试、4次Judge单行重试。第二部分的字段成本与Lean Projection尚未实现，等待用户批准。
