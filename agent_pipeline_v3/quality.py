@@ -3,11 +3,17 @@ from __future__ import annotations
 from agent_pipeline_v2_2.schema import stable_digest
 
 
-REFERENCE_SCHEMA = "agent-pipeline-v3-quality-reference-v1"
+REFERENCE_SCHEMA = "agent-pipeline-v3-quality-reference-v2"
 
 
 def _without(value: dict, excluded: set[str]) -> dict:
     return {key: item for key, item in value.items() if key not in excluded}
+
+
+def _semantic_evidence(value: dict) -> dict:
+    """Keep evidence identity/content/order while excluding numeric retrieval diagnostics."""
+    fields = ("id", "text", "file", "start_line", "end_line", "heading_path", "rank")
+    return {field: value.get(field) for field in fields if field in value}
 
 
 def semantic_payload(row: dict) -> dict:
@@ -16,7 +22,11 @@ def semantic_payload(row: dict) -> dict:
     extraction = stages.get("extraction", {})
     judge = stages.get("judge", {})
     events = [_without(event, {"review_required", "review_reasons"}) for event in extraction.get("events", [])]
-    items = [_without(item, {"call"}) for item in judge.get("items", [])]
+    items = []
+    for item in judge.get("items", []):
+        normalized = _without(item, {"call", "evidence"})
+        normalized["evidence"] = [_semantic_evidence(value) for value in item.get("evidence", [])]
+        items.append(normalized)
     findings = list(result.get("findings", []))
     return {
         "case_id": row.get("case_id"),

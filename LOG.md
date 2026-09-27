@@ -1104,3 +1104,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 聚合Extractor/Judge的调用、重试、有效/padding/输出token、Prefill/Decode/Total、TTFT p50/p95、加权吞吐和逐调用显存峰值；同时报告模型加载、四阶段、LLM、非LLM与端到端耗时、最慢10次调用和时间对账。
 - 自动生成 `inference_calls.jsonl`、逐故事JSONL、汇总JSON、组件/调用CSV和Markdown报告；说明文档记录固定协议、指标公式、恢复命令、TTFT批级语义与结果文件。
 - 首token判定器缓存全false继续信号，避免每个decode步重复分配张量；只在首步和生成结束各同步一次CUDA。正式报告目录加入Git忽略。
+
+## Step 94 — 2026-09-27 Benchmark 3 首次正式运行质量护栏修复
+
+- 首次正式运行24/24案例均为ok、130次LLM调用无错误、时间对账为0，但旧质量护栏仅报告1/24匹配。
+- 逐层对照确认新旧运行的状态、80个抽取事件、Judge状态、逐事件verdict、引用和report summary全部一致；Judge输入79517 tokens与输出13158 tokens也与Benchmark 2.2 Candidate一致。
+- 根因是语义摘要错误包含Dense/BM25浮点诊断分数；不同运行约1e-14的末位数值噪声被误判为质量变化。参考协议升级为v2：保留证据ID、内容、来源、顺序和rank，排除不参与语义判断的数值分数。
+- 回归测试规定浮点分数漂移必须通过、证据ID变化必须失败；重新规范化后正式运行24/24精确匹配，无需重跑模型。原始story和逐调用trace未改动。
