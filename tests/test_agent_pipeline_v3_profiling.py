@@ -68,6 +68,13 @@ def test_trace_ids_are_monotonic_and_clear_keeps_sequence_unique():
     assert collector.records == [second]
 
 
+def test_resume_after_existing_records_prevents_duplicate_call_ids():
+    collector = TraceCollector(clock=Clock(0, 1))
+    collector.resume_after([{"call_id": "LLM-000041"}, {"call_id": "LLM-000009"}])
+    record = collector.start("extractor", 1, 1, 0).finish(0, status="error", error="x")
+    assert record["call_id"] == "LLM-000042"
+
+
 def test_first_token_timer_marks_only_once_and_never_stops_generation():
     collector = TraceCollector(clock=Clock(0.0, 0.25, 1.0))
     span = collector.start("judge", 2, 10, 2)
@@ -80,6 +87,7 @@ def test_first_token_timer_marks_only_once_and_never_stops_generation():
 
     assert first.tolist() == [False, False]
     assert second.tolist() == [False, False]
+    assert second is first
     assert sync_calls == ["sync"]
     assert record["prefill_time"] == pytest.approx(0.25)
 

@@ -1,0 +1,81 @@
+{
+  "schema_version": "agent-pipeline-v3-quality-reference-v1",
+  "cases": {
+    "SL-005": "41805b5e0253e1242607abdf509376e338f938afbdabe9f5a000a9f25467fe9b",
+    "SL-006": "1113ebfa215cc95540c652a31d88ad5a3ed777371323be000ade4d0466e14687",
+    "SL-007": "4bad47ebbeac4c04c2a9a21123033733fd1430f67bafbd8de624c0b1e4b28804",
+    "SL-008": "b87dbbb342c9107e06be3242392c49c189f77f969237bcba6b7c3b55542849bb",
+    "SL-009": "e8426e19d1df9e64d433cf396bb36ec1a94fa4a6ffa9ad188c399e743a67d580",
+    "SL-010": "39432a664f7441d2bd3488665a97947b468d8fad8f59b41cd8feb8240bc471c8",
+    "SL-011": "550c7386745fea7d75e3f0f54a07c2a3c303c435c77cb64d04169bc8d93b009b",
+    "SL-012": "8a49533c33edf1442aa18b01398ea701467b8391a8764445eecced45e3481f11",
+    "SL-013": "ee4951832c96ba5cc7b296554be47fc0c4661332223250d1ebf1f1eeea93ff86",
+    "SL-014": "b4083afba0423fa321f6b0128f0c22f119d455ef1560f445b0d43c60079eae2e",
+    "SL-015": "2ddf6d22e6ebd9064d162a7fbb621f3c1dfc9e3d7b811ce81bc5953e08819338",
+    "SL-016": "4593a8111211f209a12515c8161947627b847055208bd69f19b8082d4feaa178",
+    "SL-017": "ee9bed53cb7277999b6bfcc7bc80c4564cc4f2c3793d4bcf18bcb3e181acee42",
+    "SL-018": "d11b2d0c489c59d5004aec569e6626992af0037d2a9f7d3f66b616f440222468",
+    "SL-019": "2510ed11a6f1ecce43a856755593c9894d1dd97fc556a619aa82ab8b304c2bca",
+    "SL-020": "81672104b9807ad839e1ccb4b8938ac390b4a7806daabb01dbb2bbfed5f56174",
+    "SL-021": "e050963be6f5797d418058043cd5f833686dda5cd29e7b8d4eb12e6a06406146",
+    "SL-022": "93d1b7a822b3729255de8f85d9d0e310581fd54561aa817517d0acf03cf7cd6b",
+    "SL-023": "e8efd27fc5554d8be62f5d8ddfcaf7a53c2c6769d4b2cc934e5fcdee4f3a6811",
+    "SL-024": "35401891c1d9319528dd82f3c8c64de2e60125709a4e45f8f707282b108bc513",
+    "SL-P01": "a8b5362b2a28003f4ad743bc74bb3986957c14e7f6414192c33fadf60f1df09d",
+    "SL-P02": "6665d6ae0a915292bc7099d80276181560112d90eb9d7e71713d09454b2d6f37",
+    "SL-P03": "f8d13f708d427a2666b9ab5b332c778b4d86e9ce331ae8cbf58ee63d72e8f644",
+    "SL-P04": "1a4b4e28d912ff691914967fc5e78ef6ea46cc51ab8694f93fb4ae2254574c7b"
+  },
+  "official_metrics": {
+    "extraction": {
+      "hits": 71,
+      "misses": 1,
+      "total": 72,
+      "recall": 0.9861111111111112
+    },
+    "retrieval": {
+      "hits": 42,
+      "misses": 5,
+      "eligible": 47,
+      "k": 5,
+      "recall_at_5": 0.8936170212765957
+    },
+    "judge": {
+      "correct": 48,
+      "eligible": 66,
+      "accuracy": 0.7272727272727273,
+      "fp": 9,
+      "fn_total": 6,
+      "fn_with_complete_evidence": 5,
+      "confusion": {
+        "consistent": {
+          "consistent": 19,
+          "uncertain": 1,
+          "contradiction": 1
+        },
+        "contradiction": {
+          "contradiction": 16,
+          "uncertain": 5
+        },
+        "uncertain": {
+          "uncertain": 13,
+          "contradiction": 8,
+          "consistent": 3
+        }
+      }
+    },
+    "unsupported_reasoning": {
+      "count": 19,
+      "eligible": 71,
+      "rate": 0.2676056338028169
+    },
+    "end_to_end_conflict": {
+      "tp": 18,
+      "fp": 9,
+      "fn": 6,
+      "precision": 0.6666666666666666,
+      "recall": 0.75,
+      "f1": 0.7058823529411765
+    }
+  }
+}

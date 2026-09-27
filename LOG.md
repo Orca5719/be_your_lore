@@ -1096,3 +1096,11 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - Extractor沿用已有streamer首token时点；Judge使用只在首个生成步同步一次的stopping criterion，结束后再同步，避免逐token CUDA同步。格式重试与恢复会自然形成新的唯一call记录。
 - 项目虚拟环境原有Torch 2.7.1/CUDA 12.6但缺pytest；启用pip并安装pytest 9.1.1用于同一环境回归，没有重复安装Torch。
 - TDD覆盖计时恒等式、空/错误调用、单条与batch输出一致、padding、重试call_id关联、预热trace清空和逐调用CUDA峰值重置；本块12项测试通过。尚未实现24篇运行器、聚合、报告或CLI，等待用户批准第二块。
+
+## Step 93 — 2026-09-27 Benchmark 3 第二块：正式运行、聚合与报告
+
+- 新增固定24篇的可恢复运行器与 `validate`、`run`、`summary` 命令；模型和检索器全程只共享加载一次，先运行1篇预热并清空trace，再顺序保存正式故事。每篇完成后原子刷新逐故事结果与逐调用trace，中断后按manifest校验并续跑。
+- 保存Benchmark 2.2 Candidate的24案例语义参考；正式结果逐案剔除timing后做精确语义比对。只有24/24一致时性能结果才标记为可比，差异案例会进入质量护栏并返回退出码2。
+- 聚合Extractor/Judge的调用、重试、有效/padding/输出token、Prefill/Decode/Total、TTFT p50/p95、加权吞吐和逐调用显存峰值；同时报告模型加载、四阶段、LLM、非LLM与端到端耗时、最慢10次调用和时间对账。
+- 自动生成 `inference_calls.jsonl`、逐故事JSONL、汇总JSON、组件/调用CSV和Markdown报告；说明文档记录固定协议、指标公式、恢复命令、TTFT批级语义与结果文件。
+- 首token判定器缓存全false继续信号，避免每个decode步重复分配张量；只在首步和生成结束各同步一次CUDA。正式报告目录加入Git忽略。

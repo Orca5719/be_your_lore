@@ -64,6 +64,18 @@ class TraceCollector:
     def clear(self) -> None:
         self.records.clear()
 
+    def resume_after(self, records: list[dict]) -> None:
+        highest = self._sequence
+        for record in records:
+            call_id = record.get("call_id") if isinstance(record, dict) else None
+            if not isinstance(call_id, str) or not call_id.startswith("LLM-"):
+                raise ValueError("cannot resume from invalid call_id")
+            try:
+                highest = max(highest, int(call_id.split("-", 1)[1]))
+            except ValueError as exc:
+                raise ValueError("cannot resume from invalid call_id") from exc
+        self._sequence = highest
+
     def start(self, component: str, batch_size: int, input_tokens: int, padded_input_tokens: int):
         if component not in COMPONENTS:
             raise ValueError("invalid component")
@@ -151,6 +163,7 @@ class FirstTokenTimer:
         self.span = span
         self.synchronize = synchronize
         self.marked = False
+        self._continue_signal = None
 
     def __call__(self, input_ids, scores, **kwargs):
         if not self.marked:
@@ -158,10 +171,12 @@ class FirstTokenTimer:
                 self.synchronize()
             self.span.mark_first_token()
             self.marked = True
-        try:
-            import torch
+        if self._continue_signal is None:
+            try:
+                import torch
 
-            dtype = torch.bool
-        except ModuleNotFoundError:
-            dtype = None
-        return input_ids.new_zeros((input_ids.shape[0],), dtype=dtype)
+                dtype = torch.bool
+            except ModuleNotFoundError:
+                dtype = None
+            self._continue_signal = input_ids.new_zeros((input_ids.shape[0],), dtype=dtype)
+        return self._continue_signal
