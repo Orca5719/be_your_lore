@@ -1088,3 +1088,11 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 用户确认上一轮端到端对比属于Benchmark 2.2，下一轮使用新的主版本编号；代码包、入口、测试、schema、报告、设计文档和实施计划统一采用v2_2/Benchmark 2.2命名。
 - 正式结果迁移为 `agent_pipeline_v2_2/reports/benchmark_2_2_20260926T122502Z_ecbff6`，数值、逐案输出和assistant-reviewed审核决定保持不变；汇总文件改为 `benchmark_2_2_summary.md/json`。
 - Git开发分支同步改为 `benchmark/2.2-end-to-end`，为下一轮释放完整的主版本命名空间。
+
+## Step 92 — 2026-09-27 Benchmark 3 第一块：逐调用采集核心
+
+- 从Benchmark 2.2建立 `benchmark/3-workload-profiling`；新增独立 `agent_pipeline_v3`，没有修改冻结的Extractor、Retriever、Judge prompt或判决逻辑。
+- 建立逐次真实generate调用协议：记录call/story/component/status、有效与padding输入token、输出token、Prefill/Decode/Total、TTFT、实际batch及逐调用CUDA allocated/reserved峰值；Extractor和Judge均把call_id回填到原有timing结构。
+- Extractor沿用已有streamer首token时点；Judge使用只在首个生成步同步一次的stopping criterion，结束后再同步，避免逐token CUDA同步。格式重试与恢复会自然形成新的唯一call记录。
+- 项目虚拟环境原有Torch 2.7.1/CUDA 12.6但缺pytest；启用pip并安装pytest 9.1.1用于同一环境回归，没有重复安装Torch。
+- TDD覆盖计时恒等式、空/错误调用、单条与batch输出一致、padding、重试call_id关联、预热trace清空和逐调用CUDA峰值重置；本块12项测试通过。尚未实现24篇运行器、聚合、报告或CLI，等待用户批准第二块。
