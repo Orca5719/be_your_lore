@@ -7,6 +7,7 @@ from pathlib import Path
 import uuid
 
 from .audit import audit_retries, validate_result
+from .workflow import regenerate_summary, run_generation_audit
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,6 +17,11 @@ REPORT_ROOT = ROOT / "agent_pipeline_v3_1" / "reports"
 def _default_output() -> Path:
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     return REPORT_ROOT / f"retry_audit_{stamp}_{uuid.uuid4().hex[:6]}"
+
+
+def _default_generation_output() -> Path:
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    return REPORT_ROOT / f"generation_audit_{stamp}_{uuid.uuid4().hex[:6]}"
 
 
 def validate_command(args) -> int:
@@ -31,6 +37,21 @@ def audit_command(args) -> int:
     return 0
 
 
+def generation_audit_command(args) -> int:
+    output = (args.output or _default_generation_output()).resolve()
+    report = run_generation_audit(args.result_dir.resolve(), output)
+    print("AUDIT_DIR=" + str(output), flush=True)
+    print("SUMMARY=" + str(output / "generation_audit.md"), flush=True)
+    print(json.dumps({"stories": report["stories"], "facts": report["facts"]}, ensure_ascii=False, indent=2))
+    return 0
+
+
+def summary_command(args) -> int:
+    summary = regenerate_summary(args.result_dir)
+    print("SUMMARY=" + str(summary), flush=True)
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Benchmark 3.1 read-only generation retry audit")
     commands = parser.add_subparsers(dest="command", required=True)
@@ -41,6 +62,13 @@ def build_parser() -> argparse.ArgumentParser:
     audit_parser.add_argument("--result-dir", type=Path, required=True)
     audit_parser.add_argument("--output", type=Path)
     audit_parser.set_defaults(handler=audit_command)
+    generation_parser = commands.add_parser("audit")
+    generation_parser.add_argument("--result-dir", type=Path, required=True)
+    generation_parser.add_argument("--output", type=Path)
+    generation_parser.set_defaults(handler=generation_audit_command)
+    summary_parser = commands.add_parser("summary")
+    summary_parser.add_argument("--result-dir", type=Path, required=True)
+    summary_parser.set_defaults(handler=summary_command)
     return parser
 
 

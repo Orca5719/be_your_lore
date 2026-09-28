@@ -21,9 +21,30 @@ def test_audit_retries_prints_output_and_summary(monkeypatch, capsys, tmp_path):
     assert '"retry_calls": 31' in text
 
 
-def test_cli_has_only_part_one_commands():
+def test_cli_exposes_part_two_commands():
     parser = cli.build_parser()
     help_text = parser.format_help()
     assert "validate" in help_text
     assert "audit-retries" in help_text
-    assert " counterfactual" not in help_text
+    assert "audit" in help_text
+    assert "summary" in help_text
+
+
+def test_generation_audit_command_prints_paths(monkeypatch, capsys, tmp_path):
+    output = tmp_path / "generation"
+    monkeypatch.setattr(cli, "run_generation_audit", lambda source, target: {"stories": 24, "facts": 80})
+    code = cli.main(["audit", "--result-dir", str(tmp_path), "--output", str(output)])
+    text = capsys.readouterr().out
+    assert code == 0
+    assert f"AUDIT_DIR={output.resolve()}" in text
+    assert f"SUMMARY={output.resolve() / 'generation_audit.md'}" in text
+
+
+def test_summary_does_not_load_tokenizer(monkeypatch, capsys, tmp_path):
+    audit_dir = tmp_path / "audit"
+    audit_dir.mkdir()
+    (audit_dir / "generation_audit.json").write_text(json.dumps({
+        "stories": 24, "facts": 80, "components": {}, "observations": []
+    }), encoding="utf-8")
+    assert cli.main(["summary", "--result-dir", str(audit_dir)]) == 0
+    assert "SUMMARY=" in capsys.readouterr().out

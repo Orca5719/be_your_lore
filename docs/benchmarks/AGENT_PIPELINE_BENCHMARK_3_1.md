@@ -8,6 +8,12 @@ Part 1 reconciles the 24 story rows with all 130 LLM calls, verifies the 24/24 B
 
 The audit distinguishes coverage recovery from other failed-attempt retries and Judge row retries. Judge calls keep `BATCH_ROW_RETRY` as their primary category, with their underlying validation or truncation cause reported separately.
 
-## Deferred Part 2
+## Part 2
 
-Field-level output cost, tokenizer-based estimates, Extractor/Judge lean projections, and the final Generation Audit report are intentionally deferred until Part 1 is reviewed. No Part 2 CLI is exposed in this checkpoint.
+Part 2 loads only the pinned Qwen tokenizer and re-encodes saved JSON values. It reports measured output tokens separately from estimated event, coverage, verdict, citation, reason, assessment, and JSON-structure cost. Anything not explained by those estimates remains `transport_residual`; estimates never replace the measured trace.
+
+The Extractor Lean Projection preserves every downstream event field plus ignored/non-event source identities. The Judge Lean Projection preserves every verdict and, only for contradictions, evidence identities and an 80-character reason. Malformed outputs are carried forward at their full measured token cost rather than treated as potential savings.
+
+Projected token and decode-time reductions are marked `counterfactual_estimate`. They describe a theoretical upper bound under the observed decode throughput. They do not claim that a shorter schema would produce the same outputs, accuracy, latency, or retry behavior in a real generation run.
+
+Commands and output files are documented in `agent_pipeline_v3_1/README.md`.

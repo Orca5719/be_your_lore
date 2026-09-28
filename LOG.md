@@ -1118,3 +1118,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 新增24篇/130调用/24对24质量护栏的严格对账，逐一连接story、窗口、attempt与call_id；输出全部调用审计JSONL、重试taxonomy JSON及CSV，原始触发错误完整保留。
 - 固定8类taxonomy，并区分覆盖恢复、其他失败后的Extractor重试和Judge单行重试；Judge主类保留BATCH_ROW_RETRY，同时单列底层citation校验与截断原因。
 - 正式审计确认31次retry共消耗24609 input tokens、3414 output tokens和289.815秒；其中20次覆盖恢复、7次其他Extractor重试、4次Judge单行重试。第二部分的字段成本与Lean Projection尚未实现，等待用户批准。
+
+## Step 96 — 2026-09-28 Benchmark 3.1 第二部分：Output Audit与反事实投影
+
+- 新增只读字段成本分析：使用锁定Qwen tokenizer离线复算Extractor事件、覆盖记账、Judge verdict/citations/reason/assessment及JSON结构的估算token；Benchmark 3真实output tokens始终单列，差额保留为transport residual。
+- Extractor按正常内容、无法解析的失败输出和覆盖恢复分账；Judge按verdict分账。无法解析的输出按全部实测token保守计入unprojectable，不制造虚假节省。
+- 新增Extractor/Judge Lean Projection。前者保留全部下游事件字段和最小覆盖身份，后者保留全部verdict，仅矛盾项保留证据身份与短理由；投影token和按实测decode吞吐换算的时间统一标记为counterfactual_estimate。
+- 新增`audit`与`summary`命令及Generation Audit JSON/Markdown、调用CSV、字段CSV、投影CSV；全过程不加载4B权重、不调用generate，也不修改冻结Benchmark 3结果。本步只完成实现与离线测试，正式24篇运行交给用户执行。
