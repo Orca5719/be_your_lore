@@ -1,0 +1,47 @@
+# Step 51 通用结构修复
+
+## 非客观范围
+
+先检查speech/belief/plan/dream/inferred，再处理空证据。报告候选新增同时检查事件modality，历史无证据记录也不能借旧origin将梦境列为现实设定。此门控不解决第一层错误标注叙述性质的问题。
+
+## 当前故事事件互检
+
+judge/report正常CLI包含story_check。Step 53起严格复用filtering.selected_events，只比较其中observed且非support_only的实质事件；ignore、pending及纯上下文不得绕过筛选进入两两判断。故事原文引用与canon引用分开，正常CLI共享当前模型对象。
+
+筛选后的实质事件才两两比较，每窗最多4对，默认最多120对。超限数量明确保留，status=partial、退出2；不静默声称完成。same_subject/same_scope及assumptions约束明确冲突；必须引用两方连续逐字原文。正常时序变化、不同条件、主体不明不能擅自当同时冲突。no_conflict只是该对未发现冲突，不证明整段一致。格式一次有限重试，失败保留raw与受影响pair。
+
+报告story_consistency分别列段内contradictions/uncertainties。段内明确冲突会影响summary总评，不改逐事实lore结论或counts；处理失败/遗漏不能被ok掩盖。--judge-file只整理历史，不偷偷重跑模型，缺少story_check显示not_run。当前仅核对已提取observed事件；梦境/对白等不按客观真值互检。
+
+## 索引过期
+
+生产检索读取metadata后、加载embedding前递归核对UTF8资料目录中MD/TXT文件路径及内容SHA256。新增/修改/删除、缺少目录或摘要明确要求重建。不会自动重建，不写冻结canon。外部注入retriever接口用于测试，负责自己的索引生命周期。
+
+## 明确后续范围
+
+第3项“作者确认归档与更新索引”及第5项“长篇输入与远距离上下文”记为后续联合milestone。第2项剩余的跨章节人物位置/知识/关系/时间状态跟踪，也纳入该milestone；目前前文仍须已入lore索引，不能声称自动管理全书。归档将来需区分永久设定、一次事件、关系、实体及时间节点，保留canon版本与来源。长篇需分层上下文/状态传递及明确遗漏边界，而非简单提高字符上限。
+
+这次为通用结构修复，不按人物或关键词添加特判；模型自报的对象/时间对应仍可能错误，程序测试通过不等于语义准确率。
+
+## 本轮实际验证
+
+新增14项程序回归，完整259项通过（1.723秒）；冻结129文件不变。当前实际资料四文件摘要匹配；临时资料新增/修改/删除及加载前阻断均有回归。
+
+首次真实CUDA全链路structural_story_conflict_20260919.json因模型引用跨相邻分句的完整原句而partial，错误记录保留。修复引用校验为可按精确相邻字符位置拼接连续片段，不跨缺口。最终复用该次真实理解/筛选/检索输出重跑lore判断及段内判断：structural_story_conflict_final_20260919.json工程ok、总评contradiction，段内引用两方原文；不是重新跑完所有前置步骤。隔离的明确上午/下午转移structural_temporal_isolated_20260919.json为ok/uncertain，未假报矛盾，但模型未明确判no_conflict，保留语义质量问题。没有正式accuracy或性能benchmark结论。
+
+只读审查指出模型checks:[null]和历史items:[null]可逃出异常隔离，均改为ValueError并加回归；有限重试/损坏记录明确失败。
+
+## Step 53：按pipeline职责优化
+
+此前story_check直接读取understanding全部observed事件，绕开filtering，纯日常段落产生大量无意义事件对。现改为understanding保全语义、filtering决定世界观相关性、story_check复用selected_events；support_only只提供单事件判断上下文，不独立参与段内互检。没有新增BGE候选路由或额外LLM筛选阶段。
+
+输出新增candidate_event_ids、total_observed_event_count、filtered_out_event_count；报告重载按原filtering决定重新计算预期候选，不能删掉候选后伪装完成。筛选漏掉的重要事实仍会造成段内漏检，这是第二阶段质量问题，将由端到端benchmark计入，而不是在下游绕过筛选。保留120对安全上限，超限仍partial。
+
+## Step 55：修复窗口上下文膨胀
+
+首轮pipeline benchmark的4个案例中1个partial、3个error。人工复核确认5条目标事实均已提取，但filtering因每批复制完整故事和其余全部事件而达到约4146—4354输入tokens，三例未生成任何结果；这使retrieval与judge没有可计分样本。
+
+理解窗现在只携带target和最近两个前文span，不再重复完整story_text。coverage recovery沿用同一局部边界，并且只携带原始source_ids/context_ids与当前target相交的拒绝候选；其他窗口的失败记录仍完整保存在总报告中，但不再注入当前模型调用。
+
+筛选窗固定为最多8个目标事件及前后各最多2个邻近事件摘要。邻近摘要只含语义字段，不带sources、contexts、复核元数据或完整story_text。目标事件自身仍保留逐字引用，后续依赖闭包逻辑不变。
+
+用首轮benchmark保留的真实understanding输出配合固定Qwen tokenizer进行无生成预算检查：四例filtering最大输入分别为1813、1917、1984、2123 tokens，均可完整预留1024输出；同一4段原文的understanding初始/空覆盖恢复压力检查最大为1093 tokens。该检查只证明结构预算已受控，不是新语义质量成绩，也不能替代重新运行benchmark。

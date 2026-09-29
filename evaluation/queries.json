@@ -1,0 +1,353 @@
+{
+  "notice": "人工手写的测试查询和标签，不代表正式 canon；模型检索前固定。",
+  "k": 5,
+  "cases": [
+    {
+      "id": "q01",
+      "query": "雷感觉左胸里的亚巴顿开始躁动。",
+      "category": "容易混淆",
+      "core": {
+        "file": "characters.md",
+        "heading_suffix": [
+          "雷",
+          "生理结构"
+        ]
+      },
+      "additional": [
+        {
+          "file": "angels.md",
+          "heading_suffix": [
+            "亚巴顿",
+            "左侧宿主"
+          ]
+        },
+        {
+          "file": "characters.md",
+          "heading_suffix": [
+            "雷",
+            "经历"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "query": "雷的右胸变得温暖，是谁在施展治疗？",
+      "category": "左右区分",
+      "core": {
+        "file": "angels.md",
+        "heading_suffix": [
+          "拉古艾尔",
+          "右侧宿主"
+        ]
+      },
+      "additional": [
+        {
+          "file": "characters.md",
+          "heading_suffix": [
+            "雷",
+            "右胸异感"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "query": "亚巴顿的力量用得太多，雷会忘掉事情吗？",
+      "category": "直接描述",
+      "core": {
+        "file": "angels.md",
+        "heading_suffix": [
+          "亚巴顿",
+          "力量副作用"
+        ]
+      },
+      "additional": []
+    },
+    {
+      "id": "q04",
+      "query": "拉古艾尔能让死去的人活过来吗？",
+      "category": "规则检索",
+      "core": {
+        "file": "angels.md",
+        "heading_suffix": [
+          "拉古艾尔",
+          "治疗限制"
+        ]
+      },
+      "additional": []
+    },
+    {
+      "id": "q05",
+      "query": "月城丢掉的是哪一边胳膊？",
+      "category": "改写",
+      "core": {
+        "file": "characters.md",
+        "heading_suffix": [
+          "月城",
+          "机械左臂"
+        ]
+      },
+      "additional": [
+        {
+          "file": "history.md",
+          "heading_suffix": [
+            "2063年",
+            "月城失臂"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "query": "月城2063年就能使用机械左臂吗？",
+      "category": "时间区分",
+      "core": {
+        "file": "characters.md",
+        "heading_suffix": [
+          "月城",
+          "手术时间"
+        ]
+      },
+      "additional": [
+        {
+          "file": "history.md",
+          "heading_suffix": [
+            "2064年",
+            "机械臂安装"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "query": "雷的父亲知道儿子体内住着拉古艾尔吗？",
+      "category": "角色知识",
+      "core": {
+        "file": "characters.md",
+        "heading_suffix": [
+          "雷的父亲",
+          "秘密认知"
+        ]
+      },
+      "additional": []
+    },
+    {
+      "id": "q08",
+      "query": "德尔塔战斗服的电力从哪里来？",
+      "category": "改写",
+      "core": {
+        "file": "technology.md",
+        "heading_suffix": [
+          "动力外骨骼",
+          "电池续航"
+        ]
+      },
+      "additional": [
+        {
+          "file": "characters.md",
+          "heading_suffix": [
+            "德尔塔",
+            "装备"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "query": "德尔塔开推进器十分钟后还能继续飞吗？",
+      "category": "多证据",
+      "core": {
+        "file": "technology.md",
+        "heading_suffix": [
+          "动力外骨骼",
+          "推进器冷却"
+        ]
+      },
+      "additional": [
+        {
+          "file": "characters.md",
+          "heading_suffix": [
+            "德尔塔",
+            "装甲限制"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "query": "雷第一次当面见德尔塔之前，曾在哪里看过他？",
+      "category": "见面与认知",
+      "core": {
+        "file": "history.md",
+        "heading_suffix": [
+          "第一话",
+          "公共新闻"
+        ]
+      },
+      "additional": [
+        {
+          "file": "history.md",
+          "heading_suffix": [
+            "第二话",
+            "首次当面见面"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "query": "德尔塔什么时候得知雷有两位寄宿天使？",
+      "category": "角色知识",
+      "core": {
+        "file": "history.md",
+        "heading_suffix": [
+          "第三话",
+          "身份告知"
+        ]
+      },
+      "additional": []
+    },
+    {
+      "id": "q12",
+      "query": "雷手里的那把长剑是第几话得到的？",
+      "category": "直接描述",
+      "core": {
+        "file": "history.md",
+        "heading_suffix": [
+          "第四话",
+          "获得长剑"
+        ]
+      },
+      "additional": []
+    },
+    {
+      "id": "q13",
+      "query": "第八话之后雷还能用原来的长剑吗？",
+      "category": "状态变化",
+      "core": {
+        "file": "history.md",
+        "heading_suffix": [
+          "第八话",
+          "长剑毁坏"
+        ]
+      },
+      "additional": []
+    },
+    {
+      "id": "q14",
+      "query": "宿主要怎样才能打开地下神殿的石门？",
+      "category": "改写",
+      "core": {
+        "file": "angels.md",
+        "heading_suffix": [
+          "封印",
+          "解除条件"
+        ]
+      },
+      "additional": []
+    },
+    {
+      "id": "q15",
+      "query": "躲进金属屏蔽室就能避开守望者吗？",
+      "category": "多证据",
+      "core": {
+        "file": "angels.md",
+        "heading_suffix": [
+          "守望者",
+          "感知方式"
+        ]
+      },
+      "additional": [
+        {
+          "file": "technology.md",
+          "heading_suffix": [
+            "通信",
+            "无线电屏蔽"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "query": "旧教堂为什么能帮雷躲过守望者追踪？",
+      "category": "多证据",
+      "core": {
+        "file": "angels.md",
+        "heading_suffix": [
+          "避难所",
+          "静默结界"
+        ]
+      },
+      "additional": [
+        {
+          "file": "history.md",
+          "heading_suffix": [
+            "第六话",
+            "教堂避难"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "query": "月城用机械左手碰热水会觉得烫吗？",
+      "category": "改写",
+      "core": {
+        "file": "technology.md",
+        "heading_suffix": [
+          "机械左臂",
+          "触觉反馈"
+        ]
+      },
+      "additional": []
+    },
+    {
+      "id": "q18",
+      "query": "地下隧道手机没信号，队员怎么联络？",
+      "category": "场景检索",
+      "core": {
+        "file": "technology.md",
+        "heading_suffix": [
+          "通信",
+          "地下信号"
+        ]
+      },
+      "additional": []
+    },
+    {
+      "id": "q19",
+      "query": "监察官能用眼睛看见来人吗？",
+      "category": "状态检索",
+      "core": {
+        "file": "characters.md",
+        "heading_suffix": [
+          "监察官",
+          "失明状态"
+        ]
+      },
+      "additional": []
+    },
+    {
+      "id": "q20",
+      "query": "网络档案坏了，莉娅还能找到地震前的记录吗？",
+      "category": "多证据",
+      "core": {
+        "file": "technology.md",
+        "heading_suffix": [
+          "档案馆",
+          "纸质备份"
+        ]
+      },
+      "additional": [
+        {
+          "file": "characters.md",
+          "heading_suffix": [
+            "莉娅",
+            "工作职责"
+          ]
+        }
+      ]
+    }
+  ]
+}

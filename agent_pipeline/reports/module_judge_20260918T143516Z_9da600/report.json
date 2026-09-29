@@ -1,0 +1,1644 @@
+{
+  "kind": "module_observation_not_formal_benchmark",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "device": "cuda",
+  "model_load_seconds": 15.703063400003884,
+  "source_sha256": {
+    "judge.py": "4e8f11ff1e3881a8bacc68eb3ee0d274c756e184f2961afd9c1ef1783dfb593a",
+    "__main__.py": "41b1bc3b932d4c4564f9314d4e9c16d9591e7f21b372ddc0348b5d01d6ca9a10",
+    "llm.py": "58b2b847fe1ff1843e0d94e59912b70afabd4e91fc1bbe83eef3004f944e5d7a",
+    "prompts/judge_v3.txt": "f73a7221ac7a7d296d952736ff4e939929cd43cd8dea0bae29475a0d8c20c942"
+  },
+  "cases": [
+    {
+      "id": "J01",
+      "status": "ok",
+      "items": [
+        {
+          "event_id": "E1",
+          "event": {
+            "id": "E1",
+            "actors": [
+              "亚巴顿"
+            ],
+            "event": "亚巴顿寄宿在雷的左侧心脏里。",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "亚巴顿寄宿在雷的左侧心脏里。",
+                "start": 0,
+                "end": 14
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "id": "47ba19b8b9ece1f35cc9",
+              "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "file": "angels.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "亚巴顿",
+                "左侧宿主"
+              ],
+              "start_offset": 43,
+              "end_offset": 81,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "token_count": 66,
+              "score": 0.7122825980186462
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.6886823177337646
+            },
+            {
+              "id": "252bda4cc47b93db0d7b",
+              "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+              "file": "angels.md",
+              "start_line": 21,
+              "end_line": 21,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "拉古艾尔",
+                "右侧宿主"
+              ],
+              "start_offset": 202,
+              "end_offset": 242,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+              "token_count": 69,
+              "score": 0.6008197069168091
+            },
+            {
+              "id": "17af8f8e8b7ff81197e4",
+              "text": "普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+              "file": "technology.md",
+              "start_line": 46,
+              "end_line": 46,
+              "heading_path": [
+                "科技规则（测试设定，不代表正式 canon）",
+                "医疗",
+                "心脏扫描"
+              ],
+              "start_offset": 472,
+              "end_offset": 502,
+              "embedding_text": "科技规则（测试设定，不代表正式 canon） > 医疗 > 心脏扫描\n普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+              "token_count": 57,
+              "score": 0.5536268949508667
+            },
+            {
+              "id": "ca52138556599b584637",
+              "text": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+              "file": "history.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "2063年",
+                "大地震"
+              ],
+              "start_offset": 44,
+              "end_offset": 80,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 大地震\n2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+              "token_count": 61,
+              "score": 0.5486557483673096
+            }
+          ],
+          "citations": [
+            {
+              "evidence_id": "L1",
+              "quote": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "chunk_id": "47ba19b8b9ece1f35cc9"
+            },
+            {
+              "evidence_id": "L2",
+              "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "chunk_id": "099d1bbdbc348eb3c332"
+            }
+          ],
+          "call": {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": true,\n    \"same_scope\": true,\n    \"relation\": \"direct_support\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"consistent\",\n  \"citations\": [\n    {\n      \"evidence_id\": \"L1\",\n      \"quote\": \"亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。\"\n    },\n    {\n      \"evidence_id\": \"L2\",\n      \"quote\": \"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"\n    }\n  ],\n  \"reason\": \"事件‘亚巴顿寄宿在雷的左侧心脏里’在设定中被明确陈述于L1和L2中，且L2直接说明‘左侧心脏寄宿亚巴顿’，与事件完全一致。该信息未被否定或修改，且未出现位置冲突或身份错配。L1进一步说明其宿主位置与力量施展限制的关系，但不改变主体与位置的归属。所有引用均指向同一对象（亚巴顿）和同一位置（雷的左侧心脏），且在当前场景下（未指定时间、条件）适用。无任何设定表明该宿主关系被撤销或转移，因此该命题与设定直接吻合，构成直接支持。\"\n}",
+                "input_tokens": 1283,
+                "max_new_tokens": 768,
+                "timing": {
+                  "seconds": 30.105186600005254,
+                  "input_tokens": 1283,
+                  "generated_tokens": 301,
+                  "ttft_ms": 2352.80590000184,
+                  "decode_seconds": 27.75152369999705,
+                  "decode_tokens": 300,
+                  "decode_tokens_per_second": 10.81021724223495
+                }
+              }
+            ]
+          },
+          "status": "ok",
+          "verdict": "consistent",
+          "label": "明确吻合",
+          "reason": "事件‘亚巴顿寄宿在雷的左侧心脏里’在设定中被明确陈述于L1和L2中，且L2直接说明‘左侧心脏寄宿亚巴顿’，与事件完全一致。该信息未被否定或修改，且未出现位置冲突或身份错配。L1进一步说明其宿主位置与力量施展限制的关系，但不改变主体与位置的归属。所有引用均指向同一对象（亚巴顿）和同一位置（雷的左侧心脏），且在当前场景下（未指定时间、条件）适用。无任何设定表明该宿主关系被撤销或转移，因此该命题与设定直接吻合，构成直接支持。",
+          "origin": "model",
+          "assessment": {
+            "same_subject": true,
+            "same_scope": true,
+            "relation": "direct_support",
+            "assumptions": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "J02",
+      "status": "ok",
+      "items": [
+        {
+          "event_id": "E1",
+          "event": {
+            "id": "E1",
+            "actors": [
+              "亚巴顿"
+            ],
+            "event": "亚巴顿寄宿在雷的右侧心脏里。",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "亚巴顿寄宿在雷的右侧心脏里。",
+                "start": 0,
+                "end": 14
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "id": "47ba19b8b9ece1f35cc9",
+              "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "file": "angels.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "亚巴顿",
+                "左侧宿主"
+              ],
+              "start_offset": 43,
+              "end_offset": 81,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "token_count": 66,
+              "score": 0.715278685092926
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.6923321485519409
+            },
+            {
+              "id": "252bda4cc47b93db0d7b",
+              "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+              "file": "angels.md",
+              "start_line": 21,
+              "end_line": 21,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "拉古艾尔",
+                "右侧宿主"
+              ],
+              "start_offset": 202,
+              "end_offset": 242,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+              "token_count": 69,
+              "score": 0.6100862622261047
+            },
+            {
+              "id": "17af8f8e8b7ff81197e4",
+              "text": "普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+              "file": "technology.md",
+              "start_line": 46,
+              "end_line": 46,
+              "heading_path": [
+                "科技规则（测试设定，不代表正式 canon）",
+                "医疗",
+                "心脏扫描"
+              ],
+              "start_offset": 472,
+              "end_offset": 502,
+              "embedding_text": "科技规则（测试设定，不代表正式 canon） > 医疗 > 心脏扫描\n普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+              "token_count": 57,
+              "score": 0.5546178817749023
+            },
+            {
+              "id": "ca52138556599b584637",
+              "text": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+              "file": "history.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "2063年",
+                "大地震"
+              ],
+              "start_offset": 44,
+              "end_offset": 80,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 大地震\n2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+              "token_count": 61,
+              "score": 0.5487151741981506
+            }
+          ],
+          "citations": [
+            {
+              "evidence_id": "L1",
+              "quote": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "chunk_id": "47ba19b8b9ece1f35cc9"
+            },
+            {
+              "evidence_id": "L2",
+              "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "chunk_id": "099d1bbdbc348eb3c332"
+            }
+          ],
+          "call": {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": true,\n    \"same_scope\": false,\n    \"relation\": \"direct_conflict\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"contradiction\",\n  \"citations\": [\n    {\n      \"evidence_id\": \"L1\",\n      \"quote\": \"亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。\"\n    },\n    {\n      \"evidence_id\": \"L2\",\n      \"quote\": \"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"\n    }\n  ],\n  \"reason\": \"事件中‘亚巴顿寄宿在雷的右侧心脏里’与设定L2中‘左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔’直接冲突。设定明确指出亚巴顿位于左侧心脏，且右侧心脏宿主为拉古艾尔，因此亚巴顿不可能寄宿在右侧心脏。该命题在主体（亚巴顿）和位置（右侧心脏）上与设定直接矛盾，且无任何设定支持其在右侧心脏的存在。尽管事件被明确叙述为‘observed’，但设定中对宿主位置有明确、互斥的断言，故构成直接冲突。\"\n}",
+                "input_tokens": 1283,
+                "max_new_tokens": 768,
+                "timing": {
+                  "seconds": 20.43331030000263,
+                  "input_tokens": 1283,
+                  "generated_tokens": 292,
+                  "ttft_ms": 933.6294999957317,
+                  "decode_seconds": 19.498920900005032,
+                  "decode_tokens": 291,
+                  "decode_tokens_per_second": 14.923902788893558
+                }
+              }
+            ]
+          },
+          "status": "ok",
+          "verdict": "uncertain",
+          "label": "不确定",
+          "reason": "证据对象/适用场景未对应，或结论依赖额外假设，不能下明确结论",
+          "origin": "program_evidence_scope_guard",
+          "assessment": {
+            "same_subject": true,
+            "same_scope": false,
+            "relation": "direct_conflict",
+            "assumptions": []
+          },
+          "model_verdict": "contradiction",
+          "model_reason": "事件中‘亚巴顿寄宿在雷的右侧心脏里’与设定L2中‘左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔’直接冲突。设定明确指出亚巴顿位于左侧心脏，且右侧心脏宿主为拉古艾尔，因此亚巴顿不可能寄宿在右侧心脏。该命题在主体（亚巴顿）和位置（右侧心脏）上与设定直接矛盾，且无任何设定支持其在右侧心脏的存在。尽管事件被明确叙述为‘observed’，但设定中对宿主位置有明确、互斥的断言，故构成直接冲突。"
+        }
+      ]
+    },
+    {
+      "id": "J03",
+      "status": "ok",
+      "items": [
+        {
+          "event_id": "E1",
+          "event": {
+            "id": "E1",
+            "actors": [
+              "雷"
+            ],
+            "event": "雷拥有两颗心脏。",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "雷拥有两颗心脏。",
+                "start": 0,
+                "end": 8
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.7311829328536987
+            },
+            {
+              "id": "0ad0e47151069e9d8676",
+              "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "file": "history.md",
+              "start_line": 31,
+              "end_line": 31,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第三话",
+                "身份告知"
+              ],
+              "start_offset": 322,
+              "end_offset": 359,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "token_count": 65,
+              "score": 0.6526429057121277
+            },
+            {
+              "id": "46422ea243d878bfdce9",
+              "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+              "file": "characters.md",
+              "start_line": 21,
+              "end_line": 21,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "身份保密"
+              ],
+              "start_offset": 189,
+              "end_offset": 229,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+              "token_count": 66,
+              "score": 0.6431782245635986
+            },
+            {
+              "id": "17af8f8e8b7ff81197e4",
+              "text": "普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+              "file": "technology.md",
+              "start_line": 46,
+              "end_line": 46,
+              "heading_path": [
+                "科技规则（测试设定，不代表正式 canon）",
+                "医疗",
+                "心脏扫描"
+              ],
+              "start_offset": 472,
+              "end_offset": 502,
+              "embedding_text": "科技规则（测试设定，不代表正式 canon） > 医疗 > 心脏扫描\n普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+              "token_count": 57,
+              "score": 0.6319236159324646
+            },
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.629964292049408
+            }
+          ],
+          "citations": [
+            {
+              "evidence_id": "L1",
+              "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "chunk_id": "099d1bbdbc348eb3c332"
+            }
+          ],
+          "call": {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": true,\n    \"same_scope\": true,\n    \"relation\": \"direct_support\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"consistent\",\n  \"citations\": [\n    {\n      \"evidence_id\": \"L1\",\n      \"quote\": \"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"\n    }\n  ],\n  \"reason\": \"事件'雷拥有两颗心脏'与设定L1中'雷拥有两颗心脏'完全一致，且L1明确指出雷拥有两颗心脏，左侧和右侧分别寄宿天使，因此该命题在主体（雷）、场景（人物生理结构）和叙述性质上与设定直接吻合。设定未禁止或否定此事实，且未提供任何互斥信息。事件为直接观察（observed），符合原文叙述，无矛盾或缺失。\"\n}",
+                "input_tokens": 1243,
+                "max_new_tokens": 768,
+                "timing": {
+                  "seconds": 14.673541700001806,
+                  "input_tokens": 1243,
+                  "generated_tokens": 203,
+                  "ttft_ms": 890.1352000029874,
+                  "decode_seconds": 13.78294630000164,
+                  "decode_tokens": 202,
+                  "decode_tokens_per_second": 14.655792426614617
+                }
+              }
+            ]
+          },
+          "status": "ok",
+          "verdict": "consistent",
+          "label": "明确吻合",
+          "reason": "事件'雷拥有两颗心脏'与设定L1中'雷拥有两颗心脏'完全一致，且L1明确指出雷拥有两颗心脏，左侧和右侧分别寄宿天使，因此该命题在主体（雷）、场景（人物生理结构）和叙述性质上与设定直接吻合。设定未禁止或否定此事实，且未提供任何互斥信息。事件为直接观察（observed），符合原文叙述，无矛盾或缺失。",
+          "origin": "model",
+          "assessment": {
+            "same_subject": true,
+            "same_scope": true,
+            "relation": "direct_support",
+            "assumptions": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "J04",
+      "status": "ok",
+      "items": [
+        {
+          "event_id": "E1",
+          "event": {
+            "id": "E1",
+            "actors": [
+              "雷"
+            ],
+            "event": "雷只有一颗心脏。",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "雷只有一颗心脏。",
+                "start": 0,
+                "end": 8
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.7043260335922241
+            },
+            {
+              "id": "17af8f8e8b7ff81197e4",
+              "text": "普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+              "file": "technology.md",
+              "start_line": 46,
+              "end_line": 46,
+              "heading_path": [
+                "科技规则（测试设定，不代表正式 canon）",
+                "医疗",
+                "心脏扫描"
+              ],
+              "start_offset": 472,
+              "end_offset": 502,
+              "embedding_text": "科技规则（测试设定，不代表正式 canon） > 医疗 > 心脏扫描\n普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+              "token_count": 57,
+              "score": 0.6252411603927612
+            },
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.6164377927780151
+            },
+            {
+              "id": "0ad0e47151069e9d8676",
+              "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "file": "history.md",
+              "start_line": 31,
+              "end_line": 31,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第三话",
+                "身份告知"
+              ],
+              "start_offset": 322,
+              "end_offset": 359,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "token_count": 65,
+              "score": 0.6028478741645813
+            },
+            {
+              "id": "46422ea243d878bfdce9",
+              "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+              "file": "characters.md",
+              "start_line": 21,
+              "end_line": 21,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "身份保密"
+              ],
+              "start_offset": 189,
+              "end_offset": 229,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+              "token_count": 66,
+              "score": 0.6007187366485596
+            }
+          ],
+          "citations": [
+            {
+              "evidence_id": "L1",
+              "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "chunk_id": "099d1bbdbc348eb3c332"
+            }
+          ],
+          "call": {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": true,\n    \"same_scope\": true,\n    \"relation\": \"direct_conflict\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"contradiction\",\n  \"citations\": [\n    {\n      \"evidence_id\": \"L1\",\n      \"quote\": \"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"\n    }\n  ],\n  \"reason\": \"事件中‘雷只有一颗心脏’与设定L1中‘雷拥有两颗心脏’直接矛盾。两者针对同一对象（雷）在相同生理结构范畴下，明确陈述心脏数量不同，构成直接冲突。原文未提供任何例外条件或例外场景，且未说明心脏可被移除或合并，因此该命题在设定范围内不可成立。\"\n}",
+                "input_tokens": 1243,
+                "max_new_tokens": 768,
+                "timing": {
+                  "seconds": 17.61503050000465,
+                  "input_tokens": 1243,
+                  "generated_tokens": 185,
+                  "ttft_ms": 915.6715999997687,
+                  "decode_seconds": 16.698716400002013,
+                  "decode_tokens": 184,
+                  "decode_tokens_per_second": 11.018811002741373
+                }
+              }
+            ]
+          },
+          "status": "ok",
+          "verdict": "contradiction",
+          "label": "明确矛盾",
+          "reason": "事件中‘雷只有一颗心脏’与设定L1中‘雷拥有两颗心脏’直接矛盾。两者针对同一对象（雷）在相同生理结构范畴下，明确陈述心脏数量不同，构成直接冲突。原文未提供任何例外条件或例外场景，且未说明心脏可被移除或合并，因此该命题在设定范围内不可成立。",
+          "origin": "model",
+          "assessment": {
+            "same_subject": true,
+            "same_scope": true,
+            "relation": "direct_conflict",
+            "assumptions": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "J05",
+      "status": "error",
+      "items": [
+        {
+          "event_id": "E1",
+          "event": {
+            "id": "E1",
+            "actors": [
+              "雷"
+            ],
+            "event": "雷能够控制时间。",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "雷能够控制时间。",
+                "start": 0,
+                "end": 8
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.6181251406669617
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.5887830853462219
+            },
+            {
+              "id": "0ad0e47151069e9d8676",
+              "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "file": "history.md",
+              "start_line": 31,
+              "end_line": 31,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第三话",
+                "身份告知"
+              ],
+              "start_offset": 322,
+              "end_offset": 359,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "token_count": 65,
+              "score": 0.5447888374328613
+            },
+            {
+              "id": "ca52138556599b584637",
+              "text": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+              "file": "history.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "2063年",
+                "大地震"
+              ],
+              "start_offset": 44,
+              "end_offset": 80,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 大地震\n2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+              "token_count": 61,
+              "score": 0.5375037789344788
+            },
+            {
+              "id": "347b69141392efe457ad",
+              "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+              "file": "characters.md",
+              "start_line": 51,
+              "end_line": 51,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷的父亲",
+                "秘密认知"
+              ],
+              "start_offset": 506,
+              "end_offset": 542,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+              "token_count": 65,
+              "score": 0.5354692339897156
+            }
+          ],
+          "citations": [],
+          "call": {
+            "status": "error",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "error",
+                "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": true,\n    \"same_scope\": true,\n    \"relation\": \"insufficient\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"uncertain\",\n  \"citations\": [\n    {\n      \"evidence_id\": \"S1\",\n      \"quote\": \"雷能够控制时间。\"\n    }\n  ],\n  \"reason\": \"事件中‘雷能够控制时间’是直接观察到的陈述（observed），但设定中未提及任何与时间控制、时间能力、时间相关机制或生理/结构关联的内容。虽然雷拥有两颗心脏且存在天使寄宿，但未说明其能力与心脏、天使或身体结构之间存在时间控制的因果或机制关系。因此，该能力未被设定支持，也未被明确禁止。由于缺乏对‘控制时间’能力的直接描述或隐含机制，无法判断其是否与雷的生理结构或经历存在直接支持或冲突。故判定为uncertain。\"\n}",
+                "error": "引用编号不存在或重复",
+                "error_type": "ValueError",
+                "timing": {
+                  "seconds": 19.058454099998926,
+                  "input_tokens": 1253,
+                  "generated_tokens": 216,
+                  "ttft_ms": 914.1874999986612,
+                  "decode_seconds": 18.143484400003217,
+                  "decode_tokens": 215,
+                  "decode_tokens_per_second": 11.84998400858227
+                }
+              },
+              {
+                "attempt": 2,
+                "status": "error",
+                "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": true,\n    \"same_scope\": true,\n    \"relation\": \"insufficient\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"uncertain\",\n  \"citations\": [\n    {\n      \"evidence_id\": \"S1\",\n      \"quote\": \"雷能够控制时间。\"\n    }\n  ]\n}",
+                "error": "判断字段或类别无效，需要assessment",
+                "error_type": "ValueError",
+                "timing": {
+                  "seconds": 8.054283999998006,
+                  "input_tokens": 1283,
+                  "generated_tokens": 81,
+                  "ttft_ms": 986.5525999994134,
+                  "decode_seconds": 7.067223900005047,
+                  "decode_tokens": 80,
+                  "decode_tokens_per_second": 11.319862103129756
+                }
+              }
+            ]
+          },
+          "status": "error",
+          "verdict": "uncertain",
+          "label": "不确定",
+          "origin": "judge_failure",
+          "reason": "模型未返回有效判断",
+          "error": "判断字段或类别无效，需要assessment"
+        }
+      ]
+    },
+    {
+      "id": "J06",
+      "status": "ok",
+      "items": [
+        {
+          "event_id": "E1",
+          "event": {
+            "id": "E1",
+            "actors": [
+              "茱莉亚"
+            ],
+            "event": "茱莉亚入职星球日报。",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "茱莉亚入职星球日报。",
+                "start": 0,
+                "end": 10
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "id": "4ce0e0b41048241db315",
+              "text": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+              "file": "characters.md",
+              "start_line": 56,
+              "end_line": 56,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "莉娅",
+                "工作职责"
+              ],
+              "start_offset": 560,
+              "end_offset": 594,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 莉娅 > 工作职责\n莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+              "token_count": 61,
+              "score": 0.4835003912448883
+            },
+            {
+              "id": "0ad0e47151069e9d8676",
+              "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "file": "history.md",
+              "start_line": 31,
+              "end_line": 31,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第三话",
+                "身份告知"
+              ],
+              "start_offset": 322,
+              "end_offset": 359,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "token_count": 65,
+              "score": 0.4528580605983734
+            },
+            {
+              "id": "c9a9dcf37f67bf74b64c",
+              "text": "城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+              "file": "history.md",
+              "start_line": 61,
+              "end_line": 61,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "2065年",
+                "档案开放"
+              ],
+              "start_offset": 632,
+              "end_offset": 666,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2065年 > 档案开放\n城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+              "token_count": 60,
+              "score": 0.4392322897911072
+            },
+            {
+              "id": "2979cd8f1d1098b9cdfc",
+              "text": "监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+              "file": "characters.md",
+              "start_line": 61,
+              "end_line": 61,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "监察官",
+                "失明状态"
+              ],
+              "start_offset": 613,
+              "end_offset": 648,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 监察官 > 失明状态\n监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+              "token_count": 63,
+              "score": 0.4299257695674896
+            },
+            {
+              "id": "3a56aa33f1ea6dd2186e",
+              "text": "德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+              "file": "characters.md",
+              "start_line": 31,
+              "end_line": 31,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "德尔塔",
+                "公众身份"
+              ],
+              "start_offset": 294,
+              "end_offset": 337,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 德尔塔 > 公众身份\n德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+              "token_count": 71,
+              "score": 0.4092200994491577
+            }
+          ],
+          "citations": [],
+          "call": {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": false,\n    \"same_scope\": false,\n    \"relation\": \"insufficient\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"uncertain\",\n  \"citations\": [],\n  \"reason\": \"事件'茱莉亚入职星球日报'中的人物'茱莉亚'未在任何lore中被提及，且无任何设定或历史事件涉及其身份、工作或所属组织。lore中仅提及莉娅（档案馆管理员）、雷（双心脏与天使秘密）、德尔塔（装甲行动者）、监察官（失明）等人物，与茱莉亚无直接关联。事件本身为观察陈述，但无任何设定支持或否定其发生，也无上下文表明该事件属于已知设定范围。因此，该事件在设定中未被覆盖，对象与范围均不匹配，无法判断为直接支持或矛盾。\"\n}",
+                "input_tokens": 1261,
+                "max_new_tokens": 768,
+                "timing": {
+                  "seconds": 17.79155200000241,
+                  "input_tokens": 1261,
+                  "generated_tokens": 198,
+                  "ttft_ms": 936.7721999951755,
+                  "decode_seconds": 16.854317800003628,
+                  "decode_tokens": 197,
+                  "decode_tokens_per_second": 11.688399515046381
+                }
+              }
+            ]
+          },
+          "status": "ok",
+          "verdict": "uncertain",
+          "label": "不确定",
+          "reason": "事件'茱莉亚入职星球日报'中的人物'茱莉亚'未在任何lore中被提及，且无任何设定或历史事件涉及其身份、工作或所属组织。lore中仅提及莉娅（档案馆管理员）、雷（双心脏与天使秘密）、德尔塔（装甲行动者）、监察官（失明）等人物，与茱莉亚无直接关联。事件本身为观察陈述，但无任何设定支持或否定其发生，也无上下文表明该事件属于已知设定范围。因此，该事件在设定中未被覆盖，对象与范围均不匹配，无法判断为直接支持或矛盾。",
+          "origin": "model",
+          "assessment": {
+            "same_subject": false,
+            "same_scope": false,
+            "relation": "insufficient",
+            "assumptions": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "J07",
+      "status": "ok",
+      "items": [
+        {
+          "event_id": "E1",
+          "event": {
+            "id": "E1",
+            "actors": [
+              "雷"
+            ],
+            "event": "雷梦到亚巴顿寄宿在自己的右侧心脏。",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "dream",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "雷梦到亚巴顿寄宿在自己的右侧心脏。",
+                "start": 0,
+                "end": 17
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.6953403353691101
+            },
+            {
+              "id": "47ba19b8b9ece1f35cc9",
+              "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "file": "angels.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "亚巴顿",
+                "左侧宿主"
+              ],
+              "start_offset": 43,
+              "end_offset": 81,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "token_count": 66,
+              "score": 0.6434446573257446
+            },
+            {
+              "id": "0ad0e47151069e9d8676",
+              "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "file": "history.md",
+              "start_line": 31,
+              "end_line": 31,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第三话",
+                "身份告知"
+              ],
+              "start_offset": 322,
+              "end_offset": 359,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "token_count": 65,
+              "score": 0.5738112926483154
+            },
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.5720324516296387
+            },
+            {
+              "id": "46422ea243d878bfdce9",
+              "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+              "file": "characters.md",
+              "start_line": 21,
+              "end_line": 21,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "身份保密"
+              ],
+              "start_offset": 189,
+              "end_offset": 229,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+              "token_count": 66,
+              "score": 0.5596237778663635
+            }
+          ],
+          "citations": [],
+          "status": "ok",
+          "verdict": "uncertain",
+          "label": "不确定",
+          "origin": "program_nonactual_scope",
+          "reason": "非客观叙述内容不按现实事件核对；本版尚未核实对应性质的设定约束"
+        }
+      ]
+    },
+    {
+      "id": "J08",
+      "status": "ok",
+      "items": [
+        {
+          "event_id": "E1",
+          "event": {
+            "id": "E1",
+            "actors": [
+              "雷"
+            ],
+            "event": "雷认为亚巴顿寄宿在自己的右侧心脏。",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "belief",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "雷认为亚巴顿寄宿在自己的右侧心脏。",
+                "start": 0,
+                "end": 17
+              }
+            ]
+          },
+          "evidence": [
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.7464386224746704
+            },
+            {
+              "id": "47ba19b8b9ece1f35cc9",
+              "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "file": "angels.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "亚巴顿",
+                "左侧宿主"
+              ],
+              "start_offset": 43,
+              "end_offset": 81,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "token_count": 66,
+              "score": 0.6924439668655396
+            },
+            {
+              "id": "252bda4cc47b93db0d7b",
+              "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+              "file": "angels.md",
+              "start_line": 21,
+              "end_line": 21,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "拉古艾尔",
+                "右侧宿主"
+              ],
+              "start_offset": 202,
+              "end_offset": 242,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+              "token_count": 69,
+              "score": 0.6053597331047058
+            },
+            {
+              "id": "0ad0e47151069e9d8676",
+              "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "file": "history.md",
+              "start_line": 31,
+              "end_line": 31,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第三话",
+                "身份告知"
+              ],
+              "start_offset": 322,
+              "end_offset": 359,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "token_count": 65,
+              "score": 0.6034604907035828
+            },
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.6026186943054199
+            }
+          ],
+          "citations": [],
+          "status": "ok",
+          "verdict": "uncertain",
+          "label": "不确定",
+          "origin": "program_nonactual_scope",
+          "reason": "非客观叙述内容不按现实事件核对；本版尚未核实对应性质的设定约束"
+        }
+      ]
+    },
+    {
+      "id": "J09_real_chain",
+      "status": "ok",
+      "items": [
+        {
+          "event_id": "E1",
+          "status": "support_only",
+          "event": {
+            "actors": [
+              "雷"
+            ],
+            "event": "雷喝下杯里的水",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "雷喝下杯里的水，",
+                "start": 0,
+                "end": 8
+              }
+            ],
+            "contexts": [],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E1",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          },
+          "required_by_event_ids": [
+            "E2"
+          ],
+          "citations": []
+        },
+        {
+          "event_id": "E2",
+          "event": {
+            "actors": [
+              "雷"
+            ],
+            "event": "雷随即毒发倒地",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S2"
+            ],
+            "context_ids": [
+              "S1"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S2",
+                "text": "随即毒发倒地。",
+                "start": 8,
+                "end": 15
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S1",
+                "text": "雷喝下杯里的水，",
+                "start": 0,
+                "end": 8
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E2",
+            "review_required": true,
+            "review_reasons": [
+              "actor_resolution_proposed_by_model",
+              "optional_fields_defaulted"
+            ]
+          },
+          "evidence": [
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.6019282937049866
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.5595407485961914
+            },
+            {
+              "id": "0ad0e47151069e9d8676",
+              "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "file": "history.md",
+              "start_line": 31,
+              "end_line": 31,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第三话",
+                "身份告知"
+              ],
+              "start_offset": 322,
+              "end_offset": 359,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+              "token_count": 65,
+              "score": 0.5519474744796753
+            },
+            {
+              "id": "ca52138556599b584637",
+              "text": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+              "file": "history.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "2063年",
+                "大地震"
+              ],
+              "start_offset": 44,
+              "end_offset": 80,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 大地震\n2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+              "token_count": 61,
+              "score": 0.5452367067337036
+            },
+            {
+              "id": "347b69141392efe457ad",
+              "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+              "file": "characters.md",
+              "start_line": 51,
+              "end_line": 51,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷的父亲",
+                "秘密认知"
+              ],
+              "start_offset": 506,
+              "end_offset": 542,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+              "token_count": 65,
+              "score": 0.5297017097473145
+            }
+          ],
+          "citations": [
+            {
+              "evidence_id": "L1",
+              "quote": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "chunk_id": "a739b6548c630e2c4d40"
+            },
+            {
+              "evidence_id": "L2",
+              "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "chunk_id": "099d1bbdbc348eb3c332"
+            },
+            {
+              "evidence_id": "L4",
+              "quote": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+              "chunk_id": "ca52138556599b584637"
+            }
+          ],
+          "call": {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "error",
+                "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": true,\n    \"same_scope\": true,\n    \"relation\": \"insufficient\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"uncertain\",\n  \"citations\": [\n    {\n      \"evidence_id\": \"S2\",\n      \"quote\": \"随即毒发倒地。\"\n    }\n  ],\n  \"reason\": \"事件中雷毒发倒地是直接观察到的行为，与设定中雷在地震后失去意识、左胸异常疼痛、双心脏寄宿天使等信息存在时间与情境上的关联。但设定中未明确说明毒发与心脏躁动之间的因果关系，也未说明毒发是否与左心脏（亚巴顿）躁动直接相关。虽然故事上下文提到‘他的左心脏中，亚巴顿开始躁动’，但该信息出现在事件之后，且未说明毒发与心脏躁动的时序或因果关系。因此，毒发倒地是否由心脏躁动引起，或是否与亚巴顿的躁动直接相关，均未在设定中被明确支持或排除。事件本身（毒发倒地）未被设定直接否定或明确支持，且无证据表明毒发与心脏状态之间存在必然联系。因此，该事件与设定之间仅存在情境关联，不构成直接支持或矛盾。\"\n}",
+                "error": "引用编号不存在或重复",
+                "error_type": "ValueError",
+                "timing": {
+                  "seconds": 24.62694430000556,
+                  "input_tokens": 1421,
+                  "generated_tokens": 293,
+                  "ttft_ms": 1160.6490000049234,
+                  "decode_seconds": 23.465695899998536,
+                  "decode_tokens": 292,
+                  "decode_tokens_per_second": 12.443696587750386
+                }
+              },
+              {
+                "attempt": 2,
+                "status": "ok",
+                "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": true,\n    \"same_scope\": true,\n    \"relation\": \"direct_support\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"consistent\",\n  \"citations\": [\n    {\n      \"evidence_id\": \"L1\",\n      \"quote\": \"雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。\"\n    },\n    {\n      \"evidence_id\": \"L2\",\n      \"quote\": \"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"\n    },\n    {\n      \"evidence_id\": \"L4\",\n      \"quote\": \"2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。\"\n    }\n  ],\n  \"reason\": \"事件中雷毒发倒地，其左心脏中亚巴顿开始躁动，与设定中雷左侧心脏寄宿亚巴顿、大地震后亚巴顿提前降临的事实一致。左胸异常疼痛与毒发倒地在时间与生理位置上连贯，且亚巴顿在左心脏中躁动符合其宿主位置设定。所有引用均直接支持该事件的生理与因果逻辑，无矛盾或缺失。\"\n}",
+                "input_tokens": 1451,
+                "max_new_tokens": 768,
+                "timing": {
+                  "seconds": 19.27384859999438,
+                  "input_tokens": 1451,
+                  "generated_tokens": 288,
+                  "ttft_ms": 1223.8997999957064,
+                  "decode_seconds": 18.049466100004793,
+                  "decode_tokens": 287,
+                  "decode_tokens_per_second": 15.900747335674588
+                }
+              }
+            ]
+          },
+          "status": "ok",
+          "verdict": "consistent",
+          "label": "明确吻合",
+          "reason": "事件中雷毒发倒地，其左心脏中亚巴顿开始躁动，与设定中雷左侧心脏寄宿亚巴顿、大地震后亚巴顿提前降临的事实一致。左胸异常疼痛与毒发倒地在时间与生理位置上连贯，且亚巴顿在左心脏中躁动符合其宿主位置设定。所有引用均直接支持该事件的生理与因果逻辑，无矛盾或缺失。",
+          "origin": "model",
+          "assessment": {
+            "same_subject": true,
+            "same_scope": true,
+            "relation": "direct_support",
+            "assumptions": []
+          }
+        },
+        {
+          "event_id": "E3",
+          "event": {
+            "actors": [
+              "亚巴顿"
+            ],
+            "event": "亚巴顿在他的左心脏中开始躁动",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S4"
+            ],
+            "context_ids": [
+              "S3"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S4",
+                "text": "亚巴顿开始躁动。",
+                "start": 22,
+                "end": 30
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S3",
+                "text": "他的左心脏中，",
+                "start": 15,
+                "end": 22
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E3",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          },
+          "evidence": [
+            {
+              "id": "47ba19b8b9ece1f35cc9",
+              "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "file": "angels.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "亚巴顿",
+                "左侧宿主"
+              ],
+              "start_offset": 43,
+              "end_offset": 81,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "token_count": 66,
+              "score": 0.5991729497909546
+            },
+            {
+              "id": "ca52138556599b584637",
+              "text": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+              "file": "history.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "2063年",
+                "大地震"
+              ],
+              "start_offset": 44,
+              "end_offset": 80,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 大地震\n2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+              "token_count": 61,
+              "score": 0.5461684465408325
+            },
+            {
+              "id": "e704ee0ef831711f1744",
+              "text": "亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。",
+              "file": "angels.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "亚巴顿",
+                "提前降临"
+              ],
+              "start_offset": 100,
+              "end_offset": 129,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 提前降临\n亚巴顿在大地震时提前降临。他的降临比天使议会计划早了三年。",
+              "token_count": 57,
+              "score": 0.5257614850997925
+            },
+            {
+              "id": "df1f51265ef5555994be",
+              "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+              "file": "angels.md",
+              "start_line": 16,
+              "end_line": 16,
+              "heading_path": [
+                "天使设定（测试设定，不代表正式 canon）",
+                "亚巴顿",
+                "力量副作用"
+              ],
+              "start_offset": 149,
+              "end_offset": 182,
+              "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+              "token_count": 62,
+              "score": 0.5037477612495422
+            },
+            {
+              "id": "099d1bbdbc348eb3c332",
+              "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "生理结构"
+              ],
+              "start_offset": 41,
+              "end_offset": 70,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "token_count": 55,
+              "score": 0.4990430474281311
+            }
+          ],
+          "citations": [
+            {
+              "evidence_id": "L1",
+              "quote": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+              "chunk_id": "47ba19b8b9ece1f35cc9"
+            },
+            {
+              "evidence_id": "L5",
+              "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+              "chunk_id": "099d1bbdbc348eb3c332"
+            }
+          ],
+          "call": {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": true,\n    \"same_scope\": true,\n    \"relation\": \"direct_support\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"consistent\",\n  \"citations\": [\n    {\n      \"evidence_id\": \"L1\",\n      \"quote\": \"亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。\"\n    },\n    {\n      \"evidence_id\": \"L5\",\n      \"quote\": \"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"\n    }\n  ],\n  \"reason\": \"事件中‘亚巴顿在他的左心脏中开始躁动’与设定L1和L5明确指出‘亚巴顿寄宿在雷的左侧心脏’且‘左侧心脏寄宿亚巴顿’一致。该描述未涉及时间、力量强度或具体躁动机制，仅陈述其在左心脏中开始躁动，符合‘寄宿在左心脏’这一事实，且未违反任何位置限制。设定中未禁止左心脏中出现躁动现象，因此该事件在对象（亚巴顿）、位置（左心脏）和叙述性质上与设定完全一致，属于直接支持。\"\n}",
+                "input_tokens": 1328,
+                "max_new_tokens": 768,
+                "timing": {
+                  "seconds": 19.118890899997496,
+                  "input_tokens": 1328,
+                  "generated_tokens": 282,
+                  "ttft_ms": 1086.314799998945,
+                  "decode_seconds": 18.032088100000692,
+                  "decode_tokens": 281,
+                  "decode_tokens_per_second": 15.58333113955833
+                }
+              }
+            ]
+          },
+          "status": "ok",
+          "verdict": "consistent",
+          "label": "明确吻合",
+          "reason": "事件中‘亚巴顿在他的左心脏中开始躁动’与设定L1和L5明确指出‘亚巴顿寄宿在雷的左侧心脏’且‘左侧心脏寄宿亚巴顿’一致。该描述未涉及时间、力量强度或具体躁动机制，仅陈述其在左心脏中开始躁动，符合‘寄宿在左心脏’这一事实，且未违反任何位置限制。设定中未禁止左心脏中出现躁动现象，因此该事件在对象（亚巴顿）、位置（左心脏）和叙述性质上与设定完全一致，属于直接支持。",
+          "origin": "model",
+          "assessment": {
+            "same_subject": true,
+            "same_scope": true,
+            "relation": "direct_support",
+            "assumptions": []
+          }
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "snapshot_stable": true
+}

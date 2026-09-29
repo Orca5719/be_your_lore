@@ -1,0 +1,3074 @@
+{
+  "schema_version": "agent-pipeline-report-v2",
+  "stage": "report",
+  "status": "ok",
+  "report": {
+    "overview": "已核对3项重要事实：0项明确矛盾、3项证据不足或无法明确判定、0项明确吻合。另有0项已过滤、2项仅保留为上下文，不独立核对。结论仅覆盖已提取并核对的事实，未保存设定。",
+    "scope": "checked_events",
+    "contradictions": [],
+    "uncertainties": [
+      {
+        "finding_ids": [
+          "R1"
+        ],
+        "event_ids": [
+          "E1"
+        ],
+        "actors": [
+          "月城"
+        ],
+        "fact": "月城的银色手臂如液体一般化开",
+        "reasons": [
+          "设定未提及右臂具有液态化或渗透主机的能力，也未禁止该现象，因此无法判断是否与机械左臂或自然右臂的性质冲突。"
+        ],
+        "citations": []
+      },
+      {
+        "finding_ids": [
+          "R2"
+        ],
+        "event_ids": [
+          "E2"
+        ],
+        "actors": [
+          "月城"
+        ],
+        "fact": "月城的银色手臂渗透进了实验室的主机中",
+        "reasons": [
+          "设定未提及月城银色手臂的性质、位置或是否具备渗透主机的能力，也未说明其与机械臂或自然臂的关系，因此无法判断该事件是否符合设定。"
+        ],
+        "citations": []
+      },
+      {
+        "finding_ids": [
+          "R3"
+        ],
+        "event_ids": [
+          "E5"
+        ],
+        "actors": [
+          "屏幕"
+        ],
+        "fact": "屏幕只留下一张图像——大地震震中",
+        "reasons": [
+          "设定未明确说明屏幕显示地震图像是否与历史事件时间、地点或信息来源相关，也未规定屏幕内容的生成机制或限制，因此无法判断该图像是否符合事实或设定。"
+        ],
+        "citations": []
+      }
+    ],
+    "confirmations": [],
+    "confirmation_topics": [
+      {
+        "finding_ids": [
+          "R1"
+        ],
+        "event_ids": [
+          "E1"
+        ],
+        "fact": "月城的银色手臂如液体一般化开",
+        "question": "已有设定是否明确支持或限制这项事实？请核实适用设定及判断后再决定是否建立新设定。",
+        "saved": false
+      },
+      {
+        "finding_ids": [
+          "R2"
+        ],
+        "event_ids": [
+          "E2"
+        ],
+        "fact": "月城的银色手臂渗透进了实验室的主机中",
+        "question": "已有设定是否明确支持或限制这项事实？请核实适用设定及判断后再决定是否建立新设定。",
+        "saved": false
+      },
+      {
+        "finding_ids": [
+          "R3"
+        ],
+        "event_ids": [
+          "E5"
+        ],
+        "fact": "屏幕只留下一张图像——大地震震中",
+        "question": "已有设定是否明确支持或限制这项事实？请核实适用设定及判断后再决定是否建立新设定。",
+        "saved": false
+      }
+    ],
+    "excluded_details": [
+      {
+        "event_id": "E3",
+        "reason": "保全保留事件的引用依据；不证明因果",
+        "role": "context_only",
+        "required_by_event_ids": [
+          "E5"
+        ]
+      },
+      {
+        "event_id": "E4",
+        "reason": "保全保留事件的引用依据；不证明因果",
+        "role": "context_only",
+        "required_by_event_ids": [
+          "E5"
+        ]
+      }
+    ],
+    "processing_issues": []
+  },
+  "summary": {
+    "verdict": "uncertain",
+    "label": "尚不能对已核对事实给出完整明确结论",
+    "scope": "checked_events",
+    "counts": {
+      "consistent": 0,
+      "contradiction": 0,
+      "uncertain": 3,
+      "failed": 0,
+      "pending": 0,
+      "ignored": 0,
+      "support_only": 2,
+      "unprocessed": 0
+    },
+    "checked_event_count": 3,
+    "finding_count": 3
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "event_ids": [
+        "E1"
+      ],
+      "actors": [
+        "月城"
+      ],
+      "event": "月城的银色手臂如液体一般化开",
+      "verdict": "uncertain",
+      "label": "不确定",
+      "reasons": [
+        "设定未提及右臂具有液态化或渗透主机的能力，也未禁止该现象，因此无法判断是否与机械左臂或自然右臂的性质冲突。"
+      ],
+      "citations": [],
+      "sources": [
+        {
+          "id": "S1",
+          "text": "月城的银色手臂如液体一般化开，",
+          "start": 0,
+          "end": 15
+        }
+      ],
+      "contexts": [],
+      "origin": "model",
+      "assessment": {
+        "same_subject": true,
+        "evidence_applicable": true,
+        "relation": "insufficient",
+        "assumptions": []
+      }
+    },
+    {
+      "id": "R2",
+      "event_ids": [
+        "E2"
+      ],
+      "actors": [
+        "月城"
+      ],
+      "event": "月城的银色手臂渗透进了实验室的主机中",
+      "verdict": "uncertain",
+      "label": "不确定",
+      "reasons": [
+        "设定未提及月城银色手臂的性质、位置或是否具备渗透主机的能力，也未说明其与机械臂或自然臂的关系，因此无法判断该事件是否符合设定。"
+      ],
+      "citations": [],
+      "sources": [
+        {
+          "id": "S2",
+          "text": "渗透进了实验室的主机中，",
+          "start": 15,
+          "end": 27
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S1",
+          "text": "月城的银色手臂如液体一般化开，",
+          "start": 0,
+          "end": 15
+        }
+      ],
+      "origin": "model",
+      "assessment": {
+        "same_subject": true,
+        "evidence_applicable": null,
+        "relation": "insufficient",
+        "assumptions": []
+      }
+    },
+    {
+      "id": "R3",
+      "event_ids": [
+        "E5"
+      ],
+      "actors": [
+        "屏幕"
+      ],
+      "event": "屏幕只留下一张图像——大地震震中",
+      "verdict": "uncertain",
+      "label": "不确定",
+      "reasons": [
+        "设定未明确说明屏幕显示地震图像是否与历史事件时间、地点或信息来源相关，也未规定屏幕内容的生成机制或限制，因此无法判断该图像是否符合事实或设定。"
+      ],
+      "citations": [],
+      "sources": [
+        {
+          "id": "S5",
+          "text": "只留下一张图像——大地震震中",
+          "start": 47,
+          "end": 61
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S4",
+          "text": "各种文件飞速闪过，",
+          "start": 38,
+          "end": 47
+        },
+        {
+          "id": "S3",
+          "text": "随后屏幕开始发生变化，",
+          "start": 27,
+          "end": 38
+        }
+      ],
+      "origin": "model",
+      "assessment": {
+        "same_subject": true,
+        "evidence_applicable": true,
+        "relation": "insufficient",
+        "assumptions": []
+      }
+    }
+  ],
+  "evidence": [],
+  "failed_items": [],
+  "pending_events": [],
+  "ignored_events": [],
+  "support_events": [
+    {
+      "event_id": "E3",
+      "event": {
+        "actors": [
+          "屏幕"
+        ],
+        "event": "屏幕开始发生变化",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S3"
+        ],
+        "context_ids": [
+          "S2"
+        ],
+        "mental_state": null,
+        "conditions": [],
+        "sources": [
+          {
+            "id": "S3",
+            "text": "随后屏幕开始发生变化，",
+            "start": 27,
+            "end": 38
+          }
+        ],
+        "contexts": [
+          {
+            "id": "S2",
+            "text": "渗透进了实验室的主机中，",
+            "start": 15,
+            "end": 27
+          }
+        ],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions"
+        ],
+        "id": "E3",
+        "review_required": true,
+        "review_reasons": [
+          "optional_fields_defaulted"
+        ]
+      },
+      "required_by_event_ids": [
+        "E5"
+      ]
+    },
+    {
+      "event_id": "E4",
+      "event": {
+        "actors": [
+          "屏幕"
+        ],
+        "event": "各种文件飞速闪过",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S4"
+        ],
+        "context_ids": [
+          "S3"
+        ],
+        "mental_state": null,
+        "conditions": [],
+        "sources": [
+          {
+            "id": "S4",
+            "text": "各种文件飞速闪过，",
+            "start": 38,
+            "end": 47
+          }
+        ],
+        "contexts": [
+          {
+            "id": "S3",
+            "text": "随后屏幕开始发生变化，",
+            "start": 27,
+            "end": 38
+          }
+        ],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions"
+        ],
+        "id": "E4",
+        "review_required": true,
+        "review_reasons": [
+          "actor_resolution_proposed_by_model",
+          "optional_fields_defaulted"
+        ]
+      },
+      "required_by_event_ids": [
+        "E5"
+      ]
+    }
+  ],
+  "unprocessed_events": [],
+  "review_items": [
+    {
+      "event_id": "E1",
+      "reasons": [
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "event_id": "E2",
+      "reasons": [
+        "actor_resolution_proposed_by_model",
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "event_id": "E3",
+      "reasons": [
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "event_id": "E4",
+      "reasons": [
+        "actor_resolution_proposed_by_model",
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "event_id": "E5",
+      "reasons": [
+        "actor_resolution_proposed_by_model",
+        "optional_fields_defaulted"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "actors": [
+        "月城"
+      ],
+      "event": "月城的银色手臂如液体一般化开",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S1"
+      ],
+      "context_ids": [],
+      "mental_state": null,
+      "conditions": [],
+      "sources": [
+        {
+          "id": "S1",
+          "text": "月城的银色手臂如液体一般化开，",
+          "start": 0,
+          "end": 15
+        }
+      ],
+      "contexts": [],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions"
+      ],
+      "id": "E1",
+      "review_required": true,
+      "review_reasons": [
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "actors": [
+        "月城"
+      ],
+      "event": "月城的银色手臂渗透进了实验室的主机中",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S2"
+      ],
+      "context_ids": [
+        "S1"
+      ],
+      "mental_state": null,
+      "conditions": [],
+      "sources": [
+        {
+          "id": "S2",
+          "text": "渗透进了实验室的主机中，",
+          "start": 15,
+          "end": 27
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S1",
+          "text": "月城的银色手臂如液体一般化开，",
+          "start": 0,
+          "end": 15
+        }
+      ],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions"
+      ],
+      "id": "E2",
+      "review_required": true,
+      "review_reasons": [
+        "actor_resolution_proposed_by_model",
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "actors": [
+        "屏幕"
+      ],
+      "event": "屏幕开始发生变化",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S3"
+      ],
+      "context_ids": [
+        "S2"
+      ],
+      "mental_state": null,
+      "conditions": [],
+      "sources": [
+        {
+          "id": "S3",
+          "text": "随后屏幕开始发生变化，",
+          "start": 27,
+          "end": 38
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S2",
+          "text": "渗透进了实验室的主机中，",
+          "start": 15,
+          "end": 27
+        }
+      ],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions"
+      ],
+      "id": "E3",
+      "review_required": true,
+      "review_reasons": [
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "actors": [
+        "屏幕"
+      ],
+      "event": "各种文件飞速闪过",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S4"
+      ],
+      "context_ids": [
+        "S3"
+      ],
+      "mental_state": null,
+      "conditions": [],
+      "sources": [
+        {
+          "id": "S4",
+          "text": "各种文件飞速闪过，",
+          "start": 38,
+          "end": 47
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S3",
+          "text": "随后屏幕开始发生变化，",
+          "start": 27,
+          "end": 38
+        }
+      ],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions"
+      ],
+      "id": "E4",
+      "review_required": true,
+      "review_reasons": [
+        "actor_resolution_proposed_by_model",
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "actors": [
+        "屏幕"
+      ],
+      "event": "屏幕只留下一张图像——大地震震中",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S5"
+      ],
+      "context_ids": [
+        "S4",
+        "S3"
+      ],
+      "mental_state": null,
+      "conditions": [],
+      "sources": [
+        {
+          "id": "S5",
+          "text": "只留下一张图像——大地震震中",
+          "start": 47,
+          "end": 61
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S4",
+          "text": "各种文件飞速闪过，",
+          "start": 38,
+          "end": 47
+        },
+        {
+          "id": "S3",
+          "text": "随后屏幕开始发生变化，",
+          "start": 27,
+          "end": 38
+        }
+      ],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions"
+      ],
+      "reference_repairs": [
+        "unique_prior_name_anchor_added"
+      ],
+      "original_context_ids": [
+        "S4"
+      ],
+      "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+      "id": "E5",
+      "review_required": true,
+      "review_reasons": [
+        "actor_resolution_proposed_by_model",
+        "optional_fields_defaulted"
+      ]
+    }
+  ],
+  "judge": {
+    "schema_version": "agent-pipeline-judge-v1",
+    "prompt_version": "judge-v5",
+    "stage": "judge",
+    "status": "ok",
+    "events": [
+      {
+        "actors": [
+          "月城"
+        ],
+        "event": "月城的银色手臂如液体一般化开",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S1"
+        ],
+        "context_ids": [],
+        "mental_state": null,
+        "conditions": [],
+        "sources": [
+          {
+            "id": "S1",
+            "text": "月城的银色手臂如液体一般化开，",
+            "start": 0,
+            "end": 15
+          }
+        ],
+        "contexts": [],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions"
+        ],
+        "id": "E1",
+        "review_required": true,
+        "review_reasons": [
+          "optional_fields_defaulted"
+        ]
+      },
+      {
+        "actors": [
+          "月城"
+        ],
+        "event": "月城的银色手臂渗透进了实验室的主机中",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S2"
+        ],
+        "context_ids": [
+          "S1"
+        ],
+        "mental_state": null,
+        "conditions": [],
+        "sources": [
+          {
+            "id": "S2",
+            "text": "渗透进了实验室的主机中，",
+            "start": 15,
+            "end": 27
+          }
+        ],
+        "contexts": [
+          {
+            "id": "S1",
+            "text": "月城的银色手臂如液体一般化开，",
+            "start": 0,
+            "end": 15
+          }
+        ],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions"
+        ],
+        "id": "E2",
+        "review_required": true,
+        "review_reasons": [
+          "actor_resolution_proposed_by_model",
+          "optional_fields_defaulted"
+        ]
+      },
+      {
+        "actors": [
+          "屏幕"
+        ],
+        "event": "屏幕开始发生变化",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S3"
+        ],
+        "context_ids": [
+          "S2"
+        ],
+        "mental_state": null,
+        "conditions": [],
+        "sources": [
+          {
+            "id": "S3",
+            "text": "随后屏幕开始发生变化，",
+            "start": 27,
+            "end": 38
+          }
+        ],
+        "contexts": [
+          {
+            "id": "S2",
+            "text": "渗透进了实验室的主机中，",
+            "start": 15,
+            "end": 27
+          }
+        ],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions"
+        ],
+        "id": "E3",
+        "review_required": true,
+        "review_reasons": [
+          "optional_fields_defaulted"
+        ]
+      },
+      {
+        "actors": [
+          "屏幕"
+        ],
+        "event": "各种文件飞速闪过",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S4"
+        ],
+        "context_ids": [
+          "S3"
+        ],
+        "mental_state": null,
+        "conditions": [],
+        "sources": [
+          {
+            "id": "S4",
+            "text": "各种文件飞速闪过，",
+            "start": 38,
+            "end": 47
+          }
+        ],
+        "contexts": [
+          {
+            "id": "S3",
+            "text": "随后屏幕开始发生变化，",
+            "start": 27,
+            "end": 38
+          }
+        ],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions"
+        ],
+        "id": "E4",
+        "review_required": true,
+        "review_reasons": [
+          "actor_resolution_proposed_by_model",
+          "optional_fields_defaulted"
+        ]
+      },
+      {
+        "actors": [
+          "屏幕"
+        ],
+        "event": "屏幕只留下一张图像——大地震震中",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S5"
+        ],
+        "context_ids": [
+          "S4",
+          "S3"
+        ],
+        "mental_state": null,
+        "conditions": [],
+        "sources": [
+          {
+            "id": "S5",
+            "text": "只留下一张图像——大地震震中",
+            "start": 47,
+            "end": 61
+          }
+        ],
+        "contexts": [
+          {
+            "id": "S4",
+            "text": "各种文件飞速闪过，",
+            "start": 38,
+            "end": 47
+          },
+          {
+            "id": "S3",
+            "text": "随后屏幕开始发生变化，",
+            "start": 27,
+            "end": 38
+          }
+        ],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions"
+        ],
+        "reference_repairs": [
+          "unique_prior_name_anchor_added"
+        ],
+        "original_context_ids": [
+          "S4"
+        ],
+        "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+        "id": "E5",
+        "review_required": true,
+        "review_reasons": [
+          "actor_resolution_proposed_by_model",
+          "optional_fields_defaulted"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "event_id": "E1",
+        "event": {
+          "actors": [
+            "月城"
+          ],
+          "event": "月城的银色手臂如液体一般化开",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S1"
+          ],
+          "context_ids": [],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S1",
+              "text": "月城的银色手臂如液体一般化开，",
+              "start": 0,
+              "end": 15
+            }
+          ],
+          "contexts": [],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E1",
+          "review_required": true,
+          "review_reasons": [
+            "optional_fields_defaulted"
+          ]
+        },
+        "evidence": [
+          {
+            "id": "d7f7dd2035b813e0a886",
+            "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "file": "characters.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "机械左臂"
+            ],
+            "start_offset": 408,
+            "end_offset": 436,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "token_count": 55,
+            "score": 0.688296914100647
+          },
+          {
+            "id": "7cb9af5fe25451106869",
+            "text": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "file": "history.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "月城失臂"
+            ],
+            "start_offset": 101,
+            "end_offset": 136,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 月城失臂\n月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "token_count": 63,
+            "score": 0.6226570010185242
+          },
+          {
+            "id": "fd1bec15cd989aa6cacf",
+            "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "file": "characters.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "手术时间"
+            ],
+            "start_offset": 454,
+            "end_offset": 486,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "token_count": 57,
+            "score": 0.6087920069694519
+          },
+          {
+            "id": "685d37adddbe625a62f6",
+            "text": "地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "file": "history.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2064年",
+              "机械臂安装"
+            ],
+            "start_offset": 158,
+            "end_offset": 183,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2064年 > 机械臂安装\n地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "token_count": 54,
+            "score": 0.5627831220626831
+          },
+          {
+            "id": "b6c490a416855d8e6bb7",
+            "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "file": "technology.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "机械左臂",
+              "神经接口"
+            ],
+            "start_offset": 156,
+            "end_offset": 193,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "token_count": 66,
+            "score": 0.5609630942344666
+          }
+        ],
+        "citations": [],
+        "call": {
+          "status": "ok",
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": true,\n    \"evidence_applicable\": true,\n    \"relation\": \"insufficient\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"uncertain\",\n  \"citations\": [],\n  \"reason\": \"设定未提及右臂具有液态化或渗透主机的能力，也未禁止该现象，因此无法判断是否与机械左臂或自然右臂的性质冲突。\"\n}",
+              "input_tokens": 1851,
+              "max_new_tokens": 768,
+              "timing": {
+                "seconds": 10.346603199999663,
+                "input_tokens": 1851,
+                "generated_tokens": 98,
+                "ttft_ms": 1596.2392000001273,
+                "decode_seconds": 8.749435400000948,
+                "decode_tokens": 97,
+                "decode_tokens_per_second": 11.08642964550484
+              }
+            }
+          ]
+        },
+        "status": "ok",
+        "verdict": "uncertain",
+        "label": "不确定",
+        "reason": "设定未提及右臂具有液态化或渗透主机的能力，也未禁止该现象，因此无法判断是否与机械左臂或自然右臂的性质冲突。",
+        "origin": "model",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "insufficient",
+          "assumptions": []
+        }
+      },
+      {
+        "event_id": "E2",
+        "event": {
+          "actors": [
+            "月城"
+          ],
+          "event": "月城的银色手臂渗透进了实验室的主机中",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S2"
+          ],
+          "context_ids": [
+            "S1"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S2",
+              "text": "渗透进了实验室的主机中，",
+              "start": 15,
+              "end": 27
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S1",
+              "text": "月城的银色手臂如液体一般化开，",
+              "start": 0,
+              "end": 15
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E2",
+          "review_required": true,
+          "review_reasons": [
+            "actor_resolution_proposed_by_model",
+            "optional_fields_defaulted"
+          ]
+        },
+        "evidence": [
+          {
+            "id": "d7f7dd2035b813e0a886",
+            "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "file": "characters.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "机械左臂"
+            ],
+            "start_offset": 408,
+            "end_offset": 436,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "token_count": 55,
+            "score": 0.677365779876709
+          },
+          {
+            "id": "fd1bec15cd989aa6cacf",
+            "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "file": "characters.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "手术时间"
+            ],
+            "start_offset": 454,
+            "end_offset": 486,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "token_count": 57,
+            "score": 0.6100196242332458
+          },
+          {
+            "id": "7cb9af5fe25451106869",
+            "text": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "file": "history.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "月城失臂"
+            ],
+            "start_offset": 101,
+            "end_offset": 136,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 月城失臂\n月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "token_count": 63,
+            "score": 0.607843279838562
+          },
+          {
+            "id": "da962def6f2a55ad70fc",
+            "text": "月城的机械左臂能反馈压力，但无法感知温度。他用左手碰热水时不会感觉烫。",
+            "file": "technology.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "机械左臂",
+              "触觉反馈"
+            ],
+            "start_offset": 213,
+            "end_offset": 248,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 触觉反馈\n月城的机械左臂能反馈压力，但无法感知温度。他用左手碰热水时不会感觉烫。",
+            "token_count": 64,
+            "score": 0.5755372643470764
+          },
+          {
+            "id": "685d37adddbe625a62f6",
+            "text": "地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "file": "history.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2064年",
+              "机械臂安装"
+            ],
+            "start_offset": 158,
+            "end_offset": 183,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2064年 > 机械臂安装\n地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "token_count": 54,
+            "score": 0.574440598487854
+          }
+        ],
+        "citations": [],
+        "call": {
+          "status": "ok",
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": true,\n    \"evidence_applicable\": null,\n    \"relation\": \"insufficient\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"uncertain\",\n  \"citations\": [],\n  \"reason\": \"设定未提及月城银色手臂的性质、位置或是否具备渗透主机的能力，也未说明其与机械臂或自然臂的关系，因此无法判断该事件是否符合设定。\"\n}",
+              "input_tokens": 1884,
+              "max_new_tokens": 768,
+              "timing": {
+                "seconds": 10.529275300003064,
+                "input_tokens": 1884,
+                "generated_tokens": 102,
+                "ttft_ms": 1630.4434999983641,
+                "decode_seconds": 8.898041100001137,
+                "decode_tokens": 101,
+                "decode_tokens_per_second": 11.35081293342049
+              }
+            }
+          ]
+        },
+        "status": "ok",
+        "verdict": "uncertain",
+        "label": "不确定",
+        "reason": "设定未提及月城银色手臂的性质、位置或是否具备渗透主机的能力，也未说明其与机械臂或自然臂的关系，因此无法判断该事件是否符合设定。",
+        "origin": "model",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": null,
+          "relation": "insufficient",
+          "assumptions": []
+        }
+      },
+      {
+        "event_id": "E3",
+        "status": "support_only",
+        "event": {
+          "actors": [
+            "屏幕"
+          ],
+          "event": "屏幕开始发生变化",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S3"
+          ],
+          "context_ids": [
+            "S2"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S3",
+              "text": "随后屏幕开始发生变化，",
+              "start": 27,
+              "end": 38
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S2",
+              "text": "渗透进了实验室的主机中，",
+              "start": 15,
+              "end": 27
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E3",
+          "review_required": true,
+          "review_reasons": [
+            "optional_fields_defaulted"
+          ]
+        },
+        "required_by_event_ids": [
+          "E5"
+        ],
+        "citations": []
+      },
+      {
+        "event_id": "E4",
+        "status": "support_only",
+        "event": {
+          "actors": [
+            "屏幕"
+          ],
+          "event": "各种文件飞速闪过",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S4"
+          ],
+          "context_ids": [
+            "S3"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S4",
+              "text": "各种文件飞速闪过，",
+              "start": 38,
+              "end": 47
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S3",
+              "text": "随后屏幕开始发生变化，",
+              "start": 27,
+              "end": 38
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E4",
+          "review_required": true,
+          "review_reasons": [
+            "actor_resolution_proposed_by_model",
+            "optional_fields_defaulted"
+          ]
+        },
+        "required_by_event_ids": [
+          "E5"
+        ],
+        "citations": []
+      },
+      {
+        "event_id": "E5",
+        "event": {
+          "actors": [
+            "屏幕"
+          ],
+          "event": "屏幕只留下一张图像——大地震震中",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S5"
+          ],
+          "context_ids": [
+            "S4",
+            "S3"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S5",
+              "text": "只留下一张图像——大地震震中",
+              "start": 47,
+              "end": 61
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S4",
+              "text": "各种文件飞速闪过，",
+              "start": 38,
+              "end": 47
+            },
+            {
+              "id": "S3",
+              "text": "随后屏幕开始发生变化，",
+              "start": 27,
+              "end": 38
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "reference_repairs": [
+            "unique_prior_name_anchor_added"
+          ],
+          "original_context_ids": [
+            "S4"
+          ],
+          "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+          "id": "E5",
+          "review_required": true,
+          "review_reasons": [
+            "actor_resolution_proposed_by_model",
+            "optional_fields_defaulted"
+          ]
+        },
+        "evidence": [
+          {
+            "id": "ca52138556599b584637",
+            "text": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+            "file": "history.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "大地震"
+            ],
+            "start_offset": 44,
+            "end_offset": 80,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 大地震\n2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+            "token_count": 61,
+            "score": 0.6353727579116821
+          },
+          {
+            "id": "2d8cb5017830f3a8881e",
+            "text": "档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。",
+            "file": "technology.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "档案馆",
+              "纸质备份"
+            ],
+            "start_offset": 521,
+            "end_offset": 556,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 档案馆 > 纸质备份\n档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。",
+            "token_count": 63,
+            "score": 0.5942257642745972
+          },
+          {
+            "id": "5a6ae37cea08494abfc8",
+            "text": "地震前一年，城区曾因发电厂事故发生大停电。当时没有天使降临的记录。",
+            "file": "history.md",
+            "start_line": 56,
+            "end_line": 56,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2062年",
+              "城区停电"
+            ],
+            "start_offset": 578,
+            "end_offset": 611,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2062年 > 城区停电\n地震前一年，城区曾因发电厂事故发生大停电。当时没有天使降临的记录。",
+            "token_count": 61,
+            "score": 0.5903317928314209
+          },
+          {
+            "id": "a67d2b6c645c6c2b1d19",
+            "text": "第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+            "file": "history.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第一话",
+              "公共新闻"
+            ],
+            "start_offset": 202,
+            "end_offset": 240,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第一话 > 公共新闻\n第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+            "token_count": 66,
+            "score": 0.5657485723495483
+          },
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.5412906408309937
+          }
+        ],
+        "citations": [],
+        "call": {
+          "status": "ok",
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": true,\n    \"evidence_applicable\": true,\n    \"relation\": \"insufficient\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"uncertain\",\n  \"citations\": [],\n  \"reason\": \"设定未明确说明屏幕显示地震图像是否与历史事件时间、地点或信息来源相关，也未规定屏幕内容的生成机制或限制，因此无法判断该图像是否符合事实或设定。\"\n}",
+              "input_tokens": 2151,
+              "max_new_tokens": 768,
+              "timing": {
+                "seconds": 10.352121299998544,
+                "input_tokens": 2151,
+                "generated_tokens": 104,
+                "ttft_ms": 2109.4349999984843,
+                "decode_seconds": 8.242031000001589,
+                "decode_tokens": 103,
+                "decode_tokens_per_second": 12.496919751937373
+              }
+            }
+          ]
+        },
+        "status": "ok",
+        "verdict": "uncertain",
+        "label": "不确定",
+        "reason": "设定未明确说明屏幕显示地震图像是否与历史事件时间、地点或信息来源相关，也未规定屏幕内容的生成机制或限制，因此无法判断该图像是否符合事实或设定。",
+        "origin": "model",
+        "assessment": {
+          "same_subject": true,
+          "evidence_applicable": true,
+          "relation": "insufficient",
+          "assumptions": []
+        }
+      }
+    ],
+    "retrieval": {
+      "schema_version": "agent-pipeline-retrieval-v1",
+      "stage": "retrieval",
+      "status": "ok",
+      "filtering": {
+        "schema_version": "agent-pipeline-filtering-v1",
+        "prompt_version": "filtering-v6",
+        "stage": "filtering",
+        "status": "ok",
+        "failure_reasons": {
+          "upstream_status": "ok",
+          "pending_event_ids": [],
+          "rejected_count": 0,
+          "failed_window_ids": []
+        },
+        "events": [
+          {
+            "actors": [
+              "月城"
+            ],
+            "event": "月城的银色手臂如液体一般化开",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "月城的银色手臂如液体一般化开，",
+                "start": 0,
+                "end": 15
+              }
+            ],
+            "contexts": [],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E1",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          },
+          {
+            "actors": [
+              "月城"
+            ],
+            "event": "月城的银色手臂渗透进了实验室的主机中",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S2"
+            ],
+            "context_ids": [
+              "S1"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S2",
+                "text": "渗透进了实验室的主机中，",
+                "start": 15,
+                "end": 27
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S1",
+                "text": "月城的银色手臂如液体一般化开，",
+                "start": 0,
+                "end": 15
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E2",
+            "review_required": true,
+            "review_reasons": [
+              "actor_resolution_proposed_by_model",
+              "optional_fields_defaulted"
+            ]
+          },
+          {
+            "actors": [
+              "屏幕"
+            ],
+            "event": "屏幕开始发生变化",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S3"
+            ],
+            "context_ids": [
+              "S2"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S3",
+                "text": "随后屏幕开始发生变化，",
+                "start": 27,
+                "end": 38
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S2",
+                "text": "渗透进了实验室的主机中，",
+                "start": 15,
+                "end": 27
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E3",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          },
+          {
+            "actors": [
+              "屏幕"
+            ],
+            "event": "各种文件飞速闪过",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S4"
+            ],
+            "context_ids": [
+              "S3"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S4",
+                "text": "各种文件飞速闪过，",
+                "start": 38,
+                "end": 47
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S3",
+                "text": "随后屏幕开始发生变化，",
+                "start": 27,
+                "end": 38
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E4",
+            "review_required": true,
+            "review_reasons": [
+              "actor_resolution_proposed_by_model",
+              "optional_fields_defaulted"
+            ]
+          },
+          {
+            "actors": [
+              "屏幕"
+            ],
+            "event": "屏幕只留下一张图像——大地震震中",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S5"
+            ],
+            "context_ids": [
+              "S4",
+              "S3"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S5",
+                "text": "只留下一张图像——大地震震中",
+                "start": 47,
+                "end": 61
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S4",
+                "text": "各种文件飞速闪过，",
+                "start": 38,
+                "end": 47
+              },
+              {
+                "id": "S3",
+                "text": "随后屏幕开始发生变化，",
+                "start": 27,
+                "end": 38
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "reference_repairs": [
+              "unique_prior_name_anchor_added"
+            ],
+            "original_context_ids": [
+              "S4"
+            ],
+            "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+            "id": "E5",
+            "review_required": true,
+            "review_reasons": [
+              "actor_resolution_proposed_by_model",
+              "optional_fields_defaulted"
+            ]
+          }
+        ],
+        "decisions": [
+          {
+            "event_id": "E1",
+            "decision": "keep",
+            "reason": "特殊机制或异常状态，需核对设定约束",
+            "reason_code": "mechanism"
+          },
+          {
+            "event_id": "E2",
+            "decision": "keep",
+            "reason": "特殊机制或异常状态，需核对设定约束",
+            "reason_code": "mechanism"
+          },
+          {
+            "event_id": "E3",
+            "decision": "keep",
+            "reason": "保全保留事件的引用依据；不证明因果",
+            "reason_code": "consequence_support",
+            "model_decision": "ignore",
+            "model_reason": "呈现或操作过程细节，无独立核对价值",
+            "model_reason_code": "process_detail",
+            "support_only": true,
+            "origin": "program_dependency_guard",
+            "required_by_event_ids": [
+              "E5"
+            ]
+          },
+          {
+            "event_id": "E4",
+            "decision": "keep",
+            "reason": "保全保留事件的引用依据；不证明因果",
+            "reason_code": "consequence_support",
+            "model_decision": "ignore",
+            "model_reason": "呈现或操作过程细节，无独立核对价值",
+            "model_reason_code": "process_detail",
+            "support_only": true,
+            "origin": "program_dependency_guard",
+            "required_by_event_ids": [
+              "E5"
+            ]
+          },
+          {
+            "event_id": "E5",
+            "decision": "keep",
+            "reason": "涉及身份、人物知识或关系变化",
+            "reason_code": "knowledge_relation"
+          }
+        ],
+        "selected_events": [
+          {
+            "actors": [
+              "月城"
+            ],
+            "event": "月城的银色手臂如液体一般化开",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "月城的银色手臂如液体一般化开，",
+                "start": 0,
+                "end": 15
+              }
+            ],
+            "contexts": [],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E1",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          },
+          {
+            "actors": [
+              "月城"
+            ],
+            "event": "月城的银色手臂渗透进了实验室的主机中",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S2"
+            ],
+            "context_ids": [
+              "S1"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S2",
+                "text": "渗透进了实验室的主机中，",
+                "start": 15,
+                "end": 27
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S1",
+                "text": "月城的银色手臂如液体一般化开，",
+                "start": 0,
+                "end": 15
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E2",
+            "review_required": true,
+            "review_reasons": [
+              "actor_resolution_proposed_by_model",
+              "optional_fields_defaulted"
+            ]
+          },
+          {
+            "actors": [
+              "屏幕"
+            ],
+            "event": "屏幕开始发生变化",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S3"
+            ],
+            "context_ids": [
+              "S2"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S3",
+                "text": "随后屏幕开始发生变化，",
+                "start": 27,
+                "end": 38
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S2",
+                "text": "渗透进了实验室的主机中，",
+                "start": 15,
+                "end": 27
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E3",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          },
+          {
+            "actors": [
+              "屏幕"
+            ],
+            "event": "各种文件飞速闪过",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S4"
+            ],
+            "context_ids": [
+              "S3"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S4",
+                "text": "各种文件飞速闪过，",
+                "start": 38,
+                "end": 47
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S3",
+                "text": "随后屏幕开始发生变化，",
+                "start": 27,
+                "end": 38
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E4",
+            "review_required": true,
+            "review_reasons": [
+              "actor_resolution_proposed_by_model",
+              "optional_fields_defaulted"
+            ]
+          },
+          {
+            "actors": [
+              "屏幕"
+            ],
+            "event": "屏幕只留下一张图像——大地震震中",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S5"
+            ],
+            "context_ids": [
+              "S4",
+              "S3"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S5",
+                "text": "只留下一张图像——大地震震中",
+                "start": 47,
+                "end": 61
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S4",
+                "text": "各种文件飞速闪过，",
+                "start": 38,
+                "end": 47
+              },
+              {
+                "id": "S3",
+                "text": "随后屏幕开始发生变化，",
+                "start": 27,
+                "end": 38
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "reference_repairs": [
+              "unique_prior_name_anchor_added"
+            ],
+            "original_context_ids": [
+              "S4"
+            ],
+            "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+            "id": "E5",
+            "review_required": true,
+            "review_reasons": [
+              "actor_resolution_proposed_by_model",
+              "optional_fields_defaulted"
+            ]
+          }
+        ],
+        "ignored_events": [],
+        "pending_events": [],
+        "understanding": {
+          "schema_version": "agent-pipeline-understanding-v1",
+          "prompt_version": "understanding-v6",
+          "stage": "understanding",
+          "status": "ok",
+          "text": "月城的银色手臂如液体一般化开，渗透进了实验室的主机中，随后屏幕开始发生变化，各种文件飞速闪过，只留下一张图像——大地震震中",
+          "events": [
+            {
+              "actors": [
+                "月城"
+              ],
+              "event": "月城的银色手臂如液体一般化开",
+              "explicit": true,
+              "modality": "observed",
+              "source_ids": [
+                "S1"
+              ],
+              "context_ids": [],
+              "mental_state": null,
+              "conditions": [],
+              "sources": [
+                {
+                  "id": "S1",
+                  "text": "月城的银色手臂如液体一般化开，",
+                  "start": 0,
+                  "end": 15
+                }
+              ],
+              "contexts": [],
+              "defaulted_fields": [
+                "mental_state",
+                "conditions"
+              ],
+              "id": "E1",
+              "review_required": true,
+              "review_reasons": [
+                "optional_fields_defaulted"
+              ]
+            },
+            {
+              "actors": [
+                "月城"
+              ],
+              "event": "月城的银色手臂渗透进了实验室的主机中",
+              "explicit": true,
+              "modality": "observed",
+              "source_ids": [
+                "S2"
+              ],
+              "context_ids": [
+                "S1"
+              ],
+              "mental_state": null,
+              "conditions": [],
+              "sources": [
+                {
+                  "id": "S2",
+                  "text": "渗透进了实验室的主机中，",
+                  "start": 15,
+                  "end": 27
+                }
+              ],
+              "contexts": [
+                {
+                  "id": "S1",
+                  "text": "月城的银色手臂如液体一般化开，",
+                  "start": 0,
+                  "end": 15
+                }
+              ],
+              "defaulted_fields": [
+                "mental_state",
+                "conditions"
+              ],
+              "id": "E2",
+              "review_required": true,
+              "review_reasons": [
+                "actor_resolution_proposed_by_model",
+                "optional_fields_defaulted"
+              ]
+            },
+            {
+              "actors": [
+                "屏幕"
+              ],
+              "event": "屏幕开始发生变化",
+              "explicit": true,
+              "modality": "observed",
+              "source_ids": [
+                "S3"
+              ],
+              "context_ids": [
+                "S2"
+              ],
+              "mental_state": null,
+              "conditions": [],
+              "sources": [
+                {
+                  "id": "S3",
+                  "text": "随后屏幕开始发生变化，",
+                  "start": 27,
+                  "end": 38
+                }
+              ],
+              "contexts": [
+                {
+                  "id": "S2",
+                  "text": "渗透进了实验室的主机中，",
+                  "start": 15,
+                  "end": 27
+                }
+              ],
+              "defaulted_fields": [
+                "mental_state",
+                "conditions"
+              ],
+              "id": "E3",
+              "review_required": true,
+              "review_reasons": [
+                "optional_fields_defaulted"
+              ]
+            },
+            {
+              "actors": [
+                "屏幕"
+              ],
+              "event": "各种文件飞速闪过",
+              "explicit": true,
+              "modality": "observed",
+              "source_ids": [
+                "S4"
+              ],
+              "context_ids": [
+                "S3"
+              ],
+              "mental_state": null,
+              "conditions": [],
+              "sources": [
+                {
+                  "id": "S4",
+                  "text": "各种文件飞速闪过，",
+                  "start": 38,
+                  "end": 47
+                }
+              ],
+              "contexts": [
+                {
+                  "id": "S3",
+                  "text": "随后屏幕开始发生变化，",
+                  "start": 27,
+                  "end": 38
+                }
+              ],
+              "defaulted_fields": [
+                "mental_state",
+                "conditions"
+              ],
+              "id": "E4",
+              "review_required": true,
+              "review_reasons": [
+                "actor_resolution_proposed_by_model",
+                "optional_fields_defaulted"
+              ]
+            },
+            {
+              "actors": [
+                "屏幕"
+              ],
+              "event": "屏幕只留下一张图像——大地震震中",
+              "explicit": true,
+              "modality": "observed",
+              "source_ids": [
+                "S5"
+              ],
+              "context_ids": [
+                "S4",
+                "S3"
+              ],
+              "mental_state": null,
+              "conditions": [],
+              "sources": [
+                {
+                  "id": "S5",
+                  "text": "只留下一张图像——大地震震中",
+                  "start": 47,
+                  "end": 61
+                }
+              ],
+              "contexts": [
+                {
+                  "id": "S4",
+                  "text": "各种文件飞速闪过，",
+                  "start": 38,
+                  "end": 47
+                },
+                {
+                  "id": "S3",
+                  "text": "随后屏幕开始发生变化，",
+                  "start": 27,
+                  "end": 38
+                }
+              ],
+              "defaulted_fields": [
+                "mental_state",
+                "conditions"
+              ],
+              "reference_repairs": [
+                "unique_prior_name_anchor_added"
+              ],
+              "original_context_ids": [
+                "S4"
+              ],
+              "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+              "id": "E5",
+              "review_required": true,
+              "review_reasons": [
+                "actor_resolution_proposed_by_model",
+                "optional_fields_defaulted"
+              ]
+            }
+          ],
+          "rejected": [],
+          "calls": [
+            {
+              "status": "ok",
+              "attempts": [
+                {
+                  "attempt": 1,
+                  "status": "ok",
+                  "raw_output": "{\n  \"events\": [\n    {\n      \"actors\": [\"月城\"],\n      \"event\": \"月城的银色手臂如液体一般化开\",\n      \"explicit\": true,\n      \"modality\": \"observed\",\n      \"source_ids\": [\"S1\"],\n      \"context_ids\": []\n    },\n    {\n      \"actors\": [\"月城\"],\n      \"event\": \"月城的银色手臂渗透进了实验室的主机中\",\n      \"explicit\": true,\n      \"modality\": \"observed\",\n      \"source_ids\": [\"S2\"],\n      \"context_ids\": [\"S1\"]\n    },\n    {\n      \"actors\": [\"屏幕\"],\n      \"event\": \"屏幕开始发生变化\",\n      \"explicit\": true,\n      \"modality\": \"observed\",\n      \"source_ids\": [\"S3\"],\n      \"context_ids\": [\"S2\"]\n    },\n    {\n      \"actors\": [\"屏幕\"],\n      \"event\": \"各种文件飞速闪过\",\n      \"explicit\": true,\n      \"modality\": \"observed\",\n      \"source_ids\": [\"S4\"],\n      \"context_ids\": [\"S3\"]\n    },\n    {\n      \"actors\": [\"屏幕\"],\n      \"event\": \"屏幕只留下一张图像——大地震震中\",\n      \"explicit\": true,\n      \"modality\": \"observed\",\n      \"source_ids\": [\"S5\"],\n      \"context_ids\": [\"S4\"]\n    }\n  ]\n}",
+                  "input_tokens": 801,
+                  "max_new_tokens": 1536,
+                  "timing": {
+                    "seconds": 27.877782700001262,
+                    "input_tokens": 801,
+                    "generated_tokens": 300,
+                    "ttft_ms": 1765.8453000040026,
+                    "decode_seconds": 26.10571109999728,
+                    "decode_tokens": 299,
+                    "decode_tokens_per_second": 11.453432501979659
+                  }
+                }
+              ],
+              "window_id": 1,
+              "purpose": "initial_understanding",
+              "target_ids": [
+                "S1",
+                "S2",
+                "S3",
+                "S4",
+                "S5"
+              ],
+              "context_ids": []
+            }
+          ],
+          "duplicate_candidates": 0,
+          "unrecovered_failed_source_ids": [],
+          "failure_reasons": {
+            "unresolved_candidates": [],
+            "missing_source_ids": [],
+            "failed_source_ids": []
+          },
+          "processing_complete": true,
+          "semantic_verification": "not_verified",
+          "review_required": true,
+          "request_seconds": 28.07486689999496,
+          "model_loaded_this_request": false,
+          "coverage": {
+            "source_spans": {
+              "S1": {
+                "text": "月城的银色手臂如液体一般化开，",
+                "start": 0,
+                "end": 15
+              },
+              "S2": {
+                "text": "渗透进了实验室的主机中，",
+                "start": 15,
+                "end": 27
+              },
+              "S3": {
+                "text": "随后屏幕开始发生变化，",
+                "start": 27,
+                "end": 38
+              },
+              "S4": {
+                "text": "各种文件飞速闪过，",
+                "start": 38,
+                "end": 47
+              },
+              "S5": {
+                "text": "只留下一张图像——大地震震中",
+                "start": 47,
+                "end": 61
+              }
+            },
+            "covered_source_ids": [
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ],
+            "primary_source_ids": [
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5"
+            ],
+            "context_only_source_ids": [],
+            "missing_source_ids": [],
+            "note": "包括事件/条件/主体上下文引用；被引用不保证全部语义提取正确，仅作上下文的片段仍需检查是否漏事件"
+          },
+          "device": "cuda",
+          "model_load_seconds": 26.901797800004715,
+          "notice": "仅语义理解：未筛选重要性、未检索、未判断、未保存设定"
+        },
+        "upstream_status": "ok",
+        "calls": [
+          {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"decisions\":[{\"event_id\":\"E1\",\"decision\":\"keep\",\"reason_code\":\"mechanism\"},{\"event_id\":\"E2\",\"decision\":\"keep\",\"reason_code\":\"mechanism\"},{\"event_id\":\"E3\",\"decision\":\"ignore\",\"reason_code\":\"process_detail\"},{\"event_id\":\"E4\",\"decision\":\"ignore\",\"reason_code\":\"process_detail\"},{\"event_id\":\"E5\",\"decision\":\"keep\",\"reason_code\":\"knowledge_relation\"}]}",
+                "input_tokens": 1222,
+                "max_new_tokens": 1024,
+                "timing": {
+                  "seconds": 8.320272900004056,
+                  "input_tokens": 1222,
+                  "generated_tokens": 88,
+                  "ttft_ms": 827.6354999979958,
+                  "decode_seconds": 7.491896400002588,
+                  "decode_tokens": 87,
+                  "decode_tokens_per_second": 11.612547124913519
+                }
+              }
+            ],
+            "window_id": 1,
+            "target_ids": [
+              "E1",
+              "E2",
+              "E3",
+              "E4",
+              "E5"
+            ]
+          }
+        ],
+        "rejected": [],
+        "filtering_complete": true,
+        "processing_complete": true,
+        "semantic_verification": "not_verified",
+        "request_seconds": 8.362046099995496,
+        "model_loaded_this_request": true,
+        "device": "cuda",
+        "model_load_seconds": 26.901797800004715,
+        "notice": "仅筛选建议；事件原样保留，待复核不等于忽略；未检索、未判断矛盾、未保存设定。"
+      },
+      "events": [
+        {
+          "actors": [
+            "月城"
+          ],
+          "event": "月城的银色手臂如液体一般化开",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S1"
+          ],
+          "context_ids": [],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S1",
+              "text": "月城的银色手臂如液体一般化开，",
+              "start": 0,
+              "end": 15
+            }
+          ],
+          "contexts": [],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E1",
+          "review_required": true,
+          "review_reasons": [
+            "optional_fields_defaulted"
+          ]
+        },
+        {
+          "actors": [
+            "月城"
+          ],
+          "event": "月城的银色手臂渗透进了实验室的主机中",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S2"
+          ],
+          "context_ids": [
+            "S1"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S2",
+              "text": "渗透进了实验室的主机中，",
+              "start": 15,
+              "end": 27
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S1",
+              "text": "月城的银色手臂如液体一般化开，",
+              "start": 0,
+              "end": 15
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E2",
+          "review_required": true,
+          "review_reasons": [
+            "actor_resolution_proposed_by_model",
+            "optional_fields_defaulted"
+          ]
+        },
+        {
+          "actors": [
+            "屏幕"
+          ],
+          "event": "屏幕开始发生变化",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S3"
+          ],
+          "context_ids": [
+            "S2"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S3",
+              "text": "随后屏幕开始发生变化，",
+              "start": 27,
+              "end": 38
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S2",
+              "text": "渗透进了实验室的主机中，",
+              "start": 15,
+              "end": 27
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E3",
+          "review_required": true,
+          "review_reasons": [
+            "optional_fields_defaulted"
+          ]
+        },
+        {
+          "actors": [
+            "屏幕"
+          ],
+          "event": "各种文件飞速闪过",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S4"
+          ],
+          "context_ids": [
+            "S3"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S4",
+              "text": "各种文件飞速闪过，",
+              "start": 38,
+              "end": 47
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S3",
+              "text": "随后屏幕开始发生变化，",
+              "start": 27,
+              "end": 38
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E4",
+          "review_required": true,
+          "review_reasons": [
+            "actor_resolution_proposed_by_model",
+            "optional_fields_defaulted"
+          ]
+        },
+        {
+          "actors": [
+            "屏幕"
+          ],
+          "event": "屏幕只留下一张图像——大地震震中",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S5"
+          ],
+          "context_ids": [
+            "S4",
+            "S3"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S5",
+              "text": "只留下一张图像——大地震震中",
+              "start": 47,
+              "end": 61
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S4",
+              "text": "各种文件飞速闪过，",
+              "start": 38,
+              "end": 47
+            },
+            {
+              "id": "S3",
+              "text": "随后屏幕开始发生变化，",
+              "start": 27,
+              "end": 38
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "reference_repairs": [
+            "unique_prior_name_anchor_added"
+          ],
+          "original_context_ids": [
+            "S4"
+          ],
+          "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+          "id": "E5",
+          "review_required": true,
+          "review_reasons": [
+            "actor_resolution_proposed_by_model",
+            "optional_fields_defaulted"
+          ]
+        }
+      ],
+      "items": [
+        {
+          "event_id": "E1",
+          "event": {
+            "actors": [
+              "月城"
+            ],
+            "event": "月城的银色手臂如液体一般化开",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "月城的银色手臂如液体一般化开，",
+                "start": 0,
+                "end": 15
+              }
+            ],
+            "contexts": [],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E1",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          },
+          "query": "主体：月城\n叙述性质：observed\n事件：月城的银色手臂如液体一般化开\n局部原文：月城的银色手臂如液体一般化开，",
+          "evidence": [
+            {
+              "id": "d7f7dd2035b813e0a886",
+              "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+              "file": "characters.md",
+              "start_line": 41,
+              "end_line": 41,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "月城",
+                "机械左臂"
+              ],
+              "start_offset": 408,
+              "end_offset": 436,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+              "token_count": 55,
+              "score": 0.688296914100647
+            },
+            {
+              "id": "7cb9af5fe25451106869",
+              "text": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+              "file": "history.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "2063年",
+                "月城失臂"
+              ],
+              "start_offset": 101,
+              "end_offset": 136,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 月城失臂\n月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+              "token_count": 63,
+              "score": 0.6226570010185242
+            },
+            {
+              "id": "fd1bec15cd989aa6cacf",
+              "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+              "file": "characters.md",
+              "start_line": 46,
+              "end_line": 46,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "月城",
+                "手术时间"
+              ],
+              "start_offset": 454,
+              "end_offset": 486,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+              "token_count": 57,
+              "score": 0.6087920069694519
+            },
+            {
+              "id": "685d37adddbe625a62f6",
+              "text": "地震一年后，月城在医院完成机械左臂安装和康复训练。",
+              "file": "history.md",
+              "start_line": 16,
+              "end_line": 16,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "2064年",
+                "机械臂安装"
+              ],
+              "start_offset": 158,
+              "end_offset": 183,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2064年 > 机械臂安装\n地震一年后，月城在医院完成机械左臂安装和康复训练。",
+              "token_count": 54,
+              "score": 0.5627831220626831
+            },
+            {
+              "id": "b6c490a416855d8e6bb7",
+              "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+              "file": "technology.md",
+              "start_line": 16,
+              "end_line": 16,
+              "heading_path": [
+                "科技规则（测试设定，不代表正式 canon）",
+                "机械左臂",
+                "神经接口"
+              ],
+              "start_offset": 156,
+              "end_offset": 193,
+              "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+              "token_count": 66,
+              "score": 0.5609630942344666
+            }
+          ],
+          "cache_hit": false,
+          "status": "ok",
+          "retrieval_seconds": 0.21985520000453107
+        },
+        {
+          "event_id": "E2",
+          "event": {
+            "actors": [
+              "月城"
+            ],
+            "event": "月城的银色手臂渗透进了实验室的主机中",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S2"
+            ],
+            "context_ids": [
+              "S1"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S2",
+                "text": "渗透进了实验室的主机中，",
+                "start": 15,
+                "end": 27
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S1",
+                "text": "月城的银色手臂如液体一般化开，",
+                "start": 0,
+                "end": 15
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E2",
+            "review_required": true,
+            "review_reasons": [
+              "actor_resolution_proposed_by_model",
+              "optional_fields_defaulted"
+            ]
+          },
+          "query": "主体：月城\n叙述性质：observed\n事件：月城的银色手臂渗透进了实验室的主机中\n局部原文：月城的银色手臂如液体一般化开，渗透进了实验室的主机中，",
+          "evidence": [
+            {
+              "id": "d7f7dd2035b813e0a886",
+              "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+              "file": "characters.md",
+              "start_line": 41,
+              "end_line": 41,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "月城",
+                "机械左臂"
+              ],
+              "start_offset": 408,
+              "end_offset": 436,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+              "token_count": 55,
+              "score": 0.677365779876709
+            },
+            {
+              "id": "fd1bec15cd989aa6cacf",
+              "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+              "file": "characters.md",
+              "start_line": 46,
+              "end_line": 46,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "月城",
+                "手术时间"
+              ],
+              "start_offset": 454,
+              "end_offset": 486,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+              "token_count": 57,
+              "score": 0.6100196242332458
+            },
+            {
+              "id": "7cb9af5fe25451106869",
+              "text": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+              "file": "history.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "2063年",
+                "月城失臂"
+              ],
+              "start_offset": 101,
+              "end_offset": 136,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 月城失臂\n月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+              "token_count": 63,
+              "score": 0.607843279838562
+            },
+            {
+              "id": "da962def6f2a55ad70fc",
+              "text": "月城的机械左臂能反馈压力，但无法感知温度。他用左手碰热水时不会感觉烫。",
+              "file": "technology.md",
+              "start_line": 21,
+              "end_line": 21,
+              "heading_path": [
+                "科技规则（测试设定，不代表正式 canon）",
+                "机械左臂",
+                "触觉反馈"
+              ],
+              "start_offset": 213,
+              "end_offset": 248,
+              "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 触觉反馈\n月城的机械左臂能反馈压力，但无法感知温度。他用左手碰热水时不会感觉烫。",
+              "token_count": 64,
+              "score": 0.5755372643470764
+            },
+            {
+              "id": "685d37adddbe625a62f6",
+              "text": "地震一年后，月城在医院完成机械左臂安装和康复训练。",
+              "file": "history.md",
+              "start_line": 16,
+              "end_line": 16,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "2064年",
+                "机械臂安装"
+              ],
+              "start_offset": 158,
+              "end_offset": 183,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2064年 > 机械臂安装\n地震一年后，月城在医院完成机械左臂安装和康复训练。",
+              "token_count": 54,
+              "score": 0.574440598487854
+            }
+          ],
+          "cache_hit": false,
+          "status": "ok",
+          "retrieval_seconds": 0.0064098000002559274
+        },
+        {
+          "event_id": "E3",
+          "event": {
+            "actors": [
+              "屏幕"
+            ],
+            "event": "屏幕开始发生变化",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S3"
+            ],
+            "context_ids": [
+              "S2"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S3",
+                "text": "随后屏幕开始发生变化，",
+                "start": 27,
+                "end": 38
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S2",
+                "text": "渗透进了实验室的主机中，",
+                "start": 15,
+                "end": 27
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E3",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          },
+          "status": "support_only",
+          "required_by_event_ids": [
+            "E5"
+          ],
+          "evidence": [],
+          "query": null,
+          "retrieval_seconds": 0
+        },
+        {
+          "event_id": "E4",
+          "event": {
+            "actors": [
+              "屏幕"
+            ],
+            "event": "各种文件飞速闪过",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S4"
+            ],
+            "context_ids": [
+              "S3"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S4",
+                "text": "各种文件飞速闪过，",
+                "start": 38,
+                "end": 47
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S3",
+                "text": "随后屏幕开始发生变化，",
+                "start": 27,
+                "end": 38
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E4",
+            "review_required": true,
+            "review_reasons": [
+              "actor_resolution_proposed_by_model",
+              "optional_fields_defaulted"
+            ]
+          },
+          "status": "support_only",
+          "required_by_event_ids": [
+            "E5"
+          ],
+          "evidence": [],
+          "query": null,
+          "retrieval_seconds": 0
+        },
+        {
+          "event_id": "E5",
+          "event": {
+            "actors": [
+              "屏幕"
+            ],
+            "event": "屏幕只留下一张图像——大地震震中",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S5"
+            ],
+            "context_ids": [
+              "S4",
+              "S3"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S5",
+                "text": "只留下一张图像——大地震震中",
+                "start": 47,
+                "end": 61
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S4",
+                "text": "各种文件飞速闪过，",
+                "start": 38,
+                "end": 47
+              },
+              {
+                "id": "S3",
+                "text": "随后屏幕开始发生变化，",
+                "start": 27,
+                "end": 38
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "reference_repairs": [
+              "unique_prior_name_anchor_added"
+            ],
+            "original_context_ids": [
+              "S4"
+            ],
+            "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+            "id": "E5",
+            "review_required": true,
+            "review_reasons": [
+              "actor_resolution_proposed_by_model",
+              "optional_fields_defaulted"
+            ]
+          },
+          "query": "主体：屏幕\n叙述性质：observed\n事件：屏幕只留下一张图像——大地震震中\n局部原文：随后屏幕开始发生变化，各种文件飞速闪过，只留下一张图像——大地震震中",
+          "evidence": [
+            {
+              "id": "ca52138556599b584637",
+              "text": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+              "file": "history.md",
+              "start_line": 6,
+              "end_line": 6,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "2063年",
+                "大地震"
+              ],
+              "start_offset": 44,
+              "end_offset": 80,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 大地震\n2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+              "token_count": 61,
+              "score": 0.6353727579116821
+            },
+            {
+              "id": "2d8cb5017830f3a8881e",
+              "text": "档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。",
+              "file": "technology.md",
+              "start_line": 51,
+              "end_line": 51,
+              "heading_path": [
+                "科技规则（测试设定，不代表正式 canon）",
+                "档案馆",
+                "纸质备份"
+              ],
+              "start_offset": 521,
+              "end_offset": 556,
+              "embedding_text": "科技规则（测试设定，不代表正式 canon） > 档案馆 > 纸质备份\n档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。",
+              "token_count": 63,
+              "score": 0.5942257642745972
+            },
+            {
+              "id": "5a6ae37cea08494abfc8",
+              "text": "地震前一年，城区曾因发电厂事故发生大停电。当时没有天使降临的记录。",
+              "file": "history.md",
+              "start_line": 56,
+              "end_line": 56,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "2062年",
+                "城区停电"
+              ],
+              "start_offset": 578,
+              "end_offset": 611,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2062年 > 城区停电\n地震前一年，城区曾因发电厂事故发生大停电。当时没有天使降临的记录。",
+              "token_count": 61,
+              "score": 0.5903317928314209
+            },
+            {
+              "id": "a67d2b6c645c6c2b1d19",
+              "text": "第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+              "file": "history.md",
+              "start_line": 21,
+              "end_line": 21,
+              "heading_path": [
+                "历史事件（测试设定，不代表正式 canon）",
+                "第一话",
+                "公共新闻"
+              ],
+              "start_offset": 202,
+              "end_offset": 240,
+              "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第一话 > 公共新闻\n第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+              "token_count": 66,
+              "score": 0.5657485723495483
+            },
+            {
+              "id": "a739b6548c630e2c4d40",
+              "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11,
+              "heading_path": [
+                "人物设定（测试设定，不代表正式 canon）",
+                "雷",
+                "经历"
+              ],
+              "start_offset": 85,
+              "end_offset": 116,
+              "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+              "token_count": 55,
+              "score": 0.5412906408309937
+            }
+          ],
+          "cache_hit": false,
+          "status": "ok",
+          "retrieval_seconds": 0.005614199995761737
+        }
+      ],
+      "top_k": 5,
+      "pending_event_ids": [],
+      "ignored_event_ids": [],
+      "upstream_status": "ok",
+      "retrieval_complete": true,
+      "processing_complete": true,
+      "semantic_verification": "not_verified",
+      "failure_reasons": {
+        "upstream_status": "ok",
+        "failed_event_ids": [],
+        "load_error": null
+      },
+      "encoder_loaded_this_request": true,
+      "index": {
+        "config": {
+          "model": "BAAI/bge-small-zh-v1.5",
+          "revision": "7999e1d3359715c523056ef9478215996d62a620",
+          "pooling": "cls",
+          "normalization": "l2",
+          "query_prompt": "为这个句子生成表示以用于检索相关文章：",
+          "dimension": 512,
+          "inference_dtype": "float32",
+          "chunker": {
+            "version": 1,
+            "max_tokens": 512,
+            "overlap": "last_sentence_when_fits"
+          }
+        },
+        "sources": {
+          "angels.md": "3a74db800a715d8b392db37ccc38026b0e71219fffa684d8e2d429314ef9b7e2",
+          "characters.md": "e5741e3a36fe3ef0a286a7c2f1f85089b9908cc99869563dd5d040348d40d3e8",
+          "history.md": "4f0105823cc8d513a4d32cfc094736458db594351000de074acd313cee06d601",
+          "technology.md": "b88690cae568b05032d2c078646bfea50ff304a291b7fbadf0af17eeb4c6cfae"
+        },
+        "lore_directory": "C:\\Users\\Xhang\\Desktop\\project\\worldcheck\\lore"
+      },
+      "device": "cuda",
+      "request_seconds": 0.7249698000014178,
+      "notice": "仅检索相关设定，未判断矛盾、未保存。相似度表示相对相关性，不是事实正确率或矛盾置信度；无关事件也可能返回片段。"
+    },
+    "pending_event_ids": [],
+    "ignored_event_ids": [],
+    "upstream_status": "ok",
+    "failure_reasons": {
+      "upstream_status": "ok",
+      "failed_event_ids": [],
+      "upstream_stages": {}
+    },
+    "judge_complete": true,
+    "processing_complete": true,
+    "semantic_verification": "not_verified",
+    "model_loaded_this_request": false,
+    "device": "cuda",
+    "model_load_seconds": 26.901797800004715,
+    "request_seconds": 31.319566600002872,
+    "notice": "逐事件一致性建议，未汇总整段、未保存设定。有效引用不保证判断正确；未提取/待复核内容不代表无矛盾。"
+  },
+  "processing_complete": true,
+  "review_required": true,
+  "failure_reasons": {
+    "upstream_status": "ok",
+    "failed_event_ids": [],
+    "upstream_stages": {}
+  },
+  "semantic_verification": "not_verified",
+  "notice": "仅汇总已核对事件，不证明整段故事无矛盾；不确定不是处理失败。保留上游建议，未保存设定。相似度不是事实正确率或矛盾置信度。"
+}

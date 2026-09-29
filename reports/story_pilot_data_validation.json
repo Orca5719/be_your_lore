@@ -1,0 +1,26 @@
+{
+  "dataset": "evaluation/story_benchmark_pilot_4_v1.json",
+  "cases": 4,
+  "gold_facts": 5,
+  "lengths": [
+    239,
+    235,
+    236,
+    238
+  ],
+  "source_and_context_anchors": 7,
+  "ignored_example_anchors": 4,
+  "canonical_evidence_rows": 5,
+  "index_chunks": 48,
+  "frozen_files_unchanged": 38,
+  "model_calls": 0,
+  "checks": [
+    "200-800 characters",
+    "unique case IDs",
+    "original text offsets",
+    "canonical quote source lines",
+    "index manifest validation",
+    "frozen SHA256 unchanged"
+  ],
+  "scope": "Data integrity only; semantic annotations are drafts, no model accuracy measured"
+}

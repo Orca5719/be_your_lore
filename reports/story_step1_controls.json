@@ -1,0 +1,208 @@
+[
+  {
+    "name": "daily_only",
+    "result": {
+      "status": "ok",
+      "facts": [],
+      "rejected": [],
+      "duplicates": [],
+      "unselected_spans": {
+        "S1": {
+          "text": "艾琳吃完午饭，",
+          "start": 0,
+          "end": 7
+        },
+        "S2": {
+          "text": "喝了一口水，",
+          "start": 7,
+          "end": 13
+        },
+        "S3": {
+          "text": "擦了擦桌子，",
+          "start": 13,
+          "end": 19
+        },
+        "S4": {
+          "text": "然后换上外套。",
+          "start": 19,
+          "end": 26
+        }
+      },
+      "story": "艾琳吃完午饭，喝了一口水，擦了擦桌子，然后换上外套。",
+      "raw_output": "{\"facts\":[]}",
+      "prompt_version": "story-extraction-v1",
+      "timing": {
+        "seconds": 1.4732057000001078,
+        "calls": [
+          {
+            "stage": "candidate_extraction",
+            "seconds": 1.4732057000001078,
+            "input_tokens": 1477,
+            "generated_tokens": 5,
+            "ttft_ms": 1091.6378000001714,
+            "decode_seconds": 0.38086420000036014,
+            "decode_tokens": 4,
+            "decode_tokens_per_second": 10.502431050217421
+          }
+        ]
+      },
+      "importance_raw_output": "",
+      "device": "cuda",
+      "notice": "只筛选事实建议；未检索、未判断矛盾、未保存。原文引用有效不保证事实理解正确。"
+    }
+  },
+  {
+    "name": "explicit_vs_inferred",
+    "result": {
+      "status": "partial",
+      "facts": [
+        {
+          "subject": "芮尔",
+          "predicate": "戴上",
+          "object": "电子导盲装置",
+          "type": "object_state",
+          "source_text": "他戴上电子导盲装置，",
+          "source_start": 11,
+          "source_end": 21,
+          "source_ids": [
+            "S2"
+          ],
+          "context_ids": [
+            "S2"
+          ],
+          "context_text": "他戴上电子导盲装置，",
+          "time": null,
+          "id": "F1"
+        }
+      ],
+      "rejected": [
+        {
+          "fact_index": 1,
+          "error": "事实字段不符合 story-extraction-v1 协议",
+          "raw_fact": {
+            "subject": "芮尔",
+            "predicate": "从旅馆的床上醒来",
+            "type": "timeline",
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [
+              "S1"
+            ]
+          }
+        },
+        {
+          "fact_index": 3,
+          "error": "事实字段不符合 story-extraction-v1 协议",
+          "raw_fact": {
+            "subject": "芮尔",
+            "predicate": "准备出门",
+            "type": "character_attribute",
+            "source_ids": [
+              "S3"
+            ],
+            "context_ids": [
+              "S3"
+            ]
+          }
+        }
+      ],
+      "duplicates": [],
+      "unselected_spans": {
+        "S1": {
+          "text": "芮尔从旅馆的床上醒来。",
+          "start": 0,
+          "end": 11
+        },
+        "S3": {
+          "text": "准备出门。",
+          "start": 21,
+          "end": 26
+        }
+      },
+      "candidates": [
+        {
+          "subject": "芮尔",
+          "predicate": "戴上",
+          "object": "电子导盲装置",
+          "type": "object_state",
+          "source_text": "他戴上电子导盲装置，",
+          "source_start": 11,
+          "source_end": 21,
+          "source_ids": [
+            "S2"
+          ],
+          "context_ids": [
+            "S2"
+          ],
+          "context_text": "他戴上电子导盲装置，",
+          "time": null,
+          "id": "F1"
+        }
+      ],
+      "discarded": [],
+      "story": "芮尔从旅馆的床上醒来。他戴上电子导盲装置，准备出门。",
+      "raw_output": "{\"facts\": [{\"subject\": \"芮尔\", \"predicate\": \"从旅馆的床上醒来\", \"type\": \"timeline\", \"source_ids\": [\"S1\"], \"context_ids\": [\"S1\"]}, {\"subject\": \"芮尔\", \"predicate\": \"戴上\", \"object\": \"电子导盲装置\", \"type\": \"object_state\", \"source_ids\": [\"S2\"], \"context_ids\": [\"S2\"]}, {\"subject\": \"芮尔\", \"predicate\": \"准备出门\", \"type\": \"character_attribute\", \"source_ids\": [\"S3\"], \"context_ids\": [\"S3\"]}]}",
+      "prompt_version": "story-extraction-v1",
+      "timing": {
+        "seconds": 13.30772590000197,
+        "calls": [
+          {
+            "stage": "candidate_extraction",
+            "seconds": 11.845582800000557,
+            "input_tokens": 1454,
+            "generated_tokens": 128,
+            "ttft_ms": 1082.4094000017794,
+            "decode_seconds": 10.762500499997259,
+            "decode_tokens": 127,
+            "decode_tokens_per_second": 11.800231739829638
+          },
+          {
+            "stage": "importance_review",
+            "seconds": 1.4621431000014127,
+            "input_tokens": 581,
+            "generated_tokens": 13,
+            "ttft_ms": 330.8855000032054,
+            "decode_seconds": 1.1304448999981105,
+            "decode_tokens": 12,
+            "decode_tokens_per_second": 10.615289608560362
+          }
+        ]
+      },
+      "importance_raw_output": "{\"keep\": [\"F1\"], \"discard\": []}",
+      "device": "cuda",
+      "notice": "只筛选事实建议；未检索、未判断矛盾、未保存。原文引用有效不保证事实理解正确。"
+    }
+  },
+  {
+    "name": "important_eating",
+    "result": {
+      "status": "error",
+      "facts": [],
+      "rejected": [],
+      "duplicates": [],
+      "error": "Extra data: line 1 column 110 (char 109)",
+      "story": "艾琳吃下毒蘑菇后双眼失明了。",
+      "raw_output": "{\"facts\":[{\"subject\":\"艾琳\",\"predicate\":\"双眼失明了\",\"object\":\"\",\"type\":\"character_attribute\",\"source_ids\":[\"S1\"]}]})",
+      "prompt_version": "story-extraction-v1",
+      "timing": {
+        "seconds": 3.460463700001128,
+        "calls": [
+          {
+            "stage": "candidate_extraction",
+            "seconds": 3.460463700001128,
+            "input_tokens": 1396,
+            "generated_tokens": 31,
+            "ttft_ms": 1019.2626999996719,
+            "decode_seconds": 2.4405906000029063,
+            "decode_tokens": 30,
+            "decode_tokens_per_second": 12.292106672853807
+          }
+        ]
+      },
+      "importance_raw_output": "",
+      "device": "cuda",
+      "notice": "只筛选事实建议；未检索、未判断矛盾、未保存。原文引用有效不保证事实理解正确。"
+    }
+  }
+]

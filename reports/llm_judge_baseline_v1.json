@@ -1,0 +1,4811 @@
+{
+  "status": "complete",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "manifest": {
+    "evaluation\\llm_judge_baseline_v1.json": "83430845793abefdefb9bde329319bf08c1df6b3221687a3471db8a2a0a2935c",
+    "prompts\\world_review_v2.txt": "1d116ea606b5e85bad2385242a11c009d6437150dfdeec6bdbc0429442f7d77f",
+    "qwen_judge.py": "491ac085703f60eb3f4d4fbf47c990824c1e5400cb009530bbd86de06f2d3108",
+    "world_records.py": "1113de14bf4a3b2a55f275d40adb81691433246ccceb26368ab62577ae1d3b58",
+    "llm_judge_baseline.py": "b4261aa8a8f0ede94ec116ea7b194dc733ccb98e6e3cae469262a0d5f7571e1e"
+  },
+  "note": "运行前人工指定正确拆分和主体/时间，不包含提取。用于定位端到端失败，不能冒充应用整体准确率。沿用相同28例的34条核心事实，不是新增独立测试。",
+  "cases": [
+    {
+      "id": "c01-1",
+      "parent": "c01",
+      "group": "fresh",
+      "source_input": "雷的左心脏寄宿亚巴顿。",
+      "record": {
+        "kind": "relation",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "寄宿",
+        "text": "雷的左心脏寄宿亚巴顿",
+        "target": "亚巴顿",
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "左侧心脏寄宿亚巴顿",
+        "雷的左侧心脏"
+      ],
+      "predicted": "一致",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "一致",
+        "findings": [
+          {
+            "input_quote": "雷的左心脏寄宿亚巴顿",
+            "verdict": "一致",
+            "evidence": [
+              {
+                "chunk_id": "47ba19b8b9ece1f35cc9",
+                "quote": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。"
+              },
+              {
+                "chunk_id": "099d1bbdbc348eb3c332",
+                "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。"
+              }
+            ],
+            "reason": "左心脏寄宿亚巴顿，证据明确支持",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"一致\",\"evidence\":[\"E1\",\"E2\"],\"reason\":\"左心脏寄宿亚巴顿，证据明确支持\"}",
+        "evidence": [
+          {
+            "id": "47ba19b8b9ece1f35cc9",
+            "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+            "file": "angels.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "亚巴顿",
+              "左侧宿主"
+            ],
+            "start_offset": 43,
+            "end_offset": 81,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+            "token_count": 66,
+            "score": 0.6520317792892456
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.6263812780380249
+          },
+          {
+            "id": "252bda4cc47b93db0d7b",
+            "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "file": "angels.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "右侧宿主"
+            ],
+            "start_offset": 202,
+            "end_offset": 242,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "token_count": 69,
+            "score": 0.5399215221405029
+          },
+          {
+            "id": "17af8f8e8b7ff81197e4",
+            "text": "普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+            "file": "technology.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "医疗",
+              "心脏扫描"
+            ],
+            "start_offset": 472,
+            "end_offset": 502,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 医疗 > 心脏扫描\n普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+            "token_count": 57,
+            "score": 0.5091617107391357
+          },
+          {
+            "id": "46422ea243d878bfdce9",
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "file": "characters.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "身份保密"
+            ],
+            "start_offset": 189,
+            "end_offset": 229,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "token_count": 66,
+            "score": 0.45040708780288696
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 3.105506200000491,
+          "input_tokens": 501,
+          "generated_tokens": 30
+        }
+      },
+      "seconds": 3.1431910999999673,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2740.94287109375
+    },
+    {
+      "id": "c02-1",
+      "parent": "c02",
+      "group": "fresh",
+      "source_input": "拉古艾尔寄宿在雷的右侧心脏里。",
+      "record": {
+        "kind": "relation",
+        "entity": "拉古艾尔",
+        "entity_type": null,
+        "category": "寄宿",
+        "text": "拉古艾尔寄宿在雷的右侧心脏里",
+        "target": "雷",
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "雷的右侧心脏",
+        "右侧心脏寄宿拉古艾尔"
+      ],
+      "predicted": "一致",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "一致",
+        "findings": [
+          {
+            "input_quote": "拉古艾尔寄宿在雷的右侧心脏里",
+            "verdict": "一致",
+            "evidence": [
+              {
+                "chunk_id": "252bda4cc47b93db0d7b",
+                "quote": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。"
+              },
+              {
+                "chunk_id": "099d1bbdbc348eb3c332",
+                "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。"
+              }
+            ],
+            "reason": "直接支持拉古艾尔在雷右侧心脏寄宿",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"一致\",\"evidence\":[\"E1\",\"E2\"],\"reason\":\"直接支持拉古艾尔在雷右侧心脏寄宿\"}",
+        "evidence": [
+          {
+            "id": "252bda4cc47b93db0d7b",
+            "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "file": "angels.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "右侧宿主"
+            ],
+            "start_offset": 202,
+            "end_offset": 242,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "token_count": 69,
+            "score": 0.6848019957542419
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.6810578107833862
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.6368097066879272
+          },
+          {
+            "id": "f355504eef1bbb05f59a",
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "file": "characters.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "右胸异感"
+            ],
+            "start_offset": 133,
+            "end_offset": 172,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "token_count": 65,
+            "score": 0.6156113147735596
+          },
+          {
+            "id": "46422ea243d878bfdce9",
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "file": "characters.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "身份保密"
+            ],
+            "start_offset": 189,
+            "end_offset": 229,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "token_count": 66,
+            "score": 0.5398045778274536
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 2.151928499999485,
+          "input_tokens": 512,
+          "generated_tokens": 31
+        }
+      },
+      "seconds": 2.163948000000346,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2746.0517578125
+    },
+    {
+      "id": "c03-1",
+      "parent": "c03",
+      "group": "fresh",
+      "source_input": "月城的右臂是自然肢体。",
+      "record": {
+        "kind": "attribute",
+        "entity": "月城",
+        "entity_type": null,
+        "category": "生理结构",
+        "text": "月城的右臂是自然肢体",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "右臂始终是自然肢体"
+      ],
+      "predicted": "一致",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "一致",
+        "findings": [
+          {
+            "input_quote": "月城的右臂是自然肢体",
+            "verdict": "一致",
+            "evidence": [
+              {
+                "chunk_id": "d7f7dd2035b813e0a886",
+                "quote": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。"
+              }
+            ],
+            "reason": "右臂始终为自然肢体，证据明确支持",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"一致\",\"evidence\":[\"E1\"],\"reason\":\"右臂始终为自然肢体，证据明确支持\"}",
+        "evidence": [
+          {
+            "id": "d7f7dd2035b813e0a886",
+            "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "file": "characters.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "机械左臂"
+            ],
+            "start_offset": 408,
+            "end_offset": 436,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "token_count": 55,
+            "score": 0.7152721881866455
+          },
+          {
+            "id": "7cb9af5fe25451106869",
+            "text": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "file": "history.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "月城失臂"
+            ],
+            "start_offset": 101,
+            "end_offset": 136,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 月城失臂\n月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "token_count": 63,
+            "score": 0.6336274147033691
+          },
+          {
+            "id": "fd1bec15cd989aa6cacf",
+            "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "file": "characters.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "手术时间"
+            ],
+            "start_offset": 454,
+            "end_offset": 486,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "token_count": 57,
+            "score": 0.5997445583343506
+          },
+          {
+            "id": "685d37adddbe625a62f6",
+            "text": "地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "file": "history.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2064年",
+              "机械臂安装"
+            ],
+            "start_offset": 158,
+            "end_offset": 183,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2064年 > 机械臂安装\n地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "token_count": 54,
+            "score": 0.5656719207763672
+          },
+          {
+            "id": "b6c490a416855d8e6bb7",
+            "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "file": "technology.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "机械左臂",
+              "神经接口"
+            ],
+            "start_offset": 156,
+            "end_offset": 193,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "token_count": 66,
+            "score": 0.5593756437301636
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.9052566000000297,
+          "input_tokens": 482,
+          "generated_tokens": 26
+        }
+      },
+      "seconds": 1.9158186000004207,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2731.92431640625
+    },
+    {
+      "id": "c04-1",
+      "parent": "c04",
+      "group": "fresh",
+      "source_input": "莉娅负责整理城区档案馆的纸质历史档案。",
+      "record": {
+        "kind": "attribute",
+        "entity": "莉娅",
+        "entity_type": null,
+        "category": "工作职责",
+        "text": "莉娅负责整理城区档案馆的纸质历史档案",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "纸质历史档案的整理"
+      ],
+      "predicted": "一致",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "一致",
+        "findings": [
+          {
+            "input_quote": "莉娅负责整理城区档案馆的纸质历史档案",
+            "verdict": "一致",
+            "evidence": [
+              {
+                "chunk_id": "4ce0e0b41048241db315",
+                "quote": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。"
+              }
+            ],
+            "reason": "E1明确说明莉娅负责整理纸质历史档案",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"一致\",\"evidence\":[\"E1\"],\"reason\":\"E1明确说明莉娅负责整理纸质历史档案\"}",
+        "evidence": [
+          {
+            "id": "4ce0e0b41048241db315",
+            "text": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "file": "characters.md",
+            "start_line": 56,
+            "end_line": 56,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "莉娅",
+              "工作职责"
+            ],
+            "start_offset": 560,
+            "end_offset": 594,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 莉娅 > 工作职责\n莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "token_count": 61,
+            "score": 0.6542549729347229
+          },
+          {
+            "id": "c9a9dcf37f67bf74b64c",
+            "text": "城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+            "file": "history.md",
+            "start_line": 61,
+            "end_line": 61,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2065年",
+              "档案开放"
+            ],
+            "start_offset": 632,
+            "end_offset": 666,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2065年 > 档案开放\n城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+            "token_count": 60,
+            "score": 0.6268279552459717
+          },
+          {
+            "id": "2d8cb5017830f3a8881e",
+            "text": "档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。",
+            "file": "technology.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "档案馆",
+              "纸质备份"
+            ],
+            "start_offset": 521,
+            "end_offset": 556,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 档案馆 > 纸质备份\n档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。",
+            "token_count": 63,
+            "score": 0.49499550461769104
+          },
+          {
+            "id": "0ad0e47151069e9d8676",
+            "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "file": "history.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第三话",
+              "身份告知"
+            ],
+            "start_offset": 322,
+            "end_offset": 359,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "token_count": 65,
+            "score": 0.37471118569374084
+          },
+          {
+            "id": "a67d2b6c645c6c2b1d19",
+            "text": "第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+            "file": "history.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第一话",
+              "公共新闻"
+            ],
+            "start_offset": 202,
+            "end_offset": 240,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第一话 > 公共新闻\n第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+            "token_count": 66,
+            "score": 0.3721623122692108
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.9478968000003078,
+          "input_tokens": 494,
+          "generated_tokens": 27
+        }
+      },
+      "seconds": 1.9665195999996286,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2737.271484375
+    },
+    {
+      "id": "c05-1",
+      "parent": "c05",
+      "group": "fresh",
+      "source_input": "电磁枪每次射击后必须重新充电。",
+      "record": {
+        "kind": "rule",
+        "entity": "电磁枪",
+        "entity_type": null,
+        "category": "充电条件",
+        "text": "电磁枪每次射击后必须重新充电",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "每次射击后必须重新充电"
+      ],
+      "predicted": "一致",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "一致",
+        "findings": [
+          {
+            "input_quote": "电磁枪每次射击后必须重新充电",
+            "verdict": "一致",
+            "evidence": [
+              {
+                "chunk_id": "0152bb5ec25607f1962f",
+                "quote": "电磁枪发射金属弹丸，依靠电容储能。每次射击后必须重新充电，不能连续无限射击。"
+              }
+            ],
+            "reason": "E1明确说明每次射击后需充电",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"一致\",\"evidence\":[\"E1\"],\"reason\":\"E1明确说明每次射击后需充电\"}",
+        "evidence": [
+          {
+            "id": "0152bb5ec25607f1962f",
+            "text": "电磁枪发射金属弹丸，依靠电容储能。每次射击后必须重新充电，不能连续无限射击。",
+            "file": "technology.md",
+            "start_line": 56,
+            "end_line": 56,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "武器",
+              "电磁枪"
+            ],
+            "start_offset": 573,
+            "end_offset": 611,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 武器 > 电磁枪\n电磁枪发射金属弹丸，依靠电容储能。每次射击后必须重新充电，不能连续无限射击。",
+            "token_count": 64,
+            "score": 0.6924185156822205
+          },
+          {
+            "id": "21c3b00fcedf12c06dbe",
+            "text": "德尔塔的外骨骼采用可更换独立电池。正常行走可运行两小时，高功率推进会迅速耗电。",
+            "file": "technology.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "动力外骨骼",
+              "电池续航"
+            ],
+            "start_offset": 45,
+            "end_offset": 84,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 动力外骨骼 > 电池续航\n德尔塔的外骨骼采用可更换独立电池。正常行走可运行两小时，高功率推进会迅速耗电。",
+            "token_count": 69,
+            "score": 0.45468032360076904
+          },
+          {
+            "id": "d312452d0673bf259c82",
+            "text": "雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+            "file": "history.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第五话",
+              "父亲离城"
+            ],
+            "start_offset": 475,
+            "end_offset": 508,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第五话 > 父亲离城\n雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+            "token_count": 61,
+            "score": 0.3889370262622833
+          },
+          {
+            "id": "ca52138556599b584637",
+            "text": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+            "file": "history.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "大地震"
+            ],
+            "start_offset": 44,
+            "end_offset": 80,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 大地震\n2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+            "token_count": 61,
+            "score": 0.38470521569252014
+          },
+          {
+            "id": "269e80f1f85e9bf4cc4e",
+            "text": "外骨骼推进器产生大量热量，连续高功率运行十分钟必须停止散热。",
+            "file": "technology.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "动力外骨骼",
+              "推进器冷却"
+            ],
+            "start_offset": 106,
+            "end_offset": 136,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 动力外骨骼 > 推进器冷却\n外骨骼推进器产生大量热量，连续高功率运行十分钟必须停止散热。",
+            "token_count": 61,
+            "score": 0.38332894444465637
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.799295499999971,
+          "input_tokens": 485,
+          "generated_tokens": 25
+        }
+      },
+      "seconds": 1.8119196999996348,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2733.25537109375
+    },
+    {
+      "id": "c06-1",
+      "parent": "c06",
+      "group": "fresh",
+      "source_input": "月城在2064年安装机械左臂。",
+      "record": {
+        "kind": "event",
+        "entity": "月城",
+        "entity_type": null,
+        "category": "机械臂安装",
+        "text": "月城在2064年安装机械左臂",
+        "target": null,
+        "time": "2064年",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "2064年接受机械左臂安装手术",
+        "地震一年后"
+      ],
+      "predicted": "一致",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "一致",
+        "findings": [
+          {
+            "input_quote": "月城在2064年安装机械左臂",
+            "verdict": "一致",
+            "evidence": [
+              {
+                "chunk_id": "685d37adddbe625a62f6",
+                "quote": "地震一年后，月城在医院完成机械左臂安装和康复训练。"
+              },
+              {
+                "chunk_id": "fd1bec15cd989aa6cacf",
+                "quote": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。"
+              },
+              {
+                "chunk_id": "d7f7dd2035b813e0a886",
+                "quote": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。"
+              },
+              {
+                "chunk_id": "7cb9af5fe25451106869",
+                "quote": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。"
+              }
+            ],
+            "reason": "证据支持月城2064年安装机械左臂",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"一致\",\"evidence\":[\"E1\",\"E2\",\"E3\",\"E5\"],\"reason\":\"证据支持月城2064年安装机械左臂\"}",
+        "evidence": [
+          {
+            "id": "685d37adddbe625a62f6",
+            "text": "地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "file": "history.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2064年",
+              "机械臂安装"
+            ],
+            "start_offset": 158,
+            "end_offset": 183,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2064年 > 机械臂安装\n地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "token_count": 54,
+            "score": 0.7176563739776611
+          },
+          {
+            "id": "fd1bec15cd989aa6cacf",
+            "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "file": "characters.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "手术时间"
+            ],
+            "start_offset": 454,
+            "end_offset": 486,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "token_count": 57,
+            "score": 0.6988030076026917
+          },
+          {
+            "id": "d7f7dd2035b813e0a886",
+            "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "file": "characters.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "机械左臂"
+            ],
+            "start_offset": 408,
+            "end_offset": 436,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "token_count": 55,
+            "score": 0.67512047290802
+          },
+          {
+            "id": "b6c490a416855d8e6bb7",
+            "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "file": "technology.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "机械左臂",
+              "神经接口"
+            ],
+            "start_offset": 156,
+            "end_offset": 193,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "token_count": 66,
+            "score": 0.6253255605697632
+          },
+          {
+            "id": "7cb9af5fe25451106869",
+            "text": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "file": "history.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "月城失臂"
+            ],
+            "start_offset": 101,
+            "end_offset": 136,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 月城失臂\n月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "token_count": 63,
+            "score": 0.6181859970092773
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 2.572773799999595,
+          "input_tokens": 496,
+          "generated_tokens": 38
+        }
+      },
+      "seconds": 2.5833939999993163,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2738.16943359375
+    },
+    {
+      "id": "x01-1",
+      "parent": "x01",
+      "group": "fresh",
+      "source_input": "雷的右心脏寄宿亚巴顿。",
+      "record": {
+        "kind": "relation",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "寄宿",
+        "text": "雷的右心脏寄宿亚巴顿",
+        "target": "亚巴顿",
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "左侧心脏寄宿亚巴顿",
+        "无法在右心脏施展力量"
+      ],
+      "predicted": "矛盾",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "矛盾",
+        "findings": [
+          {
+            "input_quote": "雷的右心脏寄宿亚巴顿",
+            "verdict": "矛盾",
+            "evidence": [
+              {
+                "chunk_id": "099d1bbdbc348eb3c332",
+                "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。"
+              }
+            ],
+            "reason": "右侧心脏寄宿拉古艾尔而非亚巴顿",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"矛盾\",\"evidence\":[\"E2\"],\"reason\":\"右侧心脏寄宿拉古艾尔而非亚巴顿\"}",
+        "evidence": [
+          {
+            "id": "47ba19b8b9ece1f35cc9",
+            "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+            "file": "angels.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "亚巴顿",
+              "左侧宿主"
+            ],
+            "start_offset": 43,
+            "end_offset": 81,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+            "token_count": 66,
+            "score": 0.6577761173248291
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.6438913345336914
+          },
+          {
+            "id": "252bda4cc47b93db0d7b",
+            "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "file": "angels.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "右侧宿主"
+            ],
+            "start_offset": 202,
+            "end_offset": 242,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "token_count": 69,
+            "score": 0.5605090260505676
+          },
+          {
+            "id": "17af8f8e8b7ff81197e4",
+            "text": "普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+            "file": "technology.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "医疗",
+              "心脏扫描"
+            ],
+            "start_offset": 472,
+            "end_offset": 502,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 医疗 > 心脏扫描\n普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+            "token_count": 57,
+            "score": 0.5196452736854553
+          },
+          {
+            "id": "46422ea243d878bfdce9",
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "file": "characters.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "身份保密"
+            ],
+            "start_offset": 189,
+            "end_offset": 229,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "token_count": 66,
+            "score": 0.46185436844825745
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.9630498999995325,
+          "input_tokens": 501,
+          "generated_tokens": 28
+        }
+      },
+      "seconds": 1.972592899999654,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2740.94287109375
+    },
+    {
+      "id": "x02-1",
+      "parent": "x02",
+      "group": "fresh",
+      "source_input": "月城的右臂是一条机械臂。",
+      "record": {
+        "kind": "attribute",
+        "entity": "月城",
+        "entity_type": null,
+        "category": "生理结构",
+        "text": "月城的右臂是一条机械臂",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "右臂始终是自然肢体"
+      ],
+      "predicted": "不确定",
+      "correct": false,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "月城的右臂是一条机械臂",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "证据未提及右臂机械结构",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "月城的右臂是一条机械臂"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"证据未提及右臂机械结构\"}",
+        "evidence": [
+          {
+            "id": "d7f7dd2035b813e0a886",
+            "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "file": "characters.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "机械左臂"
+            ],
+            "start_offset": 408,
+            "end_offset": 436,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "token_count": 55,
+            "score": 0.7644679546356201
+          },
+          {
+            "id": "fd1bec15cd989aa6cacf",
+            "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "file": "characters.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "手术时间"
+            ],
+            "start_offset": 454,
+            "end_offset": 486,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "token_count": 57,
+            "score": 0.6842973828315735
+          },
+          {
+            "id": "b6c490a416855d8e6bb7",
+            "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "file": "technology.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "机械左臂",
+              "神经接口"
+            ],
+            "start_offset": 156,
+            "end_offset": 193,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "token_count": 66,
+            "score": 0.6607562303543091
+          },
+          {
+            "id": "7cb9af5fe25451106869",
+            "text": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "file": "history.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "月城失臂"
+            ],
+            "start_offset": 101,
+            "end_offset": 136,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 月城失臂\n月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "token_count": 63,
+            "score": 0.6571515798568726
+          },
+          {
+            "id": "685d37adddbe625a62f6",
+            "text": "地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "file": "history.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2064年",
+              "机械臂安装"
+            ],
+            "start_offset": 158,
+            "end_offset": 183,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2064年 > 机械臂安装\n地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "token_count": 54,
+            "score": 0.6531453132629395
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.5086183000003075,
+          "input_tokens": 484,
+          "generated_tokens": 21
+        }
+      },
+      "seconds": 1.5182063000002017,
+      "retrieval_core_hit": true,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2732.810546875
+    },
+    {
+      "id": "x03-1",
+      "parent": "x03",
+      "group": "fresh",
+      "source_input": "莉娅是医院的医生。",
+      "record": {
+        "kind": "attribute",
+        "entity": "莉娅",
+        "entity_type": null,
+        "category": "职业",
+        "text": "莉娅是医院的医生",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "她不是医院的医生"
+      ],
+      "predicted": "矛盾",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "矛盾",
+        "findings": [
+          {
+            "input_quote": "莉娅是医院的医生",
+            "verdict": "矛盾",
+            "evidence": [
+              {
+                "chunk_id": "4ce0e0b41048241db315",
+                "quote": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。"
+              }
+            ],
+            "reason": "证据明确指出莉娅不是医院医生",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"矛盾\",\"evidence\":[\"E1\"],\"reason\":\"证据明确指出莉娅不是医院医生\"}",
+        "evidence": [
+          {
+            "id": "4ce0e0b41048241db315",
+            "text": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "file": "characters.md",
+            "start_line": 56,
+            "end_line": 56,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "莉娅",
+              "工作职责"
+            ],
+            "start_offset": 560,
+            "end_offset": 594,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 莉娅 > 工作职责\n莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "token_count": 61,
+            "score": 0.6404801607131958
+          },
+          {
+            "id": "252bda4cc47b93db0d7b",
+            "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "file": "angels.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "右侧宿主"
+            ],
+            "start_offset": 202,
+            "end_offset": 242,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "token_count": 69,
+            "score": 0.46168452501296997
+          },
+          {
+            "id": "f355504eef1bbb05f59a",
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "file": "characters.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "右胸异感"
+            ],
+            "start_offset": 133,
+            "end_offset": 172,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "token_count": 65,
+            "score": 0.4597291350364685
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.45274245738983154
+          },
+          {
+            "id": "17af8f8e8b7ff81197e4",
+            "text": "普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+            "file": "technology.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "医疗",
+              "心脏扫描"
+            ],
+            "start_offset": 472,
+            "end_offset": 502,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 医疗 > 心脏扫描\n普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+            "token_count": 57,
+            "score": 0.4509458541870117
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.7248129999998127,
+          "input_tokens": 489,
+          "generated_tokens": 24
+        }
+      },
+      "seconds": 1.7353942999998253,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2735.0361328125
+    },
+    {
+      "id": "x04-1",
+      "parent": "x04",
+      "group": "fresh",
+      "source_input": "城区太阳能板在夜间仍能发电。",
+      "record": {
+        "kind": "rule",
+        "entity": "城区太阳能板",
+        "entity_type": null,
+        "category": "发电条件",
+        "text": "城区太阳能板在夜间仍能发电",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "夜间不能发电"
+      ],
+      "predicted": "矛盾",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "矛盾",
+        "findings": [
+          {
+            "input_quote": "城区太阳能板在夜间仍能发电",
+            "verdict": "矛盾",
+            "evidence": [
+              {
+                "chunk_id": "ce0e16ac4d447576296f",
+                "quote": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。"
+              }
+            ],
+            "reason": "夜间不能发电与新文本直接相反",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"矛盾\",\"evidence\":[\"E1\"],\"reason\":\"夜间不能发电与新文本直接相反\"}",
+        "evidence": [
+          {
+            "id": "ce0e16ac4d447576296f",
+            "text": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+            "file": "technology.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "能源",
+              "太阳能限制"
+            ],
+            "start_offset": 424,
+            "end_offset": 454,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 能源 > 太阳能限制\n城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+            "token_count": 58,
+            "score": 0.7145829796791077
+          },
+          {
+            "id": "5a6ae37cea08494abfc8",
+            "text": "地震前一年，城区曾因发电厂事故发生大停电。当时没有天使降临的记录。",
+            "file": "history.md",
+            "start_line": 56,
+            "end_line": 56,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2062年",
+              "城区停电"
+            ],
+            "start_offset": 578,
+            "end_offset": 611,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2062年 > 城区停电\n地震前一年，城区曾因发电厂事故发生大停电。当时没有天使降临的记录。",
+            "token_count": 61,
+            "score": 0.4837418794631958
+          },
+          {
+            "id": "eb8934fb11d790995821",
+            "text": "城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。",
+            "file": "technology.md",
+            "start_line": 36,
+            "end_line": 36,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "交通",
+              "城区列车"
+            ],
+            "start_offset": 370,
+            "end_offset": 405,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 交通 > 城区列车\n城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。",
+            "token_count": 62,
+            "score": 0.4301120340824127
+          },
+          {
+            "id": "da962def6f2a55ad70fc",
+            "text": "月城的机械左臂能反馈压力，但无法感知温度。他用左手碰热水时不会感觉烫。",
+            "file": "technology.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "机械左臂",
+              "触觉反馈"
+            ],
+            "start_offset": 213,
+            "end_offset": 248,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 触觉反馈\n月城的机械左臂能反馈压力，但无法感知温度。他用左手碰热水时不会感觉烫。",
+            "token_count": 64,
+            "score": 0.4228576421737671
+          },
+          {
+            "id": "729af4a00bcdc76cf96e",
+            "text": "金属屏蔽室可以阻挡普通无线电信号，但不能屏蔽天使契约的精神波动。",
+            "file": "technology.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "通信",
+              "无线电屏蔽"
+            ],
+            "start_offset": 267,
+            "end_offset": 299,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 通信 > 无线电屏蔽\n金属屏蔽室可以阻挡普通无线电信号，但不能屏蔽天使契约的精神波动。",
+            "token_count": 60,
+            "score": 0.40786150097846985
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.7293266000006042,
+          "input_tokens": 473,
+          "generated_tokens": 24
+        }
+      },
+      "seconds": 1.7402564000003622,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2727.9609375
+    },
+    {
+      "id": "x05-1",
+      "parent": "x05",
+      "group": "fresh",
+      "source_input": "拉古艾尔能够让已经死亡的人复活。",
+      "record": {
+        "kind": "attribute",
+        "entity": "拉古艾尔",
+        "entity_type": null,
+        "category": "能力",
+        "text": "拉古艾尔能够让已经死亡的人复活",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "不能让已经死亡的人复活"
+      ],
+      "predicted": "矛盾",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "矛盾",
+        "findings": [
+          {
+            "input_quote": "拉古艾尔能够让已经死亡的人复活",
+            "verdict": "矛盾",
+            "evidence": [
+              {
+                "chunk_id": "3b7f472d534c811d4c3f",
+                "quote": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。"
+              }
+            ],
+            "reason": "证据明确指出拉古艾尔不能复活死者",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"矛盾\",\"evidence\":[\"E1\"],\"reason\":\"证据明确指出拉古艾尔不能复活死者\"}",
+        "evidence": [
+          {
+            "id": "3b7f472d534c811d4c3f",
+            "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "file": "angels.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "治疗限制"
+            ],
+            "start_offset": 262,
+            "end_offset": 298,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "token_count": 65,
+            "score": 0.69691401720047
+          },
+          {
+            "id": "252bda4cc47b93db0d7b",
+            "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "file": "angels.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "右侧宿主"
+            ],
+            "start_offset": 202,
+            "end_offset": 242,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "token_count": 69,
+            "score": 0.5012326836585999
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.47734594345092773
+          },
+          {
+            "id": "f355504eef1bbb05f59a",
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "file": "characters.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "右胸异感"
+            ],
+            "start_offset": 133,
+            "end_offset": 172,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "token_count": 65,
+            "score": 0.449901819229126
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.40907910466194153
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.84298519999993,
+          "input_tokens": 502,
+          "generated_tokens": 26
+        }
+      },
+      "seconds": 1.8523937999998452,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2741.40380859375
+    },
+    {
+      "id": "x06-1",
+      "parent": "x06",
+      "group": "fresh",
+      "source_input": "月城在2062年就安装了机械左臂。",
+      "record": {
+        "kind": "event",
+        "entity": "月城",
+        "entity_type": null,
+        "category": "机械臂安装",
+        "text": "月城在2062年就安装了机械左臂",
+        "target": null,
+        "time": "2062年",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "2064年接受机械左臂安装手术",
+        "在此之前"
+      ],
+      "predicted": "矛盾",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "矛盾",
+        "findings": [
+          {
+            "input_quote": "月城在2062年就安装了机械左臂",
+            "verdict": "矛盾",
+            "evidence": [
+              {
+                "chunk_id": "fd1bec15cd989aa6cacf",
+                "quote": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。"
+              }
+            ],
+            "reason": "证据E2明确指出安装时间是2064年",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"矛盾\",\"evidence\":[\"E2\"],\"reason\":\"证据E2明确指出安装时间是2064年\"}",
+        "evidence": [
+          {
+            "id": "685d37adddbe625a62f6",
+            "text": "地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "file": "history.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2064年",
+              "机械臂安装"
+            ],
+            "start_offset": 158,
+            "end_offset": 183,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2064年 > 机械臂安装\n地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "token_count": 54,
+            "score": 0.7524207234382629
+          },
+          {
+            "id": "fd1bec15cd989aa6cacf",
+            "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "file": "characters.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "手术时间"
+            ],
+            "start_offset": 454,
+            "end_offset": 486,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "token_count": 57,
+            "score": 0.7250888347625732
+          },
+          {
+            "id": "d7f7dd2035b813e0a886",
+            "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "file": "characters.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "机械左臂"
+            ],
+            "start_offset": 408,
+            "end_offset": 436,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "token_count": 55,
+            "score": 0.6992884278297424
+          },
+          {
+            "id": "b6c490a416855d8e6bb7",
+            "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "file": "technology.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "机械左臂",
+              "神经接口"
+            ],
+            "start_offset": 156,
+            "end_offset": 193,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "token_count": 66,
+            "score": 0.6636316776275635
+          },
+          {
+            "id": "7cb9af5fe25451106869",
+            "text": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "file": "history.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "月城失臂"
+            ],
+            "start_offset": 101,
+            "end_offset": 136,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 月城失臂\n月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "token_count": 63,
+            "score": 0.6479562520980835
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 2.0531049999999595,
+          "input_tokens": 500,
+          "generated_tokens": 29
+        }
+      },
+      "seconds": 2.0639663000001747,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2740.48046875
+    },
+    {
+      "id": "u01-1",
+      "parent": "u01",
+      "group": "fresh",
+      "source_input": "雷能读懂陌生人的梦境。",
+      "record": {
+        "kind": "attribute",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "能力",
+        "text": "雷能读懂陌生人的梦境",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "雷能读懂陌生人的梦境",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "证据未提及梦境或读梦能力",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "雷能读懂陌生人的梦境"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"证据未提及梦境或读梦能力\"}",
+        "evidence": [
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.5883327126502991
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.5494707226753235
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.5417212247848511
+          },
+          {
+            "id": "f355504eef1bbb05f59a",
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "file": "characters.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "右胸异感"
+            ],
+            "start_offset": 133,
+            "end_offset": 172,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "token_count": 65,
+            "score": 0.4909650683403015
+          },
+          {
+            "id": "46422ea243d878bfdce9",
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "file": "characters.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "身份保密"
+            ],
+            "start_offset": 189,
+            "end_offset": 229,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "token_count": 66,
+            "score": 0.4878643751144409
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.6178742000001876,
+          "input_tokens": 486,
+          "generated_tokens": 22
+        }
+      },
+      "seconds": 1.6271710000000894,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2733.69873046875
+    },
+    {
+      "id": "u02-1",
+      "parent": "u02",
+      "group": "fresh",
+      "source_input": "莉娅曾经在海外留学。",
+      "record": {
+        "kind": "event",
+        "entity": "莉娅",
+        "entity_type": null,
+        "category": "经历",
+        "text": "莉娅曾经在海外留学",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "莉娅曾经在海外留学",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "证据未提及莉娅海外留学",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "莉娅曾经在海外留学"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"证据未提及莉娅海外留学\"}",
+        "evidence": [
+          {
+            "id": "4ce0e0b41048241db315",
+            "text": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "file": "characters.md",
+            "start_line": 56,
+            "end_line": 56,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "莉娅",
+              "工作职责"
+            ],
+            "start_offset": 560,
+            "end_offset": 594,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 莉娅 > 工作职责\n莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "token_count": 61,
+            "score": 0.46731191873550415
+          },
+          {
+            "id": "c9a9dcf37f67bf74b64c",
+            "text": "城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+            "file": "history.md",
+            "start_line": 61,
+            "end_line": 61,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2065年",
+              "档案开放"
+            ],
+            "start_offset": 632,
+            "end_offset": 666,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2065年 > 档案开放\n城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+            "token_count": 60,
+            "score": 0.3746247887611389
+          },
+          {
+            "id": "f6fa2986c882a112f9c0",
+            "text": "雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+            "file": "history.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第六话",
+              "教堂避难"
+            ],
+            "start_offset": 527,
+            "end_offset": 557,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第六话 > 教堂避难\n雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+            "token_count": 58,
+            "score": 0.34270623326301575
+          },
+          {
+            "id": "46422ea243d878bfdce9",
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "file": "characters.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "身份保密"
+            ],
+            "start_offset": 189,
+            "end_offset": 229,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "token_count": 66,
+            "score": 0.33764761686325073
+          },
+          {
+            "id": "0ad0e47151069e9d8676",
+            "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "file": "history.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第三话",
+              "身份告知"
+            ],
+            "start_offset": 322,
+            "end_offset": 359,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "token_count": 65,
+            "score": 0.337547242641449
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.5423657999999705,
+          "input_tokens": 484,
+          "generated_tokens": 21
+        }
+      },
+      "seconds": 1.5513043999999354,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2732.810546875
+    },
+    {
+      "id": "u03-1",
+      "parent": "u03",
+      "group": "fresh",
+      "source_input": "德尔塔的装甲可以变成潜水艇。",
+      "record": {
+        "kind": "attribute",
+        "entity": "德尔塔的装甲",
+        "entity_type": null,
+        "category": "装甲能力",
+        "text": "德尔塔的装甲可以变成潜水艇",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "德尔塔的装甲可以变成潜水艇",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "无证据支持装甲变潜水艇",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "德尔塔的装甲可以变成潜水艇"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据支持装甲变潜水艇\"}",
+        "evidence": [
+          {
+            "id": "852cb1cabe33eac25f92",
+            "text": "德尔塔使用动力外骨骼。装甲依靠独立电池供电，无法无限运行。",
+            "file": "characters.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "德尔塔",
+              "装备"
+            ],
+            "start_offset": 246,
+            "end_offset": 275,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 德尔塔 > 装备\n德尔塔使用动力外骨骼。装甲依靠独立电池供电，无法无限运行。",
+            "token_count": 55,
+            "score": 0.6026269197463989
+          },
+          {
+            "id": "9afbd18aaf57d4b3e7e2",
+            "text": "德尔塔的装甲连续高功率运行十分钟后必须冷却。冷却期间无法使用推进器。",
+            "file": "characters.md",
+            "start_line": 36,
+            "end_line": 36,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "德尔塔",
+              "装甲限制"
+            ],
+            "start_offset": 356,
+            "end_offset": 390,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 德尔塔 > 装甲限制\n德尔塔的装甲连续高功率运行十分钟后必须冷却。冷却期间无法使用推进器。",
+            "token_count": 62,
+            "score": 0.5688946843147278
+          },
+          {
+            "id": "3a56aa33f1ea6dd2186e",
+            "text": "德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+            "file": "characters.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "德尔塔",
+              "公众身份"
+            ],
+            "start_offset": 294,
+            "end_offset": 337,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 德尔塔 > 公众身份\n德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+            "token_count": 71,
+            "score": 0.5366617441177368
+          },
+          {
+            "id": "21c3b00fcedf12c06dbe",
+            "text": "德尔塔的外骨骼采用可更换独立电池。正常行走可运行两小时，高功率推进会迅速耗电。",
+            "file": "technology.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "动力外骨骼",
+              "电池续航"
+            ],
+            "start_offset": 45,
+            "end_offset": 84,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 动力外骨骼 > 电池续航\n德尔塔的外骨骼采用可更换独立电池。正常行走可运行两小时，高功率推进会迅速耗电。",
+            "token_count": 69,
+            "score": 0.5109135508537292
+          },
+          {
+            "id": "d11b313d4fe3fee7d599",
+            "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+            "file": "history.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第二话",
+              "首次当面见面"
+            ],
+            "start_offset": 261,
+            "end_offset": 303,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+            "token_count": 72,
+            "score": 0.47469380497932434
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.5245368000005328,
+          "input_tokens": 487,
+          "generated_tokens": 21
+        }
+      },
+      "seconds": 1.5355777999993734,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2734.14453125
+    },
+    {
+      "id": "u04-1",
+      "parent": "u04",
+      "group": "fresh",
+      "source_input": "月城的机械左臂能感知气味。",
+      "record": {
+        "kind": "attribute",
+        "entity": "月城的机械左臂",
+        "entity_type": null,
+        "category": "感知能力",
+        "text": "月城的机械左臂能感知气味",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "月城的机械左臂能感知气味",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "无证据支持或否定气味感知",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "月城的机械左臂能感知气味"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据支持或否定气味感知\"}",
+        "evidence": [
+          {
+            "id": "da962def6f2a55ad70fc",
+            "text": "月城的机械左臂能反馈压力，但无法感知温度。他用左手碰热水时不会感觉烫。",
+            "file": "technology.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "机械左臂",
+              "触觉反馈"
+            ],
+            "start_offset": 213,
+            "end_offset": 248,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 触觉反馈\n月城的机械左臂能反馈压力，但无法感知温度。他用左手碰热水时不会感觉烫。",
+            "token_count": 64,
+            "score": 0.6991680860519409
+          },
+          {
+            "id": "d7f7dd2035b813e0a886",
+            "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "file": "characters.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "机械左臂"
+            ],
+            "start_offset": 408,
+            "end_offset": 436,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "token_count": 55,
+            "score": 0.6641095876693726
+          },
+          {
+            "id": "b6c490a416855d8e6bb7",
+            "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "file": "technology.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "机械左臂",
+              "神经接口"
+            ],
+            "start_offset": 156,
+            "end_offset": 193,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "token_count": 66,
+            "score": 0.6046664714813232
+          },
+          {
+            "id": "fd1bec15cd989aa6cacf",
+            "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "file": "characters.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "手术时间"
+            ],
+            "start_offset": 454,
+            "end_offset": 486,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "token_count": 57,
+            "score": 0.5889638662338257
+          },
+          {
+            "id": "685d37adddbe625a62f6",
+            "text": "地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "file": "history.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2064年",
+              "机械臂安装"
+            ],
+            "start_offset": 158,
+            "end_offset": 183,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2064年 > 机械臂安装\n地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "token_count": 54,
+            "score": 0.5881363749504089
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.5346254999994926,
+          "input_tokens": 486,
+          "generated_tokens": 21
+        }
+      },
+      "seconds": 1.544045499999811,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2733.69873046875
+    },
+    {
+      "id": "u05-1",
+      "parent": "u05",
+      "group": "fresh",
+      "source_input": "雷在第十话搬到海边居住。",
+      "record": {
+        "kind": "event",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "居住变化",
+        "text": "雷在第十话搬到海边居住",
+        "target": null,
+        "time": "第十话",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "雷在第十话搬到海边居住",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "证据未提及居住变化",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "雷在第十话搬到海边居住"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"证据未提及居住变化\"}",
+        "evidence": [
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.48831191658973694
+          },
+          {
+            "id": "0ad0e47151069e9d8676",
+            "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "file": "history.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第三话",
+              "身份告知"
+            ],
+            "start_offset": 322,
+            "end_offset": 359,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "token_count": 65,
+            "score": 0.4441947638988495
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.4379231929779053
+          },
+          {
+            "id": "46422ea243d878bfdce9",
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "file": "characters.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "身份保密"
+            ],
+            "start_offset": 189,
+            "end_offset": 229,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "token_count": 66,
+            "score": 0.42690056562423706
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.42415720224380493
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.4144824999993943,
+          "input_tokens": 489,
+          "generated_tokens": 19
+        }
+      },
+      "seconds": 1.4255094999998619,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2735.0361328125
+    },
+    {
+      "id": "u06-1",
+      "parent": "u06",
+      "group": "fresh",
+      "source_input": "城区列车提供免费的早餐。",
+      "record": {
+        "kind": "attribute",
+        "entity": "城区列车",
+        "entity_type": null,
+        "category": "服务",
+        "text": "城区列车提供免费的早餐",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "城区列车提供免费的早餐",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "证据未提及早餐服务",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "城区列车提供免费的早餐"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"证据未提及早餐服务\"}",
+        "evidence": [
+          {
+            "id": "eb8934fb11d790995821",
+            "text": "城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。",
+            "file": "technology.md",
+            "start_line": 36,
+            "end_line": 36,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "交通",
+              "城区列车"
+            ],
+            "start_offset": 370,
+            "end_offset": 405,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 交通 > 城区列车\n城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。",
+            "token_count": 62,
+            "score": 0.517519474029541
+          },
+          {
+            "id": "6c1bb108abfbac2c6467",
+            "text": "旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。",
+            "file": "technology.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "通信",
+              "地下信号"
+            ],
+            "start_offset": 317,
+            "end_offset": 352,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 通信 > 地下信号\n旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。",
+            "token_count": 62,
+            "score": 0.3380509912967682
+          },
+          {
+            "id": "d312452d0673bf259c82",
+            "text": "雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+            "file": "history.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第五话",
+              "父亲离城"
+            ],
+            "start_offset": 475,
+            "end_offset": 508,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第五话 > 父亲离城\n雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+            "token_count": 61,
+            "score": 0.32566142082214355
+          },
+          {
+            "id": "5a6ae37cea08494abfc8",
+            "text": "地震前一年，城区曾因发电厂事故发生大停电。当时没有天使降临的记录。",
+            "file": "history.md",
+            "start_line": 56,
+            "end_line": 56,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2062年",
+              "城区停电"
+            ],
+            "start_offset": 578,
+            "end_offset": 611,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2062年 > 城区停电\n地震前一年，城区曾因发电厂事故发生大停电。当时没有天使降临的记录。",
+            "token_count": 61,
+            "score": 0.3060151934623718
+          },
+          {
+            "id": "ce0e16ac4d447576296f",
+            "text": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+            "file": "technology.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "能源",
+              "太阳能限制"
+            ],
+            "start_offset": 424,
+            "end_offset": 454,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 能源 > 太阳能限制\n城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+            "token_count": 58,
+            "score": 0.294547975063324
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.3868904999999359,
+          "input_tokens": 466,
+          "generated_tokens": 19
+        }
+      },
+      "seconds": 1.3976052999996682,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2724.90478515625
+    },
+    {
+      "id": "m01-1",
+      "parent": "m01",
+      "group": "fresh",
+      "source_input": "月城的左臂是机械臂，右臂也是机械臂。",
+      "record": {
+        "kind": "attribute",
+        "entity": "月城",
+        "entity_type": null,
+        "category": "生理结构",
+        "text": "月城的左臂是机械臂",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "安装机械左臂"
+      ],
+      "predicted": "一致",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "一致",
+        "findings": [
+          {
+            "input_quote": "月城的左臂是机械臂",
+            "verdict": "一致",
+            "evidence": [
+              {
+                "chunk_id": "d7f7dd2035b813e0a886",
+                "quote": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。"
+              },
+              {
+                "chunk_id": "fd1bec15cd989aa6cacf",
+                "quote": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。"
+              },
+              {
+                "chunk_id": "7cb9af5fe25451106869",
+                "quote": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。"
+              }
+            ],
+            "reason": "左臂原为自然，后截肢安装机械臂",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"一致\",\"evidence\":[\"E1\",\"E2\",\"E5\"],\"reason\":\"左臂原为自然，后截肢安装机械臂\"}",
+        "evidence": [
+          {
+            "id": "d7f7dd2035b813e0a886",
+            "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "file": "characters.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "机械左臂"
+            ],
+            "start_offset": 408,
+            "end_offset": 436,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "token_count": 55,
+            "score": 0.7669743895530701
+          },
+          {
+            "id": "fd1bec15cd989aa6cacf",
+            "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "file": "characters.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "手术时间"
+            ],
+            "start_offset": 454,
+            "end_offset": 486,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "token_count": 57,
+            "score": 0.6868379712104797
+          },
+          {
+            "id": "b6c490a416855d8e6bb7",
+            "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "file": "technology.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "机械左臂",
+              "神经接口"
+            ],
+            "start_offset": 156,
+            "end_offset": 193,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "token_count": 66,
+            "score": 0.6614764928817749
+          },
+          {
+            "id": "685d37adddbe625a62f6",
+            "text": "地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "file": "history.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2064年",
+              "机械臂安装"
+            ],
+            "start_offset": 158,
+            "end_offset": 183,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2064年 > 机械臂安装\n地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "token_count": 54,
+            "score": 0.6611562371253967
+          },
+          {
+            "id": "7cb9af5fe25451106869",
+            "text": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "file": "history.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "月城失臂"
+            ],
+            "start_offset": 101,
+            "end_offset": 136,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 月城失臂\n月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "token_count": 63,
+            "score": 0.6605656743049622
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 2.375532299999577,
+          "input_tokens": 482,
+          "generated_tokens": 34
+        }
+      },
+      "seconds": 2.3850482000007105,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2731.92431640625
+    },
+    {
+      "id": "m01-2",
+      "parent": "m01",
+      "group": "fresh",
+      "source_input": "月城的左臂是机械臂，右臂也是机械臂。",
+      "record": {
+        "kind": "attribute",
+        "entity": "月城",
+        "entity_type": null,
+        "category": "生理结构",
+        "text": "右臂也是机械臂",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "右臂始终是自然肢体"
+      ],
+      "predicted": "矛盾",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "矛盾",
+        "findings": [
+          {
+            "input_quote": "右臂也是机械臂",
+            "verdict": "矛盾",
+            "evidence": [
+              {
+                "chunk_id": "d7f7dd2035b813e0a886",
+                "quote": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。"
+              }
+            ],
+            "reason": "右臂始终是自然肢体",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"矛盾\",\"evidence\":[\"E1\"],\"reason\":\"右臂始终是自然肢体\"}",
+        "evidence": [
+          {
+            "id": "d7f7dd2035b813e0a886",
+            "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "file": "characters.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "机械左臂"
+            ],
+            "start_offset": 408,
+            "end_offset": 436,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "token_count": 55,
+            "score": 0.7592604160308838
+          },
+          {
+            "id": "fd1bec15cd989aa6cacf",
+            "text": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "file": "characters.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "手术时间"
+            ],
+            "start_offset": 454,
+            "end_offset": 486,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 手术时间\n月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。",
+            "token_count": 57,
+            "score": 0.6697814464569092
+          },
+          {
+            "id": "b6c490a416855d8e6bb7",
+            "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "file": "technology.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "机械左臂",
+              "神经接口"
+            ],
+            "start_offset": 156,
+            "end_offset": 193,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "token_count": 66,
+            "score": 0.6647251844406128
+          },
+          {
+            "id": "685d37adddbe625a62f6",
+            "text": "地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "file": "history.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2064年",
+              "机械臂安装"
+            ],
+            "start_offset": 158,
+            "end_offset": 183,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2064年 > 机械臂安装\n地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "token_count": 54,
+            "score": 0.6484174728393555
+          },
+          {
+            "id": "7cb9af5fe25451106869",
+            "text": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "file": "history.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "月城失臂"
+            ],
+            "start_offset": 101,
+            "end_offset": 136,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 月城失臂\n月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "token_count": 63,
+            "score": 0.6355558633804321
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.609440899999754,
+          "input_tokens": 476,
+          "generated_tokens": 22
+        }
+      },
+      "seconds": 1.6199560999993992,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2729.27685546875
+    },
+    {
+      "id": "m02-1",
+      "parent": "m02",
+      "group": "fresh",
+      "source_input": "雷拥有两颗心脏，并能让时间停止。",
+      "record": {
+        "kind": "attribute",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "生理结构",
+        "text": "雷拥有两颗心脏",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "雷拥有两颗心脏"
+      ],
+      "predicted": "一致",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "一致",
+        "findings": [
+          {
+            "input_quote": "雷拥有两颗心脏",
+            "verdict": "一致",
+            "evidence": [
+              {
+                "chunk_id": "099d1bbdbc348eb3c332",
+                "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。"
+              }
+            ],
+            "reason": "直接陈述雷拥有两颗心脏",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"一致\",\"evidence\":[\"E1\"],\"reason\":\"直接陈述雷拥有两颗心脏\"}",
+        "evidence": [
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.6899423599243164
+          },
+          {
+            "id": "17af8f8e8b7ff81197e4",
+            "text": "普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+            "file": "technology.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "医疗",
+              "心脏扫描"
+            ],
+            "start_offset": 472,
+            "end_offset": 502,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 医疗 > 心脏扫描\n普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+            "token_count": 57,
+            "score": 0.6091888546943665
+          },
+          {
+            "id": "46422ea243d878bfdce9",
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "file": "characters.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "身份保密"
+            ],
+            "start_offset": 189,
+            "end_offset": 229,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "token_count": 66,
+            "score": 0.5941433906555176
+          },
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.5674970149993896
+          },
+          {
+            "id": "0ad0e47151069e9d8676",
+            "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "file": "history.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第三话",
+              "身份告知"
+            ],
+            "start_offset": 322,
+            "end_offset": 359,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "token_count": 65,
+            "score": 0.5577079653739929
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.6524876000003133,
+          "input_tokens": 479,
+          "generated_tokens": 23
+        }
+      },
+      "seconds": 1.6617009999999937,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2730.59912109375
+    },
+    {
+      "id": "m02-2",
+      "parent": "m02",
+      "group": "fresh",
+      "source_input": "雷拥有两颗心脏，并能让时间停止。",
+      "record": {
+        "kind": "attribute",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "能力",
+        "text": "并能让时间停止",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "并能让时间停止",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "证据未提及时间停止能力",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "并能让时间停止"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"证据未提及时间停止能力\"}",
+        "evidence": [
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.5436637997627258
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.4697197377681732
+          },
+          {
+            "id": "ca52138556599b584637",
+            "text": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+            "file": "history.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "大地震"
+            ],
+            "start_offset": 44,
+            "end_offset": 80,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 大地震\n2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+            "token_count": 61,
+            "score": 0.46878165006637573
+          },
+          {
+            "id": "596ac1b6800114e8e9ed",
+            "text": "雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。",
+            "file": "angels.md",
+            "start_line": 56,
+            "end_line": 56,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "双宿主",
+              "心脏共鸣"
+            ],
+            "start_offset": 581,
+            "end_offset": 621,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 双宿主 > 心脏共鸣\n雷的两颗心脏同时共鸣时，两名寄宿天使都能听到对方的声音。普通心跳加速不等于共鸣。",
+            "token_count": 68,
+            "score": 0.45204246044158936
+          },
+          {
+            "id": "e7b5fd0acbea6191a941",
+            "text": "雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+            "file": "history.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第八话",
+              "长剑毁坏"
+            ],
+            "start_offset": 429,
+            "end_offset": 456,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第八话 > 长剑毁坏\n雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+            "token_count": 55,
+            "score": 0.44961467385292053
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.45656979999967,
+          "input_tokens": 478,
+          "generated_tokens": 20
+        }
+      },
+      "seconds": 1.4666750000005777,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2730.1572265625
+    },
+    {
+      "id": "m03-1",
+      "parent": "m03",
+      "group": "fresh",
+      "source_input": "莉娅是档案馆管理员，并能再生完整肢体。",
+      "record": {
+        "kind": "attribute",
+        "entity": "莉娅",
+        "entity_type": null,
+        "category": "职业",
+        "text": "莉娅是档案馆管理员",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "城区档案馆的管理员"
+      ],
+      "predicted": "一致",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "一致",
+        "findings": [
+          {
+            "input_quote": "莉娅是档案馆管理员",
+            "verdict": "一致",
+            "evidence": [
+              {
+                "chunk_id": "4ce0e0b41048241db315",
+                "quote": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。"
+              }
+            ],
+            "reason": "E1明确说明莉娅是档案馆管理员",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"一致\",\"evidence\":[\"E1\"],\"reason\":\"E1明确说明莉娅是档案馆管理员\"}",
+        "evidence": [
+          {
+            "id": "4ce0e0b41048241db315",
+            "text": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "file": "characters.md",
+            "start_line": 56,
+            "end_line": 56,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "莉娅",
+              "工作职责"
+            ],
+            "start_offset": 560,
+            "end_offset": 594,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 莉娅 > 工作职责\n莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "token_count": 61,
+            "score": 0.6786061525344849
+          },
+          {
+            "id": "c9a9dcf37f67bf74b64c",
+            "text": "城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+            "file": "history.md",
+            "start_line": 61,
+            "end_line": 61,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2065年",
+              "档案开放"
+            ],
+            "start_offset": 632,
+            "end_offset": 666,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2065年 > 档案开放\n城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+            "token_count": 60,
+            "score": 0.5510231852531433
+          },
+          {
+            "id": "3a56aa33f1ea6dd2186e",
+            "text": "德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+            "file": "characters.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "德尔塔",
+              "公众身份"
+            ],
+            "start_offset": 294,
+            "end_offset": 337,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 德尔塔 > 公众身份\n德尔塔以装甲行动者的身份出现在公共新闻中。公众知道他的代号，但不知道装甲下的真实姓名。",
+            "token_count": 71,
+            "score": 0.4317042827606201
+          },
+          {
+            "id": "46422ea243d878bfdce9",
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "file": "characters.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "身份保密"
+            ],
+            "start_offset": 189,
+            "end_offset": 229,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "token_count": 66,
+            "score": 0.42164307832717896
+          },
+          {
+            "id": "0ad0e47151069e9d8676",
+            "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "file": "history.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第三话",
+              "身份告知"
+            ],
+            "start_offset": 322,
+            "end_offset": 359,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "token_count": 65,
+            "score": 0.3925771415233612
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.8471146000001681,
+          "input_tokens": 486,
+          "generated_tokens": 26
+        }
+      },
+      "seconds": 1.857521099999758,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2733.69873046875
+    },
+    {
+      "id": "m03-2",
+      "parent": "m03",
+      "group": "fresh",
+      "source_input": "莉娅是档案馆管理员，并能再生完整肢体。",
+      "record": {
+        "kind": "attribute",
+        "entity": "莉娅",
+        "entity_type": null,
+        "category": "能力",
+        "text": "并能再生完整肢体",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "矛盾",
+      "correct": false,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "矛盾",
+        "findings": [
+          {
+            "input_quote": "并能再生完整肢体",
+            "verdict": "矛盾",
+            "evidence": [
+              {
+                "chunk_id": "3b7f472d534c811d4c3f",
+                "quote": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。"
+              }
+            ],
+            "reason": "证据明确指出拉古艾尔不能再生完整肢体",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"矛盾\",\"evidence\":[\"E1\"],\"reason\":\"证据明确指出拉古艾尔不能再生完整肢体\"}",
+        "evidence": [
+          {
+            "id": "3b7f472d534c811d4c3f",
+            "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "file": "angels.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "治疗限制"
+            ],
+            "start_offset": 262,
+            "end_offset": 298,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "token_count": 65,
+            "score": 0.5060596466064453
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.4400608241558075
+          },
+          {
+            "id": "252bda4cc47b93db0d7b",
+            "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "file": "angels.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "右侧宿主"
+            ],
+            "start_offset": 202,
+            "end_offset": 242,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "token_count": 69,
+            "score": 0.41929274797439575
+          },
+          {
+            "id": "4ce0e0b41048241db315",
+            "text": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "file": "characters.md",
+            "start_line": 56,
+            "end_line": 56,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "莉娅",
+              "工作职责"
+            ],
+            "start_offset": 560,
+            "end_offset": 594,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 莉娅 > 工作职责\n莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "token_count": 61,
+            "score": 0.4174532890319824
+          },
+          {
+            "id": "f355504eef1bbb05f59a",
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "file": "characters.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "右胸异感"
+            ],
+            "start_offset": 133,
+            "end_offset": 172,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "token_count": 65,
+            "score": 0.41482794284820557
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.8829307999994853,
+          "input_tokens": 489,
+          "generated_tokens": 27
+        }
+      },
+      "seconds": 1.893323600000258,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2735.0361328125
+    },
+    {
+      "id": "m04-1",
+      "parent": "m04",
+      "group": "fresh",
+      "source_input": "拉古艾尔可以加速伤口愈合，也能让死人复活。",
+      "record": {
+        "kind": "attribute",
+        "entity": "拉古艾尔",
+        "entity_type": null,
+        "category": "能力",
+        "text": "拉古艾尔可以加速伤口愈合",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "一致",
+      "evidence_any": [
+        "可以加速伤口愈合"
+      ],
+      "predicted": "一致",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "一致",
+        "findings": [
+          {
+            "input_quote": "拉古艾尔可以加速伤口愈合",
+            "verdict": "一致",
+            "evidence": [
+              {
+                "chunk_id": "3b7f472d534c811d4c3f",
+                "quote": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。"
+              }
+            ],
+            "reason": "直接提及加速伤口愈合",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"一致\",\"evidence\":[\"E1\"],\"reason\":\"直接提及加速伤口愈合\"}",
+        "evidence": [
+          {
+            "id": "3b7f472d534c811d4c3f",
+            "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "file": "angels.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "治疗限制"
+            ],
+            "start_offset": 262,
+            "end_offset": 298,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "token_count": 65,
+            "score": 0.7115410566329956
+          },
+          {
+            "id": "252bda4cc47b93db0d7b",
+            "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "file": "angels.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "右侧宿主"
+            ],
+            "start_offset": 202,
+            "end_offset": 242,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "token_count": 69,
+            "score": 0.4858378767967224
+          },
+          {
+            "id": "f355504eef1bbb05f59a",
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "file": "characters.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "右胸异感"
+            ],
+            "start_offset": 133,
+            "end_offset": 172,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "token_count": 65,
+            "score": 0.4580274522304535
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.4309113621711731
+          },
+          {
+            "id": "7cb9af5fe25451106869",
+            "text": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "file": "history.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "月城失臂"
+            ],
+            "start_offset": 101,
+            "end_offset": 136,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 月城失臂\n月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "token_count": 63,
+            "score": 0.38867706060409546
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.5933912999998938,
+          "input_tokens": 506,
+          "generated_tokens": 22
+        }
+      },
+      "seconds": 1.6037398999997095,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2743.25732421875
+    },
+    {
+      "id": "m04-2",
+      "parent": "m04",
+      "group": "fresh",
+      "source_input": "拉古艾尔可以加速伤口愈合，也能让死人复活。",
+      "record": {
+        "kind": "attribute",
+        "entity": "拉古艾尔",
+        "entity_type": null,
+        "category": "能力",
+        "text": "也能让死人复活",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "矛盾",
+      "evidence_any": [
+        "不能让已经死亡的人复活"
+      ],
+      "predicted": "矛盾",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "矛盾",
+        "findings": [
+          {
+            "input_quote": "也能让死人复活",
+            "verdict": "矛盾",
+            "evidence": [
+              {
+                "chunk_id": "3b7f472d534c811d4c3f",
+                "quote": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。"
+              }
+            ],
+            "reason": "证据明确指出不能让死人复活",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"矛盾\",\"evidence\":[\"E1\"],\"reason\":\"证据明确指出不能让死人复活\"}",
+        "evidence": [
+          {
+            "id": "3b7f472d534c811d4c3f",
+            "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "file": "angels.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "治疗限制"
+            ],
+            "start_offset": 262,
+            "end_offset": 298,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "token_count": 65,
+            "score": 0.6871986389160156
+          },
+          {
+            "id": "252bda4cc47b93db0d7b",
+            "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "file": "angels.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "右侧宿主"
+            ],
+            "start_offset": 202,
+            "end_offset": 242,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "token_count": 69,
+            "score": 0.48721832036972046
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.4713318347930908
+          },
+          {
+            "id": "f355504eef1bbb05f59a",
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "file": "characters.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "右胸异感"
+            ],
+            "start_offset": 133,
+            "end_offset": 172,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "token_count": 65,
+            "score": 0.4468112289905548
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.39872094988822937
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.7127639000000272,
+          "input_tokens": 494,
+          "generated_tokens": 24
+        }
+      },
+      "seconds": 1.7224403000000166,
+      "retrieval_core_hit": true,
+      "citation_core_hit": true,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2737.271484375
+    },
+    {
+      "id": "b01-1",
+      "parent": "b01",
+      "group": "fresh",
+      "source_input": "第十二话，诺拉加入白塔协会。",
+      "record": {
+        "kind": "relation",
+        "entity": "诺拉",
+        "entity_type": null,
+        "category": "隶属",
+        "text": "诺拉加入白塔协会",
+        "target": "白塔协会",
+        "time": "第十二话",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "诺拉加入白塔协会",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "无证据提及诺拉或白塔协会",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "诺拉加入白塔协会"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据提及诺拉或白塔协会\"}",
+        "evidence": [
+          {
+            "id": "0ad0e47151069e9d8676",
+            "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "file": "history.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第三话",
+              "身份告知"
+            ],
+            "start_offset": 322,
+            "end_offset": 359,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "token_count": 65,
+            "score": 0.4407171905040741
+          },
+          {
+            "id": "d11b313d4fe3fee7d599",
+            "text": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+            "file": "history.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第二话",
+              "首次当面见面"
+            ],
+            "start_offset": 261,
+            "end_offset": 303,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第二话 > 首次当面见面\n雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。",
+            "token_count": 72,
+            "score": 0.4139721989631653
+          },
+          {
+            "id": "f6fa2986c882a112f9c0",
+            "text": "雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+            "file": "history.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第六话",
+              "教堂避难"
+            ],
+            "start_offset": 527,
+            "end_offset": 557,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第六话 > 教堂避难\n雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+            "token_count": 58,
+            "score": 0.39121004939079285
+          },
+          {
+            "id": "a67d2b6c645c6c2b1d19",
+            "text": "第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+            "file": "history.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第一话",
+              "公共新闻"
+            ],
+            "start_offset": 202,
+            "end_offset": 240,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第一话 > 公共新闻\n第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。",
+            "token_count": 66,
+            "score": 0.3810466527938843
+          },
+          {
+            "id": "46422ea243d878bfdce9",
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "file": "characters.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "身份保密"
+            ],
+            "start_offset": 189,
+            "end_offset": 229,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "token_count": 66,
+            "score": 0.37412595748901367
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.6546533000000636,
+          "input_tokens": 497,
+          "generated_tokens": 23
+        }
+      },
+      "seconds": 1.6652205999998841,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2738.62109375
+    },
+    {
+      "id": "b02-1",
+      "parent": "b02",
+      "group": "fresh",
+      "source_input": "霜港位于南方。",
+      "record": {
+        "kind": "relation",
+        "entity": "霜港",
+        "entity_type": null,
+        "category": "位于",
+        "text": "霜港位于南方",
+        "target": "南方",
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "霜港位于南方",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "无证据涉及霜港位置",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "霜港位于南方"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据涉及霜港位置\"}",
+        "evidence": [
+          {
+            "id": "eb8934fb11d790995821",
+            "text": "城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。",
+            "file": "technology.md",
+            "start_line": 36,
+            "end_line": 36,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "交通",
+              "城区列车"
+            ],
+            "start_offset": 370,
+            "end_offset": 405,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 交通 > 城区列车\n城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。",
+            "token_count": 62,
+            "score": 0.295494019985199
+          },
+          {
+            "id": "17af8f8e8b7ff81197e4",
+            "text": "普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+            "file": "technology.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "医疗",
+              "心脏扫描"
+            ],
+            "start_offset": 472,
+            "end_offset": 502,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 医疗 > 心脏扫描\n普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+            "token_count": 57,
+            "score": 0.27354732155799866
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.2655050754547119
+          },
+          {
+            "id": "46422ea243d878bfdce9",
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "file": "characters.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "身份保密"
+            ],
+            "start_offset": 189,
+            "end_offset": 229,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "token_count": 66,
+            "score": 0.2605190873146057
+          },
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.26047196984291077
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.4666611000002376,
+          "input_tokens": 474,
+          "generated_tokens": 20
+        }
+      },
+      "seconds": 1.477771799999573,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2728.3984375
+    },
+    {
+      "id": "b03-1",
+      "parent": "b03",
+      "group": "fresh",
+      "source_input": "世界规则：重力在日落时反向。",
+      "record": {
+        "kind": "rule",
+        "entity": null,
+        "entity_type": null,
+        "category": "物理规则",
+        "text": "世界规则：重力在日落时反向",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "世界规则：重力在日落时反向",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "无证据支持重力在日落时反向",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "世界规则：重力在日落时反向"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据支持重力在日落时反向\"}",
+        "evidence": [
+          {
+            "id": "df1f51265ef5555994be",
+            "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+            "file": "angels.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "亚巴顿",
+              "力量副作用"
+            ],
+            "start_offset": 149,
+            "end_offset": 182,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+            "token_count": 62,
+            "score": 0.45054638385772705
+          },
+          {
+            "id": "269e80f1f85e9bf4cc4e",
+            "text": "外骨骼推进器产生大量热量，连续高功率运行十分钟必须停止散热。",
+            "file": "technology.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "动力外骨骼",
+              "推进器冷却"
+            ],
+            "start_offset": 106,
+            "end_offset": 136,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 动力外骨骼 > 推进器冷却\n外骨骼推进器产生大量热量，连续高功率运行十分钟必须停止散热。",
+            "token_count": 61,
+            "score": 0.44654911756515503
+          },
+          {
+            "id": "ca52138556599b584637",
+            "text": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+            "file": "history.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "大地震"
+            ],
+            "start_offset": 44,
+            "end_offset": 80,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 大地震\n2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。",
+            "token_count": 61,
+            "score": 0.4370346665382385
+          },
+          {
+            "id": "685d37adddbe625a62f6",
+            "text": "地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "file": "history.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2064年",
+              "机械臂安装"
+            ],
+            "start_offset": 158,
+            "end_offset": 183,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2064年 > 机械臂安装\n地震一年后，月城在医院完成机械左臂安装和康复训练。",
+            "token_count": 54,
+            "score": 0.4317404627799988
+          },
+          {
+            "id": "ce0e16ac4d447576296f",
+            "text": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+            "file": "technology.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "能源",
+              "太阳能限制"
+            ],
+            "start_offset": 424,
+            "end_offset": 454,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 能源 > 太阳能限制\n城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+            "token_count": 58,
+            "score": 0.42753586173057556
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.756355700000313,
+          "input_tokens": 475,
+          "generated_tokens": 25
+        }
+      },
+      "seconds": 1.7664255999998204,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2728.83837890625
+    },
+    {
+      "id": "b04-1",
+      "parent": "b04",
+      "group": "fresh",
+      "source_input": "第十三话，雷获得青铜钥匙，并将青铜钥匙交给莉娅。",
+      "record": {
+        "kind": "event",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "物品转交",
+        "text": "雷获得青铜钥匙",
+        "target": null,
+        "time": "第十三话",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "雷获得青铜钥匙",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "证据未提及钥匙或获得行为",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "雷获得青铜钥匙"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"证据未提及钥匙或获得行为\"}",
+        "evidence": [
+          {
+            "id": "0ad0e47151069e9d8676",
+            "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "file": "history.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第三话",
+              "身份告知"
+            ],
+            "start_offset": 322,
+            "end_offset": 359,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "token_count": 65,
+            "score": 0.5052199959754944
+          },
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.47363340854644775
+          },
+          {
+            "id": "f0451fb2164fadf1aa1c",
+            "text": "雷在第四话从旧教堂获得一把长剑。此前的剧情没有记录他持有这把剑。",
+            "file": "history.md",
+            "start_line": 36,
+            "end_line": 36,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第四话",
+              "获得长剑"
+            ],
+            "start_offset": 378,
+            "end_offset": 410,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第四话 > 获得长剑\n雷在第四话从旧教堂获得一把长剑。此前的剧情没有记录他持有这把剑。",
+            "token_count": 60,
+            "score": 0.4647873640060425
+          },
+          {
+            "id": "46422ea243d878bfdce9",
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "file": "characters.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "身份保密"
+            ],
+            "start_offset": 189,
+            "end_offset": 229,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "token_count": 66,
+            "score": 0.45585376024246216
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.4281535744667053
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.5676399000003585,
+          "input_tokens": 485,
+          "generated_tokens": 21
+        }
+      },
+      "seconds": 1.5772751999993488,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2733.25537109375
+    },
+    {
+      "id": "b04-2",
+      "parent": "b04",
+      "group": "fresh",
+      "source_input": "第十三话，雷获得青铜钥匙，并将青铜钥匙交给莉娅。",
+      "record": {
+        "kind": "event",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "物品转交",
+        "text": "并将青铜钥匙交给莉娅",
+        "target": null,
+        "time": "第十三话",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "并将青铜钥匙交给莉娅",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "证据未提及钥匙或莉娅",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "并将青铜钥匙交给莉娅"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"证据未提及钥匙或莉娅\"}",
+        "evidence": [
+          {
+            "id": "0ad0e47151069e9d8676",
+            "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "file": "history.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第三话",
+              "身份告知"
+            ],
+            "start_offset": 322,
+            "end_offset": 359,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "token_count": 65,
+            "score": 0.5318930149078369
+          },
+          {
+            "id": "46422ea243d878bfdce9",
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "file": "characters.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "身份保密"
+            ],
+            "start_offset": 189,
+            "end_offset": 229,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 身份保密\n雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "token_count": 66,
+            "score": 0.46705350279808044
+          },
+          {
+            "id": "f0451fb2164fadf1aa1c",
+            "text": "雷在第四话从旧教堂获得一把长剑。此前的剧情没有记录他持有这把剑。",
+            "file": "history.md",
+            "start_line": 36,
+            "end_line": 36,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第四话",
+              "获得长剑"
+            ],
+            "start_offset": 378,
+            "end_offset": 410,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第四话 > 获得长剑\n雷在第四话从旧教堂获得一把长剑。此前的剧情没有记录他持有这把剑。",
+            "token_count": 60,
+            "score": 0.43510738015174866
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.4243353605270386
+          },
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.4103136658668518
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.5607872000000498,
+          "input_tokens": 489,
+          "generated_tokens": 21
+        }
+      },
+      "seconds": 1.5716004000005341,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2735.0361328125
+    },
+    {
+      "id": "r01-1",
+      "parent": "r01",
+      "group": "development_regression",
+      "source_input": "雷的左胸会周期性疼痛。",
+      "record": {
+        "kind": "attribute",
+        "entity": "雷",
+        "entity_type": null,
+        "category": "生理结构",
+        "text": "雷的左胸会周期性疼痛",
+        "target": null,
+        "time": null,
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "一致",
+      "correct": false,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "一致",
+        "findings": [
+          {
+            "input_quote": "雷的左胸会周期性疼痛",
+            "verdict": "一致",
+            "evidence": [
+              {
+                "chunk_id": "a739b6548c630e2c4d40",
+                "quote": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。"
+              },
+              {
+                "chunk_id": "47ba19b8b9ece1f35cc9",
+                "quote": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。"
+              }
+            ],
+            "reason": "左胸疼痛与亚巴顿苏醒相关，且地震后出现",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"verdict\":\"一致\",\"evidence\":[\"E2\",\"E4\"],\"reason\":\"左胸疼痛与亚巴顿苏醒相关，且地震后出现\"}",
+        "evidence": [
+          {
+            "id": "f355504eef1bbb05f59a",
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "file": "characters.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "右胸异感"
+            ],
+            "start_offset": 133,
+            "end_offset": 172,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "token_count": 65,
+            "score": 0.6932690143585205
+          },
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.6573487520217896
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.5724894404411316
+          },
+          {
+            "id": "47ba19b8b9ece1f35cc9",
+            "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+            "file": "angels.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "亚巴顿",
+              "左侧宿主"
+            ],
+            "start_offset": 43,
+            "end_offset": 81,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+            "token_count": 66,
+            "score": 0.5543041825294495
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.5414100289344788
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 2.3573756000005233,
+          "input_tokens": 494,
+          "generated_tokens": 34
+        }
+      },
+      "seconds": 2.3671577000004618,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2737.271484375
+    },
+    {
+      "id": "r02-1",
+      "parent": "r02",
+      "group": "development_regression",
+      "source_input": "第18话，茱莉亚入职星球日报，并结识克拉克。",
+      "record": {
+        "kind": "relation",
+        "entity": "茱莉亚",
+        "entity_type": null,
+        "category": "入职",
+        "text": "茱莉亚入职星球日报",
+        "target": "星球日报",
+        "time": "第18话",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "茱莉亚入职星球日报",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "无证据提及茱莉亚或星球日报",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "茱莉亚入职星球日报"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据提及茱莉亚或星球日报\"}",
+        "evidence": [
+          {
+            "id": "0ad0e47151069e9d8676",
+            "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "file": "history.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第三话",
+              "身份告知"
+            ],
+            "start_offset": 322,
+            "end_offset": 359,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "token_count": 65,
+            "score": 0.3657929599285126
+          },
+          {
+            "id": "4ce0e0b41048241db315",
+            "text": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "file": "characters.md",
+            "start_line": 56,
+            "end_line": 56,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "莉娅",
+              "工作职责"
+            ],
+            "start_offset": 560,
+            "end_offset": 594,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 莉娅 > 工作职责\n莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "token_count": 61,
+            "score": 0.3522680401802063
+          },
+          {
+            "id": "c9a9dcf37f67bf74b64c",
+            "text": "城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+            "file": "history.md",
+            "start_line": 61,
+            "end_line": 61,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2065年",
+              "档案开放"
+            ],
+            "start_offset": 632,
+            "end_offset": 666,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2065年 > 档案开放\n城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+            "token_count": 60,
+            "score": 0.32624033093452454
+          },
+          {
+            "id": "2979cd8f1d1098b9cdfc",
+            "text": "监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+            "file": "characters.md",
+            "start_line": 61,
+            "end_line": 61,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "监察官",
+              "失明状态"
+            ],
+            "start_offset": 613,
+            "end_offset": 648,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 监察官 > 失明状态\n监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+            "token_count": 63,
+            "score": 0.31470364332199097
+          },
+          {
+            "id": "df1f51265ef5555994be",
+            "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+            "file": "angels.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "亚巴顿",
+              "力量副作用"
+            ],
+            "start_offset": 149,
+            "end_offset": 182,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+            "token_count": 62,
+            "score": 0.30886226892471313
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.6589504000003217,
+          "input_tokens": 489,
+          "generated_tokens": 23
+        }
+      },
+      "seconds": 1.6718224999995073,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2735.0361328125
+    },
+    {
+      "id": "r02-2",
+      "parent": "r02",
+      "group": "development_regression",
+      "source_input": "第18话，茱莉亚入职星球日报，并结识克拉克。",
+      "record": {
+        "kind": "relation",
+        "entity": "茱莉亚",
+        "entity_type": null,
+        "category": "结识",
+        "text": "并结识克拉克",
+        "target": "克拉克",
+        "time": "第18话",
+        "valid_from": null,
+        "valid_until": null
+      },
+      "expected": "不确定",
+      "evidence_any": [],
+      "predicted": "不确定",
+      "correct": true,
+      "result": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "并结识克拉克",
+            "verdict": "不确定",
+            "evidence": [],
+            "reason": "无证据提及茱莉亚或克拉克",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "并结识克拉克"
+        ],
+        "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据提及茱莉亚或克拉克\"}",
+        "evidence": [
+          {
+            "id": "f6fa2986c882a112f9c0",
+            "text": "雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+            "file": "history.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第六话",
+              "教堂避难"
+            ],
+            "start_offset": 527,
+            "end_offset": 557,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第六话 > 教堂避难\n雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+            "token_count": 58,
+            "score": 0.3619268834590912
+          },
+          {
+            "id": "0ad0e47151069e9d8676",
+            "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "file": "history.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第三话",
+              "身份告知"
+            ],
+            "start_offset": 322,
+            "end_offset": 359,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "token_count": 65,
+            "score": 0.3430517911911011
+          },
+          {
+            "id": "3b7f472d534c811d4c3f",
+            "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "file": "angels.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "治疗限制"
+            ],
+            "start_offset": 262,
+            "end_offset": 298,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "token_count": 65,
+            "score": 0.3355865180492401
+          },
+          {
+            "id": "e7b5fd0acbea6191a941",
+            "text": "雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+            "file": "history.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第八话",
+              "长剑毁坏"
+            ],
+            "start_offset": 429,
+            "end_offset": 456,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第八话 > 长剑毁坏\n雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+            "token_count": 55,
+            "score": 0.3206036388874054
+          },
+          {
+            "id": "d312452d0673bf259c82",
+            "text": "雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+            "file": "history.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第五话",
+              "父亲离城"
+            ],
+            "start_offset": 475,
+            "end_offset": 508,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第五话 > 父亲离城\n雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+            "token_count": 61,
+            "score": 0.3187742829322815
+          }
+        ],
+        "prompt_version": "world-review-v2",
+        "timing": {
+          "seconds": 1.6867695999999341,
+          "input_tokens": 484,
+          "generated_tokens": 23
+        }
+      },
+      "seconds": 1.6982725999996546,
+      "retrieval_core_hit": false,
+      "citation_core_hit": false,
+      "citations_invalid": 0,
+      "peak_allocated_mib": 2732.810546875
+    }
+  ],
+  "device": "cuda",
+  "fixture_hashes": {
+    "characters.md": "e5741e3a36fe3ef0a286a7c2f1f85089b9908cc99869563dd5d040348d40d3e8",
+    "angels.md": "3a74db800a715d8b392db37ccc38026b0e71219fffa684d8e2d429314ef9b7e2",
+    "history.md": "4f0105823cc8d513a4d32cfc094736458db594351000de074acd313cee06d601",
+    "technology.md": "b88690cae568b05032d2c078646bfea50ff304a291b7fbadf0af17eeb4c6cfae"
+  },
+  "qwen_load_seconds": 11.725743999999395,
+  "original_data_unchanged": true,
+  "totals": {
+    "correct": 31,
+    "total": 34,
+    "valid": 34,
+    "retrieval_hits": 18,
+    "retrieval_total": 18,
+    "citation_core_hits": 17,
+    "citations_invalid": 0
+  },
+  "confusion": {
+    "一致": {
+      "一致": 10,
+      "矛盾": 0,
+      "不确定": 0,
+      "缺失/失败": 0
+    },
+    "矛盾": {
+      "一致": 0,
+      "矛盾": 7,
+      "不确定": 1,
+      "缺失/失败": 0
+    },
+    "不确定": {
+      "一致": 1,
+      "矛盾": 1,
+      "不确定": 14,
+      "缺失/失败": 0
+    }
+  },
+  "latency": {
+    "median": 1.7103564499998356,
+    "p95": 2.454469230000222
+  }
+}

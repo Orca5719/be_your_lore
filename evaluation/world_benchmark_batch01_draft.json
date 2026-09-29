@@ -1,0 +1,670 @@
+{
+  "schema_version": 1,
+  "name": "worldcheck-benchmark-160-draft-batch01",
+  "status": "draft_not_run",
+  "target_total": 160,
+  "expected_total_this_batch": 20,
+  "fixture_hashes": {
+    "characters.md": "e5741e3a36fe3ef0a286a7c2f1f85089b9908cc99869563dd5d040348d40d3e8",
+    "angels.md": "3a74db800a715d8b392db37ccc38026b0e71219fffa684d8e2d429314ef9b7e2",
+    "history.md": "4f0105823cc8d513a4d32cfc094736458db594351000de074acd313cee06d601",
+    "technology.md": "b88690cae568b05032d2c078646bfea50ff304a291b7fbadf0af17eeb4c6cfae"
+  },
+  "annotation_policy": "仅依据冻结的四个本地测试设定文件。无关输入也判不确定。没有独立复核，尚未运行模型；细分类别标签仅用于统计，可重叠，primary_dimension用于分组。",
+  "cases": [
+    {
+      "id": "wb001",
+      "group": "consistent",
+      "primary_dimension": "人物知识",
+      "family_id": "delta_identity_disclosure",
+      "text": "在第三话的身份告知之后，德尔塔知道雷的宿主身份。",
+      "expected_overall": "一致",
+      "claims": [
+        {
+          "input_quote": "德尔塔知道雷的宿主身份",
+          "expected_verdict": "一致",
+          "allowed_kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence": [
+            {
+              "file": "history.md",
+              "start_line": 31,
+              "end_line": 31,
+              "quote": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。"
+            }
+          ],
+          "rationale": "资料明确第三话说明身份，德尔塔从此知道秘密。",
+          "sensitive_terms": [
+            "第三话",
+            "之后",
+            "德尔塔"
+          ],
+          "required_context": "第三话身份告知之后；知情主体为德尔塔"
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb002",
+      "group": "consistent",
+      "primary_dimension": "时间",
+      "family_id": "mechanical_arm_installation",
+      "text": "月城在2064年接受了机械左臂安装手术。",
+      "expected_overall": "一致",
+      "claims": [
+        {
+          "input_quote": "月城在2064年接受了机械左臂安装手术",
+          "expected_verdict": "一致",
+          "allowed_kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence": [
+            {
+              "file": "characters.md",
+              "start_line": 46,
+              "end_line": 46,
+              "quote": "月城在2064年接受机械左臂安装手术。在此之前，他没有机械手臂。"
+            }
+          ],
+          "rationale": "直接匹配手术年份与左臂。",
+          "sensitive_terms": [
+            "2064年",
+            "左臂"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb003",
+      "group": "consistent",
+      "primary_dimension": "空间",
+      "family_id": "research_station_location",
+      "text": "北方研究站位于城区列车的终点站附近。",
+      "expected_overall": "一致",
+      "claims": [
+        {
+          "input_quote": "北方研究站位于城区列车的终点站附近",
+          "expected_verdict": "一致",
+          "allowed_kinds": [
+            "relation",
+            "attribute"
+          ],
+          "evidence": [
+            {
+              "file": "technology.md",
+              "start_line": 36,
+              "end_line": 36,
+              "quote": "北方研究站位于终点站附近。"
+            }
+          ],
+          "rationale": "资料明确研究站与终点站的相对位置。",
+          "sensitive_terms": [
+            "附近"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb004",
+      "group": "consistent",
+      "primary_dimension": "因果",
+      "family_id": "paper_backup_after_database_failure",
+      "text": "网络数据库损坏时，档案馆管理员仍能查阅纸本记录。",
+      "expected_overall": "一致",
+      "claims": [
+        {
+          "input_quote": "档案馆管理员仍能查阅纸本记录",
+          "expected_verdict": "一致",
+          "allowed_kinds": [
+            "rule",
+            "attribute",
+            "event"
+          ],
+          "evidence": [
+            {
+              "file": "technology.md",
+              "start_line": 51,
+              "end_line": 51,
+              "quote": "档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。"
+            }
+          ],
+          "rationale": "纸质备份使网络库损坏后仍有可查阅记录；不推断修复或其他因果。",
+          "sensitive_terms": [
+            "仍能",
+            "纸本"
+          ],
+          "required_context": "条件为网络数据库损坏；查阅对象是纸本"
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb005",
+      "group": "contradiction",
+      "primary_dimension": "时间",
+      "family_id": "first_face_to_face",
+      "text": "雷与德尔塔第一次当面交谈发生在第一话。",
+      "expected_overall": "矛盾",
+      "claims": [
+        {
+          "input_quote": "雷与德尔塔第一次当面交谈发生在第一话",
+          "expected_verdict": "矛盾",
+          "allowed_kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence": [
+            {
+              "file": "history.md",
+              "start_line": 26,
+              "end_line": 26,
+              "quote": "雷与德尔塔在第二话第一次当面交谈。雷此前已经在第一话公共新闻中见过德尔塔的装甲形象。"
+            }
+          ],
+          "rationale": "首次当面交谈明确第二话；第一话只是在新闻中看到形象。",
+          "sensitive_terms": [
+            "第一次",
+            "当面",
+            "第一话"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb006",
+      "group": "contradiction",
+      "primary_dimension": "人物知识",
+      "family_id": "father_host_knowledge",
+      "text": "雷的父亲一直知道拉古艾尔寄宿在雷体内。",
+      "expected_overall": "矛盾",
+      "claims": [
+        {
+          "input_quote": "雷的父亲一直知道拉古艾尔寄宿在雷体内",
+          "expected_verdict": "矛盾",
+          "allowed_kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence": [
+            {
+              "file": "characters.md",
+              "start_line": 51,
+              "end_line": 51,
+              "quote": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。"
+            }
+          ],
+          "rationale": "已有父亲认知记录明确不知道，不能套用德尔塔知情设定。",
+          "sensitive_terms": [
+            "雷的父亲",
+            "一直知道"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb007",
+      "group": "contradiction",
+      "primary_dimension": "空间",
+      "family_id": "news_square_presence",
+      "text": "第一话播放德尔塔救援新闻时，雷没有在广场。",
+      "expected_overall": "矛盾",
+      "claims": [
+        {
+          "input_quote": "第一话播放德尔塔救援新闻时，雷没有在广场",
+          "expected_verdict": "矛盾",
+          "allowed_kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence": [
+            {
+              "file": "history.md",
+              "start_line": 21,
+              "end_line": 21,
+              "quote": "第一话广场新闻屏幕曾播放德尔塔救援的报道。雷当时在广场，抬头观看了这则新闻。"
+            }
+          ],
+          "rationale": "对应同一事件，资料直接记录雷当时在广场观看新闻。",
+          "sensitive_terms": [
+            "第一话",
+            "播放",
+            "没有",
+            "广场"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb008",
+      "group": "contradiction",
+      "primary_dimension": "人物关系",
+      "family_id": "raguel_host_relation",
+      "text": "拉古艾尔在既定寄宿关系中的宿主是德尔塔。",
+      "expected_overall": "矛盾",
+      "claims": [
+        {
+          "input_quote": "拉古艾尔在既定寄宿关系中的宿主是德尔塔",
+          "expected_verdict": "矛盾",
+          "allowed_kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence": [
+            {
+              "file": "angels.md",
+              "start_line": 21,
+              "end_line": 21,
+              "quote": "拉古艾尔寄宿在雷的右侧心脏里。"
+            }
+          ],
+          "rationale": "已有关系明确寄宿在雷的右心脏，错误地替换了宿主人物。",
+          "sensitive_terms": [
+            "既定寄宿关系",
+            "拉古艾尔",
+            "德尔塔"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb009",
+      "group": "contradiction",
+      "primary_dimension": "物理规则",
+      "family_id": "mechanical_arm_temperature",
+      "text": "月城现有的机械左臂能够感知温度。",
+      "expected_overall": "矛盾",
+      "claims": [
+        {
+          "input_quote": "月城现有的机械左臂能够感知温度",
+          "expected_verdict": "矛盾",
+          "allowed_kinds": [
+            "attribute",
+            "rule"
+          ],
+          "evidence": [
+            {
+              "file": "technology.md",
+              "start_line": 21,
+              "end_line": 21,
+              "quote": "月城的机械左臂能反馈压力，但无法感知温度。他用左手碰热水时不会感觉烫。"
+            }
+          ],
+          "rationale": "现有义肢明确只能反馈压力而不能感知温度，不假设新升级。",
+          "sensitive_terms": [
+            "现有",
+            "能够",
+            "温度"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb010",
+      "group": "contradiction",
+      "primary_dimension": "世界规则",
+      "family_id": "seal_two_hosts",
+      "text": "地下神殿的封印允许一个天使仅凭蛮力打开石门。",
+      "expected_overall": "矛盾",
+      "claims": [
+        {
+          "input_quote": "地下神殿的封印允许一个天使仅凭蛮力打开石门",
+          "expected_verdict": "矛盾",
+          "allowed_kinds": [
+            "rule",
+            "attribute"
+          ],
+          "evidence": [
+            {
+              "file": "angels.md",
+              "start_line": 46,
+              "end_line": 46,
+              "quote": "地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。"
+            }
+          ],
+          "rationale": "规则明确需两名宿主同时触碰，单个天使蛮力不能打开。",
+          "sensitive_terms": [
+            "一个",
+            "仅凭蛮力"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb011",
+      "group": "contradiction",
+      "primary_dimension": "因果",
+      "family_id": "paper_backup_after_database_failure",
+      "text": "网络数据库损坏直接导致档案馆保留的纸本记录也无法查阅。",
+      "expected_overall": "矛盾",
+      "claims": [
+        {
+          "input_quote": "网络数据库损坏直接导致档案馆保留的纸本记录也无法查阅",
+          "expected_verdict": "矛盾",
+          "allowed_kinds": [
+            "rule",
+            "event",
+            "attribute"
+          ],
+          "evidence": [
+            {
+              "file": "technology.md",
+              "start_line": 51,
+              "end_line": 51,
+              "quote": "档案馆保留地震前的纸质备份。网络数据库损坏时，管理员仍可查阅纸本记录。"
+            }
+          ],
+          "rationale": "同一数据库损坏条件下，明确已有纸本仍可查阅，因果后果不相容。",
+          "sensitive_terms": [
+            "直接导致",
+            "纸本",
+            "无法"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb012",
+      "group": "contradiction",
+      "primary_dimension": "身份",
+      "family_id": "lia_profession",
+      "text": "在现有身份设定中，莉娅是医院的医生。",
+      "expected_overall": "矛盾",
+      "claims": [
+        {
+          "input_quote": "在现有身份设定中，莉娅是医院的医生",
+          "expected_verdict": "矛盾",
+          "allowed_kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence": [
+            {
+              "file": "characters.md",
+              "start_line": 56,
+              "end_line": 56,
+              "quote": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。"
+            }
+          ],
+          "rationale": "身份明确为档案管理员，资料还直接否定医生身份。",
+          "sensitive_terms": [
+            "现有身份",
+            "莉娅",
+            "医生"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb013",
+      "group": "insufficient",
+      "primary_dimension": "人物关系",
+      "family_id": "unknown_parentage",
+      "text": "莉娅是雷的姐姐。",
+      "expected_overall": "不确定",
+      "claims": [
+        {
+          "input_quote": "莉娅是雷的姐姐",
+          "expected_verdict": "不确定",
+          "allowed_kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence": [],
+          "rationale": "资料没有这项亲属关系，身份职业不否定其可能；不可凭模型常识判断。",
+          "sensitive_terms": [
+            "姐姐"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb014",
+      "group": "insufficient",
+      "primary_dimension": "人物知识",
+      "family_id": "unknown_private_knowledge",
+      "text": "雷的父亲知道雷曾经在第一话看过德尔塔的新闻。",
+      "expected_overall": "不确定",
+      "claims": [
+        {
+          "input_quote": "雷的父亲知道雷曾经在第一话看过德尔塔的新闻",
+          "expected_verdict": "不确定",
+          "allowed_kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence": [
+            {
+              "file": "history.md",
+              "start_line": 21,
+              "end_line": 21,
+              "quote": "雷当时在广场，抬头观看了这则新闻。"
+            },
+            {
+              "file": "characters.md",
+              "start_line": 51,
+              "end_line": 51,
+              "quote": "雷的父亲不知道拉古艾尔寄宿在雷体内。"
+            }
+          ],
+          "rationale": "雷确实看过新闻，不代表父亲知道；资料只说明父亲不知寄宿秘密。",
+          "sensitive_terms": [
+            "雷的父亲",
+            "知道",
+            "看过"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb015",
+      "group": "insufficient",
+      "primary_dimension": "时间",
+      "family_id": "future_arm_upgrade",
+      "text": "月城在2066年为机械左臂加装了温度传感器。",
+      "expected_overall": "不确定",
+      "claims": [
+        {
+          "input_quote": "月城在2066年为机械左臂加装了温度传感器",
+          "expected_verdict": "不确定",
+          "allowed_kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence": [
+            {
+              "file": "characters.md",
+              "start_line": 46,
+              "end_line": 46,
+              "quote": "月城在2064年接受机械左臂安装手术。"
+            },
+            {
+              "file": "technology.md",
+              "start_line": 21,
+              "end_line": 21,
+              "quote": "月城的机械左臂能反馈压力，但无法感知温度。"
+            }
+          ],
+          "rationale": "2064年安装和现有温度限制不能直接否定未记录的2066年升级；事件本身尚无证据。",
+          "sensitive_terms": [
+            "2066年",
+            "加装"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb016",
+      "group": "insufficient",
+      "primary_dimension": "因果",
+      "family_id": "quake_cause_unknown",
+      "text": "2063年的大地震是亚巴顿降临造成的。",
+      "expected_overall": "不确定",
+      "claims": [
+        {
+          "input_quote": "2063年的大地震是亚巴顿降临造成的",
+          "expected_verdict": "不确定",
+          "allowed_kinds": [
+            "event",
+            "rule",
+            "relation"
+          ],
+          "evidence": [
+            {
+              "file": "history.md",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "2063年大地震摧毁了旧城区。雷在废墟中昏迷，亚巴顿于同一时期提前降临。"
+            }
+          ],
+          "rationale": "同一时期发生只说明同时出现，资料没有建立谁造成谁。",
+          "sensitive_terms": [
+            "2063年",
+            "亚巴顿",
+            "造成"
+          ]
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb017",
+      "group": "unrelated",
+      "primary_dimension": "完全无关",
+      "family_id": "unrelated_iris_school",
+      "text": "艾琳是海雾学院的校长。",
+      "expected_overall": "不确定",
+      "claims": [
+        {
+          "input_quote": "艾琳是海雾学院的校长",
+          "expected_verdict": "不确定",
+          "allowed_kinds": [
+            "attribute",
+            "relation"
+          ],
+          "evidence": [],
+          "rationale": "现有资料未提名称和学校；现实常识或模型其他作品记忆不能补证据。",
+          "sensitive_terms": []
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb018",
+      "group": "unrelated",
+      "primary_dimension": "完全无关",
+      "family_id": "unrelated_metal_world_rule",
+      "text": "在赤砂王国，黄金会在雨天变成玻璃。",
+      "expected_overall": "不确定",
+      "claims": [
+        {
+          "input_quote": "黄金会在雨天变成玻璃",
+          "expected_verdict": "不确定",
+          "allowed_kinds": [
+            "rule"
+          ],
+          "evidence": [],
+          "rationale": "新国家、新材料机制，与本地资料无证据关联；不依据现实物理强判矛盾。",
+          "sensitive_terms": [
+            "赤砂王国",
+            "雨天"
+          ],
+          "required_context": "规则属于新提出的赤砂王国，不引用现实黄金性质"
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb019",
+      "group": "unrelated",
+      "primary_dimension": "完全无关",
+      "family_id": "unrelated_alternate_timeline",
+      "text": "第27章，泽恩在琥珀岛建立了风帆公会。",
+      "expected_overall": "不确定",
+      "claims": [
+        {
+          "input_quote": "泽恩在琥珀岛建立了风帆公会",
+          "expected_verdict": "不确定",
+          "allowed_kinds": [
+            "event",
+            "relation"
+          ],
+          "evidence": [],
+          "rationale": "新人物/地点/组织/时间节点，本地资料不能判断真伪。",
+          "sensitive_terms": [
+            "第27章"
+          ],
+          "required_context": "第27章；泽恩/琥珀岛/风帆公会均为新名称"
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    },
+    {
+      "id": "wb020",
+      "group": "unrelated",
+      "primary_dimension": "完全无关",
+      "family_id": "unrelated_real_world",
+      "text": "苏州的园林以景观布局著称。",
+      "expected_overall": "不确定",
+      "claims": [
+        {
+          "input_quote": "苏州的园林以景观布局著称",
+          "expected_verdict": "不确定",
+          "allowed_kinds": [
+            "attribute",
+            "rule"
+          ],
+          "evidence": [],
+          "rationale": "即使模型知道现实常识，也没有本工具的世界观证据，不能判一致。",
+          "sensitive_terms": []
+        }
+      ],
+      "annotation_status": "draft_unreviewed",
+      "note": "运行前人工拟定，尚未经过独立作者复核；不是正式canon。"
+    }
+  ]
+}

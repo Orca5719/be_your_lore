@@ -1,0 +1,44 @@
+{
+  "pipeline": {
+    "claims_total": 34,
+    "claims_found": 22,
+    "verdict_correct": 22,
+    "kind_correct": 22,
+    "structures_total": 10,
+    "structures_found": 7,
+    "citations_total": 19,
+    "citations_invalid": 0,
+    "retrieval_total": 18,
+    "retrieval_hits": 13,
+    "citation_core_total": 18,
+    "citation_core_hits": 13,
+    "valid_previews": 18,
+    "complete_cases": 16
+  },
+  "judge": {
+    "correct": 31,
+    "total": 34,
+    "valid": 34,
+    "retrieval_hits": 18,
+    "retrieval_total": 18,
+    "citation_core_hits": 17,
+    "citations_invalid": 0
+  },
+  "valid_warm_latency": {
+    "count": 17,
+    "median": 5.805277200000091,
+    "p95": 10.27298554000008
+  },
+  "extraction_errors": {
+    "total": 10,
+    "invalid_time": 8,
+    "duplicate_fact": 2
+  },
+  "generation_throughput": {
+    "generated_tokens": 2149,
+    "seconds": 155.48655849999977,
+    "tokens_per_second": 13.82113039694041
+  },
+  "frozen_manifests_verified": true,
+  "fixture_versions_match": true
+}

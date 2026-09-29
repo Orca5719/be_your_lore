@@ -1,0 +1,90 @@
+{
+  "kind": "module_observation_not_frozen_benchmark",
+  "dataset_sha256": "876a47310bb12c936f51756a5366cc0b349ab1dd567416e8993b51e0c4564671",
+  "planned_cases": 12,
+  "source_sha256": {
+    "understanding.py": "82ed59cf18d597698140a8ca605b1cb386b0fd58d40dc5b60e34a337309b7670",
+    "llm.py": "58b2b847fe1ff1843e0d94e59912b70afabd4e91fc1bbe83eef3004f944e5d7a",
+    "prompts/understanding_v4.txt": "07ed60e8089cd830e4e66c2222f2910c73a7bf9de98e3ff7075f1ab236669ca2"
+  },
+  "cases": [
+    {
+      "id": "U01",
+      "status": "ok",
+      "events": 3,
+      "seconds": 7.362994799999797
+    },
+    {
+      "id": "U02",
+      "status": "partial",
+      "events": 2,
+      "seconds": 14.643959299999551
+    },
+    {
+      "id": "U03",
+      "status": "ok",
+      "events": 2,
+      "seconds": 5.519191299999875
+    },
+    {
+      "id": "U04",
+      "status": "ok",
+      "events": 2,
+      "seconds": 8.477854499999012
+    },
+    {
+      "id": "U05",
+      "status": "ok",
+      "events": 3,
+      "seconds": 9.456892599999264
+    },
+    {
+      "id": "U06",
+      "status": "partial",
+      "events": 0,
+      "seconds": 41.82485330000054
+    },
+    {
+      "id": "U07",
+      "status": "partial",
+      "events": 2,
+      "seconds": 6.813130399999864
+    },
+    {
+      "id": "U08",
+      "status": "ok",
+      "events": 3,
+      "seconds": 9.28457349999917
+    },
+    {
+      "id": "U09",
+      "status": "ok",
+      "events": 2,
+      "seconds": 7.66691389999869
+    },
+    {
+      "id": "U10",
+      "status": "ok",
+      "events": 2,
+      "seconds": 6.366125099999408
+    },
+    {
+      "id": "U11",
+      "status": "ok",
+      "events": 3,
+      "seconds": 8.807821800000966
+    },
+    {
+      "id": "U12",
+      "status": "partial",
+      "events": 20,
+      "seconds": 66.57302929999969
+    }
+  ],
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "device": "cuda",
+  "model_load_seconds": 17.952970300000743,
+  "snapshot_stable": true,
+  "status": "completed"
+}

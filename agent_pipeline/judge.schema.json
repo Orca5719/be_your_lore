@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Per-event judge model wire response",
+  "type": "object",
+  "required": [
+    "verdict",
+    "citations",
+    "reason",
+    "assessment"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "assessment": {
+      "type": "object",
+      "required": [
+        "same_subject",
+        "evidence_applicable",
+        "relation",
+        "assumptions"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "same_subject": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "evidence_applicable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "relation": {
+          "enum": [
+            "direct_support",
+            "direct_conflict",
+            "insufficient"
+          ]
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "verdict": {
+      "enum": [
+        "consistent",
+        "contradiction",
+        "uncertain"
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "citations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "evidence_id",
+          "quote"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "pattern": "^L[1-9][0-9]*$"
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "uncertainty_code": {
+      "enum": [
+        null,
+        "missing_rule",
+        "ambiguous_reference",
+        "unknown_conditions",
+        "partial_support",
+        "conflicting_evidence",
+        "insufficient"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "verdict": {
+            "enum": [
+              "consistent",
+              "contradiction"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "citations": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ]
+}

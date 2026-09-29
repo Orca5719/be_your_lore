@@ -1,0 +1,142 @@
+{
+  "schema_version": "agent-pipeline-v2.1-final-report-v1",
+  "status": "complete",
+  "review_provenance": "assistant-reviewed; not user-human-reviewed",
+  "sources": {
+    "benchmark_2_1A": "C:\\Users\\Xhang\\Desktop\\project\\worldcheck\\agent_pipeline_v2_1\\reports\\benchmark_2_1A_20260924T165708Z_1f93fa",
+    "benchmark_2_1B": "C:\\Users\\Xhang\\Desktop\\project\\worldcheck\\agent_pipeline_v2_1\\reports\\benchmark_2_1B_20260926T050730Z_91287e",
+    "story_quality": "C:\\Users\\Xhang\\Desktop\\project\\worldcheck\\agent_pipeline_v2_1\\reports\\story_diagnostic_2_1_20260926T060558Z_3993c5"
+  },
+  "judge_oracle": {
+    "v1": {
+      "accuracy": 0.6527777777777778,
+      "macro_f1": 0.522323483383964,
+      "contradiction_fp": 16,
+      "contradiction_fn": 5,
+      "parse_failures": 4,
+      "unsupported_inference": 6,
+      "total_judge_seconds": 340.3718646000052,
+      "peak_allocated_gib": 3.7035107612609863
+    },
+    "v2_1": {
+      "accuracy": 0.6944444444444444,
+      "macro_f1": 0.6845221659763768,
+      "contradiction_fp": 4,
+      "contradiction_fn": 11,
+      "parse_failures": 0,
+      "unsupported_inference": 1,
+      "total_judge_seconds": 407.1671741999962,
+      "peak_allocated_gib": 4.3622846603393555
+    }
+  },
+  "retrieval": {
+    "dense_off": {
+      "complete_recall_at_5": 0.6944444444444444,
+      "evidence_micro_recall_at_5": 0.6956521739130435,
+      "mrr_at_5": 0.6608796296296297
+    },
+    "bm25_off": {
+      "complete_recall_at_5": 0.8472222222222222,
+      "evidence_micro_recall_at_5": 0.8695652173913043,
+      "mrr_at_5": 0.7777777777777778
+    },
+    "hybrid_off": {
+      "complete_recall_at_5": 0.9027777777777778,
+      "evidence_micro_recall_at_5": 0.9239130434782609,
+      "mrr_at_5": 0.7722222222222221
+    },
+    "hybrid_on": {
+      "complete_recall_at_5": 0.8055555555555556,
+      "evidence_micro_recall_at_5": 0.8478260869565217,
+      "mrr_at_5": 0.7666666666666666
+    }
+  },
+  "story_24": {
+    "recall_extraction": {
+      "hits": 72,
+      "gold_total": 72,
+      "recall": 1.0
+    },
+    "recall_retrieval_at_k": {
+      "hits": 43,
+      "gold_total": 48,
+      "k": 5,
+      "recall": 0.8958333333333334
+    },
+    "accuracy_judge": {
+      "correct": 49,
+      "eligible": 67,
+      "accuracy": 0.7313432835820896,
+      "confusion": {
+        "consistent": {
+          "consistent": 20,
+          "uncertain": 1,
+          "contradiction": 1
+        },
+        "contradiction": {
+          "contradiction": 16,
+          "uncertain": 5
+        },
+        "uncertain": {
+          "uncertain": 13,
+          "contradiction": 8,
+          "consistent": 3
+        }
+      }
+    },
+    "end_to_end_conflict": {
+      "tp": 18,
+      "fp": 9,
+      "fn": 6,
+      "precision": 0.6666666666666666,
+      "recall": 0.75,
+      "f1": 0.7058823529411765
+    },
+    "extraction": {
+      "recall": {
+        "value": 1.0,
+        "hits": 72,
+        "gold_total": 72
+      },
+      "hallucination_rate": {
+        "value": 0.0,
+        "count": 0,
+        "total": 81
+      }
+    },
+    "retrieval": {
+      "recall_at_k": {
+        "value": 0.8958333333333334,
+        "k": 5,
+        "hits": 43,
+        "gold_total": 48
+      }
+    },
+    "judge": {
+      "pipeline": {
+        "accuracy": {
+          "value": 0.7313432835820896,
+          "correct": 49,
+          "eligible": 67
+        }
+      }
+    },
+    "detection": {
+      "conflict": {
+        "tp": 18,
+        "fp": 9,
+        "fn": 6,
+        "precision": 0.6666666666666666,
+        "recall": 0.75,
+        "f1": 0.7058823529411765
+      }
+    },
+    "scope": "24-story benchmark with assistant-reviewed gold-to-event and finding mappings."
+  },
+  "conclusions": [
+    "默认 retrieval 采用 hybrid RRF 且 metadata filter 关闭。",
+    "Judge v2.1 显著降低误报矛盾与无依据推断，但更保守，矛盾漏判增加。",
+    "24篇执行已达24/24 ok；剩余主要瓶颈是 Judge 三分类，不是管线结构失败。",
+    "Benchmark 2.1C 的50+故事扩容仍留待后续。"
+  ]
+}

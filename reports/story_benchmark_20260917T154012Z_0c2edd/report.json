@@ -1,0 +1,102 @@
+{
+  "name": "Story-Level Consistency Benchmark",
+  "run_id": "story_benchmark_20260917T154012Z_0c2edd",
+  "dataset_sha256": "619d34f54c4e4b432ddd37db9df82cc87cc553a3072272a1b9ccf9d1f301dce5",
+  "device_requested": "cuda",
+  "top_k": 5,
+  "warmup_count": 1,
+  "validation": {
+    "cases": 4,
+    "gold_facts": 5,
+    "index_chunks": 48,
+    "dataset_status": "annotation_draft_not_final_benchmark",
+    "groups": {
+      "zero_conflict": 3,
+      "one_conflict": 1
+    }
+  },
+  "source_sha256": {
+    "story_extraction.py": "9626482d0926cc117006451f48154ff94b29630724b264ba3755d904045af5c2",
+    "story_retrieval.py": "5e090a00f712f81d2eed465ca268d60efc90effec867e022e4a76567c770d085",
+    "story_judgement.py": "4f12f99bd594e4bc45a4457646180fee04bf1202f04936bbc035602da2fbcc5b",
+    "story_benchmark.py": "ff3faf6fbe21d4da78fdee32b2e97d4fd92131e45f32e9d23528f6dcf6b92db8",
+    "story_benchmark_metrics.py": "82276732799e3abce6979124d9bfd1c7cfe1c9a40d5026aed80b2c470334ae1d",
+    "encoder.py": "083ed44fd99a66bca960ec1f993d8f175c656553040ad93e008fc157685fc2a9",
+    "qwen_judge.py": "c04d43ae9627586381cc761a1b53d99d03f8072c08513da63ee2504a5f816b13",
+    "retrieval.py": "e154be8bc94f93db71b53c340144f8fa665852570ff3b4464c7c4b23f4eccedc",
+    "index_store.py": "ae6a21b4131f2e53a47f8c296a887f4f654e11ff360f778ab24f170b3555e240",
+    "model_metrics.py": "29c9a1c75b8d459ae83a18c0d8655753b629422b5f6d703ec8813a2180af7e3b",
+    "prompts/story_extraction_v2.txt": "ebad3c53a47cb2654f230af01f6a5054cf757e2d952d9102516c33b4bbca7f47",
+    "prompts/story_importance_v2.txt": "2efdf41d098af150952e0a4848864c5ff31765a6f82fffde1af300b1df38480a",
+    "prompts/story_consistency_v2.txt": "4ba7f6dcea1a943cd59834102687fd24f98c9581b4af1006bfdaaf0313ef591e"
+  },
+  "status": "completed",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "model_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "device": "cuda",
+  "model_load_seconds": 13.629101899998204,
+  "encoder_index_load_seconds": 0.29586619999463437,
+  "encoder_config": {
+    "model": "BAAI/bge-small-zh-v1.5",
+    "revision": "7999e1d3359715c523056ef9478215996d62a620",
+    "pooling": "cls",
+    "normalization": "l2",
+    "query_prompt": "为这个句子生成表示以用于检索相关文章：",
+    "dimension": 512,
+    "inference_dtype": "float32"
+  },
+  "index_config": {
+    "model": "BAAI/bge-small-zh-v1.5",
+    "revision": "7999e1d3359715c523056ef9478215996d62a620",
+    "pooling": "cls",
+    "normalization": "l2",
+    "query_prompt": "为这个句子生成表示以用于检索相关文章：",
+    "dimension": 512,
+    "inference_dtype": "float32",
+    "chunker": {
+      "version": 1,
+      "max_tokens": 512,
+      "overlap": "last_sentence_when_fits"
+    }
+  },
+  "model_footprint_bytes": 2594962688,
+  "model_cuda_allocated_bytes": 2667198976,
+  "environment": {
+    "python": "3.12.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.7.1+cu126",
+      "transformers": "4.57.6",
+      "numpy": "2.2.6",
+      "bitsandbytes": "0.50.2",
+      "huggingface_hub": "0.36.2"
+    },
+    "torch_cpu_threads": 8,
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "gpu_total_bytes": 8585216000
+  },
+  "saved_cases": 4,
+  "planned_cases": 4,
+  "raw_sha256": "2dc1b8396a0f2ad079327b34a796c757caa8160b1c34f7b65cc5c7ca252ff6c8",
+  "scoring_status": "pending_semantic_review",
+  "snapshot_stable": true,
+  "peak_allocated_bytes": 5266542080,
+  "peak_reserved_bytes": 7295991808,
+  "warmup_failed": 0,
+  "stage_summary": {
+    "case_status_counts": {
+      "ok": 2,
+      "error": 2
+    },
+    "extraction_status_counts": {
+      "ok": 2,
+      "error": 2
+    },
+    "retrieval_failed_facts": 0,
+    "judgement_failed_facts": 0,
+    "pending_candidates": 0,
+    "rejected_candidates": 0,
+    "retries": 0,
+    "normalized_replies": 1
+  }
+}

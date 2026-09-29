@@ -1,0 +1,985 @@
+{
+  "schema_version": "agent-pipeline-judge-v1",
+  "prompt_version": "judge-v2",
+  "stage": "judge",
+  "status": "ok",
+  "events": [
+    {
+      "actors": [
+        "雷"
+      ],
+      "event": "雷捂住右胸",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S1"
+      ],
+      "context_ids": [],
+      "mental_state": null,
+      "conditions": [],
+      "sources": [
+        {
+          "id": "S1",
+          "text": "雷捂住右胸，",
+          "start": 0,
+          "end": 6
+        }
+      ],
+      "contexts": [],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions"
+      ],
+      "id": "E1",
+      "review_required": true,
+      "review_reasons": [
+        "optional_fields_defaulted"
+      ]
+    },
+    {
+      "actors": [
+        "雷"
+      ],
+      "event": "雷感到寄宿在右胸中的亚巴顿开始躁动",
+      "explicit": true,
+      "modality": "observed",
+      "source_ids": [
+        "S2"
+      ],
+      "context_ids": [
+        "S1"
+      ],
+      "mental_state": null,
+      "conditions": [],
+      "sources": [
+        {
+          "id": "S2",
+          "text": "感到寄宿其中的亚巴顿开始躁动。",
+          "start": 6,
+          "end": 21
+        }
+      ],
+      "contexts": [
+        {
+          "id": "S1",
+          "text": "雷捂住右胸，",
+          "start": 0,
+          "end": 6
+        }
+      ],
+      "defaulted_fields": [
+        "mental_state",
+        "conditions"
+      ],
+      "id": "E2",
+      "review_required": true,
+      "review_reasons": [
+        "actor_resolution_proposed_by_model",
+        "optional_fields_defaulted"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "event_id": "E1",
+      "status": "support_only",
+      "event": {
+        "actors": [
+          "雷"
+        ],
+        "event": "雷捂住右胸",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S1"
+        ],
+        "context_ids": [],
+        "mental_state": null,
+        "conditions": [],
+        "sources": [
+          {
+            "id": "S1",
+            "text": "雷捂住右胸，",
+            "start": 0,
+            "end": 6
+          }
+        ],
+        "contexts": [],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions"
+        ],
+        "id": "E1",
+        "review_required": true,
+        "review_reasons": [
+          "optional_fields_defaulted"
+        ]
+      },
+      "required_by_event_ids": [
+        "E2"
+      ],
+      "citations": []
+    },
+    {
+      "event_id": "E2",
+      "event": {
+        "actors": [
+          "雷"
+        ],
+        "event": "雷感到寄宿在右胸中的亚巴顿开始躁动",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S2"
+        ],
+        "context_ids": [
+          "S1"
+        ],
+        "mental_state": null,
+        "conditions": [],
+        "sources": [
+          {
+            "id": "S2",
+            "text": "感到寄宿其中的亚巴顿开始躁动。",
+            "start": 6,
+            "end": 21
+          }
+        ],
+        "contexts": [
+          {
+            "id": "S1",
+            "text": "雷捂住右胸，",
+            "start": 0,
+            "end": 6
+          }
+        ],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions"
+        ],
+        "id": "E2",
+        "review_required": true,
+        "review_reasons": [
+          "actor_resolution_proposed_by_model",
+          "optional_fields_defaulted"
+        ]
+      },
+      "evidence": [
+        {
+          "id": "099d1bbdbc348eb3c332",
+          "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "file": "characters.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "生理结构"
+          ],
+          "start_offset": 41,
+          "end_offset": 70,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "token_count": 55,
+          "score": 0.6857678890228271
+        },
+        {
+          "id": "f355504eef1bbb05f59a",
+          "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+          "file": "characters.md",
+          "start_line": 16,
+          "end_line": 16,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "右胸异感"
+          ],
+          "start_offset": 133,
+          "end_offset": 172,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+          "token_count": 65,
+          "score": 0.6664828062057495
+        },
+        {
+          "id": "47ba19b8b9ece1f35cc9",
+          "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+          "file": "angels.md",
+          "start_line": 6,
+          "end_line": 6,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "亚巴顿",
+            "左侧宿主"
+          ],
+          "start_offset": 43,
+          "end_offset": 81,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+          "token_count": 66,
+          "score": 0.6641201972961426
+        },
+        {
+          "id": "a739b6548c630e2c4d40",
+          "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+          "file": "characters.md",
+          "start_line": 11,
+          "end_line": 11,
+          "heading_path": [
+            "人物设定（测试设定，不代表正式 canon）",
+            "雷",
+            "经历"
+          ],
+          "start_offset": 85,
+          "end_offset": 116,
+          "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+          "token_count": 55,
+          "score": 0.6556758284568787
+        },
+        {
+          "id": "252bda4cc47b93db0d7b",
+          "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+          "file": "angels.md",
+          "start_line": 21,
+          "end_line": 21,
+          "heading_path": [
+            "天使设定（测试设定，不代表正式 canon）",
+            "拉古艾尔",
+            "右侧宿主"
+          ],
+          "start_offset": 202,
+          "end_offset": 242,
+          "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+          "token_count": 69,
+          "score": 0.6197018623352051
+        }
+      ],
+      "citations": [],
+      "call": {
+        "status": "ok",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "ok",
+            "raw_output": "{\n  \"assessment\": {\n    \"same_subject\": null,\n    \"same_scope\": null,\n    \"relation\": \"insufficient\",\n    \"assumptions\": []\n  },\n  \"verdict\": \"uncertain\",\n  \"citations\": [],\n  \"reason\": \"设定明确指出亚巴顿寄宿在左侧心脏，且无法在右心脏施展力量（L3），而事件中雷感到‘寄宿在右胸中的亚巴顿’躁动，与设定矛盾，但未明确说明‘右胸’是否对应右心脏或是否存在亚巴顿寄宿右胸的可能。同时，L1指出左侧心脏寄宿亚巴顿，右侧寄宿拉古艾尔，因此亚巴顿不可能寄宿在右胸。事件中‘右胸’与‘亚巴顿’的结合缺乏直接支持，且与设定直接冲突，但未明确说明该事件是否发生或是否为误述，故无法判定为直接支持或矛盾，属于不确定。\"\n}",
+            "input_tokens": 1112,
+            "max_new_tokens": 768,
+            "timing": {
+              "seconds": 13.408371199999237,
+              "input_tokens": 1112,
+              "generated_tokens": 212,
+              "ttft_ms": 726.5944999962812,
+              "decode_seconds": 12.681188599999587,
+              "decode_tokens": 211,
+              "decode_tokens_per_second": 16.6388188564601
+            }
+          }
+        ]
+      },
+      "status": "ok",
+      "verdict": "uncertain",
+      "label": "不确定",
+      "reason": "设定明确指出亚巴顿寄宿在左侧心脏，且无法在右心脏施展力量（L3），而事件中雷感到‘寄宿在右胸中的亚巴顿’躁动，与设定矛盾，但未明确说明‘右胸’是否对应右心脏或是否存在亚巴顿寄宿右胸的可能。同时，L1指出左侧心脏寄宿亚巴顿，右侧寄宿拉古艾尔，因此亚巴顿不可能寄宿在右胸。事件中‘右胸’与‘亚巴顿’的结合缺乏直接支持，且与设定直接冲突，但未明确说明该事件是否发生或是否为误述，故无法判定为直接支持或矛盾，属于不确定。",
+      "origin": "model",
+      "assessment": {
+        "same_subject": null,
+        "same_scope": null,
+        "relation": "insufficient",
+        "assumptions": []
+      }
+    }
+  ],
+  "retrieval": {
+    "schema_version": "agent-pipeline-retrieval-v1",
+    "stage": "retrieval",
+    "status": "ok",
+    "filtering": {
+      "schema_version": "agent-pipeline-filtering-v1",
+      "prompt_version": "filtering-v5",
+      "stage": "filtering",
+      "status": "ok",
+      "failure_reasons": {
+        "upstream_status": "ok",
+        "pending_event_ids": [],
+        "rejected_count": 0,
+        "failed_window_ids": []
+      },
+      "events": [
+        {
+          "actors": [
+            "雷"
+          ],
+          "event": "雷捂住右胸",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S1"
+          ],
+          "context_ids": [],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S1",
+              "text": "雷捂住右胸，",
+              "start": 0,
+              "end": 6
+            }
+          ],
+          "contexts": [],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E1",
+          "review_required": true,
+          "review_reasons": [
+            "optional_fields_defaulted"
+          ]
+        },
+        {
+          "actors": [
+            "雷"
+          ],
+          "event": "雷感到寄宿在右胸中的亚巴顿开始躁动",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S2"
+          ],
+          "context_ids": [
+            "S1"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S2",
+              "text": "感到寄宿其中的亚巴顿开始躁动。",
+              "start": 6,
+              "end": 21
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S1",
+              "text": "雷捂住右胸，",
+              "start": 0,
+              "end": 6
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E2",
+          "review_required": true,
+          "review_reasons": [
+            "actor_resolution_proposed_by_model",
+            "optional_fields_defaulted"
+          ]
+        }
+      ],
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "keep",
+          "reason": "保全保留事件的引用依据；不证明因果",
+          "reason_code": "consequence_support",
+          "model_decision": "ignore",
+          "model_reason": "普通日常或背景，无特殊影响",
+          "model_reason_code": "routine",
+          "support_only": true,
+          "origin": "program_dependency_guard",
+          "required_by_event_ids": [
+            "E2"
+          ]
+        },
+        {
+          "event_id": "E2",
+          "decision": "keep",
+          "reason": "特殊机制或异常状态，需核对设定约束",
+          "reason_code": "mechanism"
+        }
+      ],
+      "selected_events": [
+        {
+          "actors": [
+            "雷"
+          ],
+          "event": "雷捂住右胸",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S1"
+          ],
+          "context_ids": [],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S1",
+              "text": "雷捂住右胸，",
+              "start": 0,
+              "end": 6
+            }
+          ],
+          "contexts": [],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E1",
+          "review_required": true,
+          "review_reasons": [
+            "optional_fields_defaulted"
+          ]
+        },
+        {
+          "actors": [
+            "雷"
+          ],
+          "event": "雷感到寄宿在右胸中的亚巴顿开始躁动",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S2"
+          ],
+          "context_ids": [
+            "S1"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S2",
+              "text": "感到寄宿其中的亚巴顿开始躁动。",
+              "start": 6,
+              "end": 21
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S1",
+              "text": "雷捂住右胸，",
+              "start": 0,
+              "end": 6
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E2",
+          "review_required": true,
+          "review_reasons": [
+            "actor_resolution_proposed_by_model",
+            "optional_fields_defaulted"
+          ]
+        }
+      ],
+      "ignored_events": [],
+      "pending_events": [],
+      "understanding": {
+        "schema_version": "agent-pipeline-understanding-v1",
+        "prompt_version": "understanding-v6",
+        "stage": "understanding",
+        "status": "ok",
+        "text": "雷捂住右胸，感到寄宿其中的亚巴顿开始躁动。",
+        "events": [
+          {
+            "actors": [
+              "雷"
+            ],
+            "event": "雷捂住右胸",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "雷捂住右胸，",
+                "start": 0,
+                "end": 6
+              }
+            ],
+            "contexts": [],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E1",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          },
+          {
+            "actors": [
+              "雷"
+            ],
+            "event": "雷感到寄宿在右胸中的亚巴顿开始躁动",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S2"
+            ],
+            "context_ids": [
+              "S1"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "sources": [
+              {
+                "id": "S2",
+                "text": "感到寄宿其中的亚巴顿开始躁动。",
+                "start": 6,
+                "end": 21
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S1",
+                "text": "雷捂住右胸，",
+                "start": 0,
+                "end": 6
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions"
+            ],
+            "id": "E2",
+            "review_required": true,
+            "review_reasons": [
+              "actor_resolution_proposed_by_model",
+              "optional_fields_defaulted"
+            ]
+          }
+        ],
+        "rejected": [],
+        "calls": [
+          {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"events\":[\n  {\n    \"actors\":[\"雷\"],\n    \"event\":\"雷捂住右胸\",\n    \"explicit\":true,\n    \"modality\":\"observed\",\n    \"source_ids\":[\"S1\"],\n    \"context_ids\":[]\n  },\n  {\n    \"actors\":[\"雷\"],\n    \"event\":\"雷感到寄宿在右胸中的亚巴顿开始躁动\",\n    \"explicit\":true,\n    \"modality\":\"observed\",\n    \"source_ids\":[\"S2\"],\n    \"context_ids\":[\"S1\"]\n  }\n]}",
+                "input_tokens": 747,
+                "max_new_tokens": 1536,
+                "timing": {
+                  "seconds": 8.377248799995868,
+                  "input_tokens": 747,
+                  "generated_tokens": 113,
+                  "ttft_ms": 1403.2413000022643,
+                  "decode_seconds": 6.973541799998202,
+                  "decode_tokens": 112,
+                  "decode_tokens_per_second": 16.060705336279604
+                }
+              }
+            ],
+            "window_id": 1,
+            "purpose": "initial_understanding",
+            "target_ids": [
+              "S1",
+              "S2"
+            ],
+            "context_ids": []
+          }
+        ],
+        "duplicate_candidates": 0,
+        "unrecovered_failed_source_ids": [],
+        "failure_reasons": {
+          "unresolved_candidates": [],
+          "missing_source_ids": [],
+          "failed_source_ids": []
+        },
+        "processing_complete": true,
+        "semantic_verification": "not_verified",
+        "review_required": true,
+        "request_seconds": 8.406446900000446,
+        "model_loaded_this_request": false,
+        "coverage": {
+          "source_spans": {
+            "S1": {
+              "text": "雷捂住右胸，",
+              "start": 0,
+              "end": 6
+            },
+            "S2": {
+              "text": "感到寄宿其中的亚巴顿开始躁动。",
+              "start": 6,
+              "end": 21
+            }
+          },
+          "covered_source_ids": [
+            "S1",
+            "S2"
+          ],
+          "primary_source_ids": [
+            "S1",
+            "S2"
+          ],
+          "context_only_source_ids": [],
+          "missing_source_ids": [],
+          "note": "包括事件/条件/主体上下文引用；被引用不保证全部语义提取正确，仅作上下文的片段仍需检查是否漏事件"
+        },
+        "device": "cuda",
+        "model_load_seconds": 17.904819200004567,
+        "notice": "仅语义理解：未筛选重要性、未检索、未判断、未保存设定"
+      },
+      "upstream_status": "ok",
+      "calls": [
+        {
+          "status": "ok",
+          "attempts": [
+            {
+              "attempt": 1,
+              "status": "ok",
+              "raw_output": "{\"decisions\":[{\"event_id\":\"E1\",\"decision\":\"ignore\",\"reason_code\":\"routine\"},{\"event_id\":\"E2\",\"decision\":\"keep\",\"reason_code\":\"mechanism\"}]}",
+              "input_tokens": 700,
+              "max_new_tokens": 1024,
+              "timing": {
+                "seconds": 2.7134590999994543,
+                "input_tokens": 700,
+                "generated_tokens": 38,
+                "ttft_ms": 401.36209999764105,
+                "decode_seconds": 2.3116537000023527,
+                "decode_tokens": 37,
+                "decode_tokens_per_second": 16.005857624765483
+              }
+            }
+          ],
+          "window_id": 1,
+          "target_ids": [
+            "E1",
+            "E2"
+          ]
+        }
+      ],
+      "rejected": [],
+      "filtering_complete": true,
+      "processing_complete": true,
+      "semantic_verification": "not_verified",
+      "request_seconds": 2.7177581999931135,
+      "model_loaded_this_request": true,
+      "device": "cuda",
+      "model_load_seconds": 17.904819200004567,
+      "notice": "仅筛选建议；事件原样保留，待复核不等于忽略；未检索、未判断矛盾、未保存设定。"
+    },
+    "events": [
+      {
+        "actors": [
+          "雷"
+        ],
+        "event": "雷捂住右胸",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S1"
+        ],
+        "context_ids": [],
+        "mental_state": null,
+        "conditions": [],
+        "sources": [
+          {
+            "id": "S1",
+            "text": "雷捂住右胸，",
+            "start": 0,
+            "end": 6
+          }
+        ],
+        "contexts": [],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions"
+        ],
+        "id": "E1",
+        "review_required": true,
+        "review_reasons": [
+          "optional_fields_defaulted"
+        ]
+      },
+      {
+        "actors": [
+          "雷"
+        ],
+        "event": "雷感到寄宿在右胸中的亚巴顿开始躁动",
+        "explicit": true,
+        "modality": "observed",
+        "source_ids": [
+          "S2"
+        ],
+        "context_ids": [
+          "S1"
+        ],
+        "mental_state": null,
+        "conditions": [],
+        "sources": [
+          {
+            "id": "S2",
+            "text": "感到寄宿其中的亚巴顿开始躁动。",
+            "start": 6,
+            "end": 21
+          }
+        ],
+        "contexts": [
+          {
+            "id": "S1",
+            "text": "雷捂住右胸，",
+            "start": 0,
+            "end": 6
+          }
+        ],
+        "defaulted_fields": [
+          "mental_state",
+          "conditions"
+        ],
+        "id": "E2",
+        "review_required": true,
+        "review_reasons": [
+          "actor_resolution_proposed_by_model",
+          "optional_fields_defaulted"
+        ]
+      }
+    ],
+    "items": [
+      {
+        "event_id": "E1",
+        "event": {
+          "actors": [
+            "雷"
+          ],
+          "event": "雷捂住右胸",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S1"
+          ],
+          "context_ids": [],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S1",
+              "text": "雷捂住右胸，",
+              "start": 0,
+              "end": 6
+            }
+          ],
+          "contexts": [],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E1",
+          "review_required": true,
+          "review_reasons": [
+            "optional_fields_defaulted"
+          ]
+        },
+        "status": "support_only",
+        "required_by_event_ids": [
+          "E2"
+        ],
+        "evidence": [],
+        "query": null,
+        "retrieval_seconds": 0
+      },
+      {
+        "event_id": "E2",
+        "event": {
+          "actors": [
+            "雷"
+          ],
+          "event": "雷感到寄宿在右胸中的亚巴顿开始躁动",
+          "explicit": true,
+          "modality": "observed",
+          "source_ids": [
+            "S2"
+          ],
+          "context_ids": [
+            "S1"
+          ],
+          "mental_state": null,
+          "conditions": [],
+          "sources": [
+            {
+              "id": "S2",
+              "text": "感到寄宿其中的亚巴顿开始躁动。",
+              "start": 6,
+              "end": 21
+            }
+          ],
+          "contexts": [
+            {
+              "id": "S1",
+              "text": "雷捂住右胸，",
+              "start": 0,
+              "end": 6
+            }
+          ],
+          "defaulted_fields": [
+            "mental_state",
+            "conditions"
+          ],
+          "id": "E2",
+          "review_required": true,
+          "review_reasons": [
+            "actor_resolution_proposed_by_model",
+            "optional_fields_defaulted"
+          ]
+        },
+        "query": "主体：雷\n叙述性质：observed\n事件：雷感到寄宿在右胸中的亚巴顿开始躁动\n局部原文：雷捂住右胸，感到寄宿其中的亚巴顿开始躁动。",
+        "evidence": [
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.6857678890228271
+          },
+          {
+            "id": "f355504eef1bbb05f59a",
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "file": "characters.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "右胸异感"
+            ],
+            "start_offset": 133,
+            "end_offset": 172,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "token_count": 65,
+            "score": 0.6664828062057495
+          },
+          {
+            "id": "47ba19b8b9ece1f35cc9",
+            "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+            "file": "angels.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "亚巴顿",
+              "左侧宿主"
+            ],
+            "start_offset": 43,
+            "end_offset": 81,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+            "token_count": 66,
+            "score": 0.6641201972961426
+          },
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.6556758284568787
+          },
+          {
+            "id": "252bda4cc47b93db0d7b",
+            "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "file": "angels.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "右侧宿主"
+            ],
+            "start_offset": 202,
+            "end_offset": 242,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "token_count": 69,
+            "score": 0.6197018623352051
+          }
+        ],
+        "cache_hit": false,
+        "status": "ok",
+        "retrieval_seconds": 0.10587929999746848
+      }
+    ],
+    "top_k": 5,
+    "pending_event_ids": [],
+    "ignored_event_ids": [],
+    "upstream_status": "ok",
+    "retrieval_complete": true,
+    "processing_complete": true,
+    "semantic_verification": "not_verified",
+    "failure_reasons": {
+      "upstream_status": "ok",
+      "failed_event_ids": [],
+      "load_error": null
+    },
+    "encoder_loaded_this_request": true,
+    "index": {
+      "config": {
+        "model": "BAAI/bge-small-zh-v1.5",
+        "revision": "7999e1d3359715c523056ef9478215996d62a620",
+        "pooling": "cls",
+        "normalization": "l2",
+        "query_prompt": "为这个句子生成表示以用于检索相关文章：",
+        "dimension": 512,
+        "inference_dtype": "float32",
+        "chunker": {
+          "version": 1,
+          "max_tokens": 512,
+          "overlap": "last_sentence_when_fits"
+        }
+      },
+      "sources": {
+        "angels.md": "3a74db800a715d8b392db37ccc38026b0e71219fffa684d8e2d429314ef9b7e2",
+        "characters.md": "e5741e3a36fe3ef0a286a7c2f1f85089b9908cc99869563dd5d040348d40d3e8",
+        "history.md": "4f0105823cc8d513a4d32cfc094736458db594351000de074acd313cee06d601",
+        "technology.md": "b88690cae568b05032d2c078646bfea50ff304a291b7fbadf0af17eeb4c6cfae"
+      },
+      "lore_directory": "C:\\Users\\Xhang\\Desktop\\project\\worldcheck\\lore"
+    },
+    "device": "cuda",
+    "request_seconds": 0.35351880000234814,
+    "notice": "仅检索相关设定，未判断矛盾、未保存。相似度表示相对相关性，不是事实正确率或矛盾置信度；无关事件也可能返回片段。"
+  },
+  "pending_event_ids": [],
+  "ignored_event_ids": [],
+  "upstream_status": "ok",
+  "failure_reasons": {
+    "upstream_status": "ok",
+    "failed_event_ids": [],
+    "upstream_stages": {}
+  },
+  "judge_complete": true,
+  "processing_complete": true,
+  "semantic_verification": "not_verified",
+  "model_loaded_this_request": false,
+  "device": "cuda",
+  "model_load_seconds": 17.904819200004567,
+  "request_seconds": 13.413943999999901,
+  "notice": "逐事件一致性建议，未汇总整段、未保存设定。有效引用不保证判断正确；未提取/待复核内容不代表无矛盾。"
+}

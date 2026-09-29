@@ -1,0 +1,261 @@
+{
+  "kind": "assistant_observation_not_formal_benchmark",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "device": "cuda",
+  "source_sha256": {
+    "understanding.py": "5b7a6586484f6fe2d7d24c5a968c489b2179830a847f0dc31e7c3c7b409b9204",
+    "filtering.py": "7df01dfca10bf294bd45615dbe22cebf433796bdedaef9e80bd4c71660ad354a",
+    "llm.py": "58b2b847fe1ff1843e0d94e59912b70afabd4e91fc1bbe83eef3004f944e5d7a",
+    "prompts/understanding_v5.txt": "23a4dfe2632ec38df11fc606fd33bd83e65ab96a8087077d478ab8d5f94442f8",
+    "prompts/filtering_v5.txt": "ed2e12d8139837b899b391782e158e495c23123abd7c1dc927372e95819e1d84"
+  },
+  "model_load_seconds": 25.811339800000496,
+  "cases": [
+    {
+      "id": "R01",
+      "status": "ok",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "ignore",
+          "reason": "普通日常或背景，无特殊影响",
+          "reason_code": "routine"
+        },
+        {
+          "event_id": "E2",
+          "decision": "keep",
+          "reason": "重要后果或相关事件所需核对依据",
+          "reason_code": "consequence_support"
+        },
+        {
+          "event_id": "E3",
+          "decision": "keep",
+          "reason": "特殊机制或异常状态，需核对设定约束",
+          "reason_code": "mechanism"
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "ignore",
+          "reason": "普通日常或背景，无特殊影响",
+          "reason_code": "routine"
+        },
+        {
+          "event_id": "E2",
+          "decision": "review",
+          "reason": "上游主体/推断依据待复核，暂不自动忽略",
+          "reason_code": "routine",
+          "model_decision": "ignore",
+          "model_reason": "普通日常或背景，无特殊影响",
+          "origin": "program_guard"
+        },
+        {
+          "event_id": "E3",
+          "decision": "ignore",
+          "reason": "普通日常或背景，无特殊影响",
+          "reason_code": "routine"
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "keep",
+          "reason": "特殊机制或异常状态，需核对设定约束",
+          "reason_code": "mechanism"
+        },
+        {
+          "event_id": "E2",
+          "decision": "keep",
+          "reason": "涉及重要状态、时间或空间约束",
+          "reason_code": "state_time_space"
+        },
+        {
+          "event_id": "E3",
+          "decision": "keep",
+          "reason": "重要后果或相关事件所需核对依据",
+          "reason_code": "consequence_support"
+        },
+        {
+          "event_id": "E4",
+          "decision": "keep",
+          "reason": "涉及身份、人物知识或关系变化",
+          "reason_code": "knowledge_relation"
+        }
+      ]
+    },
+    {
+      "id": "F01",
+      "status": "ok",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "ignore",
+          "reason": "普通日常或背景，无特殊影响",
+          "reason_code": "routine"
+        },
+        {
+          "event_id": "E2",
+          "decision": "ignore",
+          "reason": "普通日常或背景，无特殊影响",
+          "reason_code": "routine"
+        },
+        {
+          "event_id": "E3",
+          "decision": "ignore",
+          "reason": "普通日常或背景，无特殊影响",
+          "reason_code": "routine"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "review",
+          "reason": "缺少有效且唯一的筛选决定",
+          "origin": "program_fallback"
+        },
+        {
+          "event_id": "E2",
+          "decision": "review",
+          "reason": "缺少有效且唯一的筛选决定",
+          "origin": "program_fallback"
+        },
+        {
+          "event_id": "E3",
+          "decision": "review",
+          "reason": "缺少有效且唯一的筛选决定",
+          "origin": "program_fallback"
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "status": "ok",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "keep",
+          "reason": "涉及身份、人物知识或关系变化",
+          "reason_code": "knowledge_relation"
+        },
+        {
+          "event_id": "E2",
+          "decision": "keep",
+          "reason": "涉及身份、人物知识或关系变化",
+          "reason_code": "knowledge_relation"
+        },
+        {
+          "event_id": "E3",
+          "decision": "keep",
+          "reason": "涉及重要状态、时间或空间约束",
+          "reason_code": "state_time_space"
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "status": "ok",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "keep",
+          "reason": "特殊机制或异常状态，需核对设定约束",
+          "reason_code": "mechanism"
+        },
+        {
+          "event_id": "E2",
+          "decision": "keep",
+          "reason": "涉及重要状态、时间或空间约束",
+          "reason_code": "state_time_space"
+        },
+        {
+          "event_id": "E3",
+          "decision": "keep",
+          "reason": "特殊机制或异常状态，需核对设定约束",
+          "reason_code": "mechanism"
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "review",
+          "reason": "缺少有效且唯一的筛选决定",
+          "origin": "program_fallback"
+        },
+        {
+          "event_id": "E2",
+          "decision": "review",
+          "reason": "缺少有效且唯一的筛选决定",
+          "origin": "program_fallback"
+        },
+        {
+          "event_id": "E3",
+          "decision": "review",
+          "reason": "缺少有效且唯一的筛选决定",
+          "origin": "program_fallback"
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "review",
+          "reason": "缺少有效且唯一的筛选决定",
+          "origin": "program_fallback"
+        },
+        {
+          "event_id": "E2",
+          "decision": "review",
+          "reason": "缺少有效且唯一的筛选决定",
+          "origin": "program_fallback"
+        }
+      ]
+    },
+    {
+      "id": "F07",
+      "status": "partial",
+      "decisions": [
+        {
+          "event_id": "E1",
+          "decision": "ignore",
+          "reason": "普通日常或背景，无特殊影响",
+          "reason_code": "routine"
+        },
+        {
+          "event_id": "E2",
+          "decision": "review",
+          "reason": "主体、依据或重要性待复核",
+          "reason_code": "unclear"
+        },
+        {
+          "event_id": "E3",
+          "decision": "keep",
+          "reason": "涉及身份、人物知识或关系变化",
+          "reason_code": "knowledge_relation"
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "snapshot_stable": true
+}

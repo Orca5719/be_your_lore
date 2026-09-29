@@ -1,0 +1,21 @@
+{
+  "schema_version": "agent-pipeline-v2.1-story-diagnostic-v1",
+  "status": "pending_human_review",
+  "execution_complete": true,
+  "case_count": 24,
+  "case_status_counts": {
+    "ok": 24
+  },
+  "method": "hybrid",
+  "metadata_filter": false,
+  "top_k": 5,
+  "judge_batch_size": 8,
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "device": "cuda",
+  "model_load_seconds": 15.761139900000671,
+  "encoder_index_load_seconds": 0.5390248999992764,
+  "total_story_seconds": 1703.1146481999976,
+  "reused_case_count": 19,
+  "rerun_case_count": 5
+}

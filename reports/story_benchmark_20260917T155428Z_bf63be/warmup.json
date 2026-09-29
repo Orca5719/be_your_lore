@@ -1,0 +1,60 @@
+[
+  {
+    "status": "error",
+    "extraction": {
+      "status": "error",
+      "facts": [],
+      "rejected": [],
+      "duplicates": [],
+      "error": "提取回复包含额外内容或多个JSON对象",
+      "story": "雷感觉左胸里的亚巴顿开始躁动。",
+      "raw_output": "{\"facts\":[{\"subject\":\"雷\",\"predicate\":\"左胸里的亚巴顿开始躁动\",\"type\":\"character_attribute\",\"source_ids\":[\"S1\"]}]}\"",
+      "prompt_version": "story-extraction-v2",
+      "transport_version": "compact-spans-v1",
+      "generation_budget": {
+        "input_tokens": 1588,
+        "max_new_tokens": 1536,
+        "total_limit": 4096
+      },
+      "format_normalizations": [],
+      "timing": {
+        "seconds": 4.378593000001274,
+        "calls": [
+          {
+            "stage": "candidate_extraction",
+            "seconds": 4.378593000001274,
+            "input_tokens": 1588,
+            "generated_tokens": 33,
+            "ttft_ms": 2224.120099999709,
+            "decode_seconds": 2.153508800001873,
+            "decode_tokens": 32,
+            "decode_tokens_per_second": 14.859470274731251
+          }
+        ]
+      },
+      "importance_raw_output": "",
+      "importance_prompt_version": "story-importance-v2",
+      "device": "cuda",
+      "notice": "只筛选事实建议；未检索、未判断矛盾、未保存。原文引用有效不保证事实理解正确。"
+    },
+    "items": [],
+    "notice": "本地逐事实一致性建议，未保存。判断可能出错；检索相似度不是事实正确率或矛盾置信度。",
+    "prompt_version": "story-consistency-v2",
+    "judgement_calls": [],
+    "summary": {
+      "verdict": "不确定",
+      "counts": {
+        "一致": 0,
+        "矛盾": 0,
+        "不确定": 0
+      },
+      "errors": 0,
+      "checked_facts": 0,
+      "complete": false,
+      "display": "检查未完成，不能给出完整结论",
+      "scope": "仅已提取并检索的事实；不证明整段故事无矛盾。"
+    },
+    "pipeline_seconds": 4.433994699997129,
+    "model_load_seconds": 13.326129399996717
+  }
+]

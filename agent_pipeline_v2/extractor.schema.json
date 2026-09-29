@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Pipeline v2 extraction report",
+  "type": "object",
+  "required": ["schema_version", "stage", "status", "text", "spans", "events", "ignored_spans", "non_event_span_ids", "rejected"]
+}

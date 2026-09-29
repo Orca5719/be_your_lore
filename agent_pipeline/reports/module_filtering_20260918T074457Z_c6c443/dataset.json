@@ -1,0 +1,688 @@
+{
+  "kind": "assistant_observation_not_human_gold",
+  "cases": [
+    {
+      "id": "F01",
+      "checks": "普通日常和气氛忽略",
+      "understanding": {
+        "stage": "understanding",
+        "status": "ok",
+        "events": [
+          {
+            "id": "E1",
+            "actors": [
+              "雷"
+            ],
+            "event": "喝了一口普通水",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "喝了一口普通水",
+                "start": 0,
+                "end": 7
+              }
+            ]
+          },
+          {
+            "id": "E2",
+            "actors": [
+              "雷"
+            ],
+            "event": "坐下并系好鞋带",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S2"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S2",
+                "text": "坐下并系好鞋带",
+                "start": 0,
+                "end": 7
+              }
+            ]
+          },
+          {
+            "id": "E3",
+            "actors": [
+              "窗帘"
+            ],
+            "event": "随风摆动",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S3"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S3",
+                "text": "随风摆动",
+                "start": 0,
+                "end": 4
+              }
+            ]
+          }
+        ],
+        "semantic_verification": "not_verified",
+        "input_origin": "assistant_authored_semantic_fixture_not_model_extraction"
+      }
+    },
+    {
+      "id": "F02",
+      "checks": "喝水因毒发关联保留，特殊机制保留",
+      "understanding": {
+        "stage": "understanding",
+        "status": "ok",
+        "events": [
+          {
+            "id": "E1",
+            "actors": [
+              "雷"
+            ],
+            "event": "喝下杯里的水",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "喝下杯里的水",
+                "start": 0,
+                "end": 6
+              }
+            ]
+          },
+          {
+            "id": "E2",
+            "actors": [
+              "雷"
+            ],
+            "event": "喝水后毒发倒地",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S2"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S2",
+                "text": "喝水后毒发倒地",
+                "start": 0,
+                "end": 7
+              }
+            ]
+          },
+          {
+            "id": "E3",
+            "actors": [
+              "雷"
+            ],
+            "event": "左心脏寄宿亚巴顿",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S3"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S3",
+                "text": "左心脏寄宿亚巴顿",
+                "start": 0,
+                "end": 8
+              }
+            ]
+          }
+        ],
+        "semantic_verification": "not_verified",
+        "input_origin": "assistant_authored_semantic_fixture_not_model_extraction"
+      }
+    },
+    {
+      "id": "F03",
+      "checks": "知情秘密及关系变化保留",
+      "understanding": {
+        "stage": "understanding",
+        "status": "ok",
+        "events": [
+          {
+            "id": "E1",
+            "actors": [
+              "雷的父亲"
+            ],
+            "event": "不知道拉古艾尔寄宿在雷体内",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "不知道拉古艾尔寄宿在雷体内",
+                "start": 0,
+                "end": 13
+              }
+            ]
+          },
+          {
+            "id": "E2",
+            "actors": [
+              "雷"
+            ],
+            "event": "得知德尔塔隐瞒了大地震真相",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S2"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S2",
+                "text": "得知德尔塔隐瞒了大地震真相",
+                "start": 0,
+                "end": 13
+              }
+            ]
+          },
+          {
+            "id": "E3",
+            "actors": [
+              "雷",
+              "德尔塔"
+            ],
+            "event": "结束盟友关系",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S3"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S3",
+                "text": "结束盟友关系",
+                "start": 0,
+                "end": 6
+              }
+            ]
+          }
+        ],
+        "semantic_verification": "not_verified",
+        "input_origin": "assistant_authored_semantic_fixture_not_model_extraction"
+      }
+    },
+    {
+      "id": "F04",
+      "checks": "地点限制、计划、时间和条件规则保留",
+      "understanding": {
+        "stage": "understanding",
+        "status": "ok",
+        "events": [
+          {
+            "id": "E1",
+            "actors": [
+              "月城"
+            ],
+            "event": "计划明天进入禁止人类进入的地下实验室",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "plan",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "计划明天进入禁止人类进入的地下实验室",
+                "start": 0,
+                "end": 18
+              }
+            ]
+          },
+          {
+            "id": "E2",
+            "actors": [
+              "通讯器"
+            ],
+            "event": "在大地震前已经损坏",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S2"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S2",
+                "text": "在大地震前已经损坏",
+                "start": 0,
+                "end": 9
+              }
+            ]
+          },
+          {
+            "id": "E3",
+            "actors": [
+              "拉古艾尔"
+            ],
+            "event": "只有治疗时才能令雷的右胸发热",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "conditional",
+            "conditions": [],
+            "source_ids": [
+              "S3"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S3",
+                "text": "只有治疗时才能令雷的右胸发热",
+                "start": 0,
+                "end": 14
+              }
+            ]
+          }
+        ],
+        "semantic_verification": "not_verified",
+        "input_origin": "assistant_authored_semantic_fixture_not_model_extraction"
+      }
+    },
+    {
+      "id": "F05",
+      "checks": "关键物品声称/验证及规则相关梦境保留性质",
+      "understanding": {
+        "stage": "understanding",
+        "status": "ok",
+        "events": [
+          {
+            "id": "E1",
+            "actors": [
+              "德尔塔"
+            ],
+            "event": "声称通讯器已经修好",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "speech",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "声称通讯器已经修好",
+                "start": 0,
+                "end": 9
+              }
+            ]
+          },
+          {
+            "id": "E2",
+            "actors": [
+              "雷"
+            ],
+            "event": "没有检查通讯器",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S2"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S2",
+                "text": "没有检查通讯器",
+                "start": 0,
+                "end": 7
+              }
+            ]
+          },
+          {
+            "id": "E3",
+            "actors": [
+              "雷"
+            ],
+            "event": "梦到亚巴顿离开了心脏",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "dream",
+            "conditions": [],
+            "source_ids": [
+              "S3"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S3",
+                "text": "梦到亚巴顿离开了心脏",
+                "start": 0,
+                "end": 10
+              }
+            ]
+          }
+        ],
+        "semantic_verification": "not_verified",
+        "input_origin": "assistant_authored_semantic_fixture_not_model_extraction"
+      }
+    },
+    {
+      "id": "F06",
+      "checks": "指代不明及推断待复核，不能静默忽略",
+      "understanding": {
+        "stage": "understanding",
+        "status": "ok",
+        "events": [
+          {
+            "id": "E1",
+            "actors": [
+              "他"
+            ],
+            "event": "握着杯子",
+            "mental_state": null,
+            "explicit": true,
+            "modality": "observed",
+            "conditions": [],
+            "source_ids": [
+              "S1"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "握着杯子",
+                "start": 0,
+                "end": 4
+              }
+            ],
+            "review_required": true,
+            "review_reasons": [
+              "unresolved_actor"
+            ]
+          },
+          {
+            "id": "E2",
+            "actors": [
+              "雷"
+            ],
+            "event": "可能获得控制时间的能力",
+            "mental_state": null,
+            "explicit": false,
+            "modality": "inferred",
+            "conditions": [],
+            "source_ids": [
+              "S2"
+            ],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S2",
+                "text": "可能获得控制时间的能力",
+                "start": 0,
+                "end": 11
+              }
+            ]
+          }
+        ],
+        "semantic_verification": "not_verified",
+        "input_origin": "assistant_authored_semantic_fixture_not_model_extraction"
+      }
+    },
+    {
+      "id": "F07",
+      "checks": "真实第一模块输出接入：普通喝水应忽略，名字熟悉/认知事件保留；不掩盖重复和引用问题",
+      "understanding": {
+        "schema_version": "agent-pipeline-understanding-v1",
+        "prompt_version": "understanding-v4",
+        "stage": "understanding",
+        "status": "ok",
+        "text": "雷喝了口水，看到德尔塔的名字时，他感到模糊的熟悉。",
+        "events": [
+          {
+            "actors": [
+              "雷"
+            ],
+            "event": "雷喝了口水",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S1"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "context_ids": [],
+            "sources": [
+              {
+                "id": "S1",
+                "text": "雷喝了口水，",
+                "start": 0,
+                "end": 6
+              }
+            ],
+            "contexts": [],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions",
+              "context_ids"
+            ],
+            "id": "E1",
+            "review_required": true,
+            "review_reasons": [
+              "optional_fields_defaulted"
+            ]
+          },
+          {
+            "actors": [
+              "雷"
+            ],
+            "event": "雷看到德尔塔的名字",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S2"
+            ],
+            "mental_state": "模糊的熟悉",
+            "conditions": [],
+            "context_ids": [
+              "S1"
+            ],
+            "sources": [
+              {
+                "id": "S2",
+                "text": "看到德尔塔的名字时，",
+                "start": 6,
+                "end": 16
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S1",
+                "text": "雷喝了口水，",
+                "start": 0,
+                "end": 6
+              }
+            ],
+            "defaulted_fields": [
+              "conditions",
+              "context_ids"
+            ],
+            "reference_repairs": [
+              "unique_prior_name_anchor_added"
+            ],
+            "original_context_ids": [],
+            "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+            "id": "E2",
+            "review_required": true,
+            "review_reasons": [
+              "actor_resolution_proposed_by_model",
+              "optional_fields_defaulted"
+            ]
+          },
+          {
+            "actors": [
+              "雷"
+            ],
+            "event": "雷感到模糊的熟悉",
+            "explicit": true,
+            "modality": "observed",
+            "source_ids": [
+              "S3"
+            ],
+            "mental_state": null,
+            "conditions": [],
+            "context_ids": [
+              "S1"
+            ],
+            "sources": [
+              {
+                "id": "S3",
+                "text": "他感到模糊的熟悉。",
+                "start": 16,
+                "end": 25
+              }
+            ],
+            "contexts": [
+              {
+                "id": "S1",
+                "text": "雷喝了口水，",
+                "start": 0,
+                "end": 6
+              }
+            ],
+            "defaulted_fields": [
+              "mental_state",
+              "conditions",
+              "context_ids"
+            ],
+            "reference_repairs": [
+              "unique_prior_name_anchor_added"
+            ],
+            "original_context_ids": [],
+            "actor_grounding_note": "主体由模型提出；程序只补名称出现位置，不证明指代理解正确",
+            "id": "E3",
+            "review_required": true,
+            "review_reasons": [
+              "actor_resolution_proposed_by_model",
+              "optional_fields_defaulted"
+            ]
+          }
+        ],
+        "rejected": [],
+        "calls": [
+          {
+            "status": "ok",
+            "attempts": [
+              {
+                "attempt": 1,
+                "status": "ok",
+                "raw_output": "{\"events\":[{\"actors\":[\"雷\"],\"event\":\"雷喝了口水\",\"explicit\":true,\"modality\":\"observed\",\"source_ids\":[\"S1\"]},{\"actors\":[\"雷\"],\"event\":\"雷看到德尔塔的名字\",\"explicit\":true,\"modality\":\"observed\",\"source_ids\":[\"S2\"],\"mental_state\":\"模糊的熟悉\"},{\"actors\":[\"雷\"],\"event\":\"雷感到模糊的熟悉\",\"explicit\":true,\"modality\":\"observed\",\"source_ids\":[\"S3\"]}]}",
+                "input_tokens": 653,
+                "max_new_tokens": 1536,
+                "timing": {
+                  "seconds": 7.629329499999585,
+                  "input_tokens": 653,
+                  "generated_tokens": 96,
+                  "ttft_ms": 1393.8474000005954,
+                  "decode_seconds": 6.235012900000584,
+                  "decode_tokens": 95,
+                  "decode_tokens_per_second": 15.236536238760806
+                }
+              }
+            ],
+            "window_id": 1,
+            "purpose": "initial_understanding",
+            "target_ids": [
+              "S1",
+              "S2",
+              "S3"
+            ],
+            "context_ids": []
+          }
+        ],
+        "duplicate_candidates": 0,
+        "unrecovered_failed_source_ids": [],
+        "processing_complete": true,
+        "semantic_verification": "not_verified",
+        "review_required": true,
+        "request_seconds": 7.656755600000906,
+        "model_loaded_this_request": false,
+        "coverage": {
+          "source_spans": {
+            "S1": {
+              "text": "雷喝了口水，",
+              "start": 0,
+              "end": 6
+            },
+            "S2": {
+              "text": "看到德尔塔的名字时，",
+              "start": 6,
+              "end": 16
+            },
+            "S3": {
+              "text": "他感到模糊的熟悉。",
+              "start": 16,
+              "end": 25
+            }
+          },
+          "covered_source_ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "primary_source_ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "context_only_source_ids": [],
+          "missing_source_ids": [],
+          "note": "包括事件/条件/主体上下文引用；被引用不保证全部语义提取正确，仅作上下文的片段仍需检查是否漏事件"
+        },
+        "device": "cuda",
+        "model_load_seconds": 17.83102989999861,
+        "notice": "仅语义理解：未筛选重要性、未检索、未判断、未保存设定"
+      }
+    }
+  ]
+}

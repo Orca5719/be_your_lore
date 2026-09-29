@@ -1,0 +1,1454 @@
+{
+  "schema_version": "agent-pipeline-v2-review-v1",
+  "status": "pending_human_review",
+  "dataset_sha256": "9d73234b36a8953a548feb82ae238c8b698985bfa022f5b5a831ae1e77f449d4",
+  "run_rows_sha256": "6aa8557ef72ba8a9d74ee3190a7b74ba4ce49ff7f66d91c952910caadd115405",
+  "event_mapping": {
+    "SL-P01": {},
+    "SL-P02": {
+      "G1": [
+        {
+          "event_id": "E1",
+          "score": 170,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E4",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E4",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E1",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E3",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E4",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E1",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-P03": {
+      "G1": [
+        {
+          "event_id": "E1",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-P04": {
+      "G1": [
+        {
+          "event_id": "E1",
+          "score": 170,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-005": {
+      "G1": [
+        {
+          "event_id": "E1",
+          "score": 170,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E4",
+          "score": 70,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E3",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E3",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-006": {
+      "G1": [
+        {
+          "event_id": "E1",
+          "score": 100,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E3",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-007": {
+      "G1": [],
+      "G2": [],
+      "G3": []
+    },
+    "SL-008": {
+      "G1": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E3",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E1",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E1",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E3",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-009": {
+      "G1": [
+        {
+          "event_id": "E1",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-010": {
+      "G1": [],
+      "G2": [],
+      "G3": []
+    },
+    "SL-011": {
+      "G1": [
+        {
+          "event_id": "E3",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E1",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E1",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E3",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-012": {
+      "G1": [
+        {
+          "event_id": "E1",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E2",
+          "score": 170,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E3",
+          "score": 100,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-013": {
+      "G1": [
+        {
+          "event_id": "E3",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E1",
+          "score": 100,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-014": {
+      "G1": [
+        {
+          "event_id": "E3",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E1",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E1",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E3",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E1",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E3",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-015": {
+      "G1": [
+        {
+          "event_id": "E3",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E1",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-016": {
+      "G1": [
+        {
+          "event_id": "E1",
+          "score": 170,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E3",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E3",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E1",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-017": {
+      "G1": [],
+      "G2": [],
+      "G3": [],
+      "G4": []
+    },
+    "SL-018": {
+      "G1": [],
+      "G2": [],
+      "G3": [],
+      "G4": []
+    },
+    "SL-019": {
+      "G1": [
+        {
+          "event_id": "E1",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E3",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E1",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E3",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E3",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E1",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G4": [
+        {
+          "event_id": "E4",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E1",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-020": {
+      "G1": [],
+      "G2": [],
+      "G3": [],
+      "G4": []
+    },
+    "SL-021": {
+      "G1": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E3",
+          "score": 170,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E1",
+          "score": 170,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E3",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G4": [
+        {
+          "event_id": "E4",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-022": {
+      "G1": [
+        {
+          "event_id": "E3",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E1",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E1",
+          "score": 100,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G4": [
+        {
+          "event_id": "E4",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-023": {
+      "G1": [
+        {
+          "event_id": "E4",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E1",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E5",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E1",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E3",
+          "score": 100,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G4": [
+        {
+          "event_id": "E1",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E3",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    },
+    "SL-024": {
+      "G1": [
+        {
+          "event_id": "E4",
+          "score": 170,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G2": [
+        {
+          "event_id": "E1",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G3": [
+        {
+          "event_id": "E2",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E3",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ],
+      "G4": [
+        {
+          "event_id": "E3",
+          "score": 120,
+          "reason": "anchor_or_subject_overlap"
+        },
+        {
+          "event_id": "E2",
+          "score": 20,
+          "reason": "anchor_or_subject_overlap"
+        }
+      ]
+    }
+  },
+  "finding_mapping": {
+    "SL-P01": {},
+    "SL-P02": {},
+    "SL-P03": {
+      "F1": []
+    },
+    "SL-P04": {},
+    "SL-005": {},
+    "SL-006": {},
+    "SL-007": {},
+    "SL-008": {},
+    "SL-009": {},
+    "SL-010": {
+      "F2": []
+    },
+    "SL-011": {
+      "F2": []
+    },
+    "SL-012": {
+      "F2": []
+    },
+    "SL-013": {
+      "F2": []
+    },
+    "SL-014": {
+      "F2": []
+    },
+    "SL-015": {
+      "F2": []
+    },
+    "SL-016": {
+      "F2": []
+    },
+    "SL-017": {
+      "F1": [],
+      "F2": []
+    },
+    "SL-018": {
+      "F1": [],
+      "F2": []
+    },
+    "SL-019": {
+      "F1": [],
+      "F2": []
+    },
+    "SL-020": {
+      "F1": [],
+      "F2": []
+    },
+    "SL-021": {
+      "F1": [],
+      "F2": []
+    },
+    "SL-022": {
+      "F1": [],
+      "F2": []
+    },
+    "SL-023": {
+      "F1": [],
+      "F2": []
+    },
+    "SL-024": {
+      "F1": [],
+      "F2": []
+    }
+  },
+  "system_event_labels": {
+    "SL-P01": {},
+    "SL-P02": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E4": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-P03": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-P04": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E4": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E5": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-005": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E4": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-006": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-007": {},
+    "SL-008": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-009": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-010": {},
+    "SL-011": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-012": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-013": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-014": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-015": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-016": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-017": {},
+    "SL-018": {},
+    "SL-019": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E4": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-020": {},
+    "SL-021": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E4": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-022": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E4": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-023": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E4": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E5": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    },
+    "SL-024": {
+      "E1": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E2": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E3": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      },
+      "E4": {
+        "label": "pending",
+        "gold_ids": [],
+        "note": ""
+      }
+    }
+  },
+  "system_finding_labels": {
+    "SL-P01": {},
+    "SL-P02": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R4": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-P03": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-P04": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R4": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R5": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-005": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R4": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-006": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-007": {},
+    "SL-008": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-009": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-010": {},
+    "SL-011": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-012": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-013": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-014": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-015": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-016": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-017": {},
+    "SL-018": {},
+    "SL-019": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R4": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-020": {},
+    "SL-021": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R4": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-022": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R4": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-023": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R4": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R5": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    },
+    "SL-024": {
+      "R1": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R2": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R3": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      },
+      "R4": {
+        "label": "pending",
+        "gold_finding_ids": [],
+        "note": ""
+      }
+    }
+  },
+  "retrieval_relevance_overrides": {},
+  "reasoning_support_labels": {},
+  "error_attribution": {},
+  "instruction": "逐一审核所有事件和finding；proposal只能作为建议，不能代替人工确认。"
+}

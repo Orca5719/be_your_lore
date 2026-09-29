@@ -1,0 +1,848 @@
+{
+  "schema_version": "agent-pipeline-v2-error-attribution-v1",
+  "status": "pending_review",
+  "errors": [
+    {
+      "id": "AT-0001",
+      "case_id": "SL-P02",
+      "error_type": "EXTRACTION_OVERSELECT",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "原文存在该片段，但审核认为它是普通动作或流程细节。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "event_ids": [
+        "E4"
+      ]
+    },
+    {
+      "id": "AT-0002",
+      "case_id": "SL-P03",
+      "error_type": "EXTRACTION_OVERSELECT",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "原文存在该片段，但审核认为它是普通动作或流程细节。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "event_ids": [
+        "E2"
+      ]
+    },
+    {
+      "id": "AT-0003",
+      "case_id": "SL-P03",
+      "error_type": "EXTRACTION_OVERSELECT",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "原文存在该片段，但审核认为它是普通动作或流程细节。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "event_ids": [
+        "E3"
+      ]
+    },
+    {
+      "id": "AT-0004",
+      "case_id": "SL-P04",
+      "error_type": "EXTRACTION_OVERSELECT",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "原文存在该片段，但审核认为它是普通动作或流程细节。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "event_ids": [
+        "E2"
+      ]
+    },
+    {
+      "id": "AT-0005",
+      "case_id": "SL-P04",
+      "error_type": "EXTRACTION_OVERSELECT",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "原文存在该片段，但审核认为它是普通动作或流程细节。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "event_ids": [
+        "E3"
+      ]
+    },
+    {
+      "id": "AT-0006",
+      "case_id": "SL-P04",
+      "error_type": "EXTRACTION_OVERSELECT",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "原文存在该片段，但审核认为它是普通动作或流程细节。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "event_ids": [
+        "E4"
+      ]
+    },
+    {
+      "id": "AT-0007",
+      "case_id": "SL-P04",
+      "error_type": "EXTRACTION_OVERSELECT",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "原文存在该片段，但审核认为它是普通动作或流程细节。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "event_ids": [
+        "E5"
+      ]
+    },
+    {
+      "id": "AT-0008",
+      "case_id": "SL-005",
+      "error_type": "EXTRACTION_OVERSELECT",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "原文存在该片段，但审核认为它是普通动作或流程细节。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "event_ids": [
+        "E4"
+      ]
+    },
+    {
+      "id": "AT-0009",
+      "case_id": "SL-005",
+      "error_type": "RETRIEVAL_MISS",
+      "primary_stage": "retrieval",
+      "contributing_stages": [
+        "judge"
+      ],
+      "automatic_explanation": "有效事件已提取，但Top-K没有包含充分证据组合。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G1"
+      ],
+      "event_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "AT-0010",
+      "case_id": "SL-006",
+      "error_type": "RETRIEVAL_MISS",
+      "primary_stage": "retrieval",
+      "contributing_stages": [
+        "judge"
+      ],
+      "automatic_explanation": "有效事件已提取，但Top-K没有包含充分证据组合。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G1"
+      ],
+      "event_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "AT-0011",
+      "case_id": "SL-007",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G1"
+      ]
+    },
+    {
+      "id": "AT-0012",
+      "case_id": "SL-007",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G2"
+      ]
+    },
+    {
+      "id": "AT-0013",
+      "case_id": "SL-007",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G3"
+      ]
+    },
+    {
+      "id": "AT-0014",
+      "case_id": "SL-008",
+      "error_type": "JUDGE_FALSE_POSITIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G1"
+      ],
+      "event_ids": [
+        "E2"
+      ],
+      "judge_item_ids": [
+        "E2"
+      ]
+    },
+    {
+      "id": "AT-0015",
+      "case_id": "SL-008",
+      "error_type": "JUDGE_FALSE_POSITIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G2"
+      ],
+      "event_ids": [
+        "E3"
+      ],
+      "judge_item_ids": [
+        "E3"
+      ]
+    },
+    {
+      "id": "AT-0016",
+      "case_id": "SL-009",
+      "error_type": "JUDGE_FALSE_POSITIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G1"
+      ],
+      "event_ids": [
+        "E1"
+      ],
+      "judge_item_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "AT-0017",
+      "case_id": "SL-009",
+      "error_type": "JUDGE_FALSE_POSITIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G2"
+      ],
+      "event_ids": [
+        "E2"
+      ],
+      "judge_item_ids": [
+        "E2"
+      ]
+    },
+    {
+      "id": "AT-0018",
+      "case_id": "SL-010",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G1"
+      ]
+    },
+    {
+      "id": "AT-0019",
+      "case_id": "SL-010",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G2"
+      ]
+    },
+    {
+      "id": "AT-0020",
+      "case_id": "SL-010",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G3"
+      ]
+    },
+    {
+      "id": "AT-0021",
+      "case_id": "SL-012",
+      "error_type": "JUDGE_FALSE_POSITIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G3"
+      ],
+      "event_ids": [
+        "E3"
+      ],
+      "judge_item_ids": [
+        "E3"
+      ]
+    },
+    {
+      "id": "AT-0022",
+      "case_id": "SL-014",
+      "error_type": "RETRIEVAL_MISS",
+      "primary_stage": "retrieval",
+      "contributing_stages": [
+        "judge"
+      ],
+      "automatic_explanation": "有效事件已提取，但Top-K没有包含充分证据组合。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G1"
+      ],
+      "event_ids": [
+        "E3"
+      ]
+    },
+    {
+      "id": "AT-0023",
+      "case_id": "SL-014",
+      "error_type": "RETRIEVAL_MISS",
+      "primary_stage": "retrieval",
+      "contributing_stages": [
+        "judge"
+      ],
+      "automatic_explanation": "有效事件已提取，但Top-K没有包含充分证据组合。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G2"
+      ],
+      "event_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "AT-0024",
+      "case_id": "SL-014",
+      "error_type": "JUDGE_FALSE_POSITIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G3"
+      ],
+      "event_ids": [
+        "E2"
+      ],
+      "judge_item_ids": [
+        "E2"
+      ]
+    },
+    {
+      "id": "AT-0025",
+      "case_id": "SL-015",
+      "error_type": "JUDGE_FALSE_POSITIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G3"
+      ],
+      "event_ids": [
+        "E2"
+      ],
+      "judge_item_ids": [
+        "E2"
+      ]
+    },
+    {
+      "id": "AT-0026",
+      "case_id": "SL-016",
+      "error_type": "RETRIEVAL_MISS",
+      "primary_stage": "retrieval",
+      "contributing_stages": [
+        "judge"
+      ],
+      "automatic_explanation": "有效事件已提取，但Top-K没有包含充分证据组合。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G1"
+      ],
+      "event_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "AT-0027",
+      "case_id": "SL-016",
+      "error_type": "JUDGE_FALSE_NEGATIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G2"
+      ],
+      "event_ids": [
+        "E3"
+      ],
+      "judge_item_ids": [
+        "E3"
+      ]
+    },
+    {
+      "id": "AT-0028",
+      "case_id": "SL-016",
+      "error_type": "JUDGE_FALSE_POSITIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G3"
+      ],
+      "event_ids": [
+        "E2"
+      ],
+      "judge_item_ids": [
+        "E2"
+      ]
+    },
+    {
+      "id": "AT-0029",
+      "case_id": "SL-017",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G1"
+      ]
+    },
+    {
+      "id": "AT-0030",
+      "case_id": "SL-017",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G2"
+      ]
+    },
+    {
+      "id": "AT-0031",
+      "case_id": "SL-017",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G3"
+      ]
+    },
+    {
+      "id": "AT-0032",
+      "case_id": "SL-017",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G4"
+      ]
+    },
+    {
+      "id": "AT-0033",
+      "case_id": "SL-018",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G1"
+      ]
+    },
+    {
+      "id": "AT-0034",
+      "case_id": "SL-018",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G2"
+      ]
+    },
+    {
+      "id": "AT-0035",
+      "case_id": "SL-018",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G3"
+      ]
+    },
+    {
+      "id": "AT-0036",
+      "case_id": "SL-018",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G4"
+      ]
+    },
+    {
+      "id": "AT-0037",
+      "case_id": "SL-019",
+      "error_type": "RETRIEVAL_MISS",
+      "primary_stage": "retrieval",
+      "contributing_stages": [
+        "judge"
+      ],
+      "automatic_explanation": "有效事件已提取，但Top-K没有包含充分证据组合。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G1"
+      ],
+      "event_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "AT-0038",
+      "case_id": "SL-019",
+      "error_type": "RETRIEVAL_MISS",
+      "primary_stage": "retrieval",
+      "contributing_stages": [
+        "judge"
+      ],
+      "automatic_explanation": "有效事件已提取，但Top-K没有包含充分证据组合。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G3"
+      ],
+      "event_ids": [
+        "E3"
+      ]
+    },
+    {
+      "id": "AT-0039",
+      "case_id": "SL-019",
+      "error_type": "JUDGE_FALSE_POSITIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G4"
+      ],
+      "event_ids": [
+        "E4"
+      ],
+      "judge_item_ids": [
+        "E4"
+      ]
+    },
+    {
+      "id": "AT-0040",
+      "case_id": "SL-020",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G1"
+      ]
+    },
+    {
+      "id": "AT-0041",
+      "case_id": "SL-020",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G2"
+      ]
+    },
+    {
+      "id": "AT-0042",
+      "case_id": "SL-020",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G3"
+      ]
+    },
+    {
+      "id": "AT-0043",
+      "case_id": "SL-020",
+      "error_type": "EXTRACTION_MISS",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "gold fact没有对应的有效提取事件。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G4"
+      ]
+    },
+    {
+      "id": "AT-0044",
+      "case_id": "SL-021",
+      "error_type": "JUDGE_FALSE_NEGATIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G2"
+      ],
+      "event_ids": [
+        "E3"
+      ],
+      "judge_item_ids": [
+        "E3"
+      ]
+    },
+    {
+      "id": "AT-0045",
+      "case_id": "SL-021",
+      "error_type": "RETRIEVAL_MISS",
+      "primary_stage": "retrieval",
+      "contributing_stages": [
+        "judge"
+      ],
+      "automatic_explanation": "有效事件已提取，但Top-K没有包含充分证据组合。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G3"
+      ],
+      "event_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "AT-0046",
+      "case_id": "SL-021",
+      "error_type": "JUDGE_FALSE_POSITIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G4"
+      ],
+      "event_ids": [
+        "E4"
+      ],
+      "judge_item_ids": [
+        "E4"
+      ]
+    },
+    {
+      "id": "AT-0047",
+      "case_id": "SL-022",
+      "error_type": "RETRIEVAL_MISS",
+      "primary_stage": "retrieval",
+      "contributing_stages": [
+        "judge"
+      ],
+      "automatic_explanation": "有效事件已提取，但Top-K没有包含充分证据组合。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G2"
+      ],
+      "event_ids": [
+        "E2"
+      ]
+    },
+    {
+      "id": "AT-0048",
+      "case_id": "SL-022",
+      "error_type": "JUDGE_FALSE_NEGATIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G4"
+      ],
+      "event_ids": [
+        "E4"
+      ],
+      "judge_item_ids": [
+        "E4"
+      ]
+    },
+    {
+      "id": "AT-0049",
+      "case_id": "SL-023",
+      "error_type": "EXTRACTION_OVERSELECT",
+      "primary_stage": "extractor",
+      "contributing_stages": [],
+      "automatic_explanation": "原文存在该片段，但审核认为它是普通动作或流程细节。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "event_ids": [
+        "E3"
+      ]
+    },
+    {
+      "id": "AT-0050",
+      "case_id": "SL-023",
+      "error_type": "JUDGE_FALSE_NEGATIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G4"
+      ],
+      "event_ids": [
+        "E1"
+      ],
+      "judge_item_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "AT-0051",
+      "case_id": "SL-024",
+      "error_type": "JUDGE_FALSE_NEGATIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G1"
+      ],
+      "event_ids": [
+        "E4"
+      ],
+      "judge_item_ids": [
+        "E4"
+      ]
+    },
+    {
+      "id": "AT-0052",
+      "case_id": "SL-024",
+      "error_type": "RETRIEVAL_MISS",
+      "primary_stage": "retrieval",
+      "contributing_stages": [
+        "judge"
+      ],
+      "automatic_explanation": "有效事件已提取，但Top-K没有包含充分证据组合。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G2"
+      ],
+      "event_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "AT-0053",
+      "case_id": "SL-024",
+      "error_type": "JUDGE_FALSE_NEGATIVE",
+      "primary_stage": "judge",
+      "contributing_stages": [],
+      "automatic_explanation": "Judge已收到有效事件，但最终分类与gold verdict不一致。",
+      "review_status": "pending",
+      "reviewer_note": "",
+      "gold_ids": [
+        "G4"
+      ],
+      "event_ids": [
+        "E3"
+      ],
+      "judge_item_ids": [
+        "E3"
+      ]
+    }
+  ],
+  "counts": {
+    "EXTRACTION_MISS": 18,
+    "EXTRACTION_OVERSELECT": 9,
+    "JUDGE_FALSE_NEGATIVE": 6,
+    "JUDGE_FALSE_POSITIVE": 10,
+    "RETRIEVAL_MISS": 10
+  }
+}

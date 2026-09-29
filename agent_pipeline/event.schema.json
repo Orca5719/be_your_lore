@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"LLM semantic event wire response (not the enriched module report)",
+  "type":"object","additionalProperties":false,"required":["events"],
+  "properties":{
+  "non_event_span_ids":{"description":"已审计且不含独立事件命题的目标片段编号","type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^S[1-9][0-9]*$"}},
+  "events":{"type":"array","maxItems":40,"items":{
+    "type":"object","additionalProperties":false,
+    "required":["actors","event","explicit","modality","source_ids"],
+    "properties":{
+      "actors":{"type":"array","minItems":1,"items":{"type":"string","minLength":1}},
+      "event":{"type":"string","minLength":1},
+      "mental_state":{"type":["string","null"],"default":null},
+      "explicit":{"type":"boolean"},
+      "modality":{"enum":["observed","speech","belief","plan","dream","conditional","inferred"]},
+      "conditions":{"type":"array","items":{"type":"string","minLength":1},"default":[]},
+      "source_ids":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string","pattern":"^S[1-9][0-9]*$"}},
+      "context_ids":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^S[1-9][0-9]*$"},"default":[]},
+      "replaces":{"description":"仅纠错补提使用；初次提取不应给非空替代编号","type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^W[1-9][0-9]*C[1-9][0-9]*$"}}
+    },
+    "allOf":[{"if":{"properties":{"explicit":{"const":false}}},"then":{"properties":{"modality":{"const":"inferred"}}},"else":{"properties":{"modality":{"not":{"const":"inferred"}}}}}]
+  }}}
+}

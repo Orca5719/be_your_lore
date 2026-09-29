@@ -1,0 +1,607 @@
+[
+  {
+    "name": "macklin",
+    "wall_seconds": 34.377245499999844,
+    "result": {
+      "status": "ok",
+      "facts": [
+        {
+          "subject": "麦克林",
+          "predicate": "手中幻化出",
+          "type": "character_attribute",
+          "object": "宝剑",
+          "source_text": "麦克林的手中幻化出宝剑，",
+          "source_start": 0,
+          "source_end": 12,
+          "source_ids": [
+            "S1"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [],
+          "context_text": "",
+          "time": null,
+          "id": "F1"
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "unselected_spans": {
+        "S2": {
+          "text": "怒视着眼前的敌人。",
+          "start": 12,
+          "end": 21
+        },
+        "S3": {
+          "text": "他举起剑，",
+          "start": 21,
+          "end": 26
+        },
+        "S4": {
+          "text": "快步向前，",
+          "start": 26,
+          "end": 31
+        },
+        "S5": {
+          "text": "试图在战斗中夺得先机。",
+          "start": 31,
+          "end": 42
+        }
+      },
+      "candidates": [
+        {
+          "subject": "麦克林",
+          "predicate": "手中幻化出",
+          "type": "character_attribute",
+          "object": "宝剑",
+          "source_text": "麦克林的手中幻化出宝剑，",
+          "source_start": 0,
+          "source_end": 12,
+          "source_ids": [
+            "S1"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [],
+          "context_text": "",
+          "time": null,
+          "id": "F1"
+        },
+        {
+          "subject": "麦克林",
+          "predicate": "怒视",
+          "type": "character_attribute",
+          "object": "眼前的敌人",
+          "source_text": "怒视着眼前的敌人。",
+          "source_start": 12,
+          "source_end": 21,
+          "source_ids": [
+            "S2"
+          ],
+          "grounding_added_context_ids": [
+            "S1"
+          ],
+          "context_ids": [
+            "S1"
+          ],
+          "context_text": "麦克林的手中幻化出宝剑，",
+          "time": null,
+          "id": "F2"
+        },
+        {
+          "subject": "麦克林",
+          "predicate": "举起",
+          "type": "character_attribute",
+          "object": "剑",
+          "source_text": "他举起剑，",
+          "source_start": 21,
+          "source_end": 26,
+          "source_ids": [
+            "S3"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [],
+          "context_text": "",
+          "time": null,
+          "grounding_error": "引用缺少主体依据，请选择明确先行词的 context_ids",
+          "id": "F3"
+        },
+        {
+          "subject": "麦克林",
+          "predicate": "快步向前",
+          "type": "character_attribute",
+          "object": null,
+          "source_text": "快步向前，",
+          "source_start": 26,
+          "source_end": 31,
+          "source_ids": [
+            "S4"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [],
+          "context_text": "",
+          "time": null,
+          "grounding_error": "引用缺少主体依据，请选择明确先行词的 context_ids",
+          "id": "F4"
+        },
+        {
+          "subject": "麦克林",
+          "predicate": "试图在战斗中夺得先机",
+          "type": "character_knowledge",
+          "object": null,
+          "source_text": "试图在战斗中夺得先机。",
+          "source_start": 31,
+          "source_end": 42,
+          "source_ids": [
+            "S5"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [],
+          "context_text": "",
+          "time": null,
+          "grounding_error": "引用缺少主体依据，请选择明确先行词的 context_ids",
+          "id": "F5"
+        }
+      ],
+      "discarded": [
+        {
+          "id": "F2",
+          "reason": "怒视是普通表情动作，无明确后果或揭示能力、身份、关系改变等关键信息，且未与特殊能力或关键事件关联"
+        },
+        {
+          "id": "F3",
+          "reason": "普通举剑动作，无特殊能力、生理机制、重要后果或关系改变等关键要素"
+        },
+        {
+          "id": "F4",
+          "reason": "快步向前是普通动作，无明确后果、无能力揭示、无身份或关系改变，不符合保留标准"
+        },
+        {
+          "id": "F5",
+          "reason": "普通战斗意图，无明确能力揭示、身份变化、关键后果或重要机制说明"
+        }
+      ],
+      "pending_facts": [],
+      "review_issues": [],
+      "story": "麦克林的手中幻化出宝剑，怒视着眼前的敌人。他举起剑，快步向前，试图在战斗中夺得先机。",
+      "raw_output": "{\"facts\": [{\"subject\":\"麦克林\",\"predicate\":\"手中幻化出\",\"object\":\"宝剑\",\"type\":\"character_attribute\",\"source_ids\":[\"S1\"]},{\"subject\":\"麦克林\",\"predicate\":\"怒视\",\"object\":\"眼前的敌人\",\"type\":\"character_attribute\",\"source_ids\":[\"S2\"]},{\"subject\":\"麦克林\",\"predicate\":\"举起\",\"object\":\"剑\",\"type\":\"character_attribute\",\"source_ids\":[\"S3\"]},{\"subject\":\"麦克林\",\"predicate\":\"快步向前\",\"object\":null,\"type\":\"character_attribute\",\"source_ids\":[\"S4\"]},{\"subject\":\"麦克林\",\"predicate\":\"试图在战斗中夺得先机\",\"object\":null,\"type\":\"character_knowledge\",\"source_ids\":[\"S5\"]}]}",
+      "prompt_version": "story-extraction-v2",
+      "timing": {
+        "seconds": 34.3313779000091,
+        "calls": [
+          {
+            "stage": "candidate_extraction",
+            "seconds": 15.674321400001645,
+            "input_tokens": 1716,
+            "generated_tokens": 145,
+            "ttft_ms": 2434.1505999982473,
+            "decode_seconds": 13.239513499996974,
+            "decode_tokens": 144,
+            "decode_tokens_per_second": 10.876532585584275
+          },
+          {
+            "stage": "importance_review_F1",
+            "seconds": 3.490858000004664,
+            "input_tokens": 514,
+            "generated_tokens": 37,
+            "ttft_ms": 317.5914000021294,
+            "decode_seconds": 3.1726737999997567,
+            "decode_tokens": 36,
+            "decode_tokens_per_second": 11.346896110152503
+          },
+          {
+            "stage": "importance_review_F2",
+            "seconds": 4.265734900000098,
+            "input_tokens": 526,
+            "generated_tokens": 40,
+            "ttft_ms": 353.2865999950445,
+            "decode_seconds": 3.9116715000054683,
+            "decode_tokens": 39,
+            "decode_tokens_per_second": 9.970162371749643
+          },
+          {
+            "stage": "importance_review_F3",
+            "seconds": 3.7133047000024817,
+            "input_tokens": 505,
+            "generated_tokens": 29,
+            "ttft_ms": 326.1419999980717,
+            "decode_seconds": 3.3860609000039403,
+            "decode_tokens": 28,
+            "decode_tokens_per_second": 8.269195630819109
+          },
+          {
+            "stage": "importance_review_F4",
+            "seconds": 4.010981799998262,
+            "input_tokens": 506,
+            "generated_tokens": 33,
+            "ttft_ms": 340.38889999646926,
+            "decode_seconds": 3.6697558000014396,
+            "decode_tokens": 32,
+            "decode_tokens_per_second": 8.719926268660014
+          },
+          {
+            "stage": "importance_review_F5",
+            "seconds": 3.1761771000019507,
+            "input_tokens": 515,
+            "generated_tokens": 27,
+            "ttft_ms": 396.38189999823226,
+            "decode_seconds": 2.7790019000021857,
+            "decode_tokens": 26,
+            "decode_tokens_per_second": 9.355877014686298
+          }
+        ]
+      },
+      "importance_raw_output": "{\"F1\": \"{\\\"decision\\\":\\\"keep\\\",\\\"reason\\\":\\\"该事实明确揭示麦克林具备幻化能力，属于特殊能力的直接表现，符合保留标准中关于特殊能力使用的条件。\\\"}\", \"F2\": \"{\\\"decision\\\":\\\"discard\\\",\\\"reason\\\":\\\"怒视是普通表情动作，无明确后果或揭示能力、身份、关系改变等关键信息，且未与特殊能力或关键事件关联\\\"}\", \"F3\": \"{\\\"decision\\\":\\\"discard\\\",\\\"reason\\\":\\\"普通举剑动作，无特殊能力、生理机制、重要后果或关系改变等关键要素\\\"}\", \"F4\": \"{\\\"decision\\\":\\\"discard\\\",\\\"reason\\\":\\\"快步向前是普通动作，无明确后果、无能力揭示、无身份或关系改变，不符合保留标准\\\"}\", \"F5\": \"{\\\"decision\\\":\\\"discard\\\",\\\"reason\\\":\\\"普通战斗意图，无明确能力揭示、身份变化、关键后果或重要机制说明\\\"}\"}",
+      "importance_prompt_version": "story-importance-v2",
+      "device": "cuda",
+      "notice": "只筛选事实建议；未检索、未判断矛盾、未保存。原文引用有效不保证事实理解正确。"
+    }
+  },
+  {
+    "name": "silver_arm",
+    "wall_seconds": 27.306309100000362,
+    "result": {
+      "status": "ok",
+      "facts": [
+        {
+          "subject": "月城的银色手臂",
+          "predicate": "如液体一般化开",
+          "type": "character_attribute",
+          "object": null,
+          "source_text": "月城的银色手臂如液体一般化开，",
+          "source_start": 0,
+          "source_end": 15,
+          "source_ids": [
+            "S1"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [],
+          "context_text": "",
+          "time": null,
+          "id": "F1"
+        },
+        {
+          "subject": "月城的银色手臂",
+          "predicate": "渗透进了",
+          "type": "causality",
+          "object": "实验室的主机中",
+          "source_text": "渗透进了实验室的主机中，",
+          "source_start": 15,
+          "source_end": 27,
+          "source_ids": [
+            "S2"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S1"
+          ],
+          "context_text": "月城的银色手臂如液体一般化开，",
+          "time": null,
+          "id": "F2"
+        },
+        {
+          "subject": "屏幕",
+          "predicate": "开始发生变化",
+          "type": "object_state",
+          "object": null,
+          "source_text": "随后屏幕开始发生变化，",
+          "source_start": 27,
+          "source_end": 38,
+          "source_ids": [
+            "S3"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S2"
+          ],
+          "context_text": "渗透进了实验室的主机中，",
+          "time": null,
+          "id": "F3"
+        },
+        {
+          "subject": "屏幕",
+          "predicate": "显示",
+          "type": "object_state",
+          "object": "大地震震中",
+          "source_text": "只留下一张图像——大地震震中",
+          "source_start": 47,
+          "source_end": 61,
+          "source_ids": [
+            "S5"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S3",
+            "S4"
+          ],
+          "context_text": "随后屏幕开始发生变化，\n各种文件飞速闪过，",
+          "time": null,
+          "id": "F4"
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "unselected_spans": {},
+      "candidates": [
+        {
+          "subject": "月城的银色手臂",
+          "predicate": "如液体一般化开",
+          "type": "character_attribute",
+          "object": null,
+          "source_text": "月城的银色手臂如液体一般化开，",
+          "source_start": 0,
+          "source_end": 15,
+          "source_ids": [
+            "S1"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [],
+          "context_text": "",
+          "time": null,
+          "id": "F1"
+        },
+        {
+          "subject": "月城的银色手臂",
+          "predicate": "渗透进了",
+          "type": "causality",
+          "object": "实验室的主机中",
+          "source_text": "渗透进了实验室的主机中，",
+          "source_start": 15,
+          "source_end": 27,
+          "source_ids": [
+            "S2"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S1"
+          ],
+          "context_text": "月城的银色手臂如液体一般化开，",
+          "time": null,
+          "id": "F2"
+        },
+        {
+          "subject": "屏幕",
+          "predicate": "开始发生变化",
+          "type": "object_state",
+          "object": null,
+          "source_text": "随后屏幕开始发生变化，",
+          "source_start": 27,
+          "source_end": 38,
+          "source_ids": [
+            "S3"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S2"
+          ],
+          "context_text": "渗透进了实验室的主机中，",
+          "time": null,
+          "id": "F3"
+        },
+        {
+          "subject": "屏幕",
+          "predicate": "显示",
+          "type": "object_state",
+          "object": "大地震震中",
+          "source_text": "只留下一张图像——大地震震中",
+          "source_start": 47,
+          "source_end": 61,
+          "source_ids": [
+            "S5"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S3",
+            "S4"
+          ],
+          "context_text": "随后屏幕开始发生变化，\n各种文件飞速闪过，",
+          "time": null,
+          "id": "F4"
+        }
+      ],
+      "discarded": [],
+      "pending_facts": [],
+      "review_issues": [],
+      "story": "月城的银色手臂如液体一般化开，渗透进了实验室的主机中，随后屏幕开始发生变化，各种文件飞速闪过，只留下一张图像——大地震震中",
+      "raw_output": "{\"facts\":[{\"subject\":\"月城的银色手臂\",\"predicate\":\"如液体一般化开\",\"type\":\"character_attribute\",\"source_ids\":[\"S1\"]},{\"subject\":\"月城的银色手臂\",\"predicate\":\"渗透进了\",\"object\":\"实验室的主机中\",\"type\":\"causality\",\"source_ids\":[\"S2\"],\"context_ids\":[\"S1\"]},{\"subject\":\"屏幕\",\"predicate\":\"开始发生变化\",\"type\":\"object_state\",\"source_ids\":[\"S3\"],\"context_ids\":[\"S2\"]},{\"subject\":\"屏幕\",\"predicate\":\"显示\",\"object\":\"大地震震中\",\"type\":\"object_state\",\"source_ids\":[\"S5\"],\"context_ids\":[\"S3\",\"S4\"]}]}",
+      "prompt_version": "story-extraction-v2",
+      "timing": {
+        "seconds": 27.286758500005817,
+        "calls": [
+          {
+            "stage": "candidate_extraction",
+            "seconds": 13.271868199997698,
+            "input_tokens": 1730,
+            "generated_tokens": 136,
+            "ttft_ms": 1497.6730999987922,
+            "decode_seconds": 11.7736991999991,
+            "decode_tokens": 135,
+            "decode_tokens_per_second": 11.466234843167245
+          },
+          {
+            "stage": "importance_review_F1",
+            "seconds": 3.8284160000039265,
+            "input_tokens": 519,
+            "generated_tokens": 39,
+            "ttft_ms": 318.9280000005965,
+            "decode_seconds": 3.5089346000022488,
+            "decode_tokens": 38,
+            "decode_tokens_per_second": 10.829497933639358
+          },
+          {
+            "stage": "importance_review_F2",
+            "seconds": 3.6755392999984906,
+            "input_tokens": 533,
+            "generated_tokens": 38,
+            "ttft_ms": 379.2542000010144,
+            "decode_seconds": 3.2953978999939864,
+            "decode_tokens": 37,
+            "decode_tokens_per_second": 11.227779200826559
+          },
+          {
+            "stage": "importance_review_F3",
+            "seconds": 3.0554550000015297,
+            "input_tokens": 516,
+            "generated_tokens": 32,
+            "ttft_ms": 351.239000003261,
+            "decode_seconds": 2.703313599995454,
+            "decode_tokens": 31,
+            "decode_tokens_per_second": 11.467407998854492
+          },
+          {
+            "stage": "importance_review_F4",
+            "seconds": 3.4554800000041723,
+            "input_tokens": 533,
+            "generated_tokens": 34,
+            "ttft_ms": 342.9039000038756,
+            "decode_seconds": 3.1115455999970436,
+            "decode_tokens": 33,
+            "decode_tokens_per_second": 10.6056617007417
+          }
+        ]
+      },
+      "importance_raw_output": "{\"F1\": \"{\\\"decision\\\":\\\"keep\\\",\\\"reason\\\":\\\"银色手臂如液体一般化开，明确揭示其特殊身体属性和形态变化，属于特殊身体形态的直接表现，符合保留标准\\\"}\", \"F2\": \"{\\\"decision\\\":\\\"keep\\\",\\\"reason\\\":\\\"银色手臂渗透主机明确揭示其特殊物理性质和能力，属于特殊身体形态与设备的直接交互，符合能力揭示标准。\\\"}\", \"F3\": \"{\\\"decision\\\":\\\"keep\\\",\\\"reason\\\":\\\"屏幕开始发生变化明确揭示了关键事件的启动，是系统被渗透的直接证据，属于重要剧情线索\\\"}\", \"F4\": \"{\\\"decision\\\":\\\"keep\\\",\\\"reason\\\":\\\"屏幕显示大地震震中，明确揭示关键事件信息，属于重要知识获得，且为后续剧情提供关键线索\\\"}\"}",
+      "importance_prompt_version": "story-importance-v2",
+      "device": "cuda",
+      "notice": "只筛选事实建议；未检索、未判断矛盾、未保存。原文引用有效不保证事实理解正确。"
+    }
+  },
+  {
+    "name": "ordinary",
+    "wall_seconds": 1.9010777000003145,
+    "result": {
+      "status": "ok",
+      "facts": [],
+      "rejected": [],
+      "duplicates": [],
+      "unselected_spans": {
+        "S1": {
+          "text": "伊琳喝了杯水。",
+          "start": 0,
+          "end": 7
+        },
+        "S2": {
+          "text": "她放下杯子，",
+          "start": 7,
+          "end": 13
+        },
+        "S3": {
+          "text": "走到窗边。",
+          "start": 13,
+          "end": 18
+        }
+      },
+      "candidates": [],
+      "discarded": [],
+      "pending_facts": [],
+      "review_issues": [],
+      "story": "伊琳喝了杯水。她放下杯子，走到窗边。",
+      "raw_output": "{\"facts\":[]}",
+      "prompt_version": "story-extraction-v3",
+      "timing": {
+        "seconds": 1.8949694000039017,
+        "calls": [
+          {
+            "stage": "candidate_extraction",
+            "seconds": 1.8949694000039017,
+            "input_tokens": 1702,
+            "generated_tokens": 5,
+            "ttft_ms": 1571.121700006188,
+            "decode_seconds": 0.32288770000013756,
+            "decode_tokens": 4,
+            "decode_tokens_per_second": 12.388208036411099
+          }
+        ]
+      },
+      "importance_raw_output": "{}",
+      "importance_prompt_version": "story-importance-v2",
+      "device": "cuda",
+      "notice": "只筛选事实建议；未检索、未判断矛盾、未保存。原文引用有效不保证事实理解正确。"
+    }
+  },
+  {
+    "name": "consequence",
+    "wall_seconds": 10.216925699998683,
+    "result": {
+      "status": "ok",
+      "facts": [
+        {
+          "subject": "伊琳",
+          "predicate": "双眼失明了",
+          "type": "character_attribute",
+          "object": null,
+          "source_text": "伊琳喝下毒水后双眼失明了。",
+          "source_start": 0,
+          "source_end": 13,
+          "source_ids": [
+            "S1"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S1"
+          ],
+          "context_text": "伊琳喝下毒水后双眼失明了。",
+          "time": null,
+          "id": "F1"
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "unselected_spans": {},
+      "candidates": [
+        {
+          "subject": "伊琳",
+          "predicate": "双眼失明了",
+          "type": "character_attribute",
+          "object": null,
+          "source_text": "伊琳喝下毒水后双眼失明了。",
+          "source_start": 0,
+          "source_end": 13,
+          "source_ids": [
+            "S1"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S1"
+          ],
+          "context_text": "伊琳喝下毒水后双眼失明了。",
+          "time": null,
+          "id": "F1"
+        }
+      ],
+      "discarded": [],
+      "pending_facts": [],
+      "review_issues": [],
+      "story": "伊琳喝下毒水后双眼失明了。",
+      "raw_output": "{\"facts\": [{\"subject\": \"伊琳\", \"predicate\": \"双眼失明了\", \"type\": \"character_attribute\", \"source_ids\": [\"S1\"], \"context_ids\": [\"S1\"]}]}",
+      "prompt_version": "story-extraction-v3",
+      "timing": {
+        "seconds": 10.207532799999171,
+        "calls": [
+          {
+            "stage": "candidate_extraction",
+            "seconds": 5.362995600000431,
+            "input_tokens": 1654,
+            "generated_tokens": 44,
+            "ttft_ms": 1467.4225999988266,
+            "decode_seconds": 3.894647300003271,
+            "decode_tokens": 43,
+            "decode_tokens_per_second": 11.040794374361932
+          },
+          {
+            "stage": "importance_review_F1",
+            "seconds": 4.84453719999874,
+            "input_tokens": 530,
+            "generated_tokens": 50,
+            "ttft_ms": 348.0989000017871,
+            "decode_seconds": 4.4958714000022155,
+            "decode_tokens": 49,
+            "decode_tokens_per_second": 10.898888255561726
+          }
+        ]
+      },
+      "importance_raw_output": "{\"F1\": \"{\\\"decision\\\":\\\"keep\\\",\\\"reason\\\":\\\"双眼失明是明确的生理机制变化，且与饮用毒水直接关联，揭示了关键后果，影响后续剧情发展（如行动能力、身份认知等），符合重要事实标准。\\\"}\"}",
+      "importance_prompt_version": "story-importance-v2",
+      "device": "cuda",
+      "notice": "只筛选事实建议；未检索、未判断矛盾、未保存。原文引用有效不保证事实理解正确。"
+    }
+  }
+]

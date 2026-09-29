@@ -1,0 +1,96 @@
+{
+  "core_evidence_found": true,
+  "reload_results_identical": true,
+  "errors": {
+    "empty": "查询不能为空",
+    "too_long": "完整编码输入超过 512 tokens，请先分块"
+  },
+  "unrelated_query": "番茄炒蛋需要放多少盐？",
+  "unrelated_results": [
+    {
+      "id": "269e80f1f85e9bf4cc4e",
+      "text": "外骨骼推进器产生大量热量，连续高功率运行十分钟必须停止散热。",
+      "file": "technology.md",
+      "start_line": 11,
+      "end_line": 11,
+      "heading_path": [
+        "科技规则（测试设定，不代表正式 canon）",
+        "动力外骨骼",
+        "推进器冷却"
+      ],
+      "start_offset": 106,
+      "end_offset": 136,
+      "embedding_text": "科技规则（测试设定，不代表正式 canon） > 动力外骨骼 > 推进器冷却\n外骨骼推进器产生大量热量，连续高功率运行十分钟必须停止散热。",
+      "token_count": 61,
+      "score": 0.3666797876358032
+    },
+    {
+      "id": "0152bb5ec25607f1962f",
+      "text": "电磁枪发射金属弹丸，依靠电容储能。每次射击后必须重新充电，不能连续无限射击。",
+      "file": "technology.md",
+      "start_line": 56,
+      "end_line": 56,
+      "heading_path": [
+        "科技规则（测试设定，不代表正式 canon）",
+        "武器",
+        "电磁枪"
+      ],
+      "start_offset": 573,
+      "end_offset": 611,
+      "embedding_text": "科技规则（测试设定，不代表正式 canon） > 武器 > 电磁枪\n电磁枪发射金属弹丸，依靠电容储能。每次射击后必须重新充电，不能连续无限射击。",
+      "token_count": 64,
+      "score": 0.31506896018981934
+    },
+    {
+      "id": "21c3b00fcedf12c06dbe",
+      "text": "德尔塔的外骨骼采用可更换独立电池。正常行走可运行两小时，高功率推进会迅速耗电。",
+      "file": "technology.md",
+      "start_line": 6,
+      "end_line": 6,
+      "heading_path": [
+        "科技规则（测试设定，不代表正式 canon）",
+        "动力外骨骼",
+        "电池续航"
+      ],
+      "start_offset": 45,
+      "end_offset": 84,
+      "embedding_text": "科技规则（测试设定，不代表正式 canon） > 动力外骨骼 > 电池续航\n德尔塔的外骨骼采用可更换独立电池。正常行走可运行两小时，高功率推进会迅速耗电。",
+      "token_count": 69,
+      "score": 0.2965332865715027
+    },
+    {
+      "id": "ce0e16ac4d447576296f",
+      "text": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+      "file": "technology.md",
+      "start_line": 41,
+      "end_line": 41,
+      "heading_path": [
+        "科技规则（测试设定，不代表正式 canon）",
+        "能源",
+        "太阳能限制"
+      ],
+      "start_offset": 424,
+      "end_offset": 454,
+      "embedding_text": "科技规则（测试设定，不代表正式 canon） > 能源 > 太阳能限制\n城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+      "token_count": 58,
+      "score": 0.27347511053085327
+    },
+    {
+      "id": "df1f51265ef5555994be",
+      "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+      "file": "angels.md",
+      "start_line": 16,
+      "end_line": 16,
+      "heading_path": [
+        "天使设定（测试设定，不代表正式 canon）",
+        "亚巴顿",
+        "力量副作用"
+      ],
+      "start_offset": 149,
+      "end_offset": 182,
+      "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+      "token_count": 62,
+      "score": 0.2725245952606201
+    }
+  ]
+}

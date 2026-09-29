@@ -1,0 +1,20 @@
+{
+  "schema_version": "agent-pipeline-v2.1-oracle-manifest-v1",
+  "benchmark": "2.1A",
+  "created_at": "2026-09-24T17:20:14.727793+00:00",
+  "fixture_sha256": "8eee1aef6becbbf30f715b184ec3129b264f4d874ce648345c6e2ff92937aef5",
+  "batch_size": 8,
+  "repeats": 3,
+  "prompt_versions": [
+    "v1",
+    "v2.1"
+  ],
+  "device_requested": "cuda",
+  "files": {
+    "judge_v1_prompt": "fd414f903995e8951be13646b867b70a591c3fa64821116b0c9071271b8e7e7e",
+    "judge_v2_1_prompt": "2e90db80c51bd1dc2275217c3d9ab26b67b20657158e863d92c327ab8367d903",
+    "oracle_benchmark": "102c0d04eee969fe7215427122c2270878358a82618a74cbf1d6211acdfa158c",
+    "oracle_worker": "a132c31f41a3ae4258beb75171bf7eb69f482ea7393fe5402192e976df687a8a"
+  },
+  "worker_failures": []
+}

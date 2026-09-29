@@ -1,0 +1,90 @@
+{
+  "kind": "module_observation_not_frozen_benchmark",
+  "dataset_sha256": "876a47310bb12c936f51756a5366cc0b349ab1dd567416e8993b51e0c4564671",
+  "planned_cases": 12,
+  "source_sha256": {
+    "understanding.py": "d98fb41497f868274a15e545762511d45fe7ae377612847a62d6ec81db41bba8",
+    "llm.py": "58b2b847fe1ff1843e0d94e59912b70afabd4e91fc1bbe83eef3004f944e5d7a",
+    "prompts/understanding_v4.txt": "07ed60e8089cd830e4e66c2222f2910c73a7bf9de98e3ff7075f1ab236669ca2"
+  },
+  "cases": [
+    {
+      "id": "U01",
+      "status": "ok",
+      "events": 3,
+      "seconds": 7.65676970000095
+    },
+    {
+      "id": "U02",
+      "status": "partial",
+      "events": 2,
+      "seconds": 16.101209099999323
+    },
+    {
+      "id": "U03",
+      "status": "ok",
+      "events": 2,
+      "seconds": 5.193716499999937
+    },
+    {
+      "id": "U04",
+      "status": "ok",
+      "events": 2,
+      "seconds": 8.425932500000272
+    },
+    {
+      "id": "U05",
+      "status": "ok",
+      "events": 3,
+      "seconds": 9.591315399999075
+    },
+    {
+      "id": "U06",
+      "status": "ok",
+      "events": 3,
+      "seconds": 21.098203999999896
+    },
+    {
+      "id": "U07",
+      "status": "partial",
+      "events": 2,
+      "seconds": 6.723266699998931
+    },
+    {
+      "id": "U08",
+      "status": "ok",
+      "events": 3,
+      "seconds": 9.29405510000106
+    },
+    {
+      "id": "U09",
+      "status": "ok",
+      "events": 2,
+      "seconds": 8.009051200000613
+    },
+    {
+      "id": "U10",
+      "status": "ok",
+      "events": 2,
+      "seconds": 6.249027300000307
+    },
+    {
+      "id": "U11",
+      "status": "ok",
+      "events": 3,
+      "seconds": 8.769321300000229
+    },
+    {
+      "id": "U12",
+      "status": "partial",
+      "events": 21,
+      "seconds": 69.27330529999927
+    }
+  ],
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "device": "cuda",
+  "model_load_seconds": 17.83102989999861,
+  "snapshot_stable": true,
+  "status": "completed"
+}

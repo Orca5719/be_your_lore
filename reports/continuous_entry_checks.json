@@ -1,0 +1,617 @@
+{
+  "passed": true,
+  "queries": [
+    "雷的左胸会周期性疼痛。",
+    "雷的左心脏寄宿亚巴顿。",
+    "雷能控制时间。"
+  ],
+  "expected": [
+    "不确定",
+    "一致",
+    "不确定"
+  ],
+  "rows": [
+    {
+      "status": "pending_confirmation",
+      "store_revision": "empty",
+      "entity": "雷",
+      "category": "生理结构",
+      "proposed": {
+        "entity": "雷",
+        "category": "生理结构",
+        "text": "雷的左胸会周期性疼痛。",
+        "event_time": null
+      },
+      "existing": [
+        {
+          "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "source": {
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6
+          },
+          "id": "099d1bbdbc348eb3c332"
+        }
+      ],
+      "other_categories": {
+        "经历": [
+          {
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "source": {
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11
+            },
+            "id": "a739b6548c630e2c4d40"
+          }
+        ],
+        "右胸异感": [
+          {
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "source": {
+              "file": "characters.md",
+              "start_line": 16,
+              "end_line": 16
+            },
+            "id": "f355504eef1bbb05f59a"
+          }
+        ],
+        "身份保密": [
+          {
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "source": {
+              "file": "characters.md",
+              "start_line": 21,
+              "end_line": 21
+            },
+            "id": "46422ea243d878bfdce9"
+          }
+        ]
+      },
+      "classification": {
+        "entity": "雷",
+        "category": "生理结构",
+        "event_time": null,
+        "status": "ok",
+        "missing": [],
+        "raw_output": "{\"entity\":\"雷\",\"category\":\"生理结构\",\"event_time\":null}",
+        "prompt_version": "classification-v1",
+        "timing": {
+          "seconds": 2.4112782000011066,
+          "input_tokens": 779,
+          "generated_tokens": 16
+        }
+      },
+      "session": {
+        "models_reused": false,
+        "qwen_load_seconds": 11.482714799996756
+      },
+      "judgment": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "雷的左胸会周期性疼痛。",
+            "verdict": "不确定",
+            "evidence": [
+              {
+                "chunk_id": "a739b6548c630e2c4d40",
+                "quote": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。"
+              }
+            ],
+            "reason": "仅提及苏醒后出现异常疼痛，未提周期性",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "雷的左胸会周期性疼痛。"
+        ],
+        "raw_output": "{\"findings\":[{\"input_quote\":\"雷的左胸会周期性疼痛。\",\"verdict\":\"不确定\",\"evidence\":[{\"chunk_id\":\"E2\",\"quote\":\"雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。\"}],\"reason\":\"仅提及苏醒后出现异常疼痛，未提周期性\",\"new_candidates\":[]}]}",
+        "evidence": [
+          {
+            "id": "f355504eef1bbb05f59a",
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "file": "characters.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "右胸异感"
+            ],
+            "start_offset": 133,
+            "end_offset": 172,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "token_count": 65,
+            "score": 0.6959366798400879
+          },
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.6521153450012207
+          },
+          {
+            "id": "47ba19b8b9ece1f35cc9",
+            "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+            "file": "angels.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "亚巴顿",
+              "左侧宿主"
+            ],
+            "start_offset": 43,
+            "end_offset": 81,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+            "token_count": 66,
+            "score": 0.5642169713973999
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.5625346899032593
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.5338204503059387
+          }
+        ],
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "prompt_version": "consistency-v4",
+        "device": "cuda",
+        "timing": {
+          "seconds": 5.440905600000406,
+          "input_tokens": 666,
+          "generated_tokens": 78
+        }
+      }
+    },
+    {
+      "status": "pending_confirmation",
+      "store_revision": "empty",
+      "entity": "雷",
+      "category": "生理结构",
+      "proposed": {
+        "entity": "雷",
+        "category": "生理结构",
+        "text": "雷的左心脏寄宿亚巴顿。",
+        "event_time": null
+      },
+      "existing": [
+        {
+          "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+          "source": {
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6
+          },
+          "id": "099d1bbdbc348eb3c332"
+        }
+      ],
+      "other_categories": {
+        "经历": [
+          {
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "source": {
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11
+            },
+            "id": "a739b6548c630e2c4d40"
+          }
+        ],
+        "右胸异感": [
+          {
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "source": {
+              "file": "characters.md",
+              "start_line": 16,
+              "end_line": 16
+            },
+            "id": "f355504eef1bbb05f59a"
+          }
+        ],
+        "身份保密": [
+          {
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "source": {
+              "file": "characters.md",
+              "start_line": 21,
+              "end_line": 21
+            },
+            "id": "46422ea243d878bfdce9"
+          }
+        ]
+      },
+      "classification": {
+        "entity": "雷",
+        "category": "生理结构",
+        "event_time": null,
+        "status": "ok",
+        "missing": [],
+        "raw_output": "{\"entity\":\"雷\",\"category\":\"生理结构\",\"event_time\":null}",
+        "prompt_version": "classification-v1",
+        "timing": {
+          "seconds": 1.4503387000004295,
+          "input_tokens": 780,
+          "generated_tokens": 16
+        }
+      },
+      "session": {
+        "models_reused": true,
+        "qwen_load_seconds": 0.0
+      },
+      "judgment": {
+        "status": "ok",
+        "overall_verdict": "一致",
+        "findings": [
+          {
+            "input_quote": "雷的左心脏寄宿亚巴顿。",
+            "verdict": "一致",
+            "evidence": [
+              {
+                "chunk_id": "099d1bbdbc348eb3c332",
+                "quote": "左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。"
+              }
+            ],
+            "reason": "E2明确指出左侧心脏寄宿亚巴顿",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [],
+        "raw_output": "{\"findings\":[{\"input_quote\":\"雷的左心脏寄宿亚巴顿。\",\"verdict\":\"一致\",\"evidence\":[{\"chunk_id\":\"E2\",\"quote\":\"左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"}],\"reason\":\"E2明确指出左侧心脏寄宿亚巴顿\",\"new_candidates\":[]}]}",
+        "evidence": [
+          {
+            "id": "47ba19b8b9ece1f35cc9",
+            "text": "亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+            "file": "angels.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "亚巴顿",
+              "左侧宿主"
+            ],
+            "start_offset": 43,
+            "end_offset": 81,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 左侧宿主\n亚巴顿寄宿在雷的左侧心脏里，无法在右心脏施展力量。左胸疼痛可能伴随他的苏醒。",
+            "token_count": 66,
+            "score": 0.6656343936920166
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.6430950164794922
+          },
+          {
+            "id": "252bda4cc47b93db0d7b",
+            "text": "拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "file": "angels.md",
+            "start_line": 21,
+            "end_line": 21,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "右侧宿主"
+            ],
+            "start_offset": 202,
+            "end_offset": 242,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 右侧宿主\n拉古艾尔寄宿在雷的右侧心脏里。他的治疗力量会使右胸发热，不会让亚巴顿移动到右侧。",
+            "token_count": 69,
+            "score": 0.553015947341919
+          },
+          {
+            "id": "17af8f8e8b7ff81197e4",
+            "text": "普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+            "file": "technology.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "医疗",
+              "心脏扫描"
+            ],
+            "start_offset": 472,
+            "end_offset": 502,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 医疗 > 心脏扫描\n普通心脏扫描可以看见雷的两颗心脏，却无法显示寄宿天使的形体。",
+            "token_count": 57,
+            "score": 0.5272068977355957
+          },
+          {
+            "id": "f355504eef1bbb05f59a",
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "file": "characters.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "右胸异感"
+            ],
+            "start_offset": 133,
+            "end_offset": 172,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "token_count": 65,
+            "score": 0.4723980128765106
+          }
+        ],
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "prompt_version": "consistency-v4",
+        "device": "cuda",
+        "timing": {
+          "seconds": 5.086376799998106,
+          "input_tokens": 672,
+          "generated_tokens": 73
+        }
+      }
+    },
+    {
+      "status": "pending_confirmation",
+      "store_revision": "empty",
+      "entity": "雷",
+      "category": "能力",
+      "proposed": {
+        "entity": "雷",
+        "category": "能力",
+        "text": "雷能控制时间。",
+        "event_time": null
+      },
+      "existing": [],
+      "other_categories": {
+        "生理结构": [
+          {
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "source": {
+              "file": "characters.md",
+              "start_line": 6,
+              "end_line": 6
+            },
+            "id": "099d1bbdbc348eb3c332"
+          }
+        ],
+        "经历": [
+          {
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "source": {
+              "file": "characters.md",
+              "start_line": 11,
+              "end_line": 11
+            },
+            "id": "a739b6548c630e2c4d40"
+          }
+        ],
+        "右胸异感": [
+          {
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "source": {
+              "file": "characters.md",
+              "start_line": 16,
+              "end_line": 16
+            },
+            "id": "f355504eef1bbb05f59a"
+          }
+        ],
+        "身份保密": [
+          {
+            "text": "雷隐藏自己是双宿主的身份。除了德尔塔与两位寄宿天使，其他人不知道两颗心脏的秘密。",
+            "source": {
+              "file": "characters.md",
+              "start_line": 21,
+              "end_line": 21
+            },
+            "id": "46422ea243d878bfdce9"
+          }
+        ]
+      },
+      "classification": {
+        "entity": "雷",
+        "category": "能力",
+        "event_time": null,
+        "status": "ok",
+        "missing": [],
+        "raw_output": "{\"entity\":\"雷\",\"category\":\"能力\",\"event_time\":null}",
+        "prompt_version": "classification-v1",
+        "timing": {
+          "seconds": 1.3793132999999216,
+          "input_tokens": 775,
+          "generated_tokens": 15
+        }
+      },
+      "session": {
+        "models_reused": true,
+        "qwen_load_seconds": 0.0
+      },
+      "judgment": {
+        "status": "ok",
+        "overall_verdict": "不确定",
+        "findings": [
+          {
+            "input_quote": "雷能控制时间。",
+            "verdict": "不确定",
+            "evidence": [
+              {
+                "chunk_id": "a739b6548c630e2c4d40",
+                "quote": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。"
+              },
+              {
+                "chunk_id": "099d1bbdbc348eb3c332",
+                "quote": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。"
+              },
+              {
+                "chunk_id": "347b69141392efe457ad",
+                "quote": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。"
+              },
+              {
+                "chunk_id": "f355504eef1bbb05f59a",
+                "quote": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。"
+              },
+              {
+                "chunk_id": "ce0e16ac4d447576296f",
+                "quote": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。"
+              }
+            ],
+            "reason": "证据中未提及时间控制或相关行为",
+            "new_candidates": []
+          }
+        ],
+        "review_candidates": [
+          "雷能控制时间。"
+        ],
+        "raw_output": "{\"findings\":[{\"input_quote\":\"雷能控制时间。\",\"verdict\":\"不确定\",\"evidence\":[{\"chunk_id\":\"E1\",\"quote\":\"雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。\"},{\"chunk_id\":\"E2\",\"quote\":\"雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。\"},{\"chunk_id\":\"E3\",\"quote\":\"雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。\"},{\"chunk_id\":\"E4\",\"quote\":\"拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。\"},{\"chunk_id\":\"E5\",\"quote\":\"城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。\"}],\"reason\":\"证据中未提及时间控制或相关行为\",\"new_candidates\":[]}]}",
+        "evidence": [
+          {
+            "id": "a739b6548c630e2c4d40",
+            "text": "雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "file": "characters.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "经历"
+            ],
+            "start_offset": 85,
+            "end_offset": 116,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 经历\n雷曾在大地震期间失去意识。苏醒后，他开始察觉左胸出现异常疼痛。",
+            "token_count": 55,
+            "score": 0.5568408370018005
+          },
+          {
+            "id": "099d1bbdbc348eb3c332",
+            "text": "雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "file": "characters.md",
+            "start_line": 6,
+            "end_line": 6,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "生理结构"
+            ],
+            "start_offset": 41,
+            "end_offset": 70,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 生理结构\n雷拥有两颗心脏。左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。",
+            "token_count": 55,
+            "score": 0.5012117028236389
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.49287348985671997
+          },
+          {
+            "id": "f355504eef1bbb05f59a",
+            "text": "拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "file": "characters.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷",
+              "右胸异感"
+            ],
+            "start_offset": 133,
+            "end_offset": 172,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷 > 右胸异感\n拉古艾尔施展治疗时，雷的右胸会变得温暖。这种反应来自右侧心脏，与左胸疼痛不同。",
+            "token_count": 65,
+            "score": 0.4745829999446869
+          },
+          {
+            "id": "ce0e16ac4d447576296f",
+            "text": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+            "file": "technology.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "能源",
+              "太阳能限制"
+            ],
+            "start_offset": 424,
+            "end_offset": 454,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 能源 > 太阳能限制\n城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+            "token_count": 58,
+            "score": 0.4457486569881439
+          }
+        ],
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "prompt_version": "consistency-v4",
+        "device": "cuda",
+        "timing": {
+          "seconds": 13.499253400004818,
+          "input_tokens": 651,
+          "generated_tokens": 199
+        }
+      }
+    }
+  ],
+  "total_wall_seconds": 49.38532509999641,
+  "stderr": "连续录入：首次加载模型，后续复用。输入 /quit 退出。\n正在本地识别与判断...\n\nLoading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]\nLoading checkpoint shards:  33%|███▎      | 1/3 [00:04<00:09,  4.55s/it]\nLoading checkpoint shards:  67%|██████▋   | 2/3 [00:09<00:04,  4.68s/it]\nLoading checkpoint shards: 100%|██████████| 3/3 [00:09<00:00,  2.62s/it]\nLoading checkpoint shards: 100%|██████████| 3/3 [00:09<00:00,  3.17s/it]\n正在本地识别与判断...\n正在本地识别与判断...\n",
+  "returncode": 0,
+  "original_index_unchanged": true,
+  "note": "三个开发回归样例；单次顺序测量，不是正式 baseline/benchmark，未保存设定"
+}

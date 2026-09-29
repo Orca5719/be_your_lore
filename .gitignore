@@ -1,22 +1,29 @@
-# Local Python and model artifacts
+# Python environments and caches
 .venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
-.cache/
+.pytest-tmp*/
 
-# Downloaded model weights and Hugging Face caches
+# Local application and model caches
+.cache/
+.codegraph/
+agent_pipeline_v2_2/reports/
+agent_pipeline_v3/reports/
+agent_pipeline_v3_1/reports/
 models/
 model_cache/
 hf_cache/
 **/huggingface/
+
+# Downloaded model weights
 *.safetensors
 *.bin
 *.pt
 *.pth
 *.gguf
 
-# Editor and operating-system files
+# Editors and operating system
 .vscode/
 .idea/
 Thumbs.db

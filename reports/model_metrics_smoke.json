@@ -1,0 +1,13 @@
+{
+  "timing": {
+    "seconds": 1.3352793000012753,
+    "input_tokens": 14,
+    "generated_tokens": 4,
+    "ttft_ms": 1074.8989000021538,
+    "decode_seconds": 0.2593531999991683,
+    "decode_tokens": 3,
+    "decode_tokens_per_second": 11.56723726566559
+  },
+  "model_footprint_bytes": 2594962688,
+  "model_cuda_allocated_bytes": 2667198976
+}

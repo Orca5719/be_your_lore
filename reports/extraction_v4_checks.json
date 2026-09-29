@@ -1,0 +1,1803 @@
+[
+  {
+    "text": "第18话，茱莉亚入职星球日报，并结识克拉克。",
+    "code": 0,
+    "seconds": 32.605556799999704,
+    "preview": {
+      "status": "pending_confirmation",
+      "store_revision": "empty",
+      "source_input": "第18话，茱莉亚入职星球日报，并结识克拉克。",
+      "items": [
+        {
+          "proposed": {
+            "kind": "entity",
+            "entity": "星球日报",
+            "entity_type": "组织",
+            "category": "组织",
+            "text": "星球日报",
+            "target": null,
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          },
+          "existing": [],
+          "entity_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "target_presence": null,
+          "time_presence": null,
+          "review": {
+            "status": "ok",
+            "verdict": "不确定",
+            "reason": "实体/时间节点的归档建议需作者确认；名称已提及不等于类型或结构已建立",
+            "evidence": []
+          }
+        },
+        {
+          "proposed": {
+            "kind": "timepoint",
+            "entity": "第18话",
+            "entity_type": null,
+            "category": "时间节点",
+            "text": "第18话",
+            "target": null,
+            "time": "第18话",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "existing": [],
+          "entity_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "target_presence": null,
+          "time_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "review": {
+            "status": "ok",
+            "verdict": "不确定",
+            "reason": "实体/时间节点的归档建议需作者确认；名称已提及不等于类型或结构已建立",
+            "evidence": []
+          }
+        },
+        {
+          "proposed": {
+            "kind": "entity",
+            "entity": "茱莉亚",
+            "entity_type": "人物",
+            "category": "人物",
+            "text": "茱莉亚",
+            "target": null,
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          },
+          "existing": [],
+          "entity_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "target_presence": null,
+          "time_presence": null,
+          "review": {
+            "status": "ok",
+            "verdict": "不确定",
+            "reason": "实体/时间节点的归档建议需作者确认；名称已提及不等于类型或结构已建立",
+            "evidence": []
+          }
+        },
+        {
+          "proposed": {
+            "kind": "relation",
+            "entity": "茱莉亚",
+            "entity_type": null,
+            "category": "入职",
+            "text": "茱莉亚入职星球日报",
+            "target": "星球日报",
+            "time": "第18话",
+            "valid_from": "第18话",
+            "valid_until": null
+          },
+          "existing": [],
+          "entity_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "target_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "time_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "review": {
+            "status": "ok",
+            "verdict": "不确定",
+            "reason": "无证据提及茱莉亚或星球日报",
+            "evidence": []
+          }
+        },
+        {
+          "proposed": {
+            "kind": "relation",
+            "entity": "茱莉",
+            "entity_type": null,
+            "category": "结识",
+            "text": "并结识克拉克",
+            "target": "克拉克",
+            "time": "第18话",
+            "valid_from": "第18话",
+            "valid_until": null
+          },
+          "existing": [],
+          "entity_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "target_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "time_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "review": {
+            "status": "ok",
+            "verdict": "不确定",
+            "reason": "无证据提及茱莉与克拉克的结识",
+            "evidence": []
+          }
+        }
+      ],
+      "extraction": {
+        "records": [
+          {
+            "kind": "entity",
+            "entity": "星球日报",
+            "entity_type": "组织",
+            "category": "组织",
+            "text": "星球日报",
+            "target": null,
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          },
+          {
+            "kind": "timepoint",
+            "entity": "第18话",
+            "entity_type": null,
+            "category": "时间节点",
+            "text": "第18话",
+            "target": null,
+            "time": "第18话",
+            "valid_from": null,
+            "valid_until": null
+          },
+          {
+            "kind": "entity",
+            "entity": "茱莉亚",
+            "entity_type": "人物",
+            "category": "人物",
+            "text": "茱莉亚",
+            "target": null,
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          },
+          {
+            "kind": "relation",
+            "entity": "茱莉亚",
+            "entity_type": null,
+            "category": "入职",
+            "text": "茱莉亚入职星球日报",
+            "target": "星球日报",
+            "time": "第18话",
+            "valid_from": "第18话",
+            "valid_until": null
+          },
+          {
+            "kind": "relation",
+            "entity": "茱莉",
+            "entity_type": null,
+            "category": "结识",
+            "text": "并结识克拉克",
+            "target": "克拉克",
+            "time": "第18话",
+            "valid_from": "第18话",
+            "valid_until": null
+          }
+        ],
+        "raw_output": "{\"records\":[{\"k\":\"entity\",\"e\":\"星球日报\",\"y\":\"组织\"},{\"k\":\"timepoint\",\"e\":\"第18话\"},{\"k\":\"entity\",\"e\":\"茱莉亚\",\"y\":\"人物\"},{\"k\":\"relation\",\"e\":\"茱莉亚\",\"c\":\"入职\",\"x\":\"星球日报\",\"s\":\"S2\",\"t\":\"第18话\",\"f\":\"第18话\"},{\"k\":\"relation\",\"e\":\"茱莉\",\"c\":\"结识\",\"x\":\"克拉克\",\"s\":\"S3\",\"t\":\"第18话\",\"f\":\"第18话\"}]}",
+        "prompt_version": "world-extraction-v4",
+        "timing": {
+          "seconds": 9.204430299999785,
+          "input_tokens": 858,
+          "generated_tokens": 120
+        }
+      },
+      "checks": [
+        {
+          "text": "茱莉亚入职星球日报",
+          "result": {
+            "status": "ok",
+            "overall_verdict": "不确定",
+            "findings": [
+              {
+                "input_quote": "茱莉亚入职星球日报",
+                "verdict": "不确定",
+                "evidence": [],
+                "reason": "无证据提及茱莉亚或星球日报",
+                "new_candidates": []
+              }
+            ],
+            "review_candidates": [
+              "茱莉亚入职星球日报"
+            ],
+            "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据提及茱莉亚或星球日报\"}",
+            "evidence": [
+              {
+                "id": "0ad0e47151069e9d8676",
+                "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+                "file": "history.md",
+                "start_line": 31,
+                "end_line": 31,
+                "heading_path": [
+                  "历史事件（测试设定，不代表正式 canon）",
+                  "第三话",
+                  "身份告知"
+                ],
+                "start_offset": 322,
+                "end_offset": 359,
+                "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+                "token_count": 65,
+                "score": 0.3657928705215454
+              },
+              {
+                "id": "4ce0e0b41048241db315",
+                "text": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+                "file": "characters.md",
+                "start_line": 56,
+                "end_line": 56,
+                "heading_path": [
+                  "人物设定（测试设定，不代表正式 canon）",
+                  "莉娅",
+                  "工作职责"
+                ],
+                "start_offset": 560,
+                "end_offset": 594,
+                "embedding_text": "人物设定（测试设定，不代表正式 canon） > 莉娅 > 工作职责\n莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+                "token_count": 61,
+                "score": 0.3522680997848511
+              },
+              {
+                "id": "c9a9dcf37f67bf74b64c",
+                "text": "城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+                "file": "history.md",
+                "start_line": 61,
+                "end_line": 61,
+                "heading_path": [
+                  "历史事件（测试设定，不代表正式 canon）",
+                  "2065年",
+                  "档案开放"
+                ],
+                "start_offset": 632,
+                "end_offset": 666,
+                "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2065年 > 档案开放\n城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+                "token_count": 60,
+                "score": 0.3262404203414917
+              },
+              {
+                "id": "2979cd8f1d1098b9cdfc",
+                "text": "监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+                "file": "characters.md",
+                "start_line": 61,
+                "end_line": 61,
+                "heading_path": [
+                  "人物设定（测试设定，不代表正式 canon）",
+                  "监察官",
+                  "失明状态"
+                ],
+                "start_offset": 613,
+                "end_offset": 648,
+                "embedding_text": "人物设定（测试设定，不代表正式 canon） > 监察官 > 失明状态\n监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+                "token_count": 63,
+                "score": 0.31470370292663574
+              },
+              {
+                "id": "df1f51265ef5555994be",
+                "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+                "file": "angels.md",
+                "start_line": 16,
+                "end_line": 16,
+                "heading_path": [
+                  "天使设定（测试设定，不代表正式 canon）",
+                  "亚巴顿",
+                  "力量副作用"
+                ],
+                "start_offset": 149,
+                "end_offset": 182,
+                "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+                "token_count": 62,
+                "score": 0.30886226892471313
+              }
+            ],
+            "prompt_version": "world-review-v2",
+            "timing": {
+              "seconds": 1.6712036999997508,
+              "input_tokens": 493,
+              "generated_tokens": 23
+            }
+          }
+        },
+        {
+          "text": "并结识克拉克",
+          "result": {
+            "status": "ok",
+            "overall_verdict": "不确定",
+            "findings": [
+              {
+                "input_quote": "并结识克拉克",
+                "verdict": "不确定",
+                "evidence": [],
+                "reason": "无证据提及茱莉与克拉克的结识",
+                "new_candidates": []
+              }
+            ],
+            "review_candidates": [
+              "并结识克拉克"
+            ],
+            "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据提及茱莉与克拉克的结识\"}",
+            "evidence": [
+              {
+                "id": "f6fa2986c882a112f9c0",
+                "text": "雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+                "file": "history.md",
+                "start_line": 51,
+                "end_line": 51,
+                "heading_path": [
+                  "历史事件（测试设定，不代表正式 canon）",
+                  "第六话",
+                  "教堂避难"
+                ],
+                "start_offset": 527,
+                "end_offset": 557,
+                "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第六话 > 教堂避难\n雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+                "token_count": 58,
+                "score": 0.3610590100288391
+              },
+              {
+                "id": "0ad0e47151069e9d8676",
+                "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+                "file": "history.md",
+                "start_line": 31,
+                "end_line": 31,
+                "heading_path": [
+                  "历史事件（测试设定，不代表正式 canon）",
+                  "第三话",
+                  "身份告知"
+                ],
+                "start_offset": 322,
+                "end_offset": 359,
+                "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+                "token_count": 65,
+                "score": 0.3513031601905823
+              },
+              {
+                "id": "3b7f472d534c811d4c3f",
+                "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+                "file": "angels.md",
+                "start_line": 26,
+                "end_line": 26,
+                "heading_path": [
+                  "天使设定（测试设定，不代表正式 canon）",
+                  "拉古艾尔",
+                  "治疗限制"
+                ],
+                "start_offset": 262,
+                "end_offset": 298,
+                "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+                "token_count": 65,
+                "score": 0.33261755108833313
+              },
+              {
+                "id": "347b69141392efe457ad",
+                "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+                "file": "characters.md",
+                "start_line": 51,
+                "end_line": 51,
+                "heading_path": [
+                  "人物设定（测试设定，不代表正式 canon）",
+                  "雷的父亲",
+                  "秘密认知"
+                ],
+                "start_offset": 506,
+                "end_offset": 542,
+                "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+                "token_count": 65,
+                "score": 0.3275357186794281
+              },
+              {
+                "id": "e7b5fd0acbea6191a941",
+                "text": "雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+                "file": "history.md",
+                "start_line": 41,
+                "end_line": 41,
+                "heading_path": [
+                  "历史事件（测试设定，不代表正式 canon）",
+                  "第八话",
+                  "长剑毁坏"
+                ],
+                "start_offset": 429,
+                "end_offset": 456,
+                "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第八话 > 长剑毁坏\n雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+                "token_count": 55,
+                "score": 0.3210413455963135
+              }
+            ],
+            "prompt_version": "world-review-v2",
+            "timing": {
+              "seconds": 1.7917813000003662,
+              "input_tokens": 492,
+              "generated_tokens": 25
+            }
+          }
+        }
+      ],
+      "judgment": {
+        "evidence": [
+          {
+            "id": "0ad0e47151069e9d8676",
+            "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "file": "history.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第三话",
+              "身份告知"
+            ],
+            "start_offset": 322,
+            "end_offset": 359,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "token_count": 65,
+            "score": 0.3657928705215454
+          },
+          {
+            "id": "4ce0e0b41048241db315",
+            "text": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "file": "characters.md",
+            "start_line": 56,
+            "end_line": 56,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "莉娅",
+              "工作职责"
+            ],
+            "start_offset": 560,
+            "end_offset": 594,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 莉娅 > 工作职责\n莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "token_count": 61,
+            "score": 0.3522680997848511
+          },
+          {
+            "id": "c9a9dcf37f67bf74b64c",
+            "text": "城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+            "file": "history.md",
+            "start_line": 61,
+            "end_line": 61,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2065年",
+              "档案开放"
+            ],
+            "start_offset": 632,
+            "end_offset": 666,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2065年 > 档案开放\n城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+            "token_count": 60,
+            "score": 0.3262404203414917
+          },
+          {
+            "id": "2979cd8f1d1098b9cdfc",
+            "text": "监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+            "file": "characters.md",
+            "start_line": 61,
+            "end_line": 61,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "监察官",
+              "失明状态"
+            ],
+            "start_offset": 613,
+            "end_offset": 648,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 监察官 > 失明状态\n监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+            "token_count": 63,
+            "score": 0.31470370292663574
+          },
+          {
+            "id": "df1f51265ef5555994be",
+            "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+            "file": "angels.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "亚巴顿",
+              "力量副作用"
+            ],
+            "start_offset": 149,
+            "end_offset": 182,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+            "token_count": 62,
+            "score": 0.30886226892471313
+          },
+          {
+            "id": "f6fa2986c882a112f9c0",
+            "text": "雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+            "file": "history.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第六话",
+              "教堂避难"
+            ],
+            "start_offset": 527,
+            "end_offset": 557,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第六话 > 教堂避难\n雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+            "token_count": 58,
+            "score": 0.3610590100288391
+          },
+          {
+            "id": "3b7f472d534c811d4c3f",
+            "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "file": "angels.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "治疗限制"
+            ],
+            "start_offset": 262,
+            "end_offset": 298,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "token_count": 65,
+            "score": 0.33261755108833313
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.3275357186794281
+          },
+          {
+            "id": "e7b5fd0acbea6191a941",
+            "text": "雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+            "file": "history.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第八话",
+              "长剑毁坏"
+            ],
+            "start_offset": 429,
+            "end_offset": 456,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第八话 > 长剑毁坏\n雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+            "token_count": 55,
+            "score": 0.3210413455963135
+          }
+        ]
+      },
+      "session": {
+        "models_reused": false
+      }
+    }
+  },
+  {
+    "text": "第18话，茱莉亚入职星球日报，并结识克拉克。",
+    "code": 0,
+    "seconds": 11.424982900000032,
+    "preview": {
+      "status": "pending_confirmation",
+      "store_revision": "empty",
+      "source_input": "第18话，茱莉亚入职星球日报，并结识克拉克。",
+      "items": [
+        {
+          "proposed": {
+            "kind": "entity",
+            "entity": "星球日报",
+            "entity_type": "组织",
+            "category": "组织",
+            "text": "星球日报",
+            "target": null,
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          },
+          "existing": [],
+          "entity_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "target_presence": null,
+          "time_presence": null,
+          "review": {
+            "status": "ok",
+            "verdict": "不确定",
+            "reason": "实体/时间节点的归档建议需作者确认；名称已提及不等于类型或结构已建立",
+            "evidence": []
+          }
+        },
+        {
+          "proposed": {
+            "kind": "timepoint",
+            "entity": "第18话",
+            "entity_type": null,
+            "category": "时间节点",
+            "text": "第18话",
+            "target": null,
+            "time": "第18话",
+            "valid_from": null,
+            "valid_until": null
+          },
+          "existing": [],
+          "entity_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "target_presence": null,
+          "time_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "review": {
+            "status": "ok",
+            "verdict": "不确定",
+            "reason": "实体/时间节点的归档建议需作者确认；名称已提及不等于类型或结构已建立",
+            "evidence": []
+          }
+        },
+        {
+          "proposed": {
+            "kind": "entity",
+            "entity": "茱莉亚",
+            "entity_type": "人物",
+            "category": "人物",
+            "text": "茱莉亚",
+            "target": null,
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          },
+          "existing": [],
+          "entity_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "target_presence": null,
+          "time_presence": null,
+          "review": {
+            "status": "ok",
+            "verdict": "不确定",
+            "reason": "实体/时间节点的归档建议需作者确认；名称已提及不等于类型或结构已建立",
+            "evidence": []
+          }
+        },
+        {
+          "proposed": {
+            "kind": "relation",
+            "entity": "茱莉亚",
+            "entity_type": null,
+            "category": "入职",
+            "text": "茱莉亚入职星球日报",
+            "target": "星球日报",
+            "time": "第18话",
+            "valid_from": "第18话",
+            "valid_until": null
+          },
+          "existing": [],
+          "entity_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "target_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "time_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "review": {
+            "status": "ok",
+            "verdict": "不确定",
+            "reason": "无证据提及茱莉亚或星球日报",
+            "evidence": []
+          }
+        },
+        {
+          "proposed": {
+            "kind": "relation",
+            "entity": "茱莉",
+            "entity_type": null,
+            "category": "结识",
+            "text": "并结识克拉克",
+            "target": "克拉克",
+            "time": "第18话",
+            "valid_from": "第18话",
+            "valid_until": null
+          },
+          "existing": [],
+          "entity_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "target_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "time_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "review": {
+            "status": "ok",
+            "verdict": "不确定",
+            "reason": "无证据提及茱莉与克拉克的结识",
+            "evidence": []
+          }
+        }
+      ],
+      "extraction": {
+        "records": [
+          {
+            "kind": "entity",
+            "entity": "星球日报",
+            "entity_type": "组织",
+            "category": "组织",
+            "text": "星球日报",
+            "target": null,
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          },
+          {
+            "kind": "timepoint",
+            "entity": "第18话",
+            "entity_type": null,
+            "category": "时间节点",
+            "text": "第18话",
+            "target": null,
+            "time": "第18话",
+            "valid_from": null,
+            "valid_until": null
+          },
+          {
+            "kind": "entity",
+            "entity": "茱莉亚",
+            "entity_type": "人物",
+            "category": "人物",
+            "text": "茱莉亚",
+            "target": null,
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          },
+          {
+            "kind": "relation",
+            "entity": "茱莉亚",
+            "entity_type": null,
+            "category": "入职",
+            "text": "茱莉亚入职星球日报",
+            "target": "星球日报",
+            "time": "第18话",
+            "valid_from": "第18话",
+            "valid_until": null
+          },
+          {
+            "kind": "relation",
+            "entity": "茱莉",
+            "entity_type": null,
+            "category": "结识",
+            "text": "并结识克拉克",
+            "target": "克拉克",
+            "time": "第18话",
+            "valid_from": "第18话",
+            "valid_until": null
+          }
+        ],
+        "raw_output": "{\"records\":[{\"k\":\"entity\",\"e\":\"星球日报\",\"y\":\"组织\"},{\"k\":\"timepoint\",\"e\":\"第18话\"},{\"k\":\"entity\",\"e\":\"茱莉亚\",\"y\":\"人物\"},{\"k\":\"relation\",\"e\":\"茱莉亚\",\"c\":\"入职\",\"x\":\"星球日报\",\"s\":\"S2\",\"t\":\"第18话\",\"f\":\"第18话\"},{\"k\":\"relation\",\"e\":\"茱莉\",\"c\":\"结识\",\"x\":\"克拉克\",\"s\":\"S3\",\"t\":\"第18话\",\"f\":\"第18话\"}]}",
+        "prompt_version": "world-extraction-v4",
+        "timing": {
+          "seconds": 7.945111499999712,
+          "input_tokens": 858,
+          "generated_tokens": 120
+        }
+      },
+      "checks": [
+        {
+          "text": "茱莉亚入职星球日报",
+          "result": {
+            "status": "ok",
+            "overall_verdict": "不确定",
+            "findings": [
+              {
+                "input_quote": "茱莉亚入职星球日报",
+                "verdict": "不确定",
+                "evidence": [],
+                "reason": "无证据提及茱莉亚或星球日报",
+                "new_candidates": []
+              }
+            ],
+            "review_candidates": [
+              "茱莉亚入职星球日报"
+            ],
+            "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据提及茱莉亚或星球日报\"}",
+            "evidence": [
+              {
+                "id": "0ad0e47151069e9d8676",
+                "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+                "file": "history.md",
+                "start_line": 31,
+                "end_line": 31,
+                "heading_path": [
+                  "历史事件（测试设定，不代表正式 canon）",
+                  "第三话",
+                  "身份告知"
+                ],
+                "start_offset": 322,
+                "end_offset": 359,
+                "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+                "token_count": 65,
+                "score": 0.3657928705215454
+              },
+              {
+                "id": "4ce0e0b41048241db315",
+                "text": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+                "file": "characters.md",
+                "start_line": 56,
+                "end_line": 56,
+                "heading_path": [
+                  "人物设定（测试设定，不代表正式 canon）",
+                  "莉娅",
+                  "工作职责"
+                ],
+                "start_offset": 560,
+                "end_offset": 594,
+                "embedding_text": "人物设定（测试设定，不代表正式 canon） > 莉娅 > 工作职责\n莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+                "token_count": 61,
+                "score": 0.3522680997848511
+              },
+              {
+                "id": "c9a9dcf37f67bf74b64c",
+                "text": "城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+                "file": "history.md",
+                "start_line": 61,
+                "end_line": 61,
+                "heading_path": [
+                  "历史事件（测试设定，不代表正式 canon）",
+                  "2065年",
+                  "档案开放"
+                ],
+                "start_offset": 632,
+                "end_offset": 666,
+                "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2065年 > 档案开放\n城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+                "token_count": 60,
+                "score": 0.3262404203414917
+              },
+              {
+                "id": "2979cd8f1d1098b9cdfc",
+                "text": "监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+                "file": "characters.md",
+                "start_line": 61,
+                "end_line": 61,
+                "heading_path": [
+                  "人物设定（测试设定，不代表正式 canon）",
+                  "监察官",
+                  "失明状态"
+                ],
+                "start_offset": 613,
+                "end_offset": 648,
+                "embedding_text": "人物设定（测试设定，不代表正式 canon） > 监察官 > 失明状态\n监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+                "token_count": 63,
+                "score": 0.31470370292663574
+              },
+              {
+                "id": "df1f51265ef5555994be",
+                "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+                "file": "angels.md",
+                "start_line": 16,
+                "end_line": 16,
+                "heading_path": [
+                  "天使设定（测试设定，不代表正式 canon）",
+                  "亚巴顿",
+                  "力量副作用"
+                ],
+                "start_offset": 149,
+                "end_offset": 182,
+                "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+                "token_count": 62,
+                "score": 0.30886226892471313
+              }
+            ],
+            "prompt_version": "world-review-v2",
+            "timing": {
+              "seconds": 1.6553489000002628,
+              "input_tokens": 493,
+              "generated_tokens": 23
+            }
+          }
+        },
+        {
+          "text": "并结识克拉克",
+          "result": {
+            "status": "ok",
+            "overall_verdict": "不确定",
+            "findings": [
+              {
+                "input_quote": "并结识克拉克",
+                "verdict": "不确定",
+                "evidence": [],
+                "reason": "无证据提及茱莉与克拉克的结识",
+                "new_candidates": []
+              }
+            ],
+            "review_candidates": [
+              "并结识克拉克"
+            ],
+            "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据提及茱莉与克拉克的结识\"}",
+            "evidence": [
+              {
+                "id": "f6fa2986c882a112f9c0",
+                "text": "雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+                "file": "history.md",
+                "start_line": 51,
+                "end_line": 51,
+                "heading_path": [
+                  "历史事件（测试设定，不代表正式 canon）",
+                  "第六话",
+                  "教堂避难"
+                ],
+                "start_offset": 527,
+                "end_offset": 557,
+                "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第六话 > 教堂避难\n雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+                "token_count": 58,
+                "score": 0.3610590100288391
+              },
+              {
+                "id": "0ad0e47151069e9d8676",
+                "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+                "file": "history.md",
+                "start_line": 31,
+                "end_line": 31,
+                "heading_path": [
+                  "历史事件（测试设定，不代表正式 canon）",
+                  "第三话",
+                  "身份告知"
+                ],
+                "start_offset": 322,
+                "end_offset": 359,
+                "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+                "token_count": 65,
+                "score": 0.3513031601905823
+              },
+              {
+                "id": "3b7f472d534c811d4c3f",
+                "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+                "file": "angels.md",
+                "start_line": 26,
+                "end_line": 26,
+                "heading_path": [
+                  "天使设定（测试设定，不代表正式 canon）",
+                  "拉古艾尔",
+                  "治疗限制"
+                ],
+                "start_offset": 262,
+                "end_offset": 298,
+                "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+                "token_count": 65,
+                "score": 0.33261755108833313
+              },
+              {
+                "id": "347b69141392efe457ad",
+                "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+                "file": "characters.md",
+                "start_line": 51,
+                "end_line": 51,
+                "heading_path": [
+                  "人物设定（测试设定，不代表正式 canon）",
+                  "雷的父亲",
+                  "秘密认知"
+                ],
+                "start_offset": 506,
+                "end_offset": 542,
+                "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+                "token_count": 65,
+                "score": 0.3275357186794281
+              },
+              {
+                "id": "e7b5fd0acbea6191a941",
+                "text": "雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+                "file": "history.md",
+                "start_line": 41,
+                "end_line": 41,
+                "heading_path": [
+                  "历史事件（测试设定，不代表正式 canon）",
+                  "第八话",
+                  "长剑毁坏"
+                ],
+                "start_offset": 429,
+                "end_offset": 456,
+                "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第八话 > 长剑毁坏\n雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+                "token_count": 55,
+                "score": 0.3210413455963135
+              }
+            ],
+            "prompt_version": "world-review-v2",
+            "timing": {
+              "seconds": 1.7787311000001864,
+              "input_tokens": 492,
+              "generated_tokens": 25
+            }
+          }
+        }
+      ],
+      "judgment": {
+        "evidence": [
+          {
+            "id": "0ad0e47151069e9d8676",
+            "text": "雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "file": "history.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第三话",
+              "身份告知"
+            ],
+            "start_offset": 322,
+            "end_offset": 359,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第三话 > 身份告知\n雷在第三话向德尔塔说明双心脏与寄宿天使的秘密，德尔塔从此知道雷的宿主身份。",
+            "token_count": 65,
+            "score": 0.3657928705215454
+          },
+          {
+            "id": "4ce0e0b41048241db315",
+            "text": "莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "file": "characters.md",
+            "start_line": 56,
+            "end_line": 56,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "莉娅",
+              "工作职责"
+            ],
+            "start_offset": 560,
+            "end_offset": 594,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 莉娅 > 工作职责\n莉娅是城区档案馆的管理员，负责纸质历史档案的整理。她不是医院的医生。",
+            "token_count": 61,
+            "score": 0.3522680997848511
+          },
+          {
+            "id": "c9a9dcf37f67bf74b64c",
+            "text": "城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+            "file": "history.md",
+            "start_line": 61,
+            "end_line": 61,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2065年",
+              "档案开放"
+            ],
+            "start_offset": 632,
+            "end_offset": 666,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2065年 > 档案开放\n城区档案馆在2065年开放地震救援档案，莉娅负责接待读者和查找记录。",
+            "token_count": 60,
+            "score": 0.3262404203414917
+          },
+          {
+            "id": "2979cd8f1d1098b9cdfc",
+            "text": "监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+            "file": "characters.md",
+            "start_line": 61,
+            "end_line": 61,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "监察官",
+              "失明状态"
+            ],
+            "start_offset": 613,
+            "end_offset": 648,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 监察官 > 失明状态\n监察官在爆炸后双眼失明，只能依靠听觉和手杖定位。他没有恢复视力的能力。",
+            "token_count": 63,
+            "score": 0.31470370292663574
+          },
+          {
+            "id": "df1f51265ef5555994be",
+            "text": "雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+            "file": "angels.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "亚巴顿",
+              "力量副作用"
+            ],
+            "start_offset": 149,
+            "end_offset": 182,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 亚巴顿 > 力量副作用\n雷借用亚巴顿的力量后会短暂失去部分记忆。力量越强，记忆缺失越严重。",
+            "token_count": 62,
+            "score": 0.30886226892471313
+          },
+          {
+            "id": "f6fa2986c882a112f9c0",
+            "text": "雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+            "file": "history.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第六话",
+              "教堂避难"
+            ],
+            "start_offset": 527,
+            "end_offset": 557,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第六话 > 教堂避难\n雷与德尔塔在第六话躲进旧教堂，利用静默结界避开守望者的追踪。",
+            "token_count": 58,
+            "score": 0.3610590100288391
+          },
+          {
+            "id": "3b7f472d534c811d4c3f",
+            "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "file": "angels.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "治疗限制"
+            ],
+            "start_offset": 262,
+            "end_offset": 298,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "token_count": 65,
+            "score": 0.33261755108833313
+          },
+          {
+            "id": "347b69141392efe457ad",
+            "text": "雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "file": "characters.md",
+            "start_line": 51,
+            "end_line": 51,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "雷的父亲",
+              "秘密认知"
+            ],
+            "start_offset": 506,
+            "end_offset": 542,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 雷的父亲 > 秘密认知\n雷的父亲不知道拉古艾尔寄宿在雷体内。他误以为儿子的胸痛只是普通心脏疾病。",
+            "token_count": 65,
+            "score": 0.3275357186794281
+          },
+          {
+            "id": "e7b5fd0acbea6191a941",
+            "text": "雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+            "file": "history.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第八话",
+              "长剑毁坏"
+            ],
+            "start_offset": 429,
+            "end_offset": 456,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第八话 > 长剑毁坏\n雷的长剑在第八话与守望者交战时断裂，之后无法继续使用。",
+            "token_count": 55,
+            "score": 0.3210413455963135
+          }
+        ]
+      },
+      "session": {
+        "models_reused": true
+      }
+    }
+  },
+  {
+    "text": "黎明城位于北方。灵能只能在月光下使用。",
+    "code": 0,
+    "seconds": 7.36746119999998,
+    "preview": {
+      "status": "pending_confirmation",
+      "store_revision": "empty",
+      "source_input": "黎明城位于北方。灵能只能在月光下使用。",
+      "items": [
+        {
+          "proposed": {
+            "kind": "entity",
+            "entity": "黎明城",
+            "entity_type": "地点",
+            "category": "地点",
+            "text": "黎明城",
+            "target": null,
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          },
+          "existing": [],
+          "entity_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "target_presence": null,
+          "time_presence": null,
+          "review": {
+            "status": "ok",
+            "verdict": "不确定",
+            "reason": "实体/时间节点的归档建议需作者确认；名称已提及不等于类型或结构已建立",
+            "evidence": []
+          }
+        },
+        {
+          "proposed": {
+            "kind": "relation",
+            "entity": "黎明城",
+            "entity_type": null,
+            "category": "位于",
+            "text": "黎明城位于北方",
+            "target": "北方",
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          },
+          "existing": [],
+          "entity_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "target_presence": {
+            "status": "mentioned",
+            "message": "完整资料中已提及，是否为同一实体/节点仍需核对",
+            "sources": [
+              {
+                "id": "d312452d0673bf259c82",
+                "file": "history.md",
+                "start_line": 46,
+                "end_line": 46
+              },
+              {
+                "id": "eb8934fb11d790995821",
+                "file": "technology.md",
+                "start_line": 36,
+                "end_line": 36
+              }
+            ]
+          },
+          "time_presence": null,
+          "review": {
+            "status": "ok",
+            "verdict": "不确定",
+            "reason": "无证据支持黎明城位于北方",
+            "evidence": []
+          }
+        },
+        {
+          "proposed": {
+            "kind": "rule",
+            "entity": "灵能",
+            "entity_type": null,
+            "category": "使用条件",
+            "text": "灵能只能在月光下使用",
+            "target": null,
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          },
+          "existing": [],
+          "entity_presence": {
+            "status": "not_found_in_catalog",
+            "message": "完整资料未找到这个精确名称/时间标签；可能是新增或别名，待作者确认",
+            "sources": []
+          },
+          "target_presence": null,
+          "time_presence": null,
+          "review": {
+            "status": "ok",
+            "verdict": "不确定",
+            "reason": "无证据支持灵能使用条件",
+            "evidence": []
+          }
+        }
+      ],
+      "extraction": {
+        "records": [
+          {
+            "kind": "entity",
+            "entity": "黎明城",
+            "entity_type": "地点",
+            "category": "地点",
+            "text": "黎明城",
+            "target": null,
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          },
+          {
+            "kind": "relation",
+            "entity": "黎明城",
+            "entity_type": null,
+            "category": "位于",
+            "text": "黎明城位于北方",
+            "target": "北方",
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          },
+          {
+            "kind": "rule",
+            "entity": "灵能",
+            "entity_type": null,
+            "category": "使用条件",
+            "text": "灵能只能在月光下使用",
+            "target": null,
+            "time": null,
+            "valid_from": null,
+            "valid_until": null
+          }
+        ],
+        "raw_output": "{\"records\":[{\"k\":\"entity\",\"e\":\"黎明城\",\"y\":\"地点\"},{\"k\":\"relation\",\"e\":\"黎明城\",\"c\":\"位于\",\"x\":\"北方\",\"s\":\"S1\"},{\"k\":\"rule\",\"e\":\"灵能\",\"c\":\"使用条件\",\"s\":\"S2\"}]}",
+        "prompt_version": "world-extraction-v4",
+        "timing": {
+          "seconds": 4.203768400000172,
+          "input_tokens": 846,
+          "generated_tokens": 59
+        }
+      },
+      "checks": [
+        {
+          "text": "黎明城位于北方",
+          "result": {
+            "status": "ok",
+            "overall_verdict": "不确定",
+            "findings": [
+              {
+                "input_quote": "黎明城位于北方",
+                "verdict": "不确定",
+                "evidence": [],
+                "reason": "无证据支持黎明城位于北方",
+                "new_candidates": []
+              }
+            ],
+            "review_candidates": [
+              "黎明城位于北方"
+            ],
+            "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据支持黎明城位于北方\"}",
+            "evidence": [
+              {
+                "id": "eb8934fb11d790995821",
+                "text": "城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。",
+                "file": "technology.md",
+                "start_line": 36,
+                "end_line": 36,
+                "heading_path": [
+                  "科技规则（测试设定，不代表正式 canon）",
+                  "交通",
+                  "城区列车"
+                ],
+                "start_offset": 370,
+                "end_offset": 405,
+                "embedding_text": "科技规则（测试设定，不代表正式 canon） > 交通 > 城区列车\n城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。",
+                "token_count": 62,
+                "score": 0.39614588022232056
+              },
+              {
+                "id": "d312452d0673bf259c82",
+                "text": "雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+                "file": "history.md",
+                "start_line": 46,
+                "end_line": 46,
+                "heading_path": [
+                  "历史事件（测试设定，不代表正式 canon）",
+                  "第五话",
+                  "父亲离城"
+                ],
+                "start_offset": 475,
+                "end_offset": 508,
+                "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第五话 > 父亲离城\n雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+                "token_count": 61,
+                "score": 0.3488841652870178
+              },
+              {
+                "id": "7cb9af5fe25451106869",
+                "text": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+                "file": "history.md",
+                "start_line": 11,
+                "end_line": 11,
+                "heading_path": [
+                  "历史事件（测试设定，不代表正式 canon）",
+                  "2063年",
+                  "月城失臂"
+                ],
+                "start_offset": 101,
+                "end_offset": 136,
+                "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 月城失臂\n月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+                "token_count": 63,
+                "score": 0.3093968629837036
+              },
+              {
+                "id": "d7f7dd2035b813e0a886",
+                "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+                "file": "characters.md",
+                "start_line": 41,
+                "end_line": 41,
+                "heading_path": [
+                  "人物设定（测试设定，不代表正式 canon）",
+                  "月城",
+                  "机械左臂"
+                ],
+                "start_offset": 408,
+                "end_offset": 436,
+                "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+                "token_count": 55,
+                "score": 0.3026301860809326
+              },
+              {
+                "id": "6c1bb108abfbac2c6467",
+                "text": "旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。",
+                "file": "technology.md",
+                "start_line": 31,
+                "end_line": 31,
+                "heading_path": [
+                  "科技规则（测试设定，不代表正式 canon）",
+                  "通信",
+                  "地下信号"
+                ],
+                "start_offset": 317,
+                "end_offset": 352,
+                "embedding_text": "科技规则（测试设定，不代表正式 canon） > 通信 > 地下信号\n旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。",
+                "token_count": 62,
+                "score": 0.2915816009044647
+              }
+            ],
+            "prompt_version": "world-review-v2",
+            "timing": {
+              "seconds": 1.5455600000000231,
+              "input_tokens": 473,
+              "generated_tokens": 21
+            }
+          }
+        },
+        {
+          "text": "灵能只能在月光下使用",
+          "result": {
+            "status": "ok",
+            "overall_verdict": "不确定",
+            "findings": [
+              {
+                "input_quote": "灵能只能在月光下使用",
+                "verdict": "不确定",
+                "evidence": [],
+                "reason": "无证据支持灵能使用条件",
+                "new_candidates": []
+              }
+            ],
+            "review_candidates": [
+              "灵能只能在月光下使用"
+            ],
+            "raw_output": "{\"verdict\":\"不确定\",\"evidence\":[],\"reason\":\"无证据支持灵能使用条件\"}",
+            "evidence": [
+              {
+                "id": "3b7f472d534c811d4c3f",
+                "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+                "file": "angels.md",
+                "start_line": 26,
+                "end_line": 26,
+                "heading_path": [
+                  "天使设定（测试设定，不代表正式 canon）",
+                  "拉古艾尔",
+                  "治疗限制"
+                ],
+                "start_offset": 262,
+                "end_offset": 298,
+                "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+                "token_count": 65,
+                "score": 0.46041709184646606
+              },
+              {
+                "id": "ce0e16ac4d447576296f",
+                "text": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+                "file": "technology.md",
+                "start_line": 41,
+                "end_line": 41,
+                "heading_path": [
+                  "科技规则（测试设定，不代表正式 canon）",
+                  "能源",
+                  "太阳能限制"
+                ],
+                "start_offset": 424,
+                "end_offset": 454,
+                "embedding_text": "科技规则（测试设定，不代表正式 canon） > 能源 > 太阳能限制\n城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+                "token_count": 58,
+                "score": 0.4394792914390564
+              },
+              {
+                "id": "b6c490a416855d8e6bb7",
+                "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+                "file": "technology.md",
+                "start_line": 16,
+                "end_line": 16,
+                "heading_path": [
+                  "科技规则（测试设定，不代表正式 canon）",
+                  "机械左臂",
+                  "神经接口"
+                ],
+                "start_offset": 156,
+                "end_offset": 193,
+                "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+                "token_count": 66,
+                "score": 0.43436869978904724
+              },
+              {
+                "id": "806c7429338e0ae14bce",
+                "text": "旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+                "file": "angels.md",
+                "start_line": 61,
+                "end_line": 61,
+                "heading_path": [
+                  "天使设定（测试设定，不代表正式 canon）",
+                  "避难所",
+                  "静默结界"
+                ],
+                "start_offset": 640,
+                "end_offset": 673,
+                "embedding_text": "天使设定（测试设定，不代表正式 canon） > 避难所 > 静默结界\n旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+                "token_count": 61,
+                "score": 0.4317396581172943
+              },
+              {
+                "id": "d7903beebe27e19f40ba",
+                "text": "地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+                "file": "angels.md",
+                "start_line": 46,
+                "end_line": 46,
+                "heading_path": [
+                  "天使设定（测试设定，不代表正式 canon）",
+                  "封印",
+                  "解除条件"
+                ],
+                "start_offset": 477,
+                "end_offset": 515,
+                "embedding_text": "天使设定（测试设定，不代表正式 canon） > 封印 > 解除条件\n地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+                "token_count": 65,
+                "score": 0.42705193161964417
+              }
+            ],
+            "prompt_version": "world-review-v2",
+            "timing": {
+              "seconds": 1.5741369999996095,
+              "input_tokens": 488,
+              "generated_tokens": 21
+            }
+          }
+        }
+      ],
+      "judgment": {
+        "evidence": [
+          {
+            "id": "eb8934fb11d790995821",
+            "text": "城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。",
+            "file": "technology.md",
+            "start_line": 36,
+            "end_line": 36,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "交通",
+              "城区列车"
+            ],
+            "start_offset": 370,
+            "end_offset": 405,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 交通 > 城区列车\n城区列车每天早晨六点开始运行，午夜停止服务。北方研究站位于终点站附近。",
+            "token_count": 62,
+            "score": 0.39614588022232056
+          },
+          {
+            "id": "d312452d0673bf259c82",
+            "text": "雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+            "file": "history.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "第五话",
+              "父亲离城"
+            ],
+            "start_offset": 475,
+            "end_offset": 508,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 第五话 > 父亲离城\n雷的父亲在第五话乘列车离开城区，前往北方研究站。此后两天没有返回。",
+            "token_count": 61,
+            "score": 0.3488841652870178
+          },
+          {
+            "id": "7cb9af5fe25451106869",
+            "text": "月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "file": "history.md",
+            "start_line": 11,
+            "end_line": 11,
+            "heading_path": [
+              "历史事件（测试设定，不代表正式 canon）",
+              "2063年",
+              "月城失臂"
+            ],
+            "start_offset": 101,
+            "end_offset": 136,
+            "embedding_text": "历史事件（测试设定，不代表正式 canon） > 2063年 > 月城失臂\n月城在大地震救援中被倒塌的梁柱压住左臂。左臂无法保留，医生进行了截肢。",
+            "token_count": 63,
+            "score": 0.3093968629837036
+          },
+          {
+            "id": "d7f7dd2035b813e0a886",
+            "text": "月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "file": "characters.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "人物设定（测试设定，不代表正式 canon）",
+              "月城",
+              "机械左臂"
+            ],
+            "start_offset": 408,
+            "end_offset": 436,
+            "embedding_text": "人物设定（测试设定，不代表正式 canon） > 月城 > 机械左臂\n月城失去的是左臂，后来安装机械左臂。右臂始终是自然肢体。",
+            "token_count": 55,
+            "score": 0.3026301860809326
+          },
+          {
+            "id": "6c1bb108abfbac2c6467",
+            "text": "旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。",
+            "file": "technology.md",
+            "start_line": 31,
+            "end_line": 31,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "通信",
+              "地下信号"
+            ],
+            "start_offset": 317,
+            "end_offset": 352,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 通信 > 地下信号\n旧城区地下隧道没有移动网络覆盖，队员使用有线电话和短距离中继设备联络。",
+            "token_count": 62,
+            "score": 0.2915816009044647
+          },
+          {
+            "id": "3b7f472d534c811d4c3f",
+            "text": "拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "file": "angels.md",
+            "start_line": 26,
+            "end_line": 26,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "拉古艾尔",
+              "治疗限制"
+            ],
+            "start_offset": 262,
+            "end_offset": 298,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 拉古艾尔 > 治疗限制\n拉古艾尔可以加速伤口愈合，但不能让已经死亡的人复活，也不能再生完整肢体。",
+            "token_count": 65,
+            "score": 0.46041709184646606
+          },
+          {
+            "id": "ce0e16ac4d447576296f",
+            "text": "城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+            "file": "technology.md",
+            "start_line": 41,
+            "end_line": 41,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "能源",
+              "太阳能限制"
+            ],
+            "start_offset": 424,
+            "end_offset": 454,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 能源 > 太阳能限制\n城区太阳能板在夜间不能发电，夜间照明依靠白天充电的储能电池。",
+            "token_count": 58,
+            "score": 0.4394792914390564
+          },
+          {
+            "id": "b6c490a416855d8e6bb7",
+            "text": "月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "file": "technology.md",
+            "start_line": 16,
+            "end_line": 16,
+            "heading_path": [
+              "科技规则（测试设定，不代表正式 canon）",
+              "机械左臂",
+              "神经接口"
+            ],
+            "start_offset": 156,
+            "end_offset": 193,
+            "embedding_text": "科技规则（测试设定，不代表正式 canon） > 机械左臂 > 神经接口\n月城的机械左臂通过神经接口接收运动指令，需要定期校准，不能直接装在右臂上。",
+            "token_count": 66,
+            "score": 0.43436869978904724
+          },
+          {
+            "id": "806c7429338e0ae14bce",
+            "text": "旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+            "file": "angels.md",
+            "start_line": 61,
+            "end_line": 61,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "避难所",
+              "静默结界"
+            ],
+            "start_offset": 640,
+            "end_offset": 673,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 避难所 > 静默结界\n旧教堂的静默结界可以削弱宿主的精神波动，降低守望者发现宿主的概率。",
+            "token_count": 61,
+            "score": 0.4317396581172943
+          },
+          {
+            "id": "d7903beebe27e19f40ba",
+            "text": "地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+            "file": "angels.md",
+            "start_line": 46,
+            "end_line": 46,
+            "heading_path": [
+              "天使设定（测试设定，不代表正式 canon）",
+              "封印",
+              "解除条件"
+            ],
+            "start_offset": 477,
+            "end_offset": 515,
+            "embedding_text": "天使设定（测试设定，不代表正式 canon） > 封印 > 解除条件\n地下神殿的封印需要两名宿主同时触碰石门才能解除。单个天使的蛮力无法打开石门。",
+            "token_count": 65,
+            "score": 0.42705193161964417
+          }
+        ]
+      },
+      "session": {
+        "models_reused": true
+      }
+    }
+  }
+]

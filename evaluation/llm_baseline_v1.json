@@ -1,0 +1,625 @@
+{
+  "schema_version": 1,
+  "note": "测试设定，不代表正式 canon。运行前由实现者人工编写预期；26条新组合，2条既有开发回归。新组合仍沿用开发资料与语义，不是严格 held-out；没有独立专家复核。结构期望包含关系对象的新实体建议。",
+  "cases": [
+    {
+      "id": "c01",
+      "text": "雷的左心脏寄宿亚巴顿。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "雷的左心脏寄宿亚巴顿",
+          "verdict": "一致",
+          "kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence_any": [
+            "左侧心脏寄宿亚巴顿",
+            "雷的左侧心脏"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "c02",
+      "text": "拉古艾尔寄宿在雷的右侧心脏里。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "拉古艾尔寄宿在雷的右侧心脏里",
+          "verdict": "一致",
+          "kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence_any": [
+            "雷的右侧心脏",
+            "右侧心脏寄宿拉古艾尔"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "c03",
+      "text": "月城的右臂是自然肢体。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "月城的右臂是自然肢体",
+          "verdict": "一致",
+          "kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence_any": [
+            "右臂始终是自然肢体"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "c04",
+      "text": "莉娅负责整理城区档案馆的纸质历史档案。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "莉娅负责整理城区档案馆的纸质历史档案",
+          "verdict": "一致",
+          "kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence_any": [
+            "纸质历史档案的整理"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "c05",
+      "text": "电磁枪每次射击后必须重新充电。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "电磁枪每次射击后必须重新充电",
+          "verdict": "一致",
+          "kinds": [
+            "rule",
+            "attribute"
+          ],
+          "evidence_any": [
+            "每次射击后必须重新充电"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "c06",
+      "text": "月城在2064年安装机械左臂。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "月城在2064年安装机械左臂",
+          "verdict": "一致",
+          "kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence_any": [
+            "2064年接受机械左臂安装手术",
+            "地震一年后"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "x01",
+      "text": "雷的右心脏寄宿亚巴顿。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "雷的右心脏寄宿亚巴顿",
+          "verdict": "矛盾",
+          "kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence_any": [
+            "左侧心脏寄宿亚巴顿",
+            "无法在右心脏施展力量"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "x02",
+      "text": "月城的右臂是一条机械臂。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "月城的右臂是一条机械臂",
+          "verdict": "矛盾",
+          "kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence_any": [
+            "右臂始终是自然肢体"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "x03",
+      "text": "莉娅是医院的医生。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "莉娅是医院的医生",
+          "verdict": "矛盾",
+          "kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence_any": [
+            "她不是医院的医生"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "x04",
+      "text": "城区太阳能板在夜间仍能发电。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "城区太阳能板在夜间仍能发电",
+          "verdict": "矛盾",
+          "kinds": [
+            "rule",
+            "attribute"
+          ],
+          "evidence_any": [
+            "夜间不能发电"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "x05",
+      "text": "拉古艾尔能够让已经死亡的人复活。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "拉古艾尔能够让已经死亡的人复活",
+          "verdict": "矛盾",
+          "kinds": [
+            "attribute",
+            "rule"
+          ],
+          "evidence_any": [
+            "不能让已经死亡的人复活"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "x06",
+      "text": "月城在2062年就安装了机械左臂。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "月城在2062年就安装了机械左臂",
+          "verdict": "矛盾",
+          "kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence_any": [
+            "2064年接受机械左臂安装手术",
+            "在此之前"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "u01",
+      "text": "雷能读懂陌生人的梦境。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "雷能读懂陌生人的梦境",
+          "verdict": "不确定",
+          "kinds": [
+            "attribute"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "u02",
+      "text": "莉娅曾经在海外留学。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "莉娅曾经在海外留学",
+          "verdict": "不确定",
+          "kinds": [
+            "event",
+            "attribute"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "u03",
+      "text": "德尔塔的装甲可以变成潜水艇。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "德尔塔的装甲可以变成潜水艇",
+          "verdict": "不确定",
+          "kinds": [
+            "attribute",
+            "rule"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "u04",
+      "text": "月城的机械左臂能感知气味。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "月城的机械左臂能感知气味",
+          "verdict": "不确定",
+          "kinds": [
+            "attribute",
+            "rule"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "u05",
+      "text": "雷在第十话搬到海边居住。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "雷在第十话搬到海边居住",
+          "verdict": "不确定",
+          "kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "u06",
+      "text": "城区列车提供免费的早餐。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "城区列车提供免费的早餐",
+          "verdict": "不确定",
+          "kinds": [
+            "attribute",
+            "rule",
+            "event"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "m01",
+      "text": "月城的左臂是机械臂，右臂也是机械臂。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "月城的左臂是机械臂",
+          "verdict": "一致",
+          "kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence_any": [
+            "安装机械左臂"
+          ]
+        },
+        {
+          "quote": "右臂也是机械臂",
+          "verdict": "矛盾",
+          "kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence_any": [
+            "右臂始终是自然肢体"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "m02",
+      "text": "雷拥有两颗心脏，并能让时间停止。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "雷拥有两颗心脏",
+          "verdict": "一致",
+          "kinds": [
+            "attribute"
+          ],
+          "evidence_any": [
+            "雷拥有两颗心脏"
+          ]
+        },
+        {
+          "quote": "并能让时间停止",
+          "verdict": "不确定",
+          "kinds": [
+            "attribute"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "m03",
+      "text": "莉娅是档案馆管理员，并能再生完整肢体。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "莉娅是档案馆管理员",
+          "verdict": "一致",
+          "kinds": [
+            "attribute",
+            "relation",
+            "event"
+          ],
+          "evidence_any": [
+            "城区档案馆的管理员"
+          ]
+        },
+        {
+          "quote": "并能再生完整肢体",
+          "verdict": "不确定",
+          "kinds": [
+            "attribute"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "m04",
+      "text": "拉古艾尔可以加速伤口愈合，也能让死人复活。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "拉古艾尔可以加速伤口愈合",
+          "verdict": "一致",
+          "kinds": [
+            "attribute",
+            "rule"
+          ],
+          "evidence_any": [
+            "可以加速伤口愈合"
+          ]
+        },
+        {
+          "quote": "也能让死人复活",
+          "verdict": "矛盾",
+          "kinds": [
+            "attribute",
+            "rule"
+          ],
+          "evidence_any": [
+            "不能让已经死亡的人复活"
+          ]
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "b01",
+      "text": "第十二话，诺拉加入白塔协会。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "诺拉加入白塔协会",
+          "verdict": "不确定",
+          "kinds": [
+            "relation"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": [
+        {
+          "kind": "entity",
+          "entity": "诺拉"
+        },
+        {
+          "kind": "entity",
+          "entity": "白塔协会"
+        },
+        {
+          "kind": "timepoint",
+          "entity": "第十二话"
+        }
+      ]
+    },
+    {
+      "id": "b02",
+      "text": "霜港位于南方。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "霜港位于南方",
+          "verdict": "不确定",
+          "kinds": [
+            "relation"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": [
+        {
+          "kind": "entity",
+          "entity": "霜港"
+        }
+      ]
+    },
+    {
+      "id": "b03",
+      "text": "世界规则：重力在日落时反向。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "世界规则：重力在日落时反向",
+          "verdict": "不确定",
+          "kinds": [
+            "rule"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "b04",
+      "text": "第十三话，雷获得青铜钥匙，并将青铜钥匙交给莉娅。",
+      "group": "fresh",
+      "claims": [
+        {
+          "quote": "雷获得青铜钥匙",
+          "verdict": "不确定",
+          "kinds": [
+            "relation",
+            "event"
+          ],
+          "evidence_any": []
+        },
+        {
+          "quote": "并将青铜钥匙交给莉娅",
+          "verdict": "不确定",
+          "kinds": [
+            "relation",
+            "event"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": [
+        {
+          "kind": "entity",
+          "entity": "青铜钥匙"
+        },
+        {
+          "kind": "timepoint",
+          "entity": "第十三话"
+        }
+      ]
+    },
+    {
+      "id": "r01",
+      "text": "雷的左胸会周期性疼痛。",
+      "group": "development_regression",
+      "claims": [
+        {
+          "quote": "雷的左胸会周期性疼痛",
+          "verdict": "不确定",
+          "kinds": [
+            "attribute"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": []
+    },
+    {
+      "id": "r02",
+      "text": "第18话，茱莉亚入职星球日报，并结识克拉克。",
+      "group": "development_regression",
+      "claims": [
+        {
+          "quote": "茱莉亚入职星球日报",
+          "verdict": "不确定",
+          "kinds": [
+            "relation"
+          ],
+          "evidence_any": []
+        },
+        {
+          "quote": "并结识克拉克",
+          "verdict": "不确定",
+          "kinds": [
+            "relation"
+          ],
+          "evidence_any": []
+        }
+      ],
+      "structures": [
+        {
+          "kind": "entity",
+          "entity": "茱莉亚"
+        },
+        {
+          "kind": "entity",
+          "entity": "星球日报"
+        },
+        {
+          "kind": "entity",
+          "entity": "克拉克"
+        },
+        {
+          "kind": "timepoint",
+          "entity": "第18话"
+        }
+      ]
+    }
+  ]
+}

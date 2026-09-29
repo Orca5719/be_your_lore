@@ -1,0 +1,93 @@
+{
+  "cases": [
+    {
+      "text": "雷能控制时间。",
+      "result": {
+        "entity": "雷",
+        "category": "能力",
+        "event_time": null,
+        "status": "ok",
+        "missing": [],
+        "raw_output": "{\"entity\":\"雷\",\"category\":\"能力\",\"event_time\":null}"
+      },
+      "expected": {
+        "entity": "雷",
+        "category": "能力",
+        "event_time": null
+      },
+      "passed": true
+    },
+    {
+      "text": "雷拥有两颗心脏。",
+      "result": {
+        "entity": "雷",
+        "category": "生理结构",
+        "event_time": null,
+        "status": "ok",
+        "missing": [],
+        "raw_output": "{\"entity\":\"雷\",\"category\":\"生理结构\",\"event_time\":null}"
+      },
+      "expected": {
+        "entity": "雷",
+        "category": "生理结构",
+        "event_time": null
+      },
+      "passed": true
+    },
+    {
+      "text": "第三话，雷失去了长剑。",
+      "result": {
+        "entity": "雷",
+        "category": "经历",
+        "event_time": "第三话",
+        "status": "ok",
+        "missing": [],
+        "raw_output": "{\"entity\":\"雷\",\"category\":\"经历\",\"event_time\":\"第三话\"}"
+      },
+      "expected": {
+        "entity": "雷",
+        "category": "经历",
+        "event_time": "第三话"
+      },
+      "passed": true
+    },
+    {
+      "text": "大地震后，雷失去了记忆。",
+      "result": {
+        "entity": "雷",
+        "category": "经历",
+        "event_time": "大地震后",
+        "status": "ok",
+        "missing": [],
+        "raw_output": "{\"entity\":\"雷\",\"category\":\"经历\",\"event_time\":\"大地震后\"}"
+      },
+      "expected": {
+        "entity": "雷",
+        "category": "经历",
+        "event_time": "大地震后"
+      },
+      "passed": true
+    },
+    {
+      "text": "他能控制时间。",
+      "result": {
+        "entity": null,
+        "category": "能力",
+        "event_time": null,
+        "status": "needs_clarification",
+        "missing": [
+          "entity"
+        ],
+        "raw_output": "{\"entity\": \"他\", \"category\": \"能力\", \"event_time\": null}"
+      },
+      "expected": {
+        "entity": null,
+        "category": "能力",
+        "event_time": null
+      },
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "note": "5 个开发案例，不是 baseline；未保存资料"
+}

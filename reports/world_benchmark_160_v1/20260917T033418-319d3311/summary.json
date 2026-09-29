@@ -1,0 +1,80 @@
+{
+  "status": "stopped_for_user_run",
+  "run_id": "20260917T033418-319d3311",
+  "created_at": "2026-09-17T03:34:18.335012+00:00",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "requested_device": "cuda",
+  "device": "cuda",
+  "annotation_policy": "运行前实现者人工标注并自查，无独立专家审核。沿用开发资料、含同源变体及开发语义，非严格盲测。无关输入不确定。8维度可重叠。",
+  "dataset_counts": {
+    "cases": 160,
+    "claims": 192,
+    "mixed": 32,
+    "families": 116,
+    "evidence_families": 44
+  },
+  "manifest": {
+    "evaluation\\world_benchmark_160_v1.json": "1228d4adbc7397f00276f2f87ee0f0f1f0ca4d84653406ea6bc77e5a3d06c7ad",
+    "world_benchmark.py": "45dbf247fb3aa5e3bb16cf53b5ff9484c64119955f930a1545875eae53b6f4d5",
+    "evaluation\\author_world_benchmark_160.py": "aba49d9a931691923212f730a8ef8329c12b2a4d71a24e8c346340b0bbd5b785",
+    "uv.lock": "de570d4f675a504491d0e828c90d166fad375117ec6d25c107bdb030a6dded0d",
+    "world_entry.py": "6b35c6e1b89ee86780d1ef0fb65cd57bf79c8bf8e60211e3c4a9f8dfb6da9354",
+    "entry.py": "2bb414bdf72883bb732d1f47a44a833be6eb4703b636a76807291b005139fa5a",
+    "qwen_judge.py": "491ac085703f60eb3f4d4fbf47c990824c1e5400cb009530bbd86de06f2d3108",
+    "world_extraction.py": "d0fab5bcb6b8252a3ec6ea177d5e6ea8209142dabd21d9e4497977e93096aafc",
+    "world_records.py": "1113de14bf4a3b2a55f275d40adb81691433246ccceb26368ab62577ae1d3b58",
+    "entries.py": "3cb5ad613f9763c1587ca57d07a2f272b6cc0a7c95130090527835e826f44b36",
+    "encoder.py": "083ed44fd99a66bca960ec1f993d8f175c656553040ad93e008fc157685fc2a9",
+    "documents.py": "8bca0d07fdee79f7d60bbef5ed94629612a28c7fbc9a9c616a4fa2d038152fbf",
+    "index_store.py": "ae6a21b4131f2e53a47f8c296a887f4f654e11ff360f778ab24f170b3555e240",
+    "retrieval.py": "e154be8bc94f93db71b53c340144f8fa665852570ff3b4464c7c4b23f4eccedc",
+    "judgment_protocol.py": "6d2b2da2ecd9c87a765f2a8cb671e8326dbbb55c926122bfb135979b8dd6441d",
+    "prompts\\world_extraction_v4.txt": "18cf934b850011ae6b8302fcfaec3f1897feef6a72a1535604d7bd7f04da0b28",
+    "prompts\\world_review_v2.txt": "1d116ea606b5e85bad2385242a11c009d6437150dfdeec6bdbc0429442f7d77f"
+  },
+  "fixture_hashes": {
+    "characters.md": "e5741e3a36fe3ef0a286a7c2f1f85089b9908cc99869563dd5d040348d40d3e8",
+    "angels.md": "3a74db800a715d8b392db37ccc38026b0e71219fffa684d8e2d429314ef9b7e2",
+    "history.md": "4f0105823cc8d513a4d32cfc094736458db594351000de074acd313cee06d601",
+    "technology.md": "b88690cae568b05032d2c078646bfea50ff304a291b7fbadf0af17eeb4c6cfae"
+  },
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "gpu_total_mib": 8187.5
+  },
+  "packages": {
+    "torch": "2.7.1+cu126",
+    "transformers": "4.57.6",
+    "numpy": "2.2.6",
+    "bitsandbytes": "0.50.2"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.7",
+  "completed": 46,
+  "encoder_load_seconds": 0.4127280000002429,
+  "fixture_index_seconds": 0.4665281000006871,
+  "progress_totals": {
+    "claims_total": 46,
+    "claims_found": 22,
+    "verdict_correct": 22,
+    "kind_correct": 22,
+    "subject_total": 4,
+    "subject_correct": 2,
+    "context_total": 5,
+    "context_correct": 1,
+    "structures_total": 8,
+    "structures_found": 0,
+    "citations_total": 28,
+    "citations_invalid": 0,
+    "retrieval_total": 38,
+    "retrieval_hits": 21,
+    "citation_core_hits": 21,
+    "unmatched_facts": 0,
+    "overall_correct": 22,
+    "complete": 20,
+    "inputs": 46,
+    "valid_previews": 22
+  },
+  "stop_reason": "用户要求自行运行；后台测试已停止，未完成输出不计最终成绩。"
+}

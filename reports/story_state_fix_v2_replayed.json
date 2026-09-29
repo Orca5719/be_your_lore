@@ -1,0 +1,292 @@
+[
+  {
+    "name": "silver_arm",
+    "result": {
+      "status": "partial",
+      "facts": [
+        {
+          "subject": "月城的银色手臂",
+          "predicate": "如液体一般化开",
+          "type": "character_attribute",
+          "object": null,
+          "source_text": "月城的银色手臂如液体一般化开，",
+          "source_start": 0,
+          "source_end": 15,
+          "source_ids": [
+            "S1"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [],
+          "context_text": "",
+          "time": null,
+          "id": "F1"
+        },
+        {
+          "subject": "月城的银色手臂",
+          "predicate": "渗透进了",
+          "type": "causality",
+          "object": "实验室的主机中",
+          "source_text": "渗透进了实验室的主机中，",
+          "source_start": 15,
+          "source_end": 27,
+          "source_ids": [
+            "S2"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S1"
+          ],
+          "context_text": "月城的银色手臂如液体一般化开，",
+          "time": null,
+          "id": "F2"
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "unselected_spans": {
+        "S3": {
+          "text": "随后屏幕开始发生变化，",
+          "start": 27,
+          "end": 38
+        },
+        "S4": {
+          "text": "各种文件飞速闪过，",
+          "start": 38,
+          "end": 47
+        },
+        "S5": {
+          "text": "只留下一张图像——大地震震中",
+          "start": 47,
+          "end": 61
+        }
+      },
+      "candidates": [
+        {
+          "subject": "月城的银色手臂",
+          "predicate": "如液体一般化开",
+          "type": "character_attribute",
+          "object": null,
+          "source_text": "月城的银色手臂如液体一般化开，",
+          "source_start": 0,
+          "source_end": 15,
+          "source_ids": [
+            "S1"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [],
+          "context_text": "",
+          "time": null,
+          "id": "F1"
+        },
+        {
+          "subject": "月城的银色手臂",
+          "predicate": "渗透进了",
+          "type": "causality",
+          "object": "实验室的主机中",
+          "source_text": "渗透进了实验室的主机中，",
+          "source_start": 15,
+          "source_end": 27,
+          "source_ids": [
+            "S2"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S1"
+          ],
+          "context_text": "月城的银色手臂如液体一般化开，",
+          "time": null,
+          "id": "F2"
+        },
+        {
+          "subject": "屏幕",
+          "predicate": "开始发生变化",
+          "type": "object_state",
+          "object": null,
+          "source_text": "随后屏幕开始发生变化，",
+          "source_start": 27,
+          "source_end": 38,
+          "source_ids": [
+            "S3"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S2"
+          ],
+          "context_text": "渗透进了实验室的主机中，",
+          "time": null,
+          "id": "F3"
+        },
+        {
+          "subject": "屏幕",
+          "predicate": "显示",
+          "type": "object_state",
+          "object": "大地震震中",
+          "source_text": "只留下一张图像——大地震震中",
+          "source_start": 47,
+          "source_end": 61,
+          "source_ids": [
+            "S5"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S3",
+            "S4"
+          ],
+          "context_text": "随后屏幕开始发生变化，\n各种文件飞速闪过，",
+          "time": null,
+          "id": "F4"
+        }
+      ],
+      "story": "月城的银色手臂如液体一般化开，渗透进了实验室的主机中，随后屏幕开始发生变化，各种文件飞速闪过，只留下一张图像——大地震震中",
+      "raw_output": "{\"facts\":[{\"subject\":\"月城的银色手臂\",\"predicate\":\"如液体一般化开\",\"type\":\"character_attribute\",\"source_ids\":[\"S1\"]},{\"subject\":\"月城的银色手臂\",\"predicate\":\"渗透进了\",\"object\":\"实验室的主机中\",\"type\":\"causality\",\"source_ids\":[\"S2\"],\"context_ids\":[\"S1\"]},{\"subject\":\"屏幕\",\"predicate\":\"开始发生变化\",\"type\":\"object_state\",\"source_ids\":[\"S3\"],\"context_ids\":[\"S2\"]},{\"subject\":\"屏幕\",\"predicate\":\"显示\",\"object\":\"大地震震中\",\"type\":\"object_state\",\"source_ids\":[\"S5\"],\"context_ids\":[\"S3\",\"S4\"]}]}",
+      "prompt_version": "story-extraction-v2",
+      "timing": {
+        "seconds": 14.951315800004522,
+        "calls": [
+          {
+            "stage": "candidate_extraction",
+            "seconds": 11.807190999999875,
+            "input_tokens": 1730,
+            "generated_tokens": 136,
+            "ttft_ms": 2805.363599996781,
+            "decode_seconds": 9.00034020000021,
+            "decode_tokens": 135,
+            "decode_tokens_per_second": 14.99943302143144
+          },
+          {
+            "stage": "importance_review",
+            "seconds": 3.144124800004647,
+            "input_tokens": 944,
+            "generated_tokens": 39,
+            "ttft_ms": 599.8132000022451,
+            "decode_seconds": 2.543886899999052,
+            "decode_tokens": 38,
+            "decode_tokens_per_second": 14.937771014904069
+          }
+        ]
+      },
+      "importance_raw_output": "{\"keep\":[\"F1\",\"F2\",\"F4\"],\"discard\":[{\"id\":\"F3\",\"reason\":\"普通屏幕变化\"},{\"id\":\"F4\",\"reason\":\"图像内容非关键\"}]}",
+      "device": "cuda",
+      "notice": "只筛选事实建议；未检索、未判断矛盾、未保存。原文引用有效不保证事实理解正确。",
+      "discarded": [
+        {
+          "id": "F3",
+          "reason": "普通屏幕变化"
+        }
+      ],
+      "pending_facts": [
+        {
+          "subject": "屏幕",
+          "predicate": "显示",
+          "type": "object_state",
+          "object": "大地震震中",
+          "source_text": "只留下一张图像——大地震震中",
+          "source_start": 47,
+          "source_end": 61,
+          "source_ids": [
+            "S5"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S3",
+            "S4"
+          ],
+          "context_text": "随后屏幕开始发生变化，\n各种文件飞速闪过，",
+          "time": null,
+          "id": "F4"
+        }
+      ],
+      "review_issues": [
+        {
+          "id": "F4",
+          "error": "筛选决定重复或冲突"
+        }
+      ]
+    }
+  },
+  {
+    "name": "unary_state",
+    "result": {
+      "status": "ok",
+      "facts": [
+        {
+          "subject": "艾琳",
+          "predicate": "双眼失明了",
+          "type": "character_attribute",
+          "object": null,
+          "source_text": "艾琳吃下毒蘑菇后双眼失明了。",
+          "source_start": 0,
+          "source_end": 14,
+          "source_ids": [
+            "S1"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S1"
+          ],
+          "context_text": "艾琳吃下毒蘑菇后双眼失明了。",
+          "time": null,
+          "id": "F1"
+        }
+      ],
+      "rejected": [],
+      "duplicates": [],
+      "unselected_spans": {},
+      "candidates": [
+        {
+          "subject": "艾琳",
+          "predicate": "双眼失明了",
+          "type": "character_attribute",
+          "object": null,
+          "source_text": "艾琳吃下毒蘑菇后双眼失明了。",
+          "source_start": 0,
+          "source_end": 14,
+          "source_ids": [
+            "S1"
+          ],
+          "grounding_added_context_ids": [],
+          "context_ids": [
+            "S1"
+          ],
+          "context_text": "艾琳吃下毒蘑菇后双眼失明了。",
+          "time": null,
+          "id": "F1"
+        }
+      ],
+      "discarded": [],
+      "story": "艾琳吃下毒蘑菇后双眼失明了。",
+      "raw_output": "{\"facts\":[{\"subject\":\"艾琳\",\"predicate\":\"双眼失明了\",\"type\":\"character_attribute\",\"source_ids\":[\"S1\"],\"context_ids\":[\"S1\"]}]}",
+      "prompt_version": "story-extraction-v2",
+      "timing": {
+        "seconds": 4.655613099996117,
+        "calls": [
+          {
+            "stage": "candidate_extraction",
+            "seconds": 3.4844631000014488,
+            "input_tokens": 1584,
+            "generated_tokens": 34,
+            "ttft_ms": 1256.2321000004886,
+            "decode_seconds": 2.2277439999961643,
+            "decode_tokens": 33,
+            "decode_tokens_per_second": 14.813192180096465
+          },
+          {
+            "stage": "importance_review",
+            "seconds": 1.1711499999946682,
+            "input_tokens": 591,
+            "generated_tokens": 13,
+            "ttft_ms": 339.5475999932387,
+            "decode_seconds": 0.8311303000009502,
+            "decode_tokens": 12,
+            "decode_tokens_per_second": 14.438169321929763
+          }
+        ]
+      },
+      "importance_raw_output": "{\"keep\": [\"F1\"], \"discard\": []}",
+      "device": "cuda",
+      "notice": "只筛选事实建议；未检索、未判断矛盾、未保存。原文引用有效不保证事实理解正确。",
+      "pending_facts": [],
+      "review_issues": []
+    }
+  }
+]
