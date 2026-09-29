@@ -119,3 +119,64 @@ def test_judge_fields_are_split_by_verdict_and_projection_is_estimate():
     assert judge["projection_kind"] == "counterfactual_estimate"
     assert judge["projected_output_tokens"] < judge["actual_output_tokens"]
 
+
+def test_mixed_judge_batch_only_marks_the_invalid_row_unprojectable():
+    raws = [judge_raw("consistent", "短理由"), judge_raw("contradiction", "冲突理由"), "{truncated"]
+    call = {
+        "call_id": "LLM-MIXED", "component": "judge", "output_tokens": 60,
+        "decode_time": 6.0, "total_time": 7.0, "input_tokens": 100,
+    }
+    rows = [
+        {"request_id": f"E{index}", "attempt_records": [{"attempt": 1, "status": "ok", "raw_output": raw}]}
+        for index, raw in enumerate(raws, start=1)
+    ]
+    stories = [{"case_id": "SL-001", "result": {"benchmark_stages": {
+        "extraction": {"events": [], "calls": []},
+        "judge": {"batch_reports": [{
+            "rows": rows,
+            "batch_calls": [{
+                "attempt": 1,
+                "request_ids": ["E1", "E2", "E3"],
+                "timing": {"call_id": "LLM-MIXED", "generated_tokens": [10, 20, 30]},
+            }],
+        }]},
+    }}}]
+
+    result = analyze_generation(stories, [call], count_chars)
+    judge = result["components"]["judge"]
+
+    assert judge["parse_failures"] == 1
+    assert judge["unprojectable_output_tokens"] == 30
+    assert judge["verdicts"]["consistent"]["rows"] == 1
+    assert judge["verdicts"]["contradiction"]["rows"] == 1
+    expected = 30 + sum(
+        len(json.dumps(project_judge_payload(json.loads(raw)), ensure_ascii=False, separators=(",", ":")))
+        for raw in raws[:2]
+    )
+    assert judge["projected_output_tokens"] == expected
+
+
+def test_mixed_judge_batch_without_row_tokens_stays_conservative():
+    call = {
+        "call_id": "LLM-OLD", "component": "judge", "output_tokens": 60,
+        "decode_time": 6.0, "total_time": 7.0, "input_tokens": 100,
+    }
+    stories = [{"case_id": "SL-001", "result": {"benchmark_stages": {
+        "extraction": {"events": [], "calls": []},
+        "judge": {"batch_reports": [{
+            "rows": [
+                {"request_id": "E1", "attempt_records": [{"attempt": 1, "raw_output": judge_raw("consistent")}]},
+                {"request_id": "E2", "attempt_records": [{"attempt": 1, "raw_output": "{bad"}]},
+            ],
+            "batch_calls": [{
+                "attempt": 1, "request_ids": ["E1", "E2"],
+                "timing": {"call_id": "LLM-OLD"},
+            }],
+        }]},
+    }}}]
+
+    judge = analyze_generation(stories, [call], count_chars)["components"]["judge"]
+
+    assert judge["unprojectable_output_tokens"] == 60
+    assert judge["projected_output_tokens"] == 60
+

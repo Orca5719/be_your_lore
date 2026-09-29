@@ -57,8 +57,8 @@ def _extractor_attempts(stories: list[dict]) -> dict[str, str]:
     return result
 
 
-def _judge_attempts(stories: list[dict]) -> dict[str, list[str]]:
-    result: dict[str, list[str]] = {}
+def _judge_attempts(stories: list[dict]) -> dict[str, list[dict]]:
+    result: dict[str, list[dict]] = {}
     for story in stories:
         judge = story.get("result", {}).get("benchmark_stages", {}).get("judge", {})
         for report in judge.get("batch_reports", []):
@@ -68,11 +68,17 @@ def _judge_attempts(stories: list[dict]) -> dict[str, list[str]]:
                 if not call_id:
                     continue
                 attempt_number = int(batch_call.get("attempt", 1))
+                generated_tokens = batch_call.get("timing", {}).get("generated_tokens", [])
                 outputs = []
-                for request_id in batch_call.get("request_ids", []):
+                for index, request_id in enumerate(batch_call.get("request_ids", [])):
                     attempts = rows.get(request_id, {}).get("attempt_records", [])
                     if len(attempts) >= attempt_number:
-                        outputs.append(attempts[attempt_number - 1].get("raw_output") or "")
+                        outputs.append({
+                            "raw_output": attempts[attempt_number - 1].get("raw_output") or "",
+                            "actual_output_tokens": (
+                                int(generated_tokens[index]) if index < len(generated_tokens) else None
+                            ),
+                        })
                 result[call_id] = outputs
     return result
 
@@ -108,6 +114,24 @@ def _field_values(component: str, payload: dict) -> dict[str, object]:
     }
 
 
+def _parse_payload(raw: str) -> dict | None:
+    try:
+        payload = json.loads(raw)
+        return payload if isinstance(payload, dict) else None
+    except (json.JSONDecodeError, TypeError):
+        return None
+
+
+def _measure_payload(component: str, payload: dict, token_counter: TokenCounter) -> tuple[dict[str, int], int]:
+    fields = {
+        field: _tokens(token_counter, value)
+        for field, value in _field_values(component, payload).items()
+    }
+    fields["json_structure"] = max(0, _tokens(token_counter, payload) - sum(fields.values()))
+    projection = project_extractor_payload(payload) if component == "extractor" else project_judge_payload(payload)
+    return fields, _tokens(token_counter, projection)
+
+
 def analyze_generation(stories: list[dict], calls: list[dict], token_counter: TokenCounter) -> dict:
     """Analyze saved outputs only. This function never loads or calls a model."""
     raw_by_component = {
@@ -128,48 +152,64 @@ def analyze_generation(stories: list[dict], calls: list[dict], token_counter: To
         aggregate["calls"] += 1
         aggregate["actual_output_tokens"] += actual
         aggregate["actual_decode_time"] += float(call.get("decode_time") or 0.0)
-        raws = raw_by_component[component].get(call.get("call_id"), [])
-        if isinstance(raws, str):
-            raws = [raws]
-        parsed: list[dict] = []
-        for raw in raws:
-            try:
-                payload = json.loads(raw)
-                if not isinstance(payload, dict):
-                    raise ValueError("output is not an object")
-                parsed.append(payload)
-            except (json.JSONDecodeError, ValueError, TypeError):
-                parsed = []
-                break
-
         estimated_fields: dict[str, int] = defaultdict(int)
-        if not parsed:
+        raw_records = raw_by_component[component].get(call.get("call_id"), [])
+        row_allocation = (
+            component == "judge"
+            and isinstance(raw_records, list)
+            and bool(raw_records)
+            and all(record.get("actual_output_tokens") is not None for record in raw_records)
+            and sum(record["actual_output_tokens"] for record in raw_records) == actual
+        )
+
+        if row_allocation:
+            projected = 0
+            invalid_rows = 0
+            for record in raw_records:
+                row_tokens = record["actual_output_tokens"]
+                payload = _parse_payload(record["raw_output"])
+                if payload is None:
+                    invalid_rows += 1
+                    aggregate["parse_failures"] += 1
+                    aggregate["unprojectable_output_tokens"] += row_tokens
+                    projected += row_tokens
+                    continue
+                row_fields, row_projected = _measure_payload(component, payload, token_counter)
+                for field, count in row_fields.items():
+                    estimated_fields[field] += count
+                    aggregate["field_estimated_tokens"][field] += count
+                aggregate["transport_residual_tokens"] += row_tokens - sum(row_fields.values())
+                projected += row_projected
+                verdict = str(payload.get("verdict") or "unknown")
+                aggregate["verdicts"][verdict]["rows"] += 1
+                aggregate["verdicts"][verdict]["estimated_tokens"] += sum(row_fields.values()) - row_fields["json_structure"]
+            aggregate["projected_output_tokens"] += projected
+            output_class = "failed_output" if invalid_rows else "successful_content"
+        else:
+            raws = raw_records if isinstance(raw_records, list) else [raw_records]
+            raws = [record.get("raw_output", "") if isinstance(record, dict) else record for record in raws]
+            parsed = [_parse_payload(raw) for raw in raws]
+            if not parsed or any(payload is None for payload in parsed):
+                parsed = []
+
+        if not row_allocation and not parsed:
             aggregate["parse_failures"] += 1
             aggregate["unprojectable_output_tokens"] += actual
             aggregate["projected_output_tokens"] += actual
             projected = actual
             output_class = "failed_output"
-        else:
+        elif not row_allocation:
             projected = 0
             for payload in parsed:
-                for field, value in _field_values(component, payload).items():
-                    count = _tokens(token_counter, value)
+                row_fields, row_projected = _measure_payload(component, payload, token_counter)
+                for field, count in row_fields.items():
                     estimated_fields[field] += count
                     aggregate["field_estimated_tokens"][field] += count
-                full_estimate = _tokens(token_counter, payload)
-                structure_estimate = max(0, full_estimate - sum(
-                    _tokens(token_counter, value) for value in _field_values(component, payload).values()
-                ))
-                estimated_fields["json_structure"] += structure_estimate
-                aggregate["field_estimated_tokens"]["json_structure"] += structure_estimate
-                projection = project_extractor_payload(payload) if component == "extractor" else project_judge_payload(payload)
-                projected += _tokens(token_counter, projection)
+                projected += row_projected
                 if component == "judge":
                     verdict = str(payload.get("verdict") or "unknown")
                     aggregate["verdicts"][verdict]["rows"] += 1
-                    aggregate["verdicts"][verdict]["estimated_tokens"] += sum(
-                        _tokens(token_counter, value) for value in _field_values(component, payload).values()
-                    )
+                    aggregate["verdicts"][verdict]["estimated_tokens"] += sum(row_fields.values()) - row_fields["json_structure"]
             aggregate["projected_output_tokens"] += projected
             aggregate["transport_residual_tokens"] += actual - sum(estimated_fields.values())
             if call.get("retry_kind") == "coverage_recovery" or call.get("purpose") == "coverage_recovery":

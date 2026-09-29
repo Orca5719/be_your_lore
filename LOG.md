@@ -1125,3 +1125,9 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - Extractor按正常内容、无法解析的失败输出和覆盖恢复分账；Judge按verdict分账。无法解析的输出按全部实测token保守计入unprojectable，不制造虚假节省。
 - 新增Extractor/Judge Lean Projection。前者保留全部下游事件字段和最小覆盖身份，后者保留全部verdict，仅矛盾项保留证据身份与短理由；投影token和按实测decode吞吐换算的时间统一标记为counterfactual_estimate。
 - 新增`audit`与`summary`命令及Generation Audit JSON/Markdown、调用CSV、字段CSV、投影CSV；全过程不加载4B权重、不调用generate，也不修改冻结Benchmark 3结果。本步只完成实现与离线测试，正式24篇运行交给用户执行。
+
+## Step 97 — 2026-09-29 Benchmark 3.1 Judge混合batch审计修正
+
+- 正式审计发现`LLM-000073`的3行Judge batch中仅第3行截断，但旧审计把整批1039 tokens标为unprojectable，连带漏掉前两行的字段成本与Lean Projection。
+- 审计器现在使用batch timing内与request_ids对齐的逐行generated_tokens：有效行继续拆字段，损坏行仅按自身实测token保守计入；缺少可靠逐行token的旧trace仍回退为整批保守记账。
+- 新增混合batch与旧trace回退测试。修正仅影响离线成本归因，不修改Judge、prompt、判决、Benchmark 3原始trace或质量结论，也不需要重新运行模型。

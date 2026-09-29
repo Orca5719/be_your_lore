@@ -16,4 +16,6 @@ The Extractor Lean Projection preserves every downstream event field plus ignore
 
 Projected token and decode-time reductions are marked `counterfactual_estimate`. They describe a theoretical upper bound under the observed decode throughput. They do not claim that a shorter schema would produce the same outputs, accuracy, latency, or retry behavior in a real generation run.
 
+For a mixed Judge batch, saved per-row `generated_tokens` are used to isolate malformed or truncated rows. Valid sibling rows still contribute field and projection estimates. If those row-level measurements are absent or do not sum to the call total, the audit conservatively marks the whole call unprojectable instead of inventing an allocation.
+
 Commands and output files are documented in `agent_pipeline_v3_1/README.md`.

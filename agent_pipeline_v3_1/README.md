@@ -27,3 +27,5 @@ The audit creates a separate output directory containing:
 Primary retry categories are fixed. Judge retry calls remain `BATCH_ROW_RETRY`, while `judge_retry_causes` records whether the failed row was caused by truncation, an invalid citation, or another underlying validation failure.
 
 The full `audit` command also creates `generation_audit.json/.md`, `calls_audit.csv`, `field_token_breakdown.csv`, and `counterfactual_projection.csv`. Actual trace tokens remain separate from tokenizer estimates. Lean projections are labeled `counterfactual_estimate`; projected time is a linear conversion using observed decode throughput, not a measured optimized run.
+
+Judge batches are audited row by row when their saved timing contains a `generated_tokens` value for every request. A malformed or truncated row is then carried at its own measured token cost while valid rows in the same batch remain analyzable. Older traces without reliable per-row token counts fall back to conservative whole-batch accounting.
