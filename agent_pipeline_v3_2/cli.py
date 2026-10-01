@@ -10,6 +10,8 @@ from agent_pipeline_v2_2.scoring import score_system
 from agent_pipeline_v3.metrics import aggregate_profile
 from agent_pipeline_v3.model import MODEL, REVISION, ProfiledV2QwenJudge
 
+from .extractor_audit import run_extractor_audit
+from .extractor_report import write_extractor_markdown
 from .frozen import load_and_validate_source
 from .lean_judge import judge_frozen_retrieval
 from .report import write_outputs
@@ -145,6 +147,21 @@ def run_command(args) -> int:
     return 0
 
 
+def audit_extractor_command(args) -> int:
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    output = (args.output or REPORT_ROOT / f"benchmark_3_2B_{stamp}_{uuid.uuid4().hex[:6]}").resolve()
+    report = run_extractor_audit(args.source_result.resolve(), output)
+    summary = write_extractor_markdown(output, report)
+    print("AUDIT_DIR=" + str(output), flush=True)
+    print("SUMMARY=" + str(summary), flush=True)
+    print(json.dumps({
+        "extractor_calls": report["extractor_calls"],
+        "pure_waste_calls": report["cost_classes"]["pure_waste"]["calls"],
+        "pure_waste_seconds": report["cost_classes"]["pure_waste"]["total_time"],
+        "closure": report["closure"],
+    }, ensure_ascii=False))
+    return 0
+
 def build_parser():
     parser = argparse.ArgumentParser(description="Benchmark 3.2 Lean Generation experiments")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -157,6 +174,10 @@ def build_parser():
     run.add_argument("--judge-batch-size", type=int, default=8)
     run.add_argument("--output", type=Path)
     run.set_defaults(func=run_command)
+    audit = sub.add_parser("audit-extractor")
+    audit.add_argument("--source-result", type=Path, default=DEFAULT_SOURCE)
+    audit.add_argument("--output", type=Path)
+    audit.set_defaults(func=audit_extractor_command)
     return parser
 
 

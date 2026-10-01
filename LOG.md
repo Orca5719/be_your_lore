@@ -1148,3 +1148,12 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - Judge Accuracy从72.73%降至56.06%；FP 9→11，FN 6→5。端到端Precision/Recall/F1从66.67%/75.00%/70.59%变为63.33%/79.17%/70.37%，冲突检测F1基本持平但三分类校准明显退化。
 - 18/80 verdict发生变化，全部由旧版uncertain变为明确结论：15条变consistent、3条变contradiction。新混淆矩阵中24条gold uncertain仅1条仍判uncertain，表明移除assessment/scope guard后Lean Judge显著过度自信。
 - 结论：3.2A性能实验成功且收益明确，但当前Lean Judge不能直接替换旧Judge；其主要质量代价是uncertain边界丢失，而非冲突召回下降。本轮按计划冻结观察，不在同一实验内追加修复。
+
+## Step 100 — 2026-10-01 Benchmark 3.2B：Extractor Failure Audit实现
+
+- 新增完全离线的 `audit-extractor`：只读取Benchmark 3的story/trace，不实例化4B模型、不调用generate；严格校验固定24篇与103次Extractor调用，并逐一连接case、window、attempt和call_id。
+- 固定九类失败taxonomy；每次调用互斥归入pure_waste、recovery_cost或effective_cost，同时区分initial/format retry/coverage recovery的成功与失败，以及失败是否被后续调用恢复。
+- 输出逐调用JSONL/CSV、失败类别CSV和Markdown/JSON汇总；各类别记录故事/窗口/调用数、输入输出token、Prefill/Decode/Total、恢复情况、原始错误摘要、关联schema和直接原因。
+- 加入强制成本闭合：calls、input/output tokens、Prefill/Decode/Total必须在三个成本桶中精确对账；按实测浪费时间生成3.2C schema假设排序，不把batch共享时间伪分到不存在的行。
+- 临时真实trace冒烟结果：103次调用中27次pure waste耗时400.370秒、输出4598 tokens，占Extractor LLM时间39.10%；16次成功恢复耗时64.995秒；60次有效调用耗时558.716秒。MISSING_TARGET_COVERAGE为首因，20次共303.402秒。
+- 3.2B新增测试13项通过；正式结果仍由用户运行并确认后再进入3.2C。

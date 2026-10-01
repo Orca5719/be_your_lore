@@ -8,3 +8,14 @@
 & ".\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v3_2 validate
 & ".\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v3_2 run-judge --device cuda --judge-batch-size 8
 ```
+
+## 3.2B Extractor Failure Audit
+
+本步骤只读取 Benchmark 3 已保存的 trace，不加载模型：
+
+```powershell
+& ".\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v3_2 audit-extractor `
+  --source-result ".\agent_pipeline_v3\reports\benchmark_3_20260927T142334Z_3ceb30"
+```
+
+输出包括失败分类、逐调用成本、成本闭合以及按实际损失排序的3.2C schema假设。
