@@ -1176,3 +1176,12 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 修复后先保存转换并规范化的legacy partial payload，再调用严格decode；missing coverage异常现在可沿用partial结果，只为缺失span建立恢复窗口。新增回归测试复现“首轮漏S2、恢复轮处置S2”，修复前error、修复后ok。
 - 审计taxonomy同时识别Lean顶层字段错误为TOP_LEVEL_SCHEMA_ERROR，不再落入OTHER。相关17项测试、全项目527项测试通过。
 - 首次失败目录保留用于追责，不覆盖或改写；需新建3.2C结果目录重新运行后再评估性能与质量。
+
+## Step 103 — 2026-10-02 Benchmark 3.2C第二次正式运行与恢复边界修复
+
+- 第二次正式结果目录 `agent_pipeline_v3_2/reports/benchmark_3_2C_20261001T155030Z_bdb15b` 将24篇中的完整案例提升至22篇，但SL-012与SL-015仍为partial，共16个uncovered spans；因此本轮依旧不是有效质量候选，pending review 42条时的provisional recall/hallucination不能视为正式指标。
+- 性能观察保持明显收益：calls 103→101、output tokens 11714→8164、Decode 970.108→572.115秒、LLM total 1024.081→604.701秒、峰值allocated 3.208GB→2.944GB；这些数据需在结构完整且人工审核闭合后再决定是否可比。
+- 两个partial均由相同恢复边界问题造成：恢复窗口只要求S1/S8，模型正确处置S8时又重复输出已在首轮处置的S3；严格校验把越界处置ID视为错误，继而进入完整重试并遭遇新的顶层字段或枚举错误。
+- 新增恢复专用清理：仅从`ignored_span_ids`和`non_event_span_ids`删除不属于当前恢复targets的重复ID，并记录`recovery_out_of_scope_disposition_removed`；事件内容、source/context引用及全部语义字段仍按原规则严格验证，不放宽事实依据。
+- 新增回归测试覆盖越界处置清理；针对性7项、全项目528项通过。全量测试首次受系统pytest临时目录权限影响，改用仓库内临时目录后全部通过。
+- 第二次失败目录继续保留用于追责；需生成新的第三次结果目录，确认24/24完整、0 uncovered后再审核pending事件和计算最终质量门槛。

@@ -58,6 +58,30 @@ def _decode_with_changes(value: object, spans: dict[str, dict], window: dict, fi
     return _decode_window(normalized, spans, window, first_event_number), normalized, changes
 
 
+def _sanitize_recovery_value(value: object, recovery_window: dict) -> tuple[object, list[str]]:
+    """Drop only out-of-scope disposition IDs from a recovery response.
+
+    Recovery prompts ask the model to classify a small set of missing targets.  The
+    model can repeat an already handled span in one of the two disposition lists.
+    That repetition must not invalidate an otherwise useful recovery response.
+    Event references remain untouched and continue through strict validation.
+    """
+    if not isinstance(value, dict):
+        return value, []
+    target_ids = set(recovery_window.get("target_ids", []))
+    sanitized = dict(value)
+    changed = False
+    for field in ("ignored_span_ids", "non_event_span_ids"):
+        raw_ids = value.get(field)
+        if not isinstance(raw_ids, list):
+            continue
+        filtered = [span_id for span_id in raw_ids if span_id in target_ids]
+        if filtered != raw_ids:
+            sanitized[field] = filtered
+            changed = True
+    return sanitized, ["recovery_out_of_scope_disposition_removed"] if changed else []
+
+
 def _call_window(llm, messages: list[dict], spans: dict[str, dict], window: dict, first_event_number: int):
     attempts = []
     current = list(messages)
@@ -105,9 +129,13 @@ def _call_window(llm, messages: list[dict], spans: dict[str, dict], window: dict
                         [messages[0], {"role": "user", "content": json.dumps(payload, ensure_ascii=False, separators=(",", ":"))}],
                         max_new_tokens=1536,
                     )
-                    recovery_decoded, _, recovery_changes = _decode_with_changes(
-                        json.loads(recovery_raw), spans, recovery_window, first_event_number + len(base[0])
+                    recovery_value, sanitize_changes = _sanitize_recovery_value(
+                        json.loads(recovery_raw), recovery_window
                     )
+                    recovery_decoded, _, recovery_changes = _decode_with_changes(
+                        recovery_value, spans, recovery_window, first_event_number + len(base[0])
+                    )
+                    normalizations.extend(sanitize_changes)
                     normalizations.extend(recovery_changes)
                     attempts.append({
                         "attempt": len(attempts) + 1, "purpose": "recover_missing_targets", "status": "ok",

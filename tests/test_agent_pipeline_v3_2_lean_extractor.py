@@ -4,7 +4,7 @@ import json
 
 import pytest
 
-from agent_pipeline_v3_2.lean_extractor import decode_lean_window, extract_events_lean
+from agent_pipeline_v3_2.lean_extractor import _sanitize_recovery_value, decode_lean_window, extract_events_lean
 
 
 def spans():
@@ -108,3 +108,16 @@ def test_missing_coverage_uses_lean_recovery_payload():
     assert result["uncovered_span_ids"] == []
     assert result["calls"][0]["recovered_target_ids"] == ["S2"]
     assert len(result["calls"][0]["attempts"]) == 2
+
+
+
+def test_recovery_drops_dispositions_outside_recovery_targets():
+    value = {
+        "events": [],
+        "ignored_span_ids": ["S8"],
+        "non_event_span_ids": ["S3"],
+    }
+    sanitized, changes = _sanitize_recovery_value(value, {"target_ids": ["S1", "S8"], "context_ids": ["S6", "S7"]})
+    assert sanitized["ignored_span_ids"] == ["S8"]
+    assert sanitized["non_event_span_ids"] == []
+    assert changes == ["recovery_out_of_scope_disposition_removed"]
