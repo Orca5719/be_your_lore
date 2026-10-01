@@ -47,7 +47,7 @@ def classify_failure(*, error: str | None, error_type: str | None, raw_output: s
         return "JSON_PARSE_ERROR"
     if "输出上限" in error or "truncat" in lowered or "max_new_tokens" in lowered:
         return "TRUNCATED_OUTPUT"
-    if "输出必须且只能包含" in error or "顶层" in error and "字段" in error:
+    if "输出必须且只能包含" in error or "Lean wire必须且只能包含" in error or "顶层" in error and "字段" in error:
         return "TOP_LEVEL_SCHEMA_ERROR"
     if "事件字段" in error or "event字段" in lowered:
         return "EVENT_FIELD_ERROR"

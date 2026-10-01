@@ -69,8 +69,10 @@ def _call_window(llm, messages: list[dict], spans: dict[str, dict], window: dict
             llm.last_generation = {}
             raw = llm._generate(current, max_new_tokens=1536)
             value = json.loads(raw)
-            decoded, legacy_value, changes = _decode_with_changes(value, spans, window, first_event_number)
+            legacy_value = _to_legacy_wire(value)
+            legacy_value, changes = _normalize_window_value(legacy_value, spans, window)
             normalizations.extend(changes)
+            decoded = _decode_window(legacy_value, spans, window, first_event_number)
             attempts.append({"attempt": attempt_number + 1, "status": "ok", "raw_output": raw, "timing": dict(llm.last_generation)})
             return decoded, {"status": "ok", "attempts": attempts, "wire_normalizations": list(dict.fromkeys(normalizations))}
         except (ValueError, RuntimeError, OSError, json.JSONDecodeError) as exc:

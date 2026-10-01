@@ -1168,3 +1168,11 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 新增固定24篇Extractor-only运行：共享一次模型、1篇预热不计入统计、逐篇原子保存、断点续跑、逐调用profiling、失败成本审计及旧/新性能表。
 - 质量审核只复用事件完整语义字段完全相同的旧assistant-reviewed决定；新事件或变化事件标记pending_review，不用旧event ID强行评分。质量门槛要求Recall最多少1个gold、无新增uncovered span、hallucination不增加。
 - 3.2C相关测试20项、全项目526项全部通过；正式CUDA运行交给用户执行。
+
+## Step 102 — 2026-10-01 Benchmark 3.2C首次正式运行与coverage recovery修复
+
+- 首次正式结果目录 `agent_pipeline_v3_2/reports/benchmark_3_2C_20261001T153437Z_3bb077` 性能明显改善：Extractor calls 103→94、output tokens 11714→9236、Decode 970.108→586.009秒、LLM total 1024.081→617.609秒；但12/24故事partial并产生96个uncovered spans，因此本轮不能作为有效质量/性能候选。
+- 根因定位为Lean适配器结构错误：Lean payload转换与严格decode封装在同一函数，decode抛出missing coverage时，调用方拿不到已经成功转换的partial payload，导致coverage recovery条件始终不成立。报告中recovery_cost=0是该结构错误的直接信号。
+- 修复后先保存转换并规范化的legacy partial payload，再调用严格decode；missing coverage异常现在可沿用partial结果，只为缺失span建立恢复窗口。新增回归测试复现“首轮漏S2、恢复轮处置S2”，修复前error、修复后ok。
+- 审计taxonomy同时识别Lean顶层字段错误为TOP_LEVEL_SCHEMA_ERROR，不再落入OTHER。相关17项测试、全项目527项测试通过。
+- 首次失败目录保留用于追责，不覆盖或改写；需新建3.2C结果目录重新运行后再评估性能与质量。

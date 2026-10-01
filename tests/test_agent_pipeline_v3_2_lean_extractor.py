@@ -90,3 +90,21 @@ def test_extract_events_lean_returns_existing_canonical_report_schema():
     assert result["prompt_version"] == "extractor-lean-v1"
     assert result["status"] == "ok"
     assert result["events"][0]["explicit"] is True
+
+
+def test_missing_coverage_uses_lean_recovery_payload():
+    first = json.dumps({
+        "events": [{
+            "actors": ["雷"], "event": "雷捂住左胸", "modality": "observed",
+            "source_ids": ["S1"], "context_ids": [], "check_reason": "mechanism",
+        }],
+        "ignored_span_ids": [], "non_event_span_ids": [],
+    }, ensure_ascii=False)
+    recovery = json.dumps({
+        "events": [], "ignored_span_ids": ["S2"], "non_event_span_ids": [],
+    }, ensure_ascii=False)
+    result = extract_events_lean("雷捂住左胸，喝了一口水。", device="cuda", llm=FakeLLM([first, recovery]))
+    assert result["status"] == "ok"
+    assert result["uncovered_span_ids"] == []
+    assert result["calls"][0]["recovered_target_ids"] == ["S2"]
+    assert len(result["calls"][0]["attempts"]) == 2
