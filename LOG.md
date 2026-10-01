@@ -1131,3 +1131,12 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 正式审计发现`LLM-000073`的3行Judge batch中仅第3行截断，但旧审计把整批1039 tokens标为unprojectable，连带漏掉前两行的字段成本与Lean Projection。
 - 审计器现在使用batch timing内与request_ids对齐的逐行generated_tokens：有效行继续拆字段，损坏行仅按自身实测token保守计入；缺少可靠逐行token的旧trace仍回退为整批保守记账。
 - 新增混合batch与旧trace回退测试。修正仅影响离线成本归因，不修改Judge、prompt、判决、Benchmark 3原始trace或质量结论，也不需要重新运行模型。
+
+## Step 98 — 2026-10-01 Benchmark 3.2A：Lean Judge
+
+- 从已整合Benchmark 3.1的分支建立 `benchmark/3.2-lean-generation`；本步只实现3.2A，3.2B失败审计与3.2C Lean Extractor保持未开始。
+- 复用Benchmark 3保存的24篇、80个Extraction/Retrieval输入，只重新运行Judge；新协议严格只允许`verdict`与`evidence_ids`，明确结论必须引用有效L编号，uncertain允许空数组。
+- 删除模型输出中的quote、reason和assessment；不再使用依赖assessment的scope guard。Prompt仍规定只有两个命题无法同时为真时才能判矛盾，实验直接测量精简协议的质量变化。
+- evidence ID由程序解析回真实chunk_id；报告只展示结论与证据，不伪造自然语言解释。输出预算从768降到128 tokens，batch固定8，失败行仍最多重试一次。
+- 新增冻结输入摘要校验、一次预热、逐故事原子保存与断点续跑；自动输出质量/性能对照、逐调用CSV和逐事实verdict变化表。
+- 新增测试10项通过；关联profiling/scoring回归共22项通过；真实输入校验确认24篇、80事实，离线报告演练复现Judge Accuracy 72.73%与End-to-End F1 70.59%。正式CUDA运行交给用户执行。
