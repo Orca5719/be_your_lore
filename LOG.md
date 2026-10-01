@@ -1157,3 +1157,14 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 加入强制成本闭合：calls、input/output tokens、Prefill/Decode/Total必须在三个成本桶中精确对账；按实测浪费时间生成3.2C schema假设排序，不把batch共享时间伪分到不存在的行。
 - 临时真实trace冒烟结果：103次调用中27次pure waste耗时400.370秒、输出4598 tokens，占Extractor LLM时间39.10%；16次成功恢复耗时64.995秒；60次有效调用耗时558.716秒。MISSING_TARGET_COVERAGE为首因，20次共303.402秒。
 - 3.2B新增测试13项通过；正式结果仍由用户运行并确认后再进入3.2C。
+
+## Step 101 — 2026-10-01 Benchmark 3.2B正式结果与3.2C Lean Extractor实现
+
+- 3.2B正式目录 `agent_pipeline_v3_2/reports/benchmark_3_2B_20261001T152359Z_1a1032` 对账通过：24篇、103次Extractor调用，calls/token/time全部闭合，确认未加载模型且未调用generate。
+- 正式成本与冒烟一致：27次pure waste消耗4598 output tokens与400.370秒（39.10%）；16次成功coverage recovery消耗720 tokens与64.995秒；60次有效调用消耗6396 tokens与558.716秒。
+- MISSING_TARGET_COVERAGE为主因：20次、3489 output tokens、303.402秒，占pure waste时间75.78%；其后依次为枚举/类型、事件字段、引用/处置、JSON解析和顶层schema错误。
+- 新增Lean Extractor wire：事件只要求actors/event/modality/source_ids/context_ids/check_reason，mental_state与conditions仅非空时输出；删除explicit并由modality确定性恢复；ignored_spans改为ignored_span_ids，程序统一恢复为旧canonical结构。
+- 三路覆盖验证、主体原文依据、引用范围、枚举及旧`agent-pipeline-v2-extraction-v1`下游接口保持不变；缺失覆盖仍会进入小窗口恢复，生成上限和窗口参数保持原基线以隔离schema变量。
+- 新增固定24篇Extractor-only运行：共享一次模型、1篇预热不计入统计、逐篇原子保存、断点续跑、逐调用profiling、失败成本审计及旧/新性能表。
+- 质量审核只复用事件完整语义字段完全相同的旧assistant-reviewed决定；新事件或变化事件标记pending_review，不用旧event ID强行评分。质量门槛要求Recall最多少1个gold、无新增uncovered span、hallucination不增加。
+- 3.2C相关测试20项、全项目526项全部通过；正式CUDA运行交给用户执行。

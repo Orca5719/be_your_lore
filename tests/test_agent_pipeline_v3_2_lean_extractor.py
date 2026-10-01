@@ -1,0 +1,92 @@
+from __future__ import annotations
+
+import json
+
+import pytest
+
+from agent_pipeline_v3_2.lean_extractor import decode_lean_window, extract_events_lean
+
+
+def spans():
+    return {
+        "S1": {"text": "雷捂住左胸，", "start": 0, "end": 7},
+        "S2": {"text": "感到亚巴顿开始躁动。", "start": 7, "end": 18},
+    }
+
+
+def test_lean_wire_restores_canonical_defaults_and_ignored_reason():
+    value = {
+        "events": [{
+            "actors": ["雷"], "event": "雷捂住左胸", "modality": "observed",
+            "source_ids": ["S1"], "context_ids": [], "check_reason": "mechanism",
+        }],
+        "ignored_span_ids": ["S2"],
+        "non_event_span_ids": [],
+    }
+    events, ignored, non_events = decode_lean_window(value, spans(), {"target_ids": ["S1", "S2"], "context_ids": []}, 1)
+    assert events[0]["explicit"] is True
+    assert events[0]["mental_state"] is None
+    assert events[0]["conditions"] == []
+    assert ignored == [{"source_id": "S2", "reason": "process_detail"}]
+    assert non_events == []
+
+
+def test_inferred_derives_explicit_false_and_optional_fields_survive():
+    value = {
+        "events": [{
+            "actors": ["雷"], "event": "雷可能感到异常", "modality": "inferred",
+            "mental_state": "不安", "conditions": ["左胸疼痛"],
+            "source_ids": ["S1"], "context_ids": [], "check_reason": "consequence_support",
+        }],
+        "ignored_span_ids": [], "non_event_span_ids": ["S2"],
+    }
+    events, _, _ = decode_lean_window(value, spans(), {"target_ids": ["S1", "S2"], "context_ids": []}, 1)
+    assert events[0]["explicit"] is False
+    assert events[0]["mental_state"] == "不安"
+    assert events[0]["conditions"] == ["左胸疼痛"]
+
+
+def test_lean_wire_rejects_uncovered_target():
+    value = {"events": [], "ignored_span_ids": ["S1"], "non_event_span_ids": []}
+    with pytest.raises(ValueError, match="未覆盖"):
+        decode_lean_window(value, spans(), {"target_ids": ["S1", "S2"], "context_ids": []}, 1)
+
+
+def test_lean_wire_rejects_removed_or_extra_fields():
+    value = {
+        "events": [{
+            "actors": ["雷"], "event": "雷捂住左胸", "modality": "observed", "explicit": True,
+            "source_ids": ["S1"], "context_ids": [], "check_reason": "mechanism",
+        }],
+        "ignored_span_ids": ["S2"], "non_event_span_ids": [],
+    }
+    with pytest.raises(ValueError, match="Lean wire"):
+        decode_lean_window(value, spans(), {"target_ids": ["S1", "S2"], "context_ids": []}, 1)
+
+
+class FakeLLM:
+    device = "cuda"
+    load_seconds = 0.0
+
+    def __init__(self, outputs):
+        self.outputs = list(outputs)
+        self.last_generation = {}
+
+    def _generate(self, messages, max_new_tokens=1536):
+        self.last_generation = {"call_id": f"LLM-{len(self.outputs):06d}", "generated_tokens": 10, "seconds": 0.1}
+        return self.outputs.pop(0)
+
+
+def test_extract_events_lean_returns_existing_canonical_report_schema():
+    raw = json.dumps({
+        "events": [{
+            "actors": ["雷"], "event": "雷捂住左胸", "modality": "observed",
+            "source_ids": ["S1"], "context_ids": [], "check_reason": "mechanism",
+        }],
+        "ignored_span_ids": [], "non_event_span_ids": [],
+    }, ensure_ascii=False)
+    result = extract_events_lean("雷捂住左胸，", device="cuda", llm=FakeLLM([raw]))
+    assert result["schema_version"] == "agent-pipeline-v2-extraction-v1"
+    assert result["prompt_version"] == "extractor-lean-v1"
+    assert result["status"] == "ok"
+    assert result["events"][0]["explicit"] is True

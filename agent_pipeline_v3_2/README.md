@@ -19,3 +19,11 @@
 ```
 
 输出包括失败分类、逐调用成本、成本闭合以及按实际损失排序的3.2C schema假设。
+
+## 3.2C Lean Extractor
+
+模型输出精简为事件核心字段与两个ID账本；适配层恢复旧规范结构。正式运行固定CUDA，并只复用完全相同事件的旧审核决定；变化事件标记pending。
+
+```powershell
+& ".\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v3_2 run-extractor --device cuda
+```

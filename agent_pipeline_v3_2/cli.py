@@ -13,6 +13,8 @@ from agent_pipeline_v3.model import MODEL, REVISION, ProfiledV2QwenJudge
 from .extractor_audit import run_extractor_audit
 from .extractor_report import write_extractor_markdown
 from .frozen import load_and_validate_source
+from .lean_extractor import extract_events_lean
+from .lean_extractor_benchmark import run_extraction_cases, summarize_extractor, write_extractor_outputs
 from .lean_judge import judge_frozen_retrieval
 from .report import write_outputs
 from .runner import run_rows, write_json_atomic
@@ -162,6 +164,51 @@ def audit_extractor_command(args) -> int:
     }, ensure_ascii=False))
     return 0
 
+def run_extractor_command(args) -> int:
+    if args.device != "cuda":
+        raise ValueError("Benchmark 3.2C formal run is fixed to CUDA")
+    source = load_and_validate_source(args.source_result)
+    dataset = _read(DATASET)
+    previous_review = _read(REVIEW)
+    source_profile = _read(source["source"] / "profile_summary.json")
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    output = (args.output or REPORT_ROOT / f"benchmark_3_2C_{stamp}_{uuid.uuid4().hex[:6]}").resolve()
+    output.mkdir(parents=True, exist_ok=True)
+    manifest = {
+        "schema_version": "agent-pipeline-v3.2-lean-extractor-manifest-v1",
+        "source": str(source["source"]), "source_hashes": source["hashes"],
+        "model": MODEL, "revision": REVISION, "device": args.device,
+        "prompt_sha256": __import__("hashlib").sha256((Path(__file__).parent / "prompts" / "lean_extractor_v1.txt").read_bytes()).hexdigest(),
+    }
+    manifest_path = output / "manifest.json"
+    if manifest_path.exists() and _read(manifest_path) != manifest:
+        raise ValueError("resume manifest mismatch")
+    write_json_atomic(manifest_path, manifest)
+    print("RESULT_DIR=" + str(output), flush=True)
+    run_path = output / "extractor_runs.jsonl"
+    existing = len(run_path.read_text(encoding="utf-8").splitlines()) if run_path.exists() else 0
+    llm = ProfiledV2QwenJudge(args.device)
+    if existing == 0:
+        from agent_pipeline_v2_1.extractor import ExtractionRepairLLM
+        warmup = dataset["cases"][0]
+        print("[WARMUP] " + warmup["id"], flush=True)
+        llm.set_story_id("WARMUP")
+        extract_events_lean(warmup["story"], device=llm.device, llm=ExtractionRepairLLM(llm))
+        llm.clear_traces()
+    rows = run_extraction_cases(dataset["cases"], llm, output, lambda completed, total, case_id: print(f"[STORY {completed}/{total}] {case_id}", flush=True))
+    metadata_path = output / "run_metadata.json"
+    metadata = _read(metadata_path) if metadata_path.exists() else {"model_load_seconds": 0.0}
+    metadata["model_load_seconds"] = float(metadata.get("model_load_seconds", 0.0)) + float(llm.load_seconds)
+    write_json_atomic(metadata_path, metadata)
+    summary = summarize_extractor(
+        dataset=dataset, source_rows=source["rows"], lean_rows=rows, previous_review=previous_review,
+        baseline_profile=source_profile, model_load_seconds=metadata["model_load_seconds"],
+    )
+    write_extractor_outputs(output, summary)
+    print("SUMMARY=" + str(output / "extractor_lean_summary.md"), flush=True)
+    print(json.dumps({"quality_gate": summary["quality_gate"]["status"], "pending_event_reviews": summary["review"]["pending_event_count"], "extractor_calls": summary["performance"]["lean"]["calls"], "output_tokens": summary["performance"]["lean"]["output_tokens"], "total_seconds": summary["performance"]["lean"]["total_seconds"]}, ensure_ascii=False))
+    return 0
+
 def build_parser():
     parser = argparse.ArgumentParser(description="Benchmark 3.2 Lean Generation experiments")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -178,6 +225,11 @@ def build_parser():
     audit.add_argument("--source-result", type=Path, default=DEFAULT_SOURCE)
     audit.add_argument("--output", type=Path)
     audit.set_defaults(func=audit_extractor_command)
+    extract = sub.add_parser("run-extractor")
+    extract.add_argument("--source-result", type=Path, default=DEFAULT_SOURCE)
+    extract.add_argument("--device", choices=("cuda",), default="cuda")
+    extract.add_argument("--output", type=Path)
+    extract.set_defaults(func=run_extractor_command)
     return parser
 
 
