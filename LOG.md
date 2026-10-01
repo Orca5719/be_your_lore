@@ -1140,3 +1140,11 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - evidence ID由程序解析回真实chunk_id；报告只展示结论与证据，不伪造自然语言解释。输出预算从768降到128 tokens，batch固定8，失败行仍最多重试一次。
 - 新增冻结输入摘要校验、一次预热、逐故事原子保存与断点续跑；自动输出质量/性能对照、逐调用CSV和逐事实verdict变化表。
 - 新增测试10项通过；关联profiling/scoring回归共22项通过；真实输入校验确认24篇、80事实，离线报告演练复现Judge Accuracy 72.73%与End-to-End F1 70.59%。正式CUDA运行交给用户执行。
+
+## Step 99 — 2026-10-01 Benchmark 3.2A 正式结果
+
+- 正式结果目录 `agent_pipeline_v3_2/reports/benchmark_3_2A_20261001T151227Z_cf125b` 完成24篇、80事实；24个story均ok，23次Judge调用全部ok，0次重试，LLM调用时间与workflow时间对账闭合。
+- Judge输出token从13158降至1131（-91.40%），Decode从531.421秒降至22.756秒（-95.72%），LLM总时间从571.928秒降至41.814秒（-92.69%）；TTFT p50从1522.799ms降至790.254ms，峰值allocated从4005782016降至3487717888 bytes。
+- Judge Accuracy从72.73%降至56.06%；FP 9→11，FN 6→5。端到端Precision/Recall/F1从66.67%/75.00%/70.59%变为63.33%/79.17%/70.37%，冲突检测F1基本持平但三分类校准明显退化。
+- 18/80 verdict发生变化，全部由旧版uncertain变为明确结论：15条变consistent、3条变contradiction。新混淆矩阵中24条gold uncertain仅1条仍判uncertain，表明移除assessment/scope guard后Lean Judge显著过度自信。
+- 结论：3.2A性能实验成功且收益明确，但当前Lean Judge不能直接替换旧Judge；其主要质量代价是uncertain边界丢失，而非冲突召回下降。本轮按计划冻结观察，不在同一实验内追加修复。
