@@ -179,3 +179,31 @@ def test_single_span_disposition_recovers_ordinary_scene_without_losing_event():
     assert result["events"][0]["event"] == "雷捂住左胸"
     assert result["ignored_spans"] == [{"source_id": "S2", "reason": "process_detail"}]
     assert result["calls"][0]["attempts"][-1]["purpose"] == "recover_disposition"
+
+
+def test_second_attempt_repairs_unambiguous_field_case_without_losing_window():
+    first = json.dumps({
+        "events": [{"actors": ["雷"], "event": "雷胸痛", "modality": "observed",
+                    "source_Ids": ["S1"], "context_ids": [], "check_reason": "mechanism"}],
+        "ignored_span_ids": ["S2"], "non_event_span_ids": [],
+    }, ensure_ascii=False)
+    second = json.dumps({
+        "events": [{"actors": ["雷"], "event": "雷捂住左胸", "modality": "observed",
+                    "source_Ids": ["S1"], "context_ids": [], "check_reason": "mechanism"}],
+        "ignored_span_ids": ["S2"], "non_event_span_ids": [],
+    }, ensure_ascii=False)
+    result = extract_events_lean("雷捂住左胸，喝了一口水。", device="cuda", llm=FakeLLM([first, second]))
+    assert result["status"] == "ok"
+    assert result["events"][0]["event"] == "雷捂住左胸"
+    assert result["calls"][0]["wire_normalizations"] == ["event_field_case_normalized"]
+
+
+def test_second_attempt_does_not_merge_ambiguous_duplicate_field_names():
+    ambiguous = json.dumps({
+        "events": [{"actors": ["雷"], "event": "雷捂住左胸", "modality": "observed",
+                    "source_ids": ["S1"], "source_Ids": ["S2"], "context_ids": [], "check_reason": "mechanism"}],
+        "ignored_span_ids": [], "non_event_span_ids": [],
+    }, ensure_ascii=False)
+    result = extract_events_lean("雷捂住左胸，喝了一口水。", device="cuda", llm=FakeLLM([ambiguous, ambiguous]))
+    assert result["status"] == "error"
+    assert "事件字段" in result["rejected"][0]["error"]

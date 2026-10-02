@@ -29,6 +29,29 @@ OPTIONAL_EVENT_FIELDS = {"mental_state", "conditions"}
 TOP_LEVEL_FIELDS = {"events", "ignored_span_ids", "non_event_span_ids"}
 
 
+def _normalize_event_field_case(value: object) -> tuple[object, list[str]]:
+    if not isinstance(value, dict) or not isinstance(value.get("events"), list):
+        return value, []
+    known = {field.casefold(): field for field in REQUIRED_EVENT_FIELDS | OPTIONAL_EVENT_FIELDS}
+    normalized_events = []
+    changed = False
+    for event in value["events"]:
+        if not isinstance(event, dict):
+            normalized_events.append(event)
+            continue
+        normalized = {}
+        for key, item in event.items():
+            canonical = known.get(key.casefold(), key) if isinstance(key, str) else key
+            if canonical in normalized:
+                raise ValueError("事件字段大小写冲突")
+            normalized[canonical] = item
+            changed |= canonical != key
+        normalized_events.append(normalized)
+    if not changed:
+        return value, []
+    return {**value, "events": normalized_events}, ["event_field_case_normalized"]
+
+
 def _to_legacy_wire(value: object) -> dict:
     if not isinstance(value, dict) or set(value) != TOP_LEVEL_FIELDS:
         raise ValueError("Lean wire必须且只能包含events、ignored_span_ids、non_event_span_ids")
@@ -123,6 +146,9 @@ def _call_window(llm, messages: list[dict], spans: dict[str, dict], window: dict
             llm.last_generation = {}
             raw = llm._generate(current, max_new_tokens=1536)
             value = json.loads(raw)
+            if attempt_number == 1:
+                value, key_changes = _normalize_event_field_case(value)
+                normalizations.extend(key_changes)
             legacy_value = _to_legacy_wire(value)
             legacy_value, changes = _normalize_window_value(legacy_value, spans, window)
             normalizations.extend(changes)
