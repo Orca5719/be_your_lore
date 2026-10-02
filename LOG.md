@@ -1185,3 +1185,11 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 新增恢复专用清理：仅从`ignored_span_ids`和`non_event_span_ids`删除不属于当前恢复targets的重复ID，并记录`recovery_out_of_scope_disposition_removed`；事件内容、source/context引用及全部语义字段仍按原规则严格验证，不放宽事实依据。
 - 新增回归测试覆盖越界处置清理；针对性7项、全项目528项通过。全量测试首次受系统pytest临时目录权限影响，改用仓库内临时目录后全部通过。
 - 第二次失败目录继续保留用于追责；需生成新的第三次结果目录，确认24/24完整、0 uncovered后再审核pending事件和计算最终质量门槛。
+
+## Step 104 — 2026-10-02 Benchmark 3.2C第三次正式运行与剩余片段恢复修复
+
+- 第三次正式结果目录 `agent_pipeline_v3_2/reports/benchmark_3_2C_20261002T151426Z_be7015` 仍为22/24完整、16个uncovered spans、42条pending review；性能观察为101次调用、8164 output tokens、498.546秒LLM总时间。Recall 1.0与幻觉0因审核未完成，不能作为正式质量结论。
+- SL-012与SL-015在同一故事模板下重现：首轮漏S1/S8，恢复轮处理S8却继续漏S1；上轮越界处置清理已生效，但流程没有针对剩余S1再发起恢复，整窗口重试又分别发生顶层字段和枚举错误。
+- 恢复流程现在最多再对剩余target做一次单独补提，并明确要求把每个target归入事件、忽略或非事件；保留前轮已验证的事实与处置，不重新生成它们。
+- 若补提和完整重试仍失败，返回最佳有效部分，只把确实未覆盖的target列入`uncovered_span_ids`，避免整窗口已有效内容丢失；不自动臆断遗漏片段的语义类别。
+- 新增部分恢复成功和最终恢复失败两项回归测试；全项目530项测试通过。正式CUDA重测仍由用户执行，新结果需检查24/24完整、0 uncovered并完成pending事件审核。

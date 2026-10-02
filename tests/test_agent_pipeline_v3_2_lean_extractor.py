@@ -121,3 +121,43 @@ def test_recovery_drops_dispositions_outside_recovery_targets():
     assert sanitized["ignored_span_ids"] == ["S8"]
     assert sanitized["non_event_span_ids"] == []
     assert changes == ["recovery_out_of_scope_disposition_removed"]
+
+
+def test_partial_recovery_retries_only_the_remaining_target():
+    class RecordingLLM(FakeLLM):
+        def __init__(self, outputs):
+            super().__init__(outputs)
+            self.payloads = []
+
+        def _generate(self, messages, max_new_tokens=1536):
+            self.payloads.append(json.loads(messages[-1]["content"]))
+            return super()._generate(messages, max_new_tokens=max_new_tokens)
+
+    first = json.dumps({"events": [], "ignored_span_ids": [], "non_event_span_ids": []})
+    partial = json.dumps({"events": [], "ignored_span_ids": ["S2"], "non_event_span_ids": []})
+    final = json.dumps({"events": [], "ignored_span_ids": ["S1"], "non_event_span_ids": []})
+    llm = RecordingLLM([first, partial, final])
+    result = extract_events_lean("雷捂住左胸，喝了一口水。", device="cuda", llm=llm)
+    assert result["status"] == "ok"
+    assert result["uncovered_span_ids"] == []
+    assert {row["source_id"] for row in result["ignored_spans"]} == {"S1", "S2"}
+    assert list(llm.payloads[2]["target_spans"]) == ["S1"]
+    assert len(result["calls"][0]["attempts"]) == 3
+
+
+def test_failed_followup_keeps_valid_events_and_reports_only_missing_span():
+    first = json.dumps({
+        "events": [{
+            "actors": ["雷"], "event": "雷捂住左胸", "modality": "observed",
+            "source_ids": ["S1"], "context_ids": [], "check_reason": "mechanism",
+        }],
+        "ignored_span_ids": [], "non_event_span_ids": [],
+    }, ensure_ascii=False)
+    no_coverage = json.dumps({"events": [], "ignored_span_ids": [], "non_event_span_ids": []})
+    result = extract_events_lean(
+        "雷捂住左胸，喝了一口水。", device="cuda",
+        llm=FakeLLM([first, no_coverage, no_coverage, '{"events":[],"ignored_span_ids":[],"non_event_span_ids":[],"extra":[]}']),
+    )
+    assert result["status"] == "partial"
+    assert result["uncovered_span_ids"] == ["S2"]
+    assert result["events"][0]["event"] == "雷捂住左胸"

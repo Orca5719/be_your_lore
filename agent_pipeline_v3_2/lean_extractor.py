@@ -86,6 +86,8 @@ def _call_window(llm, messages: list[dict], spans: dict[str, dict], window: dict
     attempts = []
     current = list(messages)
     normalizations: list[str] = []
+    best_partial = None
+    best_missing = list(window["target_ids"])
     for attempt_number in range(2):
         raw = ""
         legacy_value = None
@@ -111,6 +113,8 @@ def _call_window(llm, messages: list[dict], spans: dict[str, dict], window: dict
                 partial_window = {"target_ids": disposed, "context_ids": list(dict.fromkeys(window["context_ids"] + missing))}
                 try:
                     base = _decode_window(legacy_value, spans, partial_window, first_event_number)
+                    if len(missing) < len(best_missing):
+                        best_partial, best_missing = base, missing
                     ordered = window["context_ids"] + window["target_ids"]
                     recovery_context = []
                     for span_id in missing:
@@ -124,24 +128,60 @@ def _call_window(llm, messages: list[dict], spans: dict[str, dict], window: dict
                         "target_spans": {span_id: spans[span_id]["text"] for span_id in recovery_window["target_ids"]},
                         "context_spans": {span_id: spans[span_id]["text"] for span_id in recovery_window["context_ids"]},
                     }
-                    llm.last_generation = {}
-                    recovery_raw = llm._generate(
-                        [messages[0], {"role": "user", "content": json.dumps(payload, ensure_ascii=False, separators=(",", ":"))}],
-                        max_new_tokens=1536,
-                    )
-                    recovery_value, sanitize_changes = _sanitize_recovery_value(
-                        json.loads(recovery_raw), recovery_window
-                    )
-                    recovery_decoded, _, recovery_changes = _decode_with_changes(
-                        recovery_value, spans, recovery_window, first_event_number + len(base[0])
-                    )
-                    normalizations.extend(sanitize_changes)
-                    normalizations.extend(recovery_changes)
-                    attempts.append({
-                        "attempt": len(attempts) + 1, "purpose": "recover_missing_targets", "status": "ok",
-                        "raw_output": recovery_raw, "timing": dict(llm.last_generation),
-                    })
-                    combined = (base[0] + recovery_decoded[0], base[1] + recovery_decoded[1], base[2] + recovery_decoded[2])
+                    recovered = ([], [], [])
+                    for recovery_round in range(2):
+                        llm.last_generation = {}
+                        recovery_raw = llm._generate(
+                            [messages[0], {"role": "user", "content": json.dumps(payload, ensure_ascii=False, separators=(",", ":"))}],
+                            max_new_tokens=1536,
+                        )
+                        recovery_value, sanitize_changes = _sanitize_recovery_value(
+                            json.loads(recovery_raw), recovery_window
+                        )
+                        normalizations.extend(sanitize_changes)
+                        legacy_recovery = _to_legacy_wire(recovery_value)
+                        normalized_recovery, recovery_changes = _normalize_window_value(
+                            legacy_recovery, spans, recovery_window
+                        )
+                        normalizations.extend(recovery_changes)
+                        try:
+                            recovery_decoded = _decode_window(
+                                normalized_recovery, spans, recovery_window,
+                                first_event_number + len(base[0]) + len(recovered[0]),
+                            )
+                            remaining = []
+                        except ValueError as coverage_exc:
+                            coverage_error = str(coverage_exc)
+                            if not coverage_error.startswith("存在未覆盖的target_spans：") or recovery_round == 1:
+                                raise
+                            remaining = coverage_error.split("：", 1)[1].split(",")
+                            handled = [span_id for span_id in recovery_window["target_ids"] if span_id not in remaining]
+                            recovery_decoded = _decode_window(
+                                normalized_recovery, spans,
+                                {"target_ids": handled, "context_ids": list(dict.fromkeys(recovery_window["context_ids"] + remaining))},
+                                first_event_number + len(base[0]) + len(recovered[0]),
+                            )
+                        recovered = tuple(left + right for left, right in zip(recovered, recovery_decoded))
+                        if len(remaining) < len(best_missing):
+                            best_partial = tuple(left + right for left, right in zip(base, recovered))
+                            best_missing = remaining
+                        attempts.append({
+                            "attempt": len(attempts) + 1, "purpose": "recover_missing_targets", "status": "ok",
+                            "raw_output": recovery_raw, "timing": dict(llm.last_generation),
+                            "remaining_target_ids": remaining,
+                        })
+                        if not remaining:
+                            break
+                        recovery_window = {
+                            "target_ids": remaining,
+                            "context_ids": list(dict.fromkeys(recovery_window["context_ids"] + handled)),
+                        }
+                        payload = {
+                            "target_spans": {span_id: spans[span_id]["text"] for span_id in remaining},
+                            "context_spans": {span_id: spans[span_id]["text"] for span_id in recovery_window["context_ids"]},
+                            "coverage_instruction": "必须将每个target_span归入events、ignored_span_ids或non_event_span_ids，不能遗漏。",
+                        }
+                    combined = tuple(left + right for left, right in zip(base, recovered))
                     return combined, {
                         "status": "ok", "attempts": attempts,
                         "wire_normalizations": list(dict.fromkeys(normalizations)), "recovered_target_ids": missing,
@@ -159,6 +199,12 @@ def _call_window(llm, messages: list[dict], spans: dict[str, dict], window: dict
                 }]
                 continue
             break
+    if best_partial is not None:
+        return best_partial, {
+            "status": "partial", "attempts": attempts,
+            "wire_normalizations": list(dict.fromkeys(normalizations)),
+            "uncovered_target_ids": best_missing,
+        }
     return None, {"status": "error", "attempts": attempts, "wire_normalizations": list(dict.fromkeys(normalizations))}
 
 
@@ -192,6 +238,12 @@ def extract_events_lean(text: str, device: str = "auto", llm=None, progress=None
             failed_targets.extend(window["target_ids"])
             rejected.append({"window_id": window_id, "target_ids": window["target_ids"], "error": call["attempts"][-1]["error"]})
             continue
+        if call["status"] == "partial":
+            failed_targets.extend(call["uncovered_target_ids"])
+            rejected.append({
+                "window_id": window_id, "target_ids": call["uncovered_target_ids"],
+                "error": "恢复后仍有未覆盖的target_spans：" + ",".join(call["uncovered_target_ids"]),
+            })
         window_events, window_ignored, window_non_events = decoded
         events.extend(window_events)
         ignored.extend(window_ignored)
