@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 from datetime import datetime, timezone
+import hashlib
 import json
 from pathlib import Path
 import uuid
@@ -209,6 +210,40 @@ def run_extractor_command(args) -> int:
     print(json.dumps({"quality_gate": summary["quality_gate"]["status"], "pending_event_reviews": summary["review"]["pending_event_count"], "extractor_calls": summary["performance"]["lean"]["calls"], "output_tokens": summary["performance"]["lean"]["output_tokens"], "total_seconds": summary["performance"]["lean"]["total_seconds"]}, ensure_ascii=False))
     return 0
 
+
+def score_extractor_command(args) -> int:
+    result_dir = args.result_dir.resolve()
+    manifest = _read(result_dir / "manifest.json")
+    source = load_and_validate_source(Path(manifest["source"]))
+    if manifest["source_hashes"] != source["hashes"]:
+        raise ValueError("source hashes changed since extractor run")
+    dataset = _read(DATASET)
+    previous_review = _read(REVIEW)
+    source_profile = _read(source["source"] / "profile_summary.json")
+    rows = [json.loads(line) for line in (result_dir / "extractor_runs.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
+    decision_file = args.review_file or result_dir / "lean_extractor_review_decisions.json"
+    decision_data = _read(decision_file)
+    if decision_data.get("schema_version") != "agent-pipeline-v3.2-extractor-review-decisions-v1":
+        raise ValueError("unsupported extractor review decisions schema")
+    run_hash = hashlib.sha256((result_dir / "extractor_runs.jsonl").read_bytes()).hexdigest()
+    if decision_data.get("result_dir") != result_dir.name or decision_data.get("extractor_runs_sha256") != run_hash:
+        raise ValueError("review decisions do not match this extractor run")
+    metadata = _read(result_dir / "run_metadata.json")
+    summary = summarize_extractor(
+        dataset=dataset, source_rows=source["rows"], lean_rows=rows, previous_review=previous_review,
+        baseline_profile=source_profile, model_load_seconds=metadata["model_load_seconds"],
+        review_decisions=decision_data["decisions"],
+    )
+    output = result_dir / "reviewed"
+    output.mkdir(exist_ok=True)
+    write_extractor_outputs(output, summary)
+    print("SUMMARY=" + str(output / "extractor_lean_summary.md"), flush=True)
+    print(json.dumps({"quality_gate": summary["quality_gate"], "quality": {
+        "baseline": {key: summary["quality"]["baseline"][key] for key in ("recall", "precision", "hallucination_rate", "overselection_rate")},
+        "lean": {key: summary["quality"]["lean"][key] for key in ("recall", "precision", "hallucination_rate", "overselection_rate")},
+    }}, ensure_ascii=False))
+    return 0
+
 def build_parser():
     parser = argparse.ArgumentParser(description="Benchmark 3.2 Lean Generation experiments")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -230,6 +265,10 @@ def build_parser():
     extract.add_argument("--device", choices=("cuda",), default="cuda")
     extract.add_argument("--output", type=Path)
     extract.set_defaults(func=run_extractor_command)
+    score_extract = sub.add_parser("score-extractor")
+    score_extract.add_argument("--result-dir", type=Path, required=True)
+    score_extract.add_argument("--review-file", type=Path)
+    score_extract.set_defaults(func=score_extractor_command)
     return parser
 
 

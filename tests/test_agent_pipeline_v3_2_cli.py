@@ -18,3 +18,10 @@ def test_cli_exposes_lean_extractor_command():
     args = build_parser().parse_args(["run-extractor", "--device", "cuda"])
     assert args.command == "run-extractor"
     assert args.device == "cuda"
+
+
+def test_cli_exposes_offline_extractor_scoring():
+    from agent_pipeline_v3_2.cli import build_parser
+    args = build_parser().parse_args(["score-extractor", "--result-dir", "some-result"])
+    assert args.command == "score-extractor"
+    assert str(args.result_dir) == "some-result"

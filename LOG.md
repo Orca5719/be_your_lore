@@ -1215,3 +1215,12 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 在格式重试后的第二次结果中新增通用字段大小写归一化：仅对已知事件字段、且映射唯一时修正大小写，记录`event_field_case_normalized`；同一事件出现大小写冲突或未知字段仍严格拒绝。第一次结果仍先要求模型自修，避免过早接受语义较差的输出。
 - 相关回归涵盖重试修复与歧义拒绝，全项目533项测试通过。需新目录CUDA重测确认SL-017窗口被完整保留；当前70事件、493.072秒LLM总时间为观察值，待完整性与逐事件审核后再给正式质量结论。
 - 解析器行为已改变，run-extractor manifest版本同步升为v2；旧结果目录不能续跑混用，必须生成新目录。
+
+## Step 108 — 2026-10-03 Benchmark 3.2C最终逐事件审核与质量结论
+
+- 正式结果目录 `agent_pipeline_v3_2/reports/benchmark_3_2C_20261002T161632Z_0883f1` 达到24/24完整、0未覆盖片段；74个事件、104次调用、8016 output tokens、499.656秒LLM总时间，对比Benchmark 3的1024.081秒。
+- 发现旧提取评分器把每篇都重复使用的G1/G2/G3当作全局唯一ID，跨故事集合去重使整体Recall误显示4/4。只在3.2模块新增按故事计数的评分，冻结的Benchmark 3/2.2代码和报告未改动；正确旧基线为71/72（98.61%）。
+- 对24条pending事件逐条进行assistant-reviewed审核，决定与原因保存在`agent_pipeline_v3_2/reviews/benchmark_3_2C_20261002T161632Z_0883f1.json`，并绑定原始运行文件SHA256；`score-extractor`离线命令校验审核完整性和结果身份，生成`reviewed`子目录报告，不加载模型。
+- 正式Lean Extractor结果：Recall 58/72（80.56%）、Precision 60/74（81.08%）、hallucinated 0、overselected 14；对比旧基线Recall 71/72、Precision 71/80、overselected 9。质量门槛为fail，不能替换基线。
+- 14条漏掉的gold中，SL-018与SL-020各4条重要事实被模型放进non_event账本；SL-007/008也漏掉多条。24条审核还显示多次把普通“安静观察四周”提成mechanism事件，以及少数actors/modality字段错误。原始输出表明这是筛选语义错误，解析器没有丢弃这些完整输出；本轮保留失败结论，不继续针对测试句写特化规则。
+- 报告现在显示按故事计数的gold命中、Precision、Overselection和逐条Missed Gold；README补充离线审核命令及实验边界。全项目536项测试通过。
