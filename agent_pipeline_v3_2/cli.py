@@ -175,7 +175,7 @@ def run_extractor_command(args) -> int:
     output = (args.output or REPORT_ROOT / f"benchmark_3_2C_{stamp}_{uuid.uuid4().hex[:6]}").resolve()
     output.mkdir(parents=True, exist_ok=True)
     manifest = {
-        "schema_version": "agent-pipeline-v3.2-lean-extractor-manifest-v1",
+        "schema_version": "agent-pipeline-v3.2-lean-extractor-manifest-v2",
         "source": str(source["source"]), "source_hashes": source["hashes"],
         "model": MODEL, "revision": REVISION, "device": args.device,
         "prompt_sha256": PROMPT_SHA256,
