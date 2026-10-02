@@ -163,6 +163,8 @@ def write_extractor_outputs(output: Path, summary: dict) -> None:
     b, n = perf["baseline"], perf["lean"]
     lines = [
         "# Benchmark 3.2C — Lean Extractor", "",
+        "- Prompt: extractor-lean-v2 (ordinary-event filtering and single-span disposition recovery)",
+        "- Comparison scope: this iteration changes the prompt and recovery calls as well as the Lean schema; it does not isolate schema-only effects.",
         f"- Stories: {summary['stories']}", f"- Emitted events: {summary['emitted_events']}",
         f"- Uncovered spans: {summary['uncovered_span_count']}",
         f"- Exact reviews reused: {summary['review']['reused_event_count']}",

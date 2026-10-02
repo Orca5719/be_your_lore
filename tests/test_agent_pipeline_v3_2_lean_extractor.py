@@ -87,7 +87,7 @@ def test_extract_events_lean_returns_existing_canonical_report_schema():
     }, ensure_ascii=False)
     result = extract_events_lean("雷捂住左胸，", device="cuda", llm=FakeLLM([raw]))
     assert result["schema_version"] == "agent-pipeline-v2-extraction-v1"
-    assert result["prompt_version"] == "extractor-lean-v1"
+    assert result["prompt_version"] == "extractor-lean-v2"
     assert result["status"] == "ok"
     assert result["events"][0]["explicit"] is True
 
@@ -156,8 +156,26 @@ def test_failed_followup_keeps_valid_events_and_reports_only_missing_span():
     no_coverage = json.dumps({"events": [], "ignored_span_ids": [], "non_event_span_ids": []})
     result = extract_events_lean(
         "雷捂住左胸，喝了一口水。", device="cuda",
-        llm=FakeLLM([first, no_coverage, no_coverage, '{"events":[],"ignored_span_ids":[],"non_event_span_ids":[],"extra":[]}']),
+        llm=FakeLLM([first, no_coverage, no_coverage, '{"events":[],"ignored_span_ids":[],"non_event_span_ids":[],"extra":[]}', '{"disposition":"event"}']),
     )
     assert result["status"] == "partial"
     assert result["uncovered_span_ids"] == ["S2"]
     assert result["events"][0]["event"] == "雷捂住左胸"
+
+
+def test_single_span_disposition_recovers_ordinary_scene_without_losing_event():
+    first = json.dumps({
+        "events": [{
+            "actors": ["雷"], "event": "雷捂住左胸", "modality": "observed",
+            "source_ids": ["S1"], "context_ids": [], "check_reason": "mechanism",
+        }], "ignored_span_ids": [], "non_event_span_ids": [],
+    }, ensure_ascii=False)
+    no_coverage = '{"events":[],"ignored_span_ids":[],"non_event_span_ids":[]}'
+    invalid_retry = '{"events":[],"ignored_span_ids":[],"non_event_span_ids":[],"extra":[]}'
+    llm = FakeLLM([first, no_coverage, no_coverage, invalid_retry, '{"disposition":"ignored"}'])
+    result = extract_events_lean("雷捂住左胸，喝了一口水。", device="cuda", llm=llm)
+    assert result["status"] == "ok"
+    assert result["uncovered_span_ids"] == []
+    assert result["events"][0]["event"] == "雷捂住左胸"
+    assert result["ignored_spans"] == [{"source_id": "S2", "reason": "process_detail"}]
+    assert result["calls"][0]["attempts"][-1]["purpose"] == "recover_disposition"

@@ -95,7 +95,7 @@ def build_audit_rows(stories: list[dict], calls: list[dict]) -> list[dict]:
                 previous_failed = any(value.get("status") == "error" for value in attempts[:position])
                 status = attempt.get("status")
                 purpose = attempt.get("purpose") or window.get("purpose") or "extract_checkable_events"
-                is_recovery = purpose == "recover_missing_targets"
+                is_recovery = purpose in {"recover_missing_targets", "recover_disposition"}
                 if status == "error":
                     cost_class = "pure_waste"
                     outcome = "recovery_failure" if is_recovery else "format_retry_failure" if previous_failed else "initial_failure"

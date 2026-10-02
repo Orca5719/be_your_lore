@@ -13,7 +13,7 @@ from agent_pipeline_v3.model import MODEL, REVISION, ProfiledV2QwenJudge
 from .extractor_audit import run_extractor_audit
 from .extractor_report import write_extractor_markdown
 from .frozen import load_and_validate_source
-from .lean_extractor import extract_events_lean
+from .lean_extractor import PROMPT_SHA256, extract_events_lean
 from .lean_extractor_benchmark import run_extraction_cases, summarize_extractor, write_extractor_outputs
 from .lean_judge import judge_frozen_retrieval
 from .report import write_outputs
@@ -178,7 +178,7 @@ def run_extractor_command(args) -> int:
         "schema_version": "agent-pipeline-v3.2-lean-extractor-manifest-v1",
         "source": str(source["source"]), "source_hashes": source["hashes"],
         "model": MODEL, "revision": REVISION, "device": args.device,
-        "prompt_sha256": __import__("hashlib").sha256((Path(__file__).parent / "prompts" / "lean_extractor_v1.txt").read_bytes()).hexdigest(),
+        "prompt_sha256": PROMPT_SHA256,
     }
     manifest_path = output / "manifest.json"
     if manifest_path.exists() and _read(manifest_path) != manifest:

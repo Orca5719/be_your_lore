@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from pathlib import Path
 import time
 
@@ -15,7 +16,14 @@ from agent_pipeline_v2.extractor import (
     validate_extraction,
 )
 
-PROMPT = (Path(__file__).parent / "prompts" / "lean_extractor_v1.txt").read_text(encoding="utf-8")
+PROMPT = (Path(__file__).parent / "prompts" / "lean_extractor_v2.txt").read_text(encoding="utf-8")
+DISPOSITION_PROMPT = (
+    "只处理一个小说片段，并返回严格JSON：{\"disposition\":\"ignored|non_event|event\"}。"
+    "ignored表示片段有独立内容，但只是普通场景、动作或暂时状态，不形成世界观约束或持续后果；"
+    "non_event表示片段没有独立命题；event表示片段可能受世界观约束或改变后续故事，"
+    "此时不要编造事件内容。拿不准时选event。只依据提供的原文和上下文。"
+)
+PROMPT_SHA256 = hashlib.sha256((PROMPT + "\n" + DISPOSITION_PROMPT).encode("utf-8")).hexdigest()
 REQUIRED_EVENT_FIELDS = {"actors", "event", "modality", "source_ids", "context_ids", "check_reason"}
 OPTIONAL_EVENT_FIELDS = {"mental_state", "conditions"}
 TOP_LEVEL_FIELDS = {"events", "ignored_span_ids", "non_event_span_ids"}
@@ -80,6 +88,26 @@ def _sanitize_recovery_value(value: object, recovery_window: dict) -> tuple[obje
             sanitized[field] = filtered
             changed = True
     return sanitized, ["recovery_out_of_scope_disposition_removed"] if changed else []
+
+
+def _recover_disposition(llm, spans: dict[str, dict], window: dict, span_id: str) -> tuple[str, str]:
+    target_ids = window["target_ids"]
+    position = target_ids.index(span_id)
+    neighbors = target_ids[max(0, position - 2):position] + target_ids[position + 1:position + 3]
+    payload = {
+        "target_span": {span_id: spans[span_id]["text"]},
+        "context_spans": {item: spans[item]["text"] for item in neighbors},
+    }
+    raw = llm._generate([
+        {"role": "system", "content": DISPOSITION_PROMPT},
+        {"role": "user", "content": json.dumps(payload, ensure_ascii=False, separators=(",", ":"))},
+    ], max_new_tokens=32)
+    value = json.loads(raw)
+    if not isinstance(value, dict) or set(value) != {"disposition"} or value["disposition"] not in {"ignored", "non_event", "event"}:
+        error = ValueError("单片段处置必须是ignored、non_event或event")
+        error.raw_output = raw
+        raise error
+    return value["disposition"], raw
 
 
 def _call_window(llm, messages: list[dict], spans: dict[str, dict], window: dict, first_event_number: int):
@@ -199,6 +227,42 @@ def _call_window(llm, messages: list[dict], spans: dict[str, dict], window: dict
                 }]
                 continue
             break
+    disposition_resolved = []
+    if best_partial is not None and best_missing:
+        unresolved = []
+        for span_id in best_missing:
+            raw = ""
+            try:
+                llm.last_generation = {}
+                disposition, raw = _recover_disposition(llm, spans, window, span_id)
+                attempts.append({
+                    "attempt": len(attempts) + 1, "purpose": "recover_disposition", "status": "ok" if disposition != "event" else "error",
+                    "target_id": span_id, "disposition": disposition, "raw_output": raw,
+                    "error": "片段仍需提取事件" if disposition == "event" else None,
+                    "timing": dict(llm.last_generation),
+                })
+                if disposition == "ignored":
+                    best_partial[1].append({"source_id": span_id, "reason": "process_detail"})
+                    disposition_resolved.append(span_id)
+                elif disposition == "non_event":
+                    best_partial[2].append(span_id)
+                    disposition_resolved.append(span_id)
+                else:
+                    unresolved.append(span_id)
+            except (ValueError, RuntimeError, OSError, json.JSONDecodeError) as disposition_exc:
+                attempts.append({
+                    "attempt": len(attempts) + 1, "purpose": "recover_disposition", "status": "error",
+                    "target_id": span_id, "raw_output": getattr(disposition_exc, "raw_output", raw), "error": str(disposition_exc),
+                    "error_type": type(disposition_exc).__name__, "timing": dict(getattr(llm, "last_generation", {})),
+                })
+                unresolved.append(span_id)
+        best_missing = unresolved
+    if best_partial is not None and not best_missing:
+        return best_partial, {
+            "status": "ok", "attempts": attempts,
+            "wire_normalizations": list(dict.fromkeys(normalizations)),
+            "disposition_recovered_target_ids": disposition_resolved,
+        }
     if best_partial is not None:
         return best_partial, {
             "status": "partial", "attempts": attempts,
@@ -250,7 +314,7 @@ def extract_events_lean(text: str, device: str = "auto", llm=None, progress=None
         non_events.extend(window_non_events)
     status = "ok" if not failed_targets else "error" if len(failed_targets) == len(spans) else "partial"
     result = {
-        "schema_version": SCHEMA_VERSION, "prompt_version": "extractor-lean-v1", "stage": "extraction", "status": status,
+        "schema_version": SCHEMA_VERSION, "prompt_version": "extractor-lean-v2", "stage": "extraction", "status": status,
         "text": text, "spans": spans, "events": events, "ignored_spans": ignored,
         "non_event_span_ids": non_events, "uncovered_span_ids": sorted(failed_targets), "rejected": rejected,
         "calls": calls, "processing_complete": not failed_targets, "model_loaded_this_request": loaded_here,
