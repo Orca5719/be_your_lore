@@ -1253,3 +1253,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - Structured的Judge FP/FN为9/9，输出3631 tokens、97.422秒；Short Reason为11/7，输出5245 tokens、146.230秒；完整版为9/6，输出13158 tokens、571.928秒。计时跨独立运行，只能作为观察；token和判决变化更能解释输出协议差异。
 - 相对完整版，Structured有13/80事实改判，旧uncertain转明确6条；Short Reason有12/80改判，旧uncertain转明确8条。两版均把SL-017的2063年机械左臂时间矛盾改为consistent、SL-018的父亲乘车离城矛盾改为consistent，说明保留简短assessment仍不足以维持旧Judge质量。
 - 结论：3.3A两候选均保留为实验，不提升为默认Judge；3.3B可独立开展，组合实验继续使用Full Judge，除非用户另行决定。
+
+## Step 113 — 2026-10-04 Benchmark 3.3A追加三组结构与长度实验
+
+- 用户要求继续寻找Judge质量与生成成本的甜点区，不进入3.3B。参考3.1字段成本：旧Judge输出中reason约6030估算tokens、citations约3094、assessment约2337；应删除展示性复制，同时单独测试结构化前提及推理长度的作用。
+- 新增`assumptions-list`、`rationale-120`、`rationale-240`三候选。先恢复旧版assessment的`assumptions`文字列表，再逐步增加理由上限；120/240提示除长度数字外相同，避免混淆提示措辞和长度效应。
+- 三候选沿用冻结的24篇/80事实、证据ID映射及Judge v2.1共真保护；每候选各自预热、按batch 8运行、逐篇原子保存与续跑，不更改Extractor和Retrieval。
+- 自动报告把Full、Verdict-only、首轮Structured/Short Reason和追加三版并排，包含Accuracy、Macro-F1、Uncertain Recall、FP/FN、F1、tokens、Prefill/Decode/总时间、判决迁移及调用明细。正式CUDA结果待用户运行，本轮不自动提升默认Judge。

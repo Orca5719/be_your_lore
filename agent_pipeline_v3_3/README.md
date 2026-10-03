@@ -22,3 +22,19 @@
 ```
 
 输出目录含`judge_a_summary.md/json`、`verdict_changes.csv`、`judge_calls.csv`以及两个候选各自逐篇原子保存的运行文件。报告同时列出Benchmark 3完整版与3.2A极简版，重点比较三分类Macro-F1和`uncertain` Recall。通过`--output <原RESULT_DIR>`可在源文件及两版提示摘要不变时续跑；已完成的两版可以离线重建报告，不加载模型。正式CUDA运行由用户执行；本模块不自行选出新默认Judge。
+
+### 3.3A追加对照：assessment与理由长度
+
+首轮结构化版和80字理由版都未达到完整版Judge的质量，因此追加三组独立实验：
+
+- `assumptions-list`：恢复旧版assessment的缺失前提文字列表，不写理由。
+- `rationale-120`：同一assessment，增加至多120字理由。
+- `rationale-240`：提示与上一版除长度数字外相同，只将理由上限增至240字。
+
+三组都保留原判决保护，仍从冻结的Benchmark 3事实/证据输入，避免案例特化。程序自动并排报告完整版、3.2A极简版、首轮两版与本轮三版，共七列。运行：
+
+```powershell
+& ".\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v3_3.judge_a2_cli run --device cuda
+```
+
+打印`RESULT_DIR`和`SUMMARY`；各候选逐篇保存，可用`--output <原RESULT_DIR>`续跑。本轮仍不自动选默认Judge，正式生成由用户执行。
