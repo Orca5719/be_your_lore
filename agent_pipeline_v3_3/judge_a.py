@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 import copy
-import json
 from pathlib import Path
 import time
 
 from agent_pipeline_v2.batch_llm import call_json_batch
+from agent_pipeline_v2_1.oracle_benchmark import build_messages as build_full_judge_messages
 
 
 LABELS = {"consistent": "明确吻合", "contradiction": "明确矛盾", "uncertain": "不确定"}
@@ -83,17 +83,11 @@ def finalize_answer(value: dict, evidence: list[dict], variant: str) -> dict:
 
 
 def _messages(retrieval: dict, source: dict, variant: str) -> list[dict]:
-    lore = [{"evidence_id": f"L{number}", "text": chunk["text"],
-             "heading_path": chunk.get("heading_path", [])}
-            for number, chunk in enumerate(source["evidence"], 1)]
-    payload = {
-        "fact": source.get("fact") or {"actors": source["event"].get("actors", []),
-                                         "normalized_fact": source["event"].get("event")},
-        "story_context": retrieval.get("extraction", {}).get("text", ""),
-        "lore": lore,
-    }
-    return [{"role": "system", "content": PROMPTS[variant]},
-            {"role": "user", "content": json.dumps(payload, ensure_ascii=False, separators=(",", ":"))}]
+    wire = {"fixture_id": source["event_id"], "fact": source["fact"],
+            "story_context": retrieval["extraction"]["text"], "lore": source["evidence"]}
+    messages = build_full_judge_messages(wire, "v2.1")
+    messages[0] = {"role": "system", "content": PROMPTS[variant]}
+    return messages
 
 
 def _uncertain(source: dict, origin: str, status: str = "ok") -> dict:

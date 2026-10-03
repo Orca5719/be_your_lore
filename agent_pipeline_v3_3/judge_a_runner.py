@@ -33,6 +33,7 @@ def build_manifest(source_hashes: dict[str, str], device: str) -> dict:
                           for variant in VARIANTS},
         "implementation_hashes": {name: _sha(ROOT / "agent_pipeline_v3_3" / name)
                                   for name in ("judge_a.py", "judge_a_runner.py", "judge_a_report.py")},
+        "full_judge_input_builder_sha256": _sha(ROOT / "agent_pipeline_v2_1" / "oracle_benchmark.py"),
     }
 
 

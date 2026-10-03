@@ -4,10 +4,13 @@ import json
 import pytest
 
 from agent_pipeline_v3_3.judge_a2 import finalize_answer, judge_frozen_retrieval, validate_answer
-from agent_pipeline_v3_3.judge_a2_cli import DEFAULT_SOURCE, build_parser, build_manifest, summarize
+from agent_pipeline_v3_3.judge_a import _messages as first_round_messages
+from agent_pipeline_v3_3.judge_a2 import _messages as second_round_messages
+from agent_pipeline_v3_3.judge_a2_cli import DEFAULT_SOURCE, build_parser, build_manifest, summarize, resolve_a1_result
 from agent_pipeline_v3_3.judge_a_runner import build_candidate_row
 from agent_pipeline_v3_2.frozen import load_and_validate_source
 from agent_pipeline_v3_2.runner import write_jsonl_atomic
+from agent_pipeline_v2_1.oracle_benchmark import build_messages as baseline_messages
 
 
 EVIDENCE = [{"id": "chunk-a", "text": "雷的左心脏寄宿亚巴顿。"}]
@@ -76,7 +79,7 @@ def retrieval():
     event = {"id": "E1", "actors": ["雷"], "event": "亚巴顿寄宿在右心脏", "modality": "observed"}
     return {"status": "ok", "extraction": {"text": "雷感到右胸异常。"}, "events": [event],
             "items": [{"event_id": "E1", "status": "ok", "event": event,
-                       "fact": {"subject": "雷", "normalized_fact": event["event"]},
+                       "fact": {"subject": "雷", "normalized_fact": event["event"], "dimension": "physical_rule"},
                        "evidence": EVIDENCE}]}
 
 
@@ -91,9 +94,28 @@ def test_each_variant_runs_with_its_own_budget(variant, budget):
 
 def test_a2_cli_and_manifest_lock_three_prompts():
     assert build_parser().parse_args(["run", "--device", "cuda"]).command == "run"
+    assert build_parser().parse_args(["run", "--a1-result", "C:/runs/a1"]).a1_result.name == "a1"
     manifest = build_manifest({"story_runs.jsonl": "abc"}, "cuda")
     assert set(manifest["prompt_hashes"]) == {"assumptions-list", "rationale-120", "rationale-240"}
     assert manifest["batch_size"] == 8
+
+
+def test_a1_result_accepts_directory_or_markdown_path(tmp_path):
+    expected = tmp_path / "judge_a_summary.json"
+    assert resolve_a1_result(tmp_path) == expected
+    assert resolve_a1_result(tmp_path / "judge_a_summary.md") == expected
+
+
+def test_all_a_variants_preserve_full_judge_user_payload():
+    source = retrieval()["items"][0]
+    frozen = retrieval()
+    wire = {"fixture_id": source["event_id"], "fact": source["fact"],
+            "story_context": frozen["extraction"]["text"], "lore": source["evidence"]}
+    expected = baseline_messages(wire, "v2.1")[1]["content"]
+    for variant in ("structured", "short-reason"):
+        assert first_round_messages(frozen, source, variant)[1]["content"] == expected
+    for variant in ("assumptions-list", "rationale-120", "rationale-240"):
+        assert second_round_messages(frozen, source, variant)[1]["content"] == expected
 
 
 def test_offline_seven_way_report_does_not_load_model(tmp_path):

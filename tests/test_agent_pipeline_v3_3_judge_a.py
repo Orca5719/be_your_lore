@@ -81,7 +81,7 @@ def retrieval():
     event = {"id": "E1", "actors": ["雷"], "event": "亚巴顿寄宿在右心脏", "modality": "observed"}
     return {"status": "ok", "extraction": {"text": "雷感到右胸异常。"}, "events": [event],
             "items": [{"event_id": "E1", "status": "ok", "event": event,
-                       "fact": {"subject": "雷", "normalized_fact": event["event"]},
+            "fact": {"subject": "雷", "normalized_fact": event["event"], "dimension": "physical_rule"},
                        "evidence": EVIDENCE}]}
 
 

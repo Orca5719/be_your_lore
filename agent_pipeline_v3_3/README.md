@@ -38,3 +38,16 @@
 ```
 
 打印`RESULT_DIR`和`SUMMARY`；各候选逐篇保存，可用`--output <原RESULT_DIR>`续跑。本轮仍不自动选默认Judge，正式生成由用户执行。
+
+### 3.3A输入对齐修正（2026-10-04）
+
+复核追加实验时发现：旧Full Judge输入为`event`对象，早期A/A2候选却收到`fact`对象；两者虽然来自同一条提取事实，但字段和语义提示不同。因此`benchmark_3_3A_20261003T154610Z_7305ef`及`benchmark_3_3A2_20261003T160701Z_ac16fe`只能视为**混合输入与输出差异的历史观察**，不能单独归因于输出长度。
+
+现在五个A候选使用Full Judge原有的输入构造函数，保持用户消息逐字相同，仅系统提示和输出协议不同。已对固定资料逐事实验证输入一致。必须生成新结果目录，旧manifest会拒绝续跑。为同时得到五个候选的可比结果，可在项目根目录依次运行：
+
+```powershell
+& ".\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v3_3.judge_a_cli run --device cuda --output ".\agent_pipeline_v3_3\reports\benchmark_3_3A_aligned"
+& ".\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v3_3.judge_a2_cli run --device cuda --a1-result ".\agent_pipeline_v3_3\reports\benchmark_3_3A_aligned" --output ".\agent_pipeline_v3_3\reports\benchmark_3_3A2_aligned"
+```
+
+第二条命令会读取第一条的新报告，生成七列对照；两条都可在各自的`--output`目录安全续跑。正式CUDA运行仍交给用户。

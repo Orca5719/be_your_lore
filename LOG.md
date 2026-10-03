@@ -1260,3 +1260,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 新增`assumptions-list`、`rationale-120`、`rationale-240`三候选。先恢复旧版assessment的`assumptions`文字列表，再逐步增加理由上限；120/240提示除长度数字外相同，避免混淆提示措辞和长度效应。
 - 三候选沿用冻结的24篇/80事实、证据ID映射及Judge v2.1共真保护；每候选各自预热、按batch 8运行、逐篇原子保存与续跑，不更改Extractor和Retrieval。
 - 自动报告把Full、Verdict-only、首轮Structured/Short Reason和追加三版并排，包含Accuracy、Macro-F1、Uncertain Recall、FP/FN、F1、tokens、Prefill/Decode/总时间、判决迁移及调用明细。正式CUDA结果待用户运行，本轮不自动提升默认Judge。
+
+## Step 114 — 2026-10-04 Benchmark 3.3A追加结果与输入对齐修正
+
+- 用户追加实验目录：`agent_pipeline_v3_3/reports/benchmark_3_3A2_20261003T160701Z_ac16fe`。三候选均24/24完成、23次调用、0重试。Accuracy分别为63.64%/60.61%/63.64%，Uncertain Recall为25.00%/16.67%/25.00%，输出tokens为3436/5857/6923；报告保留为历史观察。
+- 逐组件追查发现Full Judge输入由`agent_pipeline_v2_1.oracle_benchmark.build_messages`构造为`event`对象；早期A/A2候选改为`fact`对象，字段包含不同的维度与check_reason。此差异与输出协议同时变化，故旧A/A2结果**不能作为输出长度的因果对照**；不能据此断言模型需要完整版理由或更长理由无效。
+- 修正五个A候选的用户输入，统一调用Full Judge原构造函数，仅替换各候选系统提示。新增回归测试，并对固定数据中所有需要模型判断的事实逐条确认五版用户消息与Full Judge逐字一致，0处不匹配。
+- A2命令新增`--a1-result`，可指定新A1目录/Markdown/JSON报告；新manifest绑定原输入构造函数、相关实现与A1结果摘要，拒绝混用旧目录。待用户在新目录重新运行A1及A2后再决定Judge甜点区；3.3B仍未开始。

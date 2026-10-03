@@ -30,6 +30,16 @@ def _read(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def resolve_a1_result(path: Path) -> Path:
+    if path.suffix.lower() == ".md":
+        return path.with_suffix(".json").resolve()
+    if path.suffix.lower() == ".json":
+        return path.resolve()
+    if path.suffix:
+        raise ValueError("--a1-result须为结果目录、Markdown或JSON报告")
+    return (path / "judge_a_summary.json").resolve()
+
+
 def build_manifest(source_hashes: dict[str, str], device: str) -> dict:
     if device != "cuda":
         raise ValueError("3.3A追加实验固定CUDA")
@@ -41,6 +51,7 @@ def build_manifest(source_hashes: dict[str, str], device: str) -> dict:
         "prompt_hashes": {variant: sha256(ROOT / "agent_pipeline_v3_3" / "prompts" / f"judge_a2_{variant}.txt")
                           for variant in VARIANTS},
         "implementation_hashes": {name: sha256(ROOT / "agent_pipeline_v3_3" / name) for name in files},
+        "full_judge_input_builder_sha256": sha256(ROOT / "agent_pipeline_v2_1" / "oracle_benchmark.py"),
     }
 
 
@@ -122,10 +133,10 @@ def _write_report(directory: Path, summary: dict, changes: list[dict], calls: li
     return path
 
 
-def summarize(directory: Path, source: dict) -> dict:
+def summarize(directory: Path, source: dict, a1_result: Path = A1_RESULT) -> dict:
     dataset = _read(DATASET)
     review = _candidate_review(_read(REVIEW))
-    a1 = _read(A1_RESULT)
+    a1 = _read(a1_result)
     if Path(a1["source"]).resolve() != source["source"]:
         raise ValueError("3.3A原报告与冻结输入不匹配")
     lean = _read(LEAN_RESULT)
@@ -160,13 +171,18 @@ def run_command(args) -> int:
     source = load_and_validate_source(args.source_result)
     if args.device != "cuda":
         raise ValueError("3.3A追加实验固定CUDA")
+    a1_result = resolve_a1_result(args.a1_result)
+    if Path(_read(a1_result)["source"]).resolve() != source["source"]:
+        raise ValueError("3.3A原报告与冻结输入不匹配")
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     directory = (args.output or REPORT_ROOT / f"benchmark_3_3A2_{stamp}_{uuid.uuid4().hex[:6]}").resolve()
     directory.mkdir(parents=True, exist_ok=True)
     manifest = build_manifest(source["hashes"], args.device)
     manifest["source"] = str(source["source"])
     manifest["inputs"] = {str(path.relative_to(ROOT)).replace("\\", "/"): sha256(path)
-                          for path in (DATASET, REVIEW, LEAN_RESULT, A1_RESULT)}
+                          for path in (DATASET, REVIEW, LEAN_RESULT)}
+    manifest["a1_result"] = str(a1_result)
+    manifest["a1_result_sha256"] = sha256(a1_result)
     manifest_path = directory / "manifest.json"
     if manifest_path.exists() and _read(manifest_path) != manifest:
         raise ValueError("续跑manifest不匹配；不得混用旧结果")
@@ -190,7 +206,7 @@ def run_command(args) -> int:
             judge_frozen_retrieval(warmup["result"]["benchmark_stages"]["retrieval"], llm, variant, 8)
             llm.clear_traces()
             _run_variant(source["rows"], llm, directory, variant)
-    summary = summarize(directory, source)
+    summary = summarize(directory, source, a1_result)
     print("SUMMARY=" + str(directory / "judge_a2_summary.md"), flush=True)
     return 0 if all(row["complete_stories"] == 24 for row in summary["variants"].values()) else 2
 
@@ -200,6 +216,7 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
     run = subparsers.add_parser("run")
     run.add_argument("--source-result", type=Path, default=DEFAULT_SOURCE)
+    run.add_argument("--a1-result", type=Path, default=A1_RESULT)
     run.add_argument("--device", choices=("cuda",), default="cuda")
     run.add_argument("--output", type=Path)
     run.set_defaults(handler=run_command)
