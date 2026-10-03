@@ -1231,3 +1231,9 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 新增程序侧`coverage_accounting`：对输入span计算event、ignored、non-event与uncovered集合，检查重复/越界；未覆盖项保持待处理，不自动解释为无事件。本块不改变旧的生成与重试策略，局部恢复实验属于3.3B。
 - 新增独立`validate`与`run`入口，固定24篇数据、模型revision、索引与源文件摘要；正式运行逐篇原子保存并沿用Benchmark 3的逐调用profiling和质量护栏。
 - 伪模型兼容测试确认事件协议与旧Extractor一致；覆盖账本边界、候选系统接线和命令入口均有测试。正式CUDA对比结果待用户运行。
+
+## Step 110 — 2026-10-03 Benchmark 3.3本体正式测试复核
+
+- 用户运行结果：`agent_pipeline_v3_3/reports/benchmark_3_3_base_20261003T150503Z_e38d1b`。24/24故事为ok，80个事件，程序覆盖账本24/24完整，0个未覆盖span，质量护栏24/24与Benchmark 3匹配。
+- Extractor 103次调用、11714输出tokens；Judge 27次调用、13158输出tokens，均与Benchmark 3一致。End-to-End耗时1224.038秒，对比旧运行1597.410秒；两次生成工作量相同，不能把速度差异归因于本块覆盖账本。
+- 3.3本体代码已提交并推送到`origin/benchmark/3.3-deterministic-coverage`。正式运行报告留在本机，等待用户确认后再开始3.3A。
