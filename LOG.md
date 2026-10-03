@@ -1237,3 +1237,11 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 用户运行结果：`agent_pipeline_v3_3/reports/benchmark_3_3_base_20261003T150503Z_e38d1b`。24/24故事为ok，80个事件，程序覆盖账本24/24完整，0个未覆盖span，质量护栏24/24与Benchmark 3匹配。
 - Extractor 103次调用、11714输出tokens；Judge 27次调用、13158输出tokens，均与Benchmark 3一致。End-to-End耗时1224.038秒，对比旧运行1597.410秒；两次生成工作量相同，不能把速度差异归因于本块覆盖账本。
 - 3.3本体代码已提交并推送到`origin/benchmark/3.3-deterministic-coverage`。正式运行报告留在本机，等待用户确认后再开始3.3A。
+
+## Step 111 — 2026-10-03 Benchmark 3.3A紧凑推理Judge实现
+
+- 用户确认进入3.3A。冻结Benchmark 3的24篇、80事实及各事实检索证据；Extractor、Hybrid RRF、3.3本体入口与已有报告不改动。
+- 新增两种单变量Judge候选：`structured`输出证据ID、有限assessment与verdict；`short-reason`额外输出一句限80字理由。都不复制证据原文，由程序从ID恢复chunk身份。
+- 保留同主体、证据适用、直接支持/冲突、能否共真及是否需要额外假设的程序保护；无支持的明确结论降级为uncertain，并记录模型原判和保护原因。
+- 独立命令顺序运行两候选，各自预热、逐篇原子保存和续跑；自动报告完整版/极简版/两候选的Judge Accuracy、Macro-F1、Uncertain Recall、FP/FN、输出tokens及耗时，并提供逐事实判决变化和调用明细。
+- 正式CUDA性能和质量结果等待用户测试，本块不宣布新默认Judge；3.3B仍未开始。
