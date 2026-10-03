@@ -1224,3 +1224,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 正式Lean Extractor结果：Recall 58/72（80.56%）、Precision 60/74（81.08%）、hallucinated 0、overselected 14；对比旧基线Recall 71/72、Precision 71/80、overselected 9。质量门槛为fail，不能替换基线。
 - 14条漏掉的gold中，SL-018与SL-020各4条重要事实被模型放进non_event账本；SL-007/008也漏掉多条。24条审核还显示多次把普通“安静观察四周”提成mechanism事件，以及少数actors/modality字段错误。原始输出表明这是筛选语义错误，解析器没有丢弃这些完整输出；本轮保留失败结论，不继续针对测试句写特化规则。
 - 报告现在显示按故事计数的gold命中、Precision、Overselection和逐条Missed Gold；README补充离线审核命令及实验边界。全项目536项测试通过。
+## Step 109 — 2026-10-03 Benchmark 3.3本体：恢复基线与覆盖接口
+
+- 新建`benchmark/3.3-deterministic-coverage`分支和`agent_pipeline_v3_3`模块。本块只建立实验基座，3.3A、3.3B及组合实验等待用户逐块测试确认。
+- Extractor明确复用Benchmark 3的`agent_pipeline_v2.extractor`及原`extractor_v1.txt`，不采用3.2C的Lean提示、协议或筛选行为；Hybrid RRF和Judge v2.1保持原样。
+- 新增程序侧`coverage_accounting`：对输入span计算event、ignored、non-event与uncovered集合，检查重复/越界；未覆盖项保持待处理，不自动解释为无事件。本块不改变旧的生成与重试策略，局部恢复实验属于3.3B。
+- 新增独立`validate`与`run`入口，固定24篇数据、模型revision、索引与源文件摘要；正式运行逐篇原子保存并沿用Benchmark 3的逐调用profiling和质量护栏。
+- 伪模型兼容测试确认事件协议与旧Extractor一致；覆盖账本边界、候选系统接线和命令入口均有测试。正式CUDA对比结果待用户运行。
