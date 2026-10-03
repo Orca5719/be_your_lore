@@ -1245,3 +1245,11 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 保留同主体、证据适用、直接支持/冲突、能否共真及是否需要额外假设的程序保护；无支持的明确结论降级为uncertain，并记录模型原判和保护原因。
 - 独立命令顺序运行两候选，各自预热、逐篇原子保存和续跑；自动报告完整版/极简版/两候选的Judge Accuracy、Macro-F1、Uncertain Recall、FP/FN、输出tokens及耗时，并提供逐事实判决变化和调用明细。
 - 正式CUDA性能和质量结果等待用户测试，本块不宣布新默认Judge；3.3B仍未开始。
+
+## Step 112 — 2026-10-03 Benchmark 3.3A正式结果复核
+
+- 用户结果目录：`agent_pipeline_v3_3/reports/benchmark_3_3A_20261003T154610Z_7305ef`。两候选均24/24篇完成、各23次Judge调用、0次重试；冻结的80事实与检索证据未变。
+- Full/极简/Structured/Short Reason的Judge Accuracy依次为72.73%/56.06%/65.15%/65.15%；Uncertain Recall为54.17%/4.17%/41.67%/33.33%；Macro-F1为72.80%/49.25%/64.40%/63.68%。两候选都没有恢复完整版的三分类质量。
+- Structured的Judge FP/FN为9/9，输出3631 tokens、97.422秒；Short Reason为11/7，输出5245 tokens、146.230秒；完整版为9/6，输出13158 tokens、571.928秒。计时跨独立运行，只能作为观察；token和判决变化更能解释输出协议差异。
+- 相对完整版，Structured有13/80事实改判，旧uncertain转明确6条；Short Reason有12/80改判，旧uncertain转明确8条。两版均把SL-017的2063年机械左臂时间矛盾改为consistent、SL-018的父亲乘车离城矛盾改为consistent，说明保留简短assessment仍不足以维持旧Judge质量。
+- 结论：3.3A两候选均保留为实验，不提升为默认Judge；3.3B可独立开展，组合实验继续使用Full Judge，除非用户另行决定。
