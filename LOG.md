@@ -1312,3 +1312,11 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 两个partial都是`SL-010`第一个提取窗口。batch 4首轮把`mental_state`生成为布尔值，重试时生成为错误字段；batch 8首轮输出错误字段`mentalropic`，重试仍为该错误字段。严格的Benchmark 3 wire校验拒绝整个窗口，留下S1–S8未覆盖；batch 1/2同一窗口输出合法。没有发现批次行映射、token解码或报告汇总错误。
 - 这是固定批量生成使模型输出改变的可观察质量结果，不能通过悄悄放宽schema或修正具体故事来宣布性能成功。性能数据仍可观察：batch 1/2/4/8的Wall约822/566/419/371秒、调用数103/52/26/14；batch 4/8提取质量因partial降低，且batch 2/4/8各有4/4/5个变更事件待人工复核，报告不提供正式Precision/Recall。
 - 该结果保留，不覆盖、不伪装为程序故障。4B继续等待用户确认；若后续追求batch 4/8的完整性，应作为独立质量/协议实验，不能与纯batching性能对照混为一谈。
+
+## Step 121 — 2026-10-04 Benchmark 4B 连续批处理实现
+
+- 用户确认继续4B。保持Benchmark 3 Extractor、提示、窗口、严格校验、重试、覆盖恢复和模型权重不变；新增`agent_pipeline_v4.continuous`，在同一PyTorch/NF4/BF16环境中用Qwen3逐步greedy forward进行请求级调度。容量1/2/4/8；单请求prefill，活跃请求共用decode步，EOS或输出上限立即释放槽位，后续请求随即补入。
+- 每个活跃请求保存独立KV cache和有效位置；只在请求集合变化时重组批次，稳定批次的连续decode复用现有缓存。小Qwen3随机模型测试覆盖不同长度、结束请求退场和新请求加入；真实Qwen短生成的单请求/双请求结果与原`generate()`逐字一致，短故事Extractor完整结果也一致。
+- 新CLI：`validate-continuous`、`run-continuous`、`summary-continuous`。模型只加载一次，各档分别预热，逐故事原子保存并支持manifest校验续跑。前一次4A四档结果作为锁定对照；新报告存请求trace与逐forward步，分别计算请求级TTFT、排队、模型Prefill/Decode、槽位利用率、已结束请求无效步、KV整理时间、Wall及显存峰值，不将共享decode时间在多个请求上重复求和。
+- 对每个对应4A档位保存逐故事输出/事件/状态差异；4A未保存生成token ID，故只能比对解码文本及已记录token数，不能声称原始token序列逐位相等。3.3历史报告与4A原结果未改动；4A batch4/8的partial保留为质量对照，4B若出现partial也在报告中如实列出。
+- 新增调度、EOS、截断、重试、覆盖恢复、异常、断点续跑、成本对账及manifest回归测试。正式24篇CUDA性能实验交给用户执行；当前没有4B正式吞吐/质量结论。
