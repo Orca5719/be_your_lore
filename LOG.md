@@ -1305,3 +1305,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 报告输出固定批处理性能、调用与重试成本、质量对照。新事件仅在与 Benchmark 3 原人工审核事件的语义字段完全相同且匹配唯一时复用标签；否则列入待复核，不宣称正式 Precision／Recall。正式 CUDA 数据由用户运行后分析；4B 尚未实施。
 - 提交前复核补强三处边界：OOM留下的失败故事允许下次重新处理；生成前的预算/分词错误不会复用上一批trace；用Benchmark 3分支的源码摘要及原manifest锁定Extractor、修复层、模型适配器和提示，拒绝把改过的实现冒充冻结基线。对应回归测试复现问题后修复。
 - 本地全套598项测试通过；`python -m agent_pipeline_v4 validate`核对固定24篇、模型ID/revision、冻结源码和批大小通过，`git diff --check`通过。Baseline 自对照精确复现71/72 Gold命中与71/80事件Precision；尚无正式GPU性能数据。
+
+## Step 120 — 2026-10-04 Benchmark 4A 首次实测诊断
+
+- 用户结果目录：`agent_pipeline_v4/reports/benchmark_4A_20261004T050254Z_1774b9`。四档均完成24篇生成，无CUDA崩溃或显存不足；batch 1/2分别为24/24 `ok`，batch 4/8分别为23 `ok`、1 `partial`，因此CLI按完整性门槛退出2。
+- 两个partial都是`SL-010`第一个提取窗口。batch 4首轮把`mental_state`生成为布尔值，重试时生成为错误字段；batch 8首轮输出错误字段`mentalropic`，重试仍为该错误字段。严格的Benchmark 3 wire校验拒绝整个窗口，留下S1–S8未覆盖；batch 1/2同一窗口输出合法。没有发现批次行映射、token解码或报告汇总错误。
+- 这是固定批量生成使模型输出改变的可观察质量结果，不能通过悄悄放宽schema或修正具体故事来宣布性能成功。性能数据仍可观察：batch 1/2/4/8的Wall约822/566/419/371秒、调用数103/52/26/14；batch 4/8提取质量因partial降低，且batch 2/4/8各有4/4/5个变更事件待人工复核，报告不提供正式Precision/Recall。
+- 该结果保留，不覆盖、不伪装为程序故障。4B继续等待用户确认；若后续追求batch 4/8的完整性，应作为独立质量/协议实验，不能与纯batching性能对照混为一谈。
