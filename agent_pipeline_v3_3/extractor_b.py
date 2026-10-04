@@ -72,7 +72,8 @@ def _call_window(llm, prompt, spans, window, first_event_number):
     changes = []
     decoded = None
     missing = list(window["target_ids"])
-    original_messages = _messages(prompt, spans, window)
+    base_messages = _messages(prompt, spans, window)
+    original_messages = base_messages
     for number in range(1, 3):
         raw = ""
         try:
@@ -80,7 +81,7 @@ def _call_window(llm, prompt, spans, window, first_event_number):
             raw = llm._generate(original_messages, max_new_tokens=1536)
             decoded, missing, normalized = _decode_partial(json.loads(raw), spans, window, first_event_number)
             changes.extend(normalized)
-            attempts.append({"attempt": number, "status": "ok", "raw_output": raw,
+            attempts.append({"attempt": number, "status": "ok", "adopted": True, "raw_output": raw,
                              "coverage_pending": list(missing), "timing": dict(llm.last_generation)})
             break
         except (ValueError, RuntimeError, OSError) as exc:
@@ -111,12 +112,40 @@ def _call_window(llm, prompt, spans, window, first_event_number):
             recovered_target_ids.extend(span_id for span_id in missing if span_id not in remaining)
             decoded = tuple(left + right for left, right in zip(decoded, recovered))
             attempts.append({"attempt": len(attempts) + 1, "purpose": "recover_missing_targets",
-                             "target_ids": list(missing), "status": "ok", "raw_output": raw,
+                             "target_ids": list(missing), "status": "ok", "adopted": True, "raw_output": raw,
                              "coverage_pending": list(remaining), "timing": dict(llm.last_generation)})
             missing = remaining
         except (ValueError, RuntimeError, OSError) as exc:
             attempts.append({"attempt": len(attempts) + 1, "purpose": "recover_missing_targets",
                              "target_ids": list(missing), "status": "error", "raw_output": getattr(exc, "raw_output", raw),
+                             "error": str(exc), "error_type": type(exc).__name__,
+                             "timing": dict(getattr(llm, "last_generation", {}))})
+            break
+    if missing:
+        raw = ""
+        try:
+            llm.last_generation = {}
+            raw = llm._generate(base_messages + [{
+                "role": "user",
+                "content": "上次回复不合格：存在未覆盖的target_spans：" + ",".join(missing)
+                           + "。请重新审计本窗口的全部target_spans，只返回符合协议的完整JSON对象。",
+            }], max_new_tokens=1536)
+            replacement, replacement_missing, normalized = _decode_partial(
+                json.loads(raw), spans, window, first_event_number
+            )
+            changes.extend(normalized)
+            adopted = not replacement_missing
+            attempts.append({"attempt": len(attempts) + 1, "purpose": "fallback_full_window",
+                             "status": "ok", "adopted": adopted, "raw_output": raw,
+                             "coverage_pending": list(replacement_missing), "timing": dict(llm.last_generation)})
+            if adopted:
+                for prior in attempts[:-1]:
+                    if prior["status"] == "ok":
+                        prior["adopted"] = False
+                decoded, missing = replacement, []
+        except (ValueError, RuntimeError, OSError) as exc:
+            attempts.append({"attempt": len(attempts) + 1, "purpose": "fallback_full_window",
+                             "status": "error", "raw_output": getattr(exc, "raw_output", raw),
                              "error": str(exc), "error_type": type(exc).__name__,
                              "timing": dict(getattr(llm, "last_generation", {}))})
     return decoded, {

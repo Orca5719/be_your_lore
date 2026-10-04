@@ -42,7 +42,8 @@ def run_cases(cases, llm, output: Path, progress=None):
 
 def summarize_attempts(rows: list[dict], calls: list[dict]) -> dict:
     by_id = {call["call_id"]: call for call in calls}
-    groups = {name: [] for name in ("accepted_partial", "failed_generation", "local_recovery")}
+    groups = {name: [] for name in ("accepted_partial", "superseded_partial", "failed_generation", "local_recovery", "full_fallback")}
+    full_fallback_adopted = 0
     uncovered = 0
     for row in rows:
         extraction = row["result"]["benchmark_stages"]["extraction"]
@@ -54,20 +55,30 @@ def summarize_attempts(rows: list[dict], calls: list[dict]) -> dict:
                     raise ValueError("提取尝试缺少对应的LLM调用：" + str(call_id))
                 if attempt.get("purpose") == "recover_missing_targets":
                     groups["local_recovery"].append(by_id[call_id])
+                elif attempt.get("purpose") == "fallback_full_window":
+                    groups["full_fallback"].append(by_id[call_id])
+                    full_fallback_adopted += bool(attempt.get("adopted"))
                 elif attempt.get("status") == "error":
                     groups["failed_generation"].append(by_id[call_id])
                 elif attempt.get("coverage_pending"):
-                    groups["accepted_partial"].append(by_id[call_id])
+                    group = "accepted_partial" if attempt.get("adopted", True) else "superseded_partial"
+                    groups[group].append(by_id[call_id])
     def total(name, field):
         return sum(call[field] for call in groups[name])
     return {
         "accepted_partial_calls": len(groups["accepted_partial"]),
         "accepted_partial_seconds": total("accepted_partial", "total_time"),
         "accepted_partial_output_tokens": total("accepted_partial", "output_tokens"),
+        "superseded_partial_calls": len(groups["superseded_partial"]),
+        "superseded_partial_seconds": total("superseded_partial", "total_time"),
+        "superseded_partial_output_tokens": total("superseded_partial", "output_tokens"),
         "failed_generation_calls": len(groups["failed_generation"]),
         "failed_generation_seconds": total("failed_generation", "total_time"),
         "local_recovery_calls": len(groups["local_recovery"]),
         "local_recovery_seconds": total("local_recovery", "total_time"),
+        "full_fallback_calls": len(groups["full_fallback"]),
+        "full_fallback_adopted": full_fallback_adopted,
+        "full_fallback_seconds": total("full_fallback", "total_time"),
         "uncovered_span_count": uncovered,
     }
 
@@ -121,7 +132,9 @@ def render_report(summary: dict) -> str:
         f"| Peak allocated bytes | {old['peak_allocated']} | {new['peak_allocated']} |",
         "", "## Coverage calls", "",
         f"- 首轮有效但遗漏部分span：{attempts['accepted_partial_calls']}次，{attempts['accepted_partial_seconds']:.3f}秒，{attempts['accepted_partial_output_tokens']}输出tokens；内容被保留，不计为纯浪费。",
+        f"- 后来被整窗兜底替换的首轮输出：{attempts['superseded_partial_calls']}次，{attempts['superseded_partial_seconds']:.3f}秒，{attempts['superseded_partial_output_tokens']}输出tokens；单列为被替换成本。",
         f"- 局部补提：{attempts['local_recovery_calls']}次，{attempts['local_recovery_seconds']:.3f}秒。",
+        f"- 局部补提未完成后的整窗兜底：{attempts['full_fallback_calls']}次，采纳{attempts['full_fallback_adopted']}次，{attempts['full_fallback_seconds']:.3f}秒。",
         f"- 格式或字段失败的调用：{attempts['failed_generation_calls']}次，{attempts['failed_generation_seconds']:.3f}秒。",
         "", "## Extraction quality", "",
         "| Metric | 3.3 Base | 3.3B |", "|---|---:|---:|",

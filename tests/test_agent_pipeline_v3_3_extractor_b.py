@@ -46,13 +46,32 @@ def test_missing_coverage_keeps_first_output_and_recovers_only_missing_span():
 
 
 def test_failed_local_recovery_retains_valid_first_event_and_marks_uncovered():
-    llm = FakeLLM([wire(events=[event()]), "not json", "still not json"])
+    llm = FakeLLM([wire(events=[event()]), "not json", "full retry also invalid"])
     result = extract_events_b("雷拥有两颗心脏。他喝水。", llm=llm)
     assert result["status"] == "partial"
     assert len(result["events"]) == 1
     assert result["uncovered_span_ids"] == ["S2"]
     assert len(llm.messages) == 3
-    assert all(list(json.loads(messages[1]["content"])["target_spans"]) == ["S2"] for messages in llm.messages[1:])
+    assert list(json.loads(llm.messages[1][1]["content"])["target_spans"]) == ["S2"]
+    assert list(json.loads(llm.messages[-1][1]["content"])["target_spans"]) == ["S1", "S2"]
+
+
+def test_full_window_fallback_restores_events_when_local_recovery_fails():
+    first = wire(events=[event()])
+    complete = wire(events=[event(), {**event("S2"), "event": "雷喝水后中毒"}])
+    llm = FakeLLM([first, "bad local", complete])
+    result = extract_events_b("雷拥有两颗心脏。雷喝水后中毒。", llm=llm)
+    assert result["status"] == "ok"
+    assert [row["event"] for row in result["events"]] == ["雷拥有两颗心脏", "雷喝水后中毒"]
+    assert result["uncovered_span_ids"] == []
+    assert result["calls"][0]["attempts"][-1]["purpose"] == "fallback_full_window"
+    assert result["calls"][0]["attempts"][0]["adopted"] is False
+    assert result["calls"][0]["attempts"][-1]["adopted"] is True
+    assert list(json.loads(llm.messages[-1][1]["content"])["target_spans"]) == ["S1", "S2"]
+    assert llm.messages[-1][-1]["content"] == (
+        "上次回复不合格：存在未覆盖的target_spans：S2。"
+        "请重新审计本窗口的全部target_spans，只返回符合协议的完整JSON对象。"
+    )
 
 
 def test_invalid_schema_retries_full_window_once():
@@ -80,9 +99,9 @@ def test_uncovered_ids_match_canonical_order_across_windows():
     answers = [
         wire(events=[{**event(), "event": "雷1有异常", "actors": ["雷1"]}],
              non_events=[f"S{i}" for i in range(3, 9)]),
-        "invalid", "invalid",
+        "invalid", "invalid fallback",
         wire(non_events=["S9", "S11", "S12"]),
-        "invalid", "invalid",
+        "invalid", "invalid fallback",
     ]
     result = extract_events_b(story, llm=FakeLLM(answers))
     assert result["status"] == "partial"
