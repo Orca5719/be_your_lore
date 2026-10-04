@@ -51,3 +51,17 @@
 ```
 
 第二条命令会读取第一条的新报告，生成七列对照；两条都可在各自的`--output`目录安全续跑。正式CUDA运行仍交给用户。
+
+## 3.3B — Deterministic Coverage 与局部补提
+
+3.3B只重新运行Extractor。模型、原版Extractor提示、窗口划分、事件字段和1536-token生成上限保持不变；从3.3基座的24篇、80事实结果读取对照。程序先严格验证模型给出的事件与处置，独立计算未覆盖span。若首轮JSON有效但漏掉span，已经验证的事件和处置立即保留，仅把遗漏ID和邻近上下文交给模型局部补提；局部补提最多两轮，绝不因单纯覆盖缺口重跑整个原窗口。格式或字段本身无效仍允许一次原窗口重试。补提后仍漏的span明确标为未覆盖，不自动写进忽略或非事件。
+
+在项目根目录运行：
+
+```powershell
+& ".\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v3_3.extractor_b_cli run --device cuda
+```
+
+终端打印`RESULT_DIR`和`SUMMARY`。结果包含`extractor_b_summary.md/json`、逐篇`extractor_runs.jsonl`和`event_review.json`。每篇完成后原子保存；中断后用相同的`--output <RESULT_DIR>`续跑。也可以用`summary --result-dir <RESULT_DIR>`离线重建报告，不加载模型。manifest固定资料、基座、原提示、代码和模型版本，不允许混用不同实验。
+
+报告比较调用数、输入/输出token、Prefill/Decode、总耗时、显存、首次有效但缺覆盖的调用、局部补提和真正无效的生成。新事件若与原人工审核的事件不完全相同，会列入`event_review.json`待复核；此时质量数字只是已有标签的下界，不能宣称正式Recall已提升或下降。3.3B不运行Judge，A阶段的候选也不会混入。
