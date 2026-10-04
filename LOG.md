@@ -1335,3 +1335,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 离线成绩：CB2为66/72 Gold、Precision 69/77、Hallucination 5/77、Overselect 2/77、Duplicate 1；CB4为63/72、66/72、4/72、2/72、0；CB8与CB2相同。CB4的SL-010窗口partial保留并计漏提。逐事件证据见`agent_pipeline_v4_1/reports/extraction_only/event_audit.csv`，汇总见同目录`quality_summary.md`。这比Step122的暂定结果严格，不能直接与旧71/72横向比较。
 - `run-downstream`仅复用Benchmark 3的Hybrid RRF无metadata、Judge v2.1 batch 8和Report，对三档冻结事件分别重跑后用明确矛盾为正类计算E2E Precision/Recall/F1；无对应gold的矛盾输出计FP，漏掉的gold矛盾计FN。逐故事原子保存，支持同目录续跑，锁定源文件/审计账本/下游实现/索引摘要。CUDA正式运行交用户执行，因此本次不宣称已有E2E F1。
 - 验证：72份保存提取输出全部通过原`validate_extraction`，模块6项测试通过，`validate`与离线评分命令通过。旧4B和Benchmark 3结果未改动。
+
+## Step 124 — 2026-10-04 Benchmark 4.1正式端到端实测复核
+
+- 用户运行目录：`agent_pipeline_v4_1/reports/benchmark_4_1_20261004T145316Z_dce441`。72篇档位故事结果（每档24篇）与审核账本重新计算后，保存的质量JSON逐字段复现；CB2、CB8全`ok`，CB4为23`ok`、1`partial`，后者沿袭4B的SL-010提取缺口，无新增执行错误。
+- CB2/CB4/CB8的E2E TP/FP/FN分别是16/10/8、16/10/8、17/10/7；F1为64.00%、64.00%、66.67%。CB8比CB2多命中SL-017/G1一个明确矛盾；CB4多漏SL-010/G2，但Judge另命中SL-017/G1，F1相同不表示提取质量相同。提取Recall分别为66/72、63/72、66/72；逐档数据与解释写在`agent_pipeline_v4_1/benchmark_4_1_analysis.md`。
+- 4.1的E2E评分把无Gold匹配的矛盾输出也计FP，审核账本亦比旧2.2严格，故不可把旧F1 70.59%与本轮直接比较。另归档Benchmark 3运行manifest的Judge提示、模型适配器和系统配置摘要与当前检出文件不一致；4.1三档彼此使用同一当前实现，可作档位对比，不能声称逐字复现归档Benchmark 3下游。
+- 原始约9 MB逐故事结果留在本地报告目录，没有改写4B历史输出；当前提交只纳入简明分析与LOG。
