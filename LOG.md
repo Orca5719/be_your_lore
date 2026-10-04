@@ -1342,3 +1342,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - CB2/CB4/CB8的E2E TP/FP/FN分别是16/10/8、16/10/8、17/10/7；F1为64.00%、64.00%、66.67%。CB8比CB2多命中SL-017/G1一个明确矛盾；CB4多漏SL-010/G2，但Judge另命中SL-017/G1，F1相同不表示提取质量相同。提取Recall分别为66/72、63/72、66/72；逐档数据与解释写在`agent_pipeline_v4_1/benchmark_4_1_analysis.md`。
 - 4.1的E2E评分把无Gold匹配的矛盾输出也计FP，审核账本亦比旧2.2严格，故不可把旧F1 70.59%与本轮直接比较。另归档Benchmark 3运行manifest的Judge提示、模型适配器和系统配置摘要与当前检出文件不一致；4.1三档彼此使用同一当前实现，可作档位对比，不能声称逐字复现归档Benchmark 3下游。
 - 原始约9 MB逐故事结果留在本地报告目录，没有改写4B历史输出；当前提交只纳入简明分析与LOG。
+
+## Step 125 — 2026-10-05 Benchmark 4.1 四组受控调试实验
+
+- 针对4B中`SL-010`第一提取窗口：CB1首次输出通过，CB4首次及重试均因事件字段不符合v2 wire协议失败。仅凭质量差异不能认定KV cache串话，因此先做受控复现，不修改Extractor、Judge或连续调度器。
+- 在`agent_pipeline_v4_1`增加`validate-debug`、`run-debug`、`summary-debug`。A单独运行目标；B使用历史CB4首次decode同批的三个邻居；C替换邻居；D保留B邻居并调换目标槽位。四组均为首窗口请求、同一目标prompt；逐token记录top-2 token/logit、位置、活跃顺序和cache重组次数，自动找首次token分歧并报告原输出校验状态。四组分别原子保存，可中断续跑。
+- 该实验控制同时入场，不逐步复刻历史24篇调度中邻居已运行的步数；邻居或槽位依赖只提供定位证据，不能单凭它证明KV串话，GPU数值路径也可能导致logit差异。正式CUDA运行交用户执行。
+- 验证：`validate-debug`确认历史目标窗口S1–S8及CB1/CB4首轮状态；调试模块5项测试（含微型Qwen换位和logit探针）与4.1原6项测试均通过。历史报告文件未修改。
