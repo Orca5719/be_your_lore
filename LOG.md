@@ -1327,3 +1327,11 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 4B相对对应4A的Wall：容量1为915.33对822.16秒（慢11.3%），容量2为576.93对565.75秒（慢2.0%），容量4为334.28对418.58秒（快20.1%），容量8为302.43对371.23秒（快18.5%）。容量1提取结果逐项相同，其他档位生成内容和token量有差异，不能把速度差当作只由调度造成的因果效应。
 - 对4B待复核事件逐条核对原文与gold：`SL-P03/E1`由“亚巴顿寄宿右侧心脏”推出双心脏，无依据；容量8的`SL-013/E4`把“整理衣袖”引为不死能力，也无依据且重复；其余待复核条目可在原文找到对应事实。定向复核清单与暂定指标写在`agent_pipeline_v4/benchmark_4B_analysis.md`，未覆盖原始报告。
 - 还发现冻结2.2审核账本把`SL-022/E1`“雷拥有两颗心脏”映射为G3“亚巴顿寄宿左侧心脏”，但引用原文只支持后者。历史71/72 Gold命中、71/80有效事件至少各高估1。只修正已发现问题的暂定质量结果分别为容量1 70/72、2 70/72、4 67/72、8 70/72；其余旧标签未全面重审，不能公布为正式成绩。4B暂不升为默认。
+
+## Step 123 — 2026-10-04 Benchmark 4.1 提取质量复核与端到端复跑入口
+
+- 新分支 `benchmark/4.1-batching-quality`、独立模块 `agent_pipeline_v4_1`。直接读取4B的CB2／CB4／CB8已保存提取输出，不改Extractor、提示、连续批处理或原始报告。逐事件审核账本`review.json`锁定数据集和三个提取文件SHA-256，并用事件语义签名防止仅凭E1等编号复用旧标签；审核来源明确为assistant-reviewed，gold故事仍属助手草案。
+- 重新核对引用原文与Gold，发现原2.2账本及4B暂定评分有多处过宽映射：右/左侧宿主叙述不能推出“两颗心脏”；“雷拥有两颗心脏”不能替代“雷向德尔塔说明秘密”；“已经当面交谈”丢失“第一话”时间限定。Hallucination按故事原文依据计，Overselect按不值得核对的普通事件计，重复单列。
+- 离线成绩：CB2为66/72 Gold、Precision 69/77、Hallucination 5/77、Overselect 2/77、Duplicate 1；CB4为63/72、66/72、4/72、2/72、0；CB8与CB2相同。CB4的SL-010窗口partial保留并计漏提。逐事件证据见`agent_pipeline_v4_1/reports/extraction_only/event_audit.csv`，汇总见同目录`quality_summary.md`。这比Step122的暂定结果严格，不能直接与旧71/72横向比较。
+- `run-downstream`仅复用Benchmark 3的Hybrid RRF无metadata、Judge v2.1 batch 8和Report，对三档冻结事件分别重跑后用明确矛盾为正类计算E2E Precision/Recall/F1；无对应gold的矛盾输出计FP，漏掉的gold矛盾计FN。逐故事原子保存，支持同目录续跑，锁定源文件/审计账本/下游实现/索引摘要。CUDA正式运行交用户执行，因此本次不宣称已有E2E F1。
+- 验证：72份保存提取输出全部通过原`validate_extraction`，模块6项测试通过，`validate`与离线评分命令通过。旧4B和Benchmark 3结果未改动。

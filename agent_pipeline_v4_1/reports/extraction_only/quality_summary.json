@@ -1,0 +1,77 @@
+{
+  "schema_version": "benchmark-4.1-quality-summary-v1",
+  "review_provenance": "assistant-reviewed",
+  "source": "C:\\Users\\Xhang\\Desktop\\project\\worldcheck\\agent_pipeline_v4\\reports\\benchmark_4B_20261004T132545Z_0fdce1",
+  "extraction": {
+    "2": {
+      "gold_hits": 66,
+      "gold_total": 72,
+      "recall": 0.9166666666666666,
+      "valid_events": 69,
+      "emitted_events": 77,
+      "precision": 0.8961038961038961,
+      "hallucinated_events": 5,
+      "hallucination_rate": 0.06493506493506493,
+      "overselected_events": 2,
+      "overselect_rate": 0.025974025974025976,
+      "duplicate_events": 1,
+      "missed_gold": [
+        "SL-P03/G1",
+        "SL-006/G1",
+        "SL-008/G3",
+        "SL-012/G1",
+        "SL-015/G1",
+        "SL-020/G1"
+      ]
+    },
+    "4": {
+      "gold_hits": 63,
+      "gold_total": 72,
+      "recall": 0.875,
+      "valid_events": 66,
+      "emitted_events": 72,
+      "precision": 0.9166666666666666,
+      "hallucinated_events": 4,
+      "hallucination_rate": 0.05555555555555555,
+      "overselected_events": 2,
+      "overselect_rate": 0.027777777777777776,
+      "duplicate_events": 0,
+      "missed_gold": [
+        "SL-P03/G1",
+        "SL-006/G1",
+        "SL-008/G3",
+        "SL-010/G1",
+        "SL-010/G2",
+        "SL-010/G3",
+        "SL-012/G1",
+        "SL-015/G1",
+        "SL-020/G1"
+      ]
+    },
+    "8": {
+      "gold_hits": 66,
+      "gold_total": 72,
+      "recall": 0.9166666666666666,
+      "valid_events": 69,
+      "emitted_events": 77,
+      "precision": 0.8961038961038961,
+      "hallucinated_events": 5,
+      "hallucination_rate": 0.06493506493506493,
+      "overselected_events": 2,
+      "overselect_rate": 0.025974025974025976,
+      "duplicate_events": 1,
+      "missed_gold": [
+        "SL-P03/G1",
+        "SL-006/G1",
+        "SL-008/G3",
+        "SL-012/G1",
+        "SL-015/G1",
+        "SL-020/G1"
+      ]
+    }
+  },
+  "end_to_end_conflict": {},
+  "downstream_status": {},
+  "complete": false,
+  "notice": "assistant-reviewed草案故事；Hallucination按原文依据而非设定真假评；E2E正类为明确矛盾。"
+}
