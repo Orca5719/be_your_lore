@@ -1267,3 +1267,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 逐组件追查发现Full Judge输入由`agent_pipeline_v2_1.oracle_benchmark.build_messages`构造为`event`对象；早期A/A2候选改为`fact`对象，字段包含不同的维度与check_reason。此差异与输出协议同时变化，故旧A/A2结果**不能作为输出长度的因果对照**；不能据此断言模型需要完整版理由或更长理由无效。
 - 修正五个A候选的用户输入，统一调用Full Judge原构造函数，仅替换各候选系统提示。新增回归测试，并对固定数据中所有需要模型判断的事实逐条确认五版用户消息与Full Judge逐字一致，0处不匹配。
 - A2命令新增`--a1-result`，可指定新A1目录/Markdown/JSON报告；新manifest绑定原输入构造函数、相关实现与A1结果摘要，拒绝混用旧目录。待用户在新目录重新运行A1及A2后再决定Judge甜点区；3.3B仍未开始。
+
+## Step 115 — 2026-10-04 Benchmark 3.3A输入对齐后结果复核
+
+- 用户重跑目录：`agent_pipeline_v3_3/reports/benchmark_3_3A_aligned`和`agent_pipeline_v3_3/reports/benchmark_3_3A2_aligned`；报告均为24篇、80事实，质量评分覆盖66个gold事实。五候选各23次Judge调用、0重试；冻结Full Judge为27次、4次重试。
+- Full/Structured/Short 80/assumptions-list/rationale-120/rationale-240的Judge Accuracy分别为72.73%/65.15%/66.67%/62.12%/65.15%/65.15%；Uncertain Recall为54.17%/41.67%/37.50%/29.17%/25.00%/25.00%。所有候选均未达到Full Judge三分类质量，尤其不确定类召回下降。
+- 对应Judge总时间为571.928/95.757/145.495/92.673/165.384/205.347秒，输出token为13158/3613/5280/3454/5854/6895。rationale-120与240的80个事实判决和66个gold评分完全相同，后者增加1041输出tokens、39.963秒，本固定集内无质量收益。
+- 目前没有找到兼顾Full Judge质量和显著减时的甜点区；Short 80是候选中准确率最高的折中，Structured更快且不确定召回更高，但两者均不应升为默认。上述速度属于各配置单轮实测、非多轮稳定性能；A阶段暂保留Full Judge，3.3B未开始。
