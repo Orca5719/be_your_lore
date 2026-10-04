@@ -1296,3 +1296,12 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - Gold命中71/72→70/72；质量门槛虽显示`pass`，它允许最多少一个Gold事实，不表示质量无损。具体漏提是`SL-014`中“雷与德尔塔在第六话躲进旧教堂”：局部补提把S4标为`process_detail`。该span已被覆盖，程序覆盖账本无法识别语义分类错误。候选事件80→77，减少的另外两条来自`SL-P03`的普通动作/无依据补充；precision 71/80→70/77，不能抵消核心Gold漏提。
 - 对冻结Benchmark 3的20次`MISSING_TARGET_COVERAGE`首轮调用逐案复核：18次、280.277秒、3225输出tokens的部分事件/处置被后续局部恢复沿用；仅2次、23.125秒、264输出tokens在局部失败后被整窗重试替换。旧3.2B审计按`status=error`将全部20次、303.402秒归为`pure_waste`，高估了真正完全丢弃的覆盖成本。旧报告不覆盖，今后比较应采用“被采纳部分”和“被替换部分”分账。
 - 3.3B当前不升为默认Extractor：质量少一个Gold事实，耗时收益小且仅单轮。结构性partial已修复；剩余差异属于局部窗口的语义筛选，后续若要继续，应单独测试上下文/提示策略，而不是按具体故事或S4写特化规则。
+
+## Step 119 — 2026-10-04 Benchmark 4A 固定批处理实现
+
+- 新分支 `benchmark/4-extractor-batching`、模块 `agent_pipeline_v4`。从 Benchmark 3 基线重新出发，只将 Extractor 的独立故事/窗口请求汇成固定 batch 1、2、4、8；继续调用 Benchmark 3 的提示、提取器、非语义修复适配层和原模型生成实现，不采用 3.2C/3.3B 的语义变更。
+- 每篇故事保留独立代理，使原提取器的 JSON 校验、失败重试和局部缺口恢复原样运行；批次 trace 单独保存，不把一次 batch 的耗时重复分摊给每篇故事。批量输出按行返回，截断只影响对应行；CUDA OOM 记为失败，不自动降档。
+- CLI 提供 `validate`、`run-static`、`summary`。正式运行前用短故事比对原单条生成与 batch 1；每档预热后处理同一24篇故事，逐故事原子保存，支持续跑并校验输入/实现摘要。续跑的 Wall 耗时标记为不具横向可比性。
+- 报告输出固定批处理性能、调用与重试成本、质量对照。新事件仅在与 Benchmark 3 原人工审核事件的语义字段完全相同且匹配唯一时复用标签；否则列入待复核，不宣称正式 Precision／Recall。正式 CUDA 数据由用户运行后分析；4B 尚未实施。
+- 提交前复核补强三处边界：OOM留下的失败故事允许下次重新处理；生成前的预算/分词错误不会复用上一批trace；用Benchmark 3分支的源码摘要及原manifest锁定Extractor、修复层、模型适配器和提示，拒绝把改过的实现冒充冻结基线。对应回归测试复现问题后修复。
+- 本地全套598项测试通过；`python -m agent_pipeline_v4 validate`核对固定24篇、模型ID/revision、冻结源码和批大小通过，`git diff --check`通过。Baseline 自对照精确复现71/72 Gold命中与71/80事件Precision；尚无正式GPU性能数据。
