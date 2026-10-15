@@ -79,7 +79,15 @@ class Top2Probe:
 
     def _capture(self, _model, _inputs, output):
         logits = output.logits[:, -1, :]
-        values, indices = logits.topk(2, dim=-1)
+        # The engine chooses with argmax. topk may choose another token first
+        # when quantized logits tie, so mirror the engine's tie-breaking.
+        first = logits.argmax(dim=-1, keepdim=True)
+        second_logits = logits.clone()
+        second_logits.scatter_(-1, first, float("-inf"))
+        second = second_logits.argmax(dim=-1, keepdim=True)
+        indices = first.repeat(1, 2)
+        indices[:, 1:] = second
+        values = logits.gather(-1, indices)
         values = values.detach().float().cpu().tolist()
         indices = indices.detach().cpu().tolist()
         self._pending.append([

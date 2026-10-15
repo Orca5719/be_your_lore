@@ -1349,3 +1349,16 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 在`agent_pipeline_v4_1`增加`validate-debug`、`run-debug`、`summary-debug`。A单独运行目标；B使用历史CB4首次decode同批的三个邻居；C替换邻居；D保留B邻居并调换目标槽位。四组均为首窗口请求、同一目标prompt；逐token记录top-2 token/logit、位置、活跃顺序和cache重组次数，自动找首次token分歧并报告原输出校验状态。四组分别原子保存，可中断续跑。
 - 该实验控制同时入场，不逐步复刻历史24篇调度中邻居已运行的步数；邻居或槽位依赖只提供定位证据，不能单凭它证明KV串话，GPU数值路径也可能导致logit差异。正式CUDA运行交用户执行。
 - 验证：`validate-debug`确认历史目标窗口S1–S8及CB1/CB4首轮状态；调试模块5项测试（含微型Qwen换位和logit探针）与4.1原6项测试均通过。历史报告文件未修改。
+
+## Step 126 — 2026-10-15 Benchmark 4.1 调试探针修复
+
+- 用户实测在A组保存后，B组因 `observed top-1 logit does not match generated token` 中止。连续批处理以 `argmax` 选token，调试探针却以 `topk(2)` 取第一名；量化logit并列时两者的并列排序可能不同，因此这是探针误报，尚未证明生成器错误。
+- 探针改为先按生成器的 `argmax` 选第一名，再排除它并取得第二名；生成器、prompt、调度器和判决逻辑均未改变。增加并列logit回归测试，调试模块测试通过。
+- 用户将修复复制到桌面项目后，沿原结果目录从B组续跑；A组保留。
+
+## Step 127 — 2026-10-15 四组结果复核与缓存清理
+
+- 完整结果目录：`agent_pipeline_v4_1/reports/debug_4_1_20261015T101634Z_cc06e4`。A/B/D目标输出198 tokens且逐token相同；C输出189 tokens，首次分歧在第125个token。该步目标position_id均为904，但C的batch cache_position为909，A/B/D为904。换邻居改变了批次宽度和数值路径；这提示batch形状敏感，不足以认定KV cache串话。
+- 四组首轮均未通过v2 wire协议校验；A也与归档CB1的首次成功不同。因此受控实验未复现历史CB1成功路径，不能仅凭这轮结果解释原始CB4质量下降。历史24篇调度与本轮同时入场的控制条件也不同。
+- 清理了项目内根目录及模块的Python `__pycache__` 和 `.pytest_cache`，约3.5 MB。`.pytest-tmp*`含Windows重解析点，递归清理被拒后停止，保留剩余临时目录；`.cache/huggingface`、`.codegraph`、虚拟环境、索引及所有benchmark原始报告均保留。
+- 修复后的4.1原有测试与调试测试共12项通过；运行测试时禁止写入字节码缓存。

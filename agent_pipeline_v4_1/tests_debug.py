@@ -4,6 +4,19 @@ from agent_pipeline_v4_1.debug_experiment import first_divergence, make_scenario
 
 
 class DebugExperimentTests(unittest.TestCase):
+    def test_probe_uses_engine_argmax_when_logits_tie(self):
+        import torch
+        from types import SimpleNamespace
+        from agent_pipeline_v4_1.debug_experiment import Top2Probe
+
+        logits = torch.zeros(1, 1, 100)
+        logits[0, 0, 1] = logits[0, 0, 50] = 5.0
+        self.assertEqual(logits[0, -1].argmax().item(), 1)
+        self.assertEqual(logits[0, -1].topk(2).indices[0].item(), 50)
+        probe = Top2Probe(None)
+        probe._capture(None, (), SimpleNamespace(logits=logits))
+        self.assertEqual([item["token_id"] for item in probe.take(1)[0]], [1, 50])
+
     def test_four_scenarios_isolate_neighbour_and_slot(self):
         specs = make_scenarios("T", ("N1", "N2", "N3"), ("M1", "M2", "M3"))
         self.assertEqual(specs, {
