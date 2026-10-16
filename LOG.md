@@ -1362,3 +1362,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 四组首轮均未通过v2 wire协议校验；A也与归档CB1的首次成功不同。因此受控实验未复现历史CB1成功路径，不能仅凭这轮结果解释原始CB4质量下降。历史24篇调度与本轮同时入场的控制条件也不同。
 - 清理了项目内根目录及模块的Python `__pycache__` 和 `.pytest_cache`，约3.5 MB。`.pytest-tmp*`含Windows重解析点，递归清理被拒后停止，保留剩余临时目录；`.cache/huggingface`、`.codegraph`、虚拟环境、索引及所有benchmark原始报告均保留。
 - 修复后的4.1原有测试与调试测试共12项通过；运行测试时禁止写入字节码缓存。
+
+## Step 128 — 2026-10-16 Benchmark 4.2A 约束解码实现与短样本验证
+
+- 在桌面 `worldcheck/.worktrees/benchmark-4.2` 建立 `benchmark/4.2-decoding` 独立工作区，沿用4.1代码；新增 `agent_pipeline_v4_2`，固定4B模型、24篇故事、Extractor v1 prompt/字段、原修复与重试逻辑，只切换 Extractor 生成时的JSON约束。
+- 两组均为batch=1，在同一次模型加载中各预热一篇并正式运行24篇。使用原4A运行器保存逐故事结果和逐调用trace；自动汇总调用、retry、覆盖恢复、tokens、TTFT、Prefill、Decode、Wall、显存和待审核事件。改变的事件不会仅凭事件ID复用旧标签，正式E2E评分要求先完成逐案审核。
+- XGrammar 0.2.8在本机Windows/CUDA上原生GPU掩码报`Triton is not installed`；定位为其CUDA bitmask路径的依赖。4.2A保留XGrammar语法匹配，用其CPU掩码后将logits送回CUDA；拷贝成本进入实际计时，不能把它排除后宣称提速。
+- 短剧情通过真实Qwen模型的batch=1队列路径：baseline和constrained均为`ok`、各1事件、1调用、无覆盖缺口。正式24篇运行仍由用户执行；本步不宣称已有质量或性能收益。
