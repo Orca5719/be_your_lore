@@ -63,7 +63,7 @@ def _identity(inputs: dict) -> dict:
 def _ensure_manifest(directory: Path, identity: dict) -> None:
     path = directory / "manifest.json"
     if path.exists():
-        if _read(path) != identity:
+        if _read(path) != json.loads(json.dumps(identity, ensure_ascii=False)):
             raise ValueError("4.2A 输入、模型或依赖版本变化；请使用新结果目录")
     else:
         atomic_write_json(path, identity)

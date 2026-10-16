@@ -1369,3 +1369,15 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 两组均为batch=1，在同一次模型加载中各预热一篇并正式运行24篇。使用原4A运行器保存逐故事结果和逐调用trace；自动汇总调用、retry、覆盖恢复、tokens、TTFT、Prefill、Decode、Wall、显存和待审核事件。改变的事件不会仅凭事件ID复用旧标签，正式E2E评分要求先完成逐案审核。
 - XGrammar 0.2.8在本机Windows/CUDA上原生GPU掩码报`Triton is not installed`；定位为其CUDA bitmask路径的依赖。4.2A保留XGrammar语法匹配，用其CPU掩码后将logits送回CUDA；拷贝成本进入实际计时，不能把它排除后宣称提速。
 - 短剧情通过真实Qwen模型的batch=1队列路径：baseline和constrained均为`ok`、各1事件、1调用、无覆盖缺口。正式24篇运行仍由用户执行；本步不宣称已有质量或性能收益。
+
+## Step 129 — 2026-10-17 Benchmark 4.2A 续跑校验修复
+
+- 用户正式运行保存了baseline全部24篇，均为`ok`；约束解码组尚未开始。首次中止原因是manifest把运行时的tuple与JSON重载后的list直接比较，误报输入变化。
+- 校验改为比较JSON规范化后的身份。修复代码又使自包含的`cli.py`文件摘要变化；核实原manifest与当前身份仅此一项不同后，对现有结果目录的manifest执行一次性迁移。原始24篇逐故事结果、调用trace和质量标签未改动。
+- 原结果目录的`summary`命令已成功，baseline为103次调用、24/24 `ok`；从相同结果目录继续运行时应跳过这些已完成故事，正式约束解码组仍待用户实测。
+
+## Step 130 — 2026-10-17 Benchmark 4.2A 结果及事件审核
+
+- 用户完成同一结果目录的两组24篇测试，两组均为24/24 `ok`。约束解码调用103→98，格式重试8→3，覆盖恢复均为19；输出tokens 11714→10690，但本机CPU语法掩码与CUDA模型间复制使Extractor Wall从869.57秒升至1044.09秒（约慢20.1%）。这只代表当前Windows实现。
+- 对约束组4个待审核事件逐案核对：`SL-P03/E1`虚构双心脏，`SL-P03/E2`过度选中整理衣领，`SL-015/E3`有效对应G1，`SL-018/E4`重复同篇E1且source ID误指到其他句子。审核账本`review.json`已填写并清空pending。
+- 审核后Extractor Recall为baseline 71/72=98.61%、约束组70/72=97.22%；Precision为88.75%与88.61%。约束组遗漏`SL-P03/G1`及`SL-018/G3`，并有1条无依据事件。暂不宣称质量或速度改进；E2E F1需继续运行冻结下游。
