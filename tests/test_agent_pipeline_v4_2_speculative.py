@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from agent_pipeline_v4_2.speculative import _ensure_manifest
+from agent_pipeline_v4_2.speculative import _ensure_manifest, apply_review_corrections
 from agent_pipeline_v4_2.speculative_model import CommitStreamer, prompt_lookup_generation
 
 
@@ -91,3 +91,18 @@ def test_manifest_refuses_changed_baseline_or_generation_config(tmp_path: Path):
         _ensure_manifest(tmp_path, {**identity, "tokens": 4})
     with pytest.raises(ValueError, match="变化"):
         _ensure_manifest(tmp_path, {**identity, "baseline_files": {"rows": "changed"}})
+
+
+def test_review_correction_checks_signature_and_preserves_original():
+    old = {"cases": {"SL-1": {"E1": {"signature": "abc", "label": "valid_checkable",
+                                           "gold_ids": ["G1"], "note": None}}}}
+    correction = {"schema_version": "benchmark-4.2B-baseline-review-corrections-v1",
+                  "corrections": [{"case_id": "SL-1", "event_id": "E1", "signature": "abc",
+                                   "from_label": "valid_checkable", "from_gold_ids": ["G1"],
+                                   "to_label": "hallucinated", "to_gold_ids": [], "reason": "unsupported"}]}
+    fixed = apply_review_corrections(old, correction)
+    assert fixed["cases"]["SL-1"]["E1"]["label"] == "hallucinated"
+    assert old["cases"]["SL-1"]["E1"]["label"] == "valid_checkable"
+    correction["corrections"][0]["signature"] = "stale"
+    with pytest.raises(ValueError, match="不匹配"):
+        apply_review_corrections(old, correction)

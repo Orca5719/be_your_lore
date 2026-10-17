@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -35,6 +36,37 @@ def _jsonl(path: Path) -> list[dict]:
 
 def _sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def apply_review_corrections(review: dict, corrections: dict) -> dict:
+    """Apply explicit, signature-checked annotation fixes without editing history."""
+    if corrections.get("schema_version") != "benchmark-4.2B-baseline-review-corrections-v1":
+        raise ValueError("审核修正账本版本不匹配")
+    amended = copy.deepcopy(review)
+    seen = set()
+    for item in corrections.get("corrections", []):
+        key = (item["case_id"], item["event_id"])
+        if key in seen:
+            raise ValueError("审核修正账本含重复事件")
+        seen.add(key)
+        old = amended["cases"][key[0]][key[1]]
+        if (old["signature"] != item["signature"] or old["label"] != item["from_label"]
+                or old["gold_ids"] != item["from_gold_ids"]):
+            raise ValueError(f"审核修正与原标签不匹配：{key[0]}/{key[1]}")
+        old.update(label=item["to_label"], gold_ids=item["to_gold_ids"],
+                   note="4.2B审计修正：" + item["reason"])
+    return amended
+
+
+def corrected_baseline_quality(directory: Path, baseline: Path, inputs: dict) -> dict:
+    corrections_path = directory / "baseline_review_corrections.json"
+    if not corrections_path.exists():
+        return _read(baseline / "quality_reviewed.json")["baseline"]
+    old_review = _read(baseline / "baseline/review.json")
+    review = apply_review_corrections(old_review, _read(corrections_path))
+    rows = _jsonl(baseline / "baseline/extractor_runs.jsonl")
+    downstream = _jsonl(baseline / "baseline/downstream_runs.jsonl")
+    return score_reviewed(inputs["cases"], rows, downstream, review)
 
 
 def _baseline_files(baseline: Path) -> dict[str, Path]:
@@ -125,7 +157,7 @@ def summarize(directory: Path, inputs: dict, baseline: Path, num_tokens: int) ->
         review = _read(review_path)
         if not review.get("pending") and review.get("extraction_sha256") == _sha(source):
             reviewed = score_extraction(inputs["cases"], rows, review["cases"])
-    base_quality = _read(baseline / "quality_reviewed.json")["baseline"]
+    base_quality = corrected_baseline_quality(directory, baseline, inputs)
     base_perf = _read(baseline / "baseline/summary.json")["performance"]
     perf = summary["performance"]
     calls = _jsonl(output / "inference_calls.jsonl")
@@ -141,6 +173,9 @@ def summarize(directory: Path, inputs: dict, baseline: Path, num_tokens: int) ->
                              "tokens_per_commit_step": perf["output_tokens"] / steps if steps else None},
         "comparison_notice": "无约束基线复用4.2A已保存结果，跨轮比较；batch均为1，不能与batch=4/8吞吐混作同口径。",
     }
+    corrections = directory / "baseline_review_corrections.json"
+    if corrections.exists():
+        result["baseline_review_corrections_sha256"] = _sha(corrections)
     setup = directory / "run_metadata.json"
     if setup.exists():
         result["setup"] = _read(setup)
@@ -169,6 +204,9 @@ def summarize(directory: Path, inputs: dict, baseline: Path, num_tokens: int) ->
               "这些是streamer观察到的提交量，并非草稿模型接受率；本实验没有辅助模型。", "",
               "若新增事件仍待审核，Recall/Precision不发布正式值；下游E2E F1需审核后另跑。", "",
               "Transformers 4.57.6 的辅助生成路径只接受batch=1；本轮评估单请求路径，不声称多请求吞吐收益。", ""]
+    if corrections.exists():
+        lines += ["基线审核标签采用本结果目录的 `baseline_review_corrections.json` 作有签名的修正；"
+                  "4.2A原始结果和审核账本未修改。", ""]
     report = directory / "benchmark_4_2B_summary.md"
     report.write_text("\n".join(lines), encoding="utf-8")
     print("SUMMARY=" + str(report), flush=True)
@@ -268,11 +306,11 @@ def run_downstream(args) -> int:
         write_jsonl_atomic(path, downstream)
         llm.clear_traces()
     candidate = score_reviewed(inputs["cases"], rows, downstream, review)
-    baseline_quality = _read(baseline / "quality_reviewed.json")["baseline"]
+    baseline_quality = corrected_baseline_quality(directory, baseline, inputs)
     scores = {"baseline": baseline_quality, "prompt_lookup": candidate}
     atomic_write_json(directory / "quality_reviewed.json", scores)
     lines = ["# Benchmark 4.2B：审核后质量", "",
-             "冻结Hybrid Retrieval、Judge v2.1 batch=8和Report；无约束基线复用4.2A的已审核结果。", "",
+             "冻结Hybrid Retrieval、Judge v2.1 batch=8和Report；无约束基线复用4.2A结果，按本目录的签名修正账本纠正两条旧审核标签。", "",
              "| 组别 | Extraction Recall | Extraction Precision | Hallucination | Overselect | E2E TP/FP/FN | E2E F1 |",
              "|---|---:|---:|---:|---:|---:|---:|"]
     for name in ("baseline", "prompt_lookup"):

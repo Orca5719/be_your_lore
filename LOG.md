@@ -1395,3 +1395,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 本地安装版本的assisted generation明确拒绝batch size>1；4.2B固定batch=1，复用4.2A已审核无约束组作为跨轮基线，只重新运行推测组，避免重复消耗约15分钟。报告明确区分单请求路径与4A/4B的多请求batch吞吐。
 - 为避免候选检查被误记为首token，移除原batch适配器仅用于计时的stopping criterion，改用streamer首次实际提交token计时；记录提交步数、多token提交步数、输出tokens、TTFT、Decode、Wall及峰值显存。EOS与max_new_tokens仍由Transformers生成逻辑控制。
 - 真实短样本在同一模型加载下完成：无约束与Prompt Lookup均`ok`，提取事件字段完全相同，各1次调用；推测解码观测到26个提交步。正式24篇质量和性能尚待用户运行；短样本不能证明整体提速。
+
+## Step 133 — 2026-10-17 Benchmark 4.2B 正式提取结果与审核修正
+
+- 用户完成24篇Prompt Lookup运行，24/24 `ok`；无约束baseline复用4.2A。调用103→98，输出tokens11714→10403，Decode 816.88→397.42秒，Extractor Wall 869.57→443.48秒；属于跨轮性能对照，不宣称配对重复实验的稳定加速倍数。显存峰值均约2.89/2.93 GiB。
+- Streamer观察到3992个提交步，其中1968步提交多个token，平均每步2.61 tokens。此处计数是最终提交chunk，不是候选提议总数或严格接受率。
+- 审核3条变化事件：`SL-P03/E1`无依据、`SL-017/E4`有效映射G1、`SL-022/E5`有效映射G3。另发现旧审核错误：`SL-022/E1`的“雷拥有两颗心脏”并非故事S6所表达，不能映射G3；Prompt Lookup账本改为无依据。4.2A原始报告与标签保持原样，在4.2B结果目录新增签名核对的`baseline_review_corrections.json`，对旧baseline的`SL-022/E1`和`SL-P03/E3`执行透明的审计修正。
+- 按修正口径，baseline Extraction Recall/Precision=97.22%/87.50%，Prompt Lookup=97.22%/93.33%；前者与4.2A历史报告的98.61%/88.75%不同，原因是人工标签纠错而非模型重新运行。E2E F1尚待冻结下游复测。
