@@ -1381,3 +1381,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 用户完成同一结果目录的两组24篇测试，两组均为24/24 `ok`。约束解码调用103→98，格式重试8→3，覆盖恢复均为19；输出tokens 11714→10690，但本机CPU语法掩码与CUDA模型间复制使Extractor Wall从869.57秒升至1044.09秒（约慢20.1%）。这只代表当前Windows实现。
 - 对约束组4个待审核事件逐案核对：`SL-P03/E1`虚构双心脏，`SL-P03/E2`过度选中整理衣领，`SL-015/E3`有效对应G1，`SL-018/E4`重复同篇E1且source ID误指到其他句子。审核账本`review.json`已填写并清空pending。
 - 审核后Extractor Recall为baseline 71/72=98.61%、约束组70/72=97.22%；Precision为88.75%与88.61%。约束组遗漏`SL-P03/G1`及`SL-018/G3`，并有1条无依据事件。暂不宣称质量或速度改进；E2E F1需继续运行冻结下游。
+
+## Step 131 — 2026-10-17 Benchmark 4.2A 端到端复核
+
+- 用户执行冻结下游，两组`downstream_runs.jsonl`各有24篇且全部`ok`。质量报告在`agent_pipeline_v4_2/reports/benchmark_4_2A_20261016T170530Z_ab70a2/quality_reviewed.md`。
+- baseline E2E TP/FP/FN=18/9/6，F1=70.59%；constrained为17/8/7，F1=69.39%。两组使用相同Hybrid Retrieval、Judge v2.1 batch=8、Report；差异主要来自Extractor输出。
+- `SL-P03`的核心冲突在约束组未提取，造成1个TP损失和1个FN增加；`SL-018`原版额外提取的列车事件被Judge错判矛盾，约束组未产生该误报，FP减少1。不能仅凭总体F1差异断言约束解码使Judge变差。
+- 4.2A当前Windows CPU掩码实现同时出现Wall增加约20.1%、Extraction Recall下降1.39个百分点和E2E F1下降1.20个百分点；本轮不采用为默认Extractor。后续4.2B推测解码须作为独立实验，不将4.2A的质量变化混入其基线。
