@@ -1402,3 +1402,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - Streamer观察到3992个提交步，其中1968步提交多个token，平均每步2.61 tokens。此处计数是最终提交chunk，不是候选提议总数或严格接受率。
 - 审核3条变化事件：`SL-P03/E1`无依据、`SL-017/E4`有效映射G1、`SL-022/E5`有效映射G3。另发现旧审核错误：`SL-022/E1`的“雷拥有两颗心脏”并非故事S6所表达，不能映射G3；Prompt Lookup账本改为无依据。4.2A原始报告与标签保持原样，在4.2B结果目录新增签名核对的`baseline_review_corrections.json`，对旧baseline的`SL-022/E1`和`SL-P03/E3`执行透明的审计修正。
 - 按修正口径，baseline Extraction Recall/Precision=97.22%/87.50%，Prompt Lookup=97.22%/93.33%；前者与4.2A历史报告的98.61%/88.75%不同，原因是人工标签纠错而非模型重新运行。E2E F1尚待冻结下游复测。
+
+## Step 134 — 2026-10-17 Benchmark 4.2B 端到端质量复核
+
+- 用户完成冻结Hybrid Retrieval、Judge v2.1 batch=8和Report的端到端复测，两组均24/24 `ok`。审核后报告位于`agent_pipeline_v4_2/reports/benchmark_4_2B_20261017T033125Z_295aa1/quality_reviewed.md`；baseline和Prompt Lookup均为TP/FP/FN=18/9/6，Precision=66.67%、Recall=75.00%、F1=70.59%。
+- Prompt Lookup的提取Precision由87.50%升至93.33%，Recall同为70/72=97.22%；无依据事件均为2条，过度选中由8条减为3条。但相同E2E总分掩盖了案例交换：Prompt Lookup漏掉`SL-P03/G1`，同时重新命中`SL-017/G1`；两组的漏检集合并不相同，仍需逐例看质量。
+- 单请求Extractor Wall在跨轮观测中由869.57降至443.48秒，约为原来的51.0%；Decode由816.88降至397.42秒。该对照复用此前无约束baseline，并非同轮配对重复测量；不把约1.96倍的观测速度比率视为稳定加速。当前Prompt Lookup只支持batch=1，不能据此推断多请求吞吐收益。
+- 4.2B结论：在这24篇样本上，Prompt Lookup明显减少单请求生成耗时并改善提取Precision，端到端F1未提高；保留为候选实验，不直接替换批处理默认路径。历史4.2A原始报告不改写，4.2B内的标签修正账本与新旧质量口径同时保留。
