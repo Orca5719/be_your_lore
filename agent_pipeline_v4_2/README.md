@@ -28,3 +28,25 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck\.worktrees\benchmark-4.2
 下游复用当前冻结的 Hybrid RRF、Judge v2.1 batch 8 和 Report；两组在同一执行中对照。输出 `quality_reviewed.md/json`，包含提取 Recall/Precision、Hallucination、Overselect 与明确矛盾的 E2E TP/FP/FN/F1。当前代码与 Benchmark 4.1 相同，历史 Benchmark 3 的归档下游摘要已有不匹配记录，因此不能把 4.2 的端到端绝对分数直接宣称为 Benchmark 3 的逐字复现。
 
 `smoke-a` 不计入正式结果。它只证明本机真实模型的 batch=1 队列路径可以完成一条故事，不证明 24 篇质量或速度收益。
+
+## 4.2B：Prompt Lookup 推测解码
+
+4.2B只改变Extractor的生成方式：Transformers从当前输入中查找重复的token片段，提出最多5个候选token，由同一Qwen模型验证。模型、greedy策略、prompt、schema、窗口、重试和下游保持不变；不加入第二个模型或语法约束。当前锁定的Transformers 4.57.6在assisted generation内部要求batch=1，所以本轮只测单请求路径，不把它与4A/4B多请求batch吞吐混为同一指标。
+
+为节省一次约15分钟的原版重跑，4.2B只重跑推测解码组，复用4.2A已审核的无约束batch=1结果作参考。报告标记为**跨轮对照**；若差距接近运行波动，需要再做配对重复测量。
+
+在本工作区运行：
+
+```powershell
+Set-Location "C:\Users\Xhang\Desktop\project\worldcheck\.worktrees\benchmark-4.2"
+& "C:\Users\Xhang\Desktop\project\worldcheck\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v4_2.speculative validate
+& "C:\Users\Xhang\Desktop\project\worldcheck\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v4_2.speculative run --device cuda --prompt-lookup-num-tokens 5
+```
+
+`run`打印`RESULT_DIR`和`SUMMARY`。每篇原子保存提取结果和逐调用trace，中断后可用`--output <原RESULT_DIR>`续跑；续跑的Wall不再作正式横向比较。正式表展示调用、重试、tokens、TTFT、Prefill/Decode/Wall、显存、提交步和待审核变化事件。新增事件要审核`prompt_lookup/review.json`；审核后再运行：
+
+```powershell
+& "C:\Users\Xhang\Desktop\project\worldcheck\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v4_2.speculative run-downstream --result-dir "<RESULT_DIR>" --device cuda
+```
+
+下游报告输出`QUALITY`，包含Extraction Recall/Precision、Hallucination、Overselect和E2E F1。`smoke`命令只运行一条短故事、在同一模型实例中比较两种生成方式，不计入正式结果。推测解码有可能因候选匹配率、量化数值路径或调度开销而变慢或改变输出；正式结果会逐案列出差异，不预设提速。

@@ -1388,3 +1388,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - baseline E2E TP/FP/FN=18/9/6，F1=70.59%；constrained为17/8/7，F1=69.39%。两组使用相同Hybrid Retrieval、Judge v2.1 batch=8、Report；差异主要来自Extractor输出。
 - `SL-P03`的核心冲突在约束组未提取，造成1个TP损失和1个FN增加；`SL-018`原版额外提取的列车事件被Judge错判矛盾，约束组未产生该误报，FP减少1。不能仅凭总体F1差异断言约束解码使Judge变差。
 - 4.2A当前Windows CPU掩码实现同时出现Wall增加约20.1%、Extraction Recall下降1.39个百分点和E2E F1下降1.20个百分点；本轮不采用为默认Extractor。后续4.2B推测解码须作为独立实验，不将4.2A的质量变化混入其基线。
+
+## Step 132 — 2026-10-17 Benchmark 4.2B Prompt Lookup 实现与短样本验证
+
+- 新增独立`agent_pipeline_v4_2.speculative`入口和`speculative_model.py`，使用Transformers 4.57.6内置Prompt Lookup候选生成；仍由原Qwen3-4B NF4/BF16模型验证token，保持Extractor prompt/schema、greedy设置、窗口、重试及冻结下游不变。没有引入第二个模型。
+- 本地安装版本的assisted generation明确拒绝batch size>1；4.2B固定batch=1，复用4.2A已审核无约束组作为跨轮基线，只重新运行推测组，避免重复消耗约15分钟。报告明确区分单请求路径与4A/4B的多请求batch吞吐。
+- 为避免候选检查被误记为首token，移除原batch适配器仅用于计时的stopping criterion，改用streamer首次实际提交token计时；记录提交步数、多token提交步数、输出tokens、TTFT、Decode、Wall及峰值显存。EOS与max_new_tokens仍由Transformers生成逻辑控制。
+- 真实短样本在同一模型加载下完成：无约束与Prompt Lookup均`ok`，提取事件字段完全相同，各1次调用；推测解码观测到26个提交步。正式24篇质量和性能尚待用户运行；短样本不能证明整体提速。
