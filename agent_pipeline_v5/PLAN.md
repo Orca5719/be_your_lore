@@ -6,7 +6,7 @@
 **Architecture:** 新增 agent_pipeline_v5 实验入口，复用冻结的切句、模型适配器、检索及审核工具；通过独立协议适配和策略接口逐项对照。历史版本只读，候选不自动成为生产默认。
 **Tech Stack:** 原 Windows .venv、Python、Transformers 4.57.6、现有 Qwen3-4B NF4/double-quant/BF16；不安装新依赖。
 **Spec:** 本文件的目标、实验契约和验收规则构成设计；下方任务为实施计划。
-**状态:** 2026-10-19 规划完成；5A–5E 尚未实施/运行。4.2C 暂停。
+**状态:** 2026-10-20 5A完成：离线复算、逐例复核、32项相关测试通过；5B–5E未实施。4.2C暂停。
 
 ## 工作区与参考证据
 
@@ -50,13 +50,13 @@
 Files: agent_pipeline_v5/{__init__.py,__main__.py,diagnostics.py,identity.py}；tests/test_agent_pipeline_v5_diagnostics.py。
 Interfaces: audit_archives(source_root: Path, output_dir: Path) -> dict；build_identity(config: dict, paths: list[Path]) -> dict。CLI 计划为 python -m agent_pipeline_v5 audit --source-root PATH，尚未实现，不能作为现成运行命令。
 
-- [ ] 写测试：缺档、重复/缺失故事、过期签名、tuple/list 往返、修正标签、缺指标为 null；audit 路径不导入 torch/transformers、不加载模型。
-- [ ] 运行测试确认先失败；实现只读档案检查，拒绝输入输出同目录。
-- [ ] 统计98次调用按初提/格式重试/覆盖恢复分类的耗时与tokens；区分补回有效事件、重复、幻觉。trace 不足以对应时写 unknown，不凭调用顺序猜归因。
-- [ ] 对 9 FP、6 FN 建逐例账本：case/gold或event、原文、提取、检索候选、Judge输出、首个可证实错误、后续错误、证据路径、审核状态。按评分器实际误报单位映射，不能假定15个独立故事；多因/证据不足保留待定。
-- [ ] 比较 B 的漏检集合与修正 A 基线，不只比总分；历史源码哈希缺失或重放不一致记录为限制。
-- [ ] pytest tests/test_agent_pipeline_v5_diagnostics.py -q；使用真实历史报告离线运行，核对70/72、18/9/6及98次调用。出 audit_summary.md、error_attribution.json、call_costs.json、decision.md。
-- [ ] 记录 LOG 并局部提交；确定 B/C/D 的实际优先级，不先宣称根因已证实。
+- [x] 写测试：缺档、重复/缺失故事、过期签名、tuple/list 往返、修正标签、缺指标为 null；audit 路径不导入 torch/transformers、不加载模型。
+- [x] 运行测试确认先失败；实现只读档案检查，拒绝输入输出同目录。
+- [x] 统计98次调用按初提/格式重试/覆盖恢复分类的耗时与tokens；区分补回有效事件、重复、幻觉。trace 不足以对应时写 unknown，不凭调用顺序猜归因。
+- [x] 对 9 FP、6 FN 建逐例账本：case/gold或event、原文、提取、检索候选、Judge输出、首个可证实错误、后续错误、证据路径、审核状态。按评分器实际误报单位映射，不能假定15个独立故事；多因/证据不足保留待定。
+- [x] 比较 B 的漏检集合与修正 A 基线，不只比总分；历史源码哈希缺失或重放不一致记录为限制。
+- [x] pytest tests/test_agent_pipeline_v5_diagnostics.py -q；使用真实历史报告离线运行，核对70/72、18/9/6及98次调用。出 audit_summary.md、error_attribution.json、call_costs.json、decision.md。
+- [x] 记录 LOG 并局部提交；确定 B/C/D 的实际优先级，不先宣称根因已证实。
 
 ## 5B — 短输出协议（第一层）
 
@@ -64,7 +64,7 @@ Files: agent_pipeline_v5/{wire.py,extractor.py,runner.py,resources.py,prompts/ex
 Interfaces: expand_event(row: dict, event_id: str, spans: dict) -> dict；run_extraction_arm(config: dict, cases: list[dict], model, output_dir: Path) -> dict。
 References: agent_pipeline_v2/extractor.py split_spans/字段校验；agent_pipeline_v2_1/extractor.py ExtractionRepairLLM；agent_pipeline_v4/static.py StaticBatcher；agent_pipeline_v4_2/speculative_model.py。
 
-- [ ] 测试并实现独立 wire schema。必填 actors,event,source_ids,modality,check_reason；移除模型生成id，程序按合并后的稳定顺序生成。explicit严格按原协议由modality推导；mental_state/context_ids/conditions省略只等同null/[]，不能猜语义。校验失败不默默补 observed。
+- [ ] 测试并实现独立 wire schema。必填 actors,event,source_ids,modality,check_reason；沿用原先已由程序生成id的机制，不将其算作新收益。explicit严格按原协议由modality推导；mental_state/context_ids/conditions省略只等同null/[]，不能猜语义。校验失败不默默补 observed。
 - [ ] 测试言论/信念/条件/否定、跨句代词、未知source、源/上下文重叠、空actor、截断JSON；保留主体、时态和条件语义，不能将缺信息变成“无条件事实”。输出原文仍由原span表还原，模型不数偏移。
 - [ ] 首个版本保持旧 ignored/coverage 协议、输入窗口、修复策略、生成上限不变；不顺带删除覆盖逻辑或硬砍输出预算。仅缩短事件表示，并留原始响应。
 - [ ] 测试资源检查、只读共享缓存、断点身份、逐故事原子保存、失败退出；用fake模型做真实适配链集成测试。
@@ -125,4 +125,13 @@ Interfaces: score_run(cases: list[dict], extraction: list[dict], downstream: lis
 ## 本次交付边界
 
 已完成：读取参考对话、核对代码与历史结果、建立B5独立工作区、冻结本计划及待办。
-下一块：5A离线诊断。尚未宣称任何提速/准确率收益；本次不运行正式GPU测试。
+5A执行完成；下一块为5B最小短字段对照，先阅读REVIEW_5A.md的计划修正。尚未宣称任何提速/准确率收益，未运行GPU。
+
+## 5A执行记录（2026-10-20）
+- 先观察到缺模块失败，再实现；集成测试发现新父目录磁盘检查问题，增加数据绑定测试后补齐缺哈希校验。
+- 独立审查发现外链数据集跳过历史哈希，增加失败测试并修复为拒绝。32项5A/4.2相关测试通过（19项5A）。
+- 真实最终报告：reports/audit_5A_20261020_final；源文件处理前后哈希一致，未加载模型。
+- Ruling: 历史早期报告外链只记录未校验，mandatory数据集外链拒绝；不扩大读取范围。
+- Ruling: 原协议已不生成id，原补查已只补missing targets；修正后续假设，保留5B候选字段和5C单独对照。
+- 15项错误逐例复核在REVIEW_5A.md；7项存在gold/证据契约争议，不修改历史分数。
+
