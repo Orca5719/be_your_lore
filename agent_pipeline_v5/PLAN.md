@@ -6,9 +6,11 @@
 **Architecture:** 新增 agent_pipeline_v5 实验入口，复用冻结的切句、模型适配器、检索及审核工具；通过独立协议适配和策略接口逐项对照。历史版本只读，候选不自动成为生产默认。
 **Tech Stack:** 原 Windows .venv、Python、Transformers 4.57.6、现有 Qwen3-4B NF4/double-quant/BF16；不安装新依赖。
 **Spec:** 本文件的目标、实验契约和验收规则构成设计；下方任务为实施计划。
-**状态:** 2026-10-20 5A完成：离线复算、逐例复核、32项相关测试通过；5B代码已实现待用户GPU实验；5C–5E未实施。4.2C暂停。
+**状态:** 2026-10-20 5A完成；5B和5C1用户四篇筛选已完成，正式质量/全量待审核；本轮实施5D0提取语义契约实验，5C2、5D1/D2、5E待执行。4.2C暂停。
 
 ## 工作区与参考证据
+
+当前唯一工作区为桌面worldcheck，历史目录已整合；以下新工作区/源目录条目仅是初始计划记录，不再作为活动路径。见WORKSPACE.md和AGENTS.md。
 
 - 新工作区由 Codex 管理，基于提交 3161a6d；不复制 4.2C 未提交改动，不复制模型、索引或大报告。
 - 参考流程：对话“规划语义世界观检索器”：分块实现 → 测试 → 用户跑正式实验 → SUMMARY 审核变化事件 → 冻结下游 → QUALITY 复核 → LOG 记录/局部提交 → 决定下一块。
@@ -99,6 +101,21 @@ Interfaces: repair_event(event: dict, issues: list[dict], context: dict, model) 
 - [ ] 逐块测试 → 用户运行 → 逐案审核 → 冻结下游 → decision/LOG/提交。
 
 ## 5D — 证据和判定结构（第三层，依5A归因安排）
+
+### 5D0 前置：提取语义契约（本轮）
+
+- Ruling: 先澄清5A已定位的知识/发言范围与5C1仍存在的文本关系遗漏，再动Judge证据；否则下游会在输入错误上优化。新增原协议下original/semantic × plain/lookup5四组，只改变提取system提示整体，不改程序scope gate。代价：此轮不能单独归因提示中的每条规则，也不解决Judge自身证据适用问题。
+- Ruling: 不叠加尚未全量验收的5B短协议或5C1字段修复，不用正则强行将belief/speech改observed，不增加筛选/验证LLM调用。代价：保留格式重试，收益可能受新提示长度与推测匹配率影响。
+- 语义契约：先判断待核查性、再保留原文完整命题；没有特殊机制或持续影响的日常动作进ignored，不能据普通动词硬过滤伤亡/能力/知识变化。source必须支持主体关系与限定；不拿背景常识或提示示例补事实，保留一源多事实及否定/条件。
+- 模态：客观叙述的角色“知道/获知”是关于知识状态的observed，不证明其所知命题为世界事实；角色相信/猜测为belief。客观叙述“向某人告知”的交流发生可observed，发言所声称的内容仍speech；计划、梦、条件不升级为现实。
+- 提示不使用回归角色/设定/答案作示例，移除原版双心脏示例的具体事实，改字段形状说明；不是证明该示例是幻觉唯一原因。原24篇开发回归已见，不能称留出集。
+- 接口：WireBatchModel(prompt_policy='original'|'semantic_v1')；新prompts/extractor_semantic_v1.txt；runner的semantic_plain/semantic_lookup5；validate-d/run-d/summary-d/score-d/run-downstream-d。结果experiment=5D0，逐调用记录实际system提示SHA256。
+- 验证：fake链测试只替换system、重试/补缺提示保持策略、协议/预算/条件/多事实不改、碰撞策略拒绝混用、CLI无GPU导入、身份覆盖新提示、全新审核和正式质量门禁。fake测试不证明模型理解语义。
+- 用户筛选四篇仍SL-P03、SL-P04、SL-017、SL-022；通过后全24篇包含SL-016/020/021/024等知识与发言回归，AB/BA及冻结下游。关注漏关系、过选/无依据提取、模态错误和pending，不以事件更少或全部弃答判优。
+- [x] 实现与离线验证；10项新增测试，全套732通过；独立最终审查无待修问题，validate-d通过，见VALIDATION_5D0.md。
+- [ ] 用户GPU四篇筛选、事件复核、通过后24篇AB/BA和冻结下游；不修改历史报告/标签或生产默认。
+
+以下5D1/D2仍是后续候选，不与本轮绑定。
 
 Files: agent_pipeline_v5/{evidence.py,judge.py,prompts/judge_scoped.txt}；tests/test_agent_pipeline_v5_evidence.py、test_agent_pipeline_v5_judge.py。
 Interfaces: build_evidence_packet(event: dict, candidates: list[dict], spans: dict) -> dict；judge_scoped(packet: dict, model) -> dict。

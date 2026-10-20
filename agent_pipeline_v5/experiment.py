@@ -4,7 +4,7 @@ import platform
 import sys
 from pathlib import Path
 
-from .runner import ARMS, C1_ARMS, read, jsonl, ensure_manifest, validate_arm_identity, validate_logs
+from .runner import ARMS, C1_ARMS, D0_ARMS, read, jsonl, ensure_manifest, validate_arm_identity, validate_logs
 from .identity import build_identity, sha
 from .model import snapshot_path, versions
 from .resources import check_resources
@@ -16,9 +16,9 @@ SOURCE = ASSETS
 
 
 def prepare(source_root, asset_root, phase, order='forward', experiment='5B'):
-    if experiment not in ('5B','5C1'):
+    if experiment not in ('5B','5C1','5D0'):
         raise ValueError('unknown experiment')
-    selected_arms=C1_ARMS if experiment=='5C1' else ARMS
+    selected_arms={'5B':ARMS,'5C1':C1_ARMS,'5D0':D0_ARMS}[experiment]
     source_root, asset_root = Path(source_root).resolve(), Path(asset_root).resolve()
     if phase not in ('screen','full') or order not in ('forward','reverse'):
         raise ValueError('invalid phase/order')
@@ -66,6 +66,10 @@ def prepare(source_root, asset_root, phase, order='forward', experiment='5B'):
                   output_start_free_gib=5,output_stop_free_gib=2,report_budget_mib=512)
     if experiment=='5C1':
         config.update(experiment='5C1',repair_policy='schema_aliases_v1',parent_protocol='original',repair_extra_model_calls=0)
+    if experiment=='5D0':
+        config.update(experiment='5D0',parent_protocol='original',repair_policy='none',
+                      candidate_prompt='semantic_v1',prompt_extra_model_calls=0,
+                      semantic_prompt_sha256=sha(ROOT/'agent_pipeline_v5/prompts/extractor_semantic_v1.txt'))
     return inputs, build_identity(config, paths)
 
 
@@ -133,6 +137,8 @@ def summarize(directory):
     atomic_write_json(directory/'summary.json',result)
     name=manifest['config'].get('experiment','5B')
     description=('只改变两种字段拼写的确定性修复，原prompt/语义策略/重试/补缺保持基线；batch=1。' if name=='5C1' else '短协议只省略空字段及由modality确定的explicit；逐篇串行、batch=1。')
+    if name=='5D0':
+        description='只改变提取语义契约提示；原协议/模型/窗口/重试/补缺/生成预算不变；不组合短协议或字段修复。'
     lines=[f'# Benchmark {name} 四组对照','',description,
            'Wall包括本组所有正式尝试与适配/检查点写入，模型加载和预热单列。筛选不发布正式质量。','',
            '|组别|完整|故事|调用|输入/输出tokens|Wall秒|待审核|','|---|---|---:|---:|---:|---:|---:|']
@@ -145,6 +151,8 @@ def summarize(directory):
         lines += ['', '|组别|发生字段修复的调用|字段动作|', '|---|---:|---:|']
         lines += [f"|{arm}|{a['schema_repair_calls']}|{a['schema_repair_actions']}|" for arm,a in arms.items()]
         lines += ['', '首轮字段通过可能增加过选或幻觉，必须审核；本轮不采用尚未审核通过的短格式。']
+    if name=='5D0':
+        lines += ['', '事件更少不代表更准；需审阅原文关系、过选/无依据提取、知识/发言范围、条件及多事实召回。提示可能增加输入或改变重试次数，不能预设提速。']
     (directory/'summary.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     print('SUMMARY='+str((directory/'summary.md').resolve()),flush=True)
     return result

@@ -1465,3 +1465,12 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 普通修复19→17调用、176.845→160.172秒（-9.43%）；lookup18→17、69.147→64.602秒（-6.57%）。分别2/1条别名修复，对应减少格式重试；补缺不变。
 - 同模式下4/4故事最终事件及ignored/non_event完全一致；不代表准确率改善，日常过选、文本未支持的双心脏及关系遗漏仍在。review保持pending，不发布正式质量。未达到20%筛选目标，保留小优化候选不切默认。
 - 分析与来源摘要见agent_pipeline_v5/REVIEW_5C1_SCREEN.md；GPU不重跑，完整离线测试722通过（42.10秒）。用户明确授权全部当前更新直接推送GitHub main；沿用忽略缓存/权重/原始报告规则，分析入Git，无新分支。
+
+## 2026-10-20 Benchmark 5D0 提取语义契约前置实验
+
+- Ruling: 先澄清提取的知识/发言范围和原文关系，再做Judge证据改造，避免在错误输入上优化；代价是5D1/D2待后续，本轮整体提示不能归因到单条规则。
+- Ruling: 保持original协议，只比较original/semantic × plain/lookup；不叠加5B短格式或5C1字段修复，不新增语义判断LLM调用、正则重标或硬删；代价是仍可能格式重试，新提示更长也可能拖慢prefill。
+- 新提示区分待核查性、source完整关系、客观知识/通信发生与被声称内容；移除旧提示双心脏具体示例（仅候选干扰源，不宣称根因）。原scope gate、窗口/重试/补缺及1536上限不变。
+- 新prompt_policy=semantic_v1和semantic arms；validate-d/run-d/summary-d/score-d/run-downstream-d，experiment=5D0；逐调用记录实际system SHA256，prepare冻结新提示、推理仅id/story，全新pending。
+- 首次新增测试因接口缺失失败，后实现；一条fixture纠正逗号切句的source_id。10项新测试，全套732通过（32.83秒）；validate-d无模型预检查通过。独立最终只读审查无待修问题，无延期项。细节VALIDATION_5D0.md。
+- 只在桌面唯一工作区，本地main记录，不新建分支/worktree，不安装/下载/操作WSL、不运行GPU。GPU筛选和质量审核仍由用户执行，不把假模型测试当语义通过。

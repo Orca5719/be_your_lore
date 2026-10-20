@@ -13,20 +13,20 @@ def main(argv=None):
     replay=sub.add_parser('replay-c')
     replay.add_argument('--result-dir',type=Path,required=True)
     replay.add_argument('--output',type=Path)
-    for name in ('validate-b','run-b','validate-c','run-c'):
+    for name in ('validate-b','run-b','validate-c','run-c','validate-d','run-d'):
         cmd=sub.add_parser(name)
-        cmd.set_defaults(experiment='5C1' if name.endswith('-c') else '5B')
+        cmd.set_defaults(experiment={'b':'5B','c':'5C1','d':'5D0'}[name[-1]])
         cmd.add_argument('--source-root',type=Path,default=Path('C:/Users/Xhang/Desktop/project/worldcheck'))
         cmd.add_argument('--asset-root',type=Path,default=Path('C:/Users/Xhang/Desktop/project/worldcheck'))
         cmd.add_argument('--phase',choices=('screen','full'),default='screen')
         cmd.add_argument('--order',choices=('forward','reverse'),default='forward')
         if name.startswith('run-'):cmd.add_argument('--output',type=Path)
-    for name in ('summary-b','score-b','run-downstream-b','summary-c','score-c','run-downstream-c'):
+    for name in ('summary-b','score-b','run-downstream-b','summary-c','score-c','run-downstream-c','summary-d','score-d','run-downstream-d'):
         cmd=sub.add_parser(name)
         cmd.add_argument('--result-dir',type=Path,required=True)
         if not name.startswith('summary-'):
-            from .runner import ARMS,C1_ARMS
-            cmd.add_argument('--arms',nargs='+',choices=C1_ARMS if name.endswith('-c') else ARMS)
+            from .runner import ARMS,C1_ARMS,D0_ARMS
+            cmd.add_argument('--arms',nargs='+',choices={'b':ARMS,'c':C1_ARMS,'d':D0_ARMS}[name[-1]])
     args=parser.parse_args(argv)
     try:
         if args.command=='audit':
@@ -46,7 +46,7 @@ def main(argv=None):
             print(f'VALIDATED {len(cases)} stories; four arms; shared local cache; no model loaded')
             print('Shared assets: '+identity['config']['asset_root'])
             print('Disk check: '+str(resource))
-        elif args.command in ('run-b','run-c'):
+        elif args.command in ('run-b','run-c','run-d'):
             from .experiment import run_experiment
             return run_experiment(args)
         elif args.command.startswith('summary-'):

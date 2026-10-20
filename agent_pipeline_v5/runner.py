@@ -11,7 +11,8 @@ from .identity import sha
 
 ARMS = ('original_plain', 'compact_plain', 'original_lookup5', 'compact_lookup5')
 C1_ARMS = ('original_plain','repaired_plain','original_lookup5','repaired_lookup5')
-RUN_ARMS = tuple(dict.fromkeys(ARMS+C1_ARMS))
+D0_ARMS = ('original_plain','semantic_plain','original_lookup5','semantic_lookup5')
+RUN_ARMS = tuple(dict.fromkeys(ARMS+C1_ARMS+D0_ARMS))
 
 
 def read(path):
@@ -87,7 +88,8 @@ def run_extraction_arm(config: dict, cases: list[dict], model, output_dir: Path)
     model.enabled = arm.endswith('lookup5')
     wire_model = WireBatchModel(model, 'compact' if arm.startswith('compact') else 'original',
                                guard=lambda: check_resources(report_root),
-                               repair_policy='schema_aliases_v1' if arm.startswith('repaired') else 'none')
+                               repair_policy='schema_aliases_v1' if arm.startswith('repaired') else 'none',
+                               prompt_policy='semantic_v1' if arm.startswith('semantic') else 'original')
 
     def one(case):
         with StaticBatcher(wire_model, 1) as batcher:

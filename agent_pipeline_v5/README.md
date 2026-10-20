@@ -90,3 +90,23 @@ validate-c仅检查环境，不加载模型。run-c默认新建本目录agent_pi
 ```
 
 回放只读旧报告、核对文件摘要及冻结校验器，不重新运行模型或整条修复链。其通过数不能当成真实节省的调用数、速度或质量。离线验证记录见[VALIDATION_5C.md](VALIDATION_5C.md)。
+
+## 5D0 提取语义契约对照
+
+这一块是5D证据/Judge改造的前置实验。只改变提取system提示整体，测试三个问题：日常动作过选、原文关系被改写或补出事实、知识/发言被错误归类。移除原提示中的具体双心脏示例；这是候选干扰源，尚未证明是根因。新提示不使用回归故事人物/设定/答案作示例。
+
+客观叙述的知识状态和信息获得可为observed，但不把所知内容直接当世界事实；人物声称/猜测的内容继续保留speech/belief及外层条件。交流的发生与交流内容的真实性分开表达。接收程序不做关键词重标、不删事件，不改旧scope gate；规则是否被4B正确执行必须看真实输出。
+
+四组original_plain、semantic_plain、original_lookup5、semantic_lookup5。保持原协议、原三出口、切句/窗口、重试/补缺及1536生成上限；不组合5B短格式或5C1字段修复，提示本身无额外LLM调用。提示更长可能增加prefill成本，也可能改变输出和重试，不能预设提速。逐调用保存真实回复、实际system提示SHA256与prompt_policy；运行manifest冻结新提示。
+
+```powershell
+Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
+& ".\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v5 validate-d
+& ".\.venv\Scripts\python.exe" -X utf8 -u -m agent_pipeline_v5 run-d --phase screen
+```
+
+默认保存agent_pipeline_v5/reports/benchmark_5D0_时间戳；筛选仍四篇，另有各组预热。完成发最后SUMMARY，失败发RESULT_DIR及报错。缓存和环境保持原样，不安装依赖。不要用5B/5C1目录续跑，也不在运行中改代码；身份变化会拒绝后续续跑。
+
+筛选后审核所有新事件，包括是否漏掉关系/否定/条件/一源多事实；不能仅以事件更少或全转不确定判优。原24篇已用于开发归因，不能称留出集；完整实验还必须检查SL-016/020/021/024等知识传播与发言范围，不能用四篇代替。
+
+筛选通过后，run-d --phase full --order forward与新目录--order reverse运行24篇AB/BA。summary-d、score-d、run-downstream-d沿用对应-c参数与全量审核门禁。正式评分和冻结下游仍保留原gold，待确认标签不能发布质量结论。5D1证据包/5D2 Judge提示及5C2尚未实现。
