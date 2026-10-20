@@ -4,7 +4,7 @@ import platform
 import sys
 from pathlib import Path
 
-from .runner import ARMS, read, jsonl, ensure_manifest, validate_arm_identity, validate_logs
+from .runner import ARMS, C1_ARMS, read, jsonl, ensure_manifest, validate_arm_identity, validate_logs
 from .identity import build_identity, sha
 from .model import snapshot_path, versions
 from .resources import check_resources
@@ -15,7 +15,10 @@ ASSETS = Path('C:/Users/Xhang/Desktop/project/worldcheck')
 SOURCE = ASSETS
 
 
-def prepare(source_root, asset_root, phase, order='forward'):
+def prepare(source_root, asset_root, phase, order='forward', experiment='5B'):
+    if experiment not in ('5B','5C1'):
+        raise ValueError('unknown experiment')
+    selected_arms=C1_ARMS if experiment=='5C1' else ARMS
     source_root, asset_root = Path(source_root).resolve(), Path(asset_root).resolve()
     if phase not in ('screen','full') or order not in ('forward','reverse'):
         raise ValueError('invalid phase/order')
@@ -55,12 +58,14 @@ def prepare(source_root, asset_root, phase, order='forward'):
     # Gold and review never enter the inference cases.
     inputs = [{'id':c['id'],'story':c['story']} for c in cases]
     config = dict(phase=phase,order=order,source_root=str(source_root),asset_root=str(asset_root),
-                  arms=list(ARMS if order=='forward' else reversed(ARMS)),runtime=runtime,
+                  arms=list(selected_arms if order=='forward' else reversed(selected_arms)),runtime=runtime,
                   batch_size=1,prompt_lookup_tokens=5,max_new_tokens=1536,
                   model='Qwen/Qwen3-4B-Instruct-2507',revision=snapshot.name,
                   execution='serial stories; frozen StaticBatcher batch=1',
                   python=sys.version,system=platform.platform(),generation='frozen greedy; do_sample=False',
                   output_start_free_gib=5,output_stop_free_gib=2,report_budget_mib=512)
+    if experiment=='5C1':
+        config.update(experiment='5C1',repair_policy='schema_aliases_v1',parent_protocol='original',repair_extra_model_calls=0)
     return inputs, build_identity(config, paths)
 
 
@@ -77,7 +82,7 @@ def fresh_review(directory, arm, rows):
             labels[cid][e['id']]=dict(signature=event_signature(e),label=None,gold_ids=[],note=None)
             pending.append(cid+'/'+e['id'])
     from agent_pipeline_v2_2.runner import atomic_write_json
-    atomic_write_json(path,dict(schema_version='benchmark-5B-review-v1',arm=arm,cases=labels,pending=pending,
+    atomic_write_json(path,dict(schema_version='benchmark-'+read(directory/'manifest.json')['config'].get('experiment','5B')+'-review-v1',arm=arm,cases=labels,pending=pending,
                                extraction_sha256=sha(directory/arm/'extractor_runs.jsonl')))
 
 
@@ -114,6 +119,7 @@ def summarize(directory):
         def total(field):
             values=[r.get(field) for r in calls]
             return sum(values) if all(isinstance(v,(int,float)) for v in values) else None
+        schema_repairs=[w.get('schema_repairs',[]) for w in jsonl(output/'wire_calls.jsonl')]
         review=read(output/'review.json') if (output/'review.json').exists() else None
         if review and review.get('arm')!=arm:
             raise ValueError('review arm identity differs')
@@ -121,18 +127,24 @@ def summarize(directory):
                        wall_seconds=complete.get('wall_seconds') if good else None,
                        input_tokens=total('input_tokens'),output_tokens=total('output_tokens'),
                        prefill_seconds=total('prefill_time'),decode_seconds=total('decode_time'),
-                       pending=len(review['pending']) if review else None,**_extra_metrics(rows,calls))
+                       pending=len(review['pending']) if review else None,schema_repair_calls=sum(bool(x) for x in schema_repairs),schema_repair_actions=sum(len(x) for x in schema_repairs),**_extra_metrics(rows,calls))
     result=dict(phase=manifest['config']['phase'],arms=arms,
                 notice='screen is not formal quality; tokens from real model output before expansion; resumed wall unknown')
     atomic_write_json(directory/'summary.json',result)
-    lines=['# Benchmark 5B 四组对照','','短协议只省略空字段及由modality确定的explicit；逐篇串行、batch=1。',
+    name=manifest['config'].get('experiment','5B')
+    description=('只改变两种字段拼写的确定性修复，原prompt/语义策略/重试/补缺保持基线；batch=1。' if name=='5C1' else '短协议只省略空字段及由modality确定的explicit；逐篇串行、batch=1。')
+    lines=[f'# Benchmark {name} 四组对照','',description,
            'Wall包括本组所有正式尝试与适配/检查点写入，模型加载和预热单列。筛选不发布正式质量。','',
            '|组别|完整|故事|调用|输入/输出tokens|Wall秒|待审核|','|---|---|---:|---:|---:|---:|---:|']
     for arm,a in arms.items():
         wall=f"{a['wall_seconds']:.2f}" if a['wall_seconds'] is not None else '—'
         lines.append(f"|{arm}|{a['complete']}|{a['stories']}|{a['calls']}|{a['input_tokens']}/{a['output_tokens']}|{wall}|{a['pending']}|")
     lines += ['','筛选先看状态、tokens、Wall和原始输出，不把pending当质量通过；完整实验需审核review.json，再跑冻结下游。',
-              '不同生成模式分别对照；短协议与推测解码收益不可相乘。']
+              '普通与lookup分别比较同轮基线，不将单项收益相乘。']
+    if name=='5C1':
+        lines += ['', '|组别|发生字段修复的调用|字段动作|', '|---|---:|---:|']
+        lines += [f"|{arm}|{a['schema_repair_calls']}|{a['schema_repair_actions']}|" for arm,a in arms.items()]
+        lines += ['', '首轮字段通过可能增加过选或幻觉，必须审核；本轮不采用尚未审核通过的短格式。']
     (directory/'summary.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     print('SUMMARY='+str((directory/'summary.md').resolve()),flush=True)
     return result
@@ -142,9 +154,9 @@ def run_experiment(args):
     from datetime import datetime
     from .model import load_model
     from .runner import run_extraction_arm
-    inputs,identity=prepare(args.source_root,args.asset_root,args.phase,args.order)
+    inputs,identity=prepare(args.source_root,args.asset_root,args.phase,args.order,getattr(args,'experiment','5B'))
     identity['config']['case_ids']=[c['id'] for c in inputs]
-    directory=Path(args.output or ROOT/'agent_pipeline_v5/reports'/('benchmark_5B_'+datetime.now().strftime('%Y%m%dT%H%M%S'))).resolve()
+    directory=Path(args.output or ROOT/'agent_pipeline_v5/reports'/('benchmark_'+identity['config'].get('experiment','5B')+'_'+datetime.now().strftime('%Y%m%dT%H%M%S'))).resolve()
     validate_output(directory,args.source_root,args.asset_root)
     check_resources(directory,initial=True)
     ensure_manifest(directory,identity)

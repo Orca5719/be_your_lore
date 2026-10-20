@@ -8,9 +8,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class WireBatchModel:
-    def __init__(self, delegate, protocol, guard=None):
+    def __init__(self, delegate, protocol, guard=None, repair_policy="none"):
         if protocol not in ('original', 'compact'):
             raise ValueError('invalid wire protocol')
+        if repair_policy not in ('none','schema_aliases_v1') or (protocol!='original' and repair_policy!='none'):
+            raise ValueError('5C1 only varies schema repair on the original protocol')
+        self.repair_policy=repair_policy
         self.delegate, self.protocol, self.guard = delegate, protocol, guard
         self.original_prompt = (ROOT / 'agent_pipeline_v2/prompts/extractor_v1.txt').read_text(encoding='utf-8')
         self.compact_prompt = (Path(__file__).parent / 'prompts/extractor_compact.txt').read_text(encoding='utf-8')
@@ -58,6 +61,10 @@ class WireBatchModel:
         raw = outputs[0]
         error = None
         expanded = raw
+        schema_repairs = []
+        if self.repair_policy=='schema_aliases_v1':
+            from .repair import repair_raw
+            expanded,schema_repairs=repair_raw(raw)
         if self.protocol == 'compact':
             try:
                 expanded = json.dumps(expand_payload(json.loads(raw)), ensure_ascii=False, separators=(',', ':'))
@@ -66,5 +73,6 @@ class WireBatchModel:
                 # Frozen window validation must fail/retry, never silently drop events.
                 expanded = json.dumps({'compact_wire_error': error}, ensure_ascii=False)
         self.wire_records.append({'call_id': self.delegate.last_batch_generation.get('call_id'),
-                                  'raw_output': raw, 'expanded_output': expanded, 'error': error})
+                                  'raw_output': raw, 'expanded_output': expanded, 'error': error,
+                                  'schema_repairs':schema_repairs})
         return [expanded]

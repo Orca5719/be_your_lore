@@ -67,7 +67,8 @@ def score(directory, arms=None):
             q['complete']=True
         scores[arm]=q
     atomic_write_json(directory/'quality_reviewed.json',scores)
-    lines=['# Benchmark 5B 审核后质量','','历史gold争议保持原口径；本实验只改Extractor输出协议。','',
+    name=manifest['config'].get('experiment','5B')
+    lines=[f'# Benchmark {name} 审核后质量','','历史gold争议保持原口径；本轮只改变manifest声明的单项策略。','',
            '|组别|提取Recall|提取Precision|幻觉|E2E TP/FP/FN|E2E F1|完整下游|','|---|---:|---:|---:|---:|---:|---|']
     for arm,q in scores.items():
         e=q['extraction'];j=q['end_to_end']
@@ -85,7 +86,7 @@ def run_downstream(args):
     from .diagnostics import validate_arm
     from agent_pipeline_v4_1.cli import _run_one
     directory=Path(args.result_dir).resolve(); manifest=read(directory/'manifest.json'); config=manifest['config']
-    _,current=prepare(config['source_root'],config['asset_root'],config['phase'],config['order'])
+    _,current=prepare(config['source_root'],config['asset_root'],config['phase'],config['order'],config.get('experiment','5B'))
     current['config']['case_ids']=config['case_ids']
     ensure_manifest(directory,current)
     selected=args.arms or config['arms']

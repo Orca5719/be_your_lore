@@ -74,6 +74,18 @@ References: agent_pipeline_v2/extractor.py split_spans/字段校验；agent_pipe
 
 ## 5C — 局部修复与增量覆盖（第二层）
 
+### 5C1 本轮执行裁定（2026-10-20）
+
+- Ruling: 根据用户5B筛选原始回复，先做两种已观测字段别名的确定性修复；不引入LLM局部语义修复。`ignored_spans[].source_Ids → source_id`、`events[].mentalological_state → mental_state`，仅目标键不存在时改名，碰撞/未知键/值错误/截断继续旧校验和重试。代价：只能减少这类格式重试，不能解决4B语义错误。
+- Ruling: 5C1冻结父协议为original；5B compact虽无普通重试，但事件尚未审核，不能直接升级父配置。四组original_plain/repaired_plain/original_lookup5/repaired_lookup5，同轮对照。代价：暂不测与短协议的交互，留5E。
+- Ruling: 5C2覆盖改造与LLM语义补丁暂缓。原补缺已只查询missing targets；四篇不足以证明新的覆盖策略安全。保留原预算、补缺、窗口、1536生成上限，不新增coverage.py或无实质用途的提示。代价：本轮不削减空增量补查，可能收益有限。
+- [x] repair.py/repair_audit.py、四组runner、CLI及质量入口；适配前保存真实wire回复，修复动作单独记账，修复本身0次LLM调用。
+- [x] fake模型验证字段碰撞、未知键、否定/条件/主体保持、多事实同源、语义错误原重试、覆盖补缺；归档只读回放及窗口/身份校验。
+- [ ] 用户运行5C1四篇筛选，逐例审核新提取；通过后24篇AB/BA及冻结下游，才能决定采用。
+- 接受首轮格式可能保留本来重试消失的过选/幻觉，字段正确不等于提取正确。所有新事件pending；不继承5B审核，也不把离线回放算作节省调用或正式质量。
+
+以下为原5C候选范围；本轮以以上裁定为准，未选的策略保持待办。
+
 Files: agent_pipeline_v5/{repair.py,coverage.py,prompts/repair_local.txt,prompts/coverage_delta.txt}；tests/test_agent_pipeline_v5_repair.py、test_agent_pipeline_v5_coverage.py。
 Interfaces: repair_event(event: dict, issues: list[dict], context: dict, model) -> dict；recover_missing(context: dict, accepted: list[dict], model) -> dict。
 
@@ -125,7 +137,7 @@ Interfaces: score_run(cases: list[dict], extraction: list[dict], downstream: lis
 ## 本次交付边界
 
 已完成：读取参考对话、核对代码与历史结果、建立B5独立工作区、冻结本计划及待办。
-5A执行完成；5B代码已完成，下一步由用户运行筛选；其余阶段待结果复核后推进。尚未宣称任何提速/准确率收益，未运行GPU。
+5A执行完成；5B用户四篇筛选已归档，语义审核/正式质量待完成；5C1代码和离线回放完成，GPU对照由用户运行。5C2、5D、5E待证据推进。尚未宣称任何提速/准确率收益。
 
 ## 5A执行记录（2026-10-20）
 - 先观察到缺模块失败，再实现；集成测试发现新父目录磁盘检查问题，增加数据绑定测试后补齐缺哈希校验。

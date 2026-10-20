@@ -1449,3 +1449,12 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 活动入口、README默认路径改为桌面main；新增AGENTS.md明确唯一工作区。历史原始manifest/审核记录不改写，路径映射见WORKSPACE.md。
 - 修复5A/5B同工作区内输出门禁：允许专用agent_pipeline_v5/reports，仍拒绝覆盖源输入、模型缓存或索引。新增两项路径回归；完整702项通过，桌面5A审计和5B汇总/预检查通过。
 - 所有代码和报告已验证后才清理旧checkout；清理结果另行记录。不推送远端，不跑GPU。
+
+## 2026-10-20 Benchmark 5C1 字段修复对照
+
+- Ruling: 本轮仅修复5B观测的source_Ids/mentalological_state别名，不做语义猜测。父协议original，5B短格式质量未审核；代价是暂不测组合效果、只减少有限格式重试。
+- Ruling: 5C2与LLM局部语义修复暂缓；原补缺已是missing targets增量，四篇不足以验证新覆盖机制。代价是本轮不能减少空增量补查。原窗口、语义、重试和生成预算不变。
+- 新repair/只读回放、四组runner和run-c等入口，真实wire与字段动作分开记录；全新pending审核；修复本身0次模型调用。
+- 独立最终审查两项P2均RED→GREEN：补缺回放重建实际子窗口；校验器纳入身份并比对历史冻结摘要。无延期审查项。
+- 83项专项、全套722项通过（33.70秒）；validate-c通过且不加载模型。最终只读回放replay_5C1_20261020T214746，原普通2/19、原lookup1/18回复命中并通过窗口；源摘要不变，不等于真实省3次调用。
+- 仅在桌面唯一工作区实现，不下载/安装/导出，不操作WSL、不运行GPU、不推送。5C1正式筛选/质量仍待用户运行，5C2及后续未完成。详细证据agent_pipeline_v5/VALIDATION_5C.md。

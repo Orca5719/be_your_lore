@@ -15,7 +15,7 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 
 固定读取4.2A/B归档并复算审核口径，缺档或不一致会停止。旧早期报告目录链接指向源根之外时标未读；本次哈希不能补证缺失的历史原始性。
 
-5B代码已实现待运行，5C–5E尚未实施。长GPU实验由用户运行；Windows、4B和依赖不变。4.2C暂停，模型上限评估保留为待办。
+5B四篇筛选已由用户运行，质量尚待审核；5C1代码已实现待用户运行。长GPU实验由用户运行；Windows、4B和依赖不变。4.2C暂停，模型上限评估保留为待办。
 
 ## 5B 短输出协议四组实验
 
@@ -66,3 +66,27 @@ score-b只在下游完整且绑定相同run/review/extraction后给E2E分数；�
 离线重建性能表：python -m agent_pipeline_v5 summary-b --result-dir "<RESULT_DIR>"。
 
 历史gold争议保持原口径，不将5B与标注修正混成一种收益。筛选只作淘汰，最终结论依完整人工审核和同轮对照。
+
+## 5C1 已观测字段错误的零调用修复
+
+当前只做两条白名单：ignored_spans中的source_Ids改为source_id；events中的mentalological_state改为mental_state。目标字段已有值则保留原样报错；未知字段、主体、条件、否定、证据、check_reason均不猜测、不删除。无有效JSON也不打捞。真实回复和动作保存在wire_calls.jsonl，原窗口校验、重试/补缺照旧。
+
+四组为original_plain、repaired_plain、original_lookup5、repaired_lookup5，沿用原协议。修复本身不调用模型，整个提取调用数仍由原重试/补缺决定。5B短协议尚无审核后质量，暂不组合；5C2原补缺已增量，待新证据再改。接受早期回复可能保留过选或幻觉，需要重新审核，不能把格式通过当准确率提升。
+
+直接在桌面唯一工作区运行，无需安装、导出或WSL：
+
+```powershell
+Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
+& ".\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v5 validate-c
+& ".\.venv\Scripts\python.exe" -X utf8 -u -m agent_pipeline_v5 run-c --phase screen
+```
+
+validate-c仅检查环境，不加载模型。run-c默认新建本目录agent_pipeline_v5/reports/benchmark_5C1_时间戳，四组每组四篇，另有预热。运行后发最后SUMMARY；失败发RESULT_DIR和报错。同5B资源门禁与续跑规则，不能把历史5B输出作为5C续跑目录。
+
+筛选复核后再用run-c --phase full --order forward与新目录--order reverse。summary-c、score-c、run-downstream-c的参数同对应-b命令；正式评分仍要求24篇、完整审核和绑定下游。离线回放可用：
+
+```powershell
+& ".\.venv\Scripts\python.exe" -X utf8 -m agent_pipeline_v5 replay-c --result-dir "agent_pipeline_v5\reports\benchmark_5B_20261020T191204"
+```
+
+回放只读旧报告、核对文件摘要及冻结校验器，不重新运行模型或整条修复链。其通过数不能当成真实节省的调用数、速度或质量。离线验证记录见[VALIDATION_5C.md](VALIDATION_5C.md)。

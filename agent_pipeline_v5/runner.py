@@ -10,6 +10,8 @@ from .resources import check_resources
 from .identity import sha
 
 ARMS = ('original_plain', 'compact_plain', 'original_lookup5', 'compact_lookup5')
+C1_ARMS = ('original_plain','repaired_plain','original_lookup5','repaired_lookup5')
+RUN_ARMS = tuple(dict.fromkeys(ARMS+C1_ARMS))
 
 
 def read(path):
@@ -46,8 +48,8 @@ def run_extraction_arm(config: dict, cases: list[dict], model, output_dir: Path)
     from agent_pipeline_v4.static import StaticBatcher, QueuedLLM
     config=dict(config)
     arm = config['arm']
-    if arm not in ARMS:
-        raise ValueError('invalid 5B arm')
+    if arm not in RUN_ARMS:
+        raise ValueError('invalid Benchmark 5 arm')
     output = Path(output_dir)
     if (output.parent/'manifest.json').exists():
         config['experiment_sha256']=sha(output.parent/'manifest.json')
@@ -84,7 +86,8 @@ def run_extraction_arm(config: dict, cases: list[dict], model, output_dir: Path)
     atomic_write_json(output / 'started.json', {'started': True, 'resumed': resumed})
     model.enabled = arm.endswith('lookup5')
     wire_model = WireBatchModel(model, 'compact' if arm.startswith('compact') else 'original',
-                               guard=lambda: check_resources(report_root))
+                               guard=lambda: check_resources(report_root),
+                               repair_policy='schema_aliases_v1' if arm.startswith('repaired') else 'none')
 
     def one(case):
         with StaticBatcher(wire_model, 1) as batcher:
