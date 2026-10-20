@@ -1,0 +1,227 @@
+﻿capacity,case_id,event_id,event,source_text,label,gold_ids,note
+2,SL-P02,E1,雷拥有两颗心脏,他有两颗心脏。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-P02,E2,雷的左侧心脏寄宿亚巴顿,雷的左侧心脏寄宿亚巴顿，,valid_checkable,G2,reviewed against original source span and gold
+2,SL-P02,E3,雷的右侧心脏寄宿拉古艾尔,右侧心脏寄宿拉古艾尔。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-P02,E4,雷的生理结构包含两颗心脏，且分别与亚巴顿和拉古艾尔存在宿主关系,他有两颗心脏。雷的左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。,duplicate,,duplicates G1–G3 as a composite
+2,SL-P03,E1,雷拥有两颗心脏,亚巴顿寄宿在雷的右侧心脏。,hallucinated,,right-side angel occupancy does not entail two hearts
+2,SL-P03,E2,雷将外套搭在椅背上,将刚脱下的外套搭在椅背上。,overselected,,reviewed against original source span and gold
+2,SL-P04,E1,雷拥有让大厅里的时间暂停的能力,雷拥有让大厅里的时间暂停的能力。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-P04,E2,雷端起一杯水喝了一口,他端起来喝了一口，,overselected,,reviewed against original source span and gold
+2,SL-005,E1,雷拥有两颗心脏,雷拥有两颗心脏。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-005,E2,月城可以让机械左臂变成液体,月城可以让机械左臂变成液体。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-005,E3,拉古艾尔寄宿在雷的右侧心脏里,拉古艾尔寄宿在雷的右侧心脏里。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-005,E4,雷拥有两颗心脏,故事发生在城区的一间安静房间里。,hallucinated,,E4 cites an unrelated room-description span
+2,SL-006,E1,雷拥有两颗心脏,拉古艾尔寄宿在雷的右侧心脏里。,hallucinated,,right-side angel occupancy does not entail two hearts
+2,SL-006,E2,莉娅知道亚巴顿的完整计划,莉娅知道亚巴顿的完整计划。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-006,E3,月城在2064年完成机械左臂安装,月城在2064年完成机械左臂安装。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-007,E1,雷在地下隧道遇见了守望者,雷在地下隧道遇见了守望者。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-007,E2,旧教堂封印可以由一个人独自打开,旧教堂封印可以由一个人独自打开。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-007,E3,雷与德尔塔在第二话第一次当面交谈,雷与德尔塔在第二话第一次当面交谈。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-008,E1,雷拥有两颗心脏,雷在第三话向德尔塔说明双心脏秘密。,valid_checkable,,"double-heart secret supports anatomy, not disclosure to Delta"
+2,SL-008,E2,亚巴顿的力量使雷获得永久不死之身,亚巴顿的力量让雷获得永久不死之身。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-008,E3,雷和德尔塔在第一话正式见面,雷和德尔塔在第一话已经正式见面。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-009,E1,月城在地震前已经使用机械左臂,月城在地震前已经使用机械左臂。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-009,E2,监察官恢复了爆炸前的视力,监察官恢复了爆炸前的视力。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-010,E1,月城在2064年完成机械左臂安装,月城在2064年完成机械左臂安装。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-010,E2,公众知道德尔塔的真实姓名,公众知道德尔塔的真实姓名。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-010,E3,莉娅知道亚巴顿的完整计划,莉娅知道亚巴顿的完整计划。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-011,E1,雷在地下隧道遇见了守望者,雷在地下隧道遇见了守望者。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-011,E2,月城在2063年已经安装机械左臂,月城在2063年已经安装机械左臂。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-011,E3,雷与德尔塔在第二话第一次当面交谈,雷与德尔塔在第二话第一次当面交谈。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-012,E1,雷拥有两颗心脏,雷在第三话向德尔塔说明双心脏秘密。,valid_checkable,,"double-heart secret supports anatomy, not disclosure to Delta"
+2,SL-012,E2,雷的父亲知道拉古艾尔寄宿在雷体内,雷的父亲知道拉古艾尔寄宿在雷体内。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-012,E3,旧教堂封印可以由一个人独自打开,旧教堂封印可以由一个人独自打开。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-013,E1,雷拥有永久不死之身,亚巴顿的力量让雷获得永久不死之身。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-013,E2,月城的右臂是机械臂,月城的右臂是机械臂。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-013,E3,雷的父亲在第五话乘列车离开城区,雷的父亲在第五话乘列车离开城区。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-014,E1,雷能让已经死亡的人复活,雷能让已经死亡的人复活。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-014,E2,雷与德尔塔在第一话已经正式见面,雷和德尔塔在第一话已经正式见面。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-014,E3,雷与德尔塔在第六话躲进旧教堂,雷与德尔塔在第六话躲进旧教堂。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-015,E1,雷借用亚巴顿力量后记忆不会受影响,雷借用亚巴顿力量后记忆不会受影响。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-015,E2,月城在地震前已经使用机械左臂,月城在地震前已经使用机械左臂。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-016,E1,雷拥有两颗心脏,雷拥有两颗心脏。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-016,E2,监察官恢复了爆炸前的视力,监察官恢复了爆炸前的视力。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-016,E3,雷和德尔塔在第一话已经当面交谈,雷和德尔塔在第一话已经当面交谈。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-017,E1,雷在第三话向德尔塔说明双心脏秘密,雷在第三话向德尔塔说明双心脏秘密。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-017,E2,月城在2063年已经安装机械左臂,月城在2063年已经安装机械左臂。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-017,E3,公众知道德尔塔的真实姓名,公众知道德尔塔的真实姓名。,valid_checkable,G1,directly stated by S4
+2,SL-017,E4,旧教堂封印可以由一个人独自打开,旧教堂封印可以由一个人独自打开。,valid_checkable,G4,reviewed against original source span and gold
+2,SL-018,E1,雷的父亲知道拉古艾尔寄宿在雷体内,雷的父亲知道拉古艾尔寄宿在雷体内。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-018,E2,月城的右臂是机械臂,月城的右臂是机械臂。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-018,E3,亚巴顿的力量让雷获得永久不死之身,亚巴顿的力量让雷获得永久不死之身。,valid_checkable,G4,reviewed against original source span and gold
+2,SL-018,E4,雷的父亲在第五话乘列车离开城区,雷的父亲在第五话乘列车离开城区。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-019,E1,雷能让已经死亡的人复活,雷能让已经死亡的人复活。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-019,E2,雷借用亚巴顿力量后记忆不会受影响,雷借用亚巴顿力量后记忆不会受影响。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-019,E3,雷与德尔塔在第六话躲进旧教堂,雷与德尔塔在第六话躲进旧教堂。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-019,E4,雷与德尔塔在第一话已经正式见面,雷和德尔塔在第一话已经正式见面。,valid_checkable,G4,reviewed against original source span and gold
+2,SL-020,E1,雷和德尔塔已经当面交谈过,雷和德尔塔在第一话已经当面交谈。,valid_checkable,,event omits first-episode timing required by G1
+2,SL-020,E2,公众知道德尔塔的真实姓名,公众知道德尔塔的真实姓名。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-020,E3,档案馆在2065年开放了地震救援档案,档案馆在2065年开放地震救援档案。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-020,E4,月城在地震前已经使用机械左臂,月城在地震前已经使用机械左臂。,valid_checkable,G4,directly stated by S7
+2,SL-021,E1,雷拥有两颗心脏,雷拥有两颗心脏。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-021,E2,月城在2063年已经安装机械左臂,月城在2063年已经安装机械左臂。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-021,E3,雷的父亲知道拉古艾尔寄宿在雷体内,雷的父亲知道拉古艾尔寄宿在雷体内。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-021,E4,监察官恢复了爆炸前的视力,监察官恢复了爆炸前的视力。,valid_checkable,G4,reviewed against original source span and gold
+2,SL-022,E1,雷拥有两颗心脏,亚巴顿寄宿在雷的左侧心脏里。,hallucinated,,left-heart angel occupancy does not entail two hearts
+2,SL-022,E2,雷能让已经死亡的人复活,雷能让已经死亡的人复活。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-022,E3,月城的右臂是机械臂,月城的右臂是机械臂。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-022,E4,守望者无法感知静默结界中的宿主,守望者无法感知静默结界中的宿主。,valid_checkable,G4,reviewed against original source span and gold
+2,SL-022,E5,亚巴顿寄宿在雷的左侧心脏里,亚巴顿寄宿在雷的左侧心脏里。,valid_checkable,G3,directly stated by S6
+2,SL-023,E1,雷拥有读取他人梦境的能力,雷拥有读取他人梦境的能力。,valid_checkable,G4,reviewed against original source span and gold
+2,SL-023,E2,拉古艾尔寄宿在雷的右侧心脏里,拉古艾尔寄宿在雷的右侧心脏里。,valid_checkable,G3,reviewed against original source span and gold
+2,SL-023,E3,雷拥有两颗心脏,拉古艾尔寄宿在雷的右侧心脏里。,hallucinated,,right-heart angel occupancy does not entail two hearts
+2,SL-023,E4,雷借用亚巴顿力量后记忆不会受影响,雷借用亚巴顿力量后记忆不会受影响。,valid_checkable,G1,reviewed against original source span and gold
+2,SL-023,E5,雷和德尔塔在第一话已经当面交谈,雷和德尔塔在第一话已经当面交谈。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-024,E1,雷能让已经死亡的人复活,雷能让已经死亡的人复活。,valid_checkable,G2,reviewed against original source span and gold
+2,SL-024,E2,月城在2064年完成机械左臂安装,月城在2064年完成机械左臂安装。,valid_checkable,G3,directly stated by S6
+2,SL-024,E3,月城可以让机械左臂变成液体,月城可以让机械左臂变成液体。,valid_checkable,G4,reviewed against original source span and gold
+2,SL-024,E4,公众知道德尔塔的真实姓名,公众知道德尔塔的真实姓名。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-P02,E1,雷拥有两颗心脏,他有两颗心脏。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-P02,E2,雷的左侧心脏寄宿亚巴顿,雷的左侧心脏寄宿亚巴顿，,valid_checkable,G2,reviewed against original source span and gold
+4,SL-P02,E3,雷的右侧心脏寄宿拉古艾尔,右侧心脏寄宿拉古艾尔。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-P03,E1,雷拥有两颗心脏,亚巴顿寄宿在雷的右侧心脏。,hallucinated,,right-side angel occupancy does not entail two hearts
+4,SL-P03,E2,雷将外套搭在椅背上,将刚脱下的外套搭在椅背上。,overselected,,reviewed against original source span and gold
+4,SL-P04,E1,雷拥有让大厅里的时间暂停的能力,雷拥有让大厅里的时间暂停的能力。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-P04,E2,雷端起一杯水喝了一口,他端起来喝了一口，,overselected,,reviewed against original source span and gold
+4,SL-005,E1,雷拥有两颗心脏,雷拥有两颗心脏。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-005,E2,月城可以让机械左臂变成液体,月城可以让机械左臂变成液体。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-005,E3,拉古艾尔寄宿在雷的右侧心脏里,拉古艾尔寄宿在雷的右侧心脏里。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-006,E1,雷拥有两颗心脏,拉古艾尔寄宿在雷的右侧心脏里。,hallucinated,,right-side angel occupancy does not entail two hearts
+4,SL-006,E2,莉娅知道亚巴顿的完整计划,莉娅知道亚巴顿的完整计划。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-006,E3,月城在2064年完成机械左臂安装,月城在2064年完成机械左臂安装。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-007,E1,雷在地下隧道遇见了守望者,雷在地下隧道遇见了守望者。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-007,E2,旧教堂封印可以由一个人独自打开,旧教堂封印可以由一个人独自打开。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-007,E3,雷与德尔塔在第二话第一次当面交谈,雷与德尔塔在第二话第一次当面交谈。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-008,E1,雷拥有两颗心脏,雷在第三话向德尔塔说明双心脏秘密。,valid_checkable,,"double-heart secret supports anatomy, not disclosure to Delta"
+4,SL-008,E2,亚巴顿的力量使雷获得永久不死之身,亚巴顿的力量让雷获得永久不死之身。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-008,E3,雷和德尔塔在第一话正式见面,雷和德尔塔在第一话已经正式见面。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-009,E1,月城在地震前已经使用机械左臂,月城在地震前已经使用机械左臂。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-009,E2,监察官恢复了爆炸前的视力,监察官恢复了爆炸前的视力。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-011,E1,雷在地下隧道遇见了守望者,雷在地下隧道遇见了守望者。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-011,E2,月城在2063年已经安装机械左臂,月城在2063年已经安装机械左臂。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-011,E3,雷与德尔塔在第二话第一次当面交谈,雷与德尔塔在第二话第一次当面交谈。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-012,E1,雷拥有两颗心脏,雷在第三话向德尔塔说明双心脏秘密。,valid_checkable,,"double-heart secret supports anatomy, not disclosure to Delta"
+4,SL-012,E2,雷的父亲知道拉古艾尔寄宿在雷体内,雷的父亲知道拉古艾尔寄宿在雷体内。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-012,E3,旧教堂封印可以由一个人独自打开,旧教堂封印可以由一个人独自打开。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-013,E1,雷拥有永久不死之身,亚巴顿的力量让雷获得永久不死之身。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-013,E2,月城的右臂是机械臂,月城的右臂是机械臂。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-013,E3,雷的父亲在第五话乘列车离开城区,雷的父亲在第五话乘列车离开城区。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-014,E1,雷能让已经死亡的人复活,雷能让已经死亡的人复活。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-014,E2,雷与德尔塔在第一话已经正式见面,雷和德尔塔在第一话已经正式见面。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-014,E3,雷与德尔塔在第六话躲进旧教堂,雷与德尔塔在第六话躲进旧教堂。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-015,E1,雷借用亚巴顿力量后记忆不会受影响,雷借用亚巴顿力量后记忆不会受影响。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-015,E2,月城在地震前已经使用机械左臂,月城在地震前已经使用机械左臂。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-016,E1,雷拥有两颗心脏,雷拥有两颗心脏。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-016,E2,监察官恢复了爆炸前的视力,监察官恢复了爆炸前的视力。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-016,E3,雷和德尔塔在第一话已经当面交谈,雷和德尔塔在第一话已经当面交谈。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-017,E1,雷在第三话向德尔塔说明双心脏秘密,雷在第三话向德尔塔说明双心脏秘密。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-017,E2,月城在2063年已经安装机械左臂,月城在2063年已经安装机械左臂。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-017,E3,旧教堂封印可以由一个人独自打开,旧教堂封印可以由一个人独自打开。,valid_checkable,G4,reviewed against original source span and gold
+4,SL-017,E4,公众知道德尔塔的真实姓名,公众知道德尔塔的真实姓名。,valid_checkable,G1,directly stated by S4
+4,SL-018,E1,雷的父亲知道拉古艾尔寄宿在雷体内,雷的父亲知道拉古艾尔寄宿在雷体内。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-018,E2,月城的右臂是机械臂,月城的右臂是机械臂。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-018,E3,亚巴顿的力量让雷获得永久不死之身,亚巴顿的力量让雷获得永久不死之身。,valid_checkable,G4,reviewed against original source span and gold
+4,SL-018,E4,雷的父亲在第五话乘列车离开城区,雷的父亲在第五话乘列车离开城区。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-019,E1,雷能让已经死亡的人复活,雷能让已经死亡的人复活。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-019,E2,雷借用亚巴顿力量后记忆不会受影响,雷借用亚巴顿力量后记忆不会受影响。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-019,E3,雷与德尔塔在第六话躲进旧教堂,雷与德尔塔在第六话躲进旧教堂。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-019,E4,雷与德尔塔在第一话已经正式见面,雷和德尔塔在第一话已经正式见面。,valid_checkable,G4,reviewed against original source span and gold
+4,SL-020,E1,雷和德尔塔已经当面交谈过,雷和德尔塔在第一话已经当面交谈。,valid_checkable,,event omits first-episode timing required by G1
+4,SL-020,E2,公众知道德尔塔的真实姓名,公众知道德尔塔的真实姓名。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-020,E3,档案馆在2065年开放了地震救援档案,档案馆在2065年开放地震救援档案。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-020,E4,月城在地震前已经使用机械左臂,月城在地震前已经使用机械左臂。,valid_checkable,G4,directly stated by S7
+4,SL-021,E1,雷拥有两颗心脏,雷拥有两颗心脏。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-021,E2,月城在2063年已经安装机械左臂,月城在2063年已经安装机械左臂。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-021,E3,雷的父亲知道拉古艾尔寄宿在雷体内,雷的父亲知道拉古艾尔寄宿在雷体内。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-021,E4,监察官恢复了爆炸前的视力,监察官恢复了爆炸前的视力。,valid_checkable,G4,reviewed against original source span and gold
+4,SL-022,E1,雷拥有两颗心脏,亚巴顿寄宿在雷的左侧心脏里。,hallucinated,,left-heart angel occupancy does not entail two hearts
+4,SL-022,E2,雷能让已经死亡的人复活,雷能让已经死亡的人复活。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-022,E3,月城的右臂是机械臂,月城的右臂是机械臂。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-022,E4,守望者无法感知静默结界中的宿主,守望者无法感知静默结界中的宿主。,valid_checkable,G4,reviewed against original source span and gold
+4,SL-022,E5,亚巴顿寄宿在雷的左侧心脏里,亚巴顿寄宿在雷的左侧心脏里。,valid_checkable,G3,directly stated by S6
+4,SL-023,E1,雷拥有读取他人梦境的能力,雷拥有读取他人梦境的能力。,valid_checkable,G4,reviewed against original source span and gold
+4,SL-023,E2,拉古艾尔寄宿在雷的右侧心脏里,拉古艾尔寄宿在雷的右侧心脏里。,valid_checkable,G3,reviewed against original source span and gold
+4,SL-023,E3,雷拥有两颗心脏,拉古艾尔寄宿在雷的右侧心脏里。,hallucinated,,right-heart angel occupancy does not entail two hearts
+4,SL-023,E4,雷借用亚巴顿力量后记忆不会受影响,雷借用亚巴顿力量后记忆不会受影响。,valid_checkable,G1,reviewed against original source span and gold
+4,SL-023,E5,雷和德尔塔在第一话已经当面交谈,雷和德尔塔在第一话已经当面交谈。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-024,E1,雷能让已经死亡的人复活,雷能让已经死亡的人复活。,valid_checkable,G2,reviewed against original source span and gold
+4,SL-024,E2,月城在2064年完成机械左臂安装,月城在2064年完成机械左臂安装。,valid_checkable,G3,directly stated by S6
+4,SL-024,E3,月城可以让机械左臂变成液体,月城可以让机械左臂变成液体。,valid_checkable,G4,reviewed against original source span and gold
+4,SL-024,E4,公众知道德尔塔的真实姓名,公众知道德尔塔的真实姓名。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-P02,E1,雷拥有两颗心脏,他有两颗心脏。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-P02,E2,雷的左侧心脏寄宿亚巴顿,雷的左侧心脏寄宿亚巴顿，,valid_checkable,G2,reviewed against original source span and gold
+8,SL-P02,E3,雷的右侧心脏寄宿拉古艾尔,右侧心脏寄宿拉古艾尔。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-P02,E4,雷的生理结构包含两颗心脏，且分别与亚巴顿和拉古艾尔存在宿主关系,他有两颗心脏。雷的左侧心脏寄宿亚巴顿，右侧心脏寄宿拉古艾尔。,duplicate,,duplicates G1–G3 as a composite
+8,SL-P03,E1,雷拥有两颗心脏,亚巴顿寄宿在雷的右侧心脏。,hallucinated,,right-side angel occupancy does not entail two hearts
+8,SL-P03,E2,雷将外套搭在椅背上,将刚脱下的外套搭在椅背上。,overselected,,reviewed against original source span and gold
+8,SL-P04,E1,雷拥有让大厅里的时间暂停的能力,雷拥有让大厅里的时间暂停的能力。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-P04,E2,雷端起一杯水喝了一口,他端起来喝了一口，,overselected,,reviewed against original source span and gold
+8,SL-005,E1,雷拥有两颗心脏,雷拥有两颗心脏。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-005,E2,月城可以让机械左臂变成液体,月城可以让机械左臂变成液体。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-005,E3,拉古艾尔寄宿在雷的右侧心脏里,拉古艾尔寄宿在雷的右侧心脏里。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-006,E1,雷拥有两颗心脏,拉古艾尔寄宿在雷的右侧心脏里。,hallucinated,,right-side angel occupancy does not entail two hearts
+8,SL-006,E2,莉娅知道亚巴顿的完整计划,莉娅知道亚巴顿的完整计划。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-006,E3,月城在2064年完成机械左臂安装,月城在2064年完成机械左臂安装。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-007,E1,雷在地下隧道遇见了守望者,雷在地下隧道遇见了守望者。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-007,E2,旧教堂封印可以由一个人独自打开,旧教堂封印可以由一个人独自打开。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-007,E3,雷与德尔塔在第二话第一次当面交谈,雷与德尔塔在第二话第一次当面交谈。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-008,E1,雷拥有两颗心脏,雷在第三话向德尔塔说明双心脏秘密。,valid_checkable,,"double-heart secret supports anatomy, not disclosure to Delta"
+8,SL-008,E2,亚巴顿的力量使雷获得永久不死之身,亚巴顿的力量让雷获得永久不死之身。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-008,E3,雷和德尔塔在第一话正式见面,雷和德尔塔在第一话已经正式见面。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-009,E1,月城在地震前已经使用机械左臂,月城在地震前已经使用机械左臂。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-009,E2,监察官恢复了爆炸前的视力,监察官恢复了爆炸前的视力。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-010,E1,月城在2064年完成机械左臂安装,月城在2064年完成机械左臂安装。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-010,E2,公众知道德尔塔的真实姓名,公众知道德尔塔的真实姓名。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-010,E3,莉娅知道亚巴顿的完整计划,莉娅知道亚巴顿的完整计划。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-011,E1,雷在地下隧道遇见了守望者,雷在地下隧道遇见了守望者。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-011,E2,月城在2063年已经安装机械左臂,月城在2063年已经安装机械左臂。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-011,E3,雷与德尔塔在第二话第一次当面交谈,雷与德尔塔在第二话第一次当面交谈。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-012,E1,雷拥有两颗心脏,雷在第三话向德尔塔说明双心脏秘密。,valid_checkable,,"double-heart secret supports anatomy, not disclosure to Delta"
+8,SL-012,E2,雷的父亲知道拉古艾尔寄宿在雷体内,雷的父亲知道拉古艾尔寄宿在雷体内。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-012,E3,旧教堂封印可以由一个人独自打开,旧教堂封印可以由一个人独自打开。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-013,E1,雷拥有永久不死之身,亚巴顿的力量让雷获得永久不死之身。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-013,E2,月城的右臂是机械臂,月城的右臂是机械臂。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-013,E3,雷的父亲在第五话乘列车离开城区,雷的父亲在第五话乘列车离开城区。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-013,E4,雷拥有永久不死之身,整理衣袖，,hallucinated,,"E4 cites sleeve-adjusting, while E1 already extracts the fact"
+8,SL-014,E1,雷拥有让已死亡的人复活的能力,雷能让已经死亡的人复活。,valid_checkable,G2,directly stated by S5
+8,SL-014,E2,雷与德尔塔在第一话正式见面,雷和德尔塔在第一话已经正式见面。,valid_checkable,G3,directly stated by S6
+8,SL-014,E3,雷与德尔塔在第六话躲进旧教堂,雷与德尔塔在第六话躲进旧教堂。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-015,E1,雷借用亚巴顿力量后记忆不会受影响,雷借用亚巴顿力量后记忆不会受影响。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-015,E2,月城在地震前已经使用机械左臂,月城在地震前已经使用机械左臂。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-016,E1,雷拥有两颗心脏,雷拥有两颗心脏。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-016,E2,监察官恢复了爆炸前的视力,监察官恢复了爆炸前的视力。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-016,E3,雷和德尔塔在第一话已经当面交谈,雷和德尔塔在第一话已经当面交谈。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-017,E1,雷在第三话向德尔塔说明双心脏秘密,雷在第三话向德尔塔说明双心脏秘密。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-017,E2,月城在2063年已经安装机械左臂,月城在2063年已经安装机械左臂。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-017,E3,旧教堂封印可以由一个人独自打开,旧教堂封印可以由一个人独自打开。,valid_checkable,G4,reviewed against original source span and gold
+8,SL-017,E4,公众知道德尔塔的真实姓名,公众知道德尔塔的真实姓名。,valid_checkable,G1,directly stated by S4
+8,SL-018,E1,雷的父亲知道拉古艾尔寄宿在雷体内,雷的父亲知道拉古艾尔寄宿在雷体内。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-018,E2,月城的右臂是机械臂,月城的右臂是机械臂。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-018,E3,亚巴顿的力量让雷获得永久不死之身,亚巴顿的力量让雷获得永久不死之身。,valid_checkable,G4,reviewed against original source span and gold
+8,SL-018,E4,雷的父亲在第五话乘列车离开城区,雷的父亲在第五话乘列车离开城区。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-019,E1,雷能让已经死亡的人复活,雷能让已经死亡的人复活。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-019,E2,雷借用亚巴顿力量后记忆不会受影响,雷借用亚巴顿力量后记忆不会受影响。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-019,E3,雷与德尔塔在第六话躲进旧教堂,雷与德尔塔在第六话躲进旧教堂。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-019,E4,雷与德尔塔在第一话已经正式见面,雷和德尔塔在第一话已经正式见面。,valid_checkable,G4,reviewed against original source span and gold
+8,SL-020,E1,雷和德尔塔已经当面交谈过,雷和德尔塔在第一话已经当面交谈。,valid_checkable,,event omits first-episode timing required by G1
+8,SL-020,E2,公众知道德尔塔的真实姓名,公众知道德尔塔的真实姓名。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-020,E3,档案馆在2065年开放了地震救援档案,档案馆在2065年开放地震救援档案。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-020,E4,月城在地震前已经使用机械左臂,月城在地震前已经使用机械左臂。,valid_checkable,G4,directly stated by S7
+8,SL-021,E1,雷拥有两颗心脏,雷拥有两颗心脏。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-021,E2,月城在2063年已经安装机械左臂,月城在2063年已经安装机械左臂。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-021,E3,雷的父亲知道拉古艾尔寄宿在雷体内,雷的父亲知道拉古艾尔寄宿在雷体内。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-021,E4,监察官恢复了爆炸前的视力,监察官恢复了爆炸前的视力。,valid_checkable,G4,reviewed against original source span and gold
+8,SL-022,E1,雷拥有两颗心脏,亚巴顿寄宿在雷的左侧心脏里。,hallucinated,,left-heart angel occupancy does not entail two hearts
+8,SL-022,E2,雷能让已经死亡的人复活,雷能让已经死亡的人复活。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-022,E3,月城的右臂是机械臂,月城的右臂是机械臂。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-022,E4,守望者无法感知静默结界中的宿主,守望者无法感知静默结界中的宿主。,valid_checkable,G4,reviewed against original source span and gold
+8,SL-022,E5,亚巴顿寄宿在雷的左侧心脏里,亚巴顿寄宿在雷的左侧心脏里。,valid_checkable,G3,directly stated by S6
+8,SL-023,E1,雷拥有读取他人梦境的能力,雷拥有读取他人梦境的能力。,valid_checkable,G4,reviewed against original source span and gold
+8,SL-023,E2,拉古艾尔寄宿在雷的右侧心脏里,拉古艾尔寄宿在雷的右侧心脏里。,valid_checkable,G3,reviewed against original source span and gold
+8,SL-023,E3,雷拥有两颗心脏,拉古艾尔寄宿在雷的右侧心脏里。,hallucinated,,right-heart angel occupancy does not entail two hearts
+8,SL-023,E4,雷借用亚巴顿力量后记忆不会受影响,雷借用亚巴顿力量后记忆不会受影响。,valid_checkable,G1,reviewed against original source span and gold
+8,SL-023,E5,雷和德尔塔在第一话已经当面交谈,雷和德尔塔在第一话已经当面交谈。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-024,E1,雷能让已经死亡的人复活,雷能让已经死亡的人复活。,valid_checkable,G2,reviewed against original source span and gold
+8,SL-024,E2,月城在2064年完成机械左臂安装,月城在2064年完成机械左臂安装。,valid_checkable,G3,directly stated by S6
+8,SL-024,E3,月城可以让机械左臂变成液体,月城可以让机械左臂变成液体。,valid_checkable,G4,reviewed against original source span and gold
+8,SL-024,E4,公众知道德尔塔的真实姓名,公众知道德尔塔的真实姓名。,valid_checkable,G1,reviewed against original source span and gold

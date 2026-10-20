@@ -1,0 +1,1905 @@
+{
+  "schema_version": "benchmark-4.1-review-v1",
+  "provenance": "assistant-reviewed",
+  "basis": "story source spans and gold propositions; prior 2.2 labels used only for exact semantic matches and rechecked",
+  "dataset_sha256": "b7890cdbd41583b14a02dfa0146701e517ffc1b10b9b185e3c116f4f28c08cd2",
+  "source_sha256": {
+    "2": "e45a6e3158b5e95c1929b505c5514f9b4f9a72d969874953420fba2ca4e4d8c0",
+    "4": "c95e21255f3e0e604ddaabf34f6cde9ecd8ea705197a5ba42e0505738cbb7818",
+    "8": "42d19a124145e8a1148375060cf2a540517748ed7f3f705ee3e7c632b99189a7"
+  },
+  "capacities": {
+    "2": {
+      "SL-P01": {},
+      "SL-P02": {
+        "E1": {
+          "signature": "cb2d30214768a928515b788644b63256886bc4794e6493e2ed8caab1ffdd1c8f",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "e8dbc0edd9f70b37a7209e21a14309cad13f2d60c5774f40a8df040febdfdd8f",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "eb5b4e854300d5d67db9d737b1fafcf21a049002e648245decfc3b6a783613ec",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "3810fbfefe01615f961aff66b08f09fb093984ee76eb6d672edc97ecf646ac12",
+          "label": "duplicate",
+          "gold_ids": [],
+          "note": "duplicates G1–G3 as a composite"
+        }
+      },
+      "SL-P03": {
+        "E1": {
+          "signature": "a78c9653a20416dd399f033d149e5c559ae5dd499e5845a3b37d5b981de9c296",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "right-side angel occupancy does not entail two hearts"
+        },
+        "E2": {
+          "signature": "3026fc8adc41472f703a6b0c939550e26ca8735edaad7637c3f1571843f58233",
+          "label": "overselected",
+          "gold_ids": [],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-P04": {
+        "E1": {
+          "signature": "ae21ad2a9540f92cb91731dd8c4e892b70ae480936106818312026a3d7517a82",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "213435f5b64ad3e99db240ebe1d389031a05e87186500585c7d41779ec2ed3f0",
+          "label": "overselected",
+          "gold_ids": [],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-005": {
+        "E1": {
+          "signature": "6eb5f01cd06e91a8e9896752748608a20fcf72508559d0270a4993cd9e9914f8",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "f9cc358434d17515a52b6e8f49a5a49ae2bfb13bb2d30615418c4896614770cf",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "83cddec538848f94b9b21143a9660504471f4c69743cd3f988b5b68662ba01a7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "507453fd690b0a7f03371c0682f992863a1b7551f9f5f186f75d8021105b85e4",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "E4 cites an unrelated room-description span"
+        }
+      },
+      "SL-006": {
+        "E1": {
+          "signature": "6eb5f01cd06e91a8e9896752748608a20fcf72508559d0270a4993cd9e9914f8",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "right-side angel occupancy does not entail two hearts"
+        },
+        "E2": {
+          "signature": "839c8fa18fa649158d2121acced4d8868b4b44900c621673b129e2845e5b3ebb",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "53da84c115718f739d99a60c93c748a7fded28669c56a7a4929dd631c64b5024",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-007": {
+        "E1": {
+          "signature": "d8b9621194557a4b0ae4ebaf094a0db9df44713b210110a403cdf101b8c05ef3",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "9bf1fc5d24be5dba3e7d2132be472840b0a4cac249b53b538283e0cd131ba240",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "a1d83bee45f24037a17ae5d70992391638f41618d81f97faa10d273b2f445e21",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-008": {
+        "E1": {
+          "signature": "8e986017f17f8ca4541823d1a3b40ea79763c1cd4f1091e9591b6aebc3e44826",
+          "label": "valid_checkable",
+          "gold_ids": [],
+          "note": "double-heart secret supports anatomy, not disclosure to Delta"
+        },
+        "E2": {
+          "signature": "6151fd83c7c44406bde576f86342f55abda9c21dba807e04a3ff70b1d2650b52",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "db55be4b2c1c871924f4fdd511de12c554188abb693a7de031115805179eb630",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-009": {
+        "E1": {
+          "signature": "c90b449d61a2bfea550186319ca89d412032a2b622b86ea5341f4262674c6770",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "c0c4232a987395b5a5007017d2b65b12260ecb0e99d346061a1e02cfd1addf41",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-010": {
+        "E1": {
+          "signature": "d1893efa401fabbe8f3fc53ba346b75e3f3a6918f89995155f682f9a3b82f28d",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "391971d161f97431244d16cd5f71df5587024c58defb60d3da40ae304bf938e7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "db24156b0353cafec52fed119bcf17126d7d00cc4663399f9e4f7ef29f7ef5fd",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-011": {
+        "E1": {
+          "signature": "c3008592c9964b6531209b80e7b705626ed2e151137fa8d74d542b9a9ee6b994",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "914a0a3475b16ec1b29e92964fab20fffad01df587c626b6d59e4bd8d58a162c",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "9a1b64d79683ae2e5abae187e55ba4f22e9bd39a5d435bb98ecadc60a77a37a0",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-012": {
+        "E1": {
+          "signature": "6eb5f01cd06e91a8e9896752748608a20fcf72508559d0270a4993cd9e9914f8",
+          "label": "valid_checkable",
+          "gold_ids": [],
+          "note": "double-heart secret supports anatomy, not disclosure to Delta"
+        },
+        "E2": {
+          "signature": "8e041215d822496b503e8da1714536cc9f9fe011d5559aeff174e1e0cc32f656",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "64fd19e36a37fe8144a9a02a1045d086620ce913251e672b32029032ad73bbd2",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-013": {
+        "E1": {
+          "signature": "ba8385f3e1d19b8a8001fb06f221a7ca78d4c51aad5fb0498cb8bf25ed0d1056",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "10b263ed77e872c8533ab2ed5d67c8fdb1cc97cfc9968242d628c1fb4c651add",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "734f402987488b14048c61633895e9aa165d46923c1f288a9274dfa0282d8a0a",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-014": {
+        "E1": {
+          "signature": "87d5e7254ef532930c0bdd51cb9c344c50196f38de224b7c97f1534ead36594b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "8af4036d2895fd7d1a9b2fb5475beeb4419a067cf655f268dec2376102f94cca",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "4478bf2066000018ae6da56bbaed4208830625603ea98c56993061dde723ea5b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-015": {
+        "E1": {
+          "signature": "4e838b118cdb54bdb94005b528779f1ef34659f3d3e4739cd153920710eb3fce",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "a8cbd9c8d360a4ddc9cfcef0a56f8f9a0ee4c7812d983b90bf7690df9251c35b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-016": {
+        "E1": {
+          "signature": "6eb5f01cd06e91a8e9896752748608a20fcf72508559d0270a4993cd9e9914f8",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "72a62af33b900aed43f9b282e831f360a0f8634a82304c4211448afe8cb9e561",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "860880ed826783bec63444cb7074a272214b0026085a111af9d6009a33a74310",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-017": {
+        "E1": {
+          "signature": "e42b847310e0573de0c595538247a6c7716c14ae5cb5a7a5b251ba3cbaf3b339",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "914a0a3475b16ec1b29e92964fab20fffad01df587c626b6d59e4bd8d58a162c",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "a6e1459cd0a9efc4566d1639a6dce21d6b371daaebbce5575bbf425b9083466a",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "directly stated by S4"
+        },
+        "E4": {
+          "signature": "65a1c4ba8c9d6c403aa65133a29033a872934fcc507b260b25670deaebd5cda5",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-018": {
+        "E1": {
+          "signature": "597882742419b95cc70d44f8a8eed0c936797171ee9c9595c0e516b82f6ca747",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "10b263ed77e872c8533ab2ed5d67c8fdb1cc97cfc9968242d628c1fb4c651add",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "36def497d1f32502089a032535f654a23d93838055983b3d48e1734ae16cd442",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "efe6fac283f59b62afba4530abb67973dd4aff63dae9355aa99d50c32b3facc6",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-019": {
+        "E1": {
+          "signature": "d394b66bdb2a99d6a1d8ce39b7887e167a5bd8403d02f46959f6456b6de74c11",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "4e838b118cdb54bdb94005b528779f1ef34659f3d3e4739cd153920710eb3fce",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "cad183220c6f91ba1520045a960f2a5df30376dfd05d0504fcf516bd676bd213",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "85a3a7f4b4236d683ac67c5bec6e372202e346f61ab70150fabcbd73a2d26db7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-020": {
+        "E1": {
+          "signature": "25032d40cbff2ae636a50eacbde92f1693a03a4b64568b0aa61d44a9bf181c92",
+          "label": "valid_checkable",
+          "gold_ids": [],
+          "note": "event omits first-episode timing required by G1"
+        },
+        "E2": {
+          "signature": "6b005afa33ec1d6ca20530e0b92b741cd11835d0e2520116e2bba61bab3e076e",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "ef9790137af4475875a97f3ae659f145e90505f07fae8f54fe4708e90525bea3",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "130a5c3f3e666c1aabffd251ec33a319bfbea798250e6871c848276159ad8c75",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "directly stated by S7"
+        }
+      },
+      "SL-021": {
+        "E1": {
+          "signature": "8e986017f17f8ca4541823d1a3b40ea79763c1cd4f1091e9591b6aebc3e44826",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "bfdf82d490c5f8e8b44faa3b8ab2d3f335ef3f61dd8582c121defc7acce514d5",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "dd5ba7e1212531e30d2963fbed8ac851148cef7026ee794a3fbea11ab93114a7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "bfe260920277ea67298faab1479689da953635097d41398629b646d619b7b626",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-022": {
+        "E1": {
+          "signature": "8e986017f17f8ca4541823d1a3b40ea79763c1cd4f1091e9591b6aebc3e44826",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "left-heart angel occupancy does not entail two hearts"
+        },
+        "E2": {
+          "signature": "87d5e7254ef532930c0bdd51cb9c344c50196f38de224b7c97f1534ead36594b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "73e4ab236a00fa1b92e76fb4025b630ebb5d888dca0040aece451dd6afaac0e1",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "5a1f81ee2469076be2b1bc0d90ebf01aaf05881a69e73f757db53f66e6ba8c5b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E5": {
+          "signature": "fc1cb100429837ac318e4798eda0a52299bea1f1a2b8ab6e7b5dc2e7361b8585",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "directly stated by S6"
+        }
+      },
+      "SL-023": {
+        "E1": {
+          "signature": "7a1cfcd522429673452f35585bade3fb15d402c2e5a502d63d789a7ac61a7437",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "2048a71d246317893239ff6a77b761244d4b3bb647d8e711f70dda8051b0b7be",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "8e986017f17f8ca4541823d1a3b40ea79763c1cd4f1091e9591b6aebc3e44826",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "right-heart angel occupancy does not entail two hearts"
+        },
+        "E4": {
+          "signature": "7c1420b2f93111db5e58678684e4121f5d0fd068b3e586e9fc0ecae96dcb0e22",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E5": {
+          "signature": "3e8b4665d36031c68eee73ca62245a9bfd61aa7451dd2ac5a6c092f6e98e6962",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-024": {
+        "E1": {
+          "signature": "87d5e7254ef532930c0bdd51cb9c344c50196f38de224b7c97f1534ead36594b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "53da84c115718f739d99a60c93c748a7fded28669c56a7a4929dd631c64b5024",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "directly stated by S6"
+        },
+        "E3": {
+          "signature": "d27cdb11c3ddf46bbffce8b3d4770a6dd12649b696d6edeaadb34aacb045f5c7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "a6e1459cd0a9efc4566d1639a6dce21d6b371daaebbce5575bbf425b9083466a",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      }
+    },
+    "4": {
+      "SL-P01": {},
+      "SL-P02": {
+        "E1": {
+          "signature": "cb2d30214768a928515b788644b63256886bc4794e6493e2ed8caab1ffdd1c8f",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "e8dbc0edd9f70b37a7209e21a14309cad13f2d60c5774f40a8df040febdfdd8f",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "eb5b4e854300d5d67db9d737b1fafcf21a049002e648245decfc3b6a783613ec",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-P03": {
+        "E1": {
+          "signature": "a78c9653a20416dd399f033d149e5c559ae5dd499e5845a3b37d5b981de9c296",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "right-side angel occupancy does not entail two hearts"
+        },
+        "E2": {
+          "signature": "3026fc8adc41472f703a6b0c939550e26ca8735edaad7637c3f1571843f58233",
+          "label": "overselected",
+          "gold_ids": [],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-P04": {
+        "E1": {
+          "signature": "ae21ad2a9540f92cb91731dd8c4e892b70ae480936106818312026a3d7517a82",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "213435f5b64ad3e99db240ebe1d389031a05e87186500585c7d41779ec2ed3f0",
+          "label": "overselected",
+          "gold_ids": [],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-005": {
+        "E1": {
+          "signature": "6eb5f01cd06e91a8e9896752748608a20fcf72508559d0270a4993cd9e9914f8",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "f9cc358434d17515a52b6e8f49a5a49ae2bfb13bb2d30615418c4896614770cf",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "83cddec538848f94b9b21143a9660504471f4c69743cd3f988b5b68662ba01a7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-006": {
+        "E1": {
+          "signature": "6eb5f01cd06e91a8e9896752748608a20fcf72508559d0270a4993cd9e9914f8",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "right-side angel occupancy does not entail two hearts"
+        },
+        "E2": {
+          "signature": "839c8fa18fa649158d2121acced4d8868b4b44900c621673b129e2845e5b3ebb",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "53da84c115718f739d99a60c93c748a7fded28669c56a7a4929dd631c64b5024",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-007": {
+        "E1": {
+          "signature": "d8b9621194557a4b0ae4ebaf094a0db9df44713b210110a403cdf101b8c05ef3",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "9bf1fc5d24be5dba3e7d2132be472840b0a4cac249b53b538283e0cd131ba240",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "a1d83bee45f24037a17ae5d70992391638f41618d81f97faa10d273b2f445e21",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-008": {
+        "E1": {
+          "signature": "8e986017f17f8ca4541823d1a3b40ea79763c1cd4f1091e9591b6aebc3e44826",
+          "label": "valid_checkable",
+          "gold_ids": [],
+          "note": "double-heart secret supports anatomy, not disclosure to Delta"
+        },
+        "E2": {
+          "signature": "6151fd83c7c44406bde576f86342f55abda9c21dba807e04a3ff70b1d2650b52",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "db55be4b2c1c871924f4fdd511de12c554188abb693a7de031115805179eb630",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-009": {
+        "E1": {
+          "signature": "c90b449d61a2bfea550186319ca89d412032a2b622b86ea5341f4262674c6770",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "c0c4232a987395b5a5007017d2b65b12260ecb0e99d346061a1e02cfd1addf41",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-010": {},
+      "SL-011": {
+        "E1": {
+          "signature": "c3008592c9964b6531209b80e7b705626ed2e151137fa8d74d542b9a9ee6b994",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "914a0a3475b16ec1b29e92964fab20fffad01df587c626b6d59e4bd8d58a162c",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "9a1b64d79683ae2e5abae187e55ba4f22e9bd39a5d435bb98ecadc60a77a37a0",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-012": {
+        "E1": {
+          "signature": "6eb5f01cd06e91a8e9896752748608a20fcf72508559d0270a4993cd9e9914f8",
+          "label": "valid_checkable",
+          "gold_ids": [],
+          "note": "double-heart secret supports anatomy, not disclosure to Delta"
+        },
+        "E2": {
+          "signature": "8e041215d822496b503e8da1714536cc9f9fe011d5559aeff174e1e0cc32f656",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "64fd19e36a37fe8144a9a02a1045d086620ce913251e672b32029032ad73bbd2",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-013": {
+        "E1": {
+          "signature": "ba8385f3e1d19b8a8001fb06f221a7ca78d4c51aad5fb0498cb8bf25ed0d1056",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "10b263ed77e872c8533ab2ed5d67c8fdb1cc97cfc9968242d628c1fb4c651add",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "734f402987488b14048c61633895e9aa165d46923c1f288a9274dfa0282d8a0a",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-014": {
+        "E1": {
+          "signature": "87d5e7254ef532930c0bdd51cb9c344c50196f38de224b7c97f1534ead36594b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "8af4036d2895fd7d1a9b2fb5475beeb4419a067cf655f268dec2376102f94cca",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "4478bf2066000018ae6da56bbaed4208830625603ea98c56993061dde723ea5b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-015": {
+        "E1": {
+          "signature": "4e838b118cdb54bdb94005b528779f1ef34659f3d3e4739cd153920710eb3fce",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "a8cbd9c8d360a4ddc9cfcef0a56f8f9a0ee4c7812d983b90bf7690df9251c35b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-016": {
+        "E1": {
+          "signature": "6eb5f01cd06e91a8e9896752748608a20fcf72508559d0270a4993cd9e9914f8",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "72a62af33b900aed43f9b282e831f360a0f8634a82304c4211448afe8cb9e561",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "860880ed826783bec63444cb7074a272214b0026085a111af9d6009a33a74310",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-017": {
+        "E1": {
+          "signature": "e42b847310e0573de0c595538247a6c7716c14ae5cb5a7a5b251ba3cbaf3b339",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "914a0a3475b16ec1b29e92964fab20fffad01df587c626b6d59e4bd8d58a162c",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "65a1c4ba8c9d6c403aa65133a29033a872934fcc507b260b25670deaebd5cda5",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "a96c2f9fa3e411b5db45da6e8805b7485b46e5a24e08c3808cb4b4b052ca2f95",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "directly stated by S4"
+        }
+      },
+      "SL-018": {
+        "E1": {
+          "signature": "597882742419b95cc70d44f8a8eed0c936797171ee9c9595c0e516b82f6ca747",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "10b263ed77e872c8533ab2ed5d67c8fdb1cc97cfc9968242d628c1fb4c651add",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "36def497d1f32502089a032535f654a23d93838055983b3d48e1734ae16cd442",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "efe6fac283f59b62afba4530abb67973dd4aff63dae9355aa99d50c32b3facc6",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-019": {
+        "E1": {
+          "signature": "d394b66bdb2a99d6a1d8ce39b7887e167a5bd8403d02f46959f6456b6de74c11",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "4e838b118cdb54bdb94005b528779f1ef34659f3d3e4739cd153920710eb3fce",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "cad183220c6f91ba1520045a960f2a5df30376dfd05d0504fcf516bd676bd213",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "85a3a7f4b4236d683ac67c5bec6e372202e346f61ab70150fabcbd73a2d26db7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-020": {
+        "E1": {
+          "signature": "25032d40cbff2ae636a50eacbde92f1693a03a4b64568b0aa61d44a9bf181c92",
+          "label": "valid_checkable",
+          "gold_ids": [],
+          "note": "event omits first-episode timing required by G1"
+        },
+        "E2": {
+          "signature": "6b005afa33ec1d6ca20530e0b92b741cd11835d0e2520116e2bba61bab3e076e",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "ef9790137af4475875a97f3ae659f145e90505f07fae8f54fe4708e90525bea3",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "fc5c0f652ad8cb3aebb7d14263e1d4542159557f09825b3a403ab25657d232e6",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "directly stated by S7"
+        }
+      },
+      "SL-021": {
+        "E1": {
+          "signature": "8e986017f17f8ca4541823d1a3b40ea79763c1cd4f1091e9591b6aebc3e44826",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "bfdf82d490c5f8e8b44faa3b8ab2d3f335ef3f61dd8582c121defc7acce514d5",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "dd5ba7e1212531e30d2963fbed8ac851148cef7026ee794a3fbea11ab93114a7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "bfe260920277ea67298faab1479689da953635097d41398629b646d619b7b626",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-022": {
+        "E1": {
+          "signature": "8e986017f17f8ca4541823d1a3b40ea79763c1cd4f1091e9591b6aebc3e44826",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "left-heart angel occupancy does not entail two hearts"
+        },
+        "E2": {
+          "signature": "87d5e7254ef532930c0bdd51cb9c344c50196f38de224b7c97f1534ead36594b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "73e4ab236a00fa1b92e76fb4025b630ebb5d888dca0040aece451dd6afaac0e1",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "5a1f81ee2469076be2b1bc0d90ebf01aaf05881a69e73f757db53f66e6ba8c5b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E5": {
+          "signature": "fc1cb100429837ac318e4798eda0a52299bea1f1a2b8ab6e7b5dc2e7361b8585",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "directly stated by S6"
+        }
+      },
+      "SL-023": {
+        "E1": {
+          "signature": "7a1cfcd522429673452f35585bade3fb15d402c2e5a502d63d789a7ac61a7437",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "2048a71d246317893239ff6a77b761244d4b3bb647d8e711f70dda8051b0b7be",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "8e986017f17f8ca4541823d1a3b40ea79763c1cd4f1091e9591b6aebc3e44826",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "right-heart angel occupancy does not entail two hearts"
+        },
+        "E4": {
+          "signature": "7c1420b2f93111db5e58678684e4121f5d0fd068b3e586e9fc0ecae96dcb0e22",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E5": {
+          "signature": "3e8b4665d36031c68eee73ca62245a9bfd61aa7451dd2ac5a6c092f6e98e6962",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-024": {
+        "E1": {
+          "signature": "87d5e7254ef532930c0bdd51cb9c344c50196f38de224b7c97f1534ead36594b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "53da84c115718f739d99a60c93c748a7fded28669c56a7a4929dd631c64b5024",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "directly stated by S6"
+        },
+        "E3": {
+          "signature": "d27cdb11c3ddf46bbffce8b3d4770a6dd12649b696d6edeaadb34aacb045f5c7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "a6e1459cd0a9efc4566d1639a6dce21d6b371daaebbce5575bbf425b9083466a",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      }
+    },
+    "8": {
+      "SL-P01": {},
+      "SL-P02": {
+        "E1": {
+          "signature": "cb2d30214768a928515b788644b63256886bc4794e6493e2ed8caab1ffdd1c8f",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "e8dbc0edd9f70b37a7209e21a14309cad13f2d60c5774f40a8df040febdfdd8f",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "eb5b4e854300d5d67db9d737b1fafcf21a049002e648245decfc3b6a783613ec",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "3810fbfefe01615f961aff66b08f09fb093984ee76eb6d672edc97ecf646ac12",
+          "label": "duplicate",
+          "gold_ids": [],
+          "note": "duplicates G1–G3 as a composite"
+        }
+      },
+      "SL-P03": {
+        "E1": {
+          "signature": "a78c9653a20416dd399f033d149e5c559ae5dd499e5845a3b37d5b981de9c296",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "right-side angel occupancy does not entail two hearts"
+        },
+        "E2": {
+          "signature": "3026fc8adc41472f703a6b0c939550e26ca8735edaad7637c3f1571843f58233",
+          "label": "overselected",
+          "gold_ids": [],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-P04": {
+        "E1": {
+          "signature": "ae21ad2a9540f92cb91731dd8c4e892b70ae480936106818312026a3d7517a82",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "213435f5b64ad3e99db240ebe1d389031a05e87186500585c7d41779ec2ed3f0",
+          "label": "overselected",
+          "gold_ids": [],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-005": {
+        "E1": {
+          "signature": "6eb5f01cd06e91a8e9896752748608a20fcf72508559d0270a4993cd9e9914f8",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "f9cc358434d17515a52b6e8f49a5a49ae2bfb13bb2d30615418c4896614770cf",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "83cddec538848f94b9b21143a9660504471f4c69743cd3f988b5b68662ba01a7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-006": {
+        "E1": {
+          "signature": "6eb5f01cd06e91a8e9896752748608a20fcf72508559d0270a4993cd9e9914f8",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "right-side angel occupancy does not entail two hearts"
+        },
+        "E2": {
+          "signature": "839c8fa18fa649158d2121acced4d8868b4b44900c621673b129e2845e5b3ebb",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "53da84c115718f739d99a60c93c748a7fded28669c56a7a4929dd631c64b5024",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-007": {
+        "E1": {
+          "signature": "d8b9621194557a4b0ae4ebaf094a0db9df44713b210110a403cdf101b8c05ef3",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "9bf1fc5d24be5dba3e7d2132be472840b0a4cac249b53b538283e0cd131ba240",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "a1d83bee45f24037a17ae5d70992391638f41618d81f97faa10d273b2f445e21",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-008": {
+        "E1": {
+          "signature": "8e986017f17f8ca4541823d1a3b40ea79763c1cd4f1091e9591b6aebc3e44826",
+          "label": "valid_checkable",
+          "gold_ids": [],
+          "note": "double-heart secret supports anatomy, not disclosure to Delta"
+        },
+        "E2": {
+          "signature": "6151fd83c7c44406bde576f86342f55abda9c21dba807e04a3ff70b1d2650b52",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "db55be4b2c1c871924f4fdd511de12c554188abb693a7de031115805179eb630",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-009": {
+        "E1": {
+          "signature": "c90b449d61a2bfea550186319ca89d412032a2b622b86ea5341f4262674c6770",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "c0c4232a987395b5a5007017d2b65b12260ecb0e99d346061a1e02cfd1addf41",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-010": {
+        "E1": {
+          "signature": "d1893efa401fabbe8f3fc53ba346b75e3f3a6918f89995155f682f9a3b82f28d",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "391971d161f97431244d16cd5f71df5587024c58defb60d3da40ae304bf938e7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "db24156b0353cafec52fed119bcf17126d7d00cc4663399f9e4f7ef29f7ef5fd",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-011": {
+        "E1": {
+          "signature": "c3008592c9964b6531209b80e7b705626ed2e151137fa8d74d542b9a9ee6b994",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "914a0a3475b16ec1b29e92964fab20fffad01df587c626b6d59e4bd8d58a162c",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "9a1b64d79683ae2e5abae187e55ba4f22e9bd39a5d435bb98ecadc60a77a37a0",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-012": {
+        "E1": {
+          "signature": "6eb5f01cd06e91a8e9896752748608a20fcf72508559d0270a4993cd9e9914f8",
+          "label": "valid_checkable",
+          "gold_ids": [],
+          "note": "double-heart secret supports anatomy, not disclosure to Delta"
+        },
+        "E2": {
+          "signature": "8e041215d822496b503e8da1714536cc9f9fe011d5559aeff174e1e0cc32f656",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "64fd19e36a37fe8144a9a02a1045d086620ce913251e672b32029032ad73bbd2",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-013": {
+        "E1": {
+          "signature": "ba8385f3e1d19b8a8001fb06f221a7ca78d4c51aad5fb0498cb8bf25ed0d1056",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "10b263ed77e872c8533ab2ed5d67c8fdb1cc97cfc9968242d628c1fb4c651add",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "734f402987488b14048c61633895e9aa165d46923c1f288a9274dfa0282d8a0a",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "a27244c5c5df1f7f1c4700070a879c5ccd0b409ed507568632c63aa54cfb5de0",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "E4 cites sleeve-adjusting, while E1 already extracts the fact"
+        }
+      },
+      "SL-014": {
+        "E1": {
+          "signature": "fb8f3d59b5673db5214c304670b877cc69aba3166c37da4a2660e84aff6d079a",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "directly stated by S5"
+        },
+        "E2": {
+          "signature": "8b287e6a9e02fd215e893bd126e30bfe76c90a586a304846e88dbe8bb1740bb7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "directly stated by S6"
+        },
+        "E3": {
+          "signature": "4478bf2066000018ae6da56bbaed4208830625603ea98c56993061dde723ea5b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-015": {
+        "E1": {
+          "signature": "4e838b118cdb54bdb94005b528779f1ef34659f3d3e4739cd153920710eb3fce",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "a8cbd9c8d360a4ddc9cfcef0a56f8f9a0ee4c7812d983b90bf7690df9251c35b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-016": {
+        "E1": {
+          "signature": "6eb5f01cd06e91a8e9896752748608a20fcf72508559d0270a4993cd9e9914f8",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "72a62af33b900aed43f9b282e831f360a0f8634a82304c4211448afe8cb9e561",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "860880ed826783bec63444cb7074a272214b0026085a111af9d6009a33a74310",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-017": {
+        "E1": {
+          "signature": "e42b847310e0573de0c595538247a6c7716c14ae5cb5a7a5b251ba3cbaf3b339",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "914a0a3475b16ec1b29e92964fab20fffad01df587c626b6d59e4bd8d58a162c",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "65a1c4ba8c9d6c403aa65133a29033a872934fcc507b260b25670deaebd5cda5",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "a96c2f9fa3e411b5db45da6e8805b7485b46e5a24e08c3808cb4b4b052ca2f95",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "directly stated by S4"
+        }
+      },
+      "SL-018": {
+        "E1": {
+          "signature": "597882742419b95cc70d44f8a8eed0c936797171ee9c9595c0e516b82f6ca747",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "10b263ed77e872c8533ab2ed5d67c8fdb1cc97cfc9968242d628c1fb4c651add",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "36def497d1f32502089a032535f654a23d93838055983b3d48e1734ae16cd442",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "efe6fac283f59b62afba4530abb67973dd4aff63dae9355aa99d50c32b3facc6",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-019": {
+        "E1": {
+          "signature": "d394b66bdb2a99d6a1d8ce39b7887e167a5bd8403d02f46959f6456b6de74c11",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "4e838b118cdb54bdb94005b528779f1ef34659f3d3e4739cd153920710eb3fce",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "cad183220c6f91ba1520045a960f2a5df30376dfd05d0504fcf516bd676bd213",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "85a3a7f4b4236d683ac67c5bec6e372202e346f61ab70150fabcbd73a2d26db7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-020": {
+        "E1": {
+          "signature": "25032d40cbff2ae636a50eacbde92f1693a03a4b64568b0aa61d44a9bf181c92",
+          "label": "valid_checkable",
+          "gold_ids": [],
+          "note": "event omits first-episode timing required by G1"
+        },
+        "E2": {
+          "signature": "6b005afa33ec1d6ca20530e0b92b741cd11835d0e2520116e2bba61bab3e076e",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "ef9790137af4475875a97f3ae659f145e90505f07fae8f54fe4708e90525bea3",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "fc5c0f652ad8cb3aebb7d14263e1d4542159557f09825b3a403ab25657d232e6",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "directly stated by S7"
+        }
+      },
+      "SL-021": {
+        "E1": {
+          "signature": "8e986017f17f8ca4541823d1a3b40ea79763c1cd4f1091e9591b6aebc3e44826",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "bfdf82d490c5f8e8b44faa3b8ab2d3f335ef3f61dd8582c121defc7acce514d5",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "dd5ba7e1212531e30d2963fbed8ac851148cef7026ee794a3fbea11ab93114a7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "bfe260920277ea67298faab1479689da953635097d41398629b646d619b7b626",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-022": {
+        "E1": {
+          "signature": "8e986017f17f8ca4541823d1a3b40ea79763c1cd4f1091e9591b6aebc3e44826",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "left-heart angel occupancy does not entail two hearts"
+        },
+        "E2": {
+          "signature": "87d5e7254ef532930c0bdd51cb9c344c50196f38de224b7c97f1534ead36594b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "73e4ab236a00fa1b92e76fb4025b630ebb5d888dca0040aece451dd6afaac0e1",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "5a1f81ee2469076be2b1bc0d90ebf01aaf05881a69e73f757db53f66e6ba8c5b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E5": {
+          "signature": "fc1cb100429837ac318e4798eda0a52299bea1f1a2b8ab6e7b5dc2e7361b8585",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "directly stated by S6"
+        }
+      },
+      "SL-023": {
+        "E1": {
+          "signature": "7a1cfcd522429673452f35585bade3fb15d402c2e5a502d63d789a7ac61a7437",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "2048a71d246317893239ff6a77b761244d4b3bb647d8e711f70dda8051b0b7be",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E3": {
+          "signature": "8e986017f17f8ca4541823d1a3b40ea79763c1cd4f1091e9591b6aebc3e44826",
+          "label": "hallucinated",
+          "gold_ids": [],
+          "note": "right-heart angel occupancy does not entail two hearts"
+        },
+        "E4": {
+          "signature": "7c1420b2f93111db5e58678684e4121f5d0fd068b3e586e9fc0ecae96dcb0e22",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E5": {
+          "signature": "3e8b4665d36031c68eee73ca62245a9bfd61aa7451dd2ac5a6c092f6e98e6962",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      },
+      "SL-024": {
+        "E1": {
+          "signature": "87d5e7254ef532930c0bdd51cb9c344c50196f38de224b7c97f1534ead36594b",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G2"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E2": {
+          "signature": "c46244dcc85f356c9e0db8815db7a0ea5e223e57f9140c827be4d71114b39c71",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G3"
+          ],
+          "note": "directly stated by S6"
+        },
+        "E3": {
+          "signature": "d27cdb11c3ddf46bbffce8b3d4770a6dd12649b696d6edeaadb34aacb045f5c7",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G4"
+          ],
+          "note": "reviewed against original source span and gold"
+        },
+        "E4": {
+          "signature": "a6e1459cd0a9efc4566d1639a6dce21d6b371daaebbce5575bbf425b9083466a",
+          "label": "valid_checkable",
+          "gold_ids": [
+            "G1"
+          ],
+          "note": "reviewed against original source span and gold"
+        }
+      }
+    }
+  }
+}

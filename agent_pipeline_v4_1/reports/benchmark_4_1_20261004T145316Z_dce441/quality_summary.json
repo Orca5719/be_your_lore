@@ -1,0 +1,183 @@
+{
+  "schema_version": "benchmark-4.1-quality-summary-v1",
+  "review_provenance": "assistant-reviewed",
+  "source": "C:\\Users\\Xhang\\Desktop\\project\\worldcheck\\agent_pipeline_v4\\reports\\benchmark_4B_20261004T132545Z_0fdce1",
+  "extraction": {
+    "2": {
+      "gold_hits": 66,
+      "gold_total": 72,
+      "recall": 0.9166666666666666,
+      "valid_events": 69,
+      "emitted_events": 77,
+      "precision": 0.8961038961038961,
+      "hallucinated_events": 5,
+      "hallucination_rate": 0.06493506493506493,
+      "overselected_events": 2,
+      "overselect_rate": 0.025974025974025976,
+      "duplicate_events": 1,
+      "missed_gold": [
+        "SL-P03/G1",
+        "SL-006/G1",
+        "SL-008/G3",
+        "SL-012/G1",
+        "SL-015/G1",
+        "SL-020/G1"
+      ]
+    },
+    "4": {
+      "gold_hits": 63,
+      "gold_total": 72,
+      "recall": 0.875,
+      "valid_events": 66,
+      "emitted_events": 72,
+      "precision": 0.9166666666666666,
+      "hallucinated_events": 4,
+      "hallucination_rate": 0.05555555555555555,
+      "overselected_events": 2,
+      "overselect_rate": 0.027777777777777776,
+      "duplicate_events": 0,
+      "missed_gold": [
+        "SL-P03/G1",
+        "SL-006/G1",
+        "SL-008/G3",
+        "SL-010/G1",
+        "SL-010/G2",
+        "SL-010/G3",
+        "SL-012/G1",
+        "SL-015/G1",
+        "SL-020/G1"
+      ]
+    },
+    "8": {
+      "gold_hits": 66,
+      "gold_total": 72,
+      "recall": 0.9166666666666666,
+      "valid_events": 69,
+      "emitted_events": 77,
+      "precision": 0.8961038961038961,
+      "hallucinated_events": 5,
+      "hallucination_rate": 0.06493506493506493,
+      "overselected_events": 2,
+      "overselect_rate": 0.025974025974025976,
+      "duplicate_events": 1,
+      "missed_gold": [
+        "SL-P03/G1",
+        "SL-006/G1",
+        "SL-008/G3",
+        "SL-012/G1",
+        "SL-015/G1",
+        "SL-020/G1"
+      ]
+    }
+  },
+  "end_to_end_conflict": {
+    "2": {
+      "tp": 16,
+      "fp": 10,
+      "fn": 8,
+      "precision": 0.6153846153846154,
+      "recall": 0.6666666666666666,
+      "f1": 0.64,
+      "missed_gold_contradictions": [
+        "SL-P03/G1",
+        "SL-016/G2",
+        "SL-017/G1",
+        "SL-020/G1",
+        "SL-020/G2",
+        "SL-021/G2",
+        "SL-024/G1",
+        "SL-024/G2"
+      ],
+      "false_positive_events": [
+        "SL-008/E3",
+        "SL-009/E2",
+        "SL-012/E3",
+        "SL-014/E2",
+        "SL-016/E2",
+        "SL-017/E4",
+        "SL-018/E4",
+        "SL-019/E4",
+        "SL-020/E1",
+        "SL-021/E4"
+      ]
+    },
+    "4": {
+      "tp": 16,
+      "fp": 10,
+      "fn": 8,
+      "precision": 0.6153846153846154,
+      "recall": 0.6666666666666666,
+      "f1": 0.64,
+      "missed_gold_contradictions": [
+        "SL-P03/G1",
+        "SL-010/G2",
+        "SL-016/G2",
+        "SL-020/G1",
+        "SL-020/G2",
+        "SL-021/G2",
+        "SL-024/G1",
+        "SL-024/G2"
+      ],
+      "false_positive_events": [
+        "SL-008/E3",
+        "SL-009/E2",
+        "SL-012/E3",
+        "SL-014/E2",
+        "SL-016/E2",
+        "SL-017/E3",
+        "SL-018/E4",
+        "SL-019/E4",
+        "SL-020/E1",
+        "SL-021/E4"
+      ]
+    },
+    "8": {
+      "tp": 17,
+      "fp": 10,
+      "fn": 7,
+      "precision": 0.6296296296296297,
+      "recall": 0.7083333333333334,
+      "f1": 0.6666666666666666,
+      "missed_gold_contradictions": [
+        "SL-P03/G1",
+        "SL-016/G2",
+        "SL-020/G1",
+        "SL-020/G2",
+        "SL-021/G2",
+        "SL-024/G1",
+        "SL-024/G2"
+      ],
+      "false_positive_events": [
+        "SL-008/E3",
+        "SL-009/E2",
+        "SL-012/E3",
+        "SL-014/E2",
+        "SL-016/E2",
+        "SL-017/E3",
+        "SL-018/E4",
+        "SL-019/E4",
+        "SL-020/E1",
+        "SL-021/E4"
+      ]
+    }
+  },
+  "downstream_status": {
+    "2": {
+      "ok": 24,
+      "partial": 0,
+      "error": 0
+    },
+    "4": {
+      "ok": 23,
+      "partial": 1,
+      "error": 0
+    },
+    "8": {
+      "ok": 24,
+      "partial": 0,
+      "error": 0
+    }
+  },
+  "complete": true,
+  "notice": "assistant-reviewed草案故事；Hallucination按原文依据而非设定真假评；E2E正类为明确矛盾。"
+}

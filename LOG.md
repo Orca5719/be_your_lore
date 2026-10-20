@@ -1131,3 +1131,321 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 正式审计发现`LLM-000073`的3行Judge batch中仅第3行截断，但旧审计把整批1039 tokens标为unprojectable，连带漏掉前两行的字段成本与Lean Projection。
 - 审计器现在使用batch timing内与request_ids对齐的逐行generated_tokens：有效行继续拆字段，损坏行仅按自身实测token保守计入；缺少可靠逐行token的旧trace仍回退为整批保守记账。
 - 新增混合batch与旧trace回退测试。修正仅影响离线成本归因，不修改Judge、prompt、判决、Benchmark 3原始trace或质量结论，也不需要重新运行模型。
+
+## Step 98 — 2026-10-01 Benchmark 3.2A：Lean Judge
+
+- 从已整合Benchmark 3.1的分支建立 `benchmark/3.2-lean-generation`；本步只实现3.2A，3.2B失败审计与3.2C Lean Extractor保持未开始。
+- 复用Benchmark 3保存的24篇、80个Extraction/Retrieval输入，只重新运行Judge；新协议严格只允许`verdict`与`evidence_ids`，明确结论必须引用有效L编号，uncertain允许空数组。
+- 删除模型输出中的quote、reason和assessment；不再使用依赖assessment的scope guard。Prompt仍规定只有两个命题无法同时为真时才能判矛盾，实验直接测量精简协议的质量变化。
+- evidence ID由程序解析回真实chunk_id；报告只展示结论与证据，不伪造自然语言解释。输出预算从768降到128 tokens，batch固定8，失败行仍最多重试一次。
+- 新增冻结输入摘要校验、一次预热、逐故事原子保存与断点续跑；自动输出质量/性能对照、逐调用CSV和逐事实verdict变化表。
+- 新增测试10项通过；关联profiling/scoring回归共22项通过；真实输入校验确认24篇、80事实，离线报告演练复现Judge Accuracy 72.73%与End-to-End F1 70.59%。正式CUDA运行交给用户执行。
+
+## Step 99 — 2026-10-01 Benchmark 3.2A 正式结果
+
+- 正式结果目录 `agent_pipeline_v3_2/reports/benchmark_3_2A_20261001T151227Z_cf125b` 完成24篇、80事实；24个story均ok，23次Judge调用全部ok，0次重试，LLM调用时间与workflow时间对账闭合。
+- Judge输出token从13158降至1131（-91.40%），Decode从531.421秒降至22.756秒（-95.72%），LLM总时间从571.928秒降至41.814秒（-92.69%）；TTFT p50从1522.799ms降至790.254ms，峰值allocated从4005782016降至3487717888 bytes。
+- Judge Accuracy从72.73%降至56.06%；FP 9→11，FN 6→5。端到端Precision/Recall/F1从66.67%/75.00%/70.59%变为63.33%/79.17%/70.37%，冲突检测F1基本持平但三分类校准明显退化。
+- 18/80 verdict发生变化，全部由旧版uncertain变为明确结论：15条变consistent、3条变contradiction。新混淆矩阵中24条gold uncertain仅1条仍判uncertain，表明移除assessment/scope guard后Lean Judge显著过度自信。
+- 结论：3.2A性能实验成功且收益明确，但当前Lean Judge不能直接替换旧Judge；其主要质量代价是uncertain边界丢失，而非冲突召回下降。本轮按计划冻结观察，不在同一实验内追加修复。
+
+## Step 100 — 2026-10-01 Benchmark 3.2B：Extractor Failure Audit实现
+
+- 新增完全离线的 `audit-extractor`：只读取Benchmark 3的story/trace，不实例化4B模型、不调用generate；严格校验固定24篇与103次Extractor调用，并逐一连接case、window、attempt和call_id。
+- 固定九类失败taxonomy；每次调用互斥归入pure_waste、recovery_cost或effective_cost，同时区分initial/format retry/coverage recovery的成功与失败，以及失败是否被后续调用恢复。
+- 输出逐调用JSONL/CSV、失败类别CSV和Markdown/JSON汇总；各类别记录故事/窗口/调用数、输入输出token、Prefill/Decode/Total、恢复情况、原始错误摘要、关联schema和直接原因。
+- 加入强制成本闭合：calls、input/output tokens、Prefill/Decode/Total必须在三个成本桶中精确对账；按实测浪费时间生成3.2C schema假设排序，不把batch共享时间伪分到不存在的行。
+- 临时真实trace冒烟结果：103次调用中27次pure waste耗时400.370秒、输出4598 tokens，占Extractor LLM时间39.10%；16次成功恢复耗时64.995秒；60次有效调用耗时558.716秒。MISSING_TARGET_COVERAGE为首因，20次共303.402秒。
+- 3.2B新增测试13项通过；正式结果仍由用户运行并确认后再进入3.2C。
+
+## Step 101 — 2026-10-01 Benchmark 3.2B正式结果与3.2C Lean Extractor实现
+
+- 3.2B正式目录 `agent_pipeline_v3_2/reports/benchmark_3_2B_20261001T152359Z_1a1032` 对账通过：24篇、103次Extractor调用，calls/token/time全部闭合，确认未加载模型且未调用generate。
+- 正式成本与冒烟一致：27次pure waste消耗4598 output tokens与400.370秒（39.10%）；16次成功coverage recovery消耗720 tokens与64.995秒；60次有效调用消耗6396 tokens与558.716秒。
+- MISSING_TARGET_COVERAGE为主因：20次、3489 output tokens、303.402秒，占pure waste时间75.78%；其后依次为枚举/类型、事件字段、引用/处置、JSON解析和顶层schema错误。
+- 新增Lean Extractor wire：事件只要求actors/event/modality/source_ids/context_ids/check_reason，mental_state与conditions仅非空时输出；删除explicit并由modality确定性恢复；ignored_spans改为ignored_span_ids，程序统一恢复为旧canonical结构。
+- 三路覆盖验证、主体原文依据、引用范围、枚举及旧`agent-pipeline-v2-extraction-v1`下游接口保持不变；缺失覆盖仍会进入小窗口恢复，生成上限和窗口参数保持原基线以隔离schema变量。
+- 新增固定24篇Extractor-only运行：共享一次模型、1篇预热不计入统计、逐篇原子保存、断点续跑、逐调用profiling、失败成本审计及旧/新性能表。
+- 质量审核只复用事件完整语义字段完全相同的旧assistant-reviewed决定；新事件或变化事件标记pending_review，不用旧event ID强行评分。质量门槛要求Recall最多少1个gold、无新增uncovered span、hallucination不增加。
+- 3.2C相关测试20项、全项目526项全部通过；正式CUDA运行交给用户执行。
+
+## Step 102 — 2026-10-01 Benchmark 3.2C首次正式运行与coverage recovery修复
+
+- 首次正式结果目录 `agent_pipeline_v3_2/reports/benchmark_3_2C_20261001T153437Z_3bb077` 性能明显改善：Extractor calls 103→94、output tokens 11714→9236、Decode 970.108→586.009秒、LLM total 1024.081→617.609秒；但12/24故事partial并产生96个uncovered spans，因此本轮不能作为有效质量/性能候选。
+- 根因定位为Lean适配器结构错误：Lean payload转换与严格decode封装在同一函数，decode抛出missing coverage时，调用方拿不到已经成功转换的partial payload，导致coverage recovery条件始终不成立。报告中recovery_cost=0是该结构错误的直接信号。
+- 修复后先保存转换并规范化的legacy partial payload，再调用严格decode；missing coverage异常现在可沿用partial结果，只为缺失span建立恢复窗口。新增回归测试复现“首轮漏S2、恢复轮处置S2”，修复前error、修复后ok。
+- 审计taxonomy同时识别Lean顶层字段错误为TOP_LEVEL_SCHEMA_ERROR，不再落入OTHER。相关17项测试、全项目527项测试通过。
+- 首次失败目录保留用于追责，不覆盖或改写；需新建3.2C结果目录重新运行后再评估性能与质量。
+
+## Step 103 — 2026-10-02 Benchmark 3.2C第二次正式运行与恢复边界修复
+
+- 第二次正式结果目录 `agent_pipeline_v3_2/reports/benchmark_3_2C_20261001T155030Z_bdb15b` 将24篇中的完整案例提升至22篇，但SL-012与SL-015仍为partial，共16个uncovered spans；因此本轮依旧不是有效质量候选，pending review 42条时的provisional recall/hallucination不能视为正式指标。
+- 性能观察保持明显收益：calls 103→101、output tokens 11714→8164、Decode 970.108→572.115秒、LLM total 1024.081→604.701秒、峰值allocated 3.208GB→2.944GB；这些数据需在结构完整且人工审核闭合后再决定是否可比。
+- 两个partial均由相同恢复边界问题造成：恢复窗口只要求S1/S8，模型正确处置S8时又重复输出已在首轮处置的S3；严格校验把越界处置ID视为错误，继而进入完整重试并遭遇新的顶层字段或枚举错误。
+- 新增恢复专用清理：仅从`ignored_span_ids`和`non_event_span_ids`删除不属于当前恢复targets的重复ID，并记录`recovery_out_of_scope_disposition_removed`；事件内容、source/context引用及全部语义字段仍按原规则严格验证，不放宽事实依据。
+- 新增回归测试覆盖越界处置清理；针对性7项、全项目528项通过。全量测试首次受系统pytest临时目录权限影响，改用仓库内临时目录后全部通过。
+- 第二次失败目录继续保留用于追责；需生成新的第三次结果目录，确认24/24完整、0 uncovered后再审核pending事件和计算最终质量门槛。
+
+## Step 104 — 2026-10-02 Benchmark 3.2C第三次正式运行与剩余片段恢复修复
+
+- 第三次正式结果目录 `agent_pipeline_v3_2/reports/benchmark_3_2C_20261002T151426Z_be7015` 仍为22/24完整、16个uncovered spans、42条pending review；性能观察为101次调用、8164 output tokens、498.546秒LLM总时间。Recall 1.0与幻觉0因审核未完成，不能作为正式质量结论。
+- SL-012与SL-015在同一故事模板下重现：首轮漏S1/S8，恢复轮处理S8却继续漏S1；上轮越界处置清理已生效，但流程没有针对剩余S1再发起恢复，整窗口重试又分别发生顶层字段和枚举错误。
+- 恢复流程现在最多再对剩余target做一次单独补提，并明确要求把每个target归入事件、忽略或非事件；保留前轮已验证的事实与处置，不重新生成它们。
+- 若补提和完整重试仍失败，返回最佳有效部分，只把确实未覆盖的target列入`uncovered_span_ids`，避免整窗口已有效内容丢失；不自动臆断遗漏片段的语义类别。
+- 新增部分恢复成功和最终恢复失败两项回归测试；全项目530项测试通过。正式CUDA重测仍由用户执行，新结果需检查24/24完整、0 uncovered并完成pending事件审核。
+
+## Step 105 — 2026-10-02 Benchmark 3.2C第四次正式运行观察
+
+- 正式结果目录 `agent_pipeline_v3_2/reports/benchmark_3_2C_20261002T153458Z_134d77`：24篇故事、97个事件、2个未覆盖span、52条旧审核精确复用、45条待审核事件；质量门槛仍为`pending_review`，Recall 1.0和幻觉0均非正式结论。
+- SL-012和SL-015均仅剩S1未覆盖，即“故事发生在城区的一间安静房间里。”；首轮漏S1/S8，第一恢复轮处置S8，第二恢复轮仍漏S1。新流程成功保留首轮已核验的关键事件，未再把整窗口8个span一起丢弃。
+- 性能观察：104次调用、8155 output tokens、495.179秒LLM总时间；对比Benchmark 3的103次、11714 tokens、1024.081秒。结构错误大幅减少，但性能对照仍须等待质量审核与完整性处理。
+- 待审核事件中出现伸懒腰、走到窗旁、叠纸巾、擦饼干碎屑、重复观察四周等日常动作；Lean schema存在过度提取的质量风险。当前不依据未审核的临时指标宣布替换基线，也不把漏掉的S1自动判为无关。
+
+## Step 106 — 2026-10-02 Benchmark 3.2C通用筛选与单片段处置修复
+
+- 根据第四次正式结果，同一模板下S1场景开头在常规提取、两轮覆盖恢复和整窗口重试后仍被模型遗漏；程序已经保留关键事件但不能给S1臆造类别。
+- 新增仅在上述路径全部失败后触发的单片段三选一模型调用：`ignored`、`non_event`或`event`。前两者补入覆盖账本；`event`和格式错误继续保留uncovered，不能通过程序硬判。每次生成均有独立trace，失败审计把它归入恢复成本。
+- Extractor提示升级为`extractor-lean-v2`：明确区分可持续影响世界观的事实与普通移动、整理、光影、场景铺垫；要求所有target包括开头场景都进入三路账本。Prompt及单片段处置指令共同纳入manifest摘要，旧结果不能混入新运行。
+- 报告明确写明本轮同时改变提示词和恢复调用，因此与Benchmark 3的对照只能评估新版系统整体，不能作为纯schema效果。新增回归覆盖三选一成功与保守保留未覆盖两种情况；全项目531项测试通过。正式CUDA性能和质量仍待新一轮用户运行及45条左右新事件的逐条审核。
+
+## Step 107 — 2026-10-03 Benchmark 3.2C第五次正式运行与字段大小写修复
+
+- 结果目录 `agent_pipeline_v3_2/reports/benchmark_3_2C_20261002T155837Z_bf8834`：24篇、70个事件、8个未覆盖span、48条旧审核复用、22条待审核。对比上轮97个事件与45条待审核，v2筛选明显减少过度提取，但待审核中仍有多条普通观察动作，质量指标尚非正式。
+- 唯一partial案例SL-017的第1窗口整体丢失8个span。两次模型输出都把合法字段`source_ids`写成`source_Ids`，其余窗口未发现同类失败；第一次重试改善了事件内容，却重复了字段拼写错误。
+- 在格式重试后的第二次结果中新增通用字段大小写归一化：仅对已知事件字段、且映射唯一时修正大小写，记录`event_field_case_normalized`；同一事件出现大小写冲突或未知字段仍严格拒绝。第一次结果仍先要求模型自修，避免过早接受语义较差的输出。
+- 相关回归涵盖重试修复与歧义拒绝，全项目533项测试通过。需新目录CUDA重测确认SL-017窗口被完整保留；当前70事件、493.072秒LLM总时间为观察值，待完整性与逐事件审核后再给正式质量结论。
+- 解析器行为已改变，run-extractor manifest版本同步升为v2；旧结果目录不能续跑混用，必须生成新目录。
+
+## Step 108 — 2026-10-03 Benchmark 3.2C最终逐事件审核与质量结论
+
+- 正式结果目录 `agent_pipeline_v3_2/reports/benchmark_3_2C_20261002T161632Z_0883f1` 达到24/24完整、0未覆盖片段；74个事件、104次调用、8016 output tokens、499.656秒LLM总时间，对比Benchmark 3的1024.081秒。
+- 发现旧提取评分器把每篇都重复使用的G1/G2/G3当作全局唯一ID，跨故事集合去重使整体Recall误显示4/4。只在3.2模块新增按故事计数的评分，冻结的Benchmark 3/2.2代码和报告未改动；正确旧基线为71/72（98.61%）。
+- 对24条pending事件逐条进行assistant-reviewed审核，决定与原因保存在`agent_pipeline_v3_2/reviews/benchmark_3_2C_20261002T161632Z_0883f1.json`，并绑定原始运行文件SHA256；`score-extractor`离线命令校验审核完整性和结果身份，生成`reviewed`子目录报告，不加载模型。
+- 正式Lean Extractor结果：Recall 58/72（80.56%）、Precision 60/74（81.08%）、hallucinated 0、overselected 14；对比旧基线Recall 71/72、Precision 71/80、overselected 9。质量门槛为fail，不能替换基线。
+- 14条漏掉的gold中，SL-018与SL-020各4条重要事实被模型放进non_event账本；SL-007/008也漏掉多条。24条审核还显示多次把普通“安静观察四周”提成mechanism事件，以及少数actors/modality字段错误。原始输出表明这是筛选语义错误，解析器没有丢弃这些完整输出；本轮保留失败结论，不继续针对测试句写特化规则。
+- 报告现在显示按故事计数的gold命中、Precision、Overselection和逐条Missed Gold；README补充离线审核命令及实验边界。全项目536项测试通过。
+## Step 109 — 2026-10-03 Benchmark 3.3本体：恢复基线与覆盖接口
+
+- 新建`benchmark/3.3-deterministic-coverage`分支和`agent_pipeline_v3_3`模块。本块只建立实验基座，3.3A、3.3B及组合实验等待用户逐块测试确认。
+- Extractor明确复用Benchmark 3的`agent_pipeline_v2.extractor`及原`extractor_v1.txt`，不采用3.2C的Lean提示、协议或筛选行为；Hybrid RRF和Judge v2.1保持原样。
+- 新增程序侧`coverage_accounting`：对输入span计算event、ignored、non-event与uncovered集合，检查重复/越界；未覆盖项保持待处理，不自动解释为无事件。本块不改变旧的生成与重试策略，局部恢复实验属于3.3B。
+- 新增独立`validate`与`run`入口，固定24篇数据、模型revision、索引与源文件摘要；正式运行逐篇原子保存并沿用Benchmark 3的逐调用profiling和质量护栏。
+- 伪模型兼容测试确认事件协议与旧Extractor一致；覆盖账本边界、候选系统接线和命令入口均有测试。正式CUDA对比结果待用户运行。
+
+## Step 110 — 2026-10-03 Benchmark 3.3本体正式测试复核
+
+- 用户运行结果：`agent_pipeline_v3_3/reports/benchmark_3_3_base_20261003T150503Z_e38d1b`。24/24故事为ok，80个事件，程序覆盖账本24/24完整，0个未覆盖span，质量护栏24/24与Benchmark 3匹配。
+- Extractor 103次调用、11714输出tokens；Judge 27次调用、13158输出tokens，均与Benchmark 3一致。End-to-End耗时1224.038秒，对比旧运行1597.410秒；两次生成工作量相同，不能把速度差异归因于本块覆盖账本。
+- 3.3本体代码已提交并推送到`origin/benchmark/3.3-deterministic-coverage`。正式运行报告留在本机，等待用户确认后再开始3.3A。
+
+## Step 111 — 2026-10-03 Benchmark 3.3A紧凑推理Judge实现
+
+- 用户确认进入3.3A。冻结Benchmark 3的24篇、80事实及各事实检索证据；Extractor、Hybrid RRF、3.3本体入口与已有报告不改动。
+- 新增两种单变量Judge候选：`structured`输出证据ID、有限assessment与verdict；`short-reason`额外输出一句限80字理由。都不复制证据原文，由程序从ID恢复chunk身份。
+- 保留同主体、证据适用、直接支持/冲突、能否共真及是否需要额外假设的程序保护；无支持的明确结论降级为uncertain，并记录模型原判和保护原因。
+- 独立命令顺序运行两候选，各自预热、逐篇原子保存和续跑；自动报告完整版/极简版/两候选的Judge Accuracy、Macro-F1、Uncertain Recall、FP/FN、输出tokens及耗时，并提供逐事实判决变化和调用明细。
+- 正式CUDA性能和质量结果等待用户测试，本块不宣布新默认Judge；3.3B仍未开始。
+
+## Step 112 — 2026-10-03 Benchmark 3.3A正式结果复核
+
+- 用户结果目录：`agent_pipeline_v3_3/reports/benchmark_3_3A_20261003T154610Z_7305ef`。两候选均24/24篇完成、各23次Judge调用、0次重试；冻结的80事实与检索证据未变。
+- Full/极简/Structured/Short Reason的Judge Accuracy依次为72.73%/56.06%/65.15%/65.15%；Uncertain Recall为54.17%/4.17%/41.67%/33.33%；Macro-F1为72.80%/49.25%/64.40%/63.68%。两候选都没有恢复完整版的三分类质量。
+- Structured的Judge FP/FN为9/9，输出3631 tokens、97.422秒；Short Reason为11/7，输出5245 tokens、146.230秒；完整版为9/6，输出13158 tokens、571.928秒。计时跨独立运行，只能作为观察；token和判决变化更能解释输出协议差异。
+- 相对完整版，Structured有13/80事实改判，旧uncertain转明确6条；Short Reason有12/80改判，旧uncertain转明确8条。两版均把SL-017的2063年机械左臂时间矛盾改为consistent、SL-018的父亲乘车离城矛盾改为consistent，说明保留简短assessment仍不足以维持旧Judge质量。
+- 结论：3.3A两候选均保留为实验，不提升为默认Judge；3.3B可独立开展，组合实验继续使用Full Judge，除非用户另行决定。
+
+## Step 113 — 2026-10-04 Benchmark 3.3A追加三组结构与长度实验
+
+- 用户要求继续寻找Judge质量与生成成本的甜点区，不进入3.3B。参考3.1字段成本：旧Judge输出中reason约6030估算tokens、citations约3094、assessment约2337；应删除展示性复制，同时单独测试结构化前提及推理长度的作用。
+- 新增`assumptions-list`、`rationale-120`、`rationale-240`三候选。先恢复旧版assessment的`assumptions`文字列表，再逐步增加理由上限；120/240提示除长度数字外相同，避免混淆提示措辞和长度效应。
+- 三候选沿用冻结的24篇/80事实、证据ID映射及Judge v2.1共真保护；每候选各自预热、按batch 8运行、逐篇原子保存与续跑，不更改Extractor和Retrieval。
+- 自动报告把Full、Verdict-only、首轮Structured/Short Reason和追加三版并排，包含Accuracy、Macro-F1、Uncertain Recall、FP/FN、F1、tokens、Prefill/Decode/总时间、判决迁移及调用明细。正式CUDA结果待用户运行，本轮不自动提升默认Judge。
+
+## Step 114 — 2026-10-04 Benchmark 3.3A追加结果与输入对齐修正
+
+- 用户追加实验目录：`agent_pipeline_v3_3/reports/benchmark_3_3A2_20261003T160701Z_ac16fe`。三候选均24/24完成、23次调用、0重试。Accuracy分别为63.64%/60.61%/63.64%，Uncertain Recall为25.00%/16.67%/25.00%，输出tokens为3436/5857/6923；报告保留为历史观察。
+- 逐组件追查发现Full Judge输入由`agent_pipeline_v2_1.oracle_benchmark.build_messages`构造为`event`对象；早期A/A2候选改为`fact`对象，字段包含不同的维度与check_reason。此差异与输出协议同时变化，故旧A/A2结果**不能作为输出长度的因果对照**；不能据此断言模型需要完整版理由或更长理由无效。
+- 修正五个A候选的用户输入，统一调用Full Judge原构造函数，仅替换各候选系统提示。新增回归测试，并对固定数据中所有需要模型判断的事实逐条确认五版用户消息与Full Judge逐字一致，0处不匹配。
+- A2命令新增`--a1-result`，可指定新A1目录/Markdown/JSON报告；新manifest绑定原输入构造函数、相关实现与A1结果摘要，拒绝混用旧目录。待用户在新目录重新运行A1及A2后再决定Judge甜点区；3.3B仍未开始。
+
+## Step 115 — 2026-10-04 Benchmark 3.3A输入对齐后结果复核
+
+- 用户重跑目录：`agent_pipeline_v3_3/reports/benchmark_3_3A_aligned`和`agent_pipeline_v3_3/reports/benchmark_3_3A2_aligned`；报告均为24篇、80事实，质量评分覆盖66个gold事实。五候选各23次Judge调用、0重试；冻结Full Judge为27次、4次重试。
+- Full/Structured/Short 80/assumptions-list/rationale-120/rationale-240的Judge Accuracy分别为72.73%/65.15%/66.67%/62.12%/65.15%/65.15%；Uncertain Recall为54.17%/41.67%/37.50%/29.17%/25.00%/25.00%。所有候选均未达到Full Judge三分类质量，尤其不确定类召回下降。
+- 对应Judge总时间为571.928/95.757/145.495/92.673/165.384/205.347秒，输出token为13158/3613/5280/3454/5854/6895。rationale-120与240的80个事实判决和66个gold评分完全相同，后者增加1041输出tokens、39.963秒，本固定集内无质量收益。
+- 目前没有找到兼顾Full Judge质量和显著减时的甜点区；Short 80是候选中准确率最高的折中，Structured更快且不确定召回更高，但两者均不应升为默认。上述速度属于各配置单轮实测、非多轮稳定性能；A阶段暂保留Full Judge，3.3B未开始。
+
+## Step 116 — 2026-10-04 Benchmark 3.3B程序覆盖与局部补提实验
+
+- 用户确认3.3A暂保留Full Judge，继续3.3B。实现独立Extractor实验，不更动A候选或冻结代码；保持Benchmark 3原提示、窗口、事件字段和生成上限，仅改变输出验收、覆盖账本及补提控制。
+- 对有效但遗漏target的首轮JSON，程序先严格验证并保留已有事件与处置，再用`coverage_accounting`计算缺口；只对缺失span及邻近上下文做最多两轮局部补提。局部补提失败保留已有有效结果，并明确返回未覆盖ID与partial状态；不会自动归为无事件，也不会因单纯覆盖缺口重跑整个窗口。
+- 新增独立CLI与24篇Extractor-only运行、预热、逐篇原子保存、断点续跑、manifest校验和离线报告。对照3.3基座提取调用/时间/token/显存，单列已采纳的首轮不完整输出、局部补提及真正失败调用。新事件沿用既有人工标签仅在语义字段完全一致时复用，否则待复核，不把待复核质量数字称为正式结果。
+- 本地578项测试通过，CLI帮助和冻结基座校验通过（24篇/80事实），`git diff --check`通过；多窗口未覆盖ID排序的回归测试先复现故障再修正。正式CUDA运行交由用户；3.3B性能与质量结论仍以实测报告为准。
+
+## Step 117 — 2026-10-04 Benchmark 3.3B首次实测失败与恢复兜底修正
+
+- 用户结果目录：`agent_pipeline_v3_3/reports/benchmark_3_3B_20261004T031242Z_b71052`。Extractor从基座103次/736.908秒降至101次/706.348秒，但2篇partial、8个span未覆盖，事件80降至72，Gold命中71/72降至66/72，质量门槛失败；不能以性能收益取代质量。
+- 逐窗口对照确认主要差异集中在`SL-P02`和`SL-020`。旧基座在局部补提分别遭遇顶层schema错误、`check_reason`无效后进行整窗重试并成功；初版3.3B把整窗重试完全删掉，导致前者遗漏1条、后者遗漏4条核心事件。`SL-P01`两版均0事件，不是新增漏提来源。
+- 修正为局部优先的受限兜底：局部输出格式/字段失败立即转一次整窗重试；局部有效但覆盖仍缺失时最多再局部补一轮，然后一次整窗兜底。整窗输出完整且严格通过才取代旧部分结果；否则保留已验证内容并继续报告partial。兜底提示沿用旧Extractor的覆盖错误重试措辞，避免额外提示差异。
+- 调用级报告新增整窗兜底调用/采纳/耗时，并将被兜底取代的首轮部分输出与最终保留的部分输出分开计账，防止把已丢弃成本称为有效成本。旧结果保留为失败记录，新代码manifest变化后需在新目录重跑。
+- 修正后全套580项本地测试通过，`git diff --check`通过；尚未进行正式CUDA重跑，质量恢复与真实耗时仍需用户实测确认。
+
+## Step 118 — 2026-10-04 Benchmark 3.3B修正后实测复核与覆盖成本再审计
+
+- 用户结果目录：`agent_pipeline_v3_3/reports/benchmark_3_3B_20261004T033730Z_cddc7b`。24篇全部`ok`、0未覆盖span、0待审核新事件；`SL-P02`和`SL-020`各触发一次整窗兜底并恢复全部事件。Extractor调用103→101，输出11714→11360 tokens，总LLM时间736.908→725.751秒，仅减少11.157秒（约1.51%，独立单轮，不可视为稳定加速）。
+- Gold命中71/72→70/72；质量门槛虽显示`pass`，它允许最多少一个Gold事实，不表示质量无损。具体漏提是`SL-014`中“雷与德尔塔在第六话躲进旧教堂”：局部补提把S4标为`process_detail`。该span已被覆盖，程序覆盖账本无法识别语义分类错误。候选事件80→77，减少的另外两条来自`SL-P03`的普通动作/无依据补充；precision 71/80→70/77，不能抵消核心Gold漏提。
+- 对冻结Benchmark 3的20次`MISSING_TARGET_COVERAGE`首轮调用逐案复核：18次、280.277秒、3225输出tokens的部分事件/处置被后续局部恢复沿用；仅2次、23.125秒、264输出tokens在局部失败后被整窗重试替换。旧3.2B审计按`status=error`将全部20次、303.402秒归为`pure_waste`，高估了真正完全丢弃的覆盖成本。旧报告不覆盖，今后比较应采用“被采纳部分”和“被替换部分”分账。
+- 3.3B当前不升为默认Extractor：质量少一个Gold事实，耗时收益小且仅单轮。结构性partial已修复；剩余差异属于局部窗口的语义筛选，后续若要继续，应单独测试上下文/提示策略，而不是按具体故事或S4写特化规则。
+
+## Step 119 — 2026-10-04 Benchmark 4A 固定批处理实现
+
+- 新分支 `benchmark/4-extractor-batching`、模块 `agent_pipeline_v4`。从 Benchmark 3 基线重新出发，只将 Extractor 的独立故事/窗口请求汇成固定 batch 1、2、4、8；继续调用 Benchmark 3 的提示、提取器、非语义修复适配层和原模型生成实现，不采用 3.2C/3.3B 的语义变更。
+- 每篇故事保留独立代理，使原提取器的 JSON 校验、失败重试和局部缺口恢复原样运行；批次 trace 单独保存，不把一次 batch 的耗时重复分摊给每篇故事。批量输出按行返回，截断只影响对应行；CUDA OOM 记为失败，不自动降档。
+- CLI 提供 `validate`、`run-static`、`summary`。正式运行前用短故事比对原单条生成与 batch 1；每档预热后处理同一24篇故事，逐故事原子保存，支持续跑并校验输入/实现摘要。续跑的 Wall 耗时标记为不具横向可比性。
+- 报告输出固定批处理性能、调用与重试成本、质量对照。新事件仅在与 Benchmark 3 原人工审核事件的语义字段完全相同且匹配唯一时复用标签；否则列入待复核，不宣称正式 Precision／Recall。正式 CUDA 数据由用户运行后分析；4B 尚未实施。
+- 提交前复核补强三处边界：OOM留下的失败故事允许下次重新处理；生成前的预算/分词错误不会复用上一批trace；用Benchmark 3分支的源码摘要及原manifest锁定Extractor、修复层、模型适配器和提示，拒绝把改过的实现冒充冻结基线。对应回归测试复现问题后修复。
+- 本地全套598项测试通过；`python -m agent_pipeline_v4 validate`核对固定24篇、模型ID/revision、冻结源码和批大小通过，`git diff --check`通过。Baseline 自对照精确复现71/72 Gold命中与71/80事件Precision；尚无正式GPU性能数据。
+
+## Step 120 — 2026-10-04 Benchmark 4A 首次实测诊断
+
+- 用户结果目录：`agent_pipeline_v4/reports/benchmark_4A_20261004T050254Z_1774b9`。四档均完成24篇生成，无CUDA崩溃或显存不足；batch 1/2分别为24/24 `ok`，batch 4/8分别为23 `ok`、1 `partial`，因此CLI按完整性门槛退出2。
+- 两个partial都是`SL-010`第一个提取窗口。batch 4首轮把`mental_state`生成为布尔值，重试时生成为错误字段；batch 8首轮输出错误字段`mentalropic`，重试仍为该错误字段。严格的Benchmark 3 wire校验拒绝整个窗口，留下S1–S8未覆盖；batch 1/2同一窗口输出合法。没有发现批次行映射、token解码或报告汇总错误。
+- 这是固定批量生成使模型输出改变的可观察质量结果，不能通过悄悄放宽schema或修正具体故事来宣布性能成功。性能数据仍可观察：batch 1/2/4/8的Wall约822/566/419/371秒、调用数103/52/26/14；batch 4/8提取质量因partial降低，且batch 2/4/8各有4/4/5个变更事件待人工复核，报告不提供正式Precision/Recall。
+- 该结果保留，不覆盖、不伪装为程序故障。4B继续等待用户确认；若后续追求batch 4/8的完整性，应作为独立质量/协议实验，不能与纯batching性能对照混为一谈。
+
+## Step 121 — 2026-10-04 Benchmark 4B 连续批处理实现
+
+- 用户确认继续4B。保持Benchmark 3 Extractor、提示、窗口、严格校验、重试、覆盖恢复和模型权重不变；新增`agent_pipeline_v4.continuous`，在同一PyTorch/NF4/BF16环境中用Qwen3逐步greedy forward进行请求级调度。容量1/2/4/8；单请求prefill，活跃请求共用decode步，EOS或输出上限立即释放槽位，后续请求随即补入。
+- 每个活跃请求保存独立KV cache和有效位置；只在请求集合变化时重组批次，稳定批次的连续decode复用现有缓存。小Qwen3随机模型测试覆盖不同长度、结束请求退场和新请求加入；真实Qwen短生成的单请求/双请求结果与原`generate()`逐字一致，短故事Extractor完整结果也一致。
+- 新CLI：`validate-continuous`、`run-continuous`、`summary-continuous`。模型只加载一次，各档分别预热，逐故事原子保存并支持manifest校验续跑。前一次4A四档结果作为锁定对照；新报告存请求trace与逐forward步，分别计算请求级TTFT、排队、模型Prefill/Decode、槽位利用率、已结束请求无效步、KV整理时间、Wall及显存峰值，不将共享decode时间在多个请求上重复求和。
+- 对每个对应4A档位保存逐故事输出/事件/状态差异；4A未保存生成token ID，故只能比对解码文本及已记录token数，不能声称原始token序列逐位相等。3.3历史报告与4A原结果未改动；4A batch4/8的partial保留为质量对照，4B若出现partial也在报告中如实列出。
+- 新增调度、EOS、截断、重试、覆盖恢复、异常、断点续跑、成本对账及manifest回归测试。正式24篇CUDA性能实验交给用户执行；当前没有4B正式吞吐/质量结论。
+
+## Step 122 — 2026-10-04 Benchmark 4B 首轮实测与标签复核
+
+- 用户结果目录：`agent_pipeline_v4/reports/benchmark_4B_20261004T132545Z_0fdce1`。容量1/2/8均24/24 `ok`，容量4为23 `ok`、1 `partial`；后者仍是`SL-010`第一个窗口两次生成无效字段，S1–S8未覆盖。没有OOM；容量8峰值reserved 7.67 GiB。
+- 4B相对对应4A的Wall：容量1为915.33对822.16秒（慢11.3%），容量2为576.93对565.75秒（慢2.0%），容量4为334.28对418.58秒（快20.1%），容量8为302.43对371.23秒（快18.5%）。容量1提取结果逐项相同，其他档位生成内容和token量有差异，不能把速度差当作只由调度造成的因果效应。
+- 对4B待复核事件逐条核对原文与gold：`SL-P03/E1`由“亚巴顿寄宿右侧心脏”推出双心脏，无依据；容量8的`SL-013/E4`把“整理衣袖”引为不死能力，也无依据且重复；其余待复核条目可在原文找到对应事实。定向复核清单与暂定指标写在`agent_pipeline_v4/benchmark_4B_analysis.md`，未覆盖原始报告。
+- 还发现冻结2.2审核账本把`SL-022/E1`“雷拥有两颗心脏”映射为G3“亚巴顿寄宿左侧心脏”，但引用原文只支持后者。历史71/72 Gold命中、71/80有效事件至少各高估1。只修正已发现问题的暂定质量结果分别为容量1 70/72、2 70/72、4 67/72、8 70/72；其余旧标签未全面重审，不能公布为正式成绩。4B暂不升为默认。
+
+## Step 123 — 2026-10-04 Benchmark 4.1 提取质量复核与端到端复跑入口
+
+- 新分支 `benchmark/4.1-batching-quality`、独立模块 `agent_pipeline_v4_1`。直接读取4B的CB2／CB4／CB8已保存提取输出，不改Extractor、提示、连续批处理或原始报告。逐事件审核账本`review.json`锁定数据集和三个提取文件SHA-256，并用事件语义签名防止仅凭E1等编号复用旧标签；审核来源明确为assistant-reviewed，gold故事仍属助手草案。
+- 重新核对引用原文与Gold，发现原2.2账本及4B暂定评分有多处过宽映射：右/左侧宿主叙述不能推出“两颗心脏”；“雷拥有两颗心脏”不能替代“雷向德尔塔说明秘密”；“已经当面交谈”丢失“第一话”时间限定。Hallucination按故事原文依据计，Overselect按不值得核对的普通事件计，重复单列。
+- 离线成绩：CB2为66/72 Gold、Precision 69/77、Hallucination 5/77、Overselect 2/77、Duplicate 1；CB4为63/72、66/72、4/72、2/72、0；CB8与CB2相同。CB4的SL-010窗口partial保留并计漏提。逐事件证据见`agent_pipeline_v4_1/reports/extraction_only/event_audit.csv`，汇总见同目录`quality_summary.md`。这比Step122的暂定结果严格，不能直接与旧71/72横向比较。
+- `run-downstream`仅复用Benchmark 3的Hybrid RRF无metadata、Judge v2.1 batch 8和Report，对三档冻结事件分别重跑后用明确矛盾为正类计算E2E Precision/Recall/F1；无对应gold的矛盾输出计FP，漏掉的gold矛盾计FN。逐故事原子保存，支持同目录续跑，锁定源文件/审计账本/下游实现/索引摘要。CUDA正式运行交用户执行，因此本次不宣称已有E2E F1。
+- 验证：72份保存提取输出全部通过原`validate_extraction`，模块6项测试通过，`validate`与离线评分命令通过。旧4B和Benchmark 3结果未改动。
+
+## Step 124 — 2026-10-04 Benchmark 4.1正式端到端实测复核
+
+- 用户运行目录：`agent_pipeline_v4_1/reports/benchmark_4_1_20261004T145316Z_dce441`。72篇档位故事结果（每档24篇）与审核账本重新计算后，保存的质量JSON逐字段复现；CB2、CB8全`ok`，CB4为23`ok`、1`partial`，后者沿袭4B的SL-010提取缺口，无新增执行错误。
+- CB2/CB4/CB8的E2E TP/FP/FN分别是16/10/8、16/10/8、17/10/7；F1为64.00%、64.00%、66.67%。CB8比CB2多命中SL-017/G1一个明确矛盾；CB4多漏SL-010/G2，但Judge另命中SL-017/G1，F1相同不表示提取质量相同。提取Recall分别为66/72、63/72、66/72；逐档数据与解释写在`agent_pipeline_v4_1/benchmark_4_1_analysis.md`。
+- 4.1的E2E评分把无Gold匹配的矛盾输出也计FP，审核账本亦比旧2.2严格，故不可把旧F1 70.59%与本轮直接比较。另归档Benchmark 3运行manifest的Judge提示、模型适配器和系统配置摘要与当前检出文件不一致；4.1三档彼此使用同一当前实现，可作档位对比，不能声称逐字复现归档Benchmark 3下游。
+- 原始约9 MB逐故事结果留在本地报告目录，没有改写4B历史输出；当前提交只纳入简明分析与LOG。
+
+## Step 125 — 2026-10-05 Benchmark 4.1 四组受控调试实验
+
+- 针对4B中`SL-010`第一提取窗口：CB1首次输出通过，CB4首次及重试均因事件字段不符合v2 wire协议失败。仅凭质量差异不能认定KV cache串话，因此先做受控复现，不修改Extractor、Judge或连续调度器。
+- 在`agent_pipeline_v4_1`增加`validate-debug`、`run-debug`、`summary-debug`。A单独运行目标；B使用历史CB4首次decode同批的三个邻居；C替换邻居；D保留B邻居并调换目标槽位。四组均为首窗口请求、同一目标prompt；逐token记录top-2 token/logit、位置、活跃顺序和cache重组次数，自动找首次token分歧并报告原输出校验状态。四组分别原子保存，可中断续跑。
+- 该实验控制同时入场，不逐步复刻历史24篇调度中邻居已运行的步数；邻居或槽位依赖只提供定位证据，不能单凭它证明KV串话，GPU数值路径也可能导致logit差异。正式CUDA运行交用户执行。
+- 验证：`validate-debug`确认历史目标窗口S1–S8及CB1/CB4首轮状态；调试模块5项测试（含微型Qwen换位和logit探针）与4.1原6项测试均通过。历史报告文件未修改。
+
+## Step 126 — 2026-10-15 Benchmark 4.1 调试探针修复
+
+- 用户实测在A组保存后，B组因 `observed top-1 logit does not match generated token` 中止。连续批处理以 `argmax` 选token，调试探针却以 `topk(2)` 取第一名；量化logit并列时两者的并列排序可能不同，因此这是探针误报，尚未证明生成器错误。
+- 探针改为先按生成器的 `argmax` 选第一名，再排除它并取得第二名；生成器、prompt、调度器和判决逻辑均未改变。增加并列logit回归测试，调试模块测试通过。
+- 用户将修复复制到桌面项目后，沿原结果目录从B组续跑；A组保留。
+
+## Step 127 — 2026-10-15 四组结果复核与缓存清理
+
+- 完整结果目录：`agent_pipeline_v4_1/reports/debug_4_1_20261015T101634Z_cc06e4`。A/B/D目标输出198 tokens且逐token相同；C输出189 tokens，首次分歧在第125个token。该步目标position_id均为904，但C的batch cache_position为909，A/B/D为904。换邻居改变了批次宽度和数值路径；这提示batch形状敏感，不足以认定KV cache串话。
+- 四组首轮均未通过v2 wire协议校验；A也与归档CB1的首次成功不同。因此受控实验未复现历史CB1成功路径，不能仅凭这轮结果解释原始CB4质量下降。历史24篇调度与本轮同时入场的控制条件也不同。
+- 清理了项目内根目录及模块的Python `__pycache__` 和 `.pytest_cache`，约3.5 MB。`.pytest-tmp*`含Windows重解析点，递归清理被拒后停止，保留剩余临时目录；`.cache/huggingface`、`.codegraph`、虚拟环境、索引及所有benchmark原始报告均保留。
+- 修复后的4.1原有测试与调试测试共12项通过；运行测试时禁止写入字节码缓存。
+
+## Step 128 — 2026-10-16 Benchmark 4.2A 约束解码实现与短样本验证
+
+- 在桌面 `worldcheck/.worktrees/benchmark-4.2` 建立 `benchmark/4.2-decoding` 独立工作区，沿用4.1代码；新增 `agent_pipeline_v4_2`，固定4B模型、24篇故事、Extractor v1 prompt/字段、原修复与重试逻辑，只切换 Extractor 生成时的JSON约束。
+- 两组均为batch=1，在同一次模型加载中各预热一篇并正式运行24篇。使用原4A运行器保存逐故事结果和逐调用trace；自动汇总调用、retry、覆盖恢复、tokens、TTFT、Prefill、Decode、Wall、显存和待审核事件。改变的事件不会仅凭事件ID复用旧标签，正式E2E评分要求先完成逐案审核。
+- XGrammar 0.2.8在本机Windows/CUDA上原生GPU掩码报`Triton is not installed`；定位为其CUDA bitmask路径的依赖。4.2A保留XGrammar语法匹配，用其CPU掩码后将logits送回CUDA；拷贝成本进入实际计时，不能把它排除后宣称提速。
+- 短剧情通过真实Qwen模型的batch=1队列路径：baseline和constrained均为`ok`、各1事件、1调用、无覆盖缺口。正式24篇运行仍由用户执行；本步不宣称已有质量或性能收益。
+
+## Step 129 — 2026-10-17 Benchmark 4.2A 续跑校验修复
+
+- 用户正式运行保存了baseline全部24篇，均为`ok`；约束解码组尚未开始。首次中止原因是manifest把运行时的tuple与JSON重载后的list直接比较，误报输入变化。
+- 校验改为比较JSON规范化后的身份。修复代码又使自包含的`cli.py`文件摘要变化；核实原manifest与当前身份仅此一项不同后，对现有结果目录的manifest执行一次性迁移。原始24篇逐故事结果、调用trace和质量标签未改动。
+- 原结果目录的`summary`命令已成功，baseline为103次调用、24/24 `ok`；从相同结果目录继续运行时应跳过这些已完成故事，正式约束解码组仍待用户实测。
+
+## Step 130 — 2026-10-17 Benchmark 4.2A 结果及事件审核
+
+- 用户完成同一结果目录的两组24篇测试，两组均为24/24 `ok`。约束解码调用103→98，格式重试8→3，覆盖恢复均为19；输出tokens 11714→10690，但本机CPU语法掩码与CUDA模型间复制使Extractor Wall从869.57秒升至1044.09秒（约慢20.1%）。这只代表当前Windows实现。
+- 对约束组4个待审核事件逐案核对：`SL-P03/E1`虚构双心脏，`SL-P03/E2`过度选中整理衣领，`SL-015/E3`有效对应G1，`SL-018/E4`重复同篇E1且source ID误指到其他句子。审核账本`review.json`已填写并清空pending。
+- 审核后Extractor Recall为baseline 71/72=98.61%、约束组70/72=97.22%；Precision为88.75%与88.61%。约束组遗漏`SL-P03/G1`及`SL-018/G3`，并有1条无依据事件。暂不宣称质量或速度改进；E2E F1需继续运行冻结下游。
+
+## Step 131 — 2026-10-17 Benchmark 4.2A 端到端复核
+
+- 用户执行冻结下游，两组`downstream_runs.jsonl`各有24篇且全部`ok`。质量报告在`agent_pipeline_v4_2/reports/benchmark_4_2A_20261016T170530Z_ab70a2/quality_reviewed.md`。
+- baseline E2E TP/FP/FN=18/9/6，F1=70.59%；constrained为17/8/7，F1=69.39%。两组使用相同Hybrid Retrieval、Judge v2.1 batch=8、Report；差异主要来自Extractor输出。
+- `SL-P03`的核心冲突在约束组未提取，造成1个TP损失和1个FN增加；`SL-018`原版额外提取的列车事件被Judge错判矛盾，约束组未产生该误报，FP减少1。不能仅凭总体F1差异断言约束解码使Judge变差。
+- 4.2A当前Windows CPU掩码实现同时出现Wall增加约20.1%、Extraction Recall下降1.39个百分点和E2E F1下降1.20个百分点；本轮不采用为默认Extractor。后续4.2B推测解码须作为独立实验，不将4.2A的质量变化混入其基线。
+
+## Step 132 — 2026-10-17 Benchmark 4.2B Prompt Lookup 实现与短样本验证
+
+- 新增独立`agent_pipeline_v4_2.speculative`入口和`speculative_model.py`，使用Transformers 4.57.6内置Prompt Lookup候选生成；仍由原Qwen3-4B NF4/BF16模型验证token，保持Extractor prompt/schema、greedy设置、窗口、重试及冻结下游不变。没有引入第二个模型。
+- 本地安装版本的assisted generation明确拒绝batch size>1；4.2B固定batch=1，复用4.2A已审核无约束组作为跨轮基线，只重新运行推测组，避免重复消耗约15分钟。报告明确区分单请求路径与4A/4B的多请求batch吞吐。
+- 为避免候选检查被误记为首token，移除原batch适配器仅用于计时的stopping criterion，改用streamer首次实际提交token计时；记录提交步数、多token提交步数、输出tokens、TTFT、Decode、Wall及峰值显存。EOS与max_new_tokens仍由Transformers生成逻辑控制。
+- 真实短样本在同一模型加载下完成：无约束与Prompt Lookup均`ok`，提取事件字段完全相同，各1次调用；推测解码观测到26个提交步。正式24篇质量和性能尚待用户运行；短样本不能证明整体提速。
+
+## Step 133 — 2026-10-17 Benchmark 4.2B 正式提取结果与审核修正
+
+- 用户完成24篇Prompt Lookup运行，24/24 `ok`；无约束baseline复用4.2A。调用103→98，输出tokens11714→10403，Decode 816.88→397.42秒，Extractor Wall 869.57→443.48秒；属于跨轮性能对照，不宣称配对重复实验的稳定加速倍数。显存峰值均约2.89/2.93 GiB。
+- Streamer观察到3992个提交步，其中1968步提交多个token，平均每步2.61 tokens。此处计数是最终提交chunk，不是候选提议总数或严格接受率。
+- 审核3条变化事件：`SL-P03/E1`无依据、`SL-017/E4`有效映射G1、`SL-022/E5`有效映射G3。另发现旧审核错误：`SL-022/E1`的“雷拥有两颗心脏”并非故事S6所表达，不能映射G3；Prompt Lookup账本改为无依据。4.2A原始报告与标签保持原样，在4.2B结果目录新增签名核对的`baseline_review_corrections.json`，对旧baseline的`SL-022/E1`和`SL-P03/E3`执行透明的审计修正。
+- 按修正口径，baseline Extraction Recall/Precision=97.22%/87.50%，Prompt Lookup=97.22%/93.33%；前者与4.2A历史报告的98.61%/88.75%不同，原因是人工标签纠错而非模型重新运行。E2E F1尚待冻结下游复测。
+
+## Step 134 — 2026-10-17 Benchmark 4.2B 端到端质量复核
+
+- 用户完成冻结Hybrid Retrieval、Judge v2.1 batch=8和Report的端到端复测，两组均24/24 `ok`。审核后报告位于`agent_pipeline_v4_2/reports/benchmark_4_2B_20261017T033125Z_295aa1/quality_reviewed.md`；baseline和Prompt Lookup均为TP/FP/FN=18/9/6，Precision=66.67%、Recall=75.00%、F1=70.59%。
+- Prompt Lookup的提取Precision由87.50%升至93.33%，Recall同为70/72=97.22%；无依据事件均为2条，过度选中由8条减为3条。但相同E2E总分掩盖了案例交换：Prompt Lookup漏掉`SL-P03/G1`，同时重新命中`SL-017/G1`；两组的漏检集合并不相同，仍需逐例看质量。
+- 单请求Extractor Wall在跨轮观测中由869.57降至443.48秒，约为原来的51.0%；Decode由816.88降至397.42秒。该对照复用此前无约束baseline，并非同轮配对重复测量；不把约1.96倍的观测速度比率视为稳定加速。当前Prompt Lookup只支持batch=1，不能据此推断多请求吞吐收益。
+- 4.2B结论：在这24篇样本上，Prompt Lookup明显减少单请求生成耗时并改善提取Precision，端到端F1未提高；保留为候选实验，不直接替换批处理默认路径。历史4.2A原始报告不改写，4.2B内的标签修正账本与新旧质量口径同时保留。
+
+## 2026-10-19 Benchmark 5 结构优化规划
+
+- 建立独立 codex/benchmark-5-structure 工作区，基于3161a6d；不混入4.2C改动。主线和4.2报告保持不变。
+- 计划见agent_pipeline_v5/PLAN.md：5A离线归因、5B短协议、5C局部修复/增量覆盖、5D证据与Judge、5E组合和批吞吐。每块测试、用户运行、逐案审核、冻结下游、记录决定后推进。
+- 固定Windows/4B/现有依赖；禁止自动下载、环境升级与长GPU实验；加入磁盘阈值、报告预算、显式共享缓存路径、失败检查点及同轮对照。
+- 4.2C暂停；人工正确事件/证据的4B能力上限实验记为后续待办，本轮不执行。
+- 本次仅规划与文档检查，不宣称代码实现或速度/质量改善。
+
+## 2026-10-20 Benchmark 5A 离线诊断完成
+
+- 新增agent_pipeline_v5离线CLI、身份校验、调用成本与错误证据包；不导入torch/transformers，不运行GPU，原归档只读。
+- 复现修正后的A/B提取70/72及E2E18/9/6。B的98次调用分为首轮76次380.282s、重试3次18.905s、补缺19次43.887s；调用总时间不等同整组wall。
+- 6个漏报中1个提取遗漏、4个程序非客观范围拦截、1个需语义审阅。对全部9FP/6FN逐项核对；6FP+1FN有标注或证据契约争议，保留历史评分，见REVIEW_5A.md。
+- 原提取器已由程序生成id，原恢复已只补missing targets；修正5B/5C计划中的重复优化假设。覆盖恢复至少3个成功事件精确匹配有效最终事件，不可直接删除。
+- 独立只读审查发现数据集外链绕过哈希，补测试并修复。19项5A测试及13项相关历史测试全部通过。无全量模型或全仓GPU实验。
+- 最终本地报告agent_pipeline_v5/reports/audit_5A_20261020_final，报告忽略入Git；代码/设计/语义审阅保留提交。5B尚未开始。
+
+## 2026-10-20 Benchmark 5B 短输出协议实验实现
+
+- 在独立B5工作区新增wire/生成适配/资源/runner/identity/质量入口，保持旧pipeline源文件不变。四组original/compact × plain/lookup5，batch1逐篇串行，同次加载模型。
+- 只省略空可选字段及由modality推导explicit，保留非空条件、心理、上下文；原三出口/窗口/补缺/重试/1536上限不变。wire_calls独立保留真实回复，程序扩展不伪算生成tokens。
+- 显式共享主仓库Qwen/BGE缓存与索引，不导出、不复制、不联网下载；初始化根目录切换仅限进程内作用域并在异常时恢复。输出/TEMP空间门禁、512MiB报告预算与逐故事检查点。
+- 支持筛选/full、AB/BA顺序、严格续跑身份、全新待审核账本、冻结下游及正式评分。已完成组/日志/审核/下游与父实验及具体arm绑定；failed/partial禁止成为质量通过。
+- 74项相关测试通过；独立审查两项P2修复并复核。validate-b本机通过，未加载模型，未跑GPU或正式速度/质量。操作命令见agent_pipeline_v5/README.md。
+
+## 2026-10-18 Benchmark 4.2C：vLLM批处理与n-gram对照
+- 在现有benchmark-4.2工作区新增vllm_benchmark/vllm_model，A/B保持不变。用户选择本机WSL2，GPU实测由用户执行。
+- 支持NF4双重量化模型导出和摘要校验；vLLM 0.18.0独立环境；batch 1/2/4 × ngram 0/3/5，四故事筛选与24故事正式运行，每组独立进程。
+- 沿用原Extractor/repair/StaticBatcher，明确属于有限批组派发，不冒充跨组持续入队。固定关闭prefix cache/chunked prefill/async scheduling，保留两个EOS；实际GPU兼容性未验证。
+- 原子保存输出、审核和清单；中断续跑Wall不可比较；partial提取禁止正式审核通过；缺失指标不记零；审核后可在原Windows环境跑冻结下游。
+- 独立审查问题已修复。专项26项通过；全套637通过、2项因旧3.3报告缺失失败（见agent_pipeline_v4_2/VALIDATION_C.md）。未安装WSL、未导出真实权重、未运行GPU基准。
+
+## 2026-10-20 整合为桌面唯一工作区
+
+- 按用户要求整合Benchmark 3.2至5B的提交及4.2C未提交代码到桌面main，保留主线原有文档和实验分支历史。没有代码冲突，175个原有未跟踪条目均为报告，不覆盖。
+- Codex默认位置只有B5；两实验目录报告已复制并核对757个文件/备份条目SHA256，源与目标一致。4.2未提交日志/说明另存原件后合并。
+- 活动入口、README默认路径改为桌面main；新增AGENTS.md明确唯一工作区。历史原始manifest/审核记录不改写，路径映射见WORKSPACE.md。
+- 修复5A/5B同工作区内输出门禁：允许专用agent_pipeline_v5/reports，仍拒绝覆盖源输入、模型缓存或索引。新增两项路径回归；完整702项通过，桌面5A审计和5B汇总/预检查通过。
+- 所有代码和报告已验证后才清理旧checkout；清理结果另行记录。不推送远端，不跑GPU。

@@ -1,0 +1,25 @@
+{
+  "schema_version": "benchmark-4.1-downstream-v1",
+  "files": {
+    "evaluation/story_benchmark_24_v2.json": "b7890cdbd41583b14a02dfa0146701e517ffc1b10b9b185e3c116f4f28c08cd2",
+    "agent_pipeline_v4_1/review.json": "ce72afe3a801bcdf2f4aa4e9a19a476f29bd3f1bf5cc561cef016860d2f0ac8b",
+    "agent_pipeline_v2_1/story_pipeline.py": "b76fe407413ac730c14e72217e94a7d4b9ef203ff3d61d0fb5433232ee75183e",
+    "agent_pipeline_v2_1/oracle_benchmark.py": "8163f334f9a45b65d3bed1997d79310cd5664b77e149b7749cbaad16f0aee566",
+    "agent_pipeline_v2_1/prompts/judge_v2_1.txt": "ce2928af24ef12842a3218019847763acee5d4465cb396b462ed593891ea141b",
+    "agent_pipeline_v2_1/judge.py": "f6990ea1c182d767c00b25096b84ac79b093059e13e6d7a1e4bbfa5b0b0e8b81",
+    "agent_pipeline_v2_1/retrieval.py": "aa80077470ef0515fa1cdf58c2c6d279c14c7269bf6b377bc45a1751cbc3974f",
+    "agent_pipeline_v2/batch_llm.py": "1dbf6b6ab31f2a240ff9b32231c2faeb5eb0da7d568a1105d749b95f98f3464f",
+    "agent_pipeline_v3/model.py": "ff172fc4e6582e878f1bb46616cf0f2b2e00eb932502daf35a9ca78677773873",
+    "agent_pipeline_v2_2/systems.py": "15fc11c2c4b8ba095f0014a47818c5b551187daca68f2aa6412d38e5414c7f9a",
+    "data/index/CURRENT": "13889375f830f6ab4ac3190653453bcdf0c55d128af2bf2498434b853c442735",
+    "data/index/versions/0de59066f81246b3b8c7445eddbe877e/manifest.json": "f60fbbe476a92787af3593d32652ee3d05eab1b4890a0016ad6e52ce9b97b727",
+    "data/index/versions/0de59066f81246b3b8c7445eddbe877e/metadata.json": "2ee8f361cd43179796e8beb3fd1edd2be76b83e4b75c547ea6088862359e1aa6",
+    "agent_pipeline_v4/reports/benchmark_4B_20261004T132545Z_0fdce1/capacity_2/extractor_runs.jsonl": "e45a6e3158b5e95c1929b505c5514f9b4f9a72d969874953420fba2ca4e4d8c0",
+    "agent_pipeline_v4/reports/benchmark_4B_20261004T132545Z_0fdce1/capacity_4/extractor_runs.jsonl": "c95e21255f3e0e604ddaabf34f6cde9ecd8ea705197a5ba42e0505738cbb7818",
+    "agent_pipeline_v4/reports/benchmark_4B_20261004T132545Z_0fdce1/capacity_8/extractor_runs.jsonl": "42d19a124145e8a1148375060cf2a540517748ed7f3f705ee3e7c632b99189a7"
+  },
+  "retrieval": "hybrid_rrf_no_metadata",
+  "top_k": 5,
+  "judge": "v2.1",
+  "judge_batch_size": 8
+}

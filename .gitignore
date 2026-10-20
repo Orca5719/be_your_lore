@@ -28,3 +28,12 @@ hf_cache/
 .idea/
 Thumbs.db
 .DS_Store
+agent_pipeline_v3_2/reports/
+agent_pipeline_v4/reports/
+agent_pipeline_v4_2/reports/
+
+agent_pipeline_v5/reports/
+
+agent_pipeline_v3_3/reports/
+
+agent_pipeline_v4_1/reports/

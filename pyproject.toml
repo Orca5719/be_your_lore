@@ -8,6 +8,7 @@ dependencies = [
     "numpy==2.2.6",
     "accelerate==1.12.0",
     "bitsandbytes==0.50.2",
+    "xgrammar==0.2.8",
 ]
 
 [[tool.uv.index]]

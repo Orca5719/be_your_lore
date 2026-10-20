@@ -1,0 +1,50 @@
+{
+  "schema_version": "agent-pipeline-v3.2-extractor-review-decisions-v1",
+  "provenance": "assistant-reviewed",
+  "result_dir": "benchmark_3_2C_20261002T161632Z_0883f1",
+  "extractor_runs_sha256": "955806150edf6dc1f53a96258cfc5e7ad216f054629b63973d4d28ad8be83794",
+  "decisions": {
+    "SL-P02": {
+      "E4": {"label": "overselected", "gold_ids": [], "note": "叠纸巾是普通动作，没有持续后果或设定约束。"},
+      "E5": {"label": "overselected", "gold_ids": [], "note": "起身并短暂停在窗边是普通动作。"},
+      "E6": {"label": "overselected", "gold_ids": [], "note": "走回椅子旁是普通动作。"}
+    },
+    "SL-P03": {
+      "E1": {"label": "valid_checkable", "gold_ids": ["G1"], "note": "事件命题准确覆盖亚巴顿寄宿右心的错误设定；actors字段误写成雷，另记字段质量问题。"}
+    },
+    "SL-005": {"E4": {"label": "overselected", "gold_ids": [], "note": "安静观察四周是普通动作，不产生可核对的持续事实。"}},
+    "SL-006": {"E4": {"label": "overselected", "gold_ids": [], "note": "安静观察四周是普通动作，不产生可核对的持续事实。"}},
+    "SL-007": {
+      "E1": {"label": "valid_checkable", "gold_ids": ["G2"], "note": "封印可由一人独自打开是世界规则；actors字段误附雷，另记字段质量问题。"},
+      "E2": {"label": "overselected", "gold_ids": [], "note": "安静观察四周是普通动作。"}
+    },
+    "SL-008": {
+      "E1": {"label": "valid_checkable", "gold_ids": [], "note": "双心脏秘密支持雷有两颗心脏，但该事件遗漏第三话告知德尔塔这一gold事实。"},
+      "E2": {"label": "overselected", "gold_ids": [], "note": "安静观察四周是普通动作。"}
+    },
+    "SL-010": {"E4": {"label": "overselected", "gold_ids": [], "note": "安静观察四周是普通动作。"}},
+    "SL-011": {"E4": {"label": "overselected", "gold_ids": [], "note": "安静观察四周是普通动作。"}},
+    "SL-012": {
+      "E2": {"label": "valid_checkable", "gold_ids": ["G2"], "note": "父亲知道拉古艾尔寄宿这一知识状态与原文一致。"},
+      "E4": {"label": "overselected", "gold_ids": [], "note": "安静观察四周是普通动作。"}
+    },
+    "SL-013": {
+      "E1": {"label": "valid_checkable", "gold_ids": [], "note": "永久不死命题有原文依据，但省略亚巴顿力量造成这一因果关系，未完整命中G3。"},
+      "E4": {"label": "overselected", "gold_ids": [], "note": "安静观察四周是普通动作。"}
+    },
+    "SL-014": {"E4": {"label": "overselected", "gold_ids": [], "note": "安静观察四周是普通动作。"}},
+    "SL-015": {
+      "E3": {"label": "valid_checkable", "gold_ids": ["G1"], "note": "档案馆在2065年开放救援档案，事件和时间均与原文一致。"},
+      "E4": {"label": "overselected", "gold_ids": [], "note": "安静观察四周是普通动作。"}
+    },
+    "SL-016": {"E4": {"label": "overselected", "gold_ids": [], "note": "安静观察四周是普通动作。"}},
+    "SL-017": {
+      "E1": {"label": "valid_checkable", "gold_ids": ["G3"], "note": "第三话告知德尔塔双心脏秘密，事件与时间均完整。"},
+      "E4": {"label": "valid_checkable", "gold_ids": ["G4"], "note": "封印可由一人独自打开，事件命题正确；modality误标belief，另记字段质量问题。"}
+    },
+    "SL-023": {
+      "E3": {"label": "valid_checkable", "gold_ids": ["G1"], "note": "借用亚巴顿力量后记忆不受影响，事件命题正确；modality误标belief。"},
+      "E4": {"label": "valid_checkable", "gold_ids": ["G2"], "note": "第一话当面交谈的时间与关系命题正确；modality误标speech。"}
+    }
+  }
+}
