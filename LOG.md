@@ -1426,3 +1426,11 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 原提取器已由程序生成id，原恢复已只补missing targets；修正5B/5C计划中的重复优化假设。覆盖恢复至少3个成功事件精确匹配有效最终事件，不可直接删除。
 - 独立只读审查发现数据集外链绕过哈希，补测试并修复。19项5A测试及13项相关历史测试全部通过。无全量模型或全仓GPU实验。
 - 最终本地报告agent_pipeline_v5/reports/audit_5A_20261020_final，报告忽略入Git；代码/设计/语义审阅保留提交。5B尚未开始。
+
+## 2026-10-20 Benchmark 5B 短输出协议实验实现
+
+- 在独立B5工作区新增wire/生成适配/资源/runner/identity/质量入口，保持旧pipeline源文件不变。四组original/compact × plain/lookup5，batch1逐篇串行，同次加载模型。
+- 只省略空可选字段及由modality推导explicit，保留非空条件、心理、上下文；原三出口/窗口/补缺/重试/1536上限不变。wire_calls独立保留真实回复，程序扩展不伪算生成tokens。
+- 显式共享主仓库Qwen/BGE缓存与索引，不导出、不复制、不联网下载；初始化根目录切换仅限进程内作用域并在异常时恢复。输出/TEMP空间门禁、512MiB报告预算与逐故事检查点。
+- 支持筛选/full、AB/BA顺序、严格续跑身份、全新待审核账本、冻结下游及正式评分。已完成组/日志/审核/下游与父实验及具体arm绑定；failed/partial禁止成为质量通过。
+- 74项相关测试通过；独立审查两项P2修复并复核。validate-b本机通过，未加载模型，未跑GPU或正式速度/质量。操作命令见agent_pipeline_v5/README.md。

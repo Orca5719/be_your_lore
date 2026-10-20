@@ -1,24 +1,57 @@
-"""Offline-only CLI."""
+"""Benchmark 5: offline audit and explicit user-run 5B experiments."""
 import argparse
 from datetime import datetime
 from pathlib import Path
-from .diagnostics import audit_archives
 
 
-def main():
-    parser = argparse.ArgumentParser(description='Benchmark 5A offline audit; no model loaded')
-    sub = parser.add_subparsers(dest='command', required=True)
-    audit = sub.add_parser('audit')
-    audit.add_argument('--source-root', type=Path, required=True)
-    audit.add_argument('--output', type=Path)
-    args = parser.parse_args()
-    output = args.output or Path(__file__).parent / 'reports' / ('audit_5A_' + datetime.now().strftime('%Y%m%dT%H%M%S'))
+def main(argv=None):
+    parser=argparse.ArgumentParser(description='Benchmark 5 audit and short-wire experiment')
+    sub=parser.add_subparsers(dest='command',required=True)
+    audit=sub.add_parser('audit')
+    audit.add_argument('--source-root',type=Path,required=True)
+    audit.add_argument('--output',type=Path)
+    for name in ('validate-b','run-b'):
+        cmd=sub.add_parser(name)
+        cmd.add_argument('--source-root',type=Path,default=Path('C:/Users/Xhang/Desktop/project/worldcheck/.worktrees/benchmark-4.2'))
+        cmd.add_argument('--asset-root',type=Path,default=Path('C:/Users/Xhang/Desktop/project/worldcheck'))
+        cmd.add_argument('--phase',choices=('screen','full'),default='screen')
+        cmd.add_argument('--order',choices=('forward','reverse'),default='forward')
+        if name=='run-b':cmd.add_argument('--output',type=Path)
+    for name in ('summary-b','score-b','run-downstream-b'):
+        cmd=sub.add_parser(name)
+        cmd.add_argument('--result-dir',type=Path,required=True)
+        if name!='summary-b':cmd.add_argument('--arms',nargs='+',choices=('original_plain','compact_plain','original_lookup5','compact_lookup5'))
+    args=parser.parse_args(argv)
     try:
-        audit_archives(args.source_root, output)
-    except (ValueError, OSError, KeyError, TypeError) as exc:
-        parser.exit(2, f'错误：{exc}\n')
-    print('SUMMARY=' + str((output / 'audit_summary.md').resolve()))
+        if args.command=='audit':
+            from .diagnostics import audit_archives
+            output=args.output or Path(__file__).parent/'reports'/('audit_5A_'+datetime.now().strftime('%Y%m%dT%H%M%S'))
+            audit_archives(args.source_root,output)
+            print('SUMMARY='+str((output/'audit_summary.md').resolve()))
+        elif args.command=='validate-b':
+            from .experiment import prepare
+            from .resources import check_resources
+            cases,identity=prepare(args.source_root,args.asset_root,args.phase,args.order)
+            resource=check_resources(Path(__file__).parent/'reports',initial=True)
+            print(f'VALIDATED {len(cases)} stories; four arms; shared local cache; no model loaded')
+            print('Shared assets: '+identity['config']['asset_root'])
+            print('Disk check: '+str(resource))
+        elif args.command=='run-b':
+            from .experiment import run_experiment
+            return run_experiment(args)
+        elif args.command=='summary-b':
+            from .experiment import summarize
+            summarize(args.result_dir)
+        elif args.command=='score-b':
+            from .quality import score
+            score(args.result_dir,args.arms)
+        else:
+            from .quality import run_downstream
+            return run_downstream(args)
+    except (ValueError,OSError,KeyError,TypeError,RuntimeError) as exc:
+        parser.exit(2,f'错误：{exc}\n')
+    return 0
 
 
-if __name__ == '__main__':
-    main()
+if __name__=='__main__':
+    raise SystemExit(main())

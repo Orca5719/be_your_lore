@@ -6,7 +6,7 @@
 **Architecture:** 新增 agent_pipeline_v5 实验入口，复用冻结的切句、模型适配器、检索及审核工具；通过独立协议适配和策略接口逐项对照。历史版本只读，候选不自动成为生产默认。
 **Tech Stack:** 原 Windows .venv、Python、Transformers 4.57.6、现有 Qwen3-4B NF4/double-quant/BF16；不安装新依赖。
 **Spec:** 本文件的目标、实验契约和验收规则构成设计；下方任务为实施计划。
-**状态:** 2026-10-20 5A完成：离线复算、逐例复核、32项相关测试通过；5B–5E未实施。4.2C暂停。
+**状态:** 2026-10-20 5A完成：离线复算、逐例复核、32项相关测试通过；5B代码已实现待用户GPU实验；5C–5E未实施。4.2C暂停。
 
 ## 工作区与参考证据
 
@@ -64,10 +64,10 @@ Files: agent_pipeline_v5/{wire.py,extractor.py,runner.py,resources.py,prompts/ex
 Interfaces: expand_event(row: dict, event_id: str, spans: dict) -> dict；run_extraction_arm(config: dict, cases: list[dict], model, output_dir: Path) -> dict。
 References: agent_pipeline_v2/extractor.py split_spans/字段校验；agent_pipeline_v2_1/extractor.py ExtractionRepairLLM；agent_pipeline_v4/static.py StaticBatcher；agent_pipeline_v4_2/speculative_model.py。
 
-- [ ] 测试并实现独立 wire schema。必填 actors,event,source_ids,modality,check_reason；沿用原先已由程序生成id的机制，不将其算作新收益。explicit严格按原协议由modality推导；mental_state/context_ids/conditions省略只等同null/[]，不能猜语义。校验失败不默默补 observed。
-- [ ] 测试言论/信念/条件/否定、跨句代词、未知source、源/上下文重叠、空actor、截断JSON；保留主体、时态和条件语义，不能将缺信息变成“无条件事实”。输出原文仍由原span表还原，模型不数偏移。
-- [ ] 首个版本保持旧 ignored/coverage 协议、输入窗口、修复策略、生成上限不变；不顺带删除覆盖逻辑或硬砍输出预算。仅缩短事件表示，并留原始响应。
-- [ ] 测试资源检查、只读共享缓存、断点身份、逐故事原子保存、失败退出；用fake模型做真实适配链集成测试。
+- [x] 测试并实现独立 wire schema。必填 actors,event,source_ids,modality,check_reason；沿用原先已由程序生成id的机制，不将其算作新收益。explicit严格按原协议由modality推导；mental_state/context_ids/conditions省略只等同null/[]，不能猜语义。校验失败不默默补 observed。
+- [x] 测试言论/信念/条件/否定、跨句代词、未知source、源/上下文重叠、空actor、截断JSON；保留主体、时态和条件语义，不能将缺信息变成“无条件事实”。输出原文仍由原span表还原，模型不数偏移。
+- [x] 首个版本保持旧 ignored/coverage 协议、输入窗口、修复策略、生成上限不变；不顺带删除覆盖逻辑或硬砍输出预算。仅缩短事件表示，并留原始响应。
+- [x] 测试资源检查、只读共享缓存、断点身份、逐故事原子保存、失败退出；用fake模型做真实适配链集成测试。
 - [ ] 用户筛选四组：原/短协议 × 普通/lookup5，固定batch1；固定4篇仅筛选，正式24篇人工审核后跑冻结下游。
 - [ ] 第一候选门槛：相对同轮相同生成模式，wall目标降低>=20%，gold命中不减、幻觉不增、E2E TP不减/FP不增。20%是实用筛选目标非保证；不足可记负结果，不升级默认。
 - [ ] 输出 SUMMARY 后审核，再输出 QUALITY/decision，局部提交。短格式若损害Prompt Lookup，不把其收益相乘。
@@ -125,7 +125,7 @@ Interfaces: score_run(cases: list[dict], extraction: list[dict], downstream: lis
 ## 本次交付边界
 
 已完成：读取参考对话、核对代码与历史结果、建立B5独立工作区、冻结本计划及待办。
-5A执行完成；下一块为5B最小短字段对照，先阅读REVIEW_5A.md的计划修正。尚未宣称任何提速/准确率收益，未运行GPU。
+5A执行完成；5B代码已完成，下一步由用户运行筛选；其余阶段待结果复核后推进。尚未宣称任何提速/准确率收益，未运行GPU。
 
 ## 5A执行记录（2026-10-20）
 - 先观察到缺模块失败，再实现；集成测试发现新父目录磁盘检查问题，增加数据绑定测试后补齐缺哈希校验。
@@ -135,3 +135,9 @@ Interfaces: score_run(cases: list[dict], extraction: list[dict], downstream: lis
 - Ruling: 原协议已不生成id，原补查已只补missing targets；修正后续假设，保留5B候选字段和5C单独对照。
 - 15项错误逐例复核在REVIEW_5A.md；7项存在gold/证据契约争议，不修改历史分数。
 
+
+## 5B执行记录（2026-10-20）
+- Ruling: 首轮只省可选空字段和explicit，不减少输入窗口/生成预算/三出口，也不做5C策略改变。
+- Ruling: 四组以同一模型加载、相同串行story顺序与batch1执行，新的成对基线替代跨轮历史Wall；共享缓存显式传入，仅初始化时临时切换原Qwen根目录后恢复。
+- 接口：run-b/validate-b/summary-b/score-b/run-downstream-b；下游保留原Hybrid/Judge/Report。
+- 74项相关测试、独立审查修复、本地validate通过；具体证据见VALIDATION_5B.md。GPU筛选与24篇质量/速度尚未运行，后三个实验任务保持未勾选。
