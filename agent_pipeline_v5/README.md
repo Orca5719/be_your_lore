@@ -15,7 +15,7 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 
 固定读取4.2A/B归档并复算审核口径，缺档或不一致会停止。旧早期报告目录链接指向源根之外时标未读；本次哈希不能补证缺失的历史原始性。
 
-5B四篇筛选已由用户运行，质量尚待审核；5C1代码已实现待用户运行。长GPU实验由用户运行；Windows、4B和依赖不变。4.2C暂停，模型上限评估保留为待办。
+5B与5C1四篇筛选已由用户运行，正式质量尚待审核。5C1分析见[REVIEW_5C1_SCREEN.md](REVIEW_5C1_SCREEN.md)。长GPU实验由用户运行；Windows、4B和依赖不变。4.2C暂停，模型上限评估保留为待办。
 
 ## 5B 短输出协议四组实验
 
