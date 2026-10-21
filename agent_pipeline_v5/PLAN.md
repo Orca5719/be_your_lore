@@ -117,6 +117,7 @@ Interfaces: repair_event(event: dict, issues: list[dict], context: dict, model) 
 - 2026-10-21首轮5D0：original_plain完成，semantic_plain预热partial停止（7次生成中4次缺check_reason，16片段未覆盖），后三组没有完整结果。新版提示补回无故事事实的完整JSON占位示例及必填检查，保持校验失败出口；不能由离线测试宣称真实模型已修好。旧失败档案不变，修订需新目录重跑。
 - 第二轮5D0_20261021T225820：字段齐全，但ignored持续为空且漏target，窗口3补查反复漏S17/S23，8片段未完成。Ruling: 撤回整段重写，复用original提示主体加简短知识/覆盖限定，并恢复三种出口均非空的无事实示例；不能证明示例偏置是唯一根因。代价：语义提示差异缩小，仍须实模验证。
 - Ruling: 仅screen支持candidate-first（semantic_plain/original_plain/semantic_lookup5/original_lookup5），失败候选尽早停止，避免重跑原版后才失败；四组不删减。代价：筛选顺序不同，不作正式时序结论，full仅forward/reverse。
+- 5D0最终四篇筛选完成（benchmark_5D0_20261021T231532），逐例复核见REVIEW_5D0_SCREEN.md：普通慢10.71%、lookup慢11.47%，部分寄宿关系/知识状态改善，但日常过选和source错误增加、speech问题未解决。判定不升级默认，不自动扩展24篇；正式标签仍pending。5D1证据组织为下一候选，不与未验收语义提示绑定。
 
 以下5D1/D2仍是后续候选，不与本轮绑定。
 

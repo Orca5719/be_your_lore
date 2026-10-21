@@ -1489,3 +1489,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - Ruling: 新candidate-first仅5D0 screen可用，先semantic_plain再original_plain/semantic_lookup5/original_lookup5，不删基线，失败尽早停。代价是筛选顺序不同，full必须forward/reverse作正式AB/BA。
 - 示例三出口覆盖测试与顺序CLI/prepare测试先失败再通过。12项专项、全套734通过（33.41秒），validate-d候选优先无模型预检查通过。独立只读审查无待修项；历史报告不变，不补造处置、不放宽校验。
 - 仍需用户以新目录实跑；本轮不运行GPU、不下载/安装、不改WSL，仅桌面main本地提交。
+
+## 2026-10-21 5D0完整四篇筛选复核
+
+- 用户报告benchmark_5D0_20261021T231532：candidate-first四组均4/4完整、无resume，完成摘要/父身份/故事/调用绑定检查通过。
+- 普通246.768→273.197秒（慢10.71%，调用19不变）；lookup91.517→102.009秒（慢11.47%，18→16调用但输出1962→2201）。不可把减少补缺次数当提速。
+- 部分寄宿关系保留更好；普通知识状态belief→observed，但本轮原lookup本已observed。客观告知仍speech，日常过选增加，SL-P04出现来源S13/S14错位和拨开手背的对象误解。事件16→19、13→18不视为纯召回收益。
+- REVIEW_5D0_SCREEN.md保存逐例分析/来源摘要；不升级默认，不自动扩展长实验，不叠加B/C。原报告/标签保持不变，未出正式质量或下游分数。后续建议按5D1组织原文证据，分开记录提取与判定问题。
