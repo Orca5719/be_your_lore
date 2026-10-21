@@ -1474,3 +1474,10 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 新prompt_policy=semantic_v1和semantic arms；validate-d/run-d/summary-d/score-d/run-downstream-d，experiment=5D0；逐调用记录实际system SHA256，prepare冻结新提示、推理仅id/story，全新pending。
 - 首次新增测试因接口缺失失败，后实现；一条fixture纠正逗号切句的source_id。10项新测试，全套732通过（32.83秒）；validate-d无模型预检查通过。独立最终只读审查无待修问题，无延期项。细节VALIDATION_5D0.md。
 - 只在桌面唯一工作区，本地main记录，不新建分支/worktree，不安装/下载/操作WSL、不运行GPU。GPU筛选和质量审核仍由用户执行，不把假模型测试当语义通过。
+
+## 2026-10-21 修订5D0格式提示
+
+- 用户首轮benchmark_5D0_20261020T235714仅original_plain完成，semantic_plain预热partial停止。7次生成中4次缺check_reason（共21个event），16片段未完成；无OOM/输出到上限证据。源提示摘要与manifest一致，旧失败报告保留。
+- 用户授权修复：仅在semantic提示前置9字段协议、完整JSON占位示例与结尾字段检查，不含具体故事事实、不默认补mechanism、不放宽校验、不增调用预算。去除结构示例是待验证诱因，不声称已证唯一根因。
+- 新示例测试RED→GREEN，冻结校验器验证示例；缺check_reason仍原预算失败。专项12通过，全套734通过（49.61秒），validate-d无模型通过。原始GPU报告/标签和旧pipeline不修改。
+- 新提示哈希改变，下次run-d默认新目录，不能以旧失败目录续跑。真实4B遵循率及语义质量仍待用户运行确认；只本地main保存，不推送。

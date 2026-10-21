@@ -51,6 +51,30 @@ def test_semantic_changes_only_system_keeps_output_and_logs_prompt_digest():
     assert record['system_prompt_sha256']==hashlib.sha256(actual.encode('utf-8')).hexdigest()
 
 
+def test_semantic_format_example_passes_frozen_schema_without_story_facts():
+    from agent_pipeline_v2.extractor import _decode_window
+    prompt=(ROOT/'agent_pipeline_v5/prompts/extractor_semantic_v1.txt').read_text(encoding='utf-8')
+    examples=[json.loads(line) for line in prompt.splitlines() if line.startswith('{"events":')]
+    assert len(examples)==1, 'need a complete JSON format example, not prose alone'
+    example=examples[0]
+    # Placeholders are schema examples, not facts about the regression stories.
+    row=example['events'][0]
+    assert row['actors']==['<原文主体>'] and row['event']=='<原文直接支持的完整命题>'
+    spans={'S1':{'text':'<原文主体>：<原文直接支持的完整命题>。'}}
+    events,_,_=_decode_window(example,spans,{'target_ids':['S1'],'context_ids':[]},1)
+    assert events[0]['check_reason'] in {'mechanism','knowledge_relation','state_time_space','consequence_support'}
+
+
+def test_missing_check_reason_still_fails_instead_of_inventing_reason(tmp_path):
+    broken=event();del broken['check_reason']
+    model=RecordingModel([payload([broken])])
+    result=run_extraction_arm({'arm':'semantic_plain','warmup':False},[{'id':'C1','story':'甲没有受伤。'}],model,tmp_path)
+    assert not result['complete'] and len(model.seen)==2
+    ex=result['rows'][0]['result']['benchmark_stages']['extraction']
+    assert ex['events']==[] and ex['uncovered_span_ids']==['S1']
+    assert all('check_reason' not in json.loads(a['raw_output'])['events'][0] for a in ex['calls'][0]['attempts'])
+
+
 @pytest.mark.parametrize('protocol,repair',[('compact','none'),('original','schema_aliases_v1')])
 def test_semantic_cannot_silently_combine_unaccepted_strategies(protocol,repair):
     with pytest.raises(ValueError):WireBatchModel(RecordingModel(['unused']),protocol,prompt_policy='semantic_v1',repair_policy=repair)

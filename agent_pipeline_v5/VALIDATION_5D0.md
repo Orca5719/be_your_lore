@@ -1,5 +1,17 @@
 # Benchmark 5D0 验证记录
 
+## 2026-10-21 格式遵循修订
+
+用户报告reports/benchmark_5D0_20261020T235714：original_plain四篇完成，semantic_plain预热partial，后两组未运行。预热7次生成中4条回复（21个event对象）缺check_reason，涉及窗口1/3；共16个target未完成，耗时194.126秒。推理profile正常完成、输出未到1536上限，未见OOM；这是协议遵循失败，旧版完整四组速度/质量结论不可用。
+
+原提示文件摘要与该次manifest一致。移除完整JSON示例可能削弱格式遵循，是待验证诱因，不是已证明唯一根因；过选/范围理解也尚未证明改善。
+
+本次仅修改语义提示：开头恢复含全部9字段的JSON占位示例，check_reason置首，明确其无默认值；结尾检查字段。示例不带回归人物/设定事实，不修改程序validator或生成预算，不通过删事件/默认mechanism掩盖错误。
+
+新增示例回归测试先失败后通过：用冻结_decode_window验证完整JSON示例。缺check_reason的脚本回复仍会按原预算失败、不生成事件。专项12 passed in 1.63s，validate-d通过且不加载模型。真实模型仍待用户重新运行，新提示哈希改变，必须新结果目录，不续跑或覆盖失败报告。
+
+修订后全套：734 passed in 49.61s，命令`.venv/Scripts/python.exe -X utf8 -m pytest -q -p no:cacheprovider --basetemp .pytest-tmp-5d-format-final --tb=short`，TEMP/TMP使用本仓库.cache/test-temp-5d，输出.cache/5d-format-tests.log；git diff --check通过。
+
 日期：2026-10-20。基准提交b2e3606，唯一工作区C:/Users/Xhang/Desktop/project/worldcheck。
 
 ## 实施边界

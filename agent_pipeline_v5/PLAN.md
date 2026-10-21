@@ -114,6 +114,7 @@ Interfaces: repair_event(event: dict, issues: list[dict], context: dict, model) 
 - 用户筛选四篇仍SL-P03、SL-P04、SL-017、SL-022；通过后全24篇包含SL-016/020/021/024等知识与发言回归，AB/BA及冻结下游。关注漏关系、过选/无依据提取、模态错误和pending，不以事件更少或全部弃答判优。
 - [x] 实现与离线验证；10项新增测试，全套732通过；独立最终审查无待修问题，validate-d通过，见VALIDATION_5D0.md。
 - [ ] 用户GPU四篇筛选、事件复核、通过后24篇AB/BA和冻结下游；不修改历史报告/标签或生产默认。
+- 2026-10-21首轮5D0：original_plain完成，semantic_plain预热partial停止（7次生成中4次缺check_reason，16片段未覆盖），后三组没有完整结果。新版提示补回无故事事实的完整JSON占位示例及必填检查，保持校验失败出口；不能由离线测试宣称真实模型已修好。旧失败档案不变，修订需新目录重跑。
 
 以下5D1/D2仍是后续候选，不与本轮绑定。
 
