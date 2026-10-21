@@ -19,7 +19,7 @@ def main(argv=None):
         cmd.add_argument('--source-root',type=Path,default=Path('C:/Users/Xhang/Desktop/project/worldcheck'))
         cmd.add_argument('--asset-root',type=Path,default=Path('C:/Users/Xhang/Desktop/project/worldcheck'))
         cmd.add_argument('--phase',choices=('screen','full'),default='screen')
-        cmd.add_argument('--order',choices=('forward','reverse'),default='forward')
+        cmd.add_argument('--order',choices=('forward','reverse','candidate-first') if name.endswith('-d') else ('forward','reverse'),default='forward')
         if name.startswith('run-'):cmd.add_argument('--output',type=Path)
     for name in ('summary-b','score-b','run-downstream-b','summary-c','score-c','run-downstream-c','summary-d','score-d','run-downstream-d'):
         cmd=sub.add_parser(name)

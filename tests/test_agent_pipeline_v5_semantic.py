@@ -60,9 +60,10 @@ def test_semantic_format_example_passes_frozen_schema_without_story_facts():
     # Placeholders are schema examples, not facts about the regression stories.
     row=example['events'][0]
     assert row['actors']==['<原文主体>'] and row['event']=='<原文直接支持的完整命题>'
-    spans={'S1':{'text':'<原文主体>：<原文直接支持的完整命题>。'}}
-    events,_,_=_decode_window(example,spans,{'target_ids':['S1'],'context_ids':[]},1)
+    spans={'S1':{'text':'<原文主体>：<原文直接支持的完整命题>。'},'S2':{'text':'普通过程。'},'S3':{'text':'随后，'}}
+    events,ignored,non_events=_decode_window(example,spans,{'target_ids':['S1','S2','S3'],'context_ids':[]},1)
     assert events[0]['check_reason'] in {'mechanism','knowledge_relation','state_time_space','consequence_support'}
+    assert ignored==[{'source_id':'S2','reason':'routine'}] and non_events==['S3']
 
 
 def test_missing_check_reason_still_fails_instead_of_inventing_reason(tmp_path):
@@ -119,8 +120,8 @@ def test_d_cli_dispatch_no_model(monkeypatch,tmp_path):
     from agent_pipeline_v5.__main__ import main
     import agent_pipeline_v5.experiment as experiment
     seen=[];monkeypatch.setattr(experiment,'run_experiment',lambda args:seen.append(args) or 0)
-    assert main(['run-d','--phase','screen','--output',str(tmp_path)])==0
-    assert seen[0].experiment=='5D0'
+    assert main(['run-d','--phase','screen','--order','candidate-first','--output',str(tmp_path)])==0
+    assert seen[0].experiment=='5D0' and seen[0].order=='candidate-first'
 
 
 def test_d_summary_uses_new_pending_and_refuses_screen_quality(tmp_path):
@@ -167,6 +168,10 @@ def test_d_prepare_strips_gold_and_freezes_prompt_and_reverse_order(tmp_path,mon
     assert identity['config']['repair_policy']=='none'
     _,reverse=experiment.prepare(root,root,'screen','reverse','5D0')
     assert reverse['config']['arms']==list(reversed(identity['config']['arms']))
+    _,candidate=experiment.prepare(root,root,'screen','candidate-first','5D0')
+    assert candidate['config']['arms']==['semantic_plain','original_plain','semantic_lookup5','original_lookup5']
+    for phase,kind in [('full','5D0'),('screen','5B'),('screen','5C1')]:
+        with pytest.raises(ValueError):experiment.prepare(root,root,phase,'candidate-first',kind)
     ensure_manifest(tmp_path/'run',identity)
     prompt.write_text('changed prompt')
     _,changed=experiment.prepare(root,root,'screen',experiment='5D0')

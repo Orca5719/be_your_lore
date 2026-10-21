@@ -20,8 +20,12 @@ def prepare(source_root, asset_root, phase, order='forward', experiment='5B'):
         raise ValueError('unknown experiment')
     selected_arms={'5B':ARMS,'5C1':C1_ARMS,'5D0':D0_ARMS}[experiment]
     source_root, asset_root = Path(source_root).resolve(), Path(asset_root).resolve()
-    if phase not in ('screen','full') or order not in ('forward','reverse'):
+    if phase not in ('screen','full') or order not in ('forward','reverse','candidate-first'):
         raise ValueError('invalid phase/order')
+    if order=='candidate-first':
+        if experiment!='5D0' or phase!='screen':
+            raise ValueError('candidate-first is only for 5D0 screen; full requires forward/reverse')
+        selected_arms=('semantic_plain','original_plain','semantic_lookup5','original_lookup5')
     dataset = source_root/'evaluation/story_benchmark_24_v2.json'
     frozen_manifest = source_root/'agent_pipeline_v4_2/reports/benchmark_4_2B_20261017T033125Z_295aa1/manifest.json'
     frozen = read(frozen_manifest)
@@ -58,7 +62,7 @@ def prepare(source_root, asset_root, phase, order='forward', experiment='5B'):
     # Gold and review never enter the inference cases.
     inputs = [{'id':c['id'],'story':c['story']} for c in cases]
     config = dict(phase=phase,order=order,source_root=str(source_root),asset_root=str(asset_root),
-                  arms=list(selected_arms if order=='forward' else reversed(selected_arms)),runtime=runtime,
+                  arms=list(reversed(selected_arms) if order=='reverse' else selected_arms),runtime=runtime,
                   batch_size=1,prompt_lookup_tokens=5,max_new_tokens=1536,
                   model='Qwen/Qwen3-4B-Instruct-2507',revision=snapshot.name,
                   execution='serial stories; frozen StaticBatcher batch=1',

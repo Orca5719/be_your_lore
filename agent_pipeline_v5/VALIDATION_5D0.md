@@ -1,5 +1,17 @@
 # Benchmark 5D0 验证记录
 
+## 第二轮覆盖失败后的修订
+
+用户报告reports/benchmark_5D0_20261021T225820：original_plain完成（165.80秒），semantic_plain预热partial，8个target未完成；check_reason已存在，失败不再是字段遗漏。window3的两次补查都漏S17/S23，恢复原窗口后又重复相同结果。多条回复ignored_spans持续为空、普通日常大量进入events；窗口4的一次补查还返回全空三出口，原校验正确拒绝，未标成功。
+
+本次撤回大段重写，以冻结原版提示为主体，仅加简短知识/发言和覆盖限定；保留三出口结构示例，使用占位主体/命题替代具体故事事实。不得因context引用就认为target覆盖；不得在程序里补ignored/non_event或删除失败片段。三出口示例偏置只是候选诱因，是否提升4B的遵循与语义质量仍未知。
+
+示例测试扩展为对三片段经冻结_decode_window验证，初次失败（S2/S3未覆盖），修复后通过。candidate-first的CLI/prepare测试先失败后通过；只允许5D0 screen、仍四组、full和B/C拒绝。专项12 passed in 1.61s，validate-d --order candidate-first通过、未加载模型。
+
+新顺序先执行semantic_plain，失败尽早退出；如通过继续同轮原版和lookup组。不得把candidate-first筛选当正式AB/BA。旧报告保持不变，必须新输出目录；不运行GPU代替用户验证。
+
+修订后全套734 passed in 33.41s（.cache/5d-coverage-tests.log，basetemp=.pytest-tmp-5d-coverage-final，TEMP/TMP=.cache/test-temp-5d），git diff --check通过。一次独立只读审查未发现待修问题，核对顺序限制/身份/三出口/旧报告不变；真实模型仍未运行。
+
 ## 2026-10-21 格式遵循修订
 
 用户报告reports/benchmark_5D0_20261020T235714：original_plain四篇完成，semantic_plain预热partial，后两组未运行。预热7次生成中4条回复（21个event对象）缺check_reason，涉及窗口1/3；共16个target未完成，耗时194.126秒。推理profile正常完成、输出未到1536上限，未见OOM；这是协议遵循失败，旧版完整四组速度/质量结论不可用。

@@ -1481,3 +1481,11 @@ Set-Location "C:\Users\Xhang\Desktop\project\worldcheck"
 - 用户授权修复：仅在semantic提示前置9字段协议、完整JSON占位示例与结尾字段检查，不含具体故事事实、不默认补mechanism、不放宽校验、不增调用预算。去除结构示例是待验证诱因，不声称已证唯一根因。
 - 新示例测试RED→GREEN，冻结校验器验证示例；缺check_reason仍原预算失败。专项12通过，全套734通过（49.61秒），validate-d无模型通过。原始GPU报告/标签和旧pipeline不修改。
 - 新提示哈希改变，下次run-d默认新目录，不能以旧失败目录续跑。真实4B遵循率及语义质量仍待用户运行确认；只本地main保存，不推送。
+
+## 2026-10-21 修订5D0覆盖提示与筛选顺序
+
+- 第二次GPU报告benchmark_5D0_20261021T225820：字段已齐全，但window3补查两次均漏S17/S23，整篇8片段未完成；日常过选且ignored持续为空。原版四篇165.80秒已完成，不能据此给未完成候选速度/质量。
+- Ruling: 撤回大段重写，复用原版提示主体+简短语义/覆盖规则，恢复三出口非空占位示例，不含具体故事事实。示例偏置仅候选诱因；代价是改动变小，实模语义/覆盖改进仍待验证。
+- Ruling: 新candidate-first仅5D0 screen可用，先semantic_plain再original_plain/semantic_lookup5/original_lookup5，不删基线，失败尽早停。代价是筛选顺序不同，full必须forward/reverse作正式AB/BA。
+- 示例三出口覆盖测试与顺序CLI/prepare测试先失败再通过。12项专项、全套734通过（33.41秒），validate-d候选优先无模型预检查通过。独立只读审查无待修项；历史报告不变，不补造处置、不放宽校验。
+- 仍需用户以新目录实跑；本轮不运行GPU、不下载/安装、不改WSL，仅桌面main本地提交。

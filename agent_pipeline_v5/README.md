@@ -93,6 +93,16 @@ validate-c仅检查环境，不加载模型。run-c默认新建本目录agent_pi
 
 ## 5D0 提取语义契约对照
 
+第二次运行benchmark_5D0_20261021T225820不再缺check_reason，但候选漏处置target，预热仍partial。当前修订回到原版提示主体，只保留简短语义/覆盖规则，并恢复events/ignored/non_event均非空的占位结构示例；不自动填空处置、不放宽校验。新候选仍待实模验证。
+
+建议现在用下面命令先跑候选组，避免候选失败前又跑完原版。仍是同四组、各组仍预热，候选若成功会继续同轮基线；只有筛选允许candidate-first，full仍用forward/reverse，不用该筛选顺序作正式AB/BA结论：
+
+```powershell
+& ".\.venv\Scripts\python.exe" -X utf8 -u -m agent_pipeline_v5 run-d --phase screen --order candidate-first
+```
+
+不要指定任何旧失败目录续跑。首次打印的SUMMARY只是当前快照，不代表四组完成。
+
 2026-10-21格式修订：首轮用户实验在semantic_plain预热失败，多次漏check_reason。现补回无具体故事事实的完整JSON占位示例，将必填字段检查前置；接收程序不补造核查理由。此修订尚待真实模型验证。重新运行以下命令会创建新目录，不要给--output指定旧benchmark_5D0_20261020T235714，旧失败报告保留。
 
 这一块是5D证据/Judge改造的前置实验。只改变提取system提示整体，测试三个问题：日常动作过选、原文关系被改写或补出事实、知识/发言被错误归类。移除原提示中的具体双心脏示例；这是候选干扰源，尚未证明是根因。新提示不使用回归故事人物/设定/答案作示例。

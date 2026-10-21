@@ -115,6 +115,8 @@ Interfaces: repair_event(event: dict, issues: list[dict], context: dict, model) 
 - [x] 实现与离线验证；10项新增测试，全套732通过；独立最终审查无待修问题，validate-d通过，见VALIDATION_5D0.md。
 - [ ] 用户GPU四篇筛选、事件复核、通过后24篇AB/BA和冻结下游；不修改历史报告/标签或生产默认。
 - 2026-10-21首轮5D0：original_plain完成，semantic_plain预热partial停止（7次生成中4次缺check_reason，16片段未覆盖），后三组没有完整结果。新版提示补回无故事事实的完整JSON占位示例及必填检查，保持校验失败出口；不能由离线测试宣称真实模型已修好。旧失败档案不变，修订需新目录重跑。
+- 第二轮5D0_20261021T225820：字段齐全，但ignored持续为空且漏target，窗口3补查反复漏S17/S23，8片段未完成。Ruling: 撤回整段重写，复用original提示主体加简短知识/覆盖限定，并恢复三种出口均非空的无事实示例；不能证明示例偏置是唯一根因。代价：语义提示差异缩小，仍须实模验证。
+- Ruling: 仅screen支持candidate-first（semantic_plain/original_plain/semantic_lookup5/original_lookup5），失败候选尽早停止，避免重跑原版后才失败；四组不删减。代价：筛选顺序不同，不作正式时序结论，full仅forward/reverse。
 
 以下5D1/D2仍是后续候选，不与本轮绑定。
 
